@@ -1,0 +1,50 @@
+{
+  "timing": "fixed batches; start/end clock reads; rejected batches shorter than 20ms are repeated with doubled iteration count",
+  "sourceHashes": [
+    {
+      "Hash": "4CACCD0874671C094086E8A8DD078EB1364B9AD2BA20476E96D3F2B5CEADAEBE",
+      "File": "benchmarks\\dense.cpp"
+    },
+    {
+      "Hash": "EABB9C60F1659B981C52E704C3E9A53CDAEF50349BACCDA2EC6FCC5774F6C142",
+      "File": "tests\\controlled_fixture.hpp"
+    },
+    {
+      "Hash": "52BF606A0F6AC2E21A83878E7B029B4C65935E25F5FC90387B1CF2EF74572634",
+      "File": "include\\kibo\\linalg.hpp"
+    },
+    {
+      "Hash": "E74B13BB57D83BB0AD7B1C8F271C40DB825A2D1B380F0224639A9D94EE8C48D0",
+      "File": "include\\kibo\\workspace.hpp"
+    },
+    {
+      "Hash": "EAB5E3B5D14F243F338FAFFE33A85249C6270783B7309A7AD8E3D2F9EED688CD",
+      "File": "include\\kibo\\llt.hpp"
+    },
+    {
+      "Hash": "7B12772016F684FC5BDFD4EDCCFB0DB9AB28E84E3C493C0E8EB11B0B94C3E4D1",
+      "File": "include\\kibo\\qr.hpp"
+    }
+  ],
+  "samples": 30,
+  "configuration": "Release /O2 /fp:precise; fast-math off; Eigen single-thread; default x64 SIMD",
+  "layout": "kibo row-major; Eigen column-major; input conversion reported separately",
+  "minimumSampleMilliseconds": 20,
+  "processRuns": 5,
+  "executableSha256": "13037a79ad758f1b718ba6330d5a3019f9c2f953a544d7b7794d16cba15f57a1",
+  "cpu": {
+    "Name": "Intel(R) Core(TM) i9-14900K",
+    "NumberOfCores": 24,
+    "NumberOfLogicalProcessors": 32
+  },
+  "fixtureSeed": "0x6b69626f",
+  "warmup": 5,
+  "solver": "lambda=1e-3, D=I; normal-LLT and augmented-QR; rank tolerance=max(m_aug,n)*epsilon",
+  "os": {
+    "Caption": "Microsoft Windows 11 Pro",
+    "Version": "10.0.26200",
+    "BuildNumber": "26200"
+  },
+  "compiler": "MSVC 19.44.35222.0, toolset14.44.35207",
+  "measuredAt": "2026-10-06T14:38:28.3653620+00:00"
+}

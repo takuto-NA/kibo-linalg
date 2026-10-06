@@ -110,17 +110,43 @@ inline Result<QrFactorView> factorize_qr(MatrixView<const double> input, MatrixV
         // Ratios avoid overflow in alpha-beta for large finite columns.
         for (std::size_t i=k+1;i<m;++i) packed(i,k)=(packed(i,k)/beta)/(ratio-1);
         packed(k,k)=beta;
-        for (std::size_t j=k+1;j<n;++j) {
-            double dot=packed(k,j);
-            for (std::size_t i=k+1;i<m;++i) dot+=packed(i,k)*packed(i,j);
-            const double multiplier=tau[k]*dot;
-            if (!std::isfinite(multiplier)) return Status{StatusCode::arithmetic_failure,k};
-            packed(k,j)-=multiplier;
-            if (!std::isfinite(packed(k,j))) return Status{StatusCode::arithmetic_failure,k};
+        if (packed.col_stride()<=packed.row_stride()) {
+            // Future Householder coefficients are not assigned yet. Reuse
+            // tau[k+1:n] for this projection; each slot is overwritten when
+            // its own column is factored. Workspace remains 2n doubles.
+            for (std::size_t j=k+1;j<n;++j) tau[j]=packed(k,j);
             for (std::size_t i=k+1;i<m;++i) {
-                packed(i,j)-=packed(i,k)*multiplier;
-                if (!std::isfinite(packed(i,j))) return Status{StatusCode::arithmetic_failure,k};
+                const double value=packed(i,k);
+                for (std::size_t j=k+1;j<n;++j) tau[j]+=value*packed(i,j);
             }
+            for (std::size_t j=k+1;j<n;++j) {
+                tau[j]*=tau[k];
+                if (!std::isfinite(tau[j])) return Status{StatusCode::arithmetic_failure,k};
+                packed(k,j)-=tau[j];
+                if (!std::isfinite(packed(k,j))) return Status{StatusCode::arithmetic_failure,k};
+            }
+            for (std::size_t i=k+1;i<m;++i) {
+                const double value=packed(i,k);
+                for (std::size_t j=k+1;j<n;++j) {
+                    packed(i,j)-=value*tau[j];
+                    if (!std::isfinite(packed(i,j))) return Status{StatusCode::arithmetic_failure,k};
+                }
+            }
+        } else {
+            for (std::size_t j=k+1;j<n;++j) {
+                double dot=packed(k,j);
+                for (std::size_t i=k+1;i<m;++i) dot+=packed(i,k)*packed(i,j);
+                const double multiplier=tau[k]*dot;
+                if (!std::isfinite(multiplier)) return Status{StatusCode::arithmetic_failure,k};
+                packed(k,j)-=multiplier;
+                if (!std::isfinite(packed(k,j))) return Status{StatusCode::arithmetic_failure,k};
+                for (std::size_t i=k+1;i<m;++i) {
+                    packed(i,j)-=packed(i,k)*multiplier;
+                    if (!std::isfinite(packed(i,j))) return Status{StatusCode::arithmetic_failure,k};
+                }
+            }
+        }
+        for (std::size_t j=k+1;j<n;++j) {
             if (norms[j]!=0) {
                 // LAPACK DLAQP2 partial norm update, with cancellation-triggered
                 // explicit recomputation (Working Note 176). No extra storage.

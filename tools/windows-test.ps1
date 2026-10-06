@@ -37,7 +37,7 @@ $taskSource=[IO.Path]::GetFullPath((Join-Path $taskRoot 'build/ci-windows/instal
 $taskDestination=[IO.Path]::GetFullPath((Join-Path $taskRoot "build/ci-windows/install-relocated-$([DateTimeOffset]::UtcNow.ToUnixTimeSeconds())"))
 if (!$taskSource.StartsWith($taskRoot+'\') -or !$taskDestination.StartsWith($taskRoot+'\')) { throw 'Move outside workspace' }
 Move-Item -LiteralPath $taskSource -Destination $taskDestination
-Invoke-CMake -S tests/installed_consumer -B build/ci-windows-consumer -G 'Visual Studio 17 2022' -A x64 "-DCMAKE_PREFIX_PATH=$taskDestination" "-DCMAKE_GENERATOR_INSTANCE=$($taskInstance.installationPath)"
+Invoke-CMake -U kibo_linalg_DIR -S tests/installed_consumer -B build/ci-windows-consumer -G 'Visual Studio 17 2022' -A x64 "-DCMAKE_PREFIX_PATH=$taskDestination" "-DCMAKE_GENERATOR_INSTANCE=$($taskInstance.installationPath)"
 Invoke-CMake --build build/ci-windows-consumer --config Release --parallel 4
 $taskFailedConfigurations=@()
 & ctest --test-dir build/ci-windows-consumer -C Release --output-on-failure --no-tests=error

@@ -28,7 +28,7 @@ if [ -e "$relocated" ]; then
     relocated="$relocated-$(date +%s)"
 fi
 mv "$prefix" "$relocated"
-"$cmake" -S tests/installed_consumer -B "$build_dir/consumer" -DCMAKE_PREFIX_PATH="$relocated" -DCMAKE_CXX_COMPILER="$compiler" ${KIBO_CMAKE_OPTIONS:-}
+"$cmake" -U kibo_linalg_DIR -S tests/installed_consumer -B "$build_dir/consumer" -DCMAKE_PREFIX_PATH="$relocated" -DCMAKE_CXX_COMPILER="$compiler" ${KIBO_CMAKE_OPTIONS:-}
 "$cmake" --build "$build_dir/consumer" --parallel 4
 "$ctest" --test-dir "$build_dir/consumer" --output-on-failure --no-tests=error
 if [ "$test_failures" -ne 0 ]; then

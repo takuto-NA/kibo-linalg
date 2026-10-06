@@ -5,6 +5,30 @@
 #include "test_check.hpp"
 int main() {
     using namespace kibo::linalg;
+    // A dense multi-column solve exercises unfinished tau slots and strided
+    // factor storage. Padding must remain outside the logical writes.
+    {
+        constexpr std::array<double,24> values{1,2,-1,10,2,0,3,4,0,1,2,7,3,-1,0,2,1,1,1,-3,-2,0,1,5};
+        constexpr std::array<double,4> expected{1,-2,0.5,3};
+        auto a=MatrixView<const double>::checked(values,6,4,4).value();
+        std::array<double,6> rhs{};
+        CHECK(matvec_into(a,std::span<const double>{expected},std::span<double>{rhs}));
+        for(const auto strides:std::array<std::array<std::size_t,2>,3>{{{4,1},{1,6},{8,1}}}) {
+            std::array<double,48> storage;storage.fill(999);
+            std::array<double,4> coefficients;coefficients.fill(std::numeric_limits<double>::quiet_NaN());
+            std::array<std::size_t,4> order{};
+            alignas(double) std::array<std::byte,80> work{};
+            auto view=MatrixView<double>::checked(storage,6,4,strides[0],strides[1]).value();
+            auto result=factorize_qr(a,view,coefficients,order,std::span<std::byte>{work}.first(64));
+            CHECK(result && result.value().diagnostics().rank==4 && order[0]==3);
+            std::array<double,4> answer{};
+            CHECK(solve_into(result.value(),std::span<const double>{rhs},std::span<double>{answer},work));
+            for(std::size_t j=0;j<4;++j) CHECK(std::abs(answer[j]-expected[j])<1e-12 && std::isfinite(coefficients[j]));
+            std::array<bool,48> logical{};
+            for(std::size_t i=0;i<6;++i) for(std::size_t j=0;j<4;++j) logical[i*strides[0]+j*strides[1]]=true;
+            for(std::size_t index=0;index<48;++index) if(!logical[index]) CHECK(storage[index]==999);
+        }
+    }
     // Inconsistent b has least-squares solution [1,2]; residual [-1,-1,1] is orthogonal to columns.
     std::array<double,6> data{1,0,0,1,1,1};
     auto input=MatrixView<const double>::checked(data,3,2,2);
