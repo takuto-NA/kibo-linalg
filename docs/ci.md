@@ -14,6 +14,10 @@ Microsoftの[固定版bootstrapper一覧](https://learn.microsoft.com/en-us/visu
 17.14.25/build17.14.36915.13のBuild Toolsを取得し、SHA256とMicrosoft署名を確認した。
 既存インストールのVS版、toolset14.44.35207、cl19.44.35222.0とcl.exe hashも一致した。
 新規インストールをローカルPCで実行したという証拠ではない。
+GitHubの[hosted Windows job](https://github.com/takuto-NA/kibo-linalg/actions/runs/37482428992/job/112333743363)では
+固定bootstrapperから `C:\kibo-vs17.14.25` に新規installし、版とcl.exe hashを検証して
+Debug/Releaseおよび移動後consumerを実行した。[install metadata](validation/portability/hosted/windows-toolchain.json)を保存した。
+このjobは数値stress gateで失敗しており、固定toolchain取得の成功と全tests合格を区別する。
 
 ```powershell
 python tools/fetch-dependencies.py --platform windows --eigen --msvc

@@ -36,6 +36,9 @@ GCCでは -fno-tree-vectorize -fno-tree-slp-vectorize -ffp-contract=offを使う
 異なるcompiler/OSの比較を主比較へ混ぜず、それぞれ同じprocess内の両backendを比較する。
 
 phaseはfactor、solve、factor+solve、setup/allocation/copy込みを分ける。
+全phaseで、JᵀJ+lambda IとJᵀb、またはaugmented matrix/RHSの組立ては計測前に済ませる。
+setup phaseは組立て済み入力からの領域確保・layout copy・factor・solveを含む。
+Jacobian生成やGram/augmented組立てを含むLM反復全体の時間ではない。
 coreはrow-major、Eigenはcolumn-majorへの準備済みcopyを使い、変換の費用はsetup phaseに含める。
 容量はharnessで同時に生存するinput/output/factor/copy/workspaceを含む数値領域の保守的な計算値。
 allocator管理領域やmodule/OS予約は数値領域と別。64 MiB以下をgateにする。

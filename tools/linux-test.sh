@@ -14,7 +14,7 @@ fi
 test_failures=0
 for configuration in Debug Release; do
     directory="$build_dir/$configuration"
-    "$cmake" -S . -B "$directory" -DCMAKE_BUILD_TYPE="$configuration" -DCMAKE_CXX_COMPILER="$compiler" ${KIBO_CMAKE_OPTIONS:-}
+    "$cmake" -S . -B "$directory" -DCMAKE_BUILD_TYPE="$configuration" -DCMAKE_CXX_COMPILER="$compiler" -DCMAKE_EXPORT_COMPILE_COMMANDS=ON ${KIBO_CMAKE_OPTIONS:-}
     "$cmake" --build "$directory" --parallel 4
     if ! "$ctest" --test-dir "$directory" --output-on-failure --no-tests=error; then
         test_failures=$((test_failures+1))

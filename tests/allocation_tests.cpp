@@ -5,6 +5,7 @@
 #include <cstdio>
 #include <cstdlib>
 #include <new>
+#include <vector>
 namespace {
 volatile bool measuring=false;
 std::size_t allocations=0;
@@ -55,6 +56,39 @@ void operator delete[](void* pointer,std::align_val_t) noexcept {std::free(point
 void operator delete(void* pointer,std::size_t,std::align_val_t) noexcept {std::free(pointer);}
 void operator delete[](void* pointer,std::size_t,std::align_val_t) noexcept {std::free(pointer);}
 #endif
+namespace {
+bool prepared_dense_shapes() {
+    using namespace kibo::linalg;
+    for(const std::size_t n:{2,8,32,128,512}) for(const std::size_t m:{n,4*n}) {
+#if !defined(NDEBUG)
+        if(n>32) continue; // the Release Linux probe covers the complete scale range
+#endif
+        std::vector<double> input(m*n),packed(m*n),rhs(m),solution(n),tau(n),work(m+n);
+        std::vector<std::size_t> permutation(n);
+        for(std::size_t i=0;i<n;++i) {input[i*n+i]=2;rhs[i]=1;}
+        auto a=MatrixView<const double>::checked(input,m,n,n).value();
+        auto factor_storage=MatrixView<double>::checked(packed,m,n,n).value();
+        auto square=a.submatrix(0,0,n,n).value();
+        auto lower=factor_storage.submatrix(0,0,n,n).value();
+        const auto rhs_span=std::span<const double>{rhs};
+        auto output_span=std::span<double>{solution};
+        auto workspace=std::as_writable_bytes(std::span<double>{work});
+        allocations=0; measuring=true;
+        auto llt=factorize_llt(square,lower);
+        const bool llt_ok=llt && solve_into(llt.value(),rhs_span.first(n),output_span,workspace);
+        bool correct=llt_ok;
+        if(llt_ok) for(auto value:solution) correct=std::abs(value-0.5)<=1e-14 && correct;
+        auto qr=factorize_qr(a,factor_storage,tau,permutation,workspace);
+        const bool qr_ok=qr && solve_into(qr.value(),rhs_span,output_span,workspace);
+        correct=qr_ok && correct;
+        if(qr_ok) for(auto value:solution) correct=std::abs(value-0.5)<=1e-14 && correct;
+        measuring=false;
+        std::printf("prepared m=%zu n=%zu LLT/QR allocator calls=%zu\n",m,n,allocations);
+        if(!correct || allocations!=0) return false;
+    }
+    return true;
+}
+}
 int main() {
 #if (defined(_MSC_VER) && defined(_DEBUG)) || defined(KIBO_WRAP_ALLOCATORS)
 #if defined(_MSC_VER) && defined(_DEBUG)
@@ -95,11 +129,13 @@ int main() {
         if (qr) ok=static_cast<bool>(kibo::linalg::solve_into(qr.value(),std::span<const double>{b},std::span<double>{product},qr_workspace)) && ok;
     }
     measuring=false;
+    const auto small_allocations=allocations;
+    ok=prepared_dense_shapes() && ok;
 #if defined(_MSC_VER) && defined(_DEBUG)
     _CrtSetAllocHook(previous);
 #endif
-    std::printf("prepared basic operations, LLT and QR factor/solve: observed allocator calls=%zu\n",allocations);
-    return !ok || allocations!=0;
+    std::printf("prepared basic operations, LLT and QR factor/solve: observed allocator calls=%zu\n",small_allocations);
+    return !ok || small_allocations!=0;
 #else
     std::puts("CRT allocation probe requires MSVC Debug; no measurement in this configuration");
     return 77;

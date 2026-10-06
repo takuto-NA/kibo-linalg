@@ -27,3 +27,10 @@ idf.py -B /work/build/esp32-c3 -D SDKCONFIG=/work/build/esp32-c3/sdkconfig -D ID
 実機では該当targetのbuild directoryとserial portを指定して `idf.py -B <build> -p <port> flash monitor`。
 ボード型番、SDK/compiler版、firmware SHA256、電源/PSRAM設定、serial JSONを実機チケットへ保存する。
 PCでの共通例passと両targetのELF生成は、実機runの代わりにならない。
+
+[hosted CI evidence](validation/portability/hosted/evidence.json)にC++20で通過したS3/C3の
+実compile commandとfirmware/configのSHA256を保存した。
+componentのsource optionを最終位置に置き、SDKの既定規格の後に `-std=c++20` を適用する。
+`static_assert(__cplusplus == 202002L)` により規格が変わればbuildを失敗させる。
+compiler archiveのURL/checksumは固定image内の `tools/tools.json` から取得してlock manifestへ記録した。
+CIはimage digestで取得物全体を固定する。実機へ渡すfirmwareは、この新しいC++20のhashを使用する。

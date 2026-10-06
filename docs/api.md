@@ -127,3 +127,5 @@ ctest --test-dir build/native -C Debug --output-on-failure
 allocation testはMSVC DebugのCRT hook、Linuxのallocator wrappingとnew置換をmallocで校正し、
 準備済み基本演算・LLT・QRを100回実行して確保回数0を検証する。
 MSVC Releaseなど計測器のない構成では測定未実施としてskipする。
+準備済み分解・solveはDebugでn=2/8/32、Linux Releaseでn=2/8/32/128/512、
+m=n/4nの外部ビューとcaller workspaceについても確保回数と解を検証する。

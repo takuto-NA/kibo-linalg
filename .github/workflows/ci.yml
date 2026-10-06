@@ -1,6 +1,7 @@
 name: portable-core
 on:
   push:
+    branches: [main]
   pull_request:
   workflow_dispatch:
 permissions:
@@ -28,6 +29,9 @@ jobs:
             build/ci-windows/CMakeCache.txt
             build/ci-windows/CMakeFiles/CMakeConfigureLog.yaml
             build/ci-windows/Testing/Temporary/*.log
+            build/ci-windows/*-ctest.log
+            build/ci-windows/kibo_no_runtime_tests.dir/*/*.tlog/CL.command.1.tlog
+            build/ci-windows/kibo_no_runtime_tests.vcxproj
             build/ci-windows-consumer/Testing/Temporary/*.log
   linux:
     runs-on: ubuntu-24.04
@@ -54,6 +58,8 @@ jobs:
           set -eo pipefail
           mkdir -p build
           image='gcc:15.3@sha256:ead103e6d03b69232962d467f3520c3f70b6718c69ff71efcc08efe9011fadb6'
+          docker pull "$image"
+          docker image inspect "$image" --format '{{json .RepoDigests}}' > build/image-digest.json
           if [ '${{ matrix.compiler }}' != gcc ]; then
             docker run --rm -v "$PWD:/work" -w /work "$image" sh -c 'mkdir -p .cache/tools; tar -xJf .cache/downloads/LLVM-20.1.8-Linux-X64.tar.xz -C .cache/tools'
             compiler=/work/.cache/tools/LLVM-20.1.8-Linux-X64/bin/clang++
@@ -67,7 +73,6 @@ jobs:
           else
             docker run --rm -v "$PWD:/work" -w /work -e KIBO_CMAKE_OPTIONS=-DKIBO_EIGEN_INCLUDE_DIR=/work/.cache/eigen "$image" sh tools/linux-test.sh g++ build/linux-gcc | tee build/linux-gcc.log
           fi
-          docker image inspect "$image" --format '{{json .RepoDigests}}' > build/image-digest.json
       - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
         if: always()
         with:
@@ -77,6 +82,7 @@ jobs:
             build/image-digest.json
             build/linux-${{ matrix.compiler }}/Debug/CMakeCache.txt
             build/linux-${{ matrix.compiler }}/Release/CMakeCache.txt
+            build/linux-${{ matrix.compiler }}/*/compile_commands.json
             build/linux-${{ matrix.compiler }}/*/Testing/Temporary/*.log
   wasm:
     runs-on: ubuntu-24.04
