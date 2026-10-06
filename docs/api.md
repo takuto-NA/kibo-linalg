@@ -111,6 +111,19 @@ input、factor、tau、permutation、workspace、outputはそれぞれ重なら�
 rhsとoutputのみ完全に同じspanを許す（workspaceに候補を作るため）。
 数値分解での途中失敗ではfactor領域が部分更新され得る。
 
+## 内部最適化の構成
+
+x86のコンパイル対象にSSE2が含まれる場合、連続行の内部計算にSSE2を使う。
+自然なdouble alignmentだけで動き、AVX・外部BLAS・追加workspaceは要求しない。
+ESP32・WASM等では通常のC++処理を使う。`KIBO_DISABLE_SIMD=1`を定義すると、
+明示SIMDを無効化できる。この定義は同じプログラムの全translation unitで揃える。
+コンパイラ自身の自動vectorizationは別のcompile flagで制御する。
+
+LLTの連続行storageは、32列以上で未使用の上三角を分解中の一時領域に使う。
+成功時は上三角を0に戻す。計算中のfactor storageは読み出さず、
+数値失敗後は領域全体を無効とする既存契約を守る。factor workspaceは0のまま。
+QRの有限値検査・列pivot/rank診断とfactor workspace=2n doublesも維持する。
+
 ## Windowsでの確認
 
 PowerShell 7とCMake 3.30.5、VS 2022のMSVCで:

@@ -30,6 +30,31 @@ int main() {
         }
     }
     // Inconsistent b has least-squares solution [1,2]; residual [-1,-1,1] is orthogonal to columns.
+    {
+        constexpr std::size_t m=15,n=9;
+        std::array<double,m*n> values{};
+        std::array<double,n> truth{},answer{},coefficients{};
+        std::array<double,m> rhs{};
+        std::array<std::size_t,n> order{};
+        std::array<double,m+n> work{};
+        for(std::size_t j=0;j<n;++j) truth[j]=double(j%3)-1;
+        for(std::size_t i=0;i<m;++i) for(std::size_t j=0;j<n;++j) {
+            values[i*n+j]=(double((i*7+j*3)%11)-5)*0.0625+(i==j?4:0);
+            rhs[i]+=values[i*n+j]*truth[j];
+        }
+        auto dense=MatrixView<const double>::checked(values,m,n,n).value();
+        for(const auto strides:std::array<std::array<std::size_t,2>,4>{{{n,1},{n+3,1},{2*n+3,2},{1,m+3}}}) {
+            std::array<double,m*(2*n+3)> backing;backing.fill(999);
+            auto target=MatrixView<double>::checked(backing,m,n,strides[0],strides[1]).value();
+            auto result=factorize_qr(dense,target,coefficients,order,std::as_writable_bytes(std::span<double>{work}.first(2*n)));
+            CHECK(result && result.value().diagnostics().rank==n);
+            CHECK(solve_into(result.value(),std::span<const double>{rhs},std::span<double>{answer},std::as_writable_bytes(std::span<double>{work})));
+            for(std::size_t j=0;j<n;++j) CHECK(std::abs(answer[j]-truth[j])<1e-12);
+            std::array<bool,m*(2*n+3)> logical{};
+            for(std::size_t i=0;i<m;++i) for(std::size_t j=0;j<n;++j) logical[i*strides[0]+j*strides[1]]=true;
+            for(std::size_t i=0;i<backing.size();++i) if(!logical[i]) CHECK(backing[i]==999);
+        }
+    }
     std::array<double,6> data{1,0,0,1,1,1};
     auto input=MatrixView<const double>::checked(data,3,2,2);
     StaticMatrix<double,3,2> packed;

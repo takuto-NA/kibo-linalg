@@ -42,6 +42,8 @@ lambda1e-3、D=Iのlinear stepを、別のEigen LDLTから求めた解にrelativ
 失敗は速度結果として採用せず実行を停止する。
 Eigen5.0.1は通常のx64 SIMDを主比較とし、別buildの `KIBO_SCALAR_EIGEN=ON` で公平scalar比較を取れる。
 scalar設定は同じtranslation unitの両backendに適用する。
+`EIGEN_DONT_VECTORIZE=1`と`KIBO_DISABLE_SIMD=1`で両者の明示SIMDを無効にし、
+下記flagsで自動vectorizationも無効にする。
 固定MSVCでは /Qvec- がD9002で無視されることを確認したため、scalar構成を受理しない。
 主比較はWindows MSVC、追加scalar比較は固定Linux Clangで行う。
 Clangでは -fno-vectorize -fno-slp-vectorize -ffp-contract=off、

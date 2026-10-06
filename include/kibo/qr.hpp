@@ -1,6 +1,7 @@
 #pragma once
 #include <kibo/workspace.hpp>
 #include <algorithm>
+#include <kibo/detail/row_kernels.hpp>
 
 namespace kibo::linalg {
 struct QrOptions { std::optional<double> relative_rank_tolerance; };
@@ -42,6 +43,7 @@ inline double column_norm(MatrixView<const double> matrix, std::size_t first, st
     for (std::size_t i=first;i<matrix.rows();++i) sum.add(matrix(i,column));
     return sum.norm();
 }
+
 }
 
 inline Result<QrFactorRequirement> qr_factor_requirement(std::size_t m, std::size_t n) noexcept {
@@ -114,12 +116,15 @@ inline Result<QrFactorView> factorize_qr(MatrixView<const double> input, MatrixV
             // Future Householder coefficients are not assigned yet. Reuse
             // tau[k+1:n] for this projection; each slot is overwritten when
             // its own column is factored. Workspace remains 2n doubles.
-            for (std::size_t j=k+1;j<n;++j) tau[j]=packed(k,j);
+            const auto first=k+1,count=n-k-1;
+            const auto last=first+count;
+            for (std::size_t j=first;j<last;++j) tau[j]=packed(k,j);
             for (std::size_t i=k+1;i<m;++i) {
                 const double value=packed(i,k);
-                for (std::size_t j=k+1;j<n;++j) tau[j]+=value*packed(i,j);
+                if (packed.col_stride()==1 && count!=0) detail::row_project(tau.data()+first,&packed(i,first),count,value);
+                else for (std::size_t j=first;j<last;++j) tau[j]+=value*packed(i,j);
             }
-            for (std::size_t j=k+1;j<n;++j) {
+            for (std::size_t j=first;j<last;++j) {
                 tau[j]*=tau[k];
                 if (!std::isfinite(tau[j])) return Status{StatusCode::arithmetic_failure,k};
                 packed(k,j)-=tau[j];
@@ -127,7 +132,10 @@ inline Result<QrFactorView> factorize_qr(MatrixView<const double> input, MatrixV
             }
             for (std::size_t i=k+1;i<m;++i) {
                 const double value=packed(i,k);
-                for (std::size_t j=k+1;j<n;++j) {
+                if (packed.col_stride()==1 && count!=0) {
+                    if (!detail::row_update_checked(&packed(i,first),tau.data()+first,count,value))
+                        return Status{StatusCode::arithmetic_failure,k};
+                } else for (std::size_t j=first;j<last;++j) {
                     packed(i,j)-=value*tau[j];
                     if (!std::isfinite(packed(i,j))) return Status{StatusCode::arithmetic_failure,k};
                 }
