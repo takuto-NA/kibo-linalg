@@ -119,7 +119,8 @@ ESP32・WASM等では通常のC++処理を使う。`KIBO_DISABLE_SIMD=1`を定�
 明示SIMDを無効化できる。この定義は同じプログラムの全translation unitで揃える。
 コンパイラ自身の自動vectorizationは別のcompile flagで制御する。
 
-LLTの連続行storageは、32列以上で未使用の上三角を分解中の一時領域に使う。
+LLTはSSE2を使う連続行storageで64列以上のとき、未使用の上三角を分解中の一時領域に使う。
+小さい行列やSIMD無効・非x86の構成では従来のscalar処理を使う。
 成功時は上三角を0に戻す。計算中のfactor storageは読み出さず、
 数値失敗後は領域全体を無効とする既存契約を守る。factor workspaceは0のまま。
 QRの有限値検査・列pivot/rank診断とfactor workspace=2n doublesも維持する。

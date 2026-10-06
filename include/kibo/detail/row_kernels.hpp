@@ -7,6 +7,11 @@
 #endif
 
 namespace kibo::linalg::detail {
+#if defined(KIBO_DETAIL_ROW_SSE2)
+inline constexpr bool row_simd_available=true;
+#else
+inline constexpr bool row_simd_available=false;
+#endif
 // Contiguous rows only. The caller guarantees non-overlapping regions;
 // unaligned packets impose no alignment requirement beyond double's ABI.
 inline void row_update(double* row, const double* projection, std::size_t count, double value) noexcept {

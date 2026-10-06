@@ -54,8 +54,7 @@ int main() {
     CHECK(known_factor && solve_into(known_factor.value(),std::span<const double>{known_b},std::span<double>{solution},known_workspace));
     CHECK(std::abs(solution[0]-1)<1e-12 && std::abs(solution[1]+2)<1e-12 && std::abs(solution[2]-3)<1e-12);
     // Dense lower factor, odd dimensions and padding exercise row updates.
-    {
-        constexpr std::size_t n=33;
+    const auto check_dense=[]<std::size_t n>() -> int {
         std::array<double,n*n> lower{},matrix{};
         std::array<double,n> truth{},rhs{},answer{},work{};
         for(std::size_t i=0;i<n;++i) {
@@ -90,6 +89,9 @@ int main() {
         matrix[n*n-1]=1;matrix[0]=1e-300;matrix[1]=matrix[n]=1e300;
         auto overflow=factorize_llt(dense,failed_storage.view());
         CHECK(!overflow && overflow.status().code==StatusCode::arithmetic_failure && overflow.status().index==0);
-    }
+        return 0;
+    };
+    CHECK(check_dense.template operator()<64>()==0);
+    CHECK(check_dense.template operator()<65>()==0);
     std::puts("public LLT 2x2 factor and transactional solve passed");
 }

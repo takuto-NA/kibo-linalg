@@ -22,6 +22,40 @@ namespace detail {
 struct LltAccess {
     static LltFactorView create(MatrixView<const double> lower) noexcept { return LltFactorView(lower); }
 };
+inline Result<LltFactorView> factorize_contiguous_llt(MatrixView<const double> input, MatrixView<double> storage) noexcept {
+    // Prevalidated input/storage; the public entry checks SIMD, layout and size.
+    const auto n=input.rows();
+    // Right-looking updates preserve ascending subtraction order per
+    // coefficient. The unused upper triangle temporarily mirrors the
+    // current lower column so every update reads contiguous rows.
+    const auto copied=copy_into(input,storage);
+    if (!copied) return copied;
+    for (std::size_t first=0;first<n;) {
+        const auto end=first+std::min(std::size_t{8},n-first);
+        for (std::size_t k=first;k<end;++k) {
+            const double diagonal=storage(k,k);
+            if (!std::isfinite(diagonal)) return Status{StatusCode::arithmetic_failure,k};
+            if (diagonal<=0) return Status{StatusCode::non_positive_pivot,k};
+            storage(k,k)=std::sqrt(diagonal);
+            for (std::size_t i=k+1;i<n;++i) {
+                const double value=storage(i,k)/storage(k,k);
+                if (!std::isfinite(value)) return Status{StatusCode::arithmetic_failure,k};
+                storage(i,k)=value;
+                storage(k,i)=value;
+            }
+            for (std::size_t i=k+1;i<n;++i)
+                row_update(&storage(i,k+1),&storage(k,k+1),std::min(i+1,end)-k-1,storage(i,k));
+        }
+        for (std::size_t i=end;i<n;++i)
+            row_update_panel(&storage(i,end),&storage(first,end),storage.row_stride(),
+                         &storage(i,first),end-first,i-end+1);
+        first=end;
+    }
+    // The public factor exposes a lower triangle, with upper entries 0.
+    for (std::size_t i=0;i<n;++i)
+        for (std::size_t j=i+1;j<n;++j) storage(i,j)=0;
+    return LltAccess::create(storage);
+}
 }
 
 inline Result<FactorRequirement> llt_factor_requirement(std::size_t n) noexcept {
@@ -54,37 +88,9 @@ inline Result<LltFactorView> factorize_llt(MatrixView<const double> input, Matri
                         return Status{StatusCode::invalid_argument,i};
         }
     }
-    if (storage.col_stride()==1 && n>=32) {
-        // Right-looking updates preserve ascending subtraction order per
-        // coefficient. The unused upper triangle temporarily mirrors the
-        // current lower column so every update reads contiguous rows.
-        const auto copied=copy_into(input,storage);
-        if (!copied) return copied;
-        for (std::size_t first=0;first<n;) {
-            const auto end=first+std::min(std::size_t{8},n-first);
-            for (std::size_t k=first;k<end;++k) {
-                const double diagonal=storage(k,k);
-                if (!std::isfinite(diagonal)) return Status{StatusCode::arithmetic_failure,k};
-                if (diagonal<=0) return Status{StatusCode::non_positive_pivot,k};
-                storage(k,k)=std::sqrt(diagonal);
-                for (std::size_t i=k+1;i<n;++i) {
-                    const double value=storage(i,k)/storage(k,k);
-                    if (!std::isfinite(value)) return Status{StatusCode::arithmetic_failure,k};
-                    storage(i,k)=value;
-                    storage(k,i)=value;
-                }
-                for (std::size_t i=k+1;i<n;++i)
-                    detail::row_update(&storage(i,k+1),&storage(k,k+1),std::min(i+1,end)-k-1,storage(i,k));
-            }
-            for (std::size_t i=end;i<n;++i)
-                detail::row_update_panel(&storage(i,end),&storage(first,end),storage.row_stride(),
-                                         &storage(i,first),end-first,i-end+1);
-            first=end;
-        }
-        // The public factor exposes a lower triangle, with upper entries 0.
-        for (std::size_t i=0;i<n;++i)
-            for (std::size_t j=i+1;j<n;++j) storage(i,j)=0;
-        return detail::LltAccess::create(storage);
+    if constexpr (detail::row_simd_available) {
+        if (storage.col_stride()==1 && n>=64)
+            return detail::factorize_contiguous_llt(input,storage);
     }
     for (std::size_t i=0;i<n;++i) {
         for (std::size_t j=0;j<=i;++j) {
