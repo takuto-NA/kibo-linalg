@@ -1,0 +1,27 @@
+{
+  "sourceCommit": "2462796ad42f97c4dd569b3393ca7f8be7e70985",
+  "ciSourceCommit": "b20118e6c7a4bb8f3dc7b6b72c49f2dd51e65a83",
+  "sourceHashesVerifiedAgainstGitBlob": true,
+  "measuredHeadersAndCMakeIdenticalToCiSource": true,
+  "windows": {
+    "commands": [
+      {
+        "file": "build\\native\\kibo_dense_benchmark.dir\\Release\\kibo_den.38E11949.tlog\\CL.command.1.tlog",
+        "command": "^C:\\USERS\\OWNER\\DOCUMENTS\\GIT\\KIBO-LINALG\\BENCHMARKS\\DENSE.CPP\n/c /I\"C:\\USERS\\OWNER\\DOCUMENTS\\GIT\\KIBO-LINALG\\INCLUDE\" /I\"C:\\DEV\\VCPKG\\INSTALLED\\X64-WINDOWS\\INCLUDE\" /nologo /W1 /WX- /diagnostics:column /O2 /Ob2 /D _MBCS /D WIN32 /D _WINDOWS /D NDEBUG /D EIGEN_DONT_PARALLELIZE=1 /D \"CMAKE_INTDIR=\\\"Release\\\"\" /EHsc /MD /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /std:c++20 /ifcOutput \"KIBO_DENSE_BENCHMARK.DIR\\RELEASE\\\\\" /Fo\"KIBO_DENSE_BENCHMARK.DIR\\RELEASE\\\\\" /Fd\"KIBO_DENSE_BENCHMARK.DIR\\RELEASE\\VC143.PDB\" /sourceDependencies \"KIBO_DENSE_BENCHMARK.DIR\\RELEASE\\.D.JSON\" /external:W0 /Gd /TP  /external:I \"C:/Users/owner/Documents/git/kibo-linalg/.cache/eigen-bc3b39870ecb690a623a3f49149a358b95c5781d-bc3b39870ecb690a623a3f49149a358b95c5781d\" C:\\USERS\\OWNER\\DOCUMENTS\\GIT\\KIBO-LINALG\\BENCHMARKS\\DENSE.CPP\n",
+        "sha256": "9e6051eedf1ae19ff090387f77c6c182cac0e873c18aecaceca6478dd54523ca"
+      },
+      {
+        "file": "build\\native\\kibo_dense_benchmark.dir\\Release\\kibo_den.38E11949_MD.tlog\\CL.command.1.tlog",
+        "command": "^C:\\USERS\\OWNER\\DOCUMENTS\\GIT\\KIBO-LINALG\\BENCHMARKS\\DENSE.CPP\n/c /I\"C:\\USERS\\OWNER\\DOCUMENTS\\GIT\\KIBO-LINALG\\INCLUDE\" /I\"C:\\DEV\\VCPKG\\INSTALLED\\X64-WINDOWS\\INCLUDE\" /nologo /W1 /WX- /diagnostics:column /O2 /Ob2 /D _MBCS /D WIN32 /D _WINDOWS /D NDEBUG /D EIGEN_DONT_PARALLELIZE=1 /D \"CMAKE_INTDIR=\\\"Release\\\"\" /EHsc /MD /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /std:c++20 /ifcOutput \"KIBO_DENSE_BENCHMARK.DIR\\RELEASE\\\\\" /scanDependencies \"KIBO_DENSE_BENCHMARK.DIR\\RELEASE\\\\\" /Fo\"KIBO_DENSE_BENCHMARK.DIR\\RELEASE\\\\\" /Fd\"KIBO_DENSE_BENCHMARK.DIR\\RELEASE\\VC143.PDB\" /external:W0 /Gd /TP  /external:I \"C:/Users/owner/Documents/git/kibo-linalg/.cache/eigen-bc3b39870ecb690a623a3f49149a358b95c5781d-bc3b39870ecb690a623a3f49149a358b95c5781d\" C:\\USERS\\OWNER\\DOCUMENTS\\GIT\\KIBO-LINALG\\BENCHMARKS\\DENSE.CPP\n",
+        "sha256": "302abd910374717b789971743542122970e64467ce20900e66a07d48c0115ea0"
+      }
+    ],
+    "toolchainMetadataSha256": "89f08d5015c57988fe86ca6eaa9d48ed9d584db1c8c5b0f7b1c81e9c5334bccd",
+    "executableSha256": "1015f8583f01ede54b8dff174d6d14ffa613bb2e825fa3879344b4c3d05bc18a"
+  },
+  "scalar": {
+    "command": "/work/.cache/tools/LLVM-20.1.8-Linux-X64/bin/clang++ -DEIGEN_DONT_PARALLELIZE=1 -DEIGEN_DONT_VECTORIZE=1 -DKIBO_DISABLE_SIMD=1 -I/work/include -isystem /work/.cache/eigen -stdlib=libc++ -O3 -DNDEBUG -std=gnu++20 -fno-vectorize -fno-slp-vectorize -ffp-contract=off -o CMakeFiles/kibo_dense_benchmark.dir/benchmarks/dense.cpp.o -c /work/benchmarks/dense.cpp",
+    "compileCommandsSha256": "31114420482da9f04a6666f932d3e1df6f70f4f1bc6777f1f777c3fbd85649db",
+    "executableSha256": "7103aa1cb85bf8c4d4e655ac4663264d441d556bd8f20760bda996a2b39e32f2"
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "executableSha256": "1015f8583f01ede54b8dff174d6d14ffa613bb2e825fa3879344b4c3d05bc18a",
+  "fixtureSeed": "0x6b69626f",
+  "processRuns": 5,
+  "layout": "kibo row-major; Eigen column-major; input conversion reported separately",
+  "samples": 30,
+  "sourceCommit": "2462796ad42f97c4dd569b3393ca7f8be7e70985",
+  "timing": "fixed batches; start/end clock reads; rejected batches shorter than 20ms are repeated with doubled iteration count",
+  "configuration": "Release /O2 /fp:precise; fast-math off; Eigen single-thread; default x64 SIMD",
+  "warmup": 5,
+  "cpu": {
+    "Name": "Intel(R) Core(TM) i9-14900K",
+    "NumberOfCores": 24,
+    "NumberOfLogicalProcessors": 32
+  },
+  "minimumSampleMilliseconds": 20,
+  "measuredAt": "2026-10-06T17:50:26.2640950+00:00",
+  "os": {
+    "Caption": "Microsoft Windows 11 Pro",
+    "Version": "10.0.26200",
+    "BuildNumber": "26200"
+  },
+  "compiler": "MSVC 19.44.35222.0, toolset14.44.35207",
+  "sourceHashes": [
+    {
+      "Hash": "F539E0569522F9206830AF543B080CEE13A38232BD4F618273EB49996822D652",
+      "File": "benchmarks\\dense.cpp"
+    },
+    {
+      "Hash": "EABB9C60F1659B981C52E704C3E9A53CDAEF50349BACCDA2EC6FCC5774F6C142",
+      "File": "tests\\controlled_fixture.hpp"
+    },
+    {
+      "Hash": "52BF606A0F6AC2E21A83878E7B029B4C65935E25F5FC90387B1CF2EF74572634",
+      "File": "include\\kibo\\linalg.hpp"
+    },
+    {
+      "Hash": "E74B13BB57D83BB0AD7B1C8F271C40DB825A2D1B380F0224639A9D94EE8C48D0",
+      "File": "include\\kibo\\workspace.hpp"
+    },
+    {
+      "Hash": "A7D7F9493E28A1C86E21D43E504CA4CEAFDB60952C49592ADD924E1871FC646B",
+      "File": "include\\kibo\\llt.hpp"
+    },
+    {
+      "Hash": "DF7FCAEA5255F735C7539687FFFAAC7150BA0B1C600A5FFF9BD51BC7EBA6E517",
+      "File": "include\\kibo\\qr.hpp"
+    },
+    {
+      "Hash": "17689DD2DB8C19763F3005BB4AB24818876906E8C484AF738BCFD4FC5538B053",
+      "File": "include\\kibo\\detail\\row_kernels.hpp"
+    },
+    {
+      "Hash": "F02A156809B358A0F226592606777A68A9AD12767CC1CC8C7C784DC6A4FC01DA",
+      "File": "CMakeLists.txt"
+    }
+  ],
+  "solver": "lambda=1e-3, D=I; normal-LLT and augmented-QR; rank tolerance=max(m_aug,n)*epsilon"
+}

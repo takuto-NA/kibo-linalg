@@ -1,0 +1,656 @@
+{
+  "run": "https://github.com/takuto-NA/kibo-linalg/actions/runs/37511544075",
+  "sourceCommit": "83c7a143599cd9e73bc97e6ecae3680daee3418f",
+  "platforms": [
+    {
+      "compiler": "gcc",
+      "job": "https://github.com/takuto-NA/kibo-linalg/actions/runs/37511544075/job/112433670065",
+      "jobConclusion": "failure (numerical gate)",
+      "consumer": "passed after prefix relocation",
+      "consumerLogSha256": "26786687c1c6b59e7349dcdaf5e77a25226aa4828203572d7a05ce4581082f81",
+      "configurations": [
+        {
+          "configuration": "Debug",
+          "preparedCases": [
+            {
+              "m": 2,
+              "n": 2,
+              "allocatorCalls": 0
+            },
+            {
+              "m": 8,
+              "n": 2,
+              "allocatorCalls": 0
+            },
+            {
+              "m": 8,
+              "n": 8,
+              "allocatorCalls": 0
+            },
+            {
+              "m": 32,
+              "n": 8,
+              "allocatorCalls": 0
+            },
+            {
+              "m": 32,
+              "n": 32,
+              "allocatorCalls": 0
+            },
+            {
+              "m": 128,
+              "n": 32,
+              "allocatorCalls": 0
+            }
+          ],
+          "failedTests": [
+            "numerical"
+          ],
+          "passedTests": [
+            "lm_reference",
+            "common_2x2",
+            "migration",
+            "core",
+            "dynamic",
+            "llt",
+            "qr",
+            "llt_scalar",
+            "qr_scalar",
+            "no_runtime",
+            "dynamic_no_runtime",
+            "allocation"
+          ],
+          "actualCommands": [
+            {
+              "file": "/work/tests/no_runtime_tests.cpp",
+              "command": "/usr/local/bin/g++  -I/work/include -g -std=gnu++20 -Wall -Wextra -Wpedantic -fno-exceptions -fno-rtti -o CMakeFiles/kibo_no_runtime_tests.dir/tests/no_runtime_tests.cpp.o -c /work/tests/no_runtime_tests.cpp"
+            },
+            {
+              "file": "/work/tests/dynamic_tests.cpp",
+              "command": "/usr/local/bin/g++  -I/work/include -g -std=gnu++20 -Wall -Wextra -Wpedantic -fno-exceptions -fno-rtti -o CMakeFiles/kibo_dynamic_no_runtime_tests.dir/tests/dynamic_tests.cpp.o -c /work/tests/dynamic_tests.cpp"
+            },
+            {
+              "file": "/work/tests/allocation_tests.cpp",
+              "command": "/usr/local/bin/g++ -DKIBO_WRAP_ALLOCATORS=1 -I/work/include -g -std=gnu++20 -fno-builtin-malloc -fno-builtin-calloc -fno-builtin-realloc -fno-builtin-aligned_alloc -o CMakeFiles/kibo_allocation_tests.dir/tests/allocation_tests.cpp.o -c /work/tests/allocation_tests.cpp"
+            }
+          ],
+          "inputSha256": {
+            "LastTest.log": "7399ff9855ea66b6003e042f64999e8e794d5068b97a25ea5840bf2c2df3b507",
+            "compile_commands.json": "e3205b25e4c74d4fb8a446d133dc67650736166310ab879da6a5d49483b978b8"
+          },
+          "publicScalarFallbackCommands": [
+            {
+              "directory": "/work/build/linux-gcc/Debug",
+              "command": "/usr/local/bin/g++ -DKIBO_DISABLE_SIMD=1 -I/work/include -g -std=gnu++20 -o CMakeFiles/kibo_llt_scalar_tests.dir/tests/llt_tests.cpp.o -c /work/tests/llt_tests.cpp",
+              "file": "/work/tests/llt_tests.cpp",
+              "output": "CMakeFiles/kibo_llt_scalar_tests.dir/tests/llt_tests.cpp.o"
+            },
+            {
+              "directory": "/work/build/linux-gcc/Debug",
+              "command": "/usr/local/bin/g++ -DKIBO_DISABLE_SIMD=1 -I/work/include -g -std=gnu++20 -o CMakeFiles/kibo_qr_scalar_tests.dir/tests/qr_tests.cpp.o -c /work/tests/qr_tests.cpp",
+              "file": "/work/tests/qr_tests.cpp",
+              "output": "CMakeFiles/kibo_qr_scalar_tests.dir/tests/qr_tests.cpp.o"
+            }
+          ]
+        },
+        {
+          "configuration": "Release",
+          "preparedCases": [
+            {
+              "m": 2,
+              "n": 2,
+              "allocatorCalls": 0
+            },
+            {
+              "m": 8,
+              "n": 2,
+              "allocatorCalls": 0
+            },
+            {
+              "m": 8,
+              "n": 8,
+              "allocatorCalls": 0
+            },
+            {
+              "m": 32,
+              "n": 8,
+              "allocatorCalls": 0
+            },
+            {
+              "m": 32,
+              "n": 32,
+              "allocatorCalls": 0
+            },
+            {
+              "m": 128,
+              "n": 32,
+              "allocatorCalls": 0
+            },
+            {
+              "m": 128,
+              "n": 128,
+              "allocatorCalls": 0
+            },
+            {
+              "m": 512,
+              "n": 128,
+              "allocatorCalls": 0
+            },
+            {
+              "m": 512,
+              "n": 512,
+              "allocatorCalls": 0
+            },
+            {
+              "m": 2048,
+              "n": 512,
+              "allocatorCalls": 0
+            }
+          ],
+          "failedTests": [
+            "numerical"
+          ],
+          "passedTests": [
+            "lm_reference",
+            "common_2x2",
+            "migration",
+            "core",
+            "dynamic",
+            "llt",
+            "qr",
+            "llt_scalar",
+            "qr_scalar",
+            "no_runtime",
+            "dynamic_no_runtime",
+            "allocation"
+          ],
+          "actualCommands": [
+            {
+              "file": "/work/tests/no_runtime_tests.cpp",
+              "command": "/usr/local/bin/g++  -I/work/include -O3 -DNDEBUG -std=gnu++20 -Wall -Wextra -Wpedantic -fno-exceptions -fno-rtti -o CMakeFiles/kibo_no_runtime_tests.dir/tests/no_runtime_tests.cpp.o -c /work/tests/no_runtime_tests.cpp"
+            },
+            {
+              "file": "/work/tests/dynamic_tests.cpp",
+              "command": "/usr/local/bin/g++  -I/work/include -O3 -DNDEBUG -std=gnu++20 -Wall -Wextra -Wpedantic -fno-exceptions -fno-rtti -o CMakeFiles/kibo_dynamic_no_runtime_tests.dir/tests/dynamic_tests.cpp.o -c /work/tests/dynamic_tests.cpp"
+            },
+            {
+              "file": "/work/tests/allocation_tests.cpp",
+              "command": "/usr/local/bin/g++ -DKIBO_WRAP_ALLOCATORS=1 -I/work/include -O3 -DNDEBUG -std=gnu++20 -fno-builtin-malloc -fno-builtin-calloc -fno-builtin-realloc -fno-builtin-aligned_alloc -o CMakeFiles/kibo_allocation_tests.dir/tests/allocation_tests.cpp.o -c /work/tests/allocation_tests.cpp"
+            }
+          ],
+          "inputSha256": {
+            "LastTest.log": "efed98b5f1335db4b3f10b20835937737f15ba26827d74ca54d50e0f6c13c2e7",
+            "compile_commands.json": "eb745a457097a3d49bc8bb91debc67b8b5a5492c2cb9cc3a2df72b63e9d73477"
+          },
+          "publicScalarFallbackCommands": [
+            {
+              "directory": "/work/build/linux-gcc/Release",
+              "command": "/usr/local/bin/g++ -DKIBO_DISABLE_SIMD=1 -I/work/include -O3 -DNDEBUG -std=gnu++20 -o CMakeFiles/kibo_llt_scalar_tests.dir/tests/llt_tests.cpp.o -c /work/tests/llt_tests.cpp",
+              "file": "/work/tests/llt_tests.cpp",
+              "output": "CMakeFiles/kibo_llt_scalar_tests.dir/tests/llt_tests.cpp.o"
+            },
+            {
+              "directory": "/work/build/linux-gcc/Release",
+              "command": "/usr/local/bin/g++ -DKIBO_DISABLE_SIMD=1 -I/work/include -O3 -DNDEBUG -std=gnu++20 -o CMakeFiles/kibo_qr_scalar_tests.dir/tests/qr_tests.cpp.o -c /work/tests/qr_tests.cpp",
+              "file": "/work/tests/qr_tests.cpp",
+              "output": "CMakeFiles/kibo_qr_scalar_tests.dir/tests/qr_tests.cpp.o"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "compiler": "clang",
+      "job": "https://github.com/takuto-NA/kibo-linalg/actions/runs/37511544075/job/112433670215",
+      "jobConclusion": "failure (numerical gate)",
+      "consumer": "passed after prefix relocation",
+      "consumerLogSha256": "ec49fc9e294d7b6c9946aa93b413f6d8dadf99ff92ca106bb0e459e48d733a78",
+      "configurations": [
+        {
+          "configuration": "Debug",
+          "preparedCases": [
+            {
+              "m": 2,
+              "n": 2,
+              "allocatorCalls": 0
+            },
+            {
+              "m": 8,
+              "n": 2,
+              "allocatorCalls": 0
+            },
+            {
+              "m": 8,
+              "n": 8,
+              "allocatorCalls": 0
+            },
+            {
+              "m": 32,
+              "n": 8,
+              "allocatorCalls": 0
+            },
+            {
+              "m": 32,
+              "n": 32,
+              "allocatorCalls": 0
+            },
+            {
+              "m": 128,
+              "n": 32,
+              "allocatorCalls": 0
+            }
+          ],
+          "failedTests": [
+            "numerical"
+          ],
+          "passedTests": [
+            "lm_reference",
+            "common_2x2",
+            "migration",
+            "core",
+            "dynamic",
+            "llt",
+            "qr",
+            "llt_scalar",
+            "qr_scalar",
+            "no_runtime",
+            "dynamic_no_runtime",
+            "allocation"
+          ],
+          "actualCommands": [
+            {
+              "file": "/work/tests/no_runtime_tests.cpp",
+              "command": "/work/.cache/tools/LLVM-20.1.8-Linux-X64/bin/clang++  -I/work/include -stdlib=libc++ -g -std=gnu++20 -Wall -Wextra -Wpedantic -fno-exceptions -fno-rtti -o CMakeFiles/kibo_no_runtime_tests.dir/tests/no_runtime_tests.cpp.o -c /work/tests/no_runtime_tests.cpp"
+            },
+            {
+              "file": "/work/tests/dynamic_tests.cpp",
+              "command": "/work/.cache/tools/LLVM-20.1.8-Linux-X64/bin/clang++  -I/work/include -stdlib=libc++ -g -std=gnu++20 -Wall -Wextra -Wpedantic -fno-exceptions -fno-rtti -o CMakeFiles/kibo_dynamic_no_runtime_tests.dir/tests/dynamic_tests.cpp.o -c /work/tests/dynamic_tests.cpp"
+            },
+            {
+              "file": "/work/tests/allocation_tests.cpp",
+              "command": "/work/.cache/tools/LLVM-20.1.8-Linux-X64/bin/clang++ -DKIBO_WRAP_ALLOCATORS=1 -I/work/include -stdlib=libc++ -g -std=gnu++20 -fno-builtin-malloc -fno-builtin-calloc -fno-builtin-realloc -fno-builtin-aligned_alloc -o CMakeFiles/kibo_allocation_tests.dir/tests/allocation_tests.cpp.o -c /work/tests/allocation_tests.cpp"
+            }
+          ],
+          "inputSha256": {
+            "LastTest.log": "fd0934c05a64cc2787e1be517c38c498c4e700ef225fd172277c0e57b8a36c66",
+            "compile_commands.json": "41b734f744f68eb71580fae9b31e609606d1dafdaab32714aa12fe6ea765a544"
+          },
+          "publicScalarFallbackCommands": [
+            {
+              "directory": "/work/build/linux-clang/Debug",
+              "command": "/work/.cache/tools/LLVM-20.1.8-Linux-X64/bin/clang++ -DKIBO_DISABLE_SIMD=1 -I/work/include -stdlib=libc++ -g -std=gnu++20 -o CMakeFiles/kibo_llt_scalar_tests.dir/tests/llt_tests.cpp.o -c /work/tests/llt_tests.cpp",
+              "file": "/work/tests/llt_tests.cpp",
+              "output": "CMakeFiles/kibo_llt_scalar_tests.dir/tests/llt_tests.cpp.o"
+            },
+            {
+              "directory": "/work/build/linux-clang/Debug",
+              "command": "/work/.cache/tools/LLVM-20.1.8-Linux-X64/bin/clang++ -DKIBO_DISABLE_SIMD=1 -I/work/include -stdlib=libc++ -g -std=gnu++20 -o CMakeFiles/kibo_qr_scalar_tests.dir/tests/qr_tests.cpp.o -c /work/tests/qr_tests.cpp",
+              "file": "/work/tests/qr_tests.cpp",
+              "output": "CMakeFiles/kibo_qr_scalar_tests.dir/tests/qr_tests.cpp.o"
+            }
+          ]
+        },
+        {
+          "configuration": "Release",
+          "preparedCases": [
+            {
+              "m": 2,
+              "n": 2,
+              "allocatorCalls": 0
+            },
+            {
+              "m": 8,
+              "n": 2,
+              "allocatorCalls": 0
+            },
+            {
+              "m": 8,
+              "n": 8,
+              "allocatorCalls": 0
+            },
+            {
+              "m": 32,
+              "n": 8,
+              "allocatorCalls": 0
+            },
+            {
+              "m": 32,
+              "n": 32,
+              "allocatorCalls": 0
+            },
+            {
+              "m": 128,
+              "n": 32,
+              "allocatorCalls": 0
+            },
+            {
+              "m": 128,
+              "n": 128,
+              "allocatorCalls": 0
+            },
+            {
+              "m": 512,
+              "n": 128,
+              "allocatorCalls": 0
+            },
+            {
+              "m": 512,
+              "n": 512,
+              "allocatorCalls": 0
+            },
+            {
+              "m": 2048,
+              "n": 512,
+              "allocatorCalls": 0
+            }
+          ],
+          "failedTests": [
+            "numerical"
+          ],
+          "passedTests": [
+            "lm_reference",
+            "common_2x2",
+            "migration",
+            "core",
+            "dynamic",
+            "llt",
+            "qr",
+            "llt_scalar",
+            "qr_scalar",
+            "no_runtime",
+            "dynamic_no_runtime",
+            "allocation"
+          ],
+          "actualCommands": [
+            {
+              "file": "/work/tests/no_runtime_tests.cpp",
+              "command": "/work/.cache/tools/LLVM-20.1.8-Linux-X64/bin/clang++  -I/work/include -stdlib=libc++ -O3 -DNDEBUG -std=gnu++20 -Wall -Wextra -Wpedantic -fno-exceptions -fno-rtti -o CMakeFiles/kibo_no_runtime_tests.dir/tests/no_runtime_tests.cpp.o -c /work/tests/no_runtime_tests.cpp"
+            },
+            {
+              "file": "/work/tests/dynamic_tests.cpp",
+              "command": "/work/.cache/tools/LLVM-20.1.8-Linux-X64/bin/clang++  -I/work/include -stdlib=libc++ -O3 -DNDEBUG -std=gnu++20 -Wall -Wextra -Wpedantic -fno-exceptions -fno-rtti -o CMakeFiles/kibo_dynamic_no_runtime_tests.dir/tests/dynamic_tests.cpp.o -c /work/tests/dynamic_tests.cpp"
+            },
+            {
+              "file": "/work/tests/allocation_tests.cpp",
+              "command": "/work/.cache/tools/LLVM-20.1.8-Linux-X64/bin/clang++ -DKIBO_WRAP_ALLOCATORS=1 -I/work/include -stdlib=libc++ -O3 -DNDEBUG -std=gnu++20 -fno-builtin-malloc -fno-builtin-calloc -fno-builtin-realloc -fno-builtin-aligned_alloc -o CMakeFiles/kibo_allocation_tests.dir/tests/allocation_tests.cpp.o -c /work/tests/allocation_tests.cpp"
+            }
+          ],
+          "inputSha256": {
+            "LastTest.log": "9f87ec6a5a51a5cb526f62ae13e37933dd0808ed3b3c3defd728b00ffaf401cb",
+            "compile_commands.json": "2344c9c941b0de9630991c2ae17a68466f05401664d3cbc6199c30514e816516"
+          },
+          "publicScalarFallbackCommands": [
+            {
+              "directory": "/work/build/linux-clang/Release",
+              "command": "/work/.cache/tools/LLVM-20.1.8-Linux-X64/bin/clang++ -DKIBO_DISABLE_SIMD=1 -I/work/include -stdlib=libc++ -O3 -DNDEBUG -std=gnu++20 -o CMakeFiles/kibo_llt_scalar_tests.dir/tests/llt_tests.cpp.o -c /work/tests/llt_tests.cpp",
+              "file": "/work/tests/llt_tests.cpp",
+              "output": "CMakeFiles/kibo_llt_scalar_tests.dir/tests/llt_tests.cpp.o"
+            },
+            {
+              "directory": "/work/build/linux-clang/Release",
+              "command": "/work/.cache/tools/LLVM-20.1.8-Linux-X64/bin/clang++ -DKIBO_DISABLE_SIMD=1 -I/work/include -stdlib=libc++ -O3 -DNDEBUG -std=gnu++20 -o CMakeFiles/kibo_qr_scalar_tests.dir/tests/qr_tests.cpp.o -c /work/tests/qr_tests.cpp",
+              "file": "/work/tests/qr_tests.cpp",
+              "output": "CMakeFiles/kibo_qr_scalar_tests.dir/tests/qr_tests.cpp.o"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "compiler": "clang-sanitized",
+      "job": "https://github.com/takuto-NA/kibo-linalg/actions/runs/37511544075/job/112433670162",
+      "jobConclusion": "failure (numerical gate)",
+      "consumer": "passed after prefix relocation",
+      "consumerLogSha256": "3b870d8ccbf7c9717e819bd194f28f285be9a117bd225b906a8a6ebe0df1b969",
+      "configurations": [
+        {
+          "configuration": "Debug",
+          "preparedCases": [
+            {
+              "m": 2,
+              "n": 2,
+              "allocatorCalls": 0
+            },
+            {
+              "m": 8,
+              "n": 2,
+              "allocatorCalls": 0
+            },
+            {
+              "m": 8,
+              "n": 8,
+              "allocatorCalls": 0
+            },
+            {
+              "m": 32,
+              "n": 8,
+              "allocatorCalls": 0
+            },
+            {
+              "m": 32,
+              "n": 32,
+              "allocatorCalls": 0
+            },
+            {
+              "m": 128,
+              "n": 32,
+              "allocatorCalls": 0
+            }
+          ],
+          "failedTests": [
+            "numerical"
+          ],
+          "passedTests": [
+            "lm_reference",
+            "common_2x2",
+            "migration",
+            "core",
+            "dynamic",
+            "llt",
+            "qr",
+            "llt_scalar",
+            "qr_scalar",
+            "no_runtime",
+            "dynamic_no_runtime",
+            "allocation"
+          ],
+          "actualCommands": [
+            {
+              "file": "/work/tests/no_runtime_tests.cpp",
+              "command": "/work/.cache/tools/LLVM-20.1.8-Linux-X64/bin/clang++  -I/work/include -stdlib=libc++ -fsanitize=address,undefined -fno-omit-frame-pointer -g -std=gnu++20 -Wall -Wextra -Wpedantic -fno-exceptions -fno-rtti -o CMakeFiles/kibo_no_runtime_tests.dir/tests/no_runtime_tests.cpp.o -c /work/tests/no_runtime_tests.cpp"
+            },
+            {
+              "file": "/work/tests/dynamic_tests.cpp",
+              "command": "/work/.cache/tools/LLVM-20.1.8-Linux-X64/bin/clang++  -I/work/include -stdlib=libc++ -fsanitize=address,undefined -fno-omit-frame-pointer -g -std=gnu++20 -Wall -Wextra -Wpedantic -fno-exceptions -fno-rtti -o CMakeFiles/kibo_dynamic_no_runtime_tests.dir/tests/dynamic_tests.cpp.o -c /work/tests/dynamic_tests.cpp"
+            },
+            {
+              "file": "/work/tests/allocation_tests.cpp",
+              "command": "/work/.cache/tools/LLVM-20.1.8-Linux-X64/bin/clang++ -DKIBO_WRAP_ALLOCATORS=1 -I/work/include -stdlib=libc++ -fsanitize=address,undefined -fno-omit-frame-pointer -g -std=gnu++20 -fno-builtin-malloc -fno-builtin-calloc -fno-builtin-realloc -fno-builtin-aligned_alloc -o CMakeFiles/kibo_allocation_tests.dir/tests/allocation_tests.cpp.o -c /work/tests/allocation_tests.cpp"
+            }
+          ],
+          "inputSha256": {
+            "LastTest.log": "98fbf0b33cba96ced7b5c6e8f30ed766498a56c5d612d03f3e2b18f11d180614",
+            "compile_commands.json": "1853d06700fd4f78c6e843f938ec6addb3237c9415e3b0c5138e32c144e01096"
+          },
+          "publicScalarFallbackCommands": [
+            {
+              "directory": "/work/build/linux-clang-sanitized/Debug",
+              "command": "/work/.cache/tools/LLVM-20.1.8-Linux-X64/bin/clang++ -DKIBO_DISABLE_SIMD=1 -I/work/include -stdlib=libc++ -fsanitize=address,undefined -fno-omit-frame-pointer -g -std=gnu++20 -o CMakeFiles/kibo_llt_scalar_tests.dir/tests/llt_tests.cpp.o -c /work/tests/llt_tests.cpp",
+              "file": "/work/tests/llt_tests.cpp",
+              "output": "CMakeFiles/kibo_llt_scalar_tests.dir/tests/llt_tests.cpp.o"
+            },
+            {
+              "directory": "/work/build/linux-clang-sanitized/Debug",
+              "command": "/work/.cache/tools/LLVM-20.1.8-Linux-X64/bin/clang++ -DKIBO_DISABLE_SIMD=1 -I/work/include -stdlib=libc++ -fsanitize=address,undefined -fno-omit-frame-pointer -g -std=gnu++20 -o CMakeFiles/kibo_qr_scalar_tests.dir/tests/qr_tests.cpp.o -c /work/tests/qr_tests.cpp",
+              "file": "/work/tests/qr_tests.cpp",
+              "output": "CMakeFiles/kibo_qr_scalar_tests.dir/tests/qr_tests.cpp.o"
+            }
+          ]
+        },
+        {
+          "configuration": "Release",
+          "preparedCases": [
+            {
+              "m": 2,
+              "n": 2,
+              "allocatorCalls": 0
+            },
+            {
+              "m": 8,
+              "n": 2,
+              "allocatorCalls": 0
+            },
+            {
+              "m": 8,
+              "n": 8,
+              "allocatorCalls": 0
+            },
+            {
+              "m": 32,
+              "n": 8,
+              "allocatorCalls": 0
+            },
+            {
+              "m": 32,
+              "n": 32,
+              "allocatorCalls": 0
+            },
+            {
+              "m": 128,
+              "n": 32,
+              "allocatorCalls": 0
+            },
+            {
+              "m": 128,
+              "n": 128,
+              "allocatorCalls": 0
+            },
+            {
+              "m": 512,
+              "n": 128,
+              "allocatorCalls": 0
+            },
+            {
+              "m": 512,
+              "n": 512,
+              "allocatorCalls": 0
+            },
+            {
+              "m": 2048,
+              "n": 512,
+              "allocatorCalls": 0
+            }
+          ],
+          "failedTests": [
+            "numerical"
+          ],
+          "passedTests": [
+            "lm_reference",
+            "common_2x2",
+            "migration",
+            "core",
+            "dynamic",
+            "llt",
+            "qr",
+            "llt_scalar",
+            "qr_scalar",
+            "no_runtime",
+            "dynamic_no_runtime",
+            "allocation"
+          ],
+          "actualCommands": [
+            {
+              "file": "/work/tests/no_runtime_tests.cpp",
+              "command": "/work/.cache/tools/LLVM-20.1.8-Linux-X64/bin/clang++  -I/work/include -stdlib=libc++ -fsanitize=address,undefined -fno-omit-frame-pointer -O3 -DNDEBUG -std=gnu++20 -Wall -Wextra -Wpedantic -fno-exceptions -fno-rtti -o CMakeFiles/kibo_no_runtime_tests.dir/tests/no_runtime_tests.cpp.o -c /work/tests/no_runtime_tests.cpp"
+            },
+            {
+              "file": "/work/tests/dynamic_tests.cpp",
+              "command": "/work/.cache/tools/LLVM-20.1.8-Linux-X64/bin/clang++  -I/work/include -stdlib=libc++ -fsanitize=address,undefined -fno-omit-frame-pointer -O3 -DNDEBUG -std=gnu++20 -Wall -Wextra -Wpedantic -fno-exceptions -fno-rtti -o CMakeFiles/kibo_dynamic_no_runtime_tests.dir/tests/dynamic_tests.cpp.o -c /work/tests/dynamic_tests.cpp"
+            },
+            {
+              "file": "/work/tests/allocation_tests.cpp",
+              "command": "/work/.cache/tools/LLVM-20.1.8-Linux-X64/bin/clang++ -DKIBO_WRAP_ALLOCATORS=1 -I/work/include -stdlib=libc++ -fsanitize=address,undefined -fno-omit-frame-pointer -O3 -DNDEBUG -std=gnu++20 -fno-builtin-malloc -fno-builtin-calloc -fno-builtin-realloc -fno-builtin-aligned_alloc -o CMakeFiles/kibo_allocation_tests.dir/tests/allocation_tests.cpp.o -c /work/tests/allocation_tests.cpp"
+            }
+          ],
+          "inputSha256": {
+            "LastTest.log": "b5978ab64acf1d23c01dd394e250dfa9170899f89f74e6547c188191d1227696",
+            "compile_commands.json": "e0d9b34c500a33e74bc867bb0c61329c6943c0343a31501a2abe3ac372ccda2d"
+          },
+          "publicScalarFallbackCommands": [
+            {
+              "directory": "/work/build/linux-clang-sanitized/Release",
+              "command": "/work/.cache/tools/LLVM-20.1.8-Linux-X64/bin/clang++ -DKIBO_DISABLE_SIMD=1 -I/work/include -stdlib=libc++ -fsanitize=address,undefined -fno-omit-frame-pointer -O3 -DNDEBUG -std=gnu++20 -o CMakeFiles/kibo_llt_scalar_tests.dir/tests/llt_tests.cpp.o -c /work/tests/llt_tests.cpp",
+              "file": "/work/tests/llt_tests.cpp",
+              "output": "CMakeFiles/kibo_llt_scalar_tests.dir/tests/llt_tests.cpp.o"
+            },
+            {
+              "directory": "/work/build/linux-clang-sanitized/Release",
+              "command": "/work/.cache/tools/LLVM-20.1.8-Linux-X64/bin/clang++ -DKIBO_DISABLE_SIMD=1 -I/work/include -stdlib=libc++ -fsanitize=address,undefined -fno-omit-frame-pointer -O3 -DNDEBUG -std=gnu++20 -o CMakeFiles/kibo_qr_scalar_tests.dir/tests/qr_tests.cpp.o -c /work/tests/qr_tests.cpp",
+              "file": "/work/tests/qr_tests.cpp",
+              "output": "CMakeFiles/kibo_qr_scalar_tests.dir/tests/qr_tests.cpp.o"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "compiler": "msvc",
+      "job": "https://github.com/takuto-NA/kibo-linalg/actions/runs/37511544075/job/112433670174",
+      "jobConclusion": "failure (numerical gate)",
+      "consumer": "passed after prefix relocation",
+      "consumerLogSha256": "bb90848b07f542c793cf8f3ef83e0301fb0a660a36d316ee1dae9759856c8006",
+      "configurations": [
+        {
+          "configuration": "Debug",
+          "failedTests": [
+            "numerical"
+          ],
+          "allocationTest": "passed; calibration and six shapes are required",
+          "inputLogSha256": "8082c33cac9078109955a3b14af133210803a9a95d7ab47bc2b1eb7c708cd5a7",
+          "publicScalarFallbackTests": [
+            "llt_scalar",
+            "qr_scalar"
+          ]
+        },
+        {
+          "configuration": "Release",
+          "failedTests": [
+            "numerical"
+          ],
+          "allocationTest": "skipped; no CRT allocation measurement",
+          "inputLogSha256": "04f86a3c8e9530d20ce8084b855004f584a0a312e912e56febdcb9a5a168a79d",
+          "publicScalarFallbackTests": [
+            "llt_scalar",
+            "qr_scalar"
+          ]
+        }
+      ],
+      "actualCommands": [
+        {
+          "configuration": "Debug",
+          "command": "^D:\\A\\KIBO-LINALG\\KIBO-LINALG\\TESTS\\NO_RUNTIME_TESTS.CPP\n/c /I\"D:\\A\\KIBO-LINALG\\KIBO-LINALG\\INCLUDE\" /Zi /nologo /W4 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _HAS_EXCEPTIONS=0 /D \"CMAKE_INTDIR=\\\"Debug\\\"\" /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR- /std:c++20 /permissive- /ifcOutput \"KIBO_NO_RUNTIME_TESTS.DIR\\DEBUG\\\\\" /Fo\"KIBO_NO_RUNTIME_TESTS.DIR\\DEBUG\\\\\" /Fd\"KIBO_NO_RUNTIME_TESTS.DIR\\DEBUG\\VC143.PDB\" /sourceDependencies \"KIBO_NO_RUNTIME_TESTS.DIR\\DEBUG\\.D.JSON\" /external:W4 /Gd /TP  /EHa- /EHs- /EHc- D:\\A\\KIBO-LINALG\\KIBO-LINALG\\TESTS\\NO_RUNTIME_TESTS.CPP\n",
+          "file": "ci-windows\\kibo_no_runtime_tests.dir\\Debug\\kibo_no_.D7A881BE.tlog\\CL.command.1.tlog",
+          "sha256": "8de0b343ff8d02a13925a20f514ca73ef7f0f6597e108a1133ddd783585d796c"
+        },
+        {
+          "configuration": "Debug",
+          "command": "^D:\\A\\KIBO-LINALG\\KIBO-LINALG\\TESTS\\NO_RUNTIME_TESTS.CPP\n/c /I\"D:\\A\\KIBO-LINALG\\KIBO-LINALG\\INCLUDE\" /Zi /nologo /W4 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _HAS_EXCEPTIONS=0 /D \"CMAKE_INTDIR=\\\"Debug\\\"\" /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR- /std:c++20 /permissive- /ifcOutput \"KIBO_NO_RUNTIME_TESTS.DIR\\DEBUG\\\\\" /scanDependencies \"KIBO_NO_RUNTIME_TESTS.DIR\\DEBUG\\\\\" /Fo\"KIBO_NO_RUNTIME_TESTS.DIR\\DEBUG\\\\\" /Fd\"KIBO_NO_RUNTIME_TESTS.DIR\\DEBUG\\VC143.PDB\" /external:W4 /Gd /TP  /EHa- /EHs- /EHc- D:\\A\\KIBO-LINALG\\KIBO-LINALG\\TESTS\\NO_RUNTIME_TESTS.CPP\n",
+          "file": "ci-windows\\kibo_no_runtime_tests.dir\\Debug\\kibo_no_.D7A881BE_MD.tlog\\CL.command.1.tlog",
+          "sha256": "42bee6034bc3c5018b413f0f282914759c3176d9623daceacfc5618cf67ba5dc"
+        },
+        {
+          "configuration": "Release",
+          "command": "^D:\\A\\KIBO-LINALG\\KIBO-LINALG\\TESTS\\NO_RUNTIME_TESTS.CPP\n/c /I\"D:\\A\\KIBO-LINALG\\KIBO-LINALG\\INCLUDE\" /nologo /W4 /WX- /diagnostics:column /O2 /Ob2 /D _MBCS /D WIN32 /D _WINDOWS /D NDEBUG /D _HAS_EXCEPTIONS=0 /D \"CMAKE_INTDIR=\\\"Release\\\"\" /EHsc /MD /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR- /std:c++20 /permissive- /ifcOutput \"KIBO_NO_RUNTIME_TESTS.DIR\\RELEASE\\\\\" /Fo\"KIBO_NO_RUNTIME_TESTS.DIR\\RELEASE\\\\\" /Fd\"KIBO_NO_RUNTIME_TESTS.DIR\\RELEASE\\VC143.PDB\" /sourceDependencies \"KIBO_NO_RUNTIME_TESTS.DIR\\RELEASE\\.D.JSON\" /external:W4 /Gd /TP  /EHa- /EHs- /EHc- D:\\A\\KIBO-LINALG\\KIBO-LINALG\\TESTS\\NO_RUNTIME_TESTS.CPP\n",
+          "file": "ci-windows\\kibo_no_runtime_tests.dir\\Release\\kibo_no_.D7A881BE.tlog\\CL.command.1.tlog",
+          "sha256": "df95907fdb47df97b6d786ba7b024d7fadf706357bfb2fb0664328a026de8188"
+        },
+        {
+          "configuration": "Release",
+          "command": "^D:\\A\\KIBO-LINALG\\KIBO-LINALG\\TESTS\\NO_RUNTIME_TESTS.CPP\n/c /I\"D:\\A\\KIBO-LINALG\\KIBO-LINALG\\INCLUDE\" /nologo /W4 /WX- /diagnostics:column /O2 /Ob2 /D _MBCS /D WIN32 /D _WINDOWS /D NDEBUG /D _HAS_EXCEPTIONS=0 /D \"CMAKE_INTDIR=\\\"Release\\\"\" /EHsc /MD /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR- /std:c++20 /permissive- /ifcOutput \"KIBO_NO_RUNTIME_TESTS.DIR\\RELEASE\\\\\" /scanDependencies \"KIBO_NO_RUNTIME_TESTS.DIR\\RELEASE\\\\\" /Fo\"KIBO_NO_RUNTIME_TESTS.DIR\\RELEASE\\\\\" /Fd\"KIBO_NO_RUNTIME_TESTS.DIR\\RELEASE\\VC143.PDB\" /external:W4 /Gd /TP  /EHa- /EHs- /EHc- D:\\A\\KIBO-LINALG\\KIBO-LINALG\\TESTS\\NO_RUNTIME_TESTS.CPP\n",
+          "file": "ci-windows\\kibo_no_runtime_tests.dir\\Release\\kibo_no_.D7A881BE_MD.tlog\\CL.command.1.tlog",
+          "sha256": "bc8c312586d71feb721c14fc641f743105cdb3315cc5c40b4f665094c6c8de2a"
+        }
+      ]
+    }
+  ]
+}

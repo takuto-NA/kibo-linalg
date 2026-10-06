@@ -1,5 +1,8 @@
 # PCの正式性能比較
 
+この報告はsource29739d1の履歴。最新のSSE2・LLT panel更新後の結果は
+[LLT処理選択修正後のPC性能比較](2026-10-07-dispatch-performance.md)を参照。
+
 2026-10-07。改善後のコアでWindows主比較とLinux scalar比較を各5 process実行した。
 全10形状で通常性能fixtureの独立解照合と数値容量64 MiB以下を満たした。
 悪条件・大残差の数値suiteは引き続き失敗しており、初期保証全体の受入は未完了。

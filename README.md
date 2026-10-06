@@ -7,7 +7,7 @@ PCでの連続最適化を起点に、ESP32とWASMでも使うC++20の線形代�
 
 初期保証の受入作業は進行中です。[受入状況](docs/validation/initial-acceptance.md)に証拠をまとめています。
 悪条件の精度条件、PC数値CI、ESP32各実機の検証が完了するまで、release-readyとはしていません。
-Windows主比較とLinux scalar各5回の[正式性能報告](docs/validation/2026-10-07-performance.md)を保存しています。
+Windows主比較とLinux scalar各5回の[正式性能報告](docs/validation/2026-10-07-dispatch-performance.md)を保存しています。
 Eigenとのsource互換はありません。疎行列、SVD、最小ノルム解、最適化アルゴリズム本体は初期範囲の外です。
 n=2〜512は初期評価範囲であり、対応サイズの上限ではありません。
 

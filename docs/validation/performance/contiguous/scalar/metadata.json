@@ -1,0 +1,63 @@
+{
+  "minimumSampleMilliseconds": 20,
+  "configuration": "Release -O3 -DNDEBUG -stdlib=libc++; EIGEN_DONT_VECTORIZE; KIBO_DISABLE_SIMD; -fno-vectorize -fno-slp-vectorize -ffp-contract=off; single-thread",
+  "compiler": "Clang20.1.8/libc++20.1.8",
+  "executableSha256": "7103aa1cb85bf8c4d4e655ac4663264d441d556bd8f20760bda996a2b39e32f2",
+  "os": {
+    "Caption": "Microsoft Windows 11 Pro",
+    "Version": "10.0.26200",
+    "BuildNumber": "26200"
+  },
+  "processRuns": 5,
+  "samples": 30,
+  "kernel": "Linux 4912f52eff66 6.18.40.1-microsoft-standard-WSL2 #1 SMP PREEMPT_DYNAMIC Fri Jul 31 22:12:15 UTC 2026 x86_64 GNU/Linux",
+  "llvmArchiveSha256": "1ead36b3dfcb774b57be530df42bec70ab2d239fbce9889447c7a29a4ddc1ae6",
+  "image": "gcc:15.3@sha256:ead103e6d03b69232962d467f3520c3f70b6718c69ff71efcc08efe9011fadb6",
+  "layout": "kibo row-major; Eigen column-major; input conversion reported separately",
+  "warmup": 5,
+  "solver": "lambda=1e-3, D=I; normal-LLT and augmented-QR; rank tolerance=max(m_aug,n)*epsilon",
+  "cpu": {
+    "Name": "Intel(R) Core(TM) i9-14900K",
+    "NumberOfCores": 24,
+    "NumberOfLogicalProcessors": 32
+  },
+  "sourceHashes": [
+    {
+      "Hash": "F539E0569522F9206830AF543B080CEE13A38232BD4F618273EB49996822D652",
+      "File": "benchmarks\\dense.cpp"
+    },
+    {
+      "Hash": "EABB9C60F1659B981C52E704C3E9A53CDAEF50349BACCDA2EC6FCC5774F6C142",
+      "File": "tests\\controlled_fixture.hpp"
+    },
+    {
+      "Hash": "52BF606A0F6AC2E21A83878E7B029B4C65935E25F5FC90387B1CF2EF74572634",
+      "File": "include\\kibo\\linalg.hpp"
+    },
+    {
+      "Hash": "E74B13BB57D83BB0AD7B1C8F271C40DB825A2D1B380F0224639A9D94EE8C48D0",
+      "File": "include\\kibo\\workspace.hpp"
+    },
+    {
+      "Hash": "A7D7F9493E28A1C86E21D43E504CA4CEAFDB60952C49592ADD924E1871FC646B",
+      "File": "include\\kibo\\llt.hpp"
+    },
+    {
+      "Hash": "DF7FCAEA5255F735C7539687FFFAAC7150BA0B1C600A5FFF9BD51BC7EBA6E517",
+      "File": "include\\kibo\\qr.hpp"
+    },
+    {
+      "Hash": "17689DD2DB8C19763F3005BB4AB24818876906E8C484AF738BCFD4FC5538B053",
+      "File": "include\\kibo\\detail\\row_kernels.hpp"
+    },
+    {
+      "Hash": "F02A156809B358A0F226592606777A68A9AD12767CC1CC8C7C784DC6A4FC01DA",
+      "File": "CMakeLists.txt"
+    }
+  ],
+  "timing": "fixed batches; start/end clock reads; rejected batches shorter than 20ms are repeated with doubled iteration count",
+  "measuredAt": "2026-10-06T18:04:32.3885440+00:00",
+  "targetOs": "Linux Debian13 in Docker; host OS recorded separately",
+  "fixtureSeed": "0x6b69626f",
+  "sourceCommit": "2462796ad42f97c4dd569b3393ca7f8be7e70985"
+}
