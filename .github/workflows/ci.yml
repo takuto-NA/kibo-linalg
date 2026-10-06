@@ -87,6 +87,7 @@ jobs:
         shell: bash
         run: |
           set -eo pipefail
+          mkdir -p build/wasm
           docker run --rm -v "$PWD:/work" -w /work emscripten/emsdk:6.0.10@sha256:e077d54e2b8970575ebc4f185ac1de0b95c05f2b266134d4ba27449af7aebf65 sh tools/wasm-build.sh
           docker run --rm -v "$PWD:/work" -w /work node:24.21.0@sha256:22f6fe5f59fb7fed238b19623506d573dffaa932ce33b84ce541a9a2e0eade28 node wasm/node-test.mjs | tee build/wasm/node-results.json
       - name: Fixed Chromium Firefox WebKit
@@ -111,7 +112,7 @@ jobs:
       - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
       - name: Cross compile only
         run: |
-          mkdir -p build
+          mkdir -p build/${{ matrix.target }}
           docker run --rm -v "$PWD:/work" -w /work/examples/esp32 espressif/idf:v6.1@sha256:81893c71bb5e570088901f21def8684c25cd2a9020281bd01b843a7655edb18c idf.py -B /work/build/${{ matrix.target }} -D SDKCONFIG=/work/build/${{ matrix.target }}/sdkconfig -D IDF_TARGET=${{ matrix.target }} build
           sha256sum build/${{ matrix.target }}/*.bin build/${{ matrix.target }}/*.elf > build/${{ matrix.target }}/firmware.sha256
       - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
