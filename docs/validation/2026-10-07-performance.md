@@ -5,6 +5,22 @@
 悪条件・大残差の数値suiteは引き続き失敗しており、初期保証全体の受入は未完了。
 この結果をEigen全体や未知のworkloadへの速度優位として一般化しない。
 
+## Eigenに対する現在地
+
+通常Eigen SIMDを使うWindows主比較のfactor+solveでは、20ケース中19ケースでcoreが遅い。
+速かったのはn=2,m=2のaugmented-QRだけで、core/Eigen比0.754だった。
+Linux scalar比較では20ケースすべてcoreが遅い。現段階で性能面の代替優位は示せていない。
+
+代表的なn=512,m=2048のWindows主比較では、QR factor+solveが390.754 ms対78.444 ms（比4.997）、
+LLTが6.770 ms対1.975 ms（比3.426）。allocation/copy込みでもQR比4.448、LLT比2.637で遅い。
+QR solve単体の比は13.034だが、coreのfactor単体384.451 msに対してsolve単体4.974 msなので、
+総時間を縮めるにはfactorの改善を優先して検証する根拠がある。各phaseは独立に測定している。
+この比較からSIMD・blockingを候補とするが、原因や改善倍率は追加実験前に断定しない。
+
+同時に生存する数値領域の保守的上限はcore約48.12 MiB、Eigen約58.13 MiB。
+これはharnessの容量監査で、実測RSSやallocator込みのピークメモリではない。
+計算時間と容量を別々に比較し、速度の不足を容量差で成功扱いにしない。
+
 ## LM参照fit
 
 中央差分step1e-6*(1+|parameter|)、tolGradient1e-6、最大100反復、初期lambda1e-3、D=I。
