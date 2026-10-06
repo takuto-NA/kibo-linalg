@@ -42,3 +42,13 @@ Debugはn<=32の6構成を確認した。[実command・結果・入力log hash](
 数値stress gateは引き続き失敗している。
 MSVCのscalar候補 /Qvec- はD9002で無視されたため棄却し、
 supported flagsを用いるLinux Clang scalar系列を主Windows系列と分けて測定する。
+
+2026-10-07のQR更新後は[source 29739d1のCI](https://github.com/takuto-NA/kibo-linalg/actions/runs/37489149582)で
+全7 jobを再実行した。Windows/GCC/Clang/ASan/UBSanはnumericalだけが失敗し、
+Debug/Releaseの公開API・無例外/RTTI・LM・移行例・移動後package consumerは通過した。
+WASMのNodeと3 browser、およびESP32-S3/C3のC++20 cross compileも通過した。
+[最新のrun/source・firmware・実commandとhash](portability/hosted/qr-locality/evidence.json)、
+[無確保probeとconsumer](portability/hosted/qr-locality/prepared-allocation.json)、
+[失敗を含む数値結果のsource](portability/hosted/qr-locality/diagnostic-source.json)を保存した。
+以前の証拠を上書きせず、このsourceの成果物を独立directoryへ保持する。
+実機検証へ渡すfirmwareには、この最新証拠のhashを使う。

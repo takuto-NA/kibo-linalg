@@ -9,12 +9,12 @@
 | 行列・基本演算・LLT・列pivot QR | 公開APIから所有・view・失敗・workspace・数値例を検証 | [core](2026-10-06-core.md)、[solvers](2026-10-06-solvers.md)、[API](../api.md) |
 | Windows/GCC/Clang・package | Debug/Releaseの通常と無例外/RTTI consumer、移動後find_packageが通過。Clang ASan/UBSanでも確認 | [ポータビリティ](2026-10-06-portability.md)。全testの成功は数値gate未達のため保留 |
 | 固定Windows SDK取得 | hosted runnerにVS17.14.25を新規install、cl.exe版/hash確認後に実行 | [install metadata](portability/hosted/windows-toolchain.json)、[CI](../ci.md) |
-| 無確保計算経路 | 校正付き基本演算/LLT/QR probeが通過。2〜32変数6構成はWindows Debugで0回。GCC/Clang/ASan/UBSanはReleaseの2〜512変数10構成すべて0回 | [実command・各構成の結果](portability/hosted/prepared-allocation.json)。MSVC Releaseは計測skipで代用しない |
+| 無確保計算経路 | 校正付き基本演算/LLT/QR probeが通過。2〜32変数6構成はWindows Debugで0回。GCC/Clang/ASan/UBSanはReleaseの2〜512変数10構成すべて0回 | [QR更新後の実command・各構成の結果](portability/hosted/qr-locality/prepared-allocation.json)。MSVC Releaseは計測skipで代用しない |
 | LM参照fit | 直線・指数、normal-LLT/augmented-QRの4ケースが各2反復で合格 | [設定と範囲](../benchmarks.md)。optimizer製品化・numopt-js移植は含めない |
 | PC性能・64 MiB gate | 正しい通常fixtureで主5-process比較を測定中。scalar binaryと同一入力hashを確認済み | 5回すべての完成後に独立系列で集計する。途中結果を速度優位にはしない |
-| 悪条件・尺度・rank | 一貫系の精度/backward error、normality、rank境界等を検証。condition1e8・大残差の解誤差gateは未達 | [失敗を含む数値結果](numerical/windows-release.txt)、[精度調査](../research/least-squares-accuracy.md)。保証範囲の判断待ち |
-| WASM | NodeとChromium/Firefox/WebKitの数値・容量・寿命・growth・disposeが通過。prepared compute確保0、2×2数値領域168 bytes | [hosted結果とhash](portability/hosted/evidence.json)、[利用方法](../wasm.md) |
-| ESP32-S3/C3 cross compile | C++20・例外/RTTI offで両targetのELF/bin/map/configを生成。数値領域128 bytesと校正付きheap/stack probeを準備 | [hosted実commandとhash](portability/hosted/evidence.json)、[実機手順](../esp32.md) |
+| 悪条件・尺度・rank | 一貫系の精度/backward error、normality、rank境界等を検証。condition1e8・大残差の解誤差gateは未達 | [QR更新後の失敗を含む数値結果](portability/hosted/qr-locality/numerical/windows-release.txt)、[精度調査](../research/least-squares-accuracy.md)。保証範囲の判断待ち |
+| WASM | NodeとChromium/Firefox/WebKitの数値・容量・寿命・growth・disposeが通過。prepared compute確保0、2×2数値領域168 bytes | [QR更新後のhosted結果とhash](portability/hosted/qr-locality/evidence.json)、[利用方法](../wasm.md) |
+| ESP32-S3/C3 cross compile | C++20・例外/RTTI offで両targetのELF/bin/map/configを生成。数値領域128 bytesと校正付きheap/stack probeを準備 | [QR更新後のhosted実commandとhash](portability/hosted/qr-locality/evidence.json)、[実機手順](../esp32.md) |
 | ESP32-S3/C3各実機 | 未検証 | board型番・接続環境・chip revision、各実機のserial数値/heap/stack証拠が必要 |
 
 現在のprecision gateを変更・skipした結果を合格にしない。

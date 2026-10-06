@@ -41,3 +41,6 @@ disposeはidempotentで、解放後のcallは拒否する。
 J/r/dampingから線形stepを一括callする。現在は最適化全体のWASM移植や連携済みを意味しない。
 Node24.21.0とPlaywright1.63.0のChromium/Firefox/WebKitで同じHTTP例を実行する。
 再現コマンドはCI workflow。kernel時間とJS copy境界時間は別に計測できる。
+QR更新後の[Node結果](validation/portability/hosted/qr-locality/node-results.json)と
+[3 browser結果](validation/portability/hosted/qr-locality/browser-results.json)、
+[sourceとmodule hash](validation/portability/hosted/qr-locality/evidence.json)を保存した。

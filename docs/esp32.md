@@ -28,7 +28,7 @@ idf.py -B /work/build/esp32-c3 -D SDKCONFIG=/work/build/esp32-c3/sdkconfig -D ID
 ボード型番、SDK/compiler版、firmware SHA256、電源/PSRAM設定、serial JSONを実機チケットへ保存する。
 PCでの共通例passと両targetのELF生成は、実機runの代わりにならない。
 
-[hosted CI evidence](validation/portability/hosted/evidence.json)にC++20で通過したS3/C3の
+[最新hosted CI evidence](validation/portability/hosted/qr-locality/evidence.json)にC++20で通過したS3/C3の
 実compile commandとfirmware/configのSHA256を保存した。
 componentのsource optionを最終位置に置き、SDKの既定規格の後に `-std=c++20` を適用する。
 `static_assert(__cplusplus == 202002L)` により規格が変わればbuildを失敗させる。
