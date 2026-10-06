@@ -23,6 +23,8 @@ enum class StatusCode {
 
 struct [[nodiscard]] Status {
     StatusCode code = StatusCode::ok;
+    std::size_t index = 0;
+    std::size_t rank = 0;
     constexpr explicit operator bool() const noexcept { return code == StatusCode::ok; }
 };
 
@@ -31,7 +33,9 @@ class [[nodiscard]] Result {
     Status status_;
     std::optional<T> value_;
 public:
+    static_assert(std::is_nothrow_move_constructible_v<T>);
     Result(StatusCode error) noexcept : status_{error} { assert(error != StatusCode::ok); }
+    Result(Status error) noexcept : status_(error) { assert(!error); }
     Result(T value) noexcept : value_(std::move(value)) {}
     explicit operator bool() const noexcept { return static_cast<bool>(status_); }
     Status status() const noexcept { return status_; }

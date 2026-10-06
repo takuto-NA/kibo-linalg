@@ -19,6 +19,34 @@
 ビューはメモリを所有しない。元の領域は計算の終了まで有効でなければならない。
 constビューは、その領域が他の参照から変更されることまでは禁止しない。
 
+## 動的所有行列
+
+`<kibo/dynamic_matrix.hpp>` を追加すると、move-onlyな `DynamicMatrix<T>` を使える。
+`try_create(rows,cols,allocator={})` と `try_clone()` は `Result<DynamicMatrix<T>>`、
+`try_resize(rows,cols)` は成功時に再取得した `Result<MatrixView<T>>` を返す。
+createはゼロ初期化、cloneは明示的な深いコピー。resizeは左上の共通範囲を保持し、
+追加要素を0にする。同じshapeのresizeでは確保しない。
+resize失敗では元のshapeと全要素を保持する。0要素の所有行列は確保しない。
+move後の元ownerは0×0の空行列となる。
+
+成功したサイズ変更・move・解放後には既存ビューを使わず再取得する。
+同じshapeのresizeや失敗したresizeでは既存ビューを維持できる。
+allocatorは `noexcept allocate(bytes,alignment,context)` / `deallocate(pointer,bytes,alignment,context)`。
+既定はmalloc/freeで自然alignmentを満たす。custom allocatorは要求容量以上の
+生存領域を返し、ownerとcloneの解放までcontextを有効に保つ。
+不足はnullで通知する。alignment違反の領域は返されたallocatorで解放して拒否する。
+呼出し側がallocate/deallocateの片方を省略した構成は `invalid_argument`。
+固定/外部領域だけのconsumerではこのヘッダをincludeする必要がない。
+
+```cpp
+auto created = kibo::linalg::DynamicMatrix<double>::try_create(8, 8);
+if (!created) return 1; // created.status().code で失敗理由を取得
+auto matrix = std::move(created).value();
+auto resized = matrix.try_resize(16, 16);
+if (!resized) return 2; // 元のmatrixは保持される
+auto current_view = resized.value(); // 成功後のビューを使う
+```
+
 ## 計算と失敗
 
 `fill_into(output,value)`, `identity_into(output)`, `copy_into(input,output)`、
@@ -44,6 +72,44 @@ shape不一致と非有限入力（NaN/Inf）は出力変更前に失敗する�
 `result.status().code` を使う。成功時だけ `result.value()` を呼ぶ。
 valueの失敗時アクセスはprecondition違反（Debugではassert）。
 StatusCodeはshape、layout、capacity、size overflow、非有限入力、算術失敗を区別する。
+
+## 分解・solve
+
+`<kibo/llt.hpp>` はdoubleの対称正定値系を扱う。
+`factorize_llt(input, factor_storage, options={})` は `Result<LltFactorView>`。
+n>0の正方行列と、入力から独立したn×nの書込み可storageを渡す。
+既定では `|aij/scale-aji/scale| <= 32*epsilon`（scaleは最大絶対要素）で対称性を検証する。
+`check_symmetry=false` は呼出し側が対称性を保証する場合だけ使う。
+対称性不一致はinvalid_argument、非正pivotはnon_positive_pivot、非有限中間値はarithmetic_failure。
+Status.indexは問題のpivot位置。成功factorの上三角は0。
+`llt_factor_requirement(n)` はfactorのbyte/alignmentと追加workspace=0を返す。
+`llt_solve_requirement(n)` のworkspaceはn個double。
+
+`<kibo/qr.hpp>` はm>=n>0の密な列pivot付きHouseholder QRを扱う。
+`factorize_qr(input, packed, tau, permutation, workspace, options={}, diagnostics=nullptr)`。
+packedはm×n、tauはn個double、permutationはn個size_t。
+`qr_factor_requirement(m,n)` が各領域のbyte/alignmentと2n個doubleのworkspaceを返す。
+各領域を別に渡すため、領域間paddingは呼出し側が各alignmentに合わせる。
+packedにはRとHouseholder vectorを保存し、full Qは生成しない。
+既定のrelative rank toleranceはmax(m,n)*epsilon。指定する場合は有限の0<=tol<1。
+`|Rii| > tol*max|Rjj|` を満たす対角の個数を数値rankとする。
+rank<nではrank_deficientで有効factorを返さない。失敗Status.rankと、任意のdiagnosticsに
+rank/tolerance/permutationを記録する。数値検証まで到達しない失敗ではdiagnosticsを保持する。
+diagnostics.permutationも借用spanなので、rank_deficientの場合も元のpermutation領域を
+生存させ、次のfactorizeや書換えより前に使う。永続保存には呼出し側でコピーする。
+EigenのColPivHouseholderQR::info()が通常Successを返す契約とは異なる。
+数学的rank、SVD、最小ノルム解、m<nへの解は保証しない。
+`qr_solve_requirement(m,n)` のworkspaceはm+n個double。
+
+LLT/QRとも `solve_into(factor, rhs, output, byte_workspace)` を使う。
+workspaceはqueryのalignmentを満たす生存領域を渡す。容量不足・misalignmentは出力変更前に失敗する。
+候補解をworkspaceで計算し、有限の成功解だけ出力にcommitするため、solveの途中失敗でも解出力は保持する。
+既定構築したfactorは無効で、solveはinvalid_factorを返す。
+失敗したfactorizeではfactor領域全体を無効として扱い、古いhandleを再利用しない。
+factor storage/tau/permutationはhandleを使う間、生存し変更されていなければならない。
+input、factor、tau、permutation、workspace、outputはそれぞれ重ならない領域を使う。
+rhsとoutputのみ完全に同じspanを許す（workspaceに候補を作るため）。
+数値分解での途中失敗ではfactor領域が部分更新され得る。
 
 ## Windowsでの確認
 
