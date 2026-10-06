@@ -82,7 +82,12 @@ void benchmark(int run,const kibo::tests::Fixture& fixture,bool qr,bool eigen_ba
     const auto end_capacity=capacity+2*static_cast<std::size_t>(input.size())*8+
                             static_cast<std::size_t>(eigen_backend?(qr?5*n+rows:n):(qr?4*n+rows:2*n))*8+
                             (qr?static_cast<std::size_t>(n)*sizeof(std::size_t):0);
-    if(end_capacity>64*1024*1024) throw std::runtime_error("numeric capacity exceeds 64 MiB");
+    // Eigen LLT's blocked triangular solve/rank update also packs panels.
+    // Raw numeric_bytes records explicit live buffers; the summary adds this
+    // conservative bound, including stack-backed packing, to Eigen's capacity.
+    const auto internal_packing=(eigen_backend && !qr)
+        ? 4*static_cast<std::size_t>(n)*static_cast<std::size_t>(n)*sizeof(double) : 0;
+    if(end_capacity+internal_packing>64*1024*1024) throw std::runtime_error("numeric capacity exceeds 64 MiB");
     const char* solver=qr?"augmented-QR":"normal-LLT";
     const char* backend=eigen_backend?"Eigen-column-major":"kibo-row-major";
     Eigen::VectorXd expected;

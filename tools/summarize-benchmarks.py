@@ -22,6 +22,11 @@ for item in recorded:
             raise RuntimeError(f"checksum mismatch: {item['File']}")
 groups=defaultdict(dict)
 fixture_hashes={}
+def capacity_bound(row):
+    explicit=int(row['numeric_bytes'])
+    n=int(row['n'])
+    packing=4*n*n*8 if row['backend']=='Eigen-column-major' and row['solver']=='normal-LLT' else 0
+    return explicit+packing
 for run in range(1,6):
     path=args.directory/f'run-{run}.csv'
     with path.open(newline='',encoding='utf-8-sig') as stream:
@@ -43,7 +48,7 @@ for run in range(1,6):
         condition=float(row['condition'])
         if not math.isfinite(condition) or not 1<=condition<=100:
             raise RuntimeError(f'{path}: fixture outside well-conditioned performance range')
-        if not 0<int(row['numeric_bytes'])<=64*1024*1024:
+        if not 0<int(row['numeric_bytes']) or capacity_bound(row)>64*1024*1024:
             raise RuntimeError(f'{path}: numeric capacity exceeds 64 MiB')
         pair[row['backend']]=row
         shape=(row['m'],row['n'])
@@ -64,18 +69,19 @@ for runs in groups.values():
 generator=random.Random(0x6b69626f)
 summary=[]
 for key,runs in sorted(groups.items(),key=lambda item:(int(item[0][1]),int(item[0][0]),item[0][2],item[0][3])):
-    core=[]; eigen=[]; ratios=[]; p95_core=[]; p95_eigen=[]; capacities=[]
+    core=[]; eigen=[]; ratios=[]; p95_core=[]; p95_eigen=[]; capacities=[]; explicit_capacities=[]
     for run in range(1,6):
         a=runs[run]['kibo-row-major']; b=runs[run]['Eigen-column-major']
         core.append(float(a['median_seconds'])); eigen.append(float(b['median_seconds']))
         ratios.append(core[-1]/eigen[-1]); p95_core.append(float(a['p95_seconds'])); p95_eigen.append(float(b['p95_seconds']))
-        capacities.extend([int(a['numeric_bytes']),int(b['numeric_bytes'])])
+        explicit_capacities.extend([int(a['numeric_bytes']),int(b['numeric_bytes'])])
+        capacities.extend([capacity_bound(a),capacity_bound(b)])
     bootstrap=sorted(statistics.median(generator.choices(ratios,k=5)) for _ in range(10000))
     summary.append(dict(m=int(key[0]),n=int(key[1]),solver=key[2],phase=key[3],
         kibo_median_seconds=statistics.median(core),eigen_median_seconds=statistics.median(eigen),
         kibo_p95_seconds=statistics.median(p95_core),eigen_p95_seconds=statistics.median(p95_eigen),
         kibo_over_eigen_ratio=statistics.median(ratios),ratio_95_low=bootstrap[249],ratio_95_high=bootstrap[9749],
-        numeric_bytes=max(capacities),fixture_fnv1a64=fixture_hashes[(key[0],key[1])]))
+        numeric_bytes=max(capacities),explicit_numeric_bytes=max(explicit_capacities),fixture_fnv1a64=fixture_hashes[(key[0],key[1])]))
 with (args.directory/'summary.csv').open('w',newline='',encoding='utf-8') as stream:
     writer=csv.DictWriter(stream,fieldnames=summary[0].keys());writer.writeheader();writer.writerows(summary)
 (args.directory/'summary.json').write_text(json.dumps(summary,indent=2)+'\n',encoding='utf-8')

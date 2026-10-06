@@ -1,0 +1,54 @@
+{
+  "kernel": "Linux 4f469f032e4c 6.18.40.1-microsoft-standard-WSL2 #1 SMP PREEMPT_DYNAMIC Fri Jul 31 22:12:15 UTC 2026 x86_64 GNU/Linux",
+  "fixtureSeed": "0x6b69626f",
+  "sourceHashes": [
+    {
+      "Hash": "4CACCD0874671C094086E8A8DD078EB1364B9AD2BA20476E96D3F2B5CEADAEBE",
+      "File": "benchmarks\\dense.cpp"
+    },
+    {
+      "Hash": "EABB9C60F1659B981C52E704C3E9A53CDAEF50349BACCDA2EC6FCC5774F6C142",
+      "File": "tests\\controlled_fixture.hpp"
+    },
+    {
+      "Hash": "52BF606A0F6AC2E21A83878E7B029B4C65935E25F5FC90387B1CF2EF74572634",
+      "File": "include\\kibo\\linalg.hpp"
+    },
+    {
+      "Hash": "E74B13BB57D83BB0AD7B1C8F271C40DB825A2D1B380F0224639A9D94EE8C48D0",
+      "File": "include\\kibo\\workspace.hpp"
+    },
+    {
+      "Hash": "EAB5E3B5D14F243F338FAFFE33A85249C6270783B7309A7AD8E3D2F9EED688CD",
+      "File": "include\\kibo\\llt.hpp"
+    },
+    {
+      "Hash": "585F063C0B62CC163E029EA026A8F93286210BE6A3FD1BFEE522AEFF2632D53D",
+      "File": "include\\kibo\\qr.hpp"
+    }
+  ],
+  "cpu": {
+    "Name": "Intel(R) Core(TM) i9-14900K",
+    "NumberOfCores": 24,
+    "NumberOfLogicalProcessors": 32
+  },
+  "os": {
+    "Caption": "Microsoft Windows 11 Pro",
+    "Version": "10.0.26200",
+    "BuildNumber": "26200"
+  },
+  "compiler": "Clang20.1.8/libc++20.1.8",
+  "llvmArchiveSha256": "1ead36b3dfcb774b57be530df42bec70ab2d239fbce9889447c7a29a4ddc1ae6",
+  "processRuns": 5,
+  "timing": "fixed batches; start/end clock reads; rejected batches shorter than 20ms are repeated with doubled iteration count",
+  "executableSha256": "e8b0f7750c02c1c466259fdd17eb1805c1b61556ba4bedba374ac1493885a15a",
+  "samples": 30,
+  "solver": "lambda=1e-3, D=I; normal-LLT and augmented-QR; rank tolerance=max(m_aug,n)*epsilon",
+  "targetOs": "Linux Debian13 in Docker; host OS recorded separately",
+  "image": "gcc:15.3@sha256:ead103e6d03b69232962d467f3520c3f70b6718c69ff71efcc08efe9011fadb6",
+  "measuredAt": "2026-10-06T15:55:17.1042926+00:00",
+  "warmup": 5,
+  "configuration": "Release -O3 -DNDEBUG -stdlib=libc++; EIGEN_DONT_VECTORIZE; -fno-vectorize -fno-slp-vectorize -ffp-contract=off; single-thread",
+  "layout": "kibo row-major; Eigen column-major; input conversion reported separately",
+  "minimumSampleMilliseconds": 20
+}

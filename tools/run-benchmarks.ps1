@@ -4,6 +4,12 @@ param([string]$Executable='build/native/Release/kibo_dense_benchmark.exe',[strin
 $ErrorActionPreference='Stop'
 $taskLock=Get-Content (Join-Path $PSScriptRoot 'toolchains.lock.json') -Raw | ConvertFrom-Json
 $taskRoot=(Get-Location).Path
+if(Test-Path -LiteralPath $OutputDirectory) {
+    if(!(Test-Path -LiteralPath $OutputDirectory -PathType Container) -or
+       @(Get-ChildItem -LiteralPath $OutputDirectory -Force).Count -ne 0) {
+        throw 'Benchmark output directory must be empty; choose a fresh directory to preserve existing evidence'
+    }
+}
 New-Item -ItemType Directory -Force $OutputDirectory | Out-Null
 $taskMetadata=@{
     measuredAt=[DateTimeOffset]::UtcNow.ToString('o')

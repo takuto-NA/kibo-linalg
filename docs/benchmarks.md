@@ -9,9 +9,22 @@ lambda初期1e-3、受理時0.3倍（下限1e-15）、棄却時10倍。
 ```powershell
 ./tools/windows-cmake.ps1 -S . -B build/native '-DKIBO_EIGEN_INCLUDE_DIR=<fixed Eigen headers>'
 ./tools/windows-cmake.ps1 --build build/native --config Release --target kibo_dense_benchmark
-./tools/run-benchmarks.ps1 -OutputDirectory build/benchmarks-final-primary
-python tools/summarize-benchmarks.py build/benchmarks-final-primary
+./tools/run-benchmarks.ps1 -OutputDirectory build/benchmarks-new-primary
+python tools/summarize-benchmarks.py build/benchmarks-new-primary
 ```
+
+出力directoryは空のものを使う。runnerは既存の証拠を上書きせず、非空directoryを拒否する。
+Linux scalar binaryは固定Docker imageで `tools/scalar-build.sh` を実行して作る。
+同じPCで主系列を終えてから追加系列を測定する。
+
+```powershell
+./tools/run-benchmarks.ps1 -Executable build/linux-scalar/kibo_dense_benchmark -OutputDirectory build/benchmarks-new-scalar -LinuxScalar
+python tools/summarize-benchmarks.py build/benchmarks-new-scalar
+python tools/plot-benchmarks.py build/benchmarks-new-primary build/benchmarks-new-scalar build/performance-comparison
+```
+
+plotは任意のMatplotlib依存でPNG・SVG・PDFを生成する。library consumerには不要。
+2026-10-07の正式比較は[性能報告](validation/2026-10-07-performance.md)にまとめる。
 
 性能fixtureはxorshift32 seed0x6b69626fで生成する。
 Jの各要素は[-0.5,0.5)/sqrt(m)に上部対角2を加えたもの。
@@ -42,6 +55,10 @@ Jacobian生成やGram/augmented組立てを含むLM反復全体の時間では�
 coreはrow-major、Eigenはcolumn-majorへの準備済みcopyを使い、変換の費用はsetup phaseに含める。
 容量はharnessで同時に生存するinput/output/factor/copy/workspaceを含む数値領域の保守的な計算値。
 allocator管理領域やmodule/OS予約は数値領域と別。64 MiB以下をgateにする。
+raw CSVのnumeric_bytesは既知の明示bufferの合計で、Eigen内部packingを別に補う。
+summaryのnumeric_bytesはEigen LLTの内部補助領域に4*n*n*sizeof(double)の
+保守的上限を加えた容量、explicit_numeric_bytesはrawと同じ明示buffer容量。
+[固定Eigenの容量監査](research/eigen-capacity.md)に根拠を記録する。
 正式な測定で未完了runや途中試行を合算しない。
 
 summaryは5 process mediansの中央値と各process p95の中央値。

@@ -11,7 +11,7 @@
 | 固定Windows SDK取得 | hosted runnerにVS17.14.25を新規install、cl.exe版/hash確認後に実行 | [install metadata](portability/hosted/windows-toolchain.json)、[CI](../ci.md) |
 | 無確保計算経路 | 校正付き基本演算/LLT/QR probeが通過。2〜32変数6構成はWindows Debugで0回。GCC/Clang/ASan/UBSanはReleaseの2〜512変数10構成すべて0回 | [QR更新後の実command・各構成の結果](portability/hosted/qr-locality/prepared-allocation.json)。MSVC Releaseは計測skipで代用しない |
 | LM参照fit | 直線・指数、normal-LLT/augmented-QRの4ケースが各2反復で合格 | [設定と範囲](../benchmarks.md)。optimizer製品化・numopt-js移植は含めない |
-| PC性能・64 MiB gate | 正しい通常fixtureで主5-process比較を測定中。scalar binaryと同一入力hashを確認済み | 5回すべての完成後に独立系列で集計する。途中結果を速度優位にはしない |
+| PC性能・64 MiB gate | 主比較とscalarを各5 process実行。通常fixtureの独立解照合、入力hash一致、内部packingを補った容量gateが通過 | [正式報告・全phase CSV・図](2026-10-07-performance.md)。512変数のQRは主系列でEigenの約5倍の時間、ピーク数値上限60,952,576 bytes。Eigen全体への優位は宣言しない |
 | 悪条件・尺度・rank | 一貫系の精度/backward error、normality、rank境界等を検証。condition1e8・大残差の解誤差gateは未達 | [QR更新後の失敗を含む数値結果](portability/hosted/qr-locality/numerical/windows-release.txt)、[精度調査](../research/least-squares-accuracy.md)。保証範囲の判断待ち |
 | WASM | NodeとChromium/Firefox/WebKitの数値・容量・寿命・growth・disposeが通過。prepared compute確保0、2×2数値領域168 bytes | [QR更新後のhosted結果とhash](portability/hosted/qr-locality/evidence.json)、[利用方法](../wasm.md) |
 | ESP32-S3/C3 cross compile | C++20・例外/RTTI offで両targetのELF/bin/map/configを生成。数値領域128 bytesと校正付きheap/stack probeを準備 | [QR更新後のhosted実commandとhash](portability/hosted/qr-locality/evidence.json)、[実機手順](../esp32.md) |

@@ -48,5 +48,9 @@ figure.text(0.5, 0.02,
 figure.tight_layout(rect=(0, 0.07, 1, 0.94))
 args.output.parent.mkdir(parents=True, exist_ok=True)
 for extension in ['png', 'svg', 'pdf']:
-    figure.savefig(args.output.with_suffix('.'+extension), dpi=180)
+    path=args.output.with_suffix('.'+extension)
+    figure.savefig(path, dpi=180)
+    if extension=='svg':
+        path.write_text('\n'.join(line.rstrip() for line in path.read_text(encoding='utf-8').splitlines())+'\n',
+                        encoding='utf-8', newline='\n')
 plt.close(figure)
