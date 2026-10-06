@@ -1,5 +1,6 @@
 #pragma once
 #include <kibo/workspace.hpp>
+#include <algorithm>
 
 namespace kibo::linalg {
 struct QrOptions { std::optional<double> relative_rank_tolerance; };
@@ -37,9 +38,9 @@ struct QrAccess {
     }
 };
 inline double column_norm(MatrixView<const double> matrix, std::size_t first, std::size_t column) noexcept {
-    double norm=0;
-    for (std::size_t i=first;i<matrix.rows();++i) norm=std::hypot(norm,matrix(i,column));
-    return norm;
+    ScaledSquares<double> sum;
+    for (std::size_t i=first;i<matrix.rows();++i) sum.add(matrix(i,column));
+    return sum.norm();
 }
 }
 
@@ -86,19 +87,22 @@ inline Result<QrFactorView> factorize_qr(MatrixView<const double> input, MatrixV
     for (std::size_t j=0;j<n;++j) {
         permutation[j]=j;
         initial_norms[j]=detail::column_norm(packed,0,j);
+        if (!std::isfinite(initial_norms[j])) return Status{StatusCode::arithmetic_failure,j};
+        norms[j]=initial_norms[j];
     }
     for (std::size_t k=0;k<n;++k) {
         std::size_t pivot=k;
         for (std::size_t j=k;j<n;++j) {
-            norms[j]=k==0 ? initial_norms[j] : detail::column_norm(packed,k,j);
-            if (!std::isfinite(norms[j])) return Status{StatusCode::arithmetic_failure,k};
             if (norms[j]>norms[pivot]) pivot=j;
         }
         if (pivot!=k) {
             for (std::size_t i=0;i<m;++i) std::swap(packed(i,k),packed(i,pivot));
             std::swap(permutation[k],permutation[pivot]);
+            std::swap(norms[k],norms[pivot]);
+            std::swap(initial_norms[k],initial_norms[pivot]);
         }
-        const double norm=norms[pivot];
+        const double norm=detail::column_norm(packed,k,k);
+        if (!std::isfinite(norm)) return Status{StatusCode::arithmetic_failure,k};
         if (norm==0) { tau[k]=0; continue; }
         const double alpha=packed(k,k), beta=-std::copysign(norm,alpha);
         const double ratio=alpha/beta;
@@ -116,6 +120,17 @@ inline Result<QrFactorView> factorize_qr(MatrixView<const double> input, MatrixV
             for (std::size_t i=k+1;i<m;++i) {
                 packed(i,j)-=packed(i,k)*multiplier;
                 if (!std::isfinite(packed(i,j))) return Status{StatusCode::arithmetic_failure,k};
+            }
+            if (norms[j]!=0) {
+                // LAPACK DLAQP2 partial norm update, with cancellation-triggered
+                // explicit recomputation (Working Note 176). No extra storage.
+                const double removed=std::abs(packed(k,j))/norms[j];
+                const double remaining=std::max(0.0,(1-removed)*(1+removed));
+                const double relative=norms[j]/initial_norms[j];
+                if (remaining*relative*relative<=std::sqrt(std::numeric_limits<double>::epsilon())) {
+                    norms[j]=detail::column_norm(packed,k+1,j);
+                    initial_norms[j]=norms[j];
+                } else norms[j]*=std::sqrt(remaining);
             }
         }
     }

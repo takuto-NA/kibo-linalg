@@ -36,12 +36,12 @@ int main() {
     if (!add_into(a.const_view(),scaled.const_view(),a.view()) || a(1,1)!=27) return 9;
     if (!sub_into(a.const_view(),scaled.const_view(),a.view()) || a(1,1)!=9) return 10;
     if (!add_diagonal_inplace(a.view(),2.0) || a(0,0)!=7 || a(0,1)!=6 || a(1,1)!=11) return 11;
-    const std::array<double,2> huge{3e200,4e200}, tiny{3e-200,4e-200};
+    const std::array<double,2> huge{3e300,4e300}, tiny{3e-300,4e-300};
     const auto large_norm=stable_norm2(std::span<const double>{huge});
     const auto small_norm=stable_norm2(std::span<const double>{tiny});
     const auto scalar_product=dot(std::span<const double>{b},std::span<const double>{b});
-    if (!large_norm || std::abs(large_norm.value()/5e200-1)>1e-12 ||
-        !small_norm || std::abs(small_norm.value()/5e-200-1)>1e-12 ||
+    if (!large_norm || std::abs(large_norm.value()/5e300-1)>1e-12 ||
+        !small_norm || std::abs(small_norm.value()/5e-300-1)>1e-12 ||
         !scalar_product || scalar_product.value()!=5) return 12;
     // Rejected inputs must leave a prepared output unchanged.
     product={81,82};

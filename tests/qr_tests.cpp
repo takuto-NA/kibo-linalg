@@ -54,6 +54,11 @@ int main() {
         CHECK(scaled && solve_into(scaled.value(),std::span<const double>{consistent_rhs},std::span<double>{output},solve_workspace));
         CHECK(std::abs(output[0]-1)<1e-12 && std::abs(output[1]-2)<1e-12);
     }
+    data={1,1,1,1+1e-8,1,1-1e-8};
+    const std::array<double,3> difficult_rhs{0,-1e-8,1e-8}; // known x=[1,-1]
+    auto difficult=factorize_qr(input.value(),packed.view(),tau,permutation,factor_workspace);
+    CHECK(difficult && solve_into(difficult.value(),std::span<const double>{difficult_rhs},std::span<double>{output},solve_workspace));
+    CHECK(std::abs(output[0]-1)<1e-4 && std::abs(output[1]+1)<1e-4);
     CHECK(qr_factor_requirement(1,2).status().code==StatusCode::invalid_shape);
     CHECK(qr_factor_requirement(std::numeric_limits<std::size_t>::max(),2).status().code==StatusCode::size_overflow);
     CHECK(qr_solve_requirement(std::numeric_limits<std::size_t>::max(),1).status().code==StatusCode::size_overflow);

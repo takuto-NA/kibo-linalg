@@ -124,5 +124,6 @@ ctest --test-dir build/native -C Debug --output-on-failure
 スクリプトはビルド子プロセスの環境変数名をWindowsの規則で正規化する。
 システム設定を変更しない。通常環境では直接 `cmake` を実行してよい。
 無例外・RTTI consumerはコンパイル時macroでも無効化を検証する。
-allocation testはMSVC DebugのCRT hookをmallocで校正し、準備済み基本演算を
-100回実行して確保回数0を検証する。他の構成では測定未実施としてskipする。
+allocation testはMSVC DebugのCRT hook、Linuxのallocator wrappingとnew置換をmallocで校正し、
+準備済み基本演算・LLT・QRを100回実行して確保回数0を検証する。
+MSVC Releaseなど計測器のない構成では測定未実施としてskipする。

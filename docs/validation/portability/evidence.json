@@ -1,0 +1,86 @@
+{
+  "wasmSha256": "40510f84c64726b423ebdc1f7b9782db9764ef6e132e3e092c3a7b0544736356",
+  "firmware": [
+    {
+      "compiler": "/opt/esp/tools/xtensa-esp-elf/esp-15.2.0_20251204/xtensa-esp-elf/bin/xtensa-esp32s3-elf-gcc",
+      "result": "cross-compile-only; hardware run unverified",
+      "hashes": [
+        {
+          "Hash": "CACB479848D44A99F4EB3ACA35E1DED7E814AE0E9131647DC11CEC40D408727C",
+          "File": "kibo_2x2.bin"
+        },
+        {
+          "Hash": "77077AFB51812AD126D3828750395C6CA30EA422DD7CFE968EB9DB5A7102DB9D",
+          "File": "kibo_2x2.elf"
+        },
+        {
+          "Hash": "0ADBAAAAA51D1B7FE9882E1E3969C4B69E80624A80C92BE63CDBE0FA930AF6CF",
+          "File": "kibo_2x2.map"
+        },
+        {
+          "Hash": "666FC414F5F602089028C44F8D0E33BB6E51F8FA2EB9A67AAEC9332D2F9C826B",
+          "File": "sdkconfig"
+        }
+      ],
+      "command": "/opt/esp/tools/xtensa-esp-elf/esp-15.2.0_20251204/xtensa-esp-elf/bin/xtensa-esp32s3-elf-g++ -DESP_PLATFORM -DIDF_VER=\\\"v6.1\\\" -DSOC_MMU_PAGE_SIZE=CONFIG_MMU_PAGE_SIZE -DSOC_XTAL_FREQ_MHZ=CONFIG_XTAL_FREQ -D_GLIBCXX_HAVE_POSIX_SEMAPHORE -D_GLIBCXX_USE_POSIX_SEMAPHORE -D_GNU_SOURCE -D_POSIX_READER_WRITER_LOCKS -I/work/build/esp32-s3/config -I/work/examples/esp32/main -I/work/examples/esp32/main/../../../include -I/work/examples/esp32/main/../.. -I/opt/esp/idf/components/esp_libc/platform_include -I/opt/esp/idf/components/freertos/config/include -I/opt/esp/idf/components/freertos/config/include/freertos -I/opt/esp/idf/components/freertos/config/xtensa/include -I/opt/esp/idf/components/freertos/FreeRTOS-Kernel/include -I/opt/esp/idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/include -I/opt/esp/idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/include/freertos -I/opt/esp/idf/components/freertos/esp_additions/include -I/opt/esp/idf/components/esp_hw_support/include -I/opt/esp/idf/components/esp_hw_support/include/soc -I/opt/esp/idf/components/esp_hw_support/ldo/include -I/opt/esp/idf/components/esp_hw_support/debug_probe/include -I/opt/esp/idf/components/esp_hw_support/etm/include -I/opt/esp/idf/components/esp_hw_support/mspi/mspi_timing_tuning/include -I/opt/esp/idf/components/esp_hw_support/mspi/mspi_timing_tuning/tuning_scheme_impl/include -I/opt/esp/idf/components/esp_hw_support/mspi/mspi_intr/include -I/opt/esp/idf/components/esp_hw_support/power_supply/include -I/opt/esp/idf/components/esp_hw_support/modem/include -I/opt/esp/idf/components/esp_hw_support/include/soc/esp32s3 -I/opt/esp/idf/components/esp_hw_support/port/esp32s3/. -I/opt/esp/idf/components/esp_hw_support/port/esp32s3/include -I/opt/esp/idf/components/esp_hw_support/mspi/mspi_timing_tuning/port/esp32s3/. -I/opt/esp/idf/components/esp_hw_support/mspi/mspi_timing_tuning/port/esp32s3/include -I/opt/esp/idf/components/heap/include -I/opt/esp/idf/components/heap/tlsf -I/opt/esp/idf/components/log/include -I/opt/esp/idf/components/soc/include -I/opt/esp/idf/components/soc/esp32s3 -I/opt/esp/idf/components/soc/esp32s3/include -I/opt/esp/idf/components/soc/esp32s3/register -I/opt/esp/idf/components/hal/platform_port/include -I/opt/esp/idf/components/hal/esp32s3/include -I/opt/esp/idf/components/hal/include -I/opt/esp/idf/components/esp_rom/include -I/opt/esp/idf/components/esp_rom/esp32s3/include -I/opt/esp/idf/components/esp_rom/esp32s3/include/esp32s3 -I/opt/esp/idf/components/esp_rom/esp32s3 -I/opt/esp/idf/components/esp_common/include -I/opt/esp/idf/components/esp_system/include -I/opt/esp/idf/components/esp_system/port/soc -I/opt/esp/idf/components/esp_system/port/include/private -I/opt/esp/idf/components/esp_stdio/include -I/opt/esp/idf/components/xtensa/esp32s3/include -I/opt/esp/idf/components/xtensa/include -I/opt/esp/idf/components/xtensa/deprecated_include -I/opt/esp/idf/components/esp_hal_gpio/include -I/opt/esp/idf/components/esp_hal_gpio/esp32s3/include -I/opt/esp/idf/components/esp_hal_usb/include -I/opt/esp/idf/components/esp_hal_usb/esp32s3/include -I/opt/esp/idf/components/esp_hal_pmu/include -I/opt/esp/idf/components/esp_hal_pmu/esp32s3/include -I/opt/esp/idf/components/esp_hal_regi2c/include -I/opt/esp/idf/components/esp_hal_regi2c/esp32s3/include -I/opt/esp/idf/components/esp_hal_uart/include -I/opt/esp/idf/components/esp_hal_uart/esp32s3/include -I/opt/esp/idf/components/esp_hal_ana_conv/include -I/opt/esp/idf/components/esp_hal_ana_conv/esp32s3/include -I/opt/esp/idf/components/esp_hal_dma/include -I/opt/esp/idf/components/esp_hal_dma/esp32s3/include -I/opt/esp/idf/components/lwip/include -I/opt/esp/idf/components/lwip/include/apps -I/opt/esp/idf/components/lwip/lwip/src/include -I/opt/esp/idf/components/lwip/port/include -I/opt/esp/idf/components/lwip/port/freertos/include -I/opt/esp/idf/components/lwip/port/esp32xx/include -I/opt/esp/idf/components/lwip/port/esp32xx/include/arch -I/opt/esp/idf/components/lwip/port/esp32xx/include/sys @\"/work/build/esp32-s3/toolchain/cxxflags\" -std=c++20 -fdiagnostics-color=always -ffunction-sections -fdata-sections -Wall -Werror -Wno-error=unused-function -Wno-error=unused-variable -Wno-error=unused-but-set-variable -Wno-error=deprecated-declarations -Wextra -Wno-error=extra -Wno-unused-parameter -Wno-sign-compare -Wno-enum-conversion -gdwarf-4 -ggdb -Og -fno-shrink-wrap -fmacro-prefix-map=/work/examples/esp32=. -fmacro-prefix-map=/opt/esp/idf=/IDF -fstrict-volatile-bitfields -fno-jump-tables -fno-tree-switch-conversion -std=gnu++26 -fno-exceptions -fuse-cxa-atexit -fno-rtti -o esp-idf/main/CMakeFiles/__idf_main.dir/main.cpp.obj -c /work/examples/esp32/main/main.cpp",
+      "sdk": "v6.1",
+      "target": "esp32s3"
+    },
+    {
+      "compiler": "/opt/esp/tools/riscv32-esp-elf/esp-15.2.0_20251204/riscv32-esp-elf/bin/riscv32-esp-elf-gcc",
+      "result": "cross-compile-only; hardware run unverified",
+      "hashes": [
+        {
+          "Hash": "3769346371491AD62E436EDF5ADA6741C2AC0837461660BAFFD1088BF9095A07",
+          "File": "kibo_2x2.bin"
+        },
+        {
+          "Hash": "12DF89592C218CF4701B758540CCB1FDD3C50B6C0DD92E455D781D8916FE98A4",
+          "File": "kibo_2x2.elf"
+        },
+        {
+          "Hash": "C7ADDCCF945ACA264F14C131C71BB15574648B4E0588C1A964B946284078998F",
+          "File": "kibo_2x2.map"
+        },
+        {
+          "Hash": "DAA60411A209CE8EE280256DAB28E33C6F0DDF632612E6B740AA3D985C1BF804",
+          "File": "sdkconfig"
+        }
+      ],
+      "command": "/opt/esp/tools/riscv32-esp-elf/esp-15.2.0_20251204/riscv32-esp-elf/bin/riscv32-esp-elf-g++ -DESP_PLATFORM -DIDF_VER=\\\"v6.1\\\" -DSOC_MMU_PAGE_SIZE=CONFIG_MMU_PAGE_SIZE -DSOC_XTAL_FREQ_MHZ=CONFIG_XTAL_FREQ -D_GLIBCXX_HAVE_POSIX_SEMAPHORE -D_GLIBCXX_USE_POSIX_SEMAPHORE -D_GNU_SOURCE -D_POSIX_READER_WRITER_LOCKS -I/work/build/esp32-c3/config -I/work/examples/esp32/main -I/work/examples/esp32/main/../../../include -I/work/examples/esp32/main/../.. -I/opt/esp/idf/components/esp_libc/platform_include -I/opt/esp/idf/components/freertos/config/include -I/opt/esp/idf/components/freertos/config/include/freertos -I/opt/esp/idf/components/freertos/config/riscv/include -I/opt/esp/idf/components/freertos/FreeRTOS-Kernel/include -I/opt/esp/idf/components/freertos/FreeRTOS-Kernel/portable/riscv/include -I/opt/esp/idf/components/freertos/FreeRTOS-Kernel/portable/riscv/include/freertos -I/opt/esp/idf/components/freertos/esp_additions/include -I/opt/esp/idf/components/esp_hw_support/include -I/opt/esp/idf/components/esp_hw_support/include/soc -I/opt/esp/idf/components/esp_hw_support/ldo/include -I/opt/esp/idf/components/esp_hw_support/debug_probe/include -I/opt/esp/idf/components/esp_hw_support/etm/include -I/opt/esp/idf/components/esp_hw_support/mspi/mspi_timing_tuning/include -I/opt/esp/idf/components/esp_hw_support/mspi/mspi_timing_tuning/tuning_scheme_impl/include -I/opt/esp/idf/components/esp_hw_support/mspi/mspi_intr/include -I/opt/esp/idf/components/esp_hw_support/power_supply/include -I/opt/esp/idf/components/esp_hw_support/modem/include -I/opt/esp/idf/components/esp_hw_support/include/soc/esp32c3 -I/opt/esp/idf/components/esp_hw_support/port/esp32c3/. -I/opt/esp/idf/components/esp_hw_support/port/esp32c3/include -I/opt/esp/idf/components/heap/include -I/opt/esp/idf/components/heap/tlsf -I/opt/esp/idf/components/log/include -I/opt/esp/idf/components/soc/include -I/opt/esp/idf/components/soc/esp32c3 -I/opt/esp/idf/components/soc/esp32c3/include -I/opt/esp/idf/components/soc/esp32c3/register -I/opt/esp/idf/components/hal/platform_port/include -I/opt/esp/idf/components/hal/esp32c3/include -I/opt/esp/idf/components/hal/include -I/opt/esp/idf/components/esp_rom/include -I/opt/esp/idf/components/esp_rom/esp32c3/include -I/opt/esp/idf/components/esp_rom/esp32c3/include/esp32c3 -I/opt/esp/idf/components/esp_rom/esp32c3 -I/opt/esp/idf/components/esp_common/include -I/opt/esp/idf/components/esp_system/include -I/opt/esp/idf/components/esp_system/port/soc -I/opt/esp/idf/components/esp_system/port/include/riscv -I/opt/esp/idf/components/esp_system/port/include/private -I/opt/esp/idf/components/esp_stdio/include -I/opt/esp/idf/components/riscv/include -I/opt/esp/idf/components/esp_hal_gpio/include -I/opt/esp/idf/components/esp_hal_gpio/esp32c3/include -I/opt/esp/idf/components/esp_hal_usb/include -I/opt/esp/idf/components/esp_hal_usb/esp32c3/include -I/opt/esp/idf/components/esp_hal_pmu/include -I/opt/esp/idf/components/esp_hal_pmu/esp32c3/include -I/opt/esp/idf/components/esp_hal_regi2c/include -I/opt/esp/idf/components/esp_hal_regi2c/esp32c3/include -I/opt/esp/idf/components/esp_hal_uart/include -I/opt/esp/idf/components/esp_hal_uart/esp32c3/include -I/opt/esp/idf/components/esp_hal_ana_conv/include -I/opt/esp/idf/components/esp_hal_ana_conv/esp32c3/include -I/opt/esp/idf/components/esp_hal_dma/include -I/opt/esp/idf/components/esp_hal_dma/esp32c3/include -I/opt/esp/idf/components/lwip/include -I/opt/esp/idf/components/lwip/include/apps -I/opt/esp/idf/components/lwip/lwip/src/include -I/opt/esp/idf/components/lwip/port/include -I/opt/esp/idf/components/lwip/port/freertos/include -I/opt/esp/idf/components/lwip/port/esp32xx/include -I/opt/esp/idf/components/lwip/port/esp32xx/include/arch -I/opt/esp/idf/components/lwip/port/esp32xx/include/sys @\"/work/build/esp32-c3/toolchain/cxxflags\" -std=c++20 -fdiagnostics-color=always -ffunction-sections -fdata-sections -Wall -Werror -Wno-error=unused-function -Wno-error=unused-variable -Wno-error=unused-but-set-variable -Wno-error=deprecated-declarations -Wextra -Wno-error=extra -Wno-unused-parameter -Wno-sign-compare -Wno-enum-conversion -gdwarf-4 -ggdb -Og -fno-shrink-wrap -fmacro-prefix-map=/work/examples/esp32=. -fmacro-prefix-map=/opt/esp/idf=/IDF -fstrict-volatile-bitfields -fno-jump-tables -fno-tree-switch-conversion -std=gnu++26 -fno-exceptions -fuse-cxa-atexit -fno-rtti -o esp-idf/main/CMakeFiles/__idf_main.dir/main.cpp.obj -c /work/examples/esp32/main/main.cpp",
+      "sdk": "v6.1",
+      "target": "esp32c3"
+    }
+  ],
+  "measuredAt": "2026-10-06T14:39:25.8262446+00:00",
+  "sourceHashes": [
+    {
+      "Hash": "162EEE3B6E691AC96C70021DC6A87FE1F65B25753FE144221051AF4EEDEE9061",
+      "File": "examples\\common_2x2.hpp"
+    },
+    {
+      "Hash": "0F89E93A3D65E85BA05BA6730614E0F51C026CF7541B904F1C7B04D91F259DAF",
+      "File": "examples\\esp32\\main\\main.cpp"
+    },
+    {
+      "Hash": "52BF606A0F6AC2E21A83878E7B029B4C65935E25F5FC90387B1CF2EF74572634",
+      "File": "include\\kibo\\linalg.hpp"
+    },
+    {
+      "Hash": "EAB5E3B5D14F243F338FAFFE33A85249C6270783B7309A7AD8E3D2F9EED688CD",
+      "File": "include\\kibo\\llt.hpp"
+    },
+    {
+      "Hash": "7B12772016F684FC5BDFD4EDCCFB0DB9AB28E84E3C493C0E8EB11B0B94C3E4D1",
+      "File": "include\\kibo\\qr.hpp"
+    },
+    {
+      "Hash": "BCD568C8B013011F339E5D0B611AA3F7DA02A8AB1D0CDD8D09C34B0962A5FA5B",
+      "File": "wasm\\adapter.cpp"
+    },
+    {
+      "Hash": "54C20B4C37556A235006C7BFA89CEAAE4C8B0A63A2C9C7CA20337004FA375EBC",
+      "File": "wasm\\facade.mjs"
+    }
+  ]
+}

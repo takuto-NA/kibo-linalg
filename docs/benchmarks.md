@@ -1,0 +1,51 @@
+# PCの参照ワークロードと性能測定
+
+`kibo_lm_reference` は評価harnessで、optimizer製品APIではない。
+normal-LLTとaugmented-QRで同じ中央差分Jacobian、lambda、D=I、受理/停止設定を使う。
+差分stepは1e-6*(1+|parameter|)、tolGradient1e-6、最大100反復。
+lambda初期1e-3、受理時0.3倍（下限1e-15）、棄却時10倍。
+直線/指数の両solverはWindowsで2反復以内に所定のcostとparameter誤差を満たした。
+
+```powershell
+./tools/windows-cmake.ps1 -S . -B build/native '-DKIBO_EIGEN_INCLUDE_DIR=<fixed Eigen headers>'
+./tools/windows-cmake.ps1 --build build/native --config Release --target kibo_dense_benchmark
+./tools/run-benchmarks.ps1 -OutputDirectory build/benchmarks-final-primary
+python tools/summarize-benchmarks.py build/benchmarks-final-primary
+```
+
+性能fixtureはxorshift32 seed0x6b69626fで生成する。
+Jの各要素は[-0.5,0.5)/sqrt(m)に上部対角2を加えたもの。
+既知解は全要素1、RHSは各行をcolumn indexの昇順で加算する。
+入力生成にEigenのSIMD依存の積を使わず、主比較とscalar比較のfixture hashを照合する。
+Eigenの対称固有値解法でJᵀJを独立に評価し、condition<=100を確認する。
+SHA256付きraw artifacts、m/n別FNV1a64 fixture hash、CPU/OS/flags/solver/layoutを保存する。
+FNVの入力はlittle-endianのuint64 m,n、row-major double J、double RHSの順。
+
+Release、fast-math off、single-thread、warmup5、30 samples、各sample20ms以上のbatch。
+5 process runsでcore/Eigenの順を交替し、factorの要素と解をvolatileへ消費して消去を防ぐ。
+各sampleは固定回数のbatchの前後だけで時計を取得する。
+20ms未満ならbatch回数を倍にして取り直し、採用したbatchの時間を呼出し数で割る。
+lambda1e-3、D=Iのlinear stepを、別のEigen LDLTから求めた解にrelative error1e-8以内で照合してから測定する。
+失敗は速度結果として採用せず実行を停止する。
+Eigen5.0.1は通常のx64 SIMDを主比較とし、別buildの `KIBO_SCALAR_EIGEN=ON` で公平scalar比較を取れる。
+scalar設定は同じtranslation unitの両backendに適用する。
+固定MSVCでは /Qvec- がD9002で無視されることを確認したため、scalar構成を受理しない。
+主比較はWindows MSVC、追加scalar比較は固定Linux Clangで行う。
+Clangでは -fno-vectorize -fno-slp-vectorize -ffp-contract=off、
+GCCでは -fno-tree-vectorize -fno-tree-slp-vectorize -ffp-contract=offを使う。
+異なるcompiler/OSの比較を主比較へ混ぜず、それぞれ同じprocess内の両backendを比較する。
+
+phaseはfactor、solve、factor+solve、setup/allocation/copy込みを分ける。
+coreはrow-major、Eigenはcolumn-majorへの準備済みcopyを使い、変換の費用はsetup phaseに含める。
+容量はharnessで同時に生存するinput/output/factor/copy/workspaceを含む数値領域の保守的な計算値。
+allocator管理領域やmodule/OS予約は数値領域と別。64 MiB以下をgateにする。
+正式な測定で未完了runや途中試行を合算しない。
+
+summaryは5 process mediansの中央値と各process p95の中央値。
+95%区間は5個のpaired process ratioを10000回bootstrapした中央値の区間。
+少数processによる区間であり、30個の同一process sampleを独立processとして扱わない。
+ratio=kibo/Eigen、1より大きければそのcaseではcoreが遅い。
+hosted CIで絶対速度をgateにせず、固定PCで20%以上の悪化が区間込みで再現したらレビューする。
+
+悪条件・大残差の精度保証は別の数値検証チケットで扱う。
+通常fixtureの速度を、Eigen全体や未知のworkloadへの優位として一般化しない。

@@ -116,6 +116,24 @@ public:
 };
 
 namespace detail {
+template<std::floating_point T>
+class ScaledSquares {
+    T scale_=0, sum_squares_=1;
+public:
+    void add(T value) noexcept {
+        const T magnitude=std::abs(value);
+        if (magnitude==0) return;
+        if (scale_<magnitude) {
+            const T ratio=scale_/magnitude;
+            sum_squares_=1+sum_squares_*ratio*ratio;
+            scale_=magnitude;
+        } else {
+            const T ratio=magnitude/scale_;
+            sum_squares_+=ratio*ratio;
+        }
+    }
+    T norm() const noexcept { return scale_*std::sqrt(sum_squares_); }
+};
 template<Scalar T>
 bool finite(MatrixView<T> a) noexcept {
     for (std::size_t i = 0; i < a.rows(); ++i)
@@ -251,21 +269,12 @@ Result<T> dot(std::span<const T> a, std::span<const T> b) noexcept {
 
 template<std::floating_point T>
 Result<T> stable_norm2(std::span<const T> a) noexcept {
-    T scale = 0, sum_squares = 1;
+    detail::ScaledSquares<T> sum;
     for (const auto value : a) {
         if (!std::isfinite(value)) return StatusCode::non_finite_input;
-        const T magnitude = std::abs(value);
-        if (magnitude == 0) continue;
-        if (scale < magnitude) {
-            const T ratio = scale / magnitude;
-            sum_squares = 1 + sum_squares * ratio * ratio;
-            scale = magnitude;
-        } else {
-            const T ratio = magnitude / scale;
-            sum_squares += ratio * ratio;
-        }
+        sum.add(value);
     }
-    const T result = scale * std::sqrt(sum_squares);
+    const T result = sum.norm();
     if (!std::isfinite(result)) return StatusCode::arithmetic_failure;
     return result;
 }
