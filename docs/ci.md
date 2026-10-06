@@ -52,3 +52,11 @@ sanitizerとLinux allocator wrappersはmalloc系とreplacement newを観測す�
 数値精度、各対象のbuild/runを再検証する。性能baselineの更新は固定PCの5 process runsを別に取る。
 通常CIでは絶対計算時間をgateにしない。CI artifactsには版、flags、configure/test logを保存する。
 workflowを書いたこととGitHubでの成功runは別で、受入報告に実際のrun URLを記録する。
+
+[run 37484637536](https://github.com/takuto-NA/kibo-linalg/actions/runs/37484637536)では、
+Windows Debug/Releaseの個別EH解除・GR無効・STL設定の実commandと構成別CTest log、
+GCC/Clang/ASan/UBSanのcompile commands・image digest・test/relocated consumer logを保存した。
+[抽出したcommandと無確保probeの証拠](validation/portability/hosted/prepared-allocation.json)を参照。
+Linux Releaseの全10構成でprepared LLT/QR確保0回を確認した。
+4つのPC jobは数値stress gateでfailureとなり、通常consumerやtoolchain取得の成功を
+全tests合格とは表示しない。WASMとESP32-S3/C3のjobは再度通過した。

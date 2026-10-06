@@ -35,5 +35,10 @@ Windows固定版の新規install metadataも保存した。PCの4 jobはnumerica
 [Windows Release](numerical/windows-release.txt)、[GCC Release](numerical/gcc-release.txt)、
 [GCC Debug](numerical/gcc-debug.txt)の失敗を含む数値結果を保存した。
 入力logと抽出結果のhashは[diagnostic source](portability/hosted/diagnostic-source.json)を参照。
+追加の[run 37484637536](https://github.com/takuto-NA/kibo-linalg/actions/runs/37484637536)、
+source `8b10a9e0efb13d820962a41e753d21a9a4d79253` ではGCC/Clang/ASan/UBSanの
+Releaseでn=2/8/32/128/512、m=n/4nの全10構成のprepared LLT/QR allocation count0を確認した。
+Debugはn<=32の6構成を確認した。[実command・結果・入力log hash](portability/hosted/prepared-allocation.json)を保存した。
+数値stress gateは引き続き失敗している。
 MSVCのscalar候補 /Qvec- はD9002で無視されたため棄却し、
 supported flagsを用いるLinux Clang scalar系列を主Windows系列と分けて測定する。
