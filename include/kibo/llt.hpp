@@ -201,6 +201,59 @@ inline void row_update_two_ordered(double* values,const double* a,const double* 
     for(;j<count;++j){values[j]-=a[j]*first;values[j]-=b[j]*second;}
 }
 
+
+// Row-contiguous square input only. Equal opposing entries let one pass
+// validate the range and symmetry; unequal entries retain the full finite
+// scan and the caller's original normalized-tolerance check.
+inline bool finite_max_and_exact_symmetry(MatrixView<const double> input,double& scale,bool& exact) noexcept {
+    const auto n=input.rows();std::size_t i=0;
+    exact=true;
+#if !defined(KIBO_DISABLE_SIMD) && !defined(__wasm__) && (defined(_M_X64) || defined(__SSE2__))
+    const auto sign=_mm_set1_pd(-0.0),limit=_mm_set1_pd(std::numeric_limits<double>::max());
+    auto max0=_mm_setzero_pd(),max1=max0;
+    auto valid0=_mm_cmpeq_pd(max0,max0),valid1=valid0,equal=valid0;
+    for(;n-i>=2;i+=2) {
+        const auto da=_mm_andnot_pd(sign,_mm_loadu_pd(&input(i,i)));
+        const auto db=_mm_andnot_pd(sign,_mm_loadu_pd(&input(i+1,i)));
+        max0=_mm_max_pd(max0,da);valid0=_mm_and_pd(valid0,_mm_cmple_pd(da,limit));
+        max1=_mm_max_pd(max1,db);valid1=_mm_and_pd(valid1,_mm_cmple_pd(db,limit));
+        exact&=input(i,i+1)==input(i+1,i);
+        for(std::size_t j=0;j<i;j+=2) {
+            const auto a=_mm_loadu_pd(&input(i,j)),b=_mm_loadu_pd(&input(i+1,j));
+            const auto c=_mm_loadu_pd(&input(j,i)),d=_mm_loadu_pd(&input(j+1,i));
+            equal=_mm_and_pd(equal,_mm_and_pd(_mm_cmpeq_pd(a,_mm_unpacklo_pd(c,d)),_mm_cmpeq_pd(b,_mm_unpackhi_pd(c,d))));
+            const auto aa=_mm_andnot_pd(sign,a),ab=_mm_andnot_pd(sign,b);
+            // Equal opposing entries have equal absolute values. Off-diagonal
+            // NaNs make the equality mask false and trigger the full finite scan.
+            max0=_mm_max_pd(max0,aa);
+            max1=_mm_max_pd(max1,ab);
+        }
+    }
+    if(_mm_movemask_pd(_mm_and_pd(valid0,valid1))!=3)return false;
+    const auto maximum=_mm_max_pd(max0,max1);
+    scale=std::max(_mm_cvtsd_f64(maximum),_mm_cvtsd_f64(_mm_unpackhi_pd(maximum,maximum)));
+    exact&=_mm_movemask_pd(equal)==3;
+    if(exact) {
+        if(!(scale<=std::numeric_limits<double>::max()))return false;
+    } else {
+        scale=0;
+        for(std::size_t row=0;row<n;++row)
+            if(!finite_max_abs(&input(row,0),n,scale))return false;
+    }
+#endif
+    for(;i<n;++i) {
+        if(!llt_is_finite(input(i,i)))return false;
+        scale=std::max(scale,std::abs(input(i,i)));
+        for(std::size_t j=0;j<i;++j) {
+            const double a=input(i,j),b=input(j,i);
+            if(!llt_is_finite(a)||!llt_is_finite(b))return false;
+            scale=std::max(scale,std::max(std::abs(a),std::abs(b)));
+            exact&=a==b;
+        }
+    }
+    return true;
+}
+
 inline Result<LltFactorView> factorize_column_llt(MatrixView<const double> input, MatrixView<double> storage) noexcept {
     // Input is fully validated and independent of storage. Compute through a
     // transposed view so panel columns are contiguous without heap/workspace.
@@ -304,26 +357,30 @@ inline Result<LltFactorView> factorize_llt(MatrixView<const double> input, Matri
     if (n==0 || input.cols()!=n || !detail::same_shape(input,storage)) return StatusCode::invalid_shape;
     if (!detail::llt_is_finite(options.symmetry_tolerance) || options.symmetry_tolerance<0 || options.symmetry_tolerance>=1)
         return StatusCode::invalid_argument;
-    double scale=0;
-    if (options.check_symmetry && input.col_stride()==1) {
-        // The whole input, including the unused triangle, is still validated
-        // before storage is touched. Combine the finite and scale scans.
-        if (input.row_stride()==n && n>=8) {
-            // Checked dense layout guarantees that n*n is representable.
-            if (!detail::finite_max_abs(&input(0,0),n*n,scale)) return StatusCode::non_finite_input;
-        } else {
-            for (std::size_t i=0;i<n;++i)
-                if (!detail::finite_max_abs(&input(i,0),n,scale)) return StatusCode::non_finite_input;
-        }
+    double scale=0;bool exact=false;
+    if(options.check_symmetry && detail::row_simd_available && input.col_stride()==1 && n>=128) {
+        if(!detail::finite_max_and_exact_symmetry(input,scale,exact))return StatusCode::non_finite_input;
     } else {
-        for (std::size_t i=0;i<n;++i) for (std::size_t j=0;j<n;++j)
-            if (!detail::llt_is_finite(input(i,j))) return StatusCode::non_finite_input;
-        if (options.check_symmetry) {
-            for (std::size_t i=0;i<n;++i)
-                for (std::size_t j=0;j<n;++j) if (std::abs(input(i,j))>scale) scale=std::abs(input(i,j));
+        if (options.check_symmetry && input.col_stride()==1) {
+            // The whole input, including the unused triangle, is still validated
+            // before storage is touched. Combine the finite and scale scans.
+            if (input.row_stride()==n && n>=8) {
+                // Checked dense layout guarantees that n*n is representable.
+                if (!detail::finite_max_abs(&input(0,0),n*n,scale)) return StatusCode::non_finite_input;
+            } else {
+                for (std::size_t i=0;i<n;++i)
+                    if (!detail::finite_max_abs(&input(i,0),n,scale)) return StatusCode::non_finite_input;
+            }
+        } else {
+            for (std::size_t i=0;i<n;++i) for (std::size_t j=0;j<n;++j)
+                if (!detail::llt_is_finite(input(i,j))) return StatusCode::non_finite_input;
+            if (options.check_symmetry) {
+                for (std::size_t i=0;i<n;++i)
+                    for (std::size_t j=0;j<n;++j) if (std::abs(input(i,j))>scale) scale=std::abs(input(i,j));
+            }
         }
     }
-    if (options.check_symmetry) {
+    if (options.check_symmetry && !exact) {
         const bool tiled=detail::row_simd_available && input.col_stride()==1 && n>=8;
         if (scale!=0 && !(tiled && detail::symmetric_rows_within_tolerance(input,scale,options.symmetry_tolerance))) {
             for (std::size_t i=0;i<n;++i)
