@@ -19,20 +19,73 @@ inline bool finite_max_abs(const double* values, std::size_t count, double& maxi
 #if defined(KIBO_DETAIL_ROW_SSE2)
     const auto sign=_mm_set1_pd(-0.0);
     const auto limit=_mm_set1_pd(std::numeric_limits<double>::max());
-    auto largest=_mm_set1_pd(maximum);
-    auto valid=_mm_cmpeq_pd(_mm_setzero_pd(),_mm_setzero_pd());
+    auto largest0=_mm_set1_pd(maximum);
+    auto valid0=_mm_cmpeq_pd(_mm_setzero_pd(),_mm_setzero_pd());
+    if (count>=8) {
+        auto largest1=_mm_set1_pd(maximum);
+        auto valid1=_mm_cmpeq_pd(_mm_setzero_pd(),_mm_setzero_pd());
+        auto largest2=_mm_set1_pd(maximum);
+        auto valid2=_mm_cmpeq_pd(_mm_setzero_pd(),_mm_setzero_pd());
+        auto largest3=_mm_set1_pd(maximum);
+        auto valid3=_mm_cmpeq_pd(_mm_setzero_pd(),_mm_setzero_pd());
+        for (;count-i>=8;i+=8) {
+            const auto absolute0=_mm_andnot_pd(sign,_mm_loadu_pd(values+i+0));
+            valid0=_mm_and_pd(valid0,_mm_cmple_pd(absolute0,limit));
+            largest0=_mm_max_pd(largest0,absolute0);
+            const auto absolute1=_mm_andnot_pd(sign,_mm_loadu_pd(values+i+2));
+            valid1=_mm_and_pd(valid1,_mm_cmple_pd(absolute1,limit));
+            largest1=_mm_max_pd(largest1,absolute1);
+            const auto absolute2=_mm_andnot_pd(sign,_mm_loadu_pd(values+i+4));
+            valid2=_mm_and_pd(valid2,_mm_cmple_pd(absolute2,limit));
+            largest2=_mm_max_pd(largest2,absolute2);
+            const auto absolute3=_mm_andnot_pd(sign,_mm_loadu_pd(values+i+6));
+            valid3=_mm_and_pd(valid3,_mm_cmple_pd(absolute3,limit));
+            largest3=_mm_max_pd(largest3,absolute3);
+        }
+        valid0=_mm_and_pd(valid0,valid1);
+        largest0=_mm_max_pd(largest0,largest1);
+        valid0=_mm_and_pd(valid0,valid2);
+        largest0=_mm_max_pd(largest0,largest2);
+        valid0=_mm_and_pd(valid0,valid3);
+        largest0=_mm_max_pd(largest0,largest3);
+    }
     for (;count-i>=2;i+=2) {
         const auto absolute=_mm_andnot_pd(sign,_mm_loadu_pd(values+i));
-        valid=_mm_and_pd(valid,_mm_cmple_pd(absolute,limit));
-        largest=_mm_max_pd(largest,absolute);
+        valid0=_mm_and_pd(valid0,_mm_cmple_pd(absolute,limit));
+        largest0=_mm_max_pd(largest0,absolute);
     }
-    if (_mm_movemask_pd(valid)!=3) return false;
-    maximum=std::max(_mm_cvtsd_f64(largest),_mm_cvtsd_f64(_mm_unpackhi_pd(largest,largest)));
+    if (_mm_movemask_pd(valid0)!=3) return false;
+    maximum=std::max(_mm_cvtsd_f64(largest0),_mm_cvtsd_f64(_mm_unpackhi_pd(largest0,largest0)));
 #endif
     for (;i<count;++i) {
-        if (!std::isfinite(values[i])) return false;
+        if (!(std::abs(values[i])<=std::numeric_limits<double>::max())) return false;
         maximum=std::max(maximum,std::abs(values[i]));
     }
+    return true;
+}
+// Row-contiguous square input has already passed finite validation. A false
+// result is rechecked in scalar row order to preserve the failing index.
+inline bool symmetric_rows_within_tolerance(MatrixView<const double> input, double scale, double tolerance) noexcept {
+    const auto n=input.rows();
+    std::size_t i=0;
+#if defined(KIBO_DETAIL_ROW_SSE2)
+    const auto divisor=_mm_set1_pd(scale), limit=_mm_set1_pd(tolerance), sign=_mm_set1_pd(-0.0);
+    for (;n-i>=2;i+=2) {
+        for (std::size_t j=0;j<i;j+=2) {
+            const auto a=_mm_loadu_pd(&input(i,j)), b=_mm_loadu_pd(&input(i+1,j));
+            const auto c=_mm_loadu_pd(&input(j,i)), d=_mm_loadu_pd(&input(j+1,i));
+            const auto equal=_mm_and_pd(_mm_cmpeq_pd(a,_mm_unpacklo_pd(c,d)),_mm_cmpeq_pd(b,_mm_unpackhi_pd(c,d)));
+            if (_mm_movemask_pd(equal)!=3) {
+                const auto da=_mm_sub_pd(_mm_div_pd(a,divisor),_mm_div_pd(_mm_unpacklo_pd(c,d),divisor));
+                const auto db=_mm_sub_pd(_mm_div_pd(b,divisor),_mm_div_pd(_mm_unpackhi_pd(c,d),divisor));
+                const auto near=_mm_and_pd(_mm_cmple_pd(_mm_andnot_pd(sign,da),limit),_mm_cmple_pd(_mm_andnot_pd(sign,db),limit));
+                if (_mm_movemask_pd(near)!=3) return false;
+            }
+        }
+        if (input(i+1,i)!=input(i,i+1) && std::abs(input(i+1,i)/scale-input(i,i+1)/scale)>tolerance) return false;
+    }
+#endif
+    for (;i<n;++i) for (std::size_t j=0;j<i;++j) if (input(i,j)!=input(j,i) && std::abs(input(i,j)/scale-input(j,i)/scale)>tolerance) return false;
     return true;
 }
 inline void row_update(double* row, const double* projection, std::size_t count, double value) noexcept {

@@ -43,6 +43,19 @@ int main() {
     std::array<double,1> preserved{123};
     CHECK(solve_into(tiny_factor.value(),std::span<const double>{huge_rhs},std::span<double>{preserved},workspace).code==StatusCode::arithmetic_failure);
     CHECK(preserved[0]==123);
+    // A late backward-substitution overflow must not commit any answer,
+    // after earlier rows have already updated the prepared workspace.
+    {
+        StaticMatrix<double,9,9> diagonal,lower;
+        for (std::size_t i=0;i<9;++i) diagonal(i,i)=i==0?1e-300:1;
+        auto f=factorize_llt(diagonal.const_view(),lower.view());
+        CHECK(f);
+        std::array<double,9> rhs,answer,work;
+        rhs.fill(1);rhs[0]=1e150;answer.fill(123);
+        auto failed=solve_into(f.value(),std::span<const double>{rhs},std::span<double>{answer},std::as_writable_bytes(std::span<double>{work}));
+        CHECK(failed.code==StatusCode::arithmetic_failure && failed.index==0);
+        for (double value:answer) CHECK(value==123);
+    }
     // A known SPD system has the exact solution [1,-2,3].
     std::array<double,9> known_a{6,2,1,2,5,2,1,2,4};
     auto known_view=MatrixView<const double>::checked(known_a,3,3,3);
@@ -91,15 +104,20 @@ int main() {
         CHECK(!overflow && overflow.status().code==StatusCode::arithmetic_failure && overflow.status().index==0);
         return 0;
     };
+    CHECK(check_dense.template operator()<8>()==0);
+    CHECK(check_dense.template operator()<9>()==0);
+    CHECK(check_dense.template operator()<15>()==0);
+    CHECK(check_dense.template operator()<16>()==0);
     CHECK(check_dense.template operator()<31>()==0);
     CHECK(check_dense.template operator()<32>()==0);
     CHECK(check_dense.template operator()<33>()==0);
+    CHECK(check_dense.template operator()<48>()==0);
     CHECK(check_dense.template operator()<64>()==0);
     CHECK(check_dense.template operator()<65>()==0);
     // Validation covers both triangles before the blocked path writes output.
     // Exercise the vector scan tail, exact symmetry, and the original
     // normalized tolerance boundary (not an approximate shortcut).
-    for (std::size_t n:{32,33,65}) {
+    for (std::size_t n:{8,9,15,16,31,32,33,64,65}) {
         std::array<double,65*65> input{},target{};
         for (std::size_t i=0;i<n;++i) input[i*n+i]=1;
         auto source=MatrixView<const double>::checked(input,n,n,n).value();
@@ -112,7 +130,8 @@ int main() {
         auto rejected=factorize_llt(source,output);
         CHECK(!rejected && rejected.status().code==StatusCode::invalid_argument && rejected.status().index==1);
         for (double value:target) CHECK(value==123);
-        for (std::size_t position:{std::size_t{0},std::size_t{2},std::size_t{64},n*n-1}) {
+        for (std::size_t position:{std::size_t{0},std::size_t{2},std::size_t{4},std::size_t{6},std::size_t{64},n*n-1}) {
+            if (position>=n*n) continue;
             const double saved=input[position];
             input[position]=std::numeric_limits<double>::quiet_NaN();
             CHECK(factorize_llt(source,output).status().code==StatusCode::non_finite_input);
@@ -121,6 +140,33 @@ int main() {
         }
         input[1]=std::numeric_limits<double>::infinity();
         CHECK(factorize_llt(source,output,LltOptions{tolerance,false}).status().code==StatusCode::non_finite_input);
+        input[1]=0;
+        // Mismatches in different SIMD tiles still report the first row in
+        // the documented scalar validation order, with output untouched.
+        input[6*n+3]=input[2*n]=std::nextafter(tolerance,std::numeric_limits<double>::infinity());
+        auto tiles=factorize_llt(source,output);
+        CHECK(!tiles && tiles.status().code==StatusCode::invalid_argument && tiles.status().index==2);
+        for (double value:target) CHECK(value==123);
+        input[2*n]=0;
+        tiles=factorize_llt(source,output);
+        CHECK(!tiles && tiles.status().index==6);
+        for (double value:target) CHECK(value==123);
+    }
+    // Input padding is outside finite and symmetry validation, even when it
+    // contains NaNs; row-contiguous padded and column layouts remain valid.
+    {
+        constexpr std::size_t n=9;
+        std::array<double,n*(n+3)> data;
+        StaticMatrix<double,n,n> storage;
+        for (const auto strides:std::array<std::array<std::size_t,2>,2>{{{n+3,1},{1,n+3}}}) {
+            data.fill(std::numeric_limits<double>::quiet_NaN());
+            for (std::size_t i=0;i<n;++i) for (std::size_t j=0;j<n;++j)
+                data[i*strides[0]+j*strides[1]]=i==j?4:0;
+            auto source=MatrixView<const double>::checked(data,n,n,strides[0],strides[1]).value();
+            auto result=factorize_llt(source,storage.view());
+            CHECK(result);
+            for (std::size_t i=0;i<n;++i) for (std::size_t j=0;j<n;++j) CHECK(storage(i,j)==(i==j?2:0));
+        }
     }
     // Classification boundaries reach the public preflight and pivot checks.
     {
