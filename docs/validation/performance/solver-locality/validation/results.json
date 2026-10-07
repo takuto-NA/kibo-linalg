@@ -1,0 +1,49 @@
+{
+  "sourceCommit": "512721484157f3fc4ad5c04c91af3d1318c291c9",
+  "sourceMatch": "All include/tests/CMakeLists.txt bytes match source commit after CRLF-to-LF normalization; measurement records raw workspace SHA256 separately.",
+  "ciRun": "https://github.com/takuto-NA/kibo-linalg/actions/runs/37578152963",
+  "ciConclusion": "failure",
+  "pcJobs": "Only numerical and numerical_column fail. Debug 17/17 acceptance failures; Release 19/18. Gates unchanged.",
+  "windowsReleaseAllocation": "skipped (measurement unavailable)",
+  "preparedAllocation": "Windows Debug and Linux Debug/Release including sanitized: pass; QR column factor coverage included.",
+  "wasm": "Node and Chromium/Firefox/WebKit passed.",
+  "esp32": "S3/C3 cross compilation passed; actual-board execution unverified.",
+  "localFreshCommands": [
+    {
+      "command": [
+        "ctest",
+        "--test-dir",
+        "build/locality-public",
+        "-C",
+        "Release",
+        "--output-on-failure"
+      ],
+      "exitCode": 8,
+      "log": "local-release-fresh.log"
+    },
+    {
+      "command": [
+        "build/solver-locality/Release/before_numerical.exe",
+        "--column-factor"
+      ],
+      "exitCode": 1,
+      "log": "before-column-numerical.log"
+    }
+  ],
+  "columnNumericalComparison": {
+    "cases": 45,
+    "newForwardErrorGateFailures": [],
+    "resolvedForwardErrorGateFailures": [
+      [
+        [
+          "2048",
+          "512",
+          "100000000",
+          "1"
+        ],
+        0.00013417638014753046,
+        6.541469347462036e-05
+      ]
+    ]
+  }
+}

@@ -71,3 +71,7 @@ hosted CIで絶対速度をgateにせず、固定PCで20%以上の悪化が区�
 
 悪条件・大残差の精度保証は別の数値検証チケットで扱う。
 通常fixtureの速度を、Eigen全体や未知のworkloadへの優位として一般化しない。
+
+公開solverの配置改善については、[row/column格納ごとの旧版比較](validation/2026-10-07-solver-locality.md)を参照する。
+こちらは同じharnessから元の公開headerと修正版をビルドし、CPU0固定でfactor+solveを測る追加系列である。
+QR column格納も比較するが、setup/allocation込みの全phase測定の代わりにはしない。
