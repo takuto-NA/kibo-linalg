@@ -1,0 +1,67 @@
+{
+  "qr_baseline": {
+    "coreMs": 50.8961,
+    "eigenMs": 30.1227,
+    "medianProcessRatio": 1.6896261
+  },
+  "qr_eigen_row": {
+    "coreMs": 51.4714,
+    "eigenMs": 41.5513,
+    "medianProcessRatio": 1.14935032
+  },
+  "qr_row_unchecked": {
+    "coreMs": 47.852199999999996,
+    "eigenMs": 31.1571,
+    "medianProcessRatio": 1.54495399
+  },
+  "qr_column_scalar": {
+    "coreMs": 129.2739,
+    "eigenMs": 28.5928,
+    "medianProcessRatio": 4.58805376
+  },
+  "qr_column_simd": {
+    "coreMs": 39.9148,
+    "eigenMs": 30.4586,
+    "medianProcessRatio": 1.31046076
+  },
+  "qr_column_four": {
+    "coreMs": 42.846000000000004,
+    "eigenMs": 32.3602,
+    "medianProcessRatio": 1.32106281
+  },
+  "qr_factor_deferred": {
+    "coreMs": 31.358499999999996,
+    "eigenMs": 28.9693,
+    "medianProcessRatio": 1.07471721
+  },
+  "qr_unsafe_all_unchecked": {
+    "coreMs": 32.1077,
+    "eigenMs": 30.5633,
+    "medianProcessRatio": 1.05053119
+  },
+  "llt_baseline": {
+    "coreMs": 3.6566,
+    "eigenMs": 2.1536,
+    "medianProcessRatio": 1.69790119
+  },
+  "llt_width64": {
+    "coreMs": 4.013400000000001,
+    "eigenMs": 2.3654,
+    "medianProcessRatio": 1.69671092
+  },
+  "llt_padded": {
+    "coreMs": 3.1163,
+    "eigenMs": 2.3491,
+    "medianProcessRatio": 1.33138426
+  },
+  "llt_column": {
+    "coreMs": 3.0035000000000003,
+    "eigenMs": 2.4867,
+    "medianProcessRatio": 1.21731612
+  },
+  "llt_column_fast": {
+    "coreMs": 2.912,
+    "eigenMs": 2.3587000000000002,
+    "medianProcessRatio": 1.22357446
+  }
+}

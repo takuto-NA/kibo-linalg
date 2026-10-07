@@ -1,0 +1,672 @@
+{
+  "startedUtc": "2026-10-07T03:20:15.141610+00:00",
+  "baseSourceCommit": "83c7a143599cd9e73bc97e6ecae3680daee3418f",
+  "eigenCommit": "bc3b39870ecb690a623a3f49149a358b95c5781d",
+  "cpu": {
+    "name": "Intel(R) Core(TM) i9-14900K",
+    "logicalProcessors": 32,
+    "nameSource": "Windows processor registry"
+  },
+  "windowsVersion": [
+    10,
+    0,
+    26200,
+    2,
+    ""
+  ],
+  "processesPerProbe": 3,
+  "commands": [
+    [
+      "cmake",
+      "-S",
+      "C:\\Users\\owner\\Documents\\git\\kibo-linalg\\tools\\diagnostics\\eigen-gap",
+      "-B",
+      "C:\\Users\\owner\\Documents\\git\\kibo-linalg\\build\\eigen-gap-diagnostics",
+      "-G",
+      "Visual Studio 17 2022",
+      "-A",
+      "x64"
+    ],
+    [
+      "cmake",
+      "--build",
+      "C:\\Users\\owner\\Documents\\git\\kibo-linalg\\build\\eigen-gap-diagnostics",
+      "--config",
+      "Release",
+      "--target",
+      "qr_baseline",
+      "qr_eigen_row",
+      "qr_row_unchecked",
+      "qr_column_scalar",
+      "qr_column_simd",
+      "qr_column_four",
+      "qr_factor_deferred",
+      "qr_unsafe_all_unchecked",
+      "llt_baseline",
+      "llt_width64",
+      "llt_padded",
+      "llt_column",
+      "llt_column_fast",
+      "qr_contracts",
+      "llt_contracts",
+      "llt_fast_contracts"
+    ]
+  ],
+  "sourceSha256": {
+    "tools/diagnostics/eigen-gap/CMakeLists.txt": "33f1da36d791a08c55a3207d2b499cd3667dc221a1394708d5036c90efdc380a",
+    "tools/diagnostics/eigen-gap/include/kibo/detail/row_kernels.hpp": "e8792fbb0b6e3f66365ace4509cee770714a89c8b260523dd028fabd024e760e",
+    "tools/diagnostics/eigen-gap/include/kibo/linalg.hpp": "52bf606a0f6ac2e21a83878e7b029b4c65935e25f5fc90387b1cf2ef74572634",
+    "tools/diagnostics/eigen-gap/include/kibo/llt.hpp": "30f6caa244bd680d00e24051681eb03d3eb8f8021541c6e2f05808cfa14f302f",
+    "tools/diagnostics/eigen-gap/include/kibo/qr.hpp": "124f44bad1ef809e40ec21ad939e5d9dd1ff5dd211d18ad13267aacedd4bf902",
+    "tools/diagnostics/eigen-gap/include/kibo/workspace.hpp": "e74b13bb57d83bb0ad7b1c8f271c40db825a2d1b380f0224639a9d94ee8c48d0",
+    "tools/diagnostics/eigen-gap/llt_probe.cpp": "674e57fb1c26611188267fadf969ef1c97d913c0d86616ced90818e03169db86",
+    "tools/diagnostics/eigen-gap/measure.py": "28cdef495adb2ed743433bd9f76b433465bde77c553a2bc5b9cbc517cf2173e8",
+    "tools/diagnostics/eigen-gap/qr_probe.cpp": "3e3f02097f70aef5c519bdc151cb72bc8ed9fb8c46d4a26876c4369f480937aa",
+    "tools/diagnostics/eigen-gap/README.md": "971cdcf86d0d56520767861d60b843b33adcd4a353a8a7efc15d4767c320db1f",
+    "tools/diagnostics/eigen-gap/tests/controlled_fixture.hpp": "eabb9c60f1659b981c52e704c3e9a53cdaef50349baccda2ec6fcc5774f6c142",
+    "tools/diagnostics/eigen-gap/tests/llt_tests.cpp": "b336fb93633e6b338ad5c3b33bab1f8807d65ebe1b3189d48fa9c08da813da4d",
+    "tools/diagnostics/eigen-gap/tests/qr_tests.cpp": "bef0f6bc5378da8c3fa7bb82d96c54e47dabef6ef9d1359a0aa7771eb497b9fb",
+    "tools/diagnostics/eigen-gap/tests/test_check.hpp": "8e2fa1cdda7bd43126d6d96729ec5770bbacc59a3e1316c399a617f6c71543ea"
+  },
+  "binarySha256": {
+    "qr_baseline": "bb84e526ce6de79b5c7e1cbc81113f73995dbc9d40dbbe303960038698a4828a",
+    "qr_eigen_row": "266e5b4ed401b52f7d47481d6988fae1b8ac75e27fca49a7cd7474254db780bd",
+    "qr_row_unchecked": "ac5a7f4815f085a2b7ed55e9e3148ffae4af654b129e46b41d5146d20afd198f",
+    "qr_column_scalar": "7c18101294dfe1e607851d32c03bd049823a63f2c9beb6297a43003bad1cc889",
+    "qr_column_simd": "8ef4436ff00d263c789a6ceada254661e0dea6c3e40e97f49bd64ab6aa8f610f",
+    "qr_column_four": "1afbfa5c52747c95f67833af73438a8eeae50a01d8bba1bb28c2432c8dad0024",
+    "qr_factor_deferred": "9e50155103f6768234c66b49a3b0bafa1f2596d6b20b904d01a4bf45e3df3e82",
+    "qr_unsafe_all_unchecked": "e5b28fd8407439a401c679c4cb0616fe0293bab10079015a4e3cbe755d82a5e4",
+    "llt_baseline": "8b4e6b3c1eb28c50d8d01fe4d9426b5fa7220215525a889a5100918e63732dbd",
+    "llt_width64": "c867f0df7542f0cf66be620b887a90a524a06859afb22e16d47839f45961b9fa",
+    "llt_padded": "ae930f5da4049677543ff71df55541707304a9c42e9c01ee8e355bdaaf430a08",
+    "llt_column": "7431c4e3cddf3b9e045643082b38f7f4d73a57b75757b2778cef0bfc26735278",
+    "llt_column_fast": "a80a8e7f3e97788a030674f586db0492a0b1340c616cd4273775ed6e826d20e3",
+    "qr_contracts": "f30a1975427c5f972b9c8aedf9f7db936eabbd80699b86c2dabdfec97c340fc5",
+    "llt_contracts": "08cac1e6947e04f63026787456095a3818942fcd93897810101b118d03c7a59a",
+    "llt_fast_contracts": "2e523ef9a05b8d3c434f8c3a51281ebf95902642a058d804675d1bbce5315bfc"
+  },
+  "profile": "MSVC x64 Release /O2 /fp:precise; C++20; EIGEN_DONT_PARALLELIZE=1; no /arch override",
+  "records": [
+    {
+      "target": "qr_baseline",
+      "process": 0,
+      "raw": "qr_baseline-0.txt",
+      "exitCode": 1,
+      "observationValid": true,
+      "metric": {
+        "m": 1024,
+        "n": 512,
+        "coreSeconds": 0.0515972,
+        "eigenSeconds": 0.0315852,
+        "coreOverEigen": 1.63358788,
+        "accuracyPassed": true
+      }
+    },
+    {
+      "target": "qr_eigen_row",
+      "process": 0,
+      "raw": "qr_eigen_row-0.txt",
+      "exitCode": 1,
+      "observationValid": true,
+      "metric": {
+        "m": 1024,
+        "n": 512,
+        "coreSeconds": 0.047757,
+        "eigenSeconds": 0.0415513,
+        "coreOverEigen": 1.14935032,
+        "accuracyPassed": true
+      }
+    },
+    {
+      "target": "qr_row_unchecked",
+      "process": 0,
+      "raw": "qr_row_unchecked-0.txt",
+      "exitCode": 1,
+      "observationValid": true,
+      "metric": {
+        "m": 1024,
+        "n": 512,
+        "coreSeconds": 0.0430143,
+        "eigenSeconds": 0.0278418,
+        "coreOverEigen": 1.54495399,
+        "accuracyPassed": true
+      }
+    },
+    {
+      "target": "qr_column_scalar",
+      "process": 0,
+      "raw": "qr_column_scalar-0.txt",
+      "exitCode": 1,
+      "observationValid": true,
+      "metric": {
+        "m": 1024,
+        "n": 512,
+        "coreSeconds": 0.1325173,
+        "eigenSeconds": 0.0285928,
+        "coreOverEigen": 4.63463879,
+        "accuracyPassed": true
+      }
+    },
+    {
+      "target": "qr_column_simd",
+      "process": 0,
+      "raw": "qr_column_simd-0.txt",
+      "exitCode": 1,
+      "observationValid": true,
+      "metric": {
+        "m": 1024,
+        "n": 512,
+        "coreSeconds": 0.039738,
+        "eigenSeconds": 0.029469,
+        "coreOverEigen": 1.34846788,
+        "accuracyPassed": true
+      }
+    },
+    {
+      "target": "qr_column_four",
+      "process": 0,
+      "raw": "qr_column_four-0.txt",
+      "exitCode": 1,
+      "observationValid": true,
+      "metric": {
+        "m": 1024,
+        "n": 512,
+        "coreSeconds": 0.0381696,
+        "eigenSeconds": 0.0288931,
+        "coreOverEigen": 1.32106281,
+        "accuracyPassed": true
+      }
+    },
+    {
+      "target": "qr_factor_deferred",
+      "process": 0,
+      "raw": "qr_factor_deferred-0.txt",
+      "exitCode": 1,
+      "observationValid": true,
+      "metric": {
+        "m": 1024,
+        "n": 512,
+        "coreSeconds": 0.032858,
+        "eigenSeconds": 0.0289693,
+        "coreOverEigen": 1.13423521,
+        "accuracyPassed": true
+      }
+    },
+    {
+      "target": "qr_unsafe_all_unchecked",
+      "process": 0,
+      "raw": "qr_unsafe_all_unchecked-0.txt",
+      "exitCode": 3,
+      "observationValid": true,
+      "metric": {
+        "m": 1024,
+        "n": 512,
+        "coreSeconds": 0.032588,
+        "eigenSeconds": 0.0323029,
+        "coreOverEigen": 1.00882583,
+        "accuracyPassed": true
+      }
+    },
+    {
+      "target": "llt_baseline",
+      "process": 0,
+      "raw": "llt_baseline-0.txt",
+      "exitCode": 1,
+      "observationValid": true,
+      "metric": {
+        "coreSeconds": 0.0034912,
+        "eigenSeconds": 0.0021691,
+        "ratio": 1.60951547,
+        "accuracyPassed": true
+      }
+    },
+    {
+      "target": "llt_width64",
+      "process": 0,
+      "raw": "llt_width64-0.txt",
+      "exitCode": 1,
+      "observationValid": true,
+      "metric": {
+        "coreSeconds": 0.0038362,
+        "eigenSeconds": 0.0021937,
+        "ratio": 1.74873501,
+        "accuracyPassed": true
+      }
+    },
+    {
+      "target": "llt_padded",
+      "process": 0,
+      "raw": "llt_padded-0.txt",
+      "exitCode": 1,
+      "observationValid": true,
+      "metric": {
+        "coreSeconds": 0.0029656,
+        "eigenSeconds": 0.0021983,
+        "ratio": 1.34904244,
+        "accuracyPassed": true
+      }
+    },
+    {
+      "target": "llt_column",
+      "process": 0,
+      "raw": "llt_column-0.txt",
+      "exitCode": 1,
+      "observationValid": true,
+      "metric": {
+        "coreSeconds": 0.0028096,
+        "eigenSeconds": 0.0020791,
+        "ratio": 1.35135395,
+        "accuracyPassed": true
+      }
+    },
+    {
+      "target": "llt_column_fast",
+      "process": 0,
+      "raw": "llt_column_fast-0.txt",
+      "exitCode": 1,
+      "observationValid": true,
+      "metric": {
+        "coreSeconds": 0.0029662,
+        "eigenSeconds": 0.0025037,
+        "ratio": 1.1847266,
+        "accuracyPassed": true
+      }
+    },
+    {
+      "target": "qr_contracts",
+      "process": 0,
+      "raw": "qr_contracts-0.txt",
+      "exitCode": 0,
+      "observationValid": true,
+      "metric": null
+    },
+    {
+      "target": "llt_contracts",
+      "process": 0,
+      "raw": "llt_contracts-0.txt",
+      "exitCode": 0,
+      "observationValid": true,
+      "metric": null
+    },
+    {
+      "target": "llt_fast_contracts",
+      "process": 0,
+      "raw": "llt_fast_contracts-0.txt",
+      "exitCode": 0,
+      "observationValid": true,
+      "metric": null
+    },
+    {
+      "target": "qr_baseline",
+      "process": 1,
+      "raw": "qr_baseline-1.txt",
+      "exitCode": 1,
+      "observationValid": true,
+      "metric": {
+        "m": 1024,
+        "n": 512,
+        "coreSeconds": 0.0508961,
+        "eigenSeconds": 0.0301227,
+        "coreOverEigen": 1.6896261,
+        "accuracyPassed": true
+      }
+    },
+    {
+      "target": "qr_eigen_row",
+      "process": 1,
+      "raw": "qr_eigen_row-1.txt",
+      "exitCode": 1,
+      "observationValid": true,
+      "metric": {
+        "m": 1024,
+        "n": 512,
+        "coreSeconds": 0.0514714,
+        "eigenSeconds": 0.0459125,
+        "coreOverEigen": 1.12107596,
+        "accuracyPassed": true
+      }
+    },
+    {
+      "target": "qr_row_unchecked",
+      "process": 1,
+      "raw": "qr_row_unchecked-1.txt",
+      "exitCode": 1,
+      "observationValid": true,
+      "metric": {
+        "m": 1024,
+        "n": 512,
+        "coreSeconds": 0.0478522,
+        "eigenSeconds": 0.0311571,
+        "coreOverEigen": 1.53583613,
+        "accuracyPassed": true
+      }
+    },
+    {
+      "target": "qr_column_scalar",
+      "process": 1,
+      "raw": "qr_column_scalar-1.txt",
+      "exitCode": 1,
+      "observationValid": true,
+      "metric": {
+        "m": 1024,
+        "n": 512,
+        "coreSeconds": 0.1290436,
+        "eigenSeconds": 0.028126,
+        "coreOverEigen": 4.58805376,
+        "accuracyPassed": true
+      }
+    },
+    {
+      "target": "qr_column_simd",
+      "process": 1,
+      "raw": "qr_column_simd-1.txt",
+      "exitCode": 1,
+      "observationValid": true,
+      "metric": {
+        "m": 1024,
+        "n": 512,
+        "coreSeconds": 0.0408974,
+        "eigenSeconds": 0.031702,
+        "coreOverEigen": 1.29005741,
+        "accuracyPassed": true
+      }
+    },
+    {
+      "target": "qr_column_four",
+      "process": 1,
+      "raw": "qr_column_four-1.txt",
+      "exitCode": 1,
+      "observationValid": true,
+      "metric": {
+        "m": 1024,
+        "n": 512,
+        "coreSeconds": 0.0429999,
+        "eigenSeconds": 0.0323602,
+        "coreOverEigen": 1.32878969,
+        "accuracyPassed": true
+      }
+    },
+    {
+      "target": "qr_factor_deferred",
+      "process": 1,
+      "raw": "qr_factor_deferred-1.txt",
+      "exitCode": 0,
+      "observationValid": true,
+      "metric": {
+        "m": 1024,
+        "n": 512,
+        "coreSeconds": 0.0311251,
+        "eigenSeconds": 0.0289612,
+        "coreOverEigen": 1.07471721,
+        "accuracyPassed": true
+      }
+    },
+    {
+      "target": "qr_unsafe_all_unchecked",
+      "process": 1,
+      "raw": "qr_unsafe_all_unchecked-1.txt",
+      "exitCode": 3,
+      "observationValid": true,
+      "metric": {
+        "m": 1024,
+        "n": 512,
+        "coreSeconds": 0.0321077,
+        "eigenSeconds": 0.0305633,
+        "coreOverEigen": 1.05053119,
+        "accuracyPassed": true
+      }
+    },
+    {
+      "target": "llt_baseline",
+      "process": 1,
+      "raw": "llt_baseline-1.txt",
+      "exitCode": 1,
+      "observationValid": true,
+      "metric": {
+        "coreSeconds": 0.0036566,
+        "eigenSeconds": 0.0021536,
+        "ratio": 1.69790119,
+        "accuracyPassed": true
+      }
+    },
+    {
+      "target": "llt_width64",
+      "process": 1,
+      "raw": "llt_width64-1.txt",
+      "exitCode": 1,
+      "observationValid": true,
+      "metric": {
+        "coreSeconds": 0.0040134,
+        "eigenSeconds": 0.0023654,
+        "ratio": 1.69671092,
+        "accuracyPassed": true
+      }
+    },
+    {
+      "target": "llt_padded",
+      "process": 1,
+      "raw": "llt_padded-1.txt",
+      "exitCode": 1,
+      "observationValid": true,
+      "metric": {
+        "coreSeconds": 0.0031163,
+        "eigenSeconds": 0.0023491,
+        "ratio": 1.32659316,
+        "accuracyPassed": true
+      }
+    },
+    {
+      "target": "llt_column",
+      "process": 1,
+      "raw": "llt_column-1.txt",
+      "exitCode": 1,
+      "observationValid": true,
+      "metric": {
+        "coreSeconds": 0.0030271,
+        "eigenSeconds": 0.0024867,
+        "ratio": 1.21731612,
+        "accuracyPassed": true
+      }
+    },
+    {
+      "target": "llt_column_fast",
+      "process": 1,
+      "raw": "llt_column_fast-1.txt",
+      "exitCode": 1,
+      "observationValid": true,
+      "metric": {
+        "coreSeconds": 0.0026844,
+        "eigenSeconds": 0.0021939,
+        "ratio": 1.22357446,
+        "accuracyPassed": true
+      }
+    },
+    {
+      "target": "qr_baseline",
+      "process": 2,
+      "raw": "qr_baseline-2.txt",
+      "exitCode": 1,
+      "observationValid": true,
+      "metric": {
+        "m": 1024,
+        "n": 512,
+        "coreSeconds": 0.0482364,
+        "eigenSeconds": 0.0281907,
+        "coreOverEigen": 1.71107493,
+        "accuracyPassed": true
+      }
+    },
+    {
+      "target": "qr_eigen_row",
+      "process": 2,
+      "raw": "qr_eigen_row-2.txt",
+      "exitCode": 1,
+      "observationValid": true,
+      "metric": {
+        "m": 1024,
+        "n": 512,
+        "coreSeconds": 0.0524533,
+        "eigenSeconds": 0.0414901,
+        "coreOverEigen": 1.26423653,
+        "accuracyPassed": true
+      }
+    },
+    {
+      "target": "qr_row_unchecked",
+      "process": 2,
+      "raw": "qr_row_unchecked-2.txt",
+      "exitCode": 1,
+      "observationValid": true,
+      "metric": {
+        "m": 1024,
+        "n": 512,
+        "coreSeconds": 0.0519174,
+        "eigenSeconds": 0.0319625,
+        "coreOverEigen": 1.62432225,
+        "accuracyPassed": true
+      }
+    },
+    {
+      "target": "qr_column_scalar",
+      "process": 2,
+      "raw": "qr_column_scalar-2.txt",
+      "exitCode": 1,
+      "observationValid": true,
+      "metric": {
+        "m": 1024,
+        "n": 512,
+        "coreSeconds": 0.1292739,
+        "eigenSeconds": 0.0291099,
+        "coreOverEigen": 4.44089124,
+        "accuracyPassed": true
+      }
+    },
+    {
+      "target": "qr_column_simd",
+      "process": 2,
+      "raw": "qr_column_simd-2.txt",
+      "exitCode": 1,
+      "observationValid": true,
+      "metric": {
+        "m": 1024,
+        "n": 512,
+        "coreSeconds": 0.0399148,
+        "eigenSeconds": 0.0304586,
+        "coreOverEigen": 1.31046076,
+        "accuracyPassed": true
+      }
+    },
+    {
+      "target": "qr_column_four",
+      "process": 2,
+      "raw": "qr_column_four-2.txt",
+      "exitCode": 1,
+      "observationValid": true,
+      "metric": {
+        "m": 1024,
+        "n": 512,
+        "coreSeconds": 0.042846,
+        "eigenSeconds": 0.0326935,
+        "coreOverEigen": 1.31053573,
+        "accuracyPassed": true
+      }
+    },
+    {
+      "target": "qr_factor_deferred",
+      "process": 2,
+      "raw": "qr_factor_deferred-2.txt",
+      "exitCode": 0,
+      "observationValid": true,
+      "metric": {
+        "m": 1024,
+        "n": 512,
+        "coreSeconds": 0.0313585,
+        "eigenSeconds": 0.0296688,
+        "coreOverEigen": 1.05695208,
+        "accuracyPassed": true
+      }
+    },
+    {
+      "target": "qr_unsafe_all_unchecked",
+      "process": 2,
+      "raw": "qr_unsafe_all_unchecked-2.txt",
+      "exitCode": 3,
+      "observationValid": true,
+      "metric": {
+        "m": 1024,
+        "n": 512,
+        "coreSeconds": 0.0311505,
+        "eigenSeconds": 0.0288,
+        "coreOverEigen": 1.08161458,
+        "accuracyPassed": true
+      }
+    },
+    {
+      "target": "llt_baseline",
+      "process": 2,
+      "raw": "llt_baseline-2.txt",
+      "exitCode": 1,
+      "observationValid": true,
+      "metric": {
+        "coreSeconds": 0.0036783,
+        "eigenSeconds": 0.002118,
+        "ratio": 1.73668555,
+        "accuracyPassed": true
+      }
+    },
+    {
+      "target": "llt_width64",
+      "process": 2,
+      "raw": "llt_width64-2.txt",
+      "exitCode": 1,
+      "observationValid": true,
+      "metric": {
+        "coreSeconds": 0.0040407,
+        "eigenSeconds": 0.002401,
+        "ratio": 1.68292378,
+        "accuracyPassed": true
+      }
+    },
+    {
+      "target": "llt_padded",
+      "process": 2,
+      "raw": "llt_padded-2.txt",
+      "exitCode": 1,
+      "observationValid": true,
+      "metric": {
+        "coreSeconds": 0.0031422,
+        "eigenSeconds": 0.0023601,
+        "ratio": 1.33138426,
+        "accuracyPassed": true
+      }
+    },
+    {
+      "target": "llt_column",
+      "process": 2,
+      "raw": "llt_column-2.txt",
+      "exitCode": 1,
+      "observationValid": true,
+      "metric": {
+        "coreSeconds": 0.0030035,
+        "eigenSeconds": 0.0025427,
+        "ratio": 1.18122468,
+        "accuracyPassed": true
+      }
+    },
+    {
+      "target": "llt_column_fast",
+      "process": 2,
+      "raw": "llt_column_fast-2.txt",
+      "exitCode": 1,
+      "observationValid": true,
+      "metric": {
+        "coreSeconds": 0.002912,
+        "eigenSeconds": 0.0023587,
+        "ratio": 1.23457837,
+        "accuracyPassed": true
+      }
+    }
+  ],
+  "finishedUtc": "2026-10-07T03:20:26.154065+00:00"
+}
