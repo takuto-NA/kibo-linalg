@@ -117,7 +117,10 @@ Status.indexは非有限になった残差の行、または勾配・三角解�
 finiteな入力でも正規化した残差が表現範囲を超える場合は成功を返さない。
 condition1e8・大残差の強い解精度保証は補正経路で受け入れる方針で、
 通常solveの同じ入力の精度結果も診断に残す。
-現在は実装検証中であり、全基準環境での保証受入はまだ完了していない。
+PCの初期評価入力で精度gateと公開契約を検証した。
+[公開経路の検証結果](research/qr-refined-public-validation.md)に保証の評価範囲・追加費用を示す。
+任意の悪条件入力や全尺度についての証明ではない。Eigen自身の精度CHECKによるCI失敗とESP実機未検証が残り、
+初期保証全体の受入は完了していない。
 [判断と根拠](adr/0009-original-input-qr-refinement.md)・[実装課題](https://github.com/takuto-NA/kibo-linalg/issues/28)。
 
 ```cpp
@@ -151,6 +154,9 @@ LLTはSSE2を使う連続行storageで9列以上のとき、storageを一時的�
 未使用の上三角を係数の一時領域に使う。小さい行列やSIMD無効・非x86の構成ではscalar処理を使う。
 成功時はcaller指定のlower layoutへ戻し、上三角を0にする。計算中のfactor storageは読み出さず、
 数値失敗後は領域全体を無効とする既存契約を守る。factor workspaceは0のまま。
+大きいpanelでは2列が入力packetを共有し、正確な除算と有限値診断を維持する。
+128列以上の連続行factorではforward solveの4行とbackward solveの2行でロードを共有する。
+forwardの加算順は変わるため数値閾値で検証し、backwardの減算順と失敗時の解保持は維持する。
 QRの有限値検査・列pivot/rank診断とfactor workspace=2n doublesも維持する。
 
 QRはcallerが渡したfactor storageの配置を維持する。大きいQRでは
