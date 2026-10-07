@@ -1,0 +1,2426 @@
+{
+  "public_qr_column": {
+    "command": [
+      "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\dumpbin.exe",
+      "/disasm",
+      "C:\\Users\\owner\\Documents\\git\\kibo-linalg\\build\\qr-next\\public_qr_column.dir\\Release\\full-adaptive.obj"
+    ],
+    "files": {
+      "build\\qr-next\\public_qr_column.dir\\Release\\full-adaptive.obj": "81e7c28349b3c1f6669fcde54344ee975b49fc263fad7d572897ff97c67a2d0e",
+      "build\\qr-next\\Release\\public_qr_column.exe": "e1a5d6df07e329abec33919b8ae80ed3082c1ab41f20663d4c3aef0a8a9e1cb8",
+      "build\\qr-next\\public_qr_column.asm": "90a5b7c7f7a052b00d3b4bd06fda0cedcb555edf89bea90b6c57bac3de4065e0",
+      ".scratch\\qr-next\\full-adaptive.cpp": "082ae73aa1ee8b2820b0644f3f73fcb9c15178756a2e587ad7fddc03155e4fb8",
+      "include\\kibo\\qr.hpp": "04b1efdb4e2869ddc75ad6075874a8ab15d29051e79a24a19765fad1b50193ae",
+      "include\\kibo\\linalg.hpp": "f95f2c6fb82d430f307f07ceb4794091875b14a5838312714406cb8486ccd3cd",
+      "include\\kibo\\detail\\row_kernels.hpp": "19be54ecabe636b6f1bfb7b57eedad516462f5ac15664442e40ea21c44a5edad"
+    },
+    "dumpSha256": "435ddd3627e3b4039b68ebed725dc85b1a4aa516ddd91616d038a4314721281a",
+    "selected": [
+      {
+        "symbol": "??$?RV<lambda_6>@?N@??main@@YAHHPEAPEAD@Z@@<lambda_8>@?N@??main@@YAHHPEAPEAD@Z@QEBA?A_PAEAV<lambda_6>@?N@??1@YAHH0@Z@_K@Z",
+        "stem": "public_qr_column-__RV_lambda_6_-11",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "??$?RV<lambda_7>@?N@??main@@YAHHPEAPEAD@Z@@<lambda_8>@?N@??main@@YAHHPEAPEAD@Z@QEBA?A_PAEAV<lambda_7>@?N@??1@YAHH0@Z@_K@Z",
+        "stem": "public_qr_column-__RV_lambda_7_-12",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "??$_solve_impl@V?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@V12@@?$ColPivHouseholderQR@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@H@Eigen@@QEBAXAEBV?$Matrix@N$0?0$00$0A@$0?0$00@1@AEAV21@@Z",
+        "stem": "public_qr_column-__solve_impl-23",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "?dtor$0@?0???$_solve_impl@V?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@V12@@?$ColPivHouseholderQR@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@H@Eigen@@QEBAXAEBV?$Matrix@N$0?0$00$0A@$0?0$00@1@AEAV21@@Z@4HA",
+        "stem": "public_qr_column-dtor_0-24",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "??$applyHouseholderOnTheLeft@V?$Block@$$CBV?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@$0?0$00$0A@@Eigen@@@?$MatrixBase@V?$Block@V?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0$00$0A@@Eigen@@@Eigen@@QEAAXAEBV?$Block@$$CBV?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@$0?0$00$0A@@1@AEBNPEAN@Z",
+        "stem": "public_qr_column-_applyHouseholderOnTheLeft-27",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "??$applyHouseholderOnTheLeft@V?$Block@$$CBV?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@$0?0$00$0A@@Eigen@@@?$MatrixBase@V?$Block@V?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0$0?0$0A@@Eigen@@@Eigen@@QEAAXAEBV?$Block@$$CBV?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@$0?0$00$0A@@1@AEBNPEAN@Z",
+        "stem": "public_qr_column-_applyHouseholderOnTheLeft-28",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "?dtor$0@?0???$applyHouseholderOnTheLeft@V?$Block@$$CBV?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@$0?0$00$0A@@Eigen@@@?$MatrixBase@V?$Block@V?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0$0?0$0A@@Eigen@@@Eigen@@QEAAXAEBV?$Block@$$CBV?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@$0?0$00$0A@@1@AEBNPEAN@Z@4HA",
+        "stem": "public_qr_column-dtor_0-29",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "?dtor$3@?0???$applyHouseholderOnTheLeft@V?$Block@$$CBV?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@$0?0$00$0A@@Eigen@@@?$MatrixBase@V?$Block@V?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0$0?0$0A@@Eigen@@@Eigen@@QEAAXAEBV?$Block@$$CBV?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@$0?0$00$0A@@1@AEBNPEAN@Z@4HA",
+        "stem": "public_qr_column-dtor_3-30",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "??$applyHouseholderOnTheLeft@V?$VectorBlock@V?$Block@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@$0?0$00$00@Eigen@@$0?0@Eigen@@@?$MatrixBase@V?$Block@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@$0?0$0?0$0A@@Eigen@@@Eigen@@QEAAXAEBV?$VectorBlock@V?$Block@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@$0?0$00$00@Eigen@@$0?0@1@AEBNPEAN@Z",
+        "stem": "public_qr_column-_applyHouseholderOnTheLeft-31",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "??$apply_block_householder_on_the_left@V?$Block@V?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0$00$0A@@Eigen@@V?$Block@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@$0?0$0?0$0A@@2@V?$VectorBlock@$$CBV?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0@2@@internal@Eigen@@YAXAEAV?$Block@V?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0$00$0A@@1@AEBV?$Block@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@$0?0$0?0$0A@@1@AEBV?$VectorBlock@$$CBV?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0@1@_N@Z",
+        "stem": "public_qr_column-_apply_block_householder_on_the_left-34",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "?dtor$0@?0???$apply_block_householder_on_the_left@V?$Block@V?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0$00$0A@@Eigen@@V?$Block@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@$0?0$0?0$0A@@2@V?$VectorBlock@$$CBV?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0@2@@internal@Eigen@@YAXAEAV?$Block@V?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0$00$0A@@1@AEBV?$Block@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@$0?0$0?0$0A@@1@AEBV?$VectorBlock@$$CBV?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0@1@_N@Z@4HA",
+        "stem": "public_qr_column-dtor_0-35",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "?dtor$1@?0???$apply_block_householder_on_the_left@V?$Block@V?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0$00$0A@@Eigen@@V?$Block@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@$0?0$0?0$0A@@2@V?$VectorBlock@$$CBV?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0@2@@internal@Eigen@@YAXAEAV?$Block@V?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0$00$0A@@1@AEBV?$Block@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@$0?0$0?0$0A@@1@AEBV?$VectorBlock@$$CBV?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0@1@_N@Z@4HA",
+        "stem": "public_qr_column-dtor_1-36",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "?dtor$2@?0???$apply_block_householder_on_the_left@V?$Block@V?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0$00$0A@@Eigen@@V?$Block@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@$0?0$0?0$0A@@2@V?$VectorBlock@$$CBV?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0@2@@internal@Eigen@@YAXAEAV?$Block@V?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0$00$0A@@1@AEBV?$Block@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@$0?0$0?0$0A@@1@AEBV?$VectorBlock@$$CBV?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0@1@_N@Z@4HA",
+        "stem": "public_qr_column-dtor_2-37",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "?dtor$6@?0???$apply_block_householder_on_the_left@V?$Block@V?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0$00$0A@@Eigen@@V?$Block@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@$0?0$0?0$0A@@2@V?$VectorBlock@$$CBV?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0@2@@internal@Eigen@@YAXAEAV?$Block@V?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0$00$0A@@1@AEBV?$Block@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@$0?0$0?0$0A@@1@AEBV?$VectorBlock@$$CBV?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0@1@_N@Z@4HA",
+        "stem": "public_qr_column-dtor_6-38",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "?dtor$16@?0???$apply_block_householder_on_the_left@V?$Block@V?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0$00$0A@@Eigen@@V?$Block@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@$0?0$0?0$0A@@2@V?$VectorBlock@$$CBV?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0@2@@internal@Eigen@@YAXAEAV?$Block@V?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0$00$0A@@1@AEBV?$Block@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@$0?0$0?0$0A@@1@AEBV?$VectorBlock@$$CBV?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0@1@_N@Z@4HA",
+        "stem": "public_qr_column-dtor_16-39",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "?dtor$17@?0???$apply_block_householder_on_the_left@V?$Block@V?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0$00$0A@@Eigen@@V?$Block@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@$0?0$0?0$0A@@2@V?$VectorBlock@$$CBV?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0@2@@internal@Eigen@@YAXAEAV?$Block@V?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0$00$0A@@1@AEBV?$Block@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@$0?0$0?0$0A@@1@AEBV?$VectorBlock@$$CBV?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0@1@_N@Z@4HA",
+        "stem": "public_qr_column-dtor_17-40",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "?dtor$23@?0???$apply_block_householder_on_the_left@V?$Block@V?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0$00$0A@@Eigen@@V?$Block@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@$0?0$0?0$0A@@2@V?$VectorBlock@$$CBV?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0@2@@internal@Eigen@@YAXAEAV?$Block@V?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0$00$0A@@1@AEBV?$Block@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@$0?0$0?0$0A@@1@AEBV?$VectorBlock@$$CBV?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0@1@_N@Z@4HA",
+        "stem": "public_qr_column-dtor_23-41",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "?dtor$24@?0???$apply_block_householder_on_the_left@V?$Block@V?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0$00$0A@@Eigen@@V?$Block@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@$0?0$0?0$0A@@2@V?$VectorBlock@$$CBV?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0@2@@internal@Eigen@@YAXAEAV?$Block@V?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0$00$0A@@1@AEBV?$Block@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@$0?0$0?0$0A@@1@AEBV?$VectorBlock@$$CBV?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0@1@_N@Z@4HA",
+        "stem": "public_qr_column-dtor_24-42",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "??$apply_block_householder_on_the_left@V?$Block@V?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0$0?0$0A@@Eigen@@V?$Block@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@$0?0$0?0$0A@@2@V?$VectorBlock@$$CBV?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0@2@@internal@Eigen@@YAXAEAV?$Block@V?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0$0?0$0A@@1@AEBV?$Block@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@$0?0$0?0$0A@@1@AEBV?$VectorBlock@$$CBV?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0@1@_N@Z",
+        "stem": "public_qr_column-_apply_block_householder_on_the_left-43",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "?dtor$0@?0???$apply_block_householder_on_the_left@V?$Block@V?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0$0?0$0A@@Eigen@@V?$Block@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@$0?0$0?0$0A@@2@V?$VectorBlock@$$CBV?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0@2@@internal@Eigen@@YAXAEAV?$Block@V?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0$0?0$0A@@1@AEBV?$Block@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@$0?0$0?0$0A@@1@AEBV?$VectorBlock@$$CBV?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0@1@_N@Z@4HA",
+        "stem": "public_qr_column-dtor_0-44",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "?dtor$1@?0???$apply_block_householder_on_the_left@V?$Block@V?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0$0?0$0A@@Eigen@@V?$Block@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@$0?0$0?0$0A@@2@V?$VectorBlock@$$CBV?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0@2@@internal@Eigen@@YAXAEAV?$Block@V?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0$0?0$0A@@1@AEBV?$Block@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@$0?0$0?0$0A@@1@AEBV?$VectorBlock@$$CBV?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0@1@_N@Z@4HA",
+        "stem": "public_qr_column-dtor_1-45",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "?dtor$2@?0???$apply_block_householder_on_the_left@V?$Block@V?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0$0?0$0A@@Eigen@@V?$Block@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@$0?0$0?0$0A@@2@V?$VectorBlock@$$CBV?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0@2@@internal@Eigen@@YAXAEAV?$Block@V?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0$0?0$0A@@1@AEBV?$Block@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@$0?0$0?0$0A@@1@AEBV?$VectorBlock@$$CBV?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0@1@_N@Z@4HA",
+        "stem": "public_qr_column-dtor_2-46",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "?dtor$6@?0???$apply_block_householder_on_the_left@V?$Block@V?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0$0?0$0A@@Eigen@@V?$Block@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@$0?0$0?0$0A@@2@V?$VectorBlock@$$CBV?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0@2@@internal@Eigen@@YAXAEAV?$Block@V?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0$0?0$0A@@1@AEBV?$Block@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@$0?0$0?0$0A@@1@AEBV?$VectorBlock@$$CBV?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0@1@_N@Z@4HA",
+        "stem": "public_qr_column-dtor_6-47",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "?dtor$14@?0???$apply_block_householder_on_the_left@V?$Block@V?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0$0?0$0A@@Eigen@@V?$Block@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@$0?0$0?0$0A@@2@V?$VectorBlock@$$CBV?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0@2@@internal@Eigen@@YAXAEAV?$Block@V?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0$0?0$0A@@1@AEBV?$Block@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@$0?0$0?0$0A@@1@AEBV?$VectorBlock@$$CBV?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0@1@_N@Z@4HA",
+        "stem": "public_qr_column-dtor_14-48",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "?dtor$15@?0???$apply_block_householder_on_the_left@V?$Block@V?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0$0?0$0A@@Eigen@@V?$Block@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@$0?0$0?0$0A@@2@V?$VectorBlock@$$CBV?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0@2@@internal@Eigen@@YAXAEAV?$Block@V?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0$0?0$0A@@1@AEBV?$Block@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@$0?0$0?0$0A@@1@AEBV?$VectorBlock@$$CBV?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0@1@_N@Z@4HA",
+        "stem": "public_qr_column-dtor_15-49",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "?dtor$21@?0???$apply_block_householder_on_the_left@V?$Block@V?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0$0?0$0A@@Eigen@@V?$Block@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@$0?0$0?0$0A@@2@V?$VectorBlock@$$CBV?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0@2@@internal@Eigen@@YAXAEAV?$Block@V?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0$0?0$0A@@1@AEBV?$Block@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@$0?0$0?0$0A@@1@AEBV?$VectorBlock@$$CBV?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0@1@_N@Z@4HA",
+        "stem": "public_qr_column-dtor_21-50",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "?dtor$22@?0???$apply_block_householder_on_the_left@V?$Block@V?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0$0?0$0A@@Eigen@@V?$Block@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@$0?0$0?0$0A@@2@V?$VectorBlock@$$CBV?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0@2@@internal@Eigen@@YAXAEAV?$Block@V?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0$0?0$0A@@1@AEBV?$Block@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@$0?0$0?0$0A@@1@AEBV?$VectorBlock@$$CBV?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0@1@_N@Z@4HA",
+        "stem": "public_qr_column-dtor_22-51",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "??$compute@V?$Matrix@N$0?0$0?0$00$0?0$0?0@Eigen@@@?$ColPivHouseholderQR@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@H@Eigen@@QEAAAEAV01@AEBU?$EigenBase@V?$Matrix@N$0?0$0?0$00$0?0$0?0@Eigen@@@1@@Z",
+        "stem": "public_qr_column-_compute-53",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "??$finite@$$CBN@detail@linalg@kibo@@YA_NV?$MatrixView@$$CBN@12@@Z",
+        "stem": "public_qr_column-_finite-69",
+        "staticDclassCallSites": 1
+      },
+      {
+        "symbol": "??$isfinite@N@numext@Eigen@@YA_NAEBN@Z",
+        "stem": "public_qr_column-_isfinite-74",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "??$make_block_householder_triangular_factor@V?$Matrix@N$0?0$0?0$00$0?0$0?0@Eigen@@V?$Block@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@$0?0$0?0$0A@@2@V?$Block@$$CBV?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0$00$0A@@2@@internal@Eigen@@YAXAEAV?$Matrix@N$0?0$0?0$00$0?0$0?0@1@AEBV?$Block@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@$0?0$0?0$0A@@1@AEBV?$Block@$$CBV?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0$00$0A@@1@@Z",
+        "stem": "public_qr_column-_make_block_householder_triangular_factor-83",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "??$make_block_householder_triangular_factor@V?$Matrix@N$0?0$0?0$00$0?0$0?0@Eigen@@V?$Block@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@$0?0$0?0$0A@@2@V?$VectorBlock@$$CBV?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0@2@@internal@Eigen@@YAXAEAV?$Matrix@N$0?0$0?0$00$0?0$0?0@1@AEBV?$Block@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@$0?0$0?0$0A@@1@AEBV?$VectorBlock@$$CBV?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0@1@@Z",
+        "stem": "public_qr_column-_make_block_householder_triangular_factor-84",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "??0?$ColPivHouseholderQR@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@H@Eigen@@QEAA@_J0@Z",
+        "stem": "public_qr_column-0__ColPivHouseholderQR-147",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "?dtor$0@?0???0?$ColPivHouseholderQR@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@H@Eigen@@QEAA@_J0@Z@4HA",
+        "stem": "public_qr_column-dtor_0-148",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "?dtor$1@?0???0?$ColPivHouseholderQR@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@H@Eigen@@QEAA@_J0@Z@4HA",
+        "stem": "public_qr_column-dtor_1-149",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "?dtor$2@?0???0?$ColPivHouseholderQR@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@H@Eigen@@QEAA@_J0@Z@4HA",
+        "stem": "public_qr_column-dtor_2-150",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "?dtor$3@?0???0?$ColPivHouseholderQR@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@H@Eigen@@QEAA@_J0@Z@4HA",
+        "stem": "public_qr_column-dtor_3-151",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "?dtor$4@?0???0?$ColPivHouseholderQR@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@H@Eigen@@QEAA@_J0@Z@4HA",
+        "stem": "public_qr_column-dtor_4-152",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "?dtor$5@?0???0?$ColPivHouseholderQR@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@H@Eigen@@QEAA@_J0@Z@4HA",
+        "stem": "public_qr_column-dtor_5-153",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "?dtor$6@?0???0?$ColPivHouseholderQR@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@H@Eigen@@QEAA@_J0@Z@4HA",
+        "stem": "public_qr_column-dtor_6-154",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "?dtor$7@?0???0?$ColPivHouseholderQR@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@H@Eigen@@QEAA@_J0@Z@4HA",
+        "stem": "public_qr_column-dtor_7-155",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "??1?$ColPivHouseholderQR@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@H@Eigen@@QEAA@XZ",
+        "stem": "public_qr_column-1__ColPivHouseholderQR-165",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "??R<lambda_1>@?1??input_hash@@YA_KAEBV?$Matrix@N$0?0$0?0$00$0?0$0?0@Eigen@@AEBV?$Matrix@N$0?0$00$0A@$0?0$00@3@@Z@QEBA@_K@Z",
+        "stem": "public_qr_column-R_lambda_1_-193",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "??R<lambda_1>@?1??main@@YAHHPEAPEAD@Z@QEBA@XZ",
+        "stem": "public_qr_column-R_lambda_1_-194",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "??R<lambda_2>@?1??main@@YAHHPEAPEAD@Z@QEBA@XZ",
+        "stem": "public_qr_column-R_lambda_2_-195",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "??R<lambda_3>@?1??main@@YAHHPEAPEAD@Z@QEBA@XZ",
+        "stem": "public_qr_column-R_lambda_3_-196",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "??R<lambda_4>@?1??main@@YAHHPEAPEAD@Z@QEBA@XZ",
+        "stem": "public_qr_column-R_lambda_4_-197",
+        "staticDclassCallSites": 2
+      },
+      {
+        "symbol": "??R<lambda_5>@?1??main@@YAHHPEAPEAD@Z@QEBA@XZ",
+        "stem": "public_qr_column-R_lambda_5_-198",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "??R<lambda_6>@?N@??main@@YAHHPEAPEAD@Z@QEBA@XZ",
+        "stem": "public_qr_column-R_lambda_6_-199",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "?dtor$0@?0???R<lambda_6>@?N@??main@@YAHHPEAPEAD@Z@QEBA@XZ@4HA",
+        "stem": "public_qr_column-dtor_0-200",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "?dtor$1@?0???R<lambda_6>@?N@??main@@YAHHPEAPEAD@Z@QEBA@XZ@4HA",
+        "stem": "public_qr_column-dtor_1-201",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "?dtor$2@?0???R<lambda_6>@?N@??main@@YAHHPEAPEAD@Z@QEBA@XZ@4HA",
+        "stem": "public_qr_column-dtor_2-202",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "?dtor$3@?0???R<lambda_6>@?N@??main@@YAHHPEAPEAD@Z@QEBA@XZ@4HA",
+        "stem": "public_qr_column-dtor_3-203",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "?dtor$4@?0???R<lambda_6>@?N@??main@@YAHHPEAPEAD@Z@QEBA@XZ@4HA",
+        "stem": "public_qr_column-dtor_4-204",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "??R<lambda_7>@?N@??main@@YAHHPEAPEAD@Z@QEBA@XZ",
+        "stem": "public_qr_column-R_lambda_7_-205",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "?dtor$0@?0???R<lambda_7>@?N@??main@@YAHHPEAPEAD@Z@QEBA@XZ@4HA",
+        "stem": "public_qr_column-dtor_0-206",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "?dtor$1@?0???R<lambda_7>@?N@??main@@YAHHPEAPEAD@Z@QEBA@XZ@4HA",
+        "stem": "public_qr_column-dtor_1-207",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "?dtor$6@?0???R<lambda_7>@?N@??main@@YAHHPEAPEAD@Z@QEBA@XZ@4HA",
+        "stem": "public_qr_column-dtor_6-208",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "?dtor$7@?0???R<lambda_7>@?N@??main@@YAHHPEAPEAD@Z@QEBA@XZ@4HA",
+        "stem": "public_qr_column-dtor_7-209",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "?dtor$8@?0???R<lambda_7>@?N@??main@@YAHHPEAPEAD@Z@QEBA@XZ@4HA",
+        "stem": "public_qr_column-dtor_8-210",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "?dtor$9@?0???R<lambda_7>@?N@??main@@YAHHPEAPEAD@Z@QEBA@XZ@4HA",
+        "stem": "public_qr_column-dtor_9-211",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "?dtor$10@?0???R<lambda_7>@?N@??main@@YAHHPEAPEAD@Z@QEBA@XZ@4HA",
+        "stem": "public_qr_column-dtor_10-212",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "?dtor$11@?0???R<lambda_7>@?N@??main@@YAHHPEAPEAD@Z@QEBA@XZ@4HA",
+        "stem": "public_qr_column-dtor_11-213",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "?dtor$12@?0???R<lambda_7>@?N@??main@@YAHHPEAPEAD@Z@QEBA@XZ@4HA",
+        "stem": "public_qr_column-dtor_12-214",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "?dtor$13@?0???R<lambda_7>@?N@??main@@YAHHPEAPEAD@Z@QEBA@XZ@4HA",
+        "stem": "public_qr_column-dtor_13-215",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "?dtor$61@?0???R<lambda_7>@?N@??main@@YAHHPEAPEAD@Z@QEBA@XZ@4HA",
+        "stem": "public_qr_column-dtor_61-216",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "?column_norm@detail@linalg@kibo@@YANV?$MatrixView@$$CBN@23@_K1@Z",
+        "stem": "public_qr_column-column_norm-231",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "?column_project_four@detail@linalg@kibo@@YAXPEANPEBN_K12@Z",
+        "stem": "public_qr_column-column_project_four-232",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "?computeInPlace@?$ColPivHouseholderQR@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@H@Eigen@@IEAAXXZ",
+        "stem": "public_qr_column-computeInPlace-233",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "?factorize_qr@linalg@kibo@@YA?AV?$Result@VQrFactorView@linalg@kibo@@@12@V?$MatrixView@$$CBN@12@V?$MatrixView@N@12@V?$span@N$0?0@std@@V?$span@_K$0?0@7@V?$span@W4byte@std@@$0?0@7@UQrOptions@12@PEAUQrDiagnostics@12@@Z",
+        "stem": "public_qr_column-factorize_qr-235",
+        "staticDclassCallSites": 13
+      },
+      {
+        "symbol": "?householderQ@?$ColPivHouseholderQR@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@H@Eigen@@QEBA?AV?$HouseholderSequence@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@V?$Matrix@N$0?0$00$0A@$0?0$00@2@$00@2@XZ",
+        "stem": "public_qr_column-householderQ-236",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "?init@?$ColPivHouseholderQR@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@H@Eigen@@AEAAX_J0@Z",
+        "stem": "public_qr_column-init-237",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "?rank@?$ColPivHouseholderQR@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@H@Eigen@@QEBA_JXZ",
+        "stem": "public_qr_column-rank-260",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "?row_project_four_rows@detail@linalg@kibo@@YAXPEANPEBN_K12@Z",
+        "stem": "public_qr_column-row_project_four_rows-265",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "?row_update_checked@detail@linalg@kibo@@YA_NPEANPEBN_KN@Z",
+        "stem": "public_qr_column-row_update_checked-266",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "?solve_into@linalg@kibo@@YA?AUStatus@12@VQrFactorView@12@V?$span@$$CBN$0?0@std@@V?$span@N$0?0@6@V?$span@W4byte@std@@$0?0@6@@Z",
+        "stem": "public_qr_column-solve_into-292",
+        "staticDclassCallSites": 5
+      },
+      {
+        "symbol": "main",
+        "stem": "public_qr_column-main-295",
+        "staticDclassCallSites": 0
+      }
+    ]
+  },
+  "public_qr_row_best": {
+    "command": [
+      "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\dumpbin.exe",
+      "/disasm",
+      "C:\\Users\\owner\\Documents\\git\\kibo-linalg\\build\\qr-next\\public_qr_row_best.dir\\Release\\full-adaptive.obj"
+    ],
+    "files": {
+      "build\\qr-next\\public_qr_row_best.dir\\Release\\full-adaptive.obj": "78de04b31383d502807231a6e89b41ba17a77d891a32a3813f3687367ac958b5",
+      "build\\qr-next\\Release\\public_qr_row_best.exe": "ef4b2f4080988044c43cb9346d540613601ddc88a7331007490af42a87147fc6",
+      "build\\qr-next\\public_qr_row_best.asm": "e60e3240421923783283fe462764ad252c0ac264322f0d7dcead859100e0fa7a",
+      ".scratch\\qr-next\\full-adaptive.cpp": "082ae73aa1ee8b2820b0644f3f73fcb9c15178756a2e587ad7fddc03155e4fb8",
+      "include\\kibo\\qr.hpp": "04b1efdb4e2869ddc75ad6075874a8ab15d29051e79a24a19765fad1b50193ae",
+      "include\\kibo\\linalg.hpp": "f95f2c6fb82d430f307f07ceb4794091875b14a5838312714406cb8486ccd3cd",
+      "include\\kibo\\detail\\row_kernels.hpp": "19be54ecabe636b6f1bfb7b57eedad516462f5ac15664442e40ea21c44a5edad"
+    },
+    "dumpSha256": "39989445e5db913a74a46c374c15457aed4aad90997a3c6368642c5796629aa0",
+    "selected": [
+      {
+        "symbol": "??$?RV<lambda_6>@?N@??main@@YAHHPEAPEAD@Z@@<lambda_8>@?N@??main@@YAHHPEAPEAD@Z@QEBA?A_PAEAV<lambda_6>@?N@??1@YAHH0@Z@_K@Z",
+        "stem": "public_qr_row_best-__RV_lambda_6_-11",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "??$?RV<lambda_7>@?N@??main@@YAHHPEAPEAD@Z@@<lambda_8>@?N@??main@@YAHHPEAPEAD@Z@QEBA?A_PAEAV<lambda_7>@?N@??1@YAHH0@Z@_K@Z",
+        "stem": "public_qr_row_best-__RV_lambda_7_-12",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "??$_solve_impl@V?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@V12@@?$ColPivHouseholderQR@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@H@Eigen@@QEBAXAEBV?$Matrix@N$0?0$00$0A@$0?0$00@1@AEAV21@@Z",
+        "stem": "public_qr_row_best-__solve_impl-23",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "?dtor$0@?0???$_solve_impl@V?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@V12@@?$ColPivHouseholderQR@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@H@Eigen@@QEBAXAEBV?$Matrix@N$0?0$00$0A@$0?0$00@1@AEAV21@@Z@4HA",
+        "stem": "public_qr_row_best-dtor_0-24",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "??$applyHouseholderOnTheLeft@V?$Block@$$CBV?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@$0?0$00$0A@@Eigen@@@?$MatrixBase@V?$Block@V?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0$00$0A@@Eigen@@@Eigen@@QEAAXAEBV?$Block@$$CBV?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@$0?0$00$0A@@1@AEBNPEAN@Z",
+        "stem": "public_qr_row_best-_applyHouseholderOnTheLeft-27",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "??$applyHouseholderOnTheLeft@V?$Block@$$CBV?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@$0?0$00$0A@@Eigen@@@?$MatrixBase@V?$Block@V?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0$0?0$0A@@Eigen@@@Eigen@@QEAAXAEBV?$Block@$$CBV?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@$0?0$00$0A@@1@AEBNPEAN@Z",
+        "stem": "public_qr_row_best-_applyHouseholderOnTheLeft-28",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "?dtor$0@?0???$applyHouseholderOnTheLeft@V?$Block@$$CBV?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@$0?0$00$0A@@Eigen@@@?$MatrixBase@V?$Block@V?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0$0?0$0A@@Eigen@@@Eigen@@QEAAXAEBV?$Block@$$CBV?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@$0?0$00$0A@@1@AEBNPEAN@Z@4HA",
+        "stem": "public_qr_row_best-dtor_0-29",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "?dtor$3@?0???$applyHouseholderOnTheLeft@V?$Block@$$CBV?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@$0?0$00$0A@@Eigen@@@?$MatrixBase@V?$Block@V?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0$0?0$0A@@Eigen@@@Eigen@@QEAAXAEBV?$Block@$$CBV?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@$0?0$00$0A@@1@AEBNPEAN@Z@4HA",
+        "stem": "public_qr_row_best-dtor_3-30",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "??$applyHouseholderOnTheLeft@V?$VectorBlock@V?$Block@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@$0?0$00$00@Eigen@@$0?0@Eigen@@@?$MatrixBase@V?$Block@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@$0?0$0?0$0A@@Eigen@@@Eigen@@QEAAXAEBV?$VectorBlock@V?$Block@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@$0?0$00$00@Eigen@@$0?0@1@AEBNPEAN@Z",
+        "stem": "public_qr_row_best-_applyHouseholderOnTheLeft-31",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "??$apply_block_householder_on_the_left@V?$Block@V?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0$00$0A@@Eigen@@V?$Block@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@$0?0$0?0$0A@@2@V?$VectorBlock@$$CBV?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0@2@@internal@Eigen@@YAXAEAV?$Block@V?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0$00$0A@@1@AEBV?$Block@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@$0?0$0?0$0A@@1@AEBV?$VectorBlock@$$CBV?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0@1@_N@Z",
+        "stem": "public_qr_row_best-_apply_block_householder_on_the_left-34",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "?dtor$0@?0???$apply_block_householder_on_the_left@V?$Block@V?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0$00$0A@@Eigen@@V?$Block@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@$0?0$0?0$0A@@2@V?$VectorBlock@$$CBV?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0@2@@internal@Eigen@@YAXAEAV?$Block@V?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0$00$0A@@1@AEBV?$Block@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@$0?0$0?0$0A@@1@AEBV?$VectorBlock@$$CBV?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0@1@_N@Z@4HA",
+        "stem": "public_qr_row_best-dtor_0-35",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "?dtor$1@?0???$apply_block_householder_on_the_left@V?$Block@V?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0$00$0A@@Eigen@@V?$Block@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@$0?0$0?0$0A@@2@V?$VectorBlock@$$CBV?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0@2@@internal@Eigen@@YAXAEAV?$Block@V?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0$00$0A@@1@AEBV?$Block@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@$0?0$0?0$0A@@1@AEBV?$VectorBlock@$$CBV?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0@1@_N@Z@4HA",
+        "stem": "public_qr_row_best-dtor_1-36",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "?dtor$2@?0???$apply_block_householder_on_the_left@V?$Block@V?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0$00$0A@@Eigen@@V?$Block@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@$0?0$0?0$0A@@2@V?$VectorBlock@$$CBV?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0@2@@internal@Eigen@@YAXAEAV?$Block@V?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0$00$0A@@1@AEBV?$Block@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@$0?0$0?0$0A@@1@AEBV?$VectorBlock@$$CBV?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0@1@_N@Z@4HA",
+        "stem": "public_qr_row_best-dtor_2-37",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "?dtor$6@?0???$apply_block_householder_on_the_left@V?$Block@V?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0$00$0A@@Eigen@@V?$Block@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@$0?0$0?0$0A@@2@V?$VectorBlock@$$CBV?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0@2@@internal@Eigen@@YAXAEAV?$Block@V?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0$00$0A@@1@AEBV?$Block@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@$0?0$0?0$0A@@1@AEBV?$VectorBlock@$$CBV?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0@1@_N@Z@4HA",
+        "stem": "public_qr_row_best-dtor_6-38",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "?dtor$16@?0???$apply_block_householder_on_the_left@V?$Block@V?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0$00$0A@@Eigen@@V?$Block@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@$0?0$0?0$0A@@2@V?$VectorBlock@$$CBV?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0@2@@internal@Eigen@@YAXAEAV?$Block@V?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0$00$0A@@1@AEBV?$Block@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@$0?0$0?0$0A@@1@AEBV?$VectorBlock@$$CBV?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0@1@_N@Z@4HA",
+        "stem": "public_qr_row_best-dtor_16-39",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "?dtor$17@?0???$apply_block_householder_on_the_left@V?$Block@V?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0$00$0A@@Eigen@@V?$Block@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@$0?0$0?0$0A@@2@V?$VectorBlock@$$CBV?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0@2@@internal@Eigen@@YAXAEAV?$Block@V?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0$00$0A@@1@AEBV?$Block@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@$0?0$0?0$0A@@1@AEBV?$VectorBlock@$$CBV?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0@1@_N@Z@4HA",
+        "stem": "public_qr_row_best-dtor_17-40",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "?dtor$23@?0???$apply_block_householder_on_the_left@V?$Block@V?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0$00$0A@@Eigen@@V?$Block@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@$0?0$0?0$0A@@2@V?$VectorBlock@$$CBV?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0@2@@internal@Eigen@@YAXAEAV?$Block@V?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0$00$0A@@1@AEBV?$Block@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@$0?0$0?0$0A@@1@AEBV?$VectorBlock@$$CBV?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0@1@_N@Z@4HA",
+        "stem": "public_qr_row_best-dtor_23-41",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "?dtor$24@?0???$apply_block_householder_on_the_left@V?$Block@V?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0$00$0A@@Eigen@@V?$Block@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@$0?0$0?0$0A@@2@V?$VectorBlock@$$CBV?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0@2@@internal@Eigen@@YAXAEAV?$Block@V?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0$00$0A@@1@AEBV?$Block@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@$0?0$0?0$0A@@1@AEBV?$VectorBlock@$$CBV?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0@1@_N@Z@4HA",
+        "stem": "public_qr_row_best-dtor_24-42",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "??$apply_block_householder_on_the_left@V?$Block@V?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0$0?0$0A@@Eigen@@V?$Block@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@$0?0$0?0$0A@@2@V?$VectorBlock@$$CBV?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0@2@@internal@Eigen@@YAXAEAV?$Block@V?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0$0?0$0A@@1@AEBV?$Block@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@$0?0$0?0$0A@@1@AEBV?$VectorBlock@$$CBV?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0@1@_N@Z",
+        "stem": "public_qr_row_best-_apply_block_householder_on_the_left-43",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "?dtor$0@?0???$apply_block_householder_on_the_left@V?$Block@V?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0$0?0$0A@@Eigen@@V?$Block@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@$0?0$0?0$0A@@2@V?$VectorBlock@$$CBV?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0@2@@internal@Eigen@@YAXAEAV?$Block@V?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0$0?0$0A@@1@AEBV?$Block@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@$0?0$0?0$0A@@1@AEBV?$VectorBlock@$$CBV?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0@1@_N@Z@4HA",
+        "stem": "public_qr_row_best-dtor_0-44",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "?dtor$1@?0???$apply_block_householder_on_the_left@V?$Block@V?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0$0?0$0A@@Eigen@@V?$Block@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@$0?0$0?0$0A@@2@V?$VectorBlock@$$CBV?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0@2@@internal@Eigen@@YAXAEAV?$Block@V?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0$0?0$0A@@1@AEBV?$Block@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@$0?0$0?0$0A@@1@AEBV?$VectorBlock@$$CBV?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0@1@_N@Z@4HA",
+        "stem": "public_qr_row_best-dtor_1-45",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "?dtor$2@?0???$apply_block_householder_on_the_left@V?$Block@V?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0$0?0$0A@@Eigen@@V?$Block@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@$0?0$0?0$0A@@2@V?$VectorBlock@$$CBV?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0@2@@internal@Eigen@@YAXAEAV?$Block@V?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0$0?0$0A@@1@AEBV?$Block@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@$0?0$0?0$0A@@1@AEBV?$VectorBlock@$$CBV?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0@1@_N@Z@4HA",
+        "stem": "public_qr_row_best-dtor_2-46",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "?dtor$6@?0???$apply_block_householder_on_the_left@V?$Block@V?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0$0?0$0A@@Eigen@@V?$Block@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@$0?0$0?0$0A@@2@V?$VectorBlock@$$CBV?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0@2@@internal@Eigen@@YAXAEAV?$Block@V?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0$0?0$0A@@1@AEBV?$Block@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@$0?0$0?0$0A@@1@AEBV?$VectorBlock@$$CBV?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0@1@_N@Z@4HA",
+        "stem": "public_qr_row_best-dtor_6-47",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "?dtor$14@?0???$apply_block_householder_on_the_left@V?$Block@V?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0$0?0$0A@@Eigen@@V?$Block@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@$0?0$0?0$0A@@2@V?$VectorBlock@$$CBV?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0@2@@internal@Eigen@@YAXAEAV?$Block@V?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0$0?0$0A@@1@AEBV?$Block@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@$0?0$0?0$0A@@1@AEBV?$VectorBlock@$$CBV?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0@1@_N@Z@4HA",
+        "stem": "public_qr_row_best-dtor_14-48",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "?dtor$15@?0???$apply_block_householder_on_the_left@V?$Block@V?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0$0?0$0A@@Eigen@@V?$Block@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@$0?0$0?0$0A@@2@V?$VectorBlock@$$CBV?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0@2@@internal@Eigen@@YAXAEAV?$Block@V?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0$0?0$0A@@1@AEBV?$Block@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@$0?0$0?0$0A@@1@AEBV?$VectorBlock@$$CBV?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0@1@_N@Z@4HA",
+        "stem": "public_qr_row_best-dtor_15-49",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "?dtor$21@?0???$apply_block_householder_on_the_left@V?$Block@V?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0$0?0$0A@@Eigen@@V?$Block@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@$0?0$0?0$0A@@2@V?$VectorBlock@$$CBV?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0@2@@internal@Eigen@@YAXAEAV?$Block@V?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0$0?0$0A@@1@AEBV?$Block@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@$0?0$0?0$0A@@1@AEBV?$VectorBlock@$$CBV?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0@1@_N@Z@4HA",
+        "stem": "public_qr_row_best-dtor_21-50",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "?dtor$22@?0???$apply_block_householder_on_the_left@V?$Block@V?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0$0?0$0A@@Eigen@@V?$Block@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@$0?0$0?0$0A@@2@V?$VectorBlock@$$CBV?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0@2@@internal@Eigen@@YAXAEAV?$Block@V?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0$0?0$0A@@1@AEBV?$Block@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@$0?0$0?0$0A@@1@AEBV?$VectorBlock@$$CBV?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0@1@_N@Z@4HA",
+        "stem": "public_qr_row_best-dtor_22-51",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "??$compute@V?$Matrix@N$0?0$0?0$00$0?0$0?0@Eigen@@@?$ColPivHouseholderQR@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@H@Eigen@@QEAAAEAV01@AEBU?$EigenBase@V?$Matrix@N$0?0$0?0$00$0?0$0?0@Eigen@@@1@@Z",
+        "stem": "public_qr_row_best-_compute-53",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "??$finite@$$CBN@detail@linalg@kibo@@YA_NV?$MatrixView@$$CBN@12@@Z",
+        "stem": "public_qr_row_best-_finite-69",
+        "staticDclassCallSites": 1
+      },
+      {
+        "symbol": "??$isfinite@N@numext@Eigen@@YA_NAEBN@Z",
+        "stem": "public_qr_row_best-_isfinite-74",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "??$make_block_householder_triangular_factor@V?$Matrix@N$0?0$0?0$00$0?0$0?0@Eigen@@V?$Block@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@$0?0$0?0$0A@@2@V?$Block@$$CBV?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0$00$0A@@2@@internal@Eigen@@YAXAEAV?$Matrix@N$0?0$0?0$00$0?0$0?0@1@AEBV?$Block@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@$0?0$0?0$0A@@1@AEBV?$Block@$$CBV?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0$00$0A@@1@@Z",
+        "stem": "public_qr_row_best-_make_block_householder_triangular_factor-83",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "??$make_block_householder_triangular_factor@V?$Matrix@N$0?0$0?0$00$0?0$0?0@Eigen@@V?$Block@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@$0?0$0?0$0A@@2@V?$VectorBlock@$$CBV?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0@2@@internal@Eigen@@YAXAEAV?$Matrix@N$0?0$0?0$00$0?0$0?0@1@AEBV?$Block@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@$0?0$0?0$0A@@1@AEBV?$VectorBlock@$$CBV?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0@1@@Z",
+        "stem": "public_qr_row_best-_make_block_householder_triangular_factor-84",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "??0?$ColPivHouseholderQR@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@H@Eigen@@QEAA@_J0@Z",
+        "stem": "public_qr_row_best-0__ColPivHouseholderQR-147",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "?dtor$0@?0???0?$ColPivHouseholderQR@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@H@Eigen@@QEAA@_J0@Z@4HA",
+        "stem": "public_qr_row_best-dtor_0-148",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "?dtor$1@?0???0?$ColPivHouseholderQR@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@H@Eigen@@QEAA@_J0@Z@4HA",
+        "stem": "public_qr_row_best-dtor_1-149",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "?dtor$2@?0???0?$ColPivHouseholderQR@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@H@Eigen@@QEAA@_J0@Z@4HA",
+        "stem": "public_qr_row_best-dtor_2-150",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "?dtor$3@?0???0?$ColPivHouseholderQR@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@H@Eigen@@QEAA@_J0@Z@4HA",
+        "stem": "public_qr_row_best-dtor_3-151",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "?dtor$4@?0???0?$ColPivHouseholderQR@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@H@Eigen@@QEAA@_J0@Z@4HA",
+        "stem": "public_qr_row_best-dtor_4-152",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "?dtor$5@?0???0?$ColPivHouseholderQR@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@H@Eigen@@QEAA@_J0@Z@4HA",
+        "stem": "public_qr_row_best-dtor_5-153",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "?dtor$6@?0???0?$ColPivHouseholderQR@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@H@Eigen@@QEAA@_J0@Z@4HA",
+        "stem": "public_qr_row_best-dtor_6-154",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "?dtor$7@?0???0?$ColPivHouseholderQR@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@H@Eigen@@QEAA@_J0@Z@4HA",
+        "stem": "public_qr_row_best-dtor_7-155",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "??1?$ColPivHouseholderQR@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@H@Eigen@@QEAA@XZ",
+        "stem": "public_qr_row_best-1__ColPivHouseholderQR-165",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "??R<lambda_1>@?1??input_hash@@YA_KAEBV?$Matrix@N$0?0$0?0$00$0?0$0?0@Eigen@@AEBV?$Matrix@N$0?0$00$0A@$0?0$00@3@@Z@QEBA@_K@Z",
+        "stem": "public_qr_row_best-R_lambda_1_-193",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "??R<lambda_1>@?1??main@@YAHHPEAPEAD@Z@QEBA@XZ",
+        "stem": "public_qr_row_best-R_lambda_1_-194",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "??R<lambda_2>@?1??main@@YAHHPEAPEAD@Z@QEBA@XZ",
+        "stem": "public_qr_row_best-R_lambda_2_-195",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "??R<lambda_3>@?1??main@@YAHHPEAPEAD@Z@QEBA@XZ",
+        "stem": "public_qr_row_best-R_lambda_3_-196",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "??R<lambda_4>@?1??main@@YAHHPEAPEAD@Z@QEBA@XZ",
+        "stem": "public_qr_row_best-R_lambda_4_-197",
+        "staticDclassCallSites": 2
+      },
+      {
+        "symbol": "??R<lambda_5>@?1??main@@YAHHPEAPEAD@Z@QEBA@XZ",
+        "stem": "public_qr_row_best-R_lambda_5_-198",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "??R<lambda_6>@?N@??main@@YAHHPEAPEAD@Z@QEBA@XZ",
+        "stem": "public_qr_row_best-R_lambda_6_-199",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "?dtor$0@?0???R<lambda_6>@?N@??main@@YAHHPEAPEAD@Z@QEBA@XZ@4HA",
+        "stem": "public_qr_row_best-dtor_0-200",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "?dtor$1@?0???R<lambda_6>@?N@??main@@YAHHPEAPEAD@Z@QEBA@XZ@4HA",
+        "stem": "public_qr_row_best-dtor_1-201",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "?dtor$2@?0???R<lambda_6>@?N@??main@@YAHHPEAPEAD@Z@QEBA@XZ@4HA",
+        "stem": "public_qr_row_best-dtor_2-202",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "?dtor$3@?0???R<lambda_6>@?N@??main@@YAHHPEAPEAD@Z@QEBA@XZ@4HA",
+        "stem": "public_qr_row_best-dtor_3-203",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "?dtor$4@?0???R<lambda_6>@?N@??main@@YAHHPEAPEAD@Z@QEBA@XZ@4HA",
+        "stem": "public_qr_row_best-dtor_4-204",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "??R<lambda_7>@?N@??main@@YAHHPEAPEAD@Z@QEBA@XZ",
+        "stem": "public_qr_row_best-R_lambda_7_-205",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "?dtor$0@?0???R<lambda_7>@?N@??main@@YAHHPEAPEAD@Z@QEBA@XZ@4HA",
+        "stem": "public_qr_row_best-dtor_0-206",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "?dtor$1@?0???R<lambda_7>@?N@??main@@YAHHPEAPEAD@Z@QEBA@XZ@4HA",
+        "stem": "public_qr_row_best-dtor_1-207",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "?dtor$6@?0???R<lambda_7>@?N@??main@@YAHHPEAPEAD@Z@QEBA@XZ@4HA",
+        "stem": "public_qr_row_best-dtor_6-208",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "?dtor$7@?0???R<lambda_7>@?N@??main@@YAHHPEAPEAD@Z@QEBA@XZ@4HA",
+        "stem": "public_qr_row_best-dtor_7-209",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "?dtor$8@?0???R<lambda_7>@?N@??main@@YAHHPEAPEAD@Z@QEBA@XZ@4HA",
+        "stem": "public_qr_row_best-dtor_8-210",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "?dtor$9@?0???R<lambda_7>@?N@??main@@YAHHPEAPEAD@Z@QEBA@XZ@4HA",
+        "stem": "public_qr_row_best-dtor_9-211",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "?dtor$10@?0???R<lambda_7>@?N@??main@@YAHHPEAPEAD@Z@QEBA@XZ@4HA",
+        "stem": "public_qr_row_best-dtor_10-212",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "?dtor$11@?0???R<lambda_7>@?N@??main@@YAHHPEAPEAD@Z@QEBA@XZ@4HA",
+        "stem": "public_qr_row_best-dtor_11-213",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "?dtor$12@?0???R<lambda_7>@?N@??main@@YAHHPEAPEAD@Z@QEBA@XZ@4HA",
+        "stem": "public_qr_row_best-dtor_12-214",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "?dtor$13@?0???R<lambda_7>@?N@??main@@YAHHPEAPEAD@Z@QEBA@XZ@4HA",
+        "stem": "public_qr_row_best-dtor_13-215",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "?dtor$61@?0???R<lambda_7>@?N@??main@@YAHHPEAPEAD@Z@QEBA@XZ@4HA",
+        "stem": "public_qr_row_best-dtor_61-216",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "?column_norm@detail@linalg@kibo@@YANV?$MatrixView@$$CBN@23@_K1@Z",
+        "stem": "public_qr_row_best-column_norm-231",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "?column_project_four@detail@linalg@kibo@@YAXPEANPEBN_K12@Z",
+        "stem": "public_qr_row_best-column_project_four-232",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "?computeInPlace@?$ColPivHouseholderQR@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@H@Eigen@@IEAAXXZ",
+        "stem": "public_qr_row_best-computeInPlace-233",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "?factorize_qr@linalg@kibo@@YA?AV?$Result@VQrFactorView@linalg@kibo@@@12@V?$MatrixView@$$CBN@12@V?$MatrixView@N@12@V?$span@N$0?0@std@@V?$span@_K$0?0@7@V?$span@W4byte@std@@$0?0@7@UQrOptions@12@PEAUQrDiagnostics@12@@Z",
+        "stem": "public_qr_row_best-factorize_qr-235",
+        "staticDclassCallSites": 13
+      },
+      {
+        "symbol": "?householderQ@?$ColPivHouseholderQR@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@H@Eigen@@QEBA?AV?$HouseholderSequence@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@V?$Matrix@N$0?0$00$0A@$0?0$00@2@$00@2@XZ",
+        "stem": "public_qr_row_best-householderQ-236",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "?init@?$ColPivHouseholderQR@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@H@Eigen@@AEAAX_J0@Z",
+        "stem": "public_qr_row_best-init-237",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "?rank@?$ColPivHouseholderQR@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@H@Eigen@@QEBA_JXZ",
+        "stem": "public_qr_row_best-rank-260",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "?row_project_four_rows@detail@linalg@kibo@@YAXPEANPEBN_K12@Z",
+        "stem": "public_qr_row_best-row_project_four_rows-265",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "?row_update_checked@detail@linalg@kibo@@YA_NPEANPEBN_KN@Z",
+        "stem": "public_qr_row_best-row_update_checked-266",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "?solve_into@linalg@kibo@@YA?AUStatus@12@VQrFactorView@12@V?$span@$$CBN$0?0@std@@V?$span@N$0?0@6@V?$span@W4byte@std@@$0?0@6@@Z",
+        "stem": "public_qr_row_best-solve_into-292",
+        "staticDclassCallSites": 5
+      },
+      {
+        "symbol": "main",
+        "stem": "public_qr_row_best-main-295",
+        "staticDclassCallSites": 0
+      }
+    ]
+  },
+  "norm_column_column": {
+    "command": [
+      "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\dumpbin.exe",
+      "/disasm",
+      "C:\\Users\\owner\\Documents\\git\\kibo-linalg\\build\\qr-next\\norm_column_column.dir\\Release\\full-adaptive.obj"
+    ],
+    "files": {
+      "build\\qr-next\\norm_column_column.dir\\Release\\full-adaptive.obj": "252d29752fe79a75d290e73594a9dfc9989ca9387b315e0adb2d9fbefac72adf",
+      "build\\qr-next\\Release\\norm_column_column.exe": "bc1510927e456cc6afa0a812c63aa073a9d39304a866dbf41d9e5de0d42112cf",
+      "build\\qr-next\\norm_column_column.asm": "470d72d0eb29a053af28f0816bc564d96430333a41fb389ffdff32f42ca50b39",
+      ".scratch\\qr-next\\full-adaptive.cpp": "082ae73aa1ee8b2820b0644f3f73fcb9c15178756a2e587ad7fddc03155e4fb8",
+      ".scratch\\qr-next\\variants\\norm_column\\kibo\\qr.hpp": "7b8e4f162e7d2cf859d02556a6b4f307608179d8031f698a69a4b09cc5ec0816",
+      ".scratch\\qr-next\\variants\\norm_column\\kibo\\linalg.hpp": "f95f2c6fb82d430f307f07ceb4794091875b14a5838312714406cb8486ccd3cd",
+      ".scratch\\qr-next\\variants\\norm_column\\kibo\\detail\\row_kernels.hpp": "19be54ecabe636b6f1bfb7b57eedad516462f5ac15664442e40ea21c44a5edad"
+    },
+    "dumpSha256": "08f42c458e519e15d2d331330ec91631be4ab06d2ff049fba6e01413a0c3f53b",
+    "selected": [
+      {
+        "symbol": "??$?RV<lambda_6>@?N@??main@@YAHHPEAPEAD@Z@@<lambda_8>@?N@??main@@YAHHPEAPEAD@Z@QEBA?A_PAEAV<lambda_6>@?N@??1@YAHH0@Z@_K@Z",
+        "stem": "norm_column_column-__RV_lambda_6_-11",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "??$?RV<lambda_7>@?N@??main@@YAHHPEAPEAD@Z@@<lambda_8>@?N@??main@@YAHHPEAPEAD@Z@QEBA?A_PAEAV<lambda_7>@?N@??1@YAHH0@Z@_K@Z",
+        "stem": "norm_column_column-__RV_lambda_7_-12",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "??$_solve_impl@V?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@V12@@?$ColPivHouseholderQR@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@H@Eigen@@QEBAXAEBV?$Matrix@N$0?0$00$0A@$0?0$00@1@AEAV21@@Z",
+        "stem": "norm_column_column-__solve_impl-23",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "?dtor$0@?0???$_solve_impl@V?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@V12@@?$ColPivHouseholderQR@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@H@Eigen@@QEBAXAEBV?$Matrix@N$0?0$00$0A@$0?0$00@1@AEAV21@@Z@4HA",
+        "stem": "norm_column_column-dtor_0-24",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "??$applyHouseholderOnTheLeft@V?$Block@$$CBV?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@$0?0$00$0A@@Eigen@@@?$MatrixBase@V?$Block@V?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0$00$0A@@Eigen@@@Eigen@@QEAAXAEBV?$Block@$$CBV?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@$0?0$00$0A@@1@AEBNPEAN@Z",
+        "stem": "norm_column_column-_applyHouseholderOnTheLeft-27",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "??$applyHouseholderOnTheLeft@V?$Block@$$CBV?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@$0?0$00$0A@@Eigen@@@?$MatrixBase@V?$Block@V?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0$0?0$0A@@Eigen@@@Eigen@@QEAAXAEBV?$Block@$$CBV?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@$0?0$00$0A@@1@AEBNPEAN@Z",
+        "stem": "norm_column_column-_applyHouseholderOnTheLeft-28",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "?dtor$0@?0???$applyHouseholderOnTheLeft@V?$Block@$$CBV?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@$0?0$00$0A@@Eigen@@@?$MatrixBase@V?$Block@V?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0$0?0$0A@@Eigen@@@Eigen@@QEAAXAEBV?$Block@$$CBV?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@$0?0$00$0A@@1@AEBNPEAN@Z@4HA",
+        "stem": "norm_column_column-dtor_0-29",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "?dtor$3@?0???$applyHouseholderOnTheLeft@V?$Block@$$CBV?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@$0?0$00$0A@@Eigen@@@?$MatrixBase@V?$Block@V?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0$0?0$0A@@Eigen@@@Eigen@@QEAAXAEBV?$Block@$$CBV?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@$0?0$00$0A@@1@AEBNPEAN@Z@4HA",
+        "stem": "norm_column_column-dtor_3-30",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "??$applyHouseholderOnTheLeft@V?$VectorBlock@V?$Block@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@$0?0$00$00@Eigen@@$0?0@Eigen@@@?$MatrixBase@V?$Block@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@$0?0$0?0$0A@@Eigen@@@Eigen@@QEAAXAEBV?$VectorBlock@V?$Block@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@$0?0$00$00@Eigen@@$0?0@1@AEBNPEAN@Z",
+        "stem": "norm_column_column-_applyHouseholderOnTheLeft-31",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "??$apply_block_householder_on_the_left@V?$Block@V?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0$00$0A@@Eigen@@V?$Block@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@$0?0$0?0$0A@@2@V?$VectorBlock@$$CBV?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0@2@@internal@Eigen@@YAXAEAV?$Block@V?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0$00$0A@@1@AEBV?$Block@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@$0?0$0?0$0A@@1@AEBV?$VectorBlock@$$CBV?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0@1@_N@Z",
+        "stem": "norm_column_column-_apply_block_householder_on_the_left-34",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "?dtor$0@?0???$apply_block_householder_on_the_left@V?$Block@V?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0$00$0A@@Eigen@@V?$Block@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@$0?0$0?0$0A@@2@V?$VectorBlock@$$CBV?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0@2@@internal@Eigen@@YAXAEAV?$Block@V?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0$00$0A@@1@AEBV?$Block@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@$0?0$0?0$0A@@1@AEBV?$VectorBlock@$$CBV?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0@1@_N@Z@4HA",
+        "stem": "norm_column_column-dtor_0-35",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "?dtor$1@?0???$apply_block_householder_on_the_left@V?$Block@V?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0$00$0A@@Eigen@@V?$Block@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@$0?0$0?0$0A@@2@V?$VectorBlock@$$CBV?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0@2@@internal@Eigen@@YAXAEAV?$Block@V?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0$00$0A@@1@AEBV?$Block@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@$0?0$0?0$0A@@1@AEBV?$VectorBlock@$$CBV?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0@1@_N@Z@4HA",
+        "stem": "norm_column_column-dtor_1-36",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "?dtor$2@?0???$apply_block_householder_on_the_left@V?$Block@V?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0$00$0A@@Eigen@@V?$Block@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@$0?0$0?0$0A@@2@V?$VectorBlock@$$CBV?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0@2@@internal@Eigen@@YAXAEAV?$Block@V?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0$00$0A@@1@AEBV?$Block@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@$0?0$0?0$0A@@1@AEBV?$VectorBlock@$$CBV?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0@1@_N@Z@4HA",
+        "stem": "norm_column_column-dtor_2-37",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "?dtor$6@?0???$apply_block_householder_on_the_left@V?$Block@V?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0$00$0A@@Eigen@@V?$Block@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@$0?0$0?0$0A@@2@V?$VectorBlock@$$CBV?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0@2@@internal@Eigen@@YAXAEAV?$Block@V?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0$00$0A@@1@AEBV?$Block@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@$0?0$0?0$0A@@1@AEBV?$VectorBlock@$$CBV?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0@1@_N@Z@4HA",
+        "stem": "norm_column_column-dtor_6-38",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "?dtor$16@?0???$apply_block_householder_on_the_left@V?$Block@V?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0$00$0A@@Eigen@@V?$Block@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@$0?0$0?0$0A@@2@V?$VectorBlock@$$CBV?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0@2@@internal@Eigen@@YAXAEAV?$Block@V?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0$00$0A@@1@AEBV?$Block@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@$0?0$0?0$0A@@1@AEBV?$VectorBlock@$$CBV?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0@1@_N@Z@4HA",
+        "stem": "norm_column_column-dtor_16-39",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "?dtor$17@?0???$apply_block_householder_on_the_left@V?$Block@V?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0$00$0A@@Eigen@@V?$Block@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@$0?0$0?0$0A@@2@V?$VectorBlock@$$CBV?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0@2@@internal@Eigen@@YAXAEAV?$Block@V?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0$00$0A@@1@AEBV?$Block@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@$0?0$0?0$0A@@1@AEBV?$VectorBlock@$$CBV?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0@1@_N@Z@4HA",
+        "stem": "norm_column_column-dtor_17-40",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "?dtor$23@?0???$apply_block_householder_on_the_left@V?$Block@V?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0$00$0A@@Eigen@@V?$Block@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@$0?0$0?0$0A@@2@V?$VectorBlock@$$CBV?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0@2@@internal@Eigen@@YAXAEAV?$Block@V?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0$00$0A@@1@AEBV?$Block@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@$0?0$0?0$0A@@1@AEBV?$VectorBlock@$$CBV?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0@1@_N@Z@4HA",
+        "stem": "norm_column_column-dtor_23-41",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "?dtor$24@?0???$apply_block_householder_on_the_left@V?$Block@V?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0$00$0A@@Eigen@@V?$Block@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@$0?0$0?0$0A@@2@V?$VectorBlock@$$CBV?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0@2@@internal@Eigen@@YAXAEAV?$Block@V?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0$00$0A@@1@AEBV?$Block@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@$0?0$0?0$0A@@1@AEBV?$VectorBlock@$$CBV?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0@1@_N@Z@4HA",
+        "stem": "norm_column_column-dtor_24-42",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "??$apply_block_householder_on_the_left@V?$Block@V?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0$0?0$0A@@Eigen@@V?$Block@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@$0?0$0?0$0A@@2@V?$VectorBlock@$$CBV?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0@2@@internal@Eigen@@YAXAEAV?$Block@V?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0$0?0$0A@@1@AEBV?$Block@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@$0?0$0?0$0A@@1@AEBV?$VectorBlock@$$CBV?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0@1@_N@Z",
+        "stem": "norm_column_column-_apply_block_householder_on_the_left-43",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "?dtor$0@?0???$apply_block_householder_on_the_left@V?$Block@V?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0$0?0$0A@@Eigen@@V?$Block@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@$0?0$0?0$0A@@2@V?$VectorBlock@$$CBV?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0@2@@internal@Eigen@@YAXAEAV?$Block@V?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0$0?0$0A@@1@AEBV?$Block@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@$0?0$0?0$0A@@1@AEBV?$VectorBlock@$$CBV?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0@1@_N@Z@4HA",
+        "stem": "norm_column_column-dtor_0-44",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "?dtor$1@?0???$apply_block_householder_on_the_left@V?$Block@V?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0$0?0$0A@@Eigen@@V?$Block@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@$0?0$0?0$0A@@2@V?$VectorBlock@$$CBV?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0@2@@internal@Eigen@@YAXAEAV?$Block@V?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0$0?0$0A@@1@AEBV?$Block@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@$0?0$0?0$0A@@1@AEBV?$VectorBlock@$$CBV?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0@1@_N@Z@4HA",
+        "stem": "norm_column_column-dtor_1-45",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "?dtor$2@?0???$apply_block_householder_on_the_left@V?$Block@V?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0$0?0$0A@@Eigen@@V?$Block@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@$0?0$0?0$0A@@2@V?$VectorBlock@$$CBV?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0@2@@internal@Eigen@@YAXAEAV?$Block@V?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0$0?0$0A@@1@AEBV?$Block@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@$0?0$0?0$0A@@1@AEBV?$VectorBlock@$$CBV?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0@1@_N@Z@4HA",
+        "stem": "norm_column_column-dtor_2-46",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "?dtor$6@?0???$apply_block_householder_on_the_left@V?$Block@V?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0$0?0$0A@@Eigen@@V?$Block@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@$0?0$0?0$0A@@2@V?$VectorBlock@$$CBV?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0@2@@internal@Eigen@@YAXAEAV?$Block@V?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0$0?0$0A@@1@AEBV?$Block@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@$0?0$0?0$0A@@1@AEBV?$VectorBlock@$$CBV?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0@1@_N@Z@4HA",
+        "stem": "norm_column_column-dtor_6-47",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "?dtor$14@?0???$apply_block_householder_on_the_left@V?$Block@V?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0$0?0$0A@@Eigen@@V?$Block@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@$0?0$0?0$0A@@2@V?$VectorBlock@$$CBV?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0@2@@internal@Eigen@@YAXAEAV?$Block@V?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0$0?0$0A@@1@AEBV?$Block@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@$0?0$0?0$0A@@1@AEBV?$VectorBlock@$$CBV?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0@1@_N@Z@4HA",
+        "stem": "norm_column_column-dtor_14-48",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "?dtor$15@?0???$apply_block_householder_on_the_left@V?$Block@V?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0$0?0$0A@@Eigen@@V?$Block@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@$0?0$0?0$0A@@2@V?$VectorBlock@$$CBV?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0@2@@internal@Eigen@@YAXAEAV?$Block@V?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0$0?0$0A@@1@AEBV?$Block@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@$0?0$0?0$0A@@1@AEBV?$VectorBlock@$$CBV?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0@1@_N@Z@4HA",
+        "stem": "norm_column_column-dtor_15-49",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "?dtor$21@?0???$apply_block_householder_on_the_left@V?$Block@V?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0$0?0$0A@@Eigen@@V?$Block@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@$0?0$0?0$0A@@2@V?$VectorBlock@$$CBV?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0@2@@internal@Eigen@@YAXAEAV?$Block@V?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0$0?0$0A@@1@AEBV?$Block@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@$0?0$0?0$0A@@1@AEBV?$VectorBlock@$$CBV?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0@1@_N@Z@4HA",
+        "stem": "norm_column_column-dtor_21-50",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "?dtor$22@?0???$apply_block_householder_on_the_left@V?$Block@V?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0$0?0$0A@@Eigen@@V?$Block@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@$0?0$0?0$0A@@2@V?$VectorBlock@$$CBV?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0@2@@internal@Eigen@@YAXAEAV?$Block@V?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0$0?0$0A@@1@AEBV?$Block@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@$0?0$0?0$0A@@1@AEBV?$VectorBlock@$$CBV?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0@1@_N@Z@4HA",
+        "stem": "norm_column_column-dtor_22-51",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "??$compute@V?$Matrix@N$0?0$0?0$00$0?0$0?0@Eigen@@@?$ColPivHouseholderQR@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@H@Eigen@@QEAAAEAV01@AEBU?$EigenBase@V?$Matrix@N$0?0$0?0$00$0?0$0?0@Eigen@@@1@@Z",
+        "stem": "norm_column_column-_compute-53",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "??$finite@$$CBN@detail@linalg@kibo@@YA_NV?$MatrixView@$$CBN@12@@Z",
+        "stem": "norm_column_column-_finite-69",
+        "staticDclassCallSites": 1
+      },
+      {
+        "symbol": "??$isfinite@N@numext@Eigen@@YA_NAEBN@Z",
+        "stem": "norm_column_column-_isfinite-74",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "??$make_block_householder_triangular_factor@V?$Matrix@N$0?0$0?0$00$0?0$0?0@Eigen@@V?$Block@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@$0?0$0?0$0A@@2@V?$Block@$$CBV?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0$00$0A@@2@@internal@Eigen@@YAXAEAV?$Matrix@N$0?0$0?0$00$0?0$0?0@1@AEBV?$Block@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@$0?0$0?0$0A@@1@AEBV?$Block@$$CBV?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0$00$0A@@1@@Z",
+        "stem": "norm_column_column-_make_block_householder_triangular_factor-83",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "??$make_block_householder_triangular_factor@V?$Matrix@N$0?0$0?0$00$0?0$0?0@Eigen@@V?$Block@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@$0?0$0?0$0A@@2@V?$VectorBlock@$$CBV?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0@2@@internal@Eigen@@YAXAEAV?$Matrix@N$0?0$0?0$00$0?0$0?0@1@AEBV?$Block@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@$0?0$0?0$0A@@1@AEBV?$VectorBlock@$$CBV?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0@1@@Z",
+        "stem": "norm_column_column-_make_block_householder_triangular_factor-84",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "??0?$ColPivHouseholderQR@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@H@Eigen@@QEAA@_J0@Z",
+        "stem": "norm_column_column-0__ColPivHouseholderQR-147",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "?dtor$0@?0???0?$ColPivHouseholderQR@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@H@Eigen@@QEAA@_J0@Z@4HA",
+        "stem": "norm_column_column-dtor_0-148",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "?dtor$1@?0???0?$ColPivHouseholderQR@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@H@Eigen@@QEAA@_J0@Z@4HA",
+        "stem": "norm_column_column-dtor_1-149",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "?dtor$2@?0???0?$ColPivHouseholderQR@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@H@Eigen@@QEAA@_J0@Z@4HA",
+        "stem": "norm_column_column-dtor_2-150",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "?dtor$3@?0???0?$ColPivHouseholderQR@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@H@Eigen@@QEAA@_J0@Z@4HA",
+        "stem": "norm_column_column-dtor_3-151",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "?dtor$4@?0???0?$ColPivHouseholderQR@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@H@Eigen@@QEAA@_J0@Z@4HA",
+        "stem": "norm_column_column-dtor_4-152",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "?dtor$5@?0???0?$ColPivHouseholderQR@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@H@Eigen@@QEAA@_J0@Z@4HA",
+        "stem": "norm_column_column-dtor_5-153",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "?dtor$6@?0???0?$ColPivHouseholderQR@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@H@Eigen@@QEAA@_J0@Z@4HA",
+        "stem": "norm_column_column-dtor_6-154",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "?dtor$7@?0???0?$ColPivHouseholderQR@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@H@Eigen@@QEAA@_J0@Z@4HA",
+        "stem": "norm_column_column-dtor_7-155",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "??1?$ColPivHouseholderQR@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@H@Eigen@@QEAA@XZ",
+        "stem": "norm_column_column-1__ColPivHouseholderQR-165",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "??R<lambda_1>@?1??input_hash@@YA_KAEBV?$Matrix@N$0?0$0?0$00$0?0$0?0@Eigen@@AEBV?$Matrix@N$0?0$00$0A@$0?0$00@3@@Z@QEBA@_K@Z",
+        "stem": "norm_column_column-R_lambda_1_-193",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "??R<lambda_1>@?1??main@@YAHHPEAPEAD@Z@QEBA@XZ",
+        "stem": "norm_column_column-R_lambda_1_-194",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "??R<lambda_2>@?1??main@@YAHHPEAPEAD@Z@QEBA@XZ",
+        "stem": "norm_column_column-R_lambda_2_-195",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "??R<lambda_3>@?1??main@@YAHHPEAPEAD@Z@QEBA@XZ",
+        "stem": "norm_column_column-R_lambda_3_-196",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "??R<lambda_4>@?1??main@@YAHHPEAPEAD@Z@QEBA@XZ",
+        "stem": "norm_column_column-R_lambda_4_-197",
+        "staticDclassCallSites": 2
+      },
+      {
+        "symbol": "??R<lambda_5>@?1??main@@YAHHPEAPEAD@Z@QEBA@XZ",
+        "stem": "norm_column_column-R_lambda_5_-198",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "??R<lambda_6>@?N@??main@@YAHHPEAPEAD@Z@QEBA@XZ",
+        "stem": "norm_column_column-R_lambda_6_-199",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "?dtor$0@?0???R<lambda_6>@?N@??main@@YAHHPEAPEAD@Z@QEBA@XZ@4HA",
+        "stem": "norm_column_column-dtor_0-200",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "?dtor$1@?0???R<lambda_6>@?N@??main@@YAHHPEAPEAD@Z@QEBA@XZ@4HA",
+        "stem": "norm_column_column-dtor_1-201",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "?dtor$2@?0???R<lambda_6>@?N@??main@@YAHHPEAPEAD@Z@QEBA@XZ@4HA",
+        "stem": "norm_column_column-dtor_2-202",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "?dtor$3@?0???R<lambda_6>@?N@??main@@YAHHPEAPEAD@Z@QEBA@XZ@4HA",
+        "stem": "norm_column_column-dtor_3-203",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "?dtor$4@?0???R<lambda_6>@?N@??main@@YAHHPEAPEAD@Z@QEBA@XZ@4HA",
+        "stem": "norm_column_column-dtor_4-204",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "??R<lambda_7>@?N@??main@@YAHHPEAPEAD@Z@QEBA@XZ",
+        "stem": "norm_column_column-R_lambda_7_-205",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "?dtor$0@?0???R<lambda_7>@?N@??main@@YAHHPEAPEAD@Z@QEBA@XZ@4HA",
+        "stem": "norm_column_column-dtor_0-206",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "?dtor$1@?0???R<lambda_7>@?N@??main@@YAHHPEAPEAD@Z@QEBA@XZ@4HA",
+        "stem": "norm_column_column-dtor_1-207",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "?dtor$6@?0???R<lambda_7>@?N@??main@@YAHHPEAPEAD@Z@QEBA@XZ@4HA",
+        "stem": "norm_column_column-dtor_6-208",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "?dtor$7@?0???R<lambda_7>@?N@??main@@YAHHPEAPEAD@Z@QEBA@XZ@4HA",
+        "stem": "norm_column_column-dtor_7-209",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "?dtor$8@?0???R<lambda_7>@?N@??main@@YAHHPEAPEAD@Z@QEBA@XZ@4HA",
+        "stem": "norm_column_column-dtor_8-210",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "?dtor$9@?0???R<lambda_7>@?N@??main@@YAHHPEAPEAD@Z@QEBA@XZ@4HA",
+        "stem": "norm_column_column-dtor_9-211",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "?dtor$10@?0???R<lambda_7>@?N@??main@@YAHHPEAPEAD@Z@QEBA@XZ@4HA",
+        "stem": "norm_column_column-dtor_10-212",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "?dtor$11@?0???R<lambda_7>@?N@??main@@YAHHPEAPEAD@Z@QEBA@XZ@4HA",
+        "stem": "norm_column_column-dtor_11-213",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "?dtor$12@?0???R<lambda_7>@?N@??main@@YAHHPEAPEAD@Z@QEBA@XZ@4HA",
+        "stem": "norm_column_column-dtor_12-214",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "?dtor$13@?0???R<lambda_7>@?N@??main@@YAHHPEAPEAD@Z@QEBA@XZ@4HA",
+        "stem": "norm_column_column-dtor_13-215",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "?dtor$61@?0???R<lambda_7>@?N@??main@@YAHHPEAPEAD@Z@QEBA@XZ@4HA",
+        "stem": "norm_column_column-dtor_61-216",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "?column_norm@detail@linalg@kibo@@YANV?$MatrixView@$$CBN@23@_K1@Z",
+        "stem": "norm_column_column-column_norm-231",
+        "staticDclassCallSites": 1
+      },
+      {
+        "symbol": "?column_project_four@detail@linalg@kibo@@YAXPEANPEBN_K12@Z",
+        "stem": "norm_column_column-column_project_four-232",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "?computeInPlace@?$ColPivHouseholderQR@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@H@Eigen@@IEAAXXZ",
+        "stem": "norm_column_column-computeInPlace-233",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "?factorize_qr@linalg@kibo@@YA?AV?$Result@VQrFactorView@linalg@kibo@@@12@V?$MatrixView@$$CBN@12@V?$MatrixView@N@12@V?$span@N$0?0@std@@V?$span@_K$0?0@7@V?$span@W4byte@std@@$0?0@7@UQrOptions@12@PEAUQrDiagnostics@12@@Z",
+        "stem": "norm_column_column-factorize_qr-235",
+        "staticDclassCallSites": 13
+      },
+      {
+        "symbol": "?householderQ@?$ColPivHouseholderQR@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@H@Eigen@@QEBA?AV?$HouseholderSequence@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@V?$Matrix@N$0?0$00$0A@$0?0$00@2@$00@2@XZ",
+        "stem": "norm_column_column-householderQ-236",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "?init@?$ColPivHouseholderQR@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@H@Eigen@@AEAAX_J0@Z",
+        "stem": "norm_column_column-init-237",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "?rank@?$ColPivHouseholderQR@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@H@Eigen@@QEBA_JXZ",
+        "stem": "norm_column_column-rank-260",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "?row_project_four_rows@detail@linalg@kibo@@YAXPEANPEBN_K12@Z",
+        "stem": "norm_column_column-row_project_four_rows-265",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "?row_update_checked@detail@linalg@kibo@@YA_NPEANPEBN_KN@Z",
+        "stem": "norm_column_column-row_update_checked-266",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "?solve_into@linalg@kibo@@YA?AUStatus@12@VQrFactorView@12@V?$span@$$CBN$0?0@std@@V?$span@N$0?0@6@V?$span@W4byte@std@@$0?0@6@@Z",
+        "stem": "norm_column_column-solve_into-292",
+        "staticDclassCallSites": 5
+      },
+      {
+        "symbol": "main",
+        "stem": "norm_column_column-main-295",
+        "staticDclassCallSites": 0
+      }
+    ]
+  },
+  "norm_all_row_best": {
+    "command": [
+      "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\dumpbin.exe",
+      "/disasm",
+      "C:\\Users\\owner\\Documents\\git\\kibo-linalg\\build\\qr-next\\norm_all_row_best.dir\\Release\\full-adaptive.obj"
+    ],
+    "files": {
+      "build\\qr-next\\norm_all_row_best.dir\\Release\\full-adaptive.obj": "25e1d7c0a5868b1872ec4268f77240cabbc9e545dff69f9f62b627f1a9f87add",
+      "build\\qr-next\\Release\\norm_all_row_best.exe": "1c9880f86724463abeabac471416d7beb86f94665d08e50b978a6dc0fae4929a",
+      "build\\qr-next\\norm_all_row_best.asm": "236ee4a00188ad1804af087b358820eff1859b4a1a341e07d15578e69c9ac46b",
+      ".scratch\\qr-next\\full-adaptive.cpp": "082ae73aa1ee8b2820b0644f3f73fcb9c15178756a2e587ad7fddc03155e4fb8",
+      ".scratch\\qr-next\\variants\\norm_all\\kibo\\qr.hpp": "216675edf2f86c1bd20ea7fc0ab99f70d4da5eb14921d69cacf092c014871b34",
+      ".scratch\\qr-next\\variants\\norm_all\\kibo\\linalg.hpp": "f95f2c6fb82d430f307f07ceb4794091875b14a5838312714406cb8486ccd3cd",
+      ".scratch\\qr-next\\variants\\norm_all\\kibo\\detail\\row_kernels.hpp": "19be54ecabe636b6f1bfb7b57eedad516462f5ac15664442e40ea21c44a5edad"
+    },
+    "dumpSha256": "71fb272bc24a2b48818e4c31c4dcc35959679918e6ddd53c799c3557e776c6c6",
+    "selected": [
+      {
+        "symbol": "??$?RV<lambda_6>@?N@??main@@YAHHPEAPEAD@Z@@<lambda_8>@?N@??main@@YAHHPEAPEAD@Z@QEBA?A_PAEAV<lambda_6>@?N@??1@YAHH0@Z@_K@Z",
+        "stem": "norm_all_row_best-__RV_lambda_6_-11",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "??$?RV<lambda_7>@?N@??main@@YAHHPEAPEAD@Z@@<lambda_8>@?N@??main@@YAHHPEAPEAD@Z@QEBA?A_PAEAV<lambda_7>@?N@??1@YAHH0@Z@_K@Z",
+        "stem": "norm_all_row_best-__RV_lambda_7_-12",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "??$_solve_impl@V?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@V12@@?$ColPivHouseholderQR@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@H@Eigen@@QEBAXAEBV?$Matrix@N$0?0$00$0A@$0?0$00@1@AEAV21@@Z",
+        "stem": "norm_all_row_best-__solve_impl-23",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "?dtor$0@?0???$_solve_impl@V?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@V12@@?$ColPivHouseholderQR@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@H@Eigen@@QEBAXAEBV?$Matrix@N$0?0$00$0A@$0?0$00@1@AEAV21@@Z@4HA",
+        "stem": "norm_all_row_best-dtor_0-24",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "??$applyHouseholderOnTheLeft@V?$Block@$$CBV?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@$0?0$00$0A@@Eigen@@@?$MatrixBase@V?$Block@V?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0$00$0A@@Eigen@@@Eigen@@QEAAXAEBV?$Block@$$CBV?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@$0?0$00$0A@@1@AEBNPEAN@Z",
+        "stem": "norm_all_row_best-_applyHouseholderOnTheLeft-27",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "??$applyHouseholderOnTheLeft@V?$Block@$$CBV?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@$0?0$00$0A@@Eigen@@@?$MatrixBase@V?$Block@V?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0$0?0$0A@@Eigen@@@Eigen@@QEAAXAEBV?$Block@$$CBV?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@$0?0$00$0A@@1@AEBNPEAN@Z",
+        "stem": "norm_all_row_best-_applyHouseholderOnTheLeft-28",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "?dtor$0@?0???$applyHouseholderOnTheLeft@V?$Block@$$CBV?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@$0?0$00$0A@@Eigen@@@?$MatrixBase@V?$Block@V?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0$0?0$0A@@Eigen@@@Eigen@@QEAAXAEBV?$Block@$$CBV?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@$0?0$00$0A@@1@AEBNPEAN@Z@4HA",
+        "stem": "norm_all_row_best-dtor_0-29",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "?dtor$3@?0???$applyHouseholderOnTheLeft@V?$Block@$$CBV?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@$0?0$00$0A@@Eigen@@@?$MatrixBase@V?$Block@V?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0$0?0$0A@@Eigen@@@Eigen@@QEAAXAEBV?$Block@$$CBV?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@$0?0$00$0A@@1@AEBNPEAN@Z@4HA",
+        "stem": "norm_all_row_best-dtor_3-30",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "??$applyHouseholderOnTheLeft@V?$VectorBlock@V?$Block@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@$0?0$00$00@Eigen@@$0?0@Eigen@@@?$MatrixBase@V?$Block@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@$0?0$0?0$0A@@Eigen@@@Eigen@@QEAAXAEBV?$VectorBlock@V?$Block@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@$0?0$00$00@Eigen@@$0?0@1@AEBNPEAN@Z",
+        "stem": "norm_all_row_best-_applyHouseholderOnTheLeft-31",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "??$apply_block_householder_on_the_left@V?$Block@V?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0$00$0A@@Eigen@@V?$Block@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@$0?0$0?0$0A@@2@V?$VectorBlock@$$CBV?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0@2@@internal@Eigen@@YAXAEAV?$Block@V?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0$00$0A@@1@AEBV?$Block@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@$0?0$0?0$0A@@1@AEBV?$VectorBlock@$$CBV?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0@1@_N@Z",
+        "stem": "norm_all_row_best-_apply_block_householder_on_the_left-34",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "?dtor$0@?0???$apply_block_householder_on_the_left@V?$Block@V?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0$00$0A@@Eigen@@V?$Block@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@$0?0$0?0$0A@@2@V?$VectorBlock@$$CBV?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0@2@@internal@Eigen@@YAXAEAV?$Block@V?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0$00$0A@@1@AEBV?$Block@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@$0?0$0?0$0A@@1@AEBV?$VectorBlock@$$CBV?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0@1@_N@Z@4HA",
+        "stem": "norm_all_row_best-dtor_0-35",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "?dtor$1@?0???$apply_block_householder_on_the_left@V?$Block@V?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0$00$0A@@Eigen@@V?$Block@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@$0?0$0?0$0A@@2@V?$VectorBlock@$$CBV?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0@2@@internal@Eigen@@YAXAEAV?$Block@V?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0$00$0A@@1@AEBV?$Block@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@$0?0$0?0$0A@@1@AEBV?$VectorBlock@$$CBV?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0@1@_N@Z@4HA",
+        "stem": "norm_all_row_best-dtor_1-36",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "?dtor$2@?0???$apply_block_householder_on_the_left@V?$Block@V?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0$00$0A@@Eigen@@V?$Block@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@$0?0$0?0$0A@@2@V?$VectorBlock@$$CBV?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0@2@@internal@Eigen@@YAXAEAV?$Block@V?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0$00$0A@@1@AEBV?$Block@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@$0?0$0?0$0A@@1@AEBV?$VectorBlock@$$CBV?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0@1@_N@Z@4HA",
+        "stem": "norm_all_row_best-dtor_2-37",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "?dtor$6@?0???$apply_block_householder_on_the_left@V?$Block@V?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0$00$0A@@Eigen@@V?$Block@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@$0?0$0?0$0A@@2@V?$VectorBlock@$$CBV?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0@2@@internal@Eigen@@YAXAEAV?$Block@V?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0$00$0A@@1@AEBV?$Block@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@$0?0$0?0$0A@@1@AEBV?$VectorBlock@$$CBV?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0@1@_N@Z@4HA",
+        "stem": "norm_all_row_best-dtor_6-38",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "?dtor$16@?0???$apply_block_householder_on_the_left@V?$Block@V?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0$00$0A@@Eigen@@V?$Block@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@$0?0$0?0$0A@@2@V?$VectorBlock@$$CBV?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0@2@@internal@Eigen@@YAXAEAV?$Block@V?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0$00$0A@@1@AEBV?$Block@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@$0?0$0?0$0A@@1@AEBV?$VectorBlock@$$CBV?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0@1@_N@Z@4HA",
+        "stem": "norm_all_row_best-dtor_16-39",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "?dtor$17@?0???$apply_block_householder_on_the_left@V?$Block@V?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0$00$0A@@Eigen@@V?$Block@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@$0?0$0?0$0A@@2@V?$VectorBlock@$$CBV?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0@2@@internal@Eigen@@YAXAEAV?$Block@V?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0$00$0A@@1@AEBV?$Block@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@$0?0$0?0$0A@@1@AEBV?$VectorBlock@$$CBV?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0@1@_N@Z@4HA",
+        "stem": "norm_all_row_best-dtor_17-40",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "?dtor$23@?0???$apply_block_householder_on_the_left@V?$Block@V?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0$00$0A@@Eigen@@V?$Block@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@$0?0$0?0$0A@@2@V?$VectorBlock@$$CBV?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0@2@@internal@Eigen@@YAXAEAV?$Block@V?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0$00$0A@@1@AEBV?$Block@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@$0?0$0?0$0A@@1@AEBV?$VectorBlock@$$CBV?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0@1@_N@Z@4HA",
+        "stem": "norm_all_row_best-dtor_23-41",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "?dtor$24@?0???$apply_block_householder_on_the_left@V?$Block@V?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0$00$0A@@Eigen@@V?$Block@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@$0?0$0?0$0A@@2@V?$VectorBlock@$$CBV?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0@2@@internal@Eigen@@YAXAEAV?$Block@V?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0$00$0A@@1@AEBV?$Block@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@$0?0$0?0$0A@@1@AEBV?$VectorBlock@$$CBV?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0@1@_N@Z@4HA",
+        "stem": "norm_all_row_best-dtor_24-42",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "??$apply_block_householder_on_the_left@V?$Block@V?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0$0?0$0A@@Eigen@@V?$Block@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@$0?0$0?0$0A@@2@V?$VectorBlock@$$CBV?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0@2@@internal@Eigen@@YAXAEAV?$Block@V?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0$0?0$0A@@1@AEBV?$Block@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@$0?0$0?0$0A@@1@AEBV?$VectorBlock@$$CBV?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0@1@_N@Z",
+        "stem": "norm_all_row_best-_apply_block_householder_on_the_left-43",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "?dtor$0@?0???$apply_block_householder_on_the_left@V?$Block@V?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0$0?0$0A@@Eigen@@V?$Block@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@$0?0$0?0$0A@@2@V?$VectorBlock@$$CBV?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0@2@@internal@Eigen@@YAXAEAV?$Block@V?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0$0?0$0A@@1@AEBV?$Block@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@$0?0$0?0$0A@@1@AEBV?$VectorBlock@$$CBV?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0@1@_N@Z@4HA",
+        "stem": "norm_all_row_best-dtor_0-44",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "?dtor$1@?0???$apply_block_householder_on_the_left@V?$Block@V?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0$0?0$0A@@Eigen@@V?$Block@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@$0?0$0?0$0A@@2@V?$VectorBlock@$$CBV?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0@2@@internal@Eigen@@YAXAEAV?$Block@V?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0$0?0$0A@@1@AEBV?$Block@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@$0?0$0?0$0A@@1@AEBV?$VectorBlock@$$CBV?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0@1@_N@Z@4HA",
+        "stem": "norm_all_row_best-dtor_1-45",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "?dtor$2@?0???$apply_block_householder_on_the_left@V?$Block@V?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0$0?0$0A@@Eigen@@V?$Block@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@$0?0$0?0$0A@@2@V?$VectorBlock@$$CBV?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0@2@@internal@Eigen@@YAXAEAV?$Block@V?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0$0?0$0A@@1@AEBV?$Block@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@$0?0$0?0$0A@@1@AEBV?$VectorBlock@$$CBV?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0@1@_N@Z@4HA",
+        "stem": "norm_all_row_best-dtor_2-46",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "?dtor$6@?0???$apply_block_householder_on_the_left@V?$Block@V?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0$0?0$0A@@Eigen@@V?$Block@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@$0?0$0?0$0A@@2@V?$VectorBlock@$$CBV?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0@2@@internal@Eigen@@YAXAEAV?$Block@V?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0$0?0$0A@@1@AEBV?$Block@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@$0?0$0?0$0A@@1@AEBV?$VectorBlock@$$CBV?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0@1@_N@Z@4HA",
+        "stem": "norm_all_row_best-dtor_6-47",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "?dtor$14@?0???$apply_block_householder_on_the_left@V?$Block@V?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0$0?0$0A@@Eigen@@V?$Block@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@$0?0$0?0$0A@@2@V?$VectorBlock@$$CBV?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0@2@@internal@Eigen@@YAXAEAV?$Block@V?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0$0?0$0A@@1@AEBV?$Block@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@$0?0$0?0$0A@@1@AEBV?$VectorBlock@$$CBV?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0@1@_N@Z@4HA",
+        "stem": "norm_all_row_best-dtor_14-48",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "?dtor$15@?0???$apply_block_householder_on_the_left@V?$Block@V?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0$0?0$0A@@Eigen@@V?$Block@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@$0?0$0?0$0A@@2@V?$VectorBlock@$$CBV?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0@2@@internal@Eigen@@YAXAEAV?$Block@V?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0$0?0$0A@@1@AEBV?$Block@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@$0?0$0?0$0A@@1@AEBV?$VectorBlock@$$CBV?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0@1@_N@Z@4HA",
+        "stem": "norm_all_row_best-dtor_15-49",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "?dtor$21@?0???$apply_block_householder_on_the_left@V?$Block@V?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0$0?0$0A@@Eigen@@V?$Block@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@$0?0$0?0$0A@@2@V?$VectorBlock@$$CBV?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0@2@@internal@Eigen@@YAXAEAV?$Block@V?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0$0?0$0A@@1@AEBV?$Block@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@$0?0$0?0$0A@@1@AEBV?$VectorBlock@$$CBV?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0@1@_N@Z@4HA",
+        "stem": "norm_all_row_best-dtor_21-50",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "?dtor$22@?0???$apply_block_householder_on_the_left@V?$Block@V?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0$0?0$0A@@Eigen@@V?$Block@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@$0?0$0?0$0A@@2@V?$VectorBlock@$$CBV?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0@2@@internal@Eigen@@YAXAEAV?$Block@V?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0$0?0$0A@@1@AEBV?$Block@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@$0?0$0?0$0A@@1@AEBV?$VectorBlock@$$CBV?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0@1@_N@Z@4HA",
+        "stem": "norm_all_row_best-dtor_22-51",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "??$compute@V?$Matrix@N$0?0$0?0$00$0?0$0?0@Eigen@@@?$ColPivHouseholderQR@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@H@Eigen@@QEAAAEAV01@AEBU?$EigenBase@V?$Matrix@N$0?0$0?0$00$0?0$0?0@Eigen@@@1@@Z",
+        "stem": "norm_all_row_best-_compute-53",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "??$finite@$$CBN@detail@linalg@kibo@@YA_NV?$MatrixView@$$CBN@12@@Z",
+        "stem": "norm_all_row_best-_finite-69",
+        "staticDclassCallSites": 1
+      },
+      {
+        "symbol": "??$isfinite@N@numext@Eigen@@YA_NAEBN@Z",
+        "stem": "norm_all_row_best-_isfinite-74",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "??$make_block_householder_triangular_factor@V?$Matrix@N$0?0$0?0$00$0?0$0?0@Eigen@@V?$Block@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@$0?0$0?0$0A@@2@V?$Block@$$CBV?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0$00$0A@@2@@internal@Eigen@@YAXAEAV?$Matrix@N$0?0$0?0$00$0?0$0?0@1@AEBV?$Block@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@$0?0$0?0$0A@@1@AEBV?$Block@$$CBV?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0$00$0A@@1@@Z",
+        "stem": "norm_all_row_best-_make_block_householder_triangular_factor-83",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "??$make_block_householder_triangular_factor@V?$Matrix@N$0?0$0?0$00$0?0$0?0@Eigen@@V?$Block@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@$0?0$0?0$0A@@2@V?$VectorBlock@$$CBV?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0@2@@internal@Eigen@@YAXAEAV?$Matrix@N$0?0$0?0$00$0?0$0?0@1@AEBV?$Block@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@$0?0$0?0$0A@@1@AEBV?$VectorBlock@$$CBV?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0@1@@Z",
+        "stem": "norm_all_row_best-_make_block_householder_triangular_factor-84",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "??0?$ColPivHouseholderQR@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@H@Eigen@@QEAA@_J0@Z",
+        "stem": "norm_all_row_best-0__ColPivHouseholderQR-147",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "?dtor$0@?0???0?$ColPivHouseholderQR@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@H@Eigen@@QEAA@_J0@Z@4HA",
+        "stem": "norm_all_row_best-dtor_0-148",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "?dtor$1@?0???0?$ColPivHouseholderQR@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@H@Eigen@@QEAA@_J0@Z@4HA",
+        "stem": "norm_all_row_best-dtor_1-149",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "?dtor$2@?0???0?$ColPivHouseholderQR@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@H@Eigen@@QEAA@_J0@Z@4HA",
+        "stem": "norm_all_row_best-dtor_2-150",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "?dtor$3@?0???0?$ColPivHouseholderQR@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@H@Eigen@@QEAA@_J0@Z@4HA",
+        "stem": "norm_all_row_best-dtor_3-151",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "?dtor$4@?0???0?$ColPivHouseholderQR@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@H@Eigen@@QEAA@_J0@Z@4HA",
+        "stem": "norm_all_row_best-dtor_4-152",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "?dtor$5@?0???0?$ColPivHouseholderQR@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@H@Eigen@@QEAA@_J0@Z@4HA",
+        "stem": "norm_all_row_best-dtor_5-153",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "?dtor$6@?0???0?$ColPivHouseholderQR@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@H@Eigen@@QEAA@_J0@Z@4HA",
+        "stem": "norm_all_row_best-dtor_6-154",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "?dtor$7@?0???0?$ColPivHouseholderQR@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@H@Eigen@@QEAA@_J0@Z@4HA",
+        "stem": "norm_all_row_best-dtor_7-155",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "??1?$ColPivHouseholderQR@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@H@Eigen@@QEAA@XZ",
+        "stem": "norm_all_row_best-1__ColPivHouseholderQR-165",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "??R<lambda_1>@?1??input_hash@@YA_KAEBV?$Matrix@N$0?0$0?0$00$0?0$0?0@Eigen@@AEBV?$Matrix@N$0?0$00$0A@$0?0$00@3@@Z@QEBA@_K@Z",
+        "stem": "norm_all_row_best-R_lambda_1_-193",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "??R<lambda_1>@?1??main@@YAHHPEAPEAD@Z@QEBA@XZ",
+        "stem": "norm_all_row_best-R_lambda_1_-194",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "??R<lambda_2>@?1??main@@YAHHPEAPEAD@Z@QEBA@XZ",
+        "stem": "norm_all_row_best-R_lambda_2_-195",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "??R<lambda_3>@?1??main@@YAHHPEAPEAD@Z@QEBA@XZ",
+        "stem": "norm_all_row_best-R_lambda_3_-196",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "??R<lambda_4>@?1??main@@YAHHPEAPEAD@Z@QEBA@XZ",
+        "stem": "norm_all_row_best-R_lambda_4_-197",
+        "staticDclassCallSites": 2
+      },
+      {
+        "symbol": "??R<lambda_5>@?1??main@@YAHHPEAPEAD@Z@QEBA@XZ",
+        "stem": "norm_all_row_best-R_lambda_5_-198",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "??R<lambda_6>@?N@??main@@YAHHPEAPEAD@Z@QEBA@XZ",
+        "stem": "norm_all_row_best-R_lambda_6_-199",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "?dtor$0@?0???R<lambda_6>@?N@??main@@YAHHPEAPEAD@Z@QEBA@XZ@4HA",
+        "stem": "norm_all_row_best-dtor_0-200",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "?dtor$1@?0???R<lambda_6>@?N@??main@@YAHHPEAPEAD@Z@QEBA@XZ@4HA",
+        "stem": "norm_all_row_best-dtor_1-201",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "?dtor$2@?0???R<lambda_6>@?N@??main@@YAHHPEAPEAD@Z@QEBA@XZ@4HA",
+        "stem": "norm_all_row_best-dtor_2-202",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "?dtor$3@?0???R<lambda_6>@?N@??main@@YAHHPEAPEAD@Z@QEBA@XZ@4HA",
+        "stem": "norm_all_row_best-dtor_3-203",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "?dtor$4@?0???R<lambda_6>@?N@??main@@YAHHPEAPEAD@Z@QEBA@XZ@4HA",
+        "stem": "norm_all_row_best-dtor_4-204",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "??R<lambda_7>@?N@??main@@YAHHPEAPEAD@Z@QEBA@XZ",
+        "stem": "norm_all_row_best-R_lambda_7_-205",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "?dtor$0@?0???R<lambda_7>@?N@??main@@YAHHPEAPEAD@Z@QEBA@XZ@4HA",
+        "stem": "norm_all_row_best-dtor_0-206",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "?dtor$1@?0???R<lambda_7>@?N@??main@@YAHHPEAPEAD@Z@QEBA@XZ@4HA",
+        "stem": "norm_all_row_best-dtor_1-207",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "?dtor$6@?0???R<lambda_7>@?N@??main@@YAHHPEAPEAD@Z@QEBA@XZ@4HA",
+        "stem": "norm_all_row_best-dtor_6-208",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "?dtor$7@?0???R<lambda_7>@?N@??main@@YAHHPEAPEAD@Z@QEBA@XZ@4HA",
+        "stem": "norm_all_row_best-dtor_7-209",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "?dtor$8@?0???R<lambda_7>@?N@??main@@YAHHPEAPEAD@Z@QEBA@XZ@4HA",
+        "stem": "norm_all_row_best-dtor_8-210",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "?dtor$9@?0???R<lambda_7>@?N@??main@@YAHHPEAPEAD@Z@QEBA@XZ@4HA",
+        "stem": "norm_all_row_best-dtor_9-211",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "?dtor$10@?0???R<lambda_7>@?N@??main@@YAHHPEAPEAD@Z@QEBA@XZ@4HA",
+        "stem": "norm_all_row_best-dtor_10-212",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "?dtor$11@?0???R<lambda_7>@?N@??main@@YAHHPEAPEAD@Z@QEBA@XZ@4HA",
+        "stem": "norm_all_row_best-dtor_11-213",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "?dtor$12@?0???R<lambda_7>@?N@??main@@YAHHPEAPEAD@Z@QEBA@XZ@4HA",
+        "stem": "norm_all_row_best-dtor_12-214",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "?dtor$13@?0???R<lambda_7>@?N@??main@@YAHHPEAPEAD@Z@QEBA@XZ@4HA",
+        "stem": "norm_all_row_best-dtor_13-215",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "?dtor$61@?0???R<lambda_7>@?N@??main@@YAHHPEAPEAD@Z@QEBA@XZ@4HA",
+        "stem": "norm_all_row_best-dtor_61-216",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "?column_norm@detail@linalg@kibo@@YANV?$MatrixView@$$CBN@23@_K1@Z",
+        "stem": "norm_all_row_best-column_norm-231",
+        "staticDclassCallSites": 1
+      },
+      {
+        "symbol": "?column_project_four@detail@linalg@kibo@@YAXPEANPEBN_K12@Z",
+        "stem": "norm_all_row_best-column_project_four-232",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "?computeInPlace@?$ColPivHouseholderQR@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@H@Eigen@@IEAAXXZ",
+        "stem": "norm_all_row_best-computeInPlace-233",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "?factorize_qr@linalg@kibo@@YA?AV?$Result@VQrFactorView@linalg@kibo@@@12@V?$MatrixView@$$CBN@12@V?$MatrixView@N@12@V?$span@N$0?0@std@@V?$span@_K$0?0@7@V?$span@W4byte@std@@$0?0@7@UQrOptions@12@PEAUQrDiagnostics@12@@Z",
+        "stem": "norm_all_row_best-factorize_qr-235",
+        "staticDclassCallSites": 13
+      },
+      {
+        "symbol": "?householderQ@?$ColPivHouseholderQR@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@H@Eigen@@QEBA?AV?$HouseholderSequence@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@V?$Matrix@N$0?0$00$0A@$0?0$00@2@$00@2@XZ",
+        "stem": "norm_all_row_best-householderQ-236",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "?init@?$ColPivHouseholderQR@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@H@Eigen@@AEAAX_J0@Z",
+        "stem": "norm_all_row_best-init-237",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "?rank@?$ColPivHouseholderQR@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@H@Eigen@@QEBA_JXZ",
+        "stem": "norm_all_row_best-rank-260",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "?row_project_four_rows@detail@linalg@kibo@@YAXPEANPEBN_K12@Z",
+        "stem": "norm_all_row_best-row_project_four_rows-265",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "?row_update_checked@detail@linalg@kibo@@YA_NPEANPEBN_KN@Z",
+        "stem": "norm_all_row_best-row_update_checked-266",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "?solve_into@linalg@kibo@@YA?AUStatus@12@VQrFactorView@12@V?$span@$$CBN$0?0@std@@V?$span@N$0?0@6@V?$span@W4byte@std@@$0?0@6@@Z",
+        "stem": "norm_all_row_best-solve_into-292",
+        "staticDclassCallSites": 5
+      },
+      {
+        "symbol": "main",
+        "stem": "norm_all_row_best-main-295",
+        "staticDclassCallSites": 0
+      }
+    ]
+  },
+  "row_update_four_row_best": {
+    "command": [
+      "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\dumpbin.exe",
+      "/disasm",
+      "C:\\Users\\owner\\Documents\\git\\kibo-linalg\\build\\qr-next\\row_update_four_row_best.dir\\Release\\full-adaptive.obj"
+    ],
+    "files": {
+      "build\\qr-next\\row_update_four_row_best.dir\\Release\\full-adaptive.obj": "d6d9a007e8d9d8715789301d81a0405dc96336e8d28dbfeff68661dabbde87a7",
+      "build\\qr-next\\Release\\row_update_four_row_best.exe": "d6648b3a3072c3829763aba04d23aeca8a6b52ee4110243a1e0e0a4ecb5083d7",
+      "build\\qr-next\\row_update_four_row_best.asm": "2254417d7c8db5ce366a313e08c33249ef8625fd4d9028dec4bf260573cd970b",
+      ".scratch\\qr-next\\full-adaptive.cpp": "082ae73aa1ee8b2820b0644f3f73fcb9c15178756a2e587ad7fddc03155e4fb8",
+      ".scratch\\qr-next\\variants\\row_update_four\\kibo\\qr.hpp": "f3d1a027858f474315c26ba92b36487dd597eaafc1b3a38885438f13ce481ed1",
+      ".scratch\\qr-next\\variants\\row_update_four\\kibo\\linalg.hpp": "f95f2c6fb82d430f307f07ceb4794091875b14a5838312714406cb8486ccd3cd",
+      ".scratch\\qr-next\\variants\\row_update_four\\kibo\\detail\\row_kernels.hpp": "4bd22995fb36d7d287e0982ee3ffe2a919d303e6a1e98d50f7831c9819882d0c"
+    },
+    "dumpSha256": "9d567fe1762e047b904627dca10578c9c8a20668baf6f8274a66366666a76cfc",
+    "selected": [
+      {
+        "symbol": "??$?RV<lambda_6>@?N@??main@@YAHHPEAPEAD@Z@@<lambda_8>@?N@??main@@YAHHPEAPEAD@Z@QEBA?A_PAEAV<lambda_6>@?N@??1@YAHH0@Z@_K@Z",
+        "stem": "row_update_four_row_best-__RV_lambda_6_-11",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "??$?RV<lambda_7>@?N@??main@@YAHHPEAPEAD@Z@@<lambda_8>@?N@??main@@YAHHPEAPEAD@Z@QEBA?A_PAEAV<lambda_7>@?N@??1@YAHH0@Z@_K@Z",
+        "stem": "row_update_four_row_best-__RV_lambda_7_-12",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "??$_solve_impl@V?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@V12@@?$ColPivHouseholderQR@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@H@Eigen@@QEBAXAEBV?$Matrix@N$0?0$00$0A@$0?0$00@1@AEAV21@@Z",
+        "stem": "row_update_four_row_best-__solve_impl-23",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "?dtor$0@?0???$_solve_impl@V?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@V12@@?$ColPivHouseholderQR@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@H@Eigen@@QEBAXAEBV?$Matrix@N$0?0$00$0A@$0?0$00@1@AEAV21@@Z@4HA",
+        "stem": "row_update_four_row_best-dtor_0-24",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "??$applyHouseholderOnTheLeft@V?$Block@$$CBV?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@$0?0$00$0A@@Eigen@@@?$MatrixBase@V?$Block@V?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0$00$0A@@Eigen@@@Eigen@@QEAAXAEBV?$Block@$$CBV?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@$0?0$00$0A@@1@AEBNPEAN@Z",
+        "stem": "row_update_four_row_best-_applyHouseholderOnTheLeft-27",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "??$applyHouseholderOnTheLeft@V?$Block@$$CBV?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@$0?0$00$0A@@Eigen@@@?$MatrixBase@V?$Block@V?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0$0?0$0A@@Eigen@@@Eigen@@QEAAXAEBV?$Block@$$CBV?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@$0?0$00$0A@@1@AEBNPEAN@Z",
+        "stem": "row_update_four_row_best-_applyHouseholderOnTheLeft-28",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "?dtor$0@?0???$applyHouseholderOnTheLeft@V?$Block@$$CBV?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@$0?0$00$0A@@Eigen@@@?$MatrixBase@V?$Block@V?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0$0?0$0A@@Eigen@@@Eigen@@QEAAXAEBV?$Block@$$CBV?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@$0?0$00$0A@@1@AEBNPEAN@Z@4HA",
+        "stem": "row_update_four_row_best-dtor_0-29",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "?dtor$3@?0???$applyHouseholderOnTheLeft@V?$Block@$$CBV?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@$0?0$00$0A@@Eigen@@@?$MatrixBase@V?$Block@V?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0$0?0$0A@@Eigen@@@Eigen@@QEAAXAEBV?$Block@$$CBV?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@$0?0$00$0A@@1@AEBNPEAN@Z@4HA",
+        "stem": "row_update_four_row_best-dtor_3-30",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "??$applyHouseholderOnTheLeft@V?$VectorBlock@V?$Block@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@$0?0$00$00@Eigen@@$0?0@Eigen@@@?$MatrixBase@V?$Block@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@$0?0$0?0$0A@@Eigen@@@Eigen@@QEAAXAEBV?$VectorBlock@V?$Block@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@$0?0$00$00@Eigen@@$0?0@1@AEBNPEAN@Z",
+        "stem": "row_update_four_row_best-_applyHouseholderOnTheLeft-31",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "??$apply_block_householder_on_the_left@V?$Block@V?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0$00$0A@@Eigen@@V?$Block@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@$0?0$0?0$0A@@2@V?$VectorBlock@$$CBV?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0@2@@internal@Eigen@@YAXAEAV?$Block@V?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0$00$0A@@1@AEBV?$Block@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@$0?0$0?0$0A@@1@AEBV?$VectorBlock@$$CBV?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0@1@_N@Z",
+        "stem": "row_update_four_row_best-_apply_block_householder_on_the_left-34",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "?dtor$0@?0???$apply_block_householder_on_the_left@V?$Block@V?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0$00$0A@@Eigen@@V?$Block@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@$0?0$0?0$0A@@2@V?$VectorBlock@$$CBV?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0@2@@internal@Eigen@@YAXAEAV?$Block@V?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0$00$0A@@1@AEBV?$Block@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@$0?0$0?0$0A@@1@AEBV?$VectorBlock@$$CBV?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0@1@_N@Z@4HA",
+        "stem": "row_update_four_row_best-dtor_0-35",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "?dtor$1@?0???$apply_block_householder_on_the_left@V?$Block@V?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0$00$0A@@Eigen@@V?$Block@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@$0?0$0?0$0A@@2@V?$VectorBlock@$$CBV?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0@2@@internal@Eigen@@YAXAEAV?$Block@V?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0$00$0A@@1@AEBV?$Block@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@$0?0$0?0$0A@@1@AEBV?$VectorBlock@$$CBV?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0@1@_N@Z@4HA",
+        "stem": "row_update_four_row_best-dtor_1-36",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "?dtor$2@?0???$apply_block_householder_on_the_left@V?$Block@V?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0$00$0A@@Eigen@@V?$Block@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@$0?0$0?0$0A@@2@V?$VectorBlock@$$CBV?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0@2@@internal@Eigen@@YAXAEAV?$Block@V?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0$00$0A@@1@AEBV?$Block@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@$0?0$0?0$0A@@1@AEBV?$VectorBlock@$$CBV?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0@1@_N@Z@4HA",
+        "stem": "row_update_four_row_best-dtor_2-37",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "?dtor$6@?0???$apply_block_householder_on_the_left@V?$Block@V?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0$00$0A@@Eigen@@V?$Block@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@$0?0$0?0$0A@@2@V?$VectorBlock@$$CBV?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0@2@@internal@Eigen@@YAXAEAV?$Block@V?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0$00$0A@@1@AEBV?$Block@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@$0?0$0?0$0A@@1@AEBV?$VectorBlock@$$CBV?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0@1@_N@Z@4HA",
+        "stem": "row_update_four_row_best-dtor_6-38",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "?dtor$16@?0???$apply_block_householder_on_the_left@V?$Block@V?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0$00$0A@@Eigen@@V?$Block@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@$0?0$0?0$0A@@2@V?$VectorBlock@$$CBV?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0@2@@internal@Eigen@@YAXAEAV?$Block@V?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0$00$0A@@1@AEBV?$Block@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@$0?0$0?0$0A@@1@AEBV?$VectorBlock@$$CBV?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0@1@_N@Z@4HA",
+        "stem": "row_update_four_row_best-dtor_16-39",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "?dtor$17@?0???$apply_block_householder_on_the_left@V?$Block@V?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0$00$0A@@Eigen@@V?$Block@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@$0?0$0?0$0A@@2@V?$VectorBlock@$$CBV?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0@2@@internal@Eigen@@YAXAEAV?$Block@V?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0$00$0A@@1@AEBV?$Block@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@$0?0$0?0$0A@@1@AEBV?$VectorBlock@$$CBV?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0@1@_N@Z@4HA",
+        "stem": "row_update_four_row_best-dtor_17-40",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "?dtor$23@?0???$apply_block_householder_on_the_left@V?$Block@V?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0$00$0A@@Eigen@@V?$Block@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@$0?0$0?0$0A@@2@V?$VectorBlock@$$CBV?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0@2@@internal@Eigen@@YAXAEAV?$Block@V?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0$00$0A@@1@AEBV?$Block@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@$0?0$0?0$0A@@1@AEBV?$VectorBlock@$$CBV?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0@1@_N@Z@4HA",
+        "stem": "row_update_four_row_best-dtor_23-41",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "?dtor$24@?0???$apply_block_householder_on_the_left@V?$Block@V?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0$00$0A@@Eigen@@V?$Block@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@$0?0$0?0$0A@@2@V?$VectorBlock@$$CBV?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0@2@@internal@Eigen@@YAXAEAV?$Block@V?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0$00$0A@@1@AEBV?$Block@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@$0?0$0?0$0A@@1@AEBV?$VectorBlock@$$CBV?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0@1@_N@Z@4HA",
+        "stem": "row_update_four_row_best-dtor_24-42",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "??$apply_block_householder_on_the_left@V?$Block@V?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0$0?0$0A@@Eigen@@V?$Block@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@$0?0$0?0$0A@@2@V?$VectorBlock@$$CBV?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0@2@@internal@Eigen@@YAXAEAV?$Block@V?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0$0?0$0A@@1@AEBV?$Block@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@$0?0$0?0$0A@@1@AEBV?$VectorBlock@$$CBV?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0@1@_N@Z",
+        "stem": "row_update_four_row_best-_apply_block_householder_on_the_left-43",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "?dtor$0@?0???$apply_block_householder_on_the_left@V?$Block@V?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0$0?0$0A@@Eigen@@V?$Block@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@$0?0$0?0$0A@@2@V?$VectorBlock@$$CBV?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0@2@@internal@Eigen@@YAXAEAV?$Block@V?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0$0?0$0A@@1@AEBV?$Block@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@$0?0$0?0$0A@@1@AEBV?$VectorBlock@$$CBV?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0@1@_N@Z@4HA",
+        "stem": "row_update_four_row_best-dtor_0-44",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "?dtor$1@?0???$apply_block_householder_on_the_left@V?$Block@V?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0$0?0$0A@@Eigen@@V?$Block@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@$0?0$0?0$0A@@2@V?$VectorBlock@$$CBV?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0@2@@internal@Eigen@@YAXAEAV?$Block@V?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0$0?0$0A@@1@AEBV?$Block@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@$0?0$0?0$0A@@1@AEBV?$VectorBlock@$$CBV?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0@1@_N@Z@4HA",
+        "stem": "row_update_four_row_best-dtor_1-45",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "?dtor$2@?0???$apply_block_householder_on_the_left@V?$Block@V?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0$0?0$0A@@Eigen@@V?$Block@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@$0?0$0?0$0A@@2@V?$VectorBlock@$$CBV?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0@2@@internal@Eigen@@YAXAEAV?$Block@V?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0$0?0$0A@@1@AEBV?$Block@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@$0?0$0?0$0A@@1@AEBV?$VectorBlock@$$CBV?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0@1@_N@Z@4HA",
+        "stem": "row_update_four_row_best-dtor_2-46",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "?dtor$6@?0???$apply_block_householder_on_the_left@V?$Block@V?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0$0?0$0A@@Eigen@@V?$Block@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@$0?0$0?0$0A@@2@V?$VectorBlock@$$CBV?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0@2@@internal@Eigen@@YAXAEAV?$Block@V?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0$0?0$0A@@1@AEBV?$Block@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@$0?0$0?0$0A@@1@AEBV?$VectorBlock@$$CBV?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0@1@_N@Z@4HA",
+        "stem": "row_update_four_row_best-dtor_6-47",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "?dtor$14@?0???$apply_block_householder_on_the_left@V?$Block@V?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0$0?0$0A@@Eigen@@V?$Block@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@$0?0$0?0$0A@@2@V?$VectorBlock@$$CBV?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0@2@@internal@Eigen@@YAXAEAV?$Block@V?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0$0?0$0A@@1@AEBV?$Block@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@$0?0$0?0$0A@@1@AEBV?$VectorBlock@$$CBV?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0@1@_N@Z@4HA",
+        "stem": "row_update_four_row_best-dtor_14-48",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "?dtor$15@?0???$apply_block_householder_on_the_left@V?$Block@V?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0$0?0$0A@@Eigen@@V?$Block@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@$0?0$0?0$0A@@2@V?$VectorBlock@$$CBV?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0@2@@internal@Eigen@@YAXAEAV?$Block@V?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0$0?0$0A@@1@AEBV?$Block@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@$0?0$0?0$0A@@1@AEBV?$VectorBlock@$$CBV?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0@1@_N@Z@4HA",
+        "stem": "row_update_four_row_best-dtor_15-49",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "?dtor$21@?0???$apply_block_householder_on_the_left@V?$Block@V?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0$0?0$0A@@Eigen@@V?$Block@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@$0?0$0?0$0A@@2@V?$VectorBlock@$$CBV?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0@2@@internal@Eigen@@YAXAEAV?$Block@V?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0$0?0$0A@@1@AEBV?$Block@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@$0?0$0?0$0A@@1@AEBV?$VectorBlock@$$CBV?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0@1@_N@Z@4HA",
+        "stem": "row_update_four_row_best-dtor_21-50",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "?dtor$22@?0???$apply_block_householder_on_the_left@V?$Block@V?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0$0?0$0A@@Eigen@@V?$Block@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@$0?0$0?0$0A@@2@V?$VectorBlock@$$CBV?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0@2@@internal@Eigen@@YAXAEAV?$Block@V?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0$0?0$0A@@1@AEBV?$Block@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@$0?0$0?0$0A@@1@AEBV?$VectorBlock@$$CBV?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0@1@_N@Z@4HA",
+        "stem": "row_update_four_row_best-dtor_22-51",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "??$compute@V?$Matrix@N$0?0$0?0$00$0?0$0?0@Eigen@@@?$ColPivHouseholderQR@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@H@Eigen@@QEAAAEAV01@AEBU?$EigenBase@V?$Matrix@N$0?0$0?0$00$0?0$0?0@Eigen@@@1@@Z",
+        "stem": "row_update_four_row_best-_compute-53",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "??$finite@$$CBN@detail@linalg@kibo@@YA_NV?$MatrixView@$$CBN@12@@Z",
+        "stem": "row_update_four_row_best-_finite-69",
+        "staticDclassCallSites": 1
+      },
+      {
+        "symbol": "??$isfinite@N@numext@Eigen@@YA_NAEBN@Z",
+        "stem": "row_update_four_row_best-_isfinite-74",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "??$make_block_householder_triangular_factor@V?$Matrix@N$0?0$0?0$00$0?0$0?0@Eigen@@V?$Block@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@$0?0$0?0$0A@@2@V?$Block@$$CBV?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0$00$0A@@2@@internal@Eigen@@YAXAEAV?$Matrix@N$0?0$0?0$00$0?0$0?0@1@AEBV?$Block@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@$0?0$0?0$0A@@1@AEBV?$Block@$$CBV?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0$00$0A@@1@@Z",
+        "stem": "row_update_four_row_best-_make_block_householder_triangular_factor-83",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "??$make_block_householder_triangular_factor@V?$Matrix@N$0?0$0?0$00$0?0$0?0@Eigen@@V?$Block@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@$0?0$0?0$0A@@2@V?$VectorBlock@$$CBV?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0@2@@internal@Eigen@@YAXAEAV?$Matrix@N$0?0$0?0$00$0?0$0?0@1@AEBV?$Block@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@$0?0$0?0$0A@@1@AEBV?$VectorBlock@$$CBV?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0@1@@Z",
+        "stem": "row_update_four_row_best-_make_block_householder_triangular_factor-84",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "??0?$ColPivHouseholderQR@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@H@Eigen@@QEAA@_J0@Z",
+        "stem": "row_update_four_row_best-0__ColPivHouseholderQR-147",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "?dtor$0@?0???0?$ColPivHouseholderQR@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@H@Eigen@@QEAA@_J0@Z@4HA",
+        "stem": "row_update_four_row_best-dtor_0-148",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "?dtor$1@?0???0?$ColPivHouseholderQR@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@H@Eigen@@QEAA@_J0@Z@4HA",
+        "stem": "row_update_four_row_best-dtor_1-149",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "?dtor$2@?0???0?$ColPivHouseholderQR@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@H@Eigen@@QEAA@_J0@Z@4HA",
+        "stem": "row_update_four_row_best-dtor_2-150",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "?dtor$3@?0???0?$ColPivHouseholderQR@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@H@Eigen@@QEAA@_J0@Z@4HA",
+        "stem": "row_update_four_row_best-dtor_3-151",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "?dtor$4@?0???0?$ColPivHouseholderQR@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@H@Eigen@@QEAA@_J0@Z@4HA",
+        "stem": "row_update_four_row_best-dtor_4-152",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "?dtor$5@?0???0?$ColPivHouseholderQR@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@H@Eigen@@QEAA@_J0@Z@4HA",
+        "stem": "row_update_four_row_best-dtor_5-153",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "?dtor$6@?0???0?$ColPivHouseholderQR@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@H@Eigen@@QEAA@_J0@Z@4HA",
+        "stem": "row_update_four_row_best-dtor_6-154",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "?dtor$7@?0???0?$ColPivHouseholderQR@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@H@Eigen@@QEAA@_J0@Z@4HA",
+        "stem": "row_update_four_row_best-dtor_7-155",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "??1?$ColPivHouseholderQR@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@H@Eigen@@QEAA@XZ",
+        "stem": "row_update_four_row_best-1__ColPivHouseholderQR-165",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "??R<lambda_1>@?1??input_hash@@YA_KAEBV?$Matrix@N$0?0$0?0$00$0?0$0?0@Eigen@@AEBV?$Matrix@N$0?0$00$0A@$0?0$00@3@@Z@QEBA@_K@Z",
+        "stem": "row_update_four_row_best-R_lambda_1_-193",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "??R<lambda_1>@?1??main@@YAHHPEAPEAD@Z@QEBA@XZ",
+        "stem": "row_update_four_row_best-R_lambda_1_-194",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "??R<lambda_2>@?1??main@@YAHHPEAPEAD@Z@QEBA@XZ",
+        "stem": "row_update_four_row_best-R_lambda_2_-195",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "??R<lambda_3>@?1??main@@YAHHPEAPEAD@Z@QEBA@XZ",
+        "stem": "row_update_four_row_best-R_lambda_3_-196",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "??R<lambda_4>@?1??main@@YAHHPEAPEAD@Z@QEBA@XZ",
+        "stem": "row_update_four_row_best-R_lambda_4_-197",
+        "staticDclassCallSites": 2
+      },
+      {
+        "symbol": "??R<lambda_5>@?1??main@@YAHHPEAPEAD@Z@QEBA@XZ",
+        "stem": "row_update_four_row_best-R_lambda_5_-198",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "??R<lambda_6>@?N@??main@@YAHHPEAPEAD@Z@QEBA@XZ",
+        "stem": "row_update_four_row_best-R_lambda_6_-199",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "?dtor$0@?0???R<lambda_6>@?N@??main@@YAHHPEAPEAD@Z@QEBA@XZ@4HA",
+        "stem": "row_update_four_row_best-dtor_0-200",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "?dtor$1@?0???R<lambda_6>@?N@??main@@YAHHPEAPEAD@Z@QEBA@XZ@4HA",
+        "stem": "row_update_four_row_best-dtor_1-201",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "?dtor$2@?0???R<lambda_6>@?N@??main@@YAHHPEAPEAD@Z@QEBA@XZ@4HA",
+        "stem": "row_update_four_row_best-dtor_2-202",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "?dtor$3@?0???R<lambda_6>@?N@??main@@YAHHPEAPEAD@Z@QEBA@XZ@4HA",
+        "stem": "row_update_four_row_best-dtor_3-203",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "?dtor$4@?0???R<lambda_6>@?N@??main@@YAHHPEAPEAD@Z@QEBA@XZ@4HA",
+        "stem": "row_update_four_row_best-dtor_4-204",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "??R<lambda_7>@?N@??main@@YAHHPEAPEAD@Z@QEBA@XZ",
+        "stem": "row_update_four_row_best-R_lambda_7_-205",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "?dtor$0@?0???R<lambda_7>@?N@??main@@YAHHPEAPEAD@Z@QEBA@XZ@4HA",
+        "stem": "row_update_four_row_best-dtor_0-206",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "?dtor$1@?0???R<lambda_7>@?N@??main@@YAHHPEAPEAD@Z@QEBA@XZ@4HA",
+        "stem": "row_update_four_row_best-dtor_1-207",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "?dtor$6@?0???R<lambda_7>@?N@??main@@YAHHPEAPEAD@Z@QEBA@XZ@4HA",
+        "stem": "row_update_four_row_best-dtor_6-208",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "?dtor$7@?0???R<lambda_7>@?N@??main@@YAHHPEAPEAD@Z@QEBA@XZ@4HA",
+        "stem": "row_update_four_row_best-dtor_7-209",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "?dtor$8@?0???R<lambda_7>@?N@??main@@YAHHPEAPEAD@Z@QEBA@XZ@4HA",
+        "stem": "row_update_four_row_best-dtor_8-210",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "?dtor$9@?0???R<lambda_7>@?N@??main@@YAHHPEAPEAD@Z@QEBA@XZ@4HA",
+        "stem": "row_update_four_row_best-dtor_9-211",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "?dtor$10@?0???R<lambda_7>@?N@??main@@YAHHPEAPEAD@Z@QEBA@XZ@4HA",
+        "stem": "row_update_four_row_best-dtor_10-212",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "?dtor$11@?0???R<lambda_7>@?N@??main@@YAHHPEAPEAD@Z@QEBA@XZ@4HA",
+        "stem": "row_update_four_row_best-dtor_11-213",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "?dtor$12@?0???R<lambda_7>@?N@??main@@YAHHPEAPEAD@Z@QEBA@XZ@4HA",
+        "stem": "row_update_four_row_best-dtor_12-214",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "?dtor$13@?0???R<lambda_7>@?N@??main@@YAHHPEAPEAD@Z@QEBA@XZ@4HA",
+        "stem": "row_update_four_row_best-dtor_13-215",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "?dtor$61@?0???R<lambda_7>@?N@??main@@YAHHPEAPEAD@Z@QEBA@XZ@4HA",
+        "stem": "row_update_four_row_best-dtor_61-216",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "?column_norm@detail@linalg@kibo@@YANV?$MatrixView@$$CBN@23@_K1@Z",
+        "stem": "row_update_four_row_best-column_norm-231",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "?column_project_four@detail@linalg@kibo@@YAXPEANPEBN_K12@Z",
+        "stem": "row_update_four_row_best-column_project_four-232",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "?computeInPlace@?$ColPivHouseholderQR@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@H@Eigen@@IEAAXXZ",
+        "stem": "row_update_four_row_best-computeInPlace-233",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "?factorize_qr@linalg@kibo@@YA?AV?$Result@VQrFactorView@linalg@kibo@@@12@V?$MatrixView@$$CBN@12@V?$MatrixView@N@12@V?$span@N$0?0@std@@V?$span@_K$0?0@7@V?$span@W4byte@std@@$0?0@7@UQrOptions@12@PEAUQrDiagnostics@12@@Z",
+        "stem": "row_update_four_row_best-factorize_qr-235",
+        "staticDclassCallSites": 14
+      },
+      {
+        "symbol": "?householderQ@?$ColPivHouseholderQR@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@H@Eigen@@QEBA?AV?$HouseholderSequence@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@V?$Matrix@N$0?0$00$0A@$0?0$00@2@$00@2@XZ",
+        "stem": "row_update_four_row_best-householderQ-236",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "?init@?$ColPivHouseholderQR@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@H@Eigen@@AEAAX_J0@Z",
+        "stem": "row_update_four_row_best-init-237",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "?rank@?$ColPivHouseholderQR@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@H@Eigen@@QEBA_JXZ",
+        "stem": "row_update_four_row_best-rank-260",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "?row_project_four_rows@detail@linalg@kibo@@YAXPEANPEBN_K12@Z",
+        "stem": "row_update_four_row_best-row_project_four_rows-265",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "?row_update_checked@detail@linalg@kibo@@YA_NPEANPEBN_KN@Z",
+        "stem": "row_update_four_row_best-row_update_checked-266",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "?solve_into@linalg@kibo@@YA?AUStatus@12@VQrFactorView@12@V?$span@$$CBN$0?0@std@@V?$span@N$0?0@6@V?$span@W4byte@std@@$0?0@6@@Z",
+        "stem": "row_update_four_row_best-solve_into-292",
+        "staticDclassCallSites": 5
+      },
+      {
+        "symbol": "main",
+        "stem": "row_update_four_row_best-main-295",
+        "staticDclassCallSites": 0
+      }
+    ]
+  },
+  "row_update_four_row_same": {
+    "command": [
+      "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\dumpbin.exe",
+      "/disasm",
+      "C:\\Users\\owner\\Documents\\git\\kibo-linalg\\build\\qr-next\\row_update_four_row_same.dir\\Release\\full-adaptive.obj"
+    ],
+    "files": {
+      "build\\qr-next\\row_update_four_row_same.dir\\Release\\full-adaptive.obj": "5871a0df630017edb5091df7cd760a1cf10623a8c1f15a5e5fcf24ddcbc66d2d",
+      "build\\qr-next\\Release\\row_update_four_row_same.exe": "ea2b76ac46e8b6b229e3aa3e1cb83d1e5a5244b3dd8bc7f326f7eca2a3a4602e",
+      "build\\qr-next\\row_update_four_row_same.asm": "4f67e3cb0af14c5b94719426f5dc09e00d1b71164f398a8b81a20dc80bd2bb7f",
+      ".scratch\\qr-next\\full-adaptive.cpp": "082ae73aa1ee8b2820b0644f3f73fcb9c15178756a2e587ad7fddc03155e4fb8",
+      ".scratch\\qr-next\\variants\\row_update_four\\kibo\\qr.hpp": "f3d1a027858f474315c26ba92b36487dd597eaafc1b3a38885438f13ce481ed1",
+      ".scratch\\qr-next\\variants\\row_update_four\\kibo\\linalg.hpp": "f95f2c6fb82d430f307f07ceb4794091875b14a5838312714406cb8486ccd3cd",
+      ".scratch\\qr-next\\variants\\row_update_four\\kibo\\detail\\row_kernels.hpp": "4bd22995fb36d7d287e0982ee3ffe2a919d303e6a1e98d50f7831c9819882d0c"
+    },
+    "dumpSha256": "65dff2d60999203a4c23eb7442184f0be012ec51ae37baaf8e07283c5cf183b0",
+    "selected": [
+      {
+        "symbol": "??$?RV<lambda_6>@?N@??main@@YAHHPEAPEAD@Z@@<lambda_8>@?N@??main@@YAHHPEAPEAD@Z@QEBA?A_PAEAV<lambda_6>@?N@??1@YAHH0@Z@_K@Z",
+        "stem": "row_update_four_row_same-__RV_lambda_6_-11",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "??$?RV<lambda_7>@?N@??main@@YAHHPEAPEAD@Z@@<lambda_8>@?N@??main@@YAHHPEAPEAD@Z@QEBA?A_PAEAV<lambda_7>@?N@??1@YAHH0@Z@_K@Z",
+        "stem": "row_update_four_row_same-__RV_lambda_7_-12",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "??$_solve_impl@V?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@V12@@?$ColPivHouseholderQR@V?$Matrix@N$0?0$0?0$00$0?0$0?0@Eigen@@H@Eigen@@QEBAXAEBV?$Matrix@N$0?0$00$0A@$0?0$00@1@AEAV21@@Z",
+        "stem": "row_update_four_row_same-__solve_impl-23",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "?dtor$0@?0???$_solve_impl@V?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@V12@@?$ColPivHouseholderQR@V?$Matrix@N$0?0$0?0$00$0?0$0?0@Eigen@@H@Eigen@@QEBAXAEBV?$Matrix@N$0?0$00$0A@$0?0$00@1@AEAV21@@Z@4HA",
+        "stem": "row_update_four_row_same-dtor_0-24",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "??$applyHouseholderOnTheLeft@V?$Block@$$CBV?$Matrix@N$0?0$0?0$00$0?0$0?0@Eigen@@$0?0$00$0A@@Eigen@@@?$MatrixBase@V?$Block@V?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0$00$0A@@Eigen@@@Eigen@@QEAAXAEBV?$Block@$$CBV?$Matrix@N$0?0$0?0$00$0?0$0?0@Eigen@@$0?0$00$0A@@1@AEBNPEAN@Z",
+        "stem": "row_update_four_row_same-_applyHouseholderOnTheLeft-27",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "??$applyHouseholderOnTheLeft@V?$Block@$$CBV?$Matrix@N$0?0$0?0$00$0?0$0?0@Eigen@@$0?0$00$0A@@Eigen@@@?$MatrixBase@V?$Block@V?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0$0?0$0A@@Eigen@@@Eigen@@QEAAXAEBV?$Block@$$CBV?$Matrix@N$0?0$0?0$00$0?0$0?0@Eigen@@$0?0$00$0A@@1@AEBNPEAN@Z",
+        "stem": "row_update_four_row_same-_applyHouseholderOnTheLeft-28",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "?dtor$0@?0???$applyHouseholderOnTheLeft@V?$Block@$$CBV?$Matrix@N$0?0$0?0$00$0?0$0?0@Eigen@@$0?0$00$0A@@Eigen@@@?$MatrixBase@V?$Block@V?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0$0?0$0A@@Eigen@@@Eigen@@QEAAXAEBV?$Block@$$CBV?$Matrix@N$0?0$0?0$00$0?0$0?0@Eigen@@$0?0$00$0A@@1@AEBNPEAN@Z@4HA",
+        "stem": "row_update_four_row_same-dtor_0-29",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "?dtor$3@?0???$applyHouseholderOnTheLeft@V?$Block@$$CBV?$Matrix@N$0?0$0?0$00$0?0$0?0@Eigen@@$0?0$00$0A@@Eigen@@@?$MatrixBase@V?$Block@V?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0$0?0$0A@@Eigen@@@Eigen@@QEAAXAEBV?$Block@$$CBV?$Matrix@N$0?0$0?0$00$0?0$0?0@Eigen@@$0?0$00$0A@@1@AEBNPEAN@Z@4HA",
+        "stem": "row_update_four_row_same-dtor_3-30",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "??$applyHouseholderOnTheLeft@V?$VectorBlock@V?$Block@V?$Matrix@N$0?0$0?0$00$0?0$0?0@Eigen@@$0?0$00$0A@@Eigen@@$0?0@Eigen@@@?$MatrixBase@V?$Block@V?$Matrix@N$0?0$0?0$00$0?0$0?0@Eigen@@$0?0$0?0$0A@@Eigen@@@Eigen@@QEAAXAEBV?$VectorBlock@V?$Block@V?$Matrix@N$0?0$0?0$00$0?0$0?0@Eigen@@$0?0$00$0A@@Eigen@@$0?0@1@AEBNPEAN@Z",
+        "stem": "row_update_four_row_same-_applyHouseholderOnTheLeft-31",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "??$apply_block_householder_on_the_left@V?$Block@V?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0$00$0A@@Eigen@@V?$Block@V?$Matrix@N$0?0$0?0$00$0?0$0?0@Eigen@@$0?0$0?0$0A@@2@V?$VectorBlock@$$CBV?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0@2@@internal@Eigen@@YAXAEAV?$Block@V?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0$00$0A@@1@AEBV?$Block@V?$Matrix@N$0?0$0?0$00$0?0$0?0@Eigen@@$0?0$0?0$0A@@1@AEBV?$VectorBlock@$$CBV?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0@1@_N@Z",
+        "stem": "row_update_four_row_same-_apply_block_householder_on_the_left-34",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "?dtor$0@?0???$apply_block_householder_on_the_left@V?$Block@V?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0$00$0A@@Eigen@@V?$Block@V?$Matrix@N$0?0$0?0$00$0?0$0?0@Eigen@@$0?0$0?0$0A@@2@V?$VectorBlock@$$CBV?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0@2@@internal@Eigen@@YAXAEAV?$Block@V?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0$00$0A@@1@AEBV?$Block@V?$Matrix@N$0?0$0?0$00$0?0$0?0@Eigen@@$0?0$0?0$0A@@1@AEBV?$VectorBlock@$$CBV?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0@1@_N@Z@4HA",
+        "stem": "row_update_four_row_same-dtor_0-35",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "?dtor$1@?0???$apply_block_householder_on_the_left@V?$Block@V?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0$00$0A@@Eigen@@V?$Block@V?$Matrix@N$0?0$0?0$00$0?0$0?0@Eigen@@$0?0$0?0$0A@@2@V?$VectorBlock@$$CBV?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0@2@@internal@Eigen@@YAXAEAV?$Block@V?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0$00$0A@@1@AEBV?$Block@V?$Matrix@N$0?0$0?0$00$0?0$0?0@Eigen@@$0?0$0?0$0A@@1@AEBV?$VectorBlock@$$CBV?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0@1@_N@Z@4HA",
+        "stem": "row_update_four_row_same-dtor_1-36",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "?dtor$2@?0???$apply_block_householder_on_the_left@V?$Block@V?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0$00$0A@@Eigen@@V?$Block@V?$Matrix@N$0?0$0?0$00$0?0$0?0@Eigen@@$0?0$0?0$0A@@2@V?$VectorBlock@$$CBV?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0@2@@internal@Eigen@@YAXAEAV?$Block@V?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0$00$0A@@1@AEBV?$Block@V?$Matrix@N$0?0$0?0$00$0?0$0?0@Eigen@@$0?0$0?0$0A@@1@AEBV?$VectorBlock@$$CBV?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0@1@_N@Z@4HA",
+        "stem": "row_update_four_row_same-dtor_2-37",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "?dtor$6@?0???$apply_block_householder_on_the_left@V?$Block@V?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0$00$0A@@Eigen@@V?$Block@V?$Matrix@N$0?0$0?0$00$0?0$0?0@Eigen@@$0?0$0?0$0A@@2@V?$VectorBlock@$$CBV?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0@2@@internal@Eigen@@YAXAEAV?$Block@V?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0$00$0A@@1@AEBV?$Block@V?$Matrix@N$0?0$0?0$00$0?0$0?0@Eigen@@$0?0$0?0$0A@@1@AEBV?$VectorBlock@$$CBV?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0@1@_N@Z@4HA",
+        "stem": "row_update_four_row_same-dtor_6-38",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "?dtor$16@?0???$apply_block_householder_on_the_left@V?$Block@V?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0$00$0A@@Eigen@@V?$Block@V?$Matrix@N$0?0$0?0$00$0?0$0?0@Eigen@@$0?0$0?0$0A@@2@V?$VectorBlock@$$CBV?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0@2@@internal@Eigen@@YAXAEAV?$Block@V?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0$00$0A@@1@AEBV?$Block@V?$Matrix@N$0?0$0?0$00$0?0$0?0@Eigen@@$0?0$0?0$0A@@1@AEBV?$VectorBlock@$$CBV?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0@1@_N@Z@4HA",
+        "stem": "row_update_four_row_same-dtor_16-39",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "?dtor$17@?0???$apply_block_householder_on_the_left@V?$Block@V?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0$00$0A@@Eigen@@V?$Block@V?$Matrix@N$0?0$0?0$00$0?0$0?0@Eigen@@$0?0$0?0$0A@@2@V?$VectorBlock@$$CBV?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0@2@@internal@Eigen@@YAXAEAV?$Block@V?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0$00$0A@@1@AEBV?$Block@V?$Matrix@N$0?0$0?0$00$0?0$0?0@Eigen@@$0?0$0?0$0A@@1@AEBV?$VectorBlock@$$CBV?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0@1@_N@Z@4HA",
+        "stem": "row_update_four_row_same-dtor_17-40",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "?dtor$25@?0???$apply_block_householder_on_the_left@V?$Block@V?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0$00$0A@@Eigen@@V?$Block@V?$Matrix@N$0?0$0?0$00$0?0$0?0@Eigen@@$0?0$0?0$0A@@2@V?$VectorBlock@$$CBV?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0@2@@internal@Eigen@@YAXAEAV?$Block@V?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0$00$0A@@1@AEBV?$Block@V?$Matrix@N$0?0$0?0$00$0?0$0?0@Eigen@@$0?0$0?0$0A@@1@AEBV?$VectorBlock@$$CBV?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0@1@_N@Z@4HA",
+        "stem": "row_update_four_row_same-dtor_25-41",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "?dtor$26@?0???$apply_block_householder_on_the_left@V?$Block@V?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0$00$0A@@Eigen@@V?$Block@V?$Matrix@N$0?0$0?0$00$0?0$0?0@Eigen@@$0?0$0?0$0A@@2@V?$VectorBlock@$$CBV?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0@2@@internal@Eigen@@YAXAEAV?$Block@V?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0$00$0A@@1@AEBV?$Block@V?$Matrix@N$0?0$0?0$00$0?0$0?0@Eigen@@$0?0$0?0$0A@@1@AEBV?$VectorBlock@$$CBV?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0@1@_N@Z@4HA",
+        "stem": "row_update_four_row_same-dtor_26-42",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "??$apply_block_householder_on_the_left@V?$Block@V?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0$0?0$0A@@Eigen@@V?$Block@V?$Matrix@N$0?0$0?0$00$0?0$0?0@Eigen@@$0?0$0?0$0A@@2@V?$VectorBlock@$$CBV?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0@2@@internal@Eigen@@YAXAEAV?$Block@V?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0$0?0$0A@@1@AEBV?$Block@V?$Matrix@N$0?0$0?0$00$0?0$0?0@Eigen@@$0?0$0?0$0A@@1@AEBV?$VectorBlock@$$CBV?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0@1@_N@Z",
+        "stem": "row_update_four_row_same-_apply_block_householder_on_the_left-43",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "?dtor$0@?0???$apply_block_householder_on_the_left@V?$Block@V?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0$0?0$0A@@Eigen@@V?$Block@V?$Matrix@N$0?0$0?0$00$0?0$0?0@Eigen@@$0?0$0?0$0A@@2@V?$VectorBlock@$$CBV?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0@2@@internal@Eigen@@YAXAEAV?$Block@V?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0$0?0$0A@@1@AEBV?$Block@V?$Matrix@N$0?0$0?0$00$0?0$0?0@Eigen@@$0?0$0?0$0A@@1@AEBV?$VectorBlock@$$CBV?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0@1@_N@Z@4HA",
+        "stem": "row_update_four_row_same-dtor_0-44",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "?dtor$1@?0???$apply_block_householder_on_the_left@V?$Block@V?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0$0?0$0A@@Eigen@@V?$Block@V?$Matrix@N$0?0$0?0$00$0?0$0?0@Eigen@@$0?0$0?0$0A@@2@V?$VectorBlock@$$CBV?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0@2@@internal@Eigen@@YAXAEAV?$Block@V?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0$0?0$0A@@1@AEBV?$Block@V?$Matrix@N$0?0$0?0$00$0?0$0?0@Eigen@@$0?0$0?0$0A@@1@AEBV?$VectorBlock@$$CBV?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0@1@_N@Z@4HA",
+        "stem": "row_update_four_row_same-dtor_1-45",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "?dtor$2@?0???$apply_block_householder_on_the_left@V?$Block@V?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0$0?0$0A@@Eigen@@V?$Block@V?$Matrix@N$0?0$0?0$00$0?0$0?0@Eigen@@$0?0$0?0$0A@@2@V?$VectorBlock@$$CBV?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0@2@@internal@Eigen@@YAXAEAV?$Block@V?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0$0?0$0A@@1@AEBV?$Block@V?$Matrix@N$0?0$0?0$00$0?0$0?0@Eigen@@$0?0$0?0$0A@@1@AEBV?$VectorBlock@$$CBV?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0@1@_N@Z@4HA",
+        "stem": "row_update_four_row_same-dtor_2-46",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "?dtor$6@?0???$apply_block_householder_on_the_left@V?$Block@V?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0$0?0$0A@@Eigen@@V?$Block@V?$Matrix@N$0?0$0?0$00$0?0$0?0@Eigen@@$0?0$0?0$0A@@2@V?$VectorBlock@$$CBV?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0@2@@internal@Eigen@@YAXAEAV?$Block@V?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0$0?0$0A@@1@AEBV?$Block@V?$Matrix@N$0?0$0?0$00$0?0$0?0@Eigen@@$0?0$0?0$0A@@1@AEBV?$VectorBlock@$$CBV?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0@1@_N@Z@4HA",
+        "stem": "row_update_four_row_same-dtor_6-47",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "?dtor$14@?0???$apply_block_householder_on_the_left@V?$Block@V?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0$0?0$0A@@Eigen@@V?$Block@V?$Matrix@N$0?0$0?0$00$0?0$0?0@Eigen@@$0?0$0?0$0A@@2@V?$VectorBlock@$$CBV?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0@2@@internal@Eigen@@YAXAEAV?$Block@V?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0$0?0$0A@@1@AEBV?$Block@V?$Matrix@N$0?0$0?0$00$0?0$0?0@Eigen@@$0?0$0?0$0A@@1@AEBV?$VectorBlock@$$CBV?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0@1@_N@Z@4HA",
+        "stem": "row_update_four_row_same-dtor_14-48",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "?dtor$15@?0???$apply_block_householder_on_the_left@V?$Block@V?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0$0?0$0A@@Eigen@@V?$Block@V?$Matrix@N$0?0$0?0$00$0?0$0?0@Eigen@@$0?0$0?0$0A@@2@V?$VectorBlock@$$CBV?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0@2@@internal@Eigen@@YAXAEAV?$Block@V?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0$0?0$0A@@1@AEBV?$Block@V?$Matrix@N$0?0$0?0$00$0?0$0?0@Eigen@@$0?0$0?0$0A@@1@AEBV?$VectorBlock@$$CBV?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0@1@_N@Z@4HA",
+        "stem": "row_update_four_row_same-dtor_15-49",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "?dtor$21@?0???$apply_block_householder_on_the_left@V?$Block@V?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0$0?0$0A@@Eigen@@V?$Block@V?$Matrix@N$0?0$0?0$00$0?0$0?0@Eigen@@$0?0$0?0$0A@@2@V?$VectorBlock@$$CBV?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0@2@@internal@Eigen@@YAXAEAV?$Block@V?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0$0?0$0A@@1@AEBV?$Block@V?$Matrix@N$0?0$0?0$00$0?0$0?0@Eigen@@$0?0$0?0$0A@@1@AEBV?$VectorBlock@$$CBV?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0@1@_N@Z@4HA",
+        "stem": "row_update_four_row_same-dtor_21-50",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "?dtor$22@?0???$apply_block_householder_on_the_left@V?$Block@V?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0$0?0$0A@@Eigen@@V?$Block@V?$Matrix@N$0?0$0?0$00$0?0$0?0@Eigen@@$0?0$0?0$0A@@2@V?$VectorBlock@$$CBV?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0@2@@internal@Eigen@@YAXAEAV?$Block@V?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0$0?0$0A@@1@AEBV?$Block@V?$Matrix@N$0?0$0?0$00$0?0$0?0@Eigen@@$0?0$0?0$0A@@1@AEBV?$VectorBlock@$$CBV?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0@1@_N@Z@4HA",
+        "stem": "row_update_four_row_same-dtor_22-51",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "??$compute@V?$Matrix@N$0?0$0?0$00$0?0$0?0@Eigen@@@?$ColPivHouseholderQR@V?$Matrix@N$0?0$0?0$00$0?0$0?0@Eigen@@H@Eigen@@QEAAAEAV01@AEBU?$EigenBase@V?$Matrix@N$0?0$0?0$00$0?0$0?0@Eigen@@@1@@Z",
+        "stem": "row_update_four_row_same-_compute-53",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "??$finite@$$CBN@detail@linalg@kibo@@YA_NV?$MatrixView@$$CBN@12@@Z",
+        "stem": "row_update_four_row_same-_finite-69",
+        "staticDclassCallSites": 1
+      },
+      {
+        "symbol": "??$isfinite@N@numext@Eigen@@YA_NAEBN@Z",
+        "stem": "row_update_four_row_same-_isfinite-74",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "??$make_block_householder_triangular_factor@V?$Matrix@N$0?0$0?0$00$0?0$0?0@Eigen@@V?$Block@V?$Matrix@N$0?0$0?0$00$0?0$0?0@Eigen@@$0?0$0?0$0A@@2@V?$Block@$$CBV?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0$00$0A@@2@@internal@Eigen@@YAXAEAV?$Matrix@N$0?0$0?0$00$0?0$0?0@1@AEBV?$Block@V?$Matrix@N$0?0$0?0$00$0?0$0?0@Eigen@@$0?0$0?0$0A@@1@AEBV?$Block@$$CBV?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0$00$0A@@1@@Z",
+        "stem": "row_update_four_row_same-_make_block_householder_triangular_factor-83",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "??$make_block_householder_triangular_factor@V?$Matrix@N$0?0$0?0$00$0?0$0?0@Eigen@@V?$Block@V?$Matrix@N$0?0$0?0$00$0?0$0?0@Eigen@@$0?0$0?0$0A@@2@V?$VectorBlock@$$CBV?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0@2@@internal@Eigen@@YAXAEAV?$Matrix@N$0?0$0?0$00$0?0$0?0@1@AEBV?$Block@V?$Matrix@N$0?0$0?0$00$0?0$0?0@Eigen@@$0?0$0?0$0A@@1@AEBV?$VectorBlock@$$CBV?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@$0?0@1@@Z",
+        "stem": "row_update_four_row_same-_make_block_householder_triangular_factor-84",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "??0?$ColPivHouseholderQR@V?$Matrix@N$0?0$0?0$00$0?0$0?0@Eigen@@H@Eigen@@QEAA@_J0@Z",
+        "stem": "row_update_four_row_same-0__ColPivHouseholderQR-141",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "?dtor$0@?0???0?$ColPivHouseholderQR@V?$Matrix@N$0?0$0?0$00$0?0$0?0@Eigen@@H@Eigen@@QEAA@_J0@Z@4HA",
+        "stem": "row_update_four_row_same-dtor_0-142",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "?dtor$1@?0???0?$ColPivHouseholderQR@V?$Matrix@N$0?0$0?0$00$0?0$0?0@Eigen@@H@Eigen@@QEAA@_J0@Z@4HA",
+        "stem": "row_update_four_row_same-dtor_1-143",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "?dtor$2@?0???0?$ColPivHouseholderQR@V?$Matrix@N$0?0$0?0$00$0?0$0?0@Eigen@@H@Eigen@@QEAA@_J0@Z@4HA",
+        "stem": "row_update_four_row_same-dtor_2-144",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "?dtor$3@?0???0?$ColPivHouseholderQR@V?$Matrix@N$0?0$0?0$00$0?0$0?0@Eigen@@H@Eigen@@QEAA@_J0@Z@4HA",
+        "stem": "row_update_four_row_same-dtor_3-145",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "?dtor$4@?0???0?$ColPivHouseholderQR@V?$Matrix@N$0?0$0?0$00$0?0$0?0@Eigen@@H@Eigen@@QEAA@_J0@Z@4HA",
+        "stem": "row_update_four_row_same-dtor_4-146",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "?dtor$5@?0???0?$ColPivHouseholderQR@V?$Matrix@N$0?0$0?0$00$0?0$0?0@Eigen@@H@Eigen@@QEAA@_J0@Z@4HA",
+        "stem": "row_update_four_row_same-dtor_5-147",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "?dtor$6@?0???0?$ColPivHouseholderQR@V?$Matrix@N$0?0$0?0$00$0?0$0?0@Eigen@@H@Eigen@@QEAA@_J0@Z@4HA",
+        "stem": "row_update_four_row_same-dtor_6-148",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "?dtor$7@?0???0?$ColPivHouseholderQR@V?$Matrix@N$0?0$0?0$00$0?0$0?0@Eigen@@H@Eigen@@QEAA@_J0@Z@4HA",
+        "stem": "row_update_four_row_same-dtor_7-149",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "??1?$ColPivHouseholderQR@V?$Matrix@N$0?0$0?0$00$0?0$0?0@Eigen@@H@Eigen@@QEAA@XZ",
+        "stem": "row_update_four_row_same-1__ColPivHouseholderQR-158",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "??R<lambda_1>@?1??input_hash@@YA_KAEBV?$Matrix@N$0?0$0?0$00$0?0$0?0@Eigen@@AEBV?$Matrix@N$0?0$00$0A@$0?0$00@3@@Z@QEBA@_K@Z",
+        "stem": "row_update_four_row_same-R_lambda_1_-186",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "??R<lambda_1>@?1??main@@YAHHPEAPEAD@Z@QEBA@XZ",
+        "stem": "row_update_four_row_same-R_lambda_1_-187",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "??R<lambda_2>@?1??main@@YAHHPEAPEAD@Z@QEBA@XZ",
+        "stem": "row_update_four_row_same-R_lambda_2_-188",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "??R<lambda_3>@?1??main@@YAHHPEAPEAD@Z@QEBA@XZ",
+        "stem": "row_update_four_row_same-R_lambda_3_-189",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "??R<lambda_4>@?1??main@@YAHHPEAPEAD@Z@QEBA@XZ",
+        "stem": "row_update_four_row_same-R_lambda_4_-190",
+        "staticDclassCallSites": 2
+      },
+      {
+        "symbol": "??R<lambda_5>@?1??main@@YAHHPEAPEAD@Z@QEBA@XZ",
+        "stem": "row_update_four_row_same-R_lambda_5_-191",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "??R<lambda_6>@?N@??main@@YAHHPEAPEAD@Z@QEBA@XZ",
+        "stem": "row_update_four_row_same-R_lambda_6_-192",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "?dtor$0@?0???R<lambda_6>@?N@??main@@YAHHPEAPEAD@Z@QEBA@XZ@4HA",
+        "stem": "row_update_four_row_same-dtor_0-193",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "?dtor$1@?0???R<lambda_6>@?N@??main@@YAHHPEAPEAD@Z@QEBA@XZ@4HA",
+        "stem": "row_update_four_row_same-dtor_1-194",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "?dtor$2@?0???R<lambda_6>@?N@??main@@YAHHPEAPEAD@Z@QEBA@XZ@4HA",
+        "stem": "row_update_four_row_same-dtor_2-195",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "?dtor$3@?0???R<lambda_6>@?N@??main@@YAHHPEAPEAD@Z@QEBA@XZ@4HA",
+        "stem": "row_update_four_row_same-dtor_3-196",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "?dtor$4@?0???R<lambda_6>@?N@??main@@YAHHPEAPEAD@Z@QEBA@XZ@4HA",
+        "stem": "row_update_four_row_same-dtor_4-197",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "??R<lambda_7>@?N@??main@@YAHHPEAPEAD@Z@QEBA@XZ",
+        "stem": "row_update_four_row_same-R_lambda_7_-198",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "?dtor$0@?0???R<lambda_7>@?N@??main@@YAHHPEAPEAD@Z@QEBA@XZ@4HA",
+        "stem": "row_update_four_row_same-dtor_0-199",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "?dtor$1@?0???R<lambda_7>@?N@??main@@YAHHPEAPEAD@Z@QEBA@XZ@4HA",
+        "stem": "row_update_four_row_same-dtor_1-200",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "?dtor$6@?0???R<lambda_7>@?N@??main@@YAHHPEAPEAD@Z@QEBA@XZ@4HA",
+        "stem": "row_update_four_row_same-dtor_6-201",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "?dtor$7@?0???R<lambda_7>@?N@??main@@YAHHPEAPEAD@Z@QEBA@XZ@4HA",
+        "stem": "row_update_four_row_same-dtor_7-202",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "?dtor$8@?0???R<lambda_7>@?N@??main@@YAHHPEAPEAD@Z@QEBA@XZ@4HA",
+        "stem": "row_update_four_row_same-dtor_8-203",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "?dtor$9@?0???R<lambda_7>@?N@??main@@YAHHPEAPEAD@Z@QEBA@XZ@4HA",
+        "stem": "row_update_four_row_same-dtor_9-204",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "?dtor$10@?0???R<lambda_7>@?N@??main@@YAHHPEAPEAD@Z@QEBA@XZ@4HA",
+        "stem": "row_update_four_row_same-dtor_10-205",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "?dtor$11@?0???R<lambda_7>@?N@??main@@YAHHPEAPEAD@Z@QEBA@XZ@4HA",
+        "stem": "row_update_four_row_same-dtor_11-206",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "?dtor$12@?0???R<lambda_7>@?N@??main@@YAHHPEAPEAD@Z@QEBA@XZ@4HA",
+        "stem": "row_update_four_row_same-dtor_12-207",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "?dtor$13@?0???R<lambda_7>@?N@??main@@YAHHPEAPEAD@Z@QEBA@XZ@4HA",
+        "stem": "row_update_four_row_same-dtor_13-208",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "?dtor$61@?0???R<lambda_7>@?N@??main@@YAHHPEAPEAD@Z@QEBA@XZ@4HA",
+        "stem": "row_update_four_row_same-dtor_61-209",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "?column_norm@detail@linalg@kibo@@YANV?$MatrixView@$$CBN@23@_K1@Z",
+        "stem": "row_update_four_row_same-column_norm-224",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "?column_project_four@detail@linalg@kibo@@YAXPEANPEBN_K12@Z",
+        "stem": "row_update_four_row_same-column_project_four-225",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "?computeInPlace@?$ColPivHouseholderQR@V?$Matrix@N$0?0$0?0$00$0?0$0?0@Eigen@@H@Eigen@@IEAAXXZ",
+        "stem": "row_update_four_row_same-computeInPlace-226",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "?factorize_qr@linalg@kibo@@YA?AV?$Result@VQrFactorView@linalg@kibo@@@12@V?$MatrixView@$$CBN@12@V?$MatrixView@N@12@V?$span@N$0?0@std@@V?$span@_K$0?0@7@V?$span@W4byte@std@@$0?0@7@UQrOptions@12@PEAUQrDiagnostics@12@@Z",
+        "stem": "row_update_four_row_same-factorize_qr-228",
+        "staticDclassCallSites": 14
+      },
+      {
+        "symbol": "?householderQ@?$ColPivHouseholderQR@V?$Matrix@N$0?0$0?0$00$0?0$0?0@Eigen@@H@Eigen@@QEBA?AV?$HouseholderSequence@V?$Matrix@N$0?0$0?0$00$0?0$0?0@Eigen@@V?$Matrix@N$0?0$00$0A@$0?0$00@2@$00@2@XZ",
+        "stem": "row_update_four_row_same-householderQ-229",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "?init@?$ColPivHouseholderQR@V?$Matrix@N$0?0$0?0$00$0?0$0?0@Eigen@@H@Eigen@@AEAAX_J0@Z",
+        "stem": "row_update_four_row_same-init-230",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "?rank@?$ColPivHouseholderQR@V?$Matrix@N$0?0$0?0$00$0?0$0?0@Eigen@@H@Eigen@@QEBA_JXZ",
+        "stem": "row_update_four_row_same-rank-253",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "?row_project_four_rows@detail@linalg@kibo@@YAXPEANPEBN_K12@Z",
+        "stem": "row_update_four_row_same-row_project_four_rows-258",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "?row_update_checked@detail@linalg@kibo@@YA_NPEANPEBN_KN@Z",
+        "stem": "row_update_four_row_same-row_update_checked-259",
+        "staticDclassCallSites": 0
+      },
+      {
+        "symbol": "?solve_into@linalg@kibo@@YA?AUStatus@12@VQrFactorView@12@V?$span@$$CBN$0?0@std@@V?$span@N$0?0@6@V?$span@W4byte@std@@$0?0@6@@Z",
+        "stem": "row_update_four_row_same-solve_into-285",
+        "staticDclassCallSites": 5
+      },
+      {
+        "symbol": "main",
+        "stem": "row_update_four_row_same-main-288",
+        "staticDclassCallSites": 0
+      }
+    ]
+  }
+}
