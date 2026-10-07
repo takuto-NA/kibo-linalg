@@ -1,0 +1,73 @@
+[
+  {
+    "command": [
+      "cmake",
+      "--build",
+      "build/native",
+      "--config",
+      "Release",
+      "--target",
+      "kibo_common_2x2",
+      "--parallel",
+      "4"
+    ],
+    "exitCode": 0
+  },
+  {
+    "command": [
+      "build/native/Release/kibo_common_2x2.exe"
+    ],
+    "exitCode": 0
+  },
+  {
+    "command": [
+      "cmake",
+      "--install",
+      "build/native",
+      "--config",
+      "Release",
+      "--prefix",
+      "C:\\Users\\owner\\Documents\\git\\kibo-linalg\\build\\refined-installed-1791375290"
+    ],
+    "exitCode": 0
+  },
+  {
+    "command": [
+      "cmake",
+      "-S",
+      "tests/installed_consumer",
+      "-B",
+      "build/refined-consumer-native",
+      "-G",
+      "Visual Studio 17 2022",
+      "-A",
+      "x64",
+      "-DCMAKE_PREFIX_PATH=C:\\Users\\owner\\Documents\\git\\kibo-linalg\\build\\refined-installed-1791375290-relocated"
+    ],
+    "exitCode": 0
+  },
+  {
+    "command": [
+      "cmake",
+      "--build",
+      "build/refined-consumer-native",
+      "--config",
+      "Release",
+      "--parallel",
+      "4"
+    ],
+    "exitCode": 0
+  },
+  {
+    "command": [
+      "ctest",
+      "--test-dir",
+      "build/refined-consumer-native",
+      "-C",
+      "Release",
+      "--output-on-failure",
+      "--no-tests=error"
+    ],
+    "exitCode": 0
+  }
+]

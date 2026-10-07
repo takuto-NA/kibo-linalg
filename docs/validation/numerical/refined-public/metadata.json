@@ -1,0 +1,517 @@
+{
+  "implementationCommit": "6ef57015743466b1e712ff725886fec09254f1e3",
+  "documentationCommit": "3c47462e8f094d7d8b458173ee16fbecbd9ad437",
+  "mpmathVersion": "1.3.0",
+  "decimalDigits": 100,
+  "checks": [
+    {
+      "path": ".scratch\\qr-refined-public\\windows.jsonl",
+      "records": 102,
+      "allPublicGatesPass": true,
+      "maxOracleForward": 1.1102230246251565e-16,
+      "maxOptimality": 3.669255126147883e-17
+    },
+    {
+      "path": ".scratch\\qr-refined-public\\linux-clang\\audit-OFF.jsonl",
+      "records": 102,
+      "allPublicGatesPass": true,
+      "maxOracleForward": 1.1102230246251565e-16,
+      "maxOptimality": 3.669255126147883e-17
+    },
+    {
+      "path": ".scratch\\qr-refined-public\\linux-clang\\audit-ON.jsonl",
+      "records": 102,
+      "allPublicGatesPass": true,
+      "maxOracleForward": 1.1102230246251565e-16,
+      "maxOptimality": 3.424613606808655e-17
+    },
+    {
+      "path": ".scratch\\qr-refined-public\\linux-clang-sanitized\\audit-OFF.jsonl",
+      "records": 102,
+      "allPublicGatesPass": true,
+      "maxOracleForward": 1.1102230246251565e-16,
+      "maxOptimality": 3.669255126147883e-17
+    },
+    {
+      "path": ".scratch\\qr-refined-public\\linux-clang-sanitized\\audit-ON.jsonl",
+      "records": 102,
+      "allPublicGatesPass": true,
+      "maxOracleForward": 1.1102230246251565e-16,
+      "maxOptimality": 3.424613606808655e-17
+    },
+    {
+      "path": ".scratch\\qr-refined-public\\linux-gcc\\audit-OFF.jsonl",
+      "records": 102,
+      "allPublicGatesPass": true,
+      "maxOracleForward": 1.1102230246251565e-16,
+      "maxOptimality": 3.669255126147883e-17
+    },
+    {
+      "path": ".scratch\\qr-refined-public\\linux-gcc\\audit-ON.jsonl",
+      "records": 102,
+      "allPublicGatesPass": true,
+      "maxOracleForward": 1.1102230246251565e-16,
+      "maxOptimality": 3.424613606808655e-17
+    }
+  ],
+  "publicRecords": 714,
+  "existingEigenAccuracyChecksPreserved": true,
+  "numericalWholeCTestGreen": false,
+  "onlyExistingEigenAccuracyChecksFail": true,
+  "physicalEspExecution": false,
+  "apiWorkspaceDoubles": "2m+3n",
+  "apiSources": {
+    "include/kibo/detail/row_kernels.hpp": {
+      "source": "include/kibo/detail/row_kernels.hpp",
+      "sha256": "19be54ecabe636b6f1bfb7b57eedad516462f5ac15664442e40ea21c44a5edad"
+    },
+    "include/kibo/dynamic_matrix.hpp": {
+      "source": "include/kibo/dynamic_matrix.hpp",
+      "sha256": "535afd0c96607a65e13711bb0ea94a94d3791eb170fa54db5d1e220e12b103e6"
+    },
+    "include/kibo/linalg.hpp": {
+      "source": "include/kibo/linalg.hpp",
+      "sha256": "52bf606a0f6ac2e21a83878e7b029b4c65935e25f5fc90387b1cf2ef74572634"
+    },
+    "include/kibo/llt.hpp": {
+      "source": "include/kibo/llt.hpp",
+      "sha256": "75047b2655f5cf907caf10177e3fc5913db39021aa9d3baf177b25552e980d11"
+    },
+    "include/kibo/qr.hpp": {
+      "source": "include/kibo/qr.hpp",
+      "sha256": "04b1efdb4e2869ddc75ad6075874a8ab15d29051e79a24a19765fad1b50193ae"
+    },
+    "include/kibo/qr_refined.hpp": {
+      "source": "include/kibo/qr_refined.hpp",
+      "sha256": "9689fb7b71a833c1152f96f1f9f53646d94777984fe39cc277148f922e03d17e"
+    },
+    "include/kibo/workspace.hpp": {
+      "source": "include/kibo/workspace.hpp",
+      "sha256": "e74b13bb57d83bb0ad7b1c8f271c40db825a2d1b380f0224639a9d94ee8c48d0"
+    },
+    "tools/diagnostics/qr-accuracy/audit.cpp": {
+      "source": "tools/diagnostics/qr-accuracy/audit.cpp",
+      "sha256": "f3cb1b3c36bf47906e6f9f1e0704ee16bb3b042f6ad7d088a3099351d2b09945"
+    },
+    "tools/diagnostics/qr-accuracy/CMakeLists.txt": {
+      "source": "tools/diagnostics/qr-accuracy/CMakeLists.txt",
+      "sha256": "d79361d9455cd468cacde34c3da75c290079ebc7d50027d729567a731b74bb2a"
+    },
+    "tools/diagnostics/qr-accuracy/cost.cpp": {
+      "source": "tools/diagnostics/qr-accuracy/cost.cpp",
+      "sha256": "53a7548c6c7939fa0064ba56ab94587e4bc6ab756e2cb162e9e4cddca249a353"
+    },
+    "tools/diagnostics/qr-accuracy/oracle.py": {
+      "source": "tools/diagnostics/qr-accuracy/oracle.py",
+      "sha256": "0f666f487bd2edc75011419c5c54ca6c030a21199e7077419b3797386cc4c509"
+    },
+    "tools/diagnostics/qr-accuracy/public-cost.cpp": {
+      "source": "tools/diagnostics/qr-accuracy/public-cost.cpp",
+      "sha256": "dd461d7bdcb18f82461ed18c633c82f903d273f2c2012c0395ff3e9d95847872"
+    },
+    "tools/diagnostics/qr-accuracy/README.md": {
+      "source": "tools/diagnostics/qr-accuracy/README.md",
+      "sha256": "723ea2fb21b2fb7eef6f5f0e55123a9b71b936b9041d786c467d8708c7a71d83"
+    },
+    "tools/diagnostics/qr-accuracy/refine.hpp": {
+      "source": "tools/diagnostics/qr-accuracy/refine.hpp",
+      "sha256": "178ece560a42c8b1f1eb1285a904e049de7536da3d7fdbd982f28a06141758d3"
+    },
+    "wasm/adapter.cpp": {
+      "source": "wasm/adapter.cpp",
+      "sha256": "df06d789904eb45b14663c9ca37d4dca53cc827e92ef761edc7e39628b74b7bf"
+    },
+    "wasm/browser-test.mjs": {
+      "source": "wasm/browser-test.mjs",
+      "sha256": "9bb5dc5c532ee7b8004092211fb2e51fd51b96d4b0aff53deca81d6fd6b6fbe9"
+    },
+    "wasm/facade.mjs": {
+      "source": "wasm/facade.mjs",
+      "sha256": "2d78ac20496e50dcdab67ead9fbe466a7a57fe95e2ffbfe1a189dedbc393d40a"
+    },
+    "wasm/node-test.mjs": {
+      "source": "wasm/node-test.mjs",
+      "sha256": "2197727d42f08aa298e3544d5d8f12d90d3672b90de231cb4e5f6f2f72fe75df"
+    },
+    "wasm/test-common.mjs": {
+      "source": "wasm/test-common.mjs",
+      "sha256": "19613269ca74964fef783807bde2ea515dcb6867d6591f8344c6e6fb13094826"
+    },
+    "CMakeLists.txt": {
+      "source": "CMakeLists.txt",
+      "sha256": "71e6c00469730a91893259c9aa9915ec121406ea26697d39d624ff6678a63e07"
+    },
+    "tests/qr_refined_tests.cpp": {
+      "source": "tests/qr_refined_tests.cpp",
+      "sha256": "d7e0e7f8b0967eaf0db3069e3da24cf31fe3b07c0555488528e636e9c97e0c74"
+    },
+    "tests/numerical_tests.cpp": {
+      "source": "tests/numerical_tests.cpp",
+      "sha256": "95313e903153b5887b39dfd1bf20515a72cc09f032c0bce2e57c54e881d196f6"
+    },
+    "tests/allocation_tests.cpp": {
+      "source": "tests/allocation_tests.cpp",
+      "sha256": "2c376c7feff0b53c9e9cea74b7d241a29c9257d0a84dcf07e6e7d912c5964328"
+    },
+    "tests/no_runtime_tests.cpp": {
+      "source": "tests/no_runtime_tests.cpp",
+      "sha256": "17ce150fa2ada87c2dbb43d72d96810ba50db0ac316451bd865181d138a310a8"
+    },
+    "tests/controlled_fixture.hpp": {
+      "source": "tests/controlled_fixture.hpp",
+      "sha256": "eabb9c60f1659b981c52e704c3e9a53cdaef50349baccda2ec6fcc5774f6c142"
+    },
+    "tests/fixtures/oracles.hpp": {
+      "source": "tests/fixtures/oracles.hpp",
+      "sha256": "2a5ebc209fc5ab0d0a9330f3499e34ec6421ea792a4909f4aef3862a36838d1d"
+    },
+    "tests/installed_consumer/main.cpp": {
+      "source": "tests/installed_consumer/main.cpp",
+      "sha256": "f937c743b531fc4f9e625229fb06afbc02eb48a5676b8bce5eb33dc29b0ec0af"
+    },
+    "examples/common_2x2.hpp": {
+      "source": "examples/common_2x2.hpp",
+      "sha256": "a64eba6fc975ebcbac53198b8e97bf271aeca6141a7353a453c7b70722ba36d5"
+    },
+    "examples/common_2x2_host.cpp": {
+      "source": "examples/common_2x2_host.cpp",
+      "sha256": "1011a8c29a6ddf2a8bad9c180542095edd47fbf036484102af7a71ccfebaf283"
+    },
+    "examples/esp32/main/main.cpp": {
+      "source": "examples/esp32/main/main.cpp",
+      "sha256": "195b70ae2e66918d02f8a21db90bbe9205f5609ec751714013d75c5989e0687d"
+    },
+    "tools/diagnostics/solver-locality/affinity.hpp": {
+      "source": "tools/diagnostics/solver-locality/affinity.hpp",
+      "sha256": "ec5ad8f5e25b80348925b40e6fa9586fe94e2d98f86aafe1f291875ff6c3e0d5"
+    },
+    "tools/wasm-build.sh": {
+      "source": "tools/wasm-build.sh",
+      "sha256": "88420b763926bc94676499ee934fd5a717aee534b2c5868b0ce2d3df331a803c"
+    },
+    "tools/toolchains.lock.json": {
+      "source": "tools/toolchains.lock.json",
+      "sha256": "d51b14c4691498e66fd0c67d8e4ab9f4814e2dcba21b1aeb1442bad5559480c8"
+    }
+  },
+  "builds": {
+    "gcc-OFF": {
+      "binarySha256": "4f2c38602086a82839ec5153d67e711a767f345840b405ebffb3da0715e66cb0",
+      "compileCommands": {
+        "source": "build/qr-refined-audit-gcc-OFF/compile_commands.json",
+        "sha256": "4be257e9c575229d619b57e0e715ef318d0cc3f17c0144d70b2c731b1aac2444"
+      },
+      "cache": {
+        "source": "build/qr-refined-audit-gcc-OFF/CMakeCache.txt",
+        "sha256": "12d0ca89fa66c73c2cc2712ba688dc881ac6915ceac769a7425f5147d9bd6e2f"
+      }
+    },
+    "gcc-ON": {
+      "binarySha256": "a6518b168b113d4685f75ca1376aa27ec1fbde1dbf4bf69c0e0112056646b78b",
+      "compileCommands": {
+        "source": "build/qr-refined-audit-gcc-ON/compile_commands.json",
+        "sha256": "38e3a7657cfd14db7683aaa404ce70ffa6c9e9a58b2d2f25824fc9250a7d96f3"
+      },
+      "cache": {
+        "source": "build/qr-refined-audit-gcc-ON/CMakeCache.txt",
+        "sha256": "ec33e82b12c13ba8685573e9ff047ade11fedb1fb0fcda0a50c872ddb505d849"
+      }
+    },
+    "gcc-Debug": {
+      "compileCommands": {
+        "source": "build/qr-refined-gcc/Debug/compile_commands.json",
+        "sha256": "93c6d760f593ae2ef3fc63a81a9c77332807201ac98a3758e841b0d6ea53c6ce"
+      },
+      "cache": {
+        "source": "build/qr-refined-gcc/Debug/CMakeCache.txt",
+        "sha256": "88ec8d5a6a0a1a17cba880c466c7ef5e126f4509eac1743c666338edaea0f749"
+      }
+    },
+    "gcc-Release": {
+      "compileCommands": {
+        "source": "build/qr-refined-gcc/Release/compile_commands.json",
+        "sha256": "71033c8f3e859f32ee5cc1b58fe6663679ca4d0e3db635714922393aa939ed67"
+      },
+      "cache": {
+        "source": "build/qr-refined-gcc/Release/CMakeCache.txt",
+        "sha256": "30133396ae0262245dedb8ac0dc65dc7bf514966d9599288c1da51ca13cae337"
+      }
+    },
+    "clang-OFF": {
+      "binarySha256": "a5abb20a9716463177a89a1f8dcbda646cc0e916332e0af15f449de634261248",
+      "compileCommands": {
+        "source": "build/qr-refined-audit-clang-OFF/compile_commands.json",
+        "sha256": "a4ac45fa7a5b17abbb0c824bc813f58101a512c7621f9d380571e9b2d5783176"
+      },
+      "cache": {
+        "source": "build/qr-refined-audit-clang-OFF/CMakeCache.txt",
+        "sha256": "5c0661bca0eebf5f7f388d2924c26eb807405d4cef4650aaa7f3ff9602be907c"
+      }
+    },
+    "clang-ON": {
+      "binarySha256": "2c8703ca16cdeab878f05bfa755ebb2ed1edd2bf08fc6b462830987afd081c7d",
+      "compileCommands": {
+        "source": "build/qr-refined-audit-clang-ON/compile_commands.json",
+        "sha256": "6c7a1cfa9457e93036b93f8b1ac70fd5160f87a27711ab79ab4ca3a7b48a3ba0"
+      },
+      "cache": {
+        "source": "build/qr-refined-audit-clang-ON/CMakeCache.txt",
+        "sha256": "23a52fb5f47ea2d315536cb22498f33990b883fa79ef4722c97ae01d5ca756e2"
+      }
+    },
+    "clang-Debug": {
+      "compileCommands": {
+        "source": "build/qr-refined-clang/Debug/compile_commands.json",
+        "sha256": "0474e9696b7050c868e8f367ede736e0ddab5c709b0b3844fdf5da00d74e8797"
+      },
+      "cache": {
+        "source": "build/qr-refined-clang/Debug/CMakeCache.txt",
+        "sha256": "80ef3e6503c238f5b26eab83418e0d938870e56d641403817b7d4095c1658421"
+      }
+    },
+    "clang-Release": {
+      "compileCommands": {
+        "source": "build/qr-refined-clang/Release/compile_commands.json",
+        "sha256": "22fc854a5cb4ce1dfba383b40cbd32afb72f0fc331adfbffda0dea9c836b0548"
+      },
+      "cache": {
+        "source": "build/qr-refined-clang/Release/CMakeCache.txt",
+        "sha256": "2126be2942a5d41111d14564c0677895b60ec68f96b828923cc44b792caee76f"
+      }
+    },
+    "clang-sanitized-OFF": {
+      "binarySha256": "260ed651d5ea67a4d20cbcd5e56073bbad34aed08d46e5e4fb665981587e982c",
+      "compileCommands": {
+        "source": "build/qr-refined-audit-clang-sanitized-OFF/compile_commands.json",
+        "sha256": "a141c5681626dfaa72cc2e84187b30078937379cdf7b9da498922cd52855b807"
+      },
+      "cache": {
+        "source": "build/qr-refined-audit-clang-sanitized-OFF/CMakeCache.txt",
+        "sha256": "39c0b5c5eb6f7682e3215c1d21164237e6d2aa8f5ed14eae93df440e720b90d8"
+      }
+    },
+    "clang-sanitized-ON": {
+      "binarySha256": "eb47de4a8552e8f2c503ee6dedc66854d79a4c79c9a56ae61b4a54ac7ccdb312",
+      "compileCommands": {
+        "source": "build/qr-refined-audit-clang-sanitized-ON/compile_commands.json",
+        "sha256": "09c1824337b36db215c6c3a54833b1952a767fa23d3f429c36492af4c3941c33"
+      },
+      "cache": {
+        "source": "build/qr-refined-audit-clang-sanitized-ON/CMakeCache.txt",
+        "sha256": "b37098d9526dd58133267040dd62ec39cc90856c7f51207c8f86f3c51bfa0f73"
+      }
+    },
+    "clang-sanitized-Debug": {
+      "compileCommands": {
+        "source": "build/qr-refined-clang-sanitized/Debug/compile_commands.json",
+        "sha256": "399fd5c440787a23e990f1730410f2c5058c3d7550146e49ca53021e79823033"
+      },
+      "cache": {
+        "source": "build/qr-refined-clang-sanitized/Debug/CMakeCache.txt",
+        "sha256": "d4fd98bbb8874fdd41fbf12aa42909755b285768ee499dc5390ab22c1e9faf2e"
+      }
+    },
+    "clang-sanitized-Release": {
+      "compileCommands": {
+        "source": "build/qr-refined-clang-sanitized/Release/compile_commands.json",
+        "sha256": "079f4bbcbd5322af3c2c102fdba93ba55f3f4064bcbb3ad22b1afdc5b95104d8"
+      },
+      "cache": {
+        "source": "build/qr-refined-clang-sanitized/Release/CMakeCache.txt",
+        "sha256": "50bfbb5b5a52dd773d4fc479cea72f7ebabe0b00e9a67ac51e20df646187476b"
+      }
+    },
+    "windows-audit": {
+      "binarySha256": "9c4e979361370056e6ef4dda5eeb4a6b3ade0dc97a15c292fd59cab14b7ac583",
+      "project": {
+        "source": "build/qr-accuracy-public-tools/audit.vcxproj",
+        "sha256": "aaa6bd0cf7fa99e3a3badddfb142c6c8c500f94615e75774156fdd1f18c8edac"
+      },
+      "compiler": {
+        "source": "build/qr-accuracy-public-tools/CMakeFiles/3.30.5/CMakeCXXCompiler.cmake",
+        "sha256": "03ef79e461d6ac6627f16a78b09054bcc6798d0f16868394a08f4b0ec6b528ca"
+      }
+    },
+    "windows-public-cost": {
+      "binarySha256": "4636468a6ff86a1c16085496e78c403454a869b0e615d5c0a5e1997de960502f",
+      "project": {
+        "source": "build/qr-accuracy-public-tools/public-cost.vcxproj",
+        "sha256": "b117f5cbd621d9191d617795740912c5afa6b57b14709aae556b004fe3b4d424"
+      },
+      "compiler": {
+        "source": "build/qr-accuracy-public-tools/CMakeFiles/3.30.5/CMakeCXXCompiler.cmake",
+        "sha256": "03ef79e461d6ac6627f16a78b09054bcc6798d0f16868394a08f4b0ec6b528ca"
+      }
+    },
+    "windows-contracts": {
+      "cache": {
+        "source": "build/native/CMakeCache.txt",
+        "sha256": "f197d8c5dff75b6ccf307f6123aaa00e515b51b38ea35a147c34ea8b84dc5b58"
+      },
+      "noRuntimeProject": {
+        "source": "build/native/kibo_no_runtime_tests.vcxproj",
+        "sha256": "15d43944a5293c294b14aa52baddc7d2c6a250355a25c366bff08b90f4453e71"
+      }
+    }
+  },
+  "wasmModuleSha256": {
+    "kibo.mjs": "b6d30171badc27092c0c29a0c1675ff1958ca462b48b76ba7b9c94c72063b4ab",
+    "kibo.wasm": "1248a6aeca6d4b982805c68b05de3f396cc77de8c8cc00427f5ad4ad20d34f97"
+  },
+  "espCrossCompile": {
+    "esp32s3": {
+      "elfSha256": "36bddfd84c6ddd3d1e627f43d3902d068f7114e7f6f167fd9e7b24d09004544f",
+      "binarySha256": "cbd681a9e370467b8e8f57ff96691e427d77e450415bfc5cb22cba0fe7a2b935",
+      "sdkconfig": {
+        "source": "build/refined-esp32s3/sdkconfig",
+        "sha256": "666fc414f5f602089028c44f8d0e33bb6e51f8fa2eb9a67aaec9332d2f9c826b"
+      },
+      "compileCommands": {
+        "source": "build/refined-esp32s3/compile_commands.json",
+        "sha256": "1c42835f679844f396c5b85d5f01218aeda24441d256c451a830f97392dac68f"
+      }
+    },
+    "esp32c3": {
+      "elfSha256": "01ae81a9a0e2383764ad5249cf49a946e4572d786fd88b7858d728c5f88c6570",
+      "binarySha256": "24a40de6f2e1cd756f1cc402adb49891af964636526211eb2e1bc8812caa081a",
+      "sdkconfig": {
+        "source": "build/refined-esp32c3/sdkconfig",
+        "sha256": "daa60411a209ce8ee280256dab28e33c6f0ddf632612e6b740aa3d985c1bf804"
+      },
+      "compileCommands": {
+        "source": "build/refined-esp32c3/compile_commands.json",
+        "sha256": "10a30c25045b3f5f1334e6d409d3b9b801fac6ba8cfe1fc57bc0925ef551632e"
+      }
+    }
+  },
+  "publicCost": {
+    "diagnosticOnly": true,
+    "singleProcess": true,
+    "samples": 5,
+    "cpu": 0,
+    "coreType": 64,
+    "command": [
+      "build\\qr-accuracy-public-tools\\Release\\public-cost.exe"
+    ],
+    "binarySha256": "4636468a6ff86a1c16085496e78c403454a869b0e615d5c0a5e1997de960502f",
+    "sourceCommit": "3c47462e8f094d7d8b458173ee16fbecbd9ad437",
+    "rows": [
+      {
+        "n": 2,
+        "condition": 2,
+        "phaseMedianSeconds": [
+          4.2528915405273435e-08,
+          2.902030944824219e-07,
+          1.6221160888671875e-07,
+          4.0219573974609377e-07
+        ],
+        "factorRefinedOverFactorFast": 2.4794510239212846
+      },
+      {
+        "n": 2,
+        "condition": 100000000,
+        "phaseMedianSeconds": [
+          4.243316650390625e-08,
+          2.971214294433594e-07,
+          1.6843719482421875e-07,
+          4.2096099853515626e-07
+        ],
+        "factorRefinedOverFactorFast": 2.4992163932347107
+      },
+      {
+        "n": 8,
+        "condition": 2,
+        "phaseMedianSeconds": [
+          1.95355224609375e-07,
+          3.3545654296875e-06,
+          1.876885986328125e-06,
+          5.090576171875e-06
+        ],
+        "factorRefinedOverFactorFast": 2.7122458204475315
+      },
+      {
+        "n": 8,
+        "condition": 100000000,
+        "phaseMedianSeconds": [
+          1.94940185546875e-07,
+          3.34267578125e-06,
+          1.965728759765625e-06,
+          5.1946044921875e-06
+        ],
+        "factorRefinedOverFactorFast": 2.642584571437443
+      },
+      {
+        "n": 32,
+        "condition": 2,
+        "phaseMedianSeconds": [
+          1.64017333984375e-06,
+          5.48451171875e-05,
+          3.711884765625e-05,
+          9.06859375e-05
+        ],
+        "factorRefinedOverFactorFast": 2.443123728942875
+      },
+      {
+        "n": 32,
+        "condition": 100000000,
+        "phaseMedianSeconds": [
+          1.63441162109375e-06,
+          5.4273046875e-05,
+          3.795771484375e-05,
+          9.1277734375e-05
+        ],
+        "factorRefinedOverFactorFast": 2.4047215368664245
+      },
+      {
+        "n": 128,
+        "condition": 2,
+        "phaseMedianSeconds": [
+          2.350517578125e-05,
+          0.000881828125,
+          0.0013241125,
+          0.00217825
+        ],
+        "factorRefinedOverFactorFast": 1.6450641467397973
+      },
+      {
+        "n": 128,
+        "condition": 100000000,
+        "phaseMedianSeconds": [
+          2.340390625e-05,
+          0.00087779375,
+          0.00132483125,
+          0.002175925
+        ],
+        "factorRefinedOverFactorFast": 1.6424167228845183
+      },
+      {
+        "n": 512,
+        "condition": 2,
+        "phaseMedianSeconds": [
+          0.000554678125,
+          0.01648495,
+          0.0819315,
+          0.0983008
+        ],
+        "factorRefinedOverFactorFast": 1.199792509596431
+      },
+      {
+        "n": 512,
+        "condition": 100000000,
+        "phaseMedianSeconds": [
+          0.0005552625,
+          0.0166764,
+          0.0821161,
+          0.0983357
+        ],
+        "factorRefinedOverFactorFast": 1.1975203401038286
+      }
+    ]
+  },
+  "limitations": [
+    "No physical ESP32 boards available",
+    "Public cost is one process with five samples, not formal Eigen performance acceptance",
+    "High-precision large oracle is specialized to bit-verified XOR-circulant fixtures",
+    "Remaining Eigen-only CHECK failures deliberately keep whole numerical CI red pending separate user decision"
+  ]
+}

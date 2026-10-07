@@ -1,0 +1,124 @@
+{
+  "diagnosticOnly": true,
+  "singleProcess": true,
+  "samples": 5,
+  "cpu": 0,
+  "coreType": 64,
+  "command": [
+    "build\\qr-accuracy-public-tools\\Release\\public-cost.exe"
+  ],
+  "binarySha256": "4636468a6ff86a1c16085496e78c403454a869b0e615d5c0a5e1997de960502f",
+  "sourceCommit": "3c47462e8f094d7d8b458173ee16fbecbd9ad437",
+  "rows": [
+    {
+      "n": 2,
+      "condition": 2,
+      "phaseMedianSeconds": [
+        4.2528915405273435e-08,
+        2.902030944824219e-07,
+        1.6221160888671875e-07,
+        4.0219573974609377e-07
+      ],
+      "factorRefinedOverFactorFast": 2.4794510239212846
+    },
+    {
+      "n": 2,
+      "condition": 100000000,
+      "phaseMedianSeconds": [
+        4.243316650390625e-08,
+        2.971214294433594e-07,
+        1.6843719482421875e-07,
+        4.2096099853515626e-07
+      ],
+      "factorRefinedOverFactorFast": 2.4992163932347107
+    },
+    {
+      "n": 8,
+      "condition": 2,
+      "phaseMedianSeconds": [
+        1.95355224609375e-07,
+        3.3545654296875e-06,
+        1.876885986328125e-06,
+        5.090576171875e-06
+      ],
+      "factorRefinedOverFactorFast": 2.7122458204475315
+    },
+    {
+      "n": 8,
+      "condition": 100000000,
+      "phaseMedianSeconds": [
+        1.94940185546875e-07,
+        3.34267578125e-06,
+        1.965728759765625e-06,
+        5.1946044921875e-06
+      ],
+      "factorRefinedOverFactorFast": 2.642584571437443
+    },
+    {
+      "n": 32,
+      "condition": 2,
+      "phaseMedianSeconds": [
+        1.64017333984375e-06,
+        5.48451171875e-05,
+        3.711884765625e-05,
+        9.06859375e-05
+      ],
+      "factorRefinedOverFactorFast": 2.443123728942875
+    },
+    {
+      "n": 32,
+      "condition": 100000000,
+      "phaseMedianSeconds": [
+        1.63441162109375e-06,
+        5.4273046875e-05,
+        3.795771484375e-05,
+        9.1277734375e-05
+      ],
+      "factorRefinedOverFactorFast": 2.4047215368664245
+    },
+    {
+      "n": 128,
+      "condition": 2,
+      "phaseMedianSeconds": [
+        2.350517578125e-05,
+        0.000881828125,
+        0.0013241125,
+        0.00217825
+      ],
+      "factorRefinedOverFactorFast": 1.6450641467397973
+    },
+    {
+      "n": 128,
+      "condition": 100000000,
+      "phaseMedianSeconds": [
+        2.340390625e-05,
+        0.00087779375,
+        0.00132483125,
+        0.002175925
+      ],
+      "factorRefinedOverFactorFast": 1.6424167228845183
+    },
+    {
+      "n": 512,
+      "condition": 2,
+      "phaseMedianSeconds": [
+        0.000554678125,
+        0.01648495,
+        0.0819315,
+        0.0983008
+      ],
+      "factorRefinedOverFactorFast": 1.199792509596431
+    },
+    {
+      "n": 512,
+      "condition": 100000000,
+      "phaseMedianSeconds": [
+        0.0005552625,
+        0.0166764,
+        0.0821161,
+        0.0983357
+      ],
+      "factorRefinedOverFactorFast": 1.1975203401038286
+    }
+  ]
+}
