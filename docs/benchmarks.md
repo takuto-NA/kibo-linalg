@@ -79,3 +79,8 @@ QR column格納も比較するが、setup/allocation込みの全phase測定の�
 [アセンブリから特定した32変数LLTの改善](research/eigen-assembly-gap.md)では、
 入力走査・CRT分類呼出し・panel切替を単独対照で測り、公開実装へ反映した。
 32変数の5 process再測定と周辺サイズの診断を区別して報告する。
+
+[小行列LLTの実COFF命令比較](research/small-llt-assembly.md)では、31/32/33の分岐と
+入力検査の依存関係を単独変更で比較し、公開実装`8fe28e5`を5 processで再測定した。
+SSE2幅2を維持して改善している。n128/512と2変数の確保込みに残る差も報告し、
+この結果を全shape・全phaseのEigen同等受入として扱わない。

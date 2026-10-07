@@ -50,3 +50,16 @@ The snapshot predates the four-accumulator scan and tiled symmetry validation;
 `disassemble.py` saves dumpbin output from the actual COFF objects. Its selected
 files retain machine offsets, opcodes, and relocated call names; the matching
 compiler listing and hashes identify the exact functions and objects.
+
+After a complete formal run, summarize the process medians, process p95,
+paired before/after ratios and exact 5^5 empirical bootstrap intervals:
+
+```powershell
+python tools/diagnostics/small-llt/summarize.py .scratch/small-llt-final-public
+python tools/diagnostics/small-llt/summarize.py .scratch/small-llt-final-full --full
+```
+
+The saved evidence directory can be copied: the summarizer falls back to its
+raw filenames when the original scratch path is absent. Frozen evidence is
+under `docs/validation/performance/small-llt`; its checksum index includes
+rejected controls, actual object dumps, source snapshots and CI failures.

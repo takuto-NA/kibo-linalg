@@ -1,0 +1,562 @@
+{
+  "run": "https://github.com/takuto-NA/kibo-linalg/actions/runs/37602800569",
+  "sourceCommit": "8fe28e552bfc485c4744a193cc9e677b3e2ce309",
+  "overallConclusion": "failure",
+  "esp32Physical": "unverified; user currently has no boards",
+  "pc": [
+    {
+      "compiler": "gcc",
+      "configuration": "Debug",
+      "failed": [
+        "numerical",
+        "numerical_column"
+      ],
+      "passed": [
+        "lm_reference",
+        "common_2x2",
+        "migration",
+        "core",
+        "dynamic",
+        "llt",
+        "qr",
+        "llt_scalar",
+        "qr_scalar",
+        "no_runtime",
+        "dynamic_no_runtime",
+        "allocation"
+      ],
+      "preparedAllocatorCases": [
+        [
+          2,
+          2,
+          0
+        ],
+        [
+          8,
+          2,
+          0
+        ],
+        [
+          8,
+          8,
+          0
+        ],
+        [
+          32,
+          8,
+          0
+        ],
+        [
+          32,
+          32,
+          0
+        ],
+        [
+          128,
+          32,
+          0
+        ]
+      ],
+      "commands": [
+        {
+          "directory": "/work/build/linux-gcc/Debug",
+          "command": "/usr/local/bin/g++  -I/work/include -g -std=gnu++20 -Wall -Wextra -Wpedantic -fno-exceptions -fno-rtti -o CMakeFiles/kibo_no_runtime_tests.dir/tests/no_runtime_tests.cpp.o -c /work/tests/no_runtime_tests.cpp",
+          "file": "/work/tests/no_runtime_tests.cpp",
+          "output": "CMakeFiles/kibo_no_runtime_tests.dir/tests/no_runtime_tests.cpp.o"
+        },
+        {
+          "directory": "/work/build/linux-gcc/Debug",
+          "command": "/usr/local/bin/g++ -DKIBO_WRAP_ALLOCATORS=1 -I/work/include -g -std=gnu++20 -fno-builtin-malloc -fno-builtin-calloc -fno-builtin-realloc -fno-builtin-aligned_alloc -o CMakeFiles/kibo_allocation_tests.dir/tests/allocation_tests.cpp.o -c /work/tests/allocation_tests.cpp",
+          "file": "/work/tests/allocation_tests.cpp",
+          "output": "CMakeFiles/kibo_allocation_tests.dir/tests/allocation_tests.cpp.o"
+        }
+      ],
+      "logSha256": "009f99ce8db4e8f63f7b3411d0ab5f1943d3c12c61a1a2e01dbd5cb7b645efe9",
+      "numericalFailureCounts": [
+        17,
+        17
+      ]
+    },
+    {
+      "compiler": "gcc",
+      "configuration": "Release",
+      "failed": [
+        "numerical",
+        "numerical_column"
+      ],
+      "passed": [
+        "lm_reference",
+        "common_2x2",
+        "migration",
+        "core",
+        "dynamic",
+        "llt",
+        "qr",
+        "llt_scalar",
+        "qr_scalar",
+        "no_runtime",
+        "dynamic_no_runtime",
+        "allocation"
+      ],
+      "preparedAllocatorCases": [
+        [
+          2,
+          2,
+          0
+        ],
+        [
+          8,
+          2,
+          0
+        ],
+        [
+          8,
+          8,
+          0
+        ],
+        [
+          32,
+          8,
+          0
+        ],
+        [
+          32,
+          32,
+          0
+        ],
+        [
+          128,
+          32,
+          0
+        ],
+        [
+          128,
+          128,
+          0
+        ],
+        [
+          512,
+          128,
+          0
+        ],
+        [
+          512,
+          512,
+          0
+        ],
+        [
+          2048,
+          512,
+          0
+        ]
+      ],
+      "commands": [
+        {
+          "directory": "/work/build/linux-gcc/Release",
+          "command": "/usr/local/bin/g++  -I/work/include -O3 -DNDEBUG -std=gnu++20 -Wall -Wextra -Wpedantic -fno-exceptions -fno-rtti -o CMakeFiles/kibo_no_runtime_tests.dir/tests/no_runtime_tests.cpp.o -c /work/tests/no_runtime_tests.cpp",
+          "file": "/work/tests/no_runtime_tests.cpp",
+          "output": "CMakeFiles/kibo_no_runtime_tests.dir/tests/no_runtime_tests.cpp.o"
+        },
+        {
+          "directory": "/work/build/linux-gcc/Release",
+          "command": "/usr/local/bin/g++ -DKIBO_WRAP_ALLOCATORS=1 -I/work/include -O3 -DNDEBUG -std=gnu++20 -fno-builtin-malloc -fno-builtin-calloc -fno-builtin-realloc -fno-builtin-aligned_alloc -o CMakeFiles/kibo_allocation_tests.dir/tests/allocation_tests.cpp.o -c /work/tests/allocation_tests.cpp",
+          "file": "/work/tests/allocation_tests.cpp",
+          "output": "CMakeFiles/kibo_allocation_tests.dir/tests/allocation_tests.cpp.o"
+        }
+      ],
+      "logSha256": "367361877c2a9ebab6d0f69aa0e23cfa49d55ca550673ed7f0d73b30298bf74d",
+      "numericalFailureCounts": [
+        19,
+        18
+      ]
+    },
+    {
+      "compiler": "clang",
+      "configuration": "Debug",
+      "failed": [
+        "numerical",
+        "numerical_column"
+      ],
+      "passed": [
+        "lm_reference",
+        "common_2x2",
+        "migration",
+        "core",
+        "dynamic",
+        "llt",
+        "qr",
+        "llt_scalar",
+        "qr_scalar",
+        "no_runtime",
+        "dynamic_no_runtime",
+        "allocation"
+      ],
+      "preparedAllocatorCases": [
+        [
+          2,
+          2,
+          0
+        ],
+        [
+          8,
+          2,
+          0
+        ],
+        [
+          8,
+          8,
+          0
+        ],
+        [
+          32,
+          8,
+          0
+        ],
+        [
+          32,
+          32,
+          0
+        ],
+        [
+          128,
+          32,
+          0
+        ]
+      ],
+      "commands": [
+        {
+          "directory": "/work/build/linux-clang/Debug",
+          "command": "/work/.cache/tools/LLVM-20.1.8-Linux-X64/bin/clang++  -I/work/include -stdlib=libc++ -g -std=gnu++20 -Wall -Wextra -Wpedantic -fno-exceptions -fno-rtti -o CMakeFiles/kibo_no_runtime_tests.dir/tests/no_runtime_tests.cpp.o -c /work/tests/no_runtime_tests.cpp",
+          "file": "/work/tests/no_runtime_tests.cpp",
+          "output": "CMakeFiles/kibo_no_runtime_tests.dir/tests/no_runtime_tests.cpp.o"
+        },
+        {
+          "directory": "/work/build/linux-clang/Debug",
+          "command": "/work/.cache/tools/LLVM-20.1.8-Linux-X64/bin/clang++ -DKIBO_WRAP_ALLOCATORS=1 -I/work/include -stdlib=libc++ -g -std=gnu++20 -fno-builtin-malloc -fno-builtin-calloc -fno-builtin-realloc -fno-builtin-aligned_alloc -o CMakeFiles/kibo_allocation_tests.dir/tests/allocation_tests.cpp.o -c /work/tests/allocation_tests.cpp",
+          "file": "/work/tests/allocation_tests.cpp",
+          "output": "CMakeFiles/kibo_allocation_tests.dir/tests/allocation_tests.cpp.o"
+        }
+      ],
+      "logSha256": "338cc52b63855664f55cb6626c1c752c4c5b0844d21a19aaa88bc048461d2537",
+      "numericalFailureCounts": [
+        17,
+        17
+      ]
+    },
+    {
+      "compiler": "clang",
+      "configuration": "Release",
+      "failed": [
+        "numerical",
+        "numerical_column"
+      ],
+      "passed": [
+        "lm_reference",
+        "common_2x2",
+        "migration",
+        "core",
+        "dynamic",
+        "llt",
+        "qr",
+        "llt_scalar",
+        "qr_scalar",
+        "no_runtime",
+        "dynamic_no_runtime",
+        "allocation"
+      ],
+      "preparedAllocatorCases": [
+        [
+          2,
+          2,
+          0
+        ],
+        [
+          8,
+          2,
+          0
+        ],
+        [
+          8,
+          8,
+          0
+        ],
+        [
+          32,
+          8,
+          0
+        ],
+        [
+          32,
+          32,
+          0
+        ],
+        [
+          128,
+          32,
+          0
+        ],
+        [
+          128,
+          128,
+          0
+        ],
+        [
+          512,
+          128,
+          0
+        ],
+        [
+          512,
+          512,
+          0
+        ],
+        [
+          2048,
+          512,
+          0
+        ]
+      ],
+      "commands": [
+        {
+          "directory": "/work/build/linux-clang/Release",
+          "command": "/work/.cache/tools/LLVM-20.1.8-Linux-X64/bin/clang++  -I/work/include -stdlib=libc++ -O3 -DNDEBUG -std=gnu++20 -Wall -Wextra -Wpedantic -fno-exceptions -fno-rtti -o CMakeFiles/kibo_no_runtime_tests.dir/tests/no_runtime_tests.cpp.o -c /work/tests/no_runtime_tests.cpp",
+          "file": "/work/tests/no_runtime_tests.cpp",
+          "output": "CMakeFiles/kibo_no_runtime_tests.dir/tests/no_runtime_tests.cpp.o"
+        },
+        {
+          "directory": "/work/build/linux-clang/Release",
+          "command": "/work/.cache/tools/LLVM-20.1.8-Linux-X64/bin/clang++ -DKIBO_WRAP_ALLOCATORS=1 -I/work/include -stdlib=libc++ -O3 -DNDEBUG -std=gnu++20 -fno-builtin-malloc -fno-builtin-calloc -fno-builtin-realloc -fno-builtin-aligned_alloc -o CMakeFiles/kibo_allocation_tests.dir/tests/allocation_tests.cpp.o -c /work/tests/allocation_tests.cpp",
+          "file": "/work/tests/allocation_tests.cpp",
+          "output": "CMakeFiles/kibo_allocation_tests.dir/tests/allocation_tests.cpp.o"
+        }
+      ],
+      "logSha256": "11d2c046440db57aed82d7de5e5468333741426479e5a2a2985eea2e4c42b4b3",
+      "numericalFailureCounts": [
+        19,
+        18
+      ]
+    },
+    {
+      "compiler": "clang-sanitized",
+      "configuration": "Debug",
+      "failed": [
+        "numerical",
+        "numerical_column"
+      ],
+      "passed": [
+        "lm_reference",
+        "common_2x2",
+        "migration",
+        "core",
+        "dynamic",
+        "llt",
+        "qr",
+        "llt_scalar",
+        "qr_scalar",
+        "no_runtime",
+        "dynamic_no_runtime",
+        "allocation"
+      ],
+      "preparedAllocatorCases": [
+        [
+          2,
+          2,
+          0
+        ],
+        [
+          8,
+          2,
+          0
+        ],
+        [
+          8,
+          8,
+          0
+        ],
+        [
+          32,
+          8,
+          0
+        ],
+        [
+          32,
+          32,
+          0
+        ],
+        [
+          128,
+          32,
+          0
+        ]
+      ],
+      "commands": [
+        {
+          "directory": "/work/build/linux-clang-sanitized/Debug",
+          "command": "/work/.cache/tools/LLVM-20.1.8-Linux-X64/bin/clang++  -I/work/include -stdlib=libc++ -fsanitize=address,undefined -fno-omit-frame-pointer -g -std=gnu++20 -Wall -Wextra -Wpedantic -fno-exceptions -fno-rtti -o CMakeFiles/kibo_no_runtime_tests.dir/tests/no_runtime_tests.cpp.o -c /work/tests/no_runtime_tests.cpp",
+          "file": "/work/tests/no_runtime_tests.cpp",
+          "output": "CMakeFiles/kibo_no_runtime_tests.dir/tests/no_runtime_tests.cpp.o"
+        },
+        {
+          "directory": "/work/build/linux-clang-sanitized/Debug",
+          "command": "/work/.cache/tools/LLVM-20.1.8-Linux-X64/bin/clang++ -DKIBO_WRAP_ALLOCATORS=1 -I/work/include -stdlib=libc++ -fsanitize=address,undefined -fno-omit-frame-pointer -g -std=gnu++20 -fno-builtin-malloc -fno-builtin-calloc -fno-builtin-realloc -fno-builtin-aligned_alloc -o CMakeFiles/kibo_allocation_tests.dir/tests/allocation_tests.cpp.o -c /work/tests/allocation_tests.cpp",
+          "file": "/work/tests/allocation_tests.cpp",
+          "output": "CMakeFiles/kibo_allocation_tests.dir/tests/allocation_tests.cpp.o"
+        }
+      ],
+      "logSha256": "51c848e61e58fd2ff0eb193b85d214c6f2e64472df43b19b271f2a9df14645f5",
+      "numericalFailureCounts": [
+        17,
+        17
+      ]
+    },
+    {
+      "compiler": "clang-sanitized",
+      "configuration": "Release",
+      "failed": [
+        "numerical",
+        "numerical_column"
+      ],
+      "passed": [
+        "lm_reference",
+        "common_2x2",
+        "migration",
+        "core",
+        "dynamic",
+        "llt",
+        "qr",
+        "llt_scalar",
+        "qr_scalar",
+        "no_runtime",
+        "dynamic_no_runtime",
+        "allocation"
+      ],
+      "preparedAllocatorCases": [
+        [
+          2,
+          2,
+          0
+        ],
+        [
+          8,
+          2,
+          0
+        ],
+        [
+          8,
+          8,
+          0
+        ],
+        [
+          32,
+          8,
+          0
+        ],
+        [
+          32,
+          32,
+          0
+        ],
+        [
+          128,
+          32,
+          0
+        ],
+        [
+          128,
+          128,
+          0
+        ],
+        [
+          512,
+          128,
+          0
+        ],
+        [
+          512,
+          512,
+          0
+        ],
+        [
+          2048,
+          512,
+          0
+        ]
+      ],
+      "commands": [
+        {
+          "directory": "/work/build/linux-clang-sanitized/Release",
+          "command": "/work/.cache/tools/LLVM-20.1.8-Linux-X64/bin/clang++  -I/work/include -stdlib=libc++ -fsanitize=address,undefined -fno-omit-frame-pointer -O3 -DNDEBUG -std=gnu++20 -Wall -Wextra -Wpedantic -fno-exceptions -fno-rtti -o CMakeFiles/kibo_no_runtime_tests.dir/tests/no_runtime_tests.cpp.o -c /work/tests/no_runtime_tests.cpp",
+          "file": "/work/tests/no_runtime_tests.cpp",
+          "output": "CMakeFiles/kibo_no_runtime_tests.dir/tests/no_runtime_tests.cpp.o"
+        },
+        {
+          "directory": "/work/build/linux-clang-sanitized/Release",
+          "command": "/work/.cache/tools/LLVM-20.1.8-Linux-X64/bin/clang++ -DKIBO_WRAP_ALLOCATORS=1 -I/work/include -stdlib=libc++ -fsanitize=address,undefined -fno-omit-frame-pointer -O3 -DNDEBUG -std=gnu++20 -fno-builtin-malloc -fno-builtin-calloc -fno-builtin-realloc -fno-builtin-aligned_alloc -o CMakeFiles/kibo_allocation_tests.dir/tests/allocation_tests.cpp.o -c /work/tests/allocation_tests.cpp",
+          "file": "/work/tests/allocation_tests.cpp",
+          "output": "CMakeFiles/kibo_allocation_tests.dir/tests/allocation_tests.cpp.o"
+        }
+      ],
+      "logSha256": "ab735d17567ea82e668d7dd32bfa27b8eae2ee8dd1a2952340f2460280d3c6c4",
+      "numericalFailureCounts": [
+        19,
+        18
+      ]
+    },
+    {
+      "compiler": "msvc",
+      "configuration": "Debug",
+      "failed": [
+        "numerical",
+        "numerical_column"
+      ],
+      "allocation": "passed",
+      "logSha256": "971b0b05c9e5a7266e2ac6742211ea42ab385d9494962f0a2a8c4895deb464c9"
+    },
+    {
+      "compiler": "msvc",
+      "configuration": "Release",
+      "failed": [
+        "numerical",
+        "numerical_column"
+      ],
+      "allocation": "skipped",
+      "logSha256": "4154c73a6c9f465e0a74262591faeff77c9bd8b3b204bccf443b6d2e3e0ed0ad"
+    }
+  ],
+  "firmware": [
+    {
+      "target": "esp32s3",
+      "sha256": {
+        "compile_commands.json": "2f0b78777108ae044dbf9d514fd18121854d24d292eaf6ea9ba346b7ca6cfc7a",
+        "firmware.sha256": "d62efb08bff198776cda36dd8a971280293e3fa35d1f67035399a8d68a38acb3",
+        "kibo_2x2.bin": "85146b3328b2ff9ba81e70fe451dbc0a953bc41c886fec1fec9371745390f027",
+        "kibo_2x2.elf": "b9d3009f06c7c7445ea24d8637451339772477bfa2392bff77d0ef26ec4a9f5b",
+        "kibo_2x2.map": "f559bdcb63f24368d7e44599ea9166d9d56ce9e375c01ee2d13d01587b1ade1a",
+        "project_description.json": "c14eced1808ec52932ddfb36bd365ea0d830ebb8c16751795473c9a4f229b7bf",
+        "sdkconfig": "666fc414f5f602089028c44f8d0e33bb6e51f8fa2eb9a67aaec9332d2f9c826b"
+      },
+      "actualCommand": "/opt/esp/tools/xtensa-esp-elf/esp-15.2.0_20251204/xtensa-esp-elf/bin/xtensa-esp32s3-elf-g++ -DESP_PLATFORM -DIDF_VER=\\\"v6.1\\\" -DSOC_MMU_PAGE_SIZE=CONFIG_MMU_PAGE_SIZE -DSOC_XTAL_FREQ_MHZ=CONFIG_XTAL_FREQ -D_GLIBCXX_HAVE_POSIX_SEMAPHORE -D_GLIBCXX_USE_POSIX_SEMAPHORE -D_GNU_SOURCE -D_POSIX_READER_WRITER_LOCKS -I/work/build/esp32s3/config -I/work/examples/esp32/main -I/work/examples/esp32/main/../../../include -I/work/examples/esp32/main/../.. -I/opt/esp/idf/components/esp_libc/platform_include -I/opt/esp/idf/components/freertos/config/include -I/opt/esp/idf/components/freertos/config/include/freertos -I/opt/esp/idf/components/freertos/config/xtensa/include -I/opt/esp/idf/components/freertos/FreeRTOS-Kernel/include -I/opt/esp/idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/include -I/opt/esp/idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/include/freertos -I/opt/esp/idf/components/freertos/esp_additions/include -I/opt/esp/idf/components/esp_hw_support/include -I/opt/esp/idf/components/esp_hw_support/include/soc -I/opt/esp/idf/components/esp_hw_support/ldo/include -I/opt/esp/idf/components/esp_hw_support/debug_probe/include -I/opt/esp/idf/components/esp_hw_support/etm/include -I/opt/esp/idf/components/esp_hw_support/mspi/mspi_timing_tuning/include -I/opt/esp/idf/components/esp_hw_support/mspi/mspi_timing_tuning/tuning_scheme_impl/include -I/opt/esp/idf/components/esp_hw_support/mspi/mspi_intr/include -I/opt/esp/idf/components/esp_hw_support/power_supply/include -I/opt/esp/idf/components/esp_hw_support/modem/include -I/opt/esp/idf/components/esp_hw_support/include/soc/esp32s3 -I/opt/esp/idf/components/esp_hw_support/port/esp32s3/. -I/opt/esp/idf/components/esp_hw_support/port/esp32s3/include -I/opt/esp/idf/components/esp_hw_support/mspi/mspi_timing_tuning/port/esp32s3/. -I/opt/esp/idf/components/esp_hw_support/mspi/mspi_timing_tuning/port/esp32s3/include -I/opt/esp/idf/components/heap/include -I/opt/esp/idf/components/heap/tlsf -I/opt/esp/idf/components/log/include -I/opt/esp/idf/components/soc/include -I/opt/esp/idf/components/soc/esp32s3 -I/opt/esp/idf/components/soc/esp32s3/include -I/opt/esp/idf/components/soc/esp32s3/register -I/opt/esp/idf/components/hal/platform_port/include -I/opt/esp/idf/components/hal/esp32s3/include -I/opt/esp/idf/components/hal/include -I/opt/esp/idf/components/esp_rom/include -I/opt/esp/idf/components/esp_rom/esp32s3/include -I/opt/esp/idf/components/esp_rom/esp32s3/include/esp32s3 -I/opt/esp/idf/components/esp_rom/esp32s3 -I/opt/esp/idf/components/esp_common/include -I/opt/esp/idf/components/esp_system/include -I/opt/esp/idf/components/esp_system/port/soc -I/opt/esp/idf/components/esp_system/port/include/private -I/opt/esp/idf/components/esp_stdio/include -I/opt/esp/idf/components/xtensa/esp32s3/include -I/opt/esp/idf/components/xtensa/include -I/opt/esp/idf/components/xtensa/deprecated_include -I/opt/esp/idf/components/esp_hal_gpio/include -I/opt/esp/idf/components/esp_hal_gpio/esp32s3/include -I/opt/esp/idf/components/esp_hal_usb/include -I/opt/esp/idf/components/esp_hal_usb/esp32s3/include -I/opt/esp/idf/components/esp_hal_pmu/include -I/opt/esp/idf/components/esp_hal_pmu/esp32s3/include -I/opt/esp/idf/components/esp_hal_regi2c/include -I/opt/esp/idf/components/esp_hal_regi2c/esp32s3/include -I/opt/esp/idf/components/esp_hal_uart/include -I/opt/esp/idf/components/esp_hal_uart/esp32s3/include -I/opt/esp/idf/components/esp_hal_ana_conv/include -I/opt/esp/idf/components/esp_hal_ana_conv/esp32s3/include -I/opt/esp/idf/components/esp_hal_dma/include -I/opt/esp/idf/components/esp_hal_dma/esp32s3/include -I/opt/esp/idf/components/lwip/include -I/opt/esp/idf/components/lwip/include/apps -I/opt/esp/idf/components/lwip/lwip/src/include -I/opt/esp/idf/components/lwip/port/include -I/opt/esp/idf/components/lwip/port/freertos/include -I/opt/esp/idf/components/lwip/port/esp32xx/include -I/opt/esp/idf/components/lwip/port/esp32xx/include/arch -I/opt/esp/idf/components/lwip/port/esp32xx/include/sys @\"/work/build/esp32s3/toolchain/cxxflags\" -std=c++20 -fdiagnostics-color=always -ffunction-sections -fdata-sections -Wall -Werror -Wno-error=unused-function -Wno-error=unused-variable -Wno-error=unused-but-set-variable -Wno-error=deprecated-declarations -Wextra -Wno-error=extra -Wno-unused-parameter -Wno-sign-compare -Wno-enum-conversion -gdwarf-4 -ggdb -Og -fno-shrink-wrap -fmacro-prefix-map=/work/examples/esp32=. -fmacro-prefix-map=/opt/esp/idf=/IDF -fstrict-volatile-bitfields -fno-jump-tables -fno-tree-switch-conversion -std=gnu++26 -fno-exceptions -fuse-cxa-atexit -fno-rtti -std=c++20 -o esp-idf/main/CMakeFiles/__idf_main.dir/main.cpp.obj -c /work/examples/esp32/main/main.cpp"
+    },
+    {
+      "target": "esp32c3",
+      "sha256": {
+        "compile_commands.json": "4e76998c33e1aaf82d8c594bf215dd0526a96199364cc36a5011d41d193892da",
+        "firmware.sha256": "674b3acb8c5c515e862b2975a364ea509424ee4ae92748dc78519c10f29aa44f",
+        "kibo_2x2.bin": "aa6794233aab626c313996434533c36f83e04d57f9f612231b88364a20e40b53",
+        "kibo_2x2.elf": "52fe4d4155c0456787d6d341fca517a46ab87c660960cac4d1f5c35cac4c2134",
+        "kibo_2x2.map": "6a701583fb89e24b69604d9bbf6c63aad2621413bf7033bcbd2b9a26f39bb28c",
+        "project_description.json": "9fa21130c55dcb7caa370a25e6416a12b8697f041ea82735f4c3cf8bf60c5803",
+        "sdkconfig": "daa60411a209ce8ee280256dab28e33c6f0ddf632612e6b740aa3d985c1bf804"
+      },
+      "actualCommand": "/opt/esp/tools/riscv32-esp-elf/esp-15.2.0_20251204/riscv32-esp-elf/bin/riscv32-esp-elf-g++ -DESP_PLATFORM -DIDF_VER=\\\"v6.1\\\" -DSOC_MMU_PAGE_SIZE=CONFIG_MMU_PAGE_SIZE -DSOC_XTAL_FREQ_MHZ=CONFIG_XTAL_FREQ -D_GLIBCXX_HAVE_POSIX_SEMAPHORE -D_GLIBCXX_USE_POSIX_SEMAPHORE -D_GNU_SOURCE -D_POSIX_READER_WRITER_LOCKS -I/work/build/esp32c3/config -I/work/examples/esp32/main -I/work/examples/esp32/main/../../../include -I/work/examples/esp32/main/../.. -I/opt/esp/idf/components/esp_libc/platform_include -I/opt/esp/idf/components/freertos/config/include -I/opt/esp/idf/components/freertos/config/include/freertos -I/opt/esp/idf/components/freertos/config/riscv/include -I/opt/esp/idf/components/freertos/FreeRTOS-Kernel/include -I/opt/esp/idf/components/freertos/FreeRTOS-Kernel/portable/riscv/include -I/opt/esp/idf/components/freertos/FreeRTOS-Kernel/portable/riscv/include/freertos -I/opt/esp/idf/components/freertos/esp_additions/include -I/opt/esp/idf/components/esp_hw_support/include -I/opt/esp/idf/components/esp_hw_support/include/soc -I/opt/esp/idf/components/esp_hw_support/ldo/include -I/opt/esp/idf/components/esp_hw_support/debug_probe/include -I/opt/esp/idf/components/esp_hw_support/etm/include -I/opt/esp/idf/components/esp_hw_support/mspi/mspi_timing_tuning/include -I/opt/esp/idf/components/esp_hw_support/mspi/mspi_timing_tuning/tuning_scheme_impl/include -I/opt/esp/idf/components/esp_hw_support/mspi/mspi_intr/include -I/opt/esp/idf/components/esp_hw_support/power_supply/include -I/opt/esp/idf/components/esp_hw_support/modem/include -I/opt/esp/idf/components/esp_hw_support/include/soc/esp32c3 -I/opt/esp/idf/components/esp_hw_support/port/esp32c3/. -I/opt/esp/idf/components/esp_hw_support/port/esp32c3/include -I/opt/esp/idf/components/heap/include -I/opt/esp/idf/components/heap/tlsf -I/opt/esp/idf/components/log/include -I/opt/esp/idf/components/soc/include -I/opt/esp/idf/components/soc/esp32c3 -I/opt/esp/idf/components/soc/esp32c3/include -I/opt/esp/idf/components/soc/esp32c3/register -I/opt/esp/idf/components/hal/platform_port/include -I/opt/esp/idf/components/hal/esp32c3/include -I/opt/esp/idf/components/hal/include -I/opt/esp/idf/components/esp_rom/include -I/opt/esp/idf/components/esp_rom/esp32c3/include -I/opt/esp/idf/components/esp_rom/esp32c3/include/esp32c3 -I/opt/esp/idf/components/esp_rom/esp32c3 -I/opt/esp/idf/components/esp_common/include -I/opt/esp/idf/components/esp_system/include -I/opt/esp/idf/components/esp_system/port/soc -I/opt/esp/idf/components/esp_system/port/include/riscv -I/opt/esp/idf/components/esp_system/port/include/private -I/opt/esp/idf/components/esp_stdio/include -I/opt/esp/idf/components/riscv/include -I/opt/esp/idf/components/esp_hal_gpio/include -I/opt/esp/idf/components/esp_hal_gpio/esp32c3/include -I/opt/esp/idf/components/esp_hal_usb/include -I/opt/esp/idf/components/esp_hal_usb/esp32c3/include -I/opt/esp/idf/components/esp_hal_pmu/include -I/opt/esp/idf/components/esp_hal_pmu/esp32c3/include -I/opt/esp/idf/components/esp_hal_regi2c/include -I/opt/esp/idf/components/esp_hal_regi2c/esp32c3/include -I/opt/esp/idf/components/esp_hal_uart/include -I/opt/esp/idf/components/esp_hal_uart/esp32c3/include -I/opt/esp/idf/components/esp_hal_ana_conv/include -I/opt/esp/idf/components/esp_hal_ana_conv/esp32c3/include -I/opt/esp/idf/components/esp_hal_dma/include -I/opt/esp/idf/components/esp_hal_dma/esp32c3/include -I/opt/esp/idf/components/lwip/include -I/opt/esp/idf/components/lwip/include/apps -I/opt/esp/idf/components/lwip/lwip/src/include -I/opt/esp/idf/components/lwip/port/include -I/opt/esp/idf/components/lwip/port/freertos/include -I/opt/esp/idf/components/lwip/port/esp32xx/include -I/opt/esp/idf/components/lwip/port/esp32xx/include/arch -I/opt/esp/idf/components/lwip/port/esp32xx/include/sys @\"/work/build/esp32c3/toolchain/cxxflags\" -std=c++20 -fdiagnostics-color=always -ffunction-sections -fdata-sections -Wall -Werror -Wno-error=unused-function -Wno-error=unused-variable -Wno-error=unused-but-set-variable -Wno-error=deprecated-declarations -Wextra -Wno-error=extra -Wno-unused-parameter -Wno-sign-compare -Wno-enum-conversion -gdwarf-4 -ggdb -Og -fno-shrink-wrap -fmacro-prefix-map=/work/examples/esp32=. -fmacro-prefix-map=/opt/esp/idf=/IDF -fstrict-volatile-bitfields -fno-jump-tables -fno-tree-switch-conversion -std=gnu++26 -fno-exceptions -fuse-cxa-atexit -fno-rtti -std=c++20 -o esp-idf/main/CMakeFiles/__idf_main.dir/main.cpp.obj -c /work/examples/esp32/main/main.cpp"
+    }
+  ],
+  "wasm": {
+    "sha256": {
+      "browser-results.json": "4a4e2d86d21fb975873b62f3e0b5a50e12dc043b93245ece7b4d6483099e80b1",
+      "kibo.mjs": "36e58ab6dee51b1fa98c0e1f46f6ece5dfb4417bd32b6ea098aaf62bd5c30ac8",
+      "kibo.wasm": "621dc78546bdc15c2953223138d9d39664b2a1c18bbe6fc0ca278cc5a57e87ed",
+      "node-results.json": "dce57b5f0ee1c6a4c2853fbabf6dd28985af1f8ec028be99ed7293ddd3b679e9"
+    }
+  }
+}

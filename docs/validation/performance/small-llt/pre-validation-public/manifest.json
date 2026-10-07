@@ -1,0 +1,1695 @@
+{
+  "sourceBaseline": "3c7d2c8b54701e1e5f826bfb171d5a442e14d10a",
+  "sourceHashes": {
+    "include\\kibo\\dynamic_matrix.hpp": "535afd0c96607a65e13711bb0ea94a94d3791eb170fa54db5d1e220e12b103e6",
+    "include\\kibo\\linalg.hpp": "52bf606a0f6ac2e21a83878e7b029b4c65935e25f5fc90387b1cf2ef74572634",
+    "include\\kibo\\llt.hpp": "36e36e3225b0cdc480b260a755ebd9f1a88e21dc2bde902d1a3e95af04c6fd54",
+    "include\\kibo\\qr.hpp": "04b1efdb4e2869ddc75ad6075874a8ab15d29051e79a24a19765fad1b50193ae",
+    "include\\kibo\\workspace.hpp": "e74b13bb57d83bb0ad7b1c8f271c40db825a2d1b380f0224639a9d94ee8c48d0",
+    "include\\kibo\\detail\\row_kernels.hpp": "ed07f0f904dace2145a871a23402a8b28d7da6cd35c22e77a741e4a28ce6ccb9"
+  },
+  "commands": [
+    {
+      "command": [
+        "build\\small-llt\\Release\\before_solver.exe",
+        "0",
+        "30",
+        "31",
+        "31"
+      ],
+      "exit": 1,
+      "output": ".scratch\\small-llt-paired\\before_solver-n31-m31-p0.jsonl",
+      "binarySha256": "ac2255f7922f52be6608ab6503721fb46e35cf876ea8c219e83dd3e1abc5189c"
+    },
+    {
+      "command": [
+        "build\\small-llt\\Release\\actual_solver.exe",
+        "0",
+        "30",
+        "31",
+        "31"
+      ],
+      "exit": 0,
+      "output": ".scratch\\small-llt-paired\\actual_solver-n31-m31-p0.jsonl",
+      "binarySha256": "0b46f7cc4f98164d660f83d4c0c23c3a61a25b3e17af4a208e7da5653d99654e"
+    },
+    {
+      "command": [
+        "build\\small-llt\\Release\\actual_solver.exe",
+        "1",
+        "30",
+        "31",
+        "31"
+      ],
+      "exit": 0,
+      "output": ".scratch\\small-llt-paired\\actual_solver-n31-m31-p1.jsonl",
+      "binarySha256": "0b46f7cc4f98164d660f83d4c0c23c3a61a25b3e17af4a208e7da5653d99654e"
+    },
+    {
+      "command": [
+        "build\\small-llt\\Release\\before_solver.exe",
+        "1",
+        "30",
+        "31",
+        "31"
+      ],
+      "exit": 1,
+      "output": ".scratch\\small-llt-paired\\before_solver-n31-m31-p1.jsonl",
+      "binarySha256": "ac2255f7922f52be6608ab6503721fb46e35cf876ea8c219e83dd3e1abc5189c"
+    },
+    {
+      "command": [
+        "build\\small-llt\\Release\\before_solver.exe",
+        "2",
+        "30",
+        "31",
+        "31"
+      ],
+      "exit": 1,
+      "output": ".scratch\\small-llt-paired\\before_solver-n31-m31-p2.jsonl",
+      "binarySha256": "ac2255f7922f52be6608ab6503721fb46e35cf876ea8c219e83dd3e1abc5189c"
+    },
+    {
+      "command": [
+        "build\\small-llt\\Release\\actual_solver.exe",
+        "2",
+        "30",
+        "31",
+        "31"
+      ],
+      "exit": 0,
+      "output": ".scratch\\small-llt-paired\\actual_solver-n31-m31-p2.jsonl",
+      "binarySha256": "0b46f7cc4f98164d660f83d4c0c23c3a61a25b3e17af4a208e7da5653d99654e"
+    },
+    {
+      "command": [
+        "build\\small-llt\\Release\\actual_solver.exe",
+        "3",
+        "30",
+        "31",
+        "31"
+      ],
+      "exit": 0,
+      "output": ".scratch\\small-llt-paired\\actual_solver-n31-m31-p3.jsonl",
+      "binarySha256": "0b46f7cc4f98164d660f83d4c0c23c3a61a25b3e17af4a208e7da5653d99654e"
+    },
+    {
+      "command": [
+        "build\\small-llt\\Release\\before_solver.exe",
+        "3",
+        "30",
+        "31",
+        "31"
+      ],
+      "exit": 1,
+      "output": ".scratch\\small-llt-paired\\before_solver-n31-m31-p3.jsonl",
+      "binarySha256": "ac2255f7922f52be6608ab6503721fb46e35cf876ea8c219e83dd3e1abc5189c"
+    },
+    {
+      "command": [
+        "build\\small-llt\\Release\\before_solver.exe",
+        "4",
+        "30",
+        "31",
+        "31"
+      ],
+      "exit": 1,
+      "output": ".scratch\\small-llt-paired\\before_solver-n31-m31-p4.jsonl",
+      "binarySha256": "ac2255f7922f52be6608ab6503721fb46e35cf876ea8c219e83dd3e1abc5189c"
+    },
+    {
+      "command": [
+        "build\\small-llt\\Release\\actual_solver.exe",
+        "4",
+        "30",
+        "31",
+        "31"
+      ],
+      "exit": 0,
+      "output": ".scratch\\small-llt-paired\\actual_solver-n31-m31-p4.jsonl",
+      "binarySha256": "0b46f7cc4f98164d660f83d4c0c23c3a61a25b3e17af4a208e7da5653d99654e"
+    },
+    {
+      "command": [
+        "build\\small-llt\\Release\\before_solver.exe",
+        "0",
+        "30",
+        "31",
+        "124"
+      ],
+      "exit": 1,
+      "output": ".scratch\\small-llt-paired\\before_solver-n31-m124-p0.jsonl",
+      "binarySha256": "ac2255f7922f52be6608ab6503721fb46e35cf876ea8c219e83dd3e1abc5189c"
+    },
+    {
+      "command": [
+        "build\\small-llt\\Release\\actual_solver.exe",
+        "0",
+        "30",
+        "31",
+        "124"
+      ],
+      "exit": 0,
+      "output": ".scratch\\small-llt-paired\\actual_solver-n31-m124-p0.jsonl",
+      "binarySha256": "0b46f7cc4f98164d660f83d4c0c23c3a61a25b3e17af4a208e7da5653d99654e"
+    },
+    {
+      "command": [
+        "build\\small-llt\\Release\\actual_solver.exe",
+        "1",
+        "30",
+        "31",
+        "124"
+      ],
+      "exit": 0,
+      "output": ".scratch\\small-llt-paired\\actual_solver-n31-m124-p1.jsonl",
+      "binarySha256": "0b46f7cc4f98164d660f83d4c0c23c3a61a25b3e17af4a208e7da5653d99654e"
+    },
+    {
+      "command": [
+        "build\\small-llt\\Release\\before_solver.exe",
+        "1",
+        "30",
+        "31",
+        "124"
+      ],
+      "exit": 1,
+      "output": ".scratch\\small-llt-paired\\before_solver-n31-m124-p1.jsonl",
+      "binarySha256": "ac2255f7922f52be6608ab6503721fb46e35cf876ea8c219e83dd3e1abc5189c"
+    },
+    {
+      "command": [
+        "build\\small-llt\\Release\\before_solver.exe",
+        "2",
+        "30",
+        "31",
+        "124"
+      ],
+      "exit": 1,
+      "output": ".scratch\\small-llt-paired\\before_solver-n31-m124-p2.jsonl",
+      "binarySha256": "ac2255f7922f52be6608ab6503721fb46e35cf876ea8c219e83dd3e1abc5189c"
+    },
+    {
+      "command": [
+        "build\\small-llt\\Release\\actual_solver.exe",
+        "2",
+        "30",
+        "31",
+        "124"
+      ],
+      "exit": 0,
+      "output": ".scratch\\small-llt-paired\\actual_solver-n31-m124-p2.jsonl",
+      "binarySha256": "0b46f7cc4f98164d660f83d4c0c23c3a61a25b3e17af4a208e7da5653d99654e"
+    },
+    {
+      "command": [
+        "build\\small-llt\\Release\\actual_solver.exe",
+        "3",
+        "30",
+        "31",
+        "124"
+      ],
+      "exit": 0,
+      "output": ".scratch\\small-llt-paired\\actual_solver-n31-m124-p3.jsonl",
+      "binarySha256": "0b46f7cc4f98164d660f83d4c0c23c3a61a25b3e17af4a208e7da5653d99654e"
+    },
+    {
+      "command": [
+        "build\\small-llt\\Release\\before_solver.exe",
+        "3",
+        "30",
+        "31",
+        "124"
+      ],
+      "exit": 1,
+      "output": ".scratch\\small-llt-paired\\before_solver-n31-m124-p3.jsonl",
+      "binarySha256": "ac2255f7922f52be6608ab6503721fb46e35cf876ea8c219e83dd3e1abc5189c"
+    },
+    {
+      "command": [
+        "build\\small-llt\\Release\\before_solver.exe",
+        "4",
+        "30",
+        "31",
+        "124"
+      ],
+      "exit": 1,
+      "output": ".scratch\\small-llt-paired\\before_solver-n31-m124-p4.jsonl",
+      "binarySha256": "ac2255f7922f52be6608ab6503721fb46e35cf876ea8c219e83dd3e1abc5189c"
+    },
+    {
+      "command": [
+        "build\\small-llt\\Release\\actual_solver.exe",
+        "4",
+        "30",
+        "31",
+        "124"
+      ],
+      "exit": 0,
+      "output": ".scratch\\small-llt-paired\\actual_solver-n31-m124-p4.jsonl",
+      "binarySha256": "0b46f7cc4f98164d660f83d4c0c23c3a61a25b3e17af4a208e7da5653d99654e"
+    },
+    {
+      "command": [
+        "build\\small-llt\\Release\\before_solver.exe",
+        "0",
+        "30",
+        "16",
+        "16"
+      ],
+      "exit": 1,
+      "output": ".scratch\\small-llt-paired\\before_solver-n16-m16-p0.jsonl",
+      "binarySha256": "ac2255f7922f52be6608ab6503721fb46e35cf876ea8c219e83dd3e1abc5189c"
+    },
+    {
+      "command": [
+        "build\\small-llt\\Release\\actual_solver.exe",
+        "0",
+        "30",
+        "16",
+        "16"
+      ],
+      "exit": 0,
+      "output": ".scratch\\small-llt-paired\\actual_solver-n16-m16-p0.jsonl",
+      "binarySha256": "0b46f7cc4f98164d660f83d4c0c23c3a61a25b3e17af4a208e7da5653d99654e"
+    },
+    {
+      "command": [
+        "build\\small-llt\\Release\\actual_solver.exe",
+        "1",
+        "30",
+        "16",
+        "16"
+      ],
+      "exit": 0,
+      "output": ".scratch\\small-llt-paired\\actual_solver-n16-m16-p1.jsonl",
+      "binarySha256": "0b46f7cc4f98164d660f83d4c0c23c3a61a25b3e17af4a208e7da5653d99654e"
+    },
+    {
+      "command": [
+        "build\\small-llt\\Release\\before_solver.exe",
+        "1",
+        "30",
+        "16",
+        "16"
+      ],
+      "exit": 1,
+      "output": ".scratch\\small-llt-paired\\before_solver-n16-m16-p1.jsonl",
+      "binarySha256": "ac2255f7922f52be6608ab6503721fb46e35cf876ea8c219e83dd3e1abc5189c"
+    },
+    {
+      "command": [
+        "build\\small-llt\\Release\\before_solver.exe",
+        "2",
+        "30",
+        "16",
+        "16"
+      ],
+      "exit": 1,
+      "output": ".scratch\\small-llt-paired\\before_solver-n16-m16-p2.jsonl",
+      "binarySha256": "ac2255f7922f52be6608ab6503721fb46e35cf876ea8c219e83dd3e1abc5189c"
+    },
+    {
+      "command": [
+        "build\\small-llt\\Release\\actual_solver.exe",
+        "2",
+        "30",
+        "16",
+        "16"
+      ],
+      "exit": 0,
+      "output": ".scratch\\small-llt-paired\\actual_solver-n16-m16-p2.jsonl",
+      "binarySha256": "0b46f7cc4f98164d660f83d4c0c23c3a61a25b3e17af4a208e7da5653d99654e"
+    },
+    {
+      "command": [
+        "build\\small-llt\\Release\\actual_solver.exe",
+        "3",
+        "30",
+        "16",
+        "16"
+      ],
+      "exit": 0,
+      "output": ".scratch\\small-llt-paired\\actual_solver-n16-m16-p3.jsonl",
+      "binarySha256": "0b46f7cc4f98164d660f83d4c0c23c3a61a25b3e17af4a208e7da5653d99654e"
+    },
+    {
+      "command": [
+        "build\\small-llt\\Release\\before_solver.exe",
+        "3",
+        "30",
+        "16",
+        "16"
+      ],
+      "exit": 1,
+      "output": ".scratch\\small-llt-paired\\before_solver-n16-m16-p3.jsonl",
+      "binarySha256": "ac2255f7922f52be6608ab6503721fb46e35cf876ea8c219e83dd3e1abc5189c"
+    },
+    {
+      "command": [
+        "build\\small-llt\\Release\\before_solver.exe",
+        "4",
+        "30",
+        "16",
+        "16"
+      ],
+      "exit": 1,
+      "output": ".scratch\\small-llt-paired\\before_solver-n16-m16-p4.jsonl",
+      "binarySha256": "ac2255f7922f52be6608ab6503721fb46e35cf876ea8c219e83dd3e1abc5189c"
+    },
+    {
+      "command": [
+        "build\\small-llt\\Release\\actual_solver.exe",
+        "4",
+        "30",
+        "16",
+        "16"
+      ],
+      "exit": 0,
+      "output": ".scratch\\small-llt-paired\\actual_solver-n16-m16-p4.jsonl",
+      "binarySha256": "0b46f7cc4f98164d660f83d4c0c23c3a61a25b3e17af4a208e7da5653d99654e"
+    },
+    {
+      "command": [
+        "build\\small-llt\\Release\\before_solver.exe",
+        "0",
+        "30",
+        "16",
+        "64"
+      ],
+      "exit": 1,
+      "output": ".scratch\\small-llt-paired\\before_solver-n16-m64-p0.jsonl",
+      "binarySha256": "ac2255f7922f52be6608ab6503721fb46e35cf876ea8c219e83dd3e1abc5189c"
+    },
+    {
+      "command": [
+        "build\\small-llt\\Release\\actual_solver.exe",
+        "0",
+        "30",
+        "16",
+        "64"
+      ],
+      "exit": 0,
+      "output": ".scratch\\small-llt-paired\\actual_solver-n16-m64-p0.jsonl",
+      "binarySha256": "0b46f7cc4f98164d660f83d4c0c23c3a61a25b3e17af4a208e7da5653d99654e"
+    },
+    {
+      "command": [
+        "build\\small-llt\\Release\\actual_solver.exe",
+        "1",
+        "30",
+        "16",
+        "64"
+      ],
+      "exit": 0,
+      "output": ".scratch\\small-llt-paired\\actual_solver-n16-m64-p1.jsonl",
+      "binarySha256": "0b46f7cc4f98164d660f83d4c0c23c3a61a25b3e17af4a208e7da5653d99654e"
+    },
+    {
+      "command": [
+        "build\\small-llt\\Release\\before_solver.exe",
+        "1",
+        "30",
+        "16",
+        "64"
+      ],
+      "exit": 1,
+      "output": ".scratch\\small-llt-paired\\before_solver-n16-m64-p1.jsonl",
+      "binarySha256": "ac2255f7922f52be6608ab6503721fb46e35cf876ea8c219e83dd3e1abc5189c"
+    },
+    {
+      "command": [
+        "build\\small-llt\\Release\\before_solver.exe",
+        "2",
+        "30",
+        "16",
+        "64"
+      ],
+      "exit": 1,
+      "output": ".scratch\\small-llt-paired\\before_solver-n16-m64-p2.jsonl",
+      "binarySha256": "ac2255f7922f52be6608ab6503721fb46e35cf876ea8c219e83dd3e1abc5189c"
+    },
+    {
+      "command": [
+        "build\\small-llt\\Release\\actual_solver.exe",
+        "2",
+        "30",
+        "16",
+        "64"
+      ],
+      "exit": 0,
+      "output": ".scratch\\small-llt-paired\\actual_solver-n16-m64-p2.jsonl",
+      "binarySha256": "0b46f7cc4f98164d660f83d4c0c23c3a61a25b3e17af4a208e7da5653d99654e"
+    },
+    {
+      "command": [
+        "build\\small-llt\\Release\\actual_solver.exe",
+        "3",
+        "30",
+        "16",
+        "64"
+      ],
+      "exit": 0,
+      "output": ".scratch\\small-llt-paired\\actual_solver-n16-m64-p3.jsonl",
+      "binarySha256": "0b46f7cc4f98164d660f83d4c0c23c3a61a25b3e17af4a208e7da5653d99654e"
+    },
+    {
+      "command": [
+        "build\\small-llt\\Release\\before_solver.exe",
+        "3",
+        "30",
+        "16",
+        "64"
+      ],
+      "exit": 1,
+      "output": ".scratch\\small-llt-paired\\before_solver-n16-m64-p3.jsonl",
+      "binarySha256": "ac2255f7922f52be6608ab6503721fb46e35cf876ea8c219e83dd3e1abc5189c"
+    },
+    {
+      "command": [
+        "build\\small-llt\\Release\\before_solver.exe",
+        "4",
+        "30",
+        "16",
+        "64"
+      ],
+      "exit": 1,
+      "output": ".scratch\\small-llt-paired\\before_solver-n16-m64-p4.jsonl",
+      "binarySha256": "ac2255f7922f52be6608ab6503721fb46e35cf876ea8c219e83dd3e1abc5189c"
+    },
+    {
+      "command": [
+        "build\\small-llt\\Release\\actual_solver.exe",
+        "4",
+        "30",
+        "16",
+        "64"
+      ],
+      "exit": 0,
+      "output": ".scratch\\small-llt-paired\\actual_solver-n16-m64-p4.jsonl",
+      "binarySha256": "0b46f7cc4f98164d660f83d4c0c23c3a61a25b3e17af4a208e7da5653d99654e"
+    },
+    {
+      "command": [
+        "build\\small-llt\\Release\\before_solver.exe",
+        "0",
+        "30",
+        "32",
+        "32"
+      ],
+      "exit": 0,
+      "output": ".scratch\\small-llt-paired\\before_solver-n32-m32-p0.jsonl",
+      "binarySha256": "ac2255f7922f52be6608ab6503721fb46e35cf876ea8c219e83dd3e1abc5189c"
+    },
+    {
+      "command": [
+        "build\\small-llt\\Release\\actual_solver.exe",
+        "0",
+        "30",
+        "32",
+        "32"
+      ],
+      "exit": 0,
+      "output": ".scratch\\small-llt-paired\\actual_solver-n32-m32-p0.jsonl",
+      "binarySha256": "0b46f7cc4f98164d660f83d4c0c23c3a61a25b3e17af4a208e7da5653d99654e"
+    },
+    {
+      "command": [
+        "build\\small-llt\\Release\\actual_solver.exe",
+        "1",
+        "30",
+        "32",
+        "32"
+      ],
+      "exit": 0,
+      "output": ".scratch\\small-llt-paired\\actual_solver-n32-m32-p1.jsonl",
+      "binarySha256": "0b46f7cc4f98164d660f83d4c0c23c3a61a25b3e17af4a208e7da5653d99654e"
+    },
+    {
+      "command": [
+        "build\\small-llt\\Release\\before_solver.exe",
+        "1",
+        "30",
+        "32",
+        "32"
+      ],
+      "exit": 0,
+      "output": ".scratch\\small-llt-paired\\before_solver-n32-m32-p1.jsonl",
+      "binarySha256": "ac2255f7922f52be6608ab6503721fb46e35cf876ea8c219e83dd3e1abc5189c"
+    },
+    {
+      "command": [
+        "build\\small-llt\\Release\\before_solver.exe",
+        "2",
+        "30",
+        "32",
+        "32"
+      ],
+      "exit": 0,
+      "output": ".scratch\\small-llt-paired\\before_solver-n32-m32-p2.jsonl",
+      "binarySha256": "ac2255f7922f52be6608ab6503721fb46e35cf876ea8c219e83dd3e1abc5189c"
+    },
+    {
+      "command": [
+        "build\\small-llt\\Release\\actual_solver.exe",
+        "2",
+        "30",
+        "32",
+        "32"
+      ],
+      "exit": 0,
+      "output": ".scratch\\small-llt-paired\\actual_solver-n32-m32-p2.jsonl",
+      "binarySha256": "0b46f7cc4f98164d660f83d4c0c23c3a61a25b3e17af4a208e7da5653d99654e"
+    },
+    {
+      "command": [
+        "build\\small-llt\\Release\\actual_solver.exe",
+        "3",
+        "30",
+        "32",
+        "32"
+      ],
+      "exit": 0,
+      "output": ".scratch\\small-llt-paired\\actual_solver-n32-m32-p3.jsonl",
+      "binarySha256": "0b46f7cc4f98164d660f83d4c0c23c3a61a25b3e17af4a208e7da5653d99654e"
+    },
+    {
+      "command": [
+        "build\\small-llt\\Release\\before_solver.exe",
+        "3",
+        "30",
+        "32",
+        "32"
+      ],
+      "exit": 0,
+      "output": ".scratch\\small-llt-paired\\before_solver-n32-m32-p3.jsonl",
+      "binarySha256": "ac2255f7922f52be6608ab6503721fb46e35cf876ea8c219e83dd3e1abc5189c"
+    },
+    {
+      "command": [
+        "build\\small-llt\\Release\\before_solver.exe",
+        "4",
+        "30",
+        "32",
+        "32"
+      ],
+      "exit": 0,
+      "output": ".scratch\\small-llt-paired\\before_solver-n32-m32-p4.jsonl",
+      "binarySha256": "ac2255f7922f52be6608ab6503721fb46e35cf876ea8c219e83dd3e1abc5189c"
+    },
+    {
+      "command": [
+        "build\\small-llt\\Release\\actual_solver.exe",
+        "4",
+        "30",
+        "32",
+        "32"
+      ],
+      "exit": 0,
+      "output": ".scratch\\small-llt-paired\\actual_solver-n32-m32-p4.jsonl",
+      "binarySha256": "0b46f7cc4f98164d660f83d4c0c23c3a61a25b3e17af4a208e7da5653d99654e"
+    },
+    {
+      "command": [
+        "build\\small-llt\\Release\\before_solver.exe",
+        "0",
+        "30",
+        "32",
+        "128"
+      ],
+      "exit": 0,
+      "output": ".scratch\\small-llt-paired\\before_solver-n32-m128-p0.jsonl",
+      "binarySha256": "ac2255f7922f52be6608ab6503721fb46e35cf876ea8c219e83dd3e1abc5189c"
+    },
+    {
+      "command": [
+        "build\\small-llt\\Release\\actual_solver.exe",
+        "0",
+        "30",
+        "32",
+        "128"
+      ],
+      "exit": 0,
+      "output": ".scratch\\small-llt-paired\\actual_solver-n32-m128-p0.jsonl",
+      "binarySha256": "0b46f7cc4f98164d660f83d4c0c23c3a61a25b3e17af4a208e7da5653d99654e"
+    },
+    {
+      "command": [
+        "build\\small-llt\\Release\\actual_solver.exe",
+        "1",
+        "30",
+        "32",
+        "128"
+      ],
+      "exit": 0,
+      "output": ".scratch\\small-llt-paired\\actual_solver-n32-m128-p1.jsonl",
+      "binarySha256": "0b46f7cc4f98164d660f83d4c0c23c3a61a25b3e17af4a208e7da5653d99654e"
+    },
+    {
+      "command": [
+        "build\\small-llt\\Release\\before_solver.exe",
+        "1",
+        "30",
+        "32",
+        "128"
+      ],
+      "exit": 0,
+      "output": ".scratch\\small-llt-paired\\before_solver-n32-m128-p1.jsonl",
+      "binarySha256": "ac2255f7922f52be6608ab6503721fb46e35cf876ea8c219e83dd3e1abc5189c"
+    },
+    {
+      "command": [
+        "build\\small-llt\\Release\\before_solver.exe",
+        "2",
+        "30",
+        "32",
+        "128"
+      ],
+      "exit": 0,
+      "output": ".scratch\\small-llt-paired\\before_solver-n32-m128-p2.jsonl",
+      "binarySha256": "ac2255f7922f52be6608ab6503721fb46e35cf876ea8c219e83dd3e1abc5189c"
+    },
+    {
+      "command": [
+        "build\\small-llt\\Release\\actual_solver.exe",
+        "2",
+        "30",
+        "32",
+        "128"
+      ],
+      "exit": 0,
+      "output": ".scratch\\small-llt-paired\\actual_solver-n32-m128-p2.jsonl",
+      "binarySha256": "0b46f7cc4f98164d660f83d4c0c23c3a61a25b3e17af4a208e7da5653d99654e"
+    },
+    {
+      "command": [
+        "build\\small-llt\\Release\\actual_solver.exe",
+        "3",
+        "30",
+        "32",
+        "128"
+      ],
+      "exit": 0,
+      "output": ".scratch\\small-llt-paired\\actual_solver-n32-m128-p3.jsonl",
+      "binarySha256": "0b46f7cc4f98164d660f83d4c0c23c3a61a25b3e17af4a208e7da5653d99654e"
+    },
+    {
+      "command": [
+        "build\\small-llt\\Release\\before_solver.exe",
+        "3",
+        "30",
+        "32",
+        "128"
+      ],
+      "exit": 0,
+      "output": ".scratch\\small-llt-paired\\before_solver-n32-m128-p3.jsonl",
+      "binarySha256": "ac2255f7922f52be6608ab6503721fb46e35cf876ea8c219e83dd3e1abc5189c"
+    },
+    {
+      "command": [
+        "build\\small-llt\\Release\\before_solver.exe",
+        "4",
+        "30",
+        "32",
+        "128"
+      ],
+      "exit": 0,
+      "output": ".scratch\\small-llt-paired\\before_solver-n32-m128-p4.jsonl",
+      "binarySha256": "ac2255f7922f52be6608ab6503721fb46e35cf876ea8c219e83dd3e1abc5189c"
+    },
+    {
+      "command": [
+        "build\\small-llt\\Release\\actual_solver.exe",
+        "4",
+        "30",
+        "32",
+        "128"
+      ],
+      "exit": 0,
+      "output": ".scratch\\small-llt-paired\\actual_solver-n32-m128-p4.jsonl",
+      "binarySha256": "0b46f7cc4f98164d660f83d4c0c23c3a61a25b3e17af4a208e7da5653d99654e"
+    },
+    {
+      "command": [
+        "build\\small-llt\\Release\\before_solver.exe",
+        "0",
+        "30",
+        "33",
+        "33"
+      ],
+      "exit": 0,
+      "output": ".scratch\\small-llt-paired\\before_solver-n33-m33-p0.jsonl",
+      "binarySha256": "ac2255f7922f52be6608ab6503721fb46e35cf876ea8c219e83dd3e1abc5189c"
+    },
+    {
+      "command": [
+        "build\\small-llt\\Release\\actual_solver.exe",
+        "0",
+        "30",
+        "33",
+        "33"
+      ],
+      "exit": 0,
+      "output": ".scratch\\small-llt-paired\\actual_solver-n33-m33-p0.jsonl",
+      "binarySha256": "0b46f7cc4f98164d660f83d4c0c23c3a61a25b3e17af4a208e7da5653d99654e"
+    },
+    {
+      "command": [
+        "build\\small-llt\\Release\\actual_solver.exe",
+        "1",
+        "30",
+        "33",
+        "33"
+      ],
+      "exit": 0,
+      "output": ".scratch\\small-llt-paired\\actual_solver-n33-m33-p1.jsonl",
+      "binarySha256": "0b46f7cc4f98164d660f83d4c0c23c3a61a25b3e17af4a208e7da5653d99654e"
+    },
+    {
+      "command": [
+        "build\\small-llt\\Release\\before_solver.exe",
+        "1",
+        "30",
+        "33",
+        "33"
+      ],
+      "exit": 0,
+      "output": ".scratch\\small-llt-paired\\before_solver-n33-m33-p1.jsonl",
+      "binarySha256": "ac2255f7922f52be6608ab6503721fb46e35cf876ea8c219e83dd3e1abc5189c"
+    },
+    {
+      "command": [
+        "build\\small-llt\\Release\\before_solver.exe",
+        "2",
+        "30",
+        "33",
+        "33"
+      ],
+      "exit": 0,
+      "output": ".scratch\\small-llt-paired\\before_solver-n33-m33-p2.jsonl",
+      "binarySha256": "ac2255f7922f52be6608ab6503721fb46e35cf876ea8c219e83dd3e1abc5189c"
+    },
+    {
+      "command": [
+        "build\\small-llt\\Release\\actual_solver.exe",
+        "2",
+        "30",
+        "33",
+        "33"
+      ],
+      "exit": 0,
+      "output": ".scratch\\small-llt-paired\\actual_solver-n33-m33-p2.jsonl",
+      "binarySha256": "0b46f7cc4f98164d660f83d4c0c23c3a61a25b3e17af4a208e7da5653d99654e"
+    },
+    {
+      "command": [
+        "build\\small-llt\\Release\\actual_solver.exe",
+        "3",
+        "30",
+        "33",
+        "33"
+      ],
+      "exit": 0,
+      "output": ".scratch\\small-llt-paired\\actual_solver-n33-m33-p3.jsonl",
+      "binarySha256": "0b46f7cc4f98164d660f83d4c0c23c3a61a25b3e17af4a208e7da5653d99654e"
+    },
+    {
+      "command": [
+        "build\\small-llt\\Release\\before_solver.exe",
+        "3",
+        "30",
+        "33",
+        "33"
+      ],
+      "exit": 0,
+      "output": ".scratch\\small-llt-paired\\before_solver-n33-m33-p3.jsonl",
+      "binarySha256": "ac2255f7922f52be6608ab6503721fb46e35cf876ea8c219e83dd3e1abc5189c"
+    },
+    {
+      "command": [
+        "build\\small-llt\\Release\\before_solver.exe",
+        "4",
+        "30",
+        "33",
+        "33"
+      ],
+      "exit": 0,
+      "output": ".scratch\\small-llt-paired\\before_solver-n33-m33-p4.jsonl",
+      "binarySha256": "ac2255f7922f52be6608ab6503721fb46e35cf876ea8c219e83dd3e1abc5189c"
+    },
+    {
+      "command": [
+        "build\\small-llt\\Release\\actual_solver.exe",
+        "4",
+        "30",
+        "33",
+        "33"
+      ],
+      "exit": 0,
+      "output": ".scratch\\small-llt-paired\\actual_solver-n33-m33-p4.jsonl",
+      "binarySha256": "0b46f7cc4f98164d660f83d4c0c23c3a61a25b3e17af4a208e7da5653d99654e"
+    },
+    {
+      "command": [
+        "build\\small-llt\\Release\\before_solver.exe",
+        "0",
+        "30",
+        "33",
+        "132"
+      ],
+      "exit": 0,
+      "output": ".scratch\\small-llt-paired\\before_solver-n33-m132-p0.jsonl",
+      "binarySha256": "ac2255f7922f52be6608ab6503721fb46e35cf876ea8c219e83dd3e1abc5189c"
+    },
+    {
+      "command": [
+        "build\\small-llt\\Release\\actual_solver.exe",
+        "0",
+        "30",
+        "33",
+        "132"
+      ],
+      "exit": 0,
+      "output": ".scratch\\small-llt-paired\\actual_solver-n33-m132-p0.jsonl",
+      "binarySha256": "0b46f7cc4f98164d660f83d4c0c23c3a61a25b3e17af4a208e7da5653d99654e"
+    },
+    {
+      "command": [
+        "build\\small-llt\\Release\\actual_solver.exe",
+        "1",
+        "30",
+        "33",
+        "132"
+      ],
+      "exit": 0,
+      "output": ".scratch\\small-llt-paired\\actual_solver-n33-m132-p1.jsonl",
+      "binarySha256": "0b46f7cc4f98164d660f83d4c0c23c3a61a25b3e17af4a208e7da5653d99654e"
+    },
+    {
+      "command": [
+        "build\\small-llt\\Release\\before_solver.exe",
+        "1",
+        "30",
+        "33",
+        "132"
+      ],
+      "exit": 0,
+      "output": ".scratch\\small-llt-paired\\before_solver-n33-m132-p1.jsonl",
+      "binarySha256": "ac2255f7922f52be6608ab6503721fb46e35cf876ea8c219e83dd3e1abc5189c"
+    },
+    {
+      "command": [
+        "build\\small-llt\\Release\\before_solver.exe",
+        "2",
+        "30",
+        "33",
+        "132"
+      ],
+      "exit": 0,
+      "output": ".scratch\\small-llt-paired\\before_solver-n33-m132-p2.jsonl",
+      "binarySha256": "ac2255f7922f52be6608ab6503721fb46e35cf876ea8c219e83dd3e1abc5189c"
+    },
+    {
+      "command": [
+        "build\\small-llt\\Release\\actual_solver.exe",
+        "2",
+        "30",
+        "33",
+        "132"
+      ],
+      "exit": 0,
+      "output": ".scratch\\small-llt-paired\\actual_solver-n33-m132-p2.jsonl",
+      "binarySha256": "0b46f7cc4f98164d660f83d4c0c23c3a61a25b3e17af4a208e7da5653d99654e"
+    },
+    {
+      "command": [
+        "build\\small-llt\\Release\\actual_solver.exe",
+        "3",
+        "30",
+        "33",
+        "132"
+      ],
+      "exit": 0,
+      "output": ".scratch\\small-llt-paired\\actual_solver-n33-m132-p3.jsonl",
+      "binarySha256": "0b46f7cc4f98164d660f83d4c0c23c3a61a25b3e17af4a208e7da5653d99654e"
+    },
+    {
+      "command": [
+        "build\\small-llt\\Release\\before_solver.exe",
+        "3",
+        "30",
+        "33",
+        "132"
+      ],
+      "exit": 0,
+      "output": ".scratch\\small-llt-paired\\before_solver-n33-m132-p3.jsonl",
+      "binarySha256": "ac2255f7922f52be6608ab6503721fb46e35cf876ea8c219e83dd3e1abc5189c"
+    },
+    {
+      "command": [
+        "build\\small-llt\\Release\\before_solver.exe",
+        "4",
+        "30",
+        "33",
+        "132"
+      ],
+      "exit": 0,
+      "output": ".scratch\\small-llt-paired\\before_solver-n33-m132-p4.jsonl",
+      "binarySha256": "ac2255f7922f52be6608ab6503721fb46e35cf876ea8c219e83dd3e1abc5189c"
+    },
+    {
+      "command": [
+        "build\\small-llt\\Release\\actual_solver.exe",
+        "4",
+        "30",
+        "33",
+        "132"
+      ],
+      "exit": 0,
+      "output": ".scratch\\small-llt-paired\\actual_solver-n33-m132-p4.jsonl",
+      "binarySha256": "0b46f7cc4f98164d660f83d4c0c23c3a61a25b3e17af4a208e7da5653d99654e"
+    },
+    {
+      "command": [
+        "build\\small-llt\\Release\\before_solver.exe",
+        "0",
+        "30",
+        "2",
+        "2"
+      ],
+      "exit": 0,
+      "output": ".scratch\\small-llt-paired\\before_solver-n2-m2-p0.jsonl",
+      "binarySha256": "ac2255f7922f52be6608ab6503721fb46e35cf876ea8c219e83dd3e1abc5189c"
+    },
+    {
+      "command": [
+        "build\\small-llt\\Release\\actual_solver.exe",
+        "0",
+        "30",
+        "2",
+        "2"
+      ],
+      "exit": 0,
+      "output": ".scratch\\small-llt-paired\\actual_solver-n2-m2-p0.jsonl",
+      "binarySha256": "0b46f7cc4f98164d660f83d4c0c23c3a61a25b3e17af4a208e7da5653d99654e"
+    },
+    {
+      "command": [
+        "build\\small-llt\\Release\\actual_solver.exe",
+        "1",
+        "30",
+        "2",
+        "2"
+      ],
+      "exit": 0,
+      "output": ".scratch\\small-llt-paired\\actual_solver-n2-m2-p1.jsonl",
+      "binarySha256": "0b46f7cc4f98164d660f83d4c0c23c3a61a25b3e17af4a208e7da5653d99654e"
+    },
+    {
+      "command": [
+        "build\\small-llt\\Release\\before_solver.exe",
+        "1",
+        "30",
+        "2",
+        "2"
+      ],
+      "exit": 0,
+      "output": ".scratch\\small-llt-paired\\before_solver-n2-m2-p1.jsonl",
+      "binarySha256": "ac2255f7922f52be6608ab6503721fb46e35cf876ea8c219e83dd3e1abc5189c"
+    },
+    {
+      "command": [
+        "build\\small-llt\\Release\\before_solver.exe",
+        "2",
+        "30",
+        "2",
+        "2"
+      ],
+      "exit": 0,
+      "output": ".scratch\\small-llt-paired\\before_solver-n2-m2-p2.jsonl",
+      "binarySha256": "ac2255f7922f52be6608ab6503721fb46e35cf876ea8c219e83dd3e1abc5189c"
+    },
+    {
+      "command": [
+        "build\\small-llt\\Release\\actual_solver.exe",
+        "2",
+        "30",
+        "2",
+        "2"
+      ],
+      "exit": 0,
+      "output": ".scratch\\small-llt-paired\\actual_solver-n2-m2-p2.jsonl",
+      "binarySha256": "0b46f7cc4f98164d660f83d4c0c23c3a61a25b3e17af4a208e7da5653d99654e"
+    },
+    {
+      "command": [
+        "build\\small-llt\\Release\\actual_solver.exe",
+        "3",
+        "30",
+        "2",
+        "2"
+      ],
+      "exit": 0,
+      "output": ".scratch\\small-llt-paired\\actual_solver-n2-m2-p3.jsonl",
+      "binarySha256": "0b46f7cc4f98164d660f83d4c0c23c3a61a25b3e17af4a208e7da5653d99654e"
+    },
+    {
+      "command": [
+        "build\\small-llt\\Release\\before_solver.exe",
+        "3",
+        "30",
+        "2",
+        "2"
+      ],
+      "exit": 0,
+      "output": ".scratch\\small-llt-paired\\before_solver-n2-m2-p3.jsonl",
+      "binarySha256": "ac2255f7922f52be6608ab6503721fb46e35cf876ea8c219e83dd3e1abc5189c"
+    },
+    {
+      "command": [
+        "build\\small-llt\\Release\\before_solver.exe",
+        "4",
+        "30",
+        "2",
+        "2"
+      ],
+      "exit": 0,
+      "output": ".scratch\\small-llt-paired\\before_solver-n2-m2-p4.jsonl",
+      "binarySha256": "ac2255f7922f52be6608ab6503721fb46e35cf876ea8c219e83dd3e1abc5189c"
+    },
+    {
+      "command": [
+        "build\\small-llt\\Release\\actual_solver.exe",
+        "4",
+        "30",
+        "2",
+        "2"
+      ],
+      "exit": 0,
+      "output": ".scratch\\small-llt-paired\\actual_solver-n2-m2-p4.jsonl",
+      "binarySha256": "0b46f7cc4f98164d660f83d4c0c23c3a61a25b3e17af4a208e7da5653d99654e"
+    },
+    {
+      "command": [
+        "build\\small-llt\\Release\\before_solver.exe",
+        "0",
+        "30",
+        "2",
+        "8"
+      ],
+      "exit": 0,
+      "output": ".scratch\\small-llt-paired\\before_solver-n2-m8-p0.jsonl",
+      "binarySha256": "ac2255f7922f52be6608ab6503721fb46e35cf876ea8c219e83dd3e1abc5189c"
+    },
+    {
+      "command": [
+        "build\\small-llt\\Release\\actual_solver.exe",
+        "0",
+        "30",
+        "2",
+        "8"
+      ],
+      "exit": 0,
+      "output": ".scratch\\small-llt-paired\\actual_solver-n2-m8-p0.jsonl",
+      "binarySha256": "0b46f7cc4f98164d660f83d4c0c23c3a61a25b3e17af4a208e7da5653d99654e"
+    },
+    {
+      "command": [
+        "build\\small-llt\\Release\\actual_solver.exe",
+        "1",
+        "30",
+        "2",
+        "8"
+      ],
+      "exit": 0,
+      "output": ".scratch\\small-llt-paired\\actual_solver-n2-m8-p1.jsonl",
+      "binarySha256": "0b46f7cc4f98164d660f83d4c0c23c3a61a25b3e17af4a208e7da5653d99654e"
+    },
+    {
+      "command": [
+        "build\\small-llt\\Release\\before_solver.exe",
+        "1",
+        "30",
+        "2",
+        "8"
+      ],
+      "exit": 0,
+      "output": ".scratch\\small-llt-paired\\before_solver-n2-m8-p1.jsonl",
+      "binarySha256": "ac2255f7922f52be6608ab6503721fb46e35cf876ea8c219e83dd3e1abc5189c"
+    },
+    {
+      "command": [
+        "build\\small-llt\\Release\\before_solver.exe",
+        "2",
+        "30",
+        "2",
+        "8"
+      ],
+      "exit": 0,
+      "output": ".scratch\\small-llt-paired\\before_solver-n2-m8-p2.jsonl",
+      "binarySha256": "ac2255f7922f52be6608ab6503721fb46e35cf876ea8c219e83dd3e1abc5189c"
+    },
+    {
+      "command": [
+        "build\\small-llt\\Release\\actual_solver.exe",
+        "2",
+        "30",
+        "2",
+        "8"
+      ],
+      "exit": 0,
+      "output": ".scratch\\small-llt-paired\\actual_solver-n2-m8-p2.jsonl",
+      "binarySha256": "0b46f7cc4f98164d660f83d4c0c23c3a61a25b3e17af4a208e7da5653d99654e"
+    },
+    {
+      "command": [
+        "build\\small-llt\\Release\\actual_solver.exe",
+        "3",
+        "30",
+        "2",
+        "8"
+      ],
+      "exit": 0,
+      "output": ".scratch\\small-llt-paired\\actual_solver-n2-m8-p3.jsonl",
+      "binarySha256": "0b46f7cc4f98164d660f83d4c0c23c3a61a25b3e17af4a208e7da5653d99654e"
+    },
+    {
+      "command": [
+        "build\\small-llt\\Release\\before_solver.exe",
+        "3",
+        "30",
+        "2",
+        "8"
+      ],
+      "exit": 0,
+      "output": ".scratch\\small-llt-paired\\before_solver-n2-m8-p3.jsonl",
+      "binarySha256": "ac2255f7922f52be6608ab6503721fb46e35cf876ea8c219e83dd3e1abc5189c"
+    },
+    {
+      "command": [
+        "build\\small-llt\\Release\\before_solver.exe",
+        "4",
+        "30",
+        "2",
+        "8"
+      ],
+      "exit": 0,
+      "output": ".scratch\\small-llt-paired\\before_solver-n2-m8-p4.jsonl",
+      "binarySha256": "ac2255f7922f52be6608ab6503721fb46e35cf876ea8c219e83dd3e1abc5189c"
+    },
+    {
+      "command": [
+        "build\\small-llt\\Release\\actual_solver.exe",
+        "4",
+        "30",
+        "2",
+        "8"
+      ],
+      "exit": 0,
+      "output": ".scratch\\small-llt-paired\\actual_solver-n2-m8-p4.jsonl",
+      "binarySha256": "0b46f7cc4f98164d660f83d4c0c23c3a61a25b3e17af4a208e7da5653d99654e"
+    },
+    {
+      "command": [
+        "build\\small-llt\\Release\\before_solver.exe",
+        "0",
+        "30",
+        "8",
+        "8"
+      ],
+      "exit": 0,
+      "output": ".scratch\\small-llt-paired\\before_solver-n8-m8-p0.jsonl",
+      "binarySha256": "ac2255f7922f52be6608ab6503721fb46e35cf876ea8c219e83dd3e1abc5189c"
+    },
+    {
+      "command": [
+        "build\\small-llt\\Release\\actual_solver.exe",
+        "0",
+        "30",
+        "8",
+        "8"
+      ],
+      "exit": 0,
+      "output": ".scratch\\small-llt-paired\\actual_solver-n8-m8-p0.jsonl",
+      "binarySha256": "0b46f7cc4f98164d660f83d4c0c23c3a61a25b3e17af4a208e7da5653d99654e"
+    },
+    {
+      "command": [
+        "build\\small-llt\\Release\\actual_solver.exe",
+        "1",
+        "30",
+        "8",
+        "8"
+      ],
+      "exit": 0,
+      "output": ".scratch\\small-llt-paired\\actual_solver-n8-m8-p1.jsonl",
+      "binarySha256": "0b46f7cc4f98164d660f83d4c0c23c3a61a25b3e17af4a208e7da5653d99654e"
+    },
+    {
+      "command": [
+        "build\\small-llt\\Release\\before_solver.exe",
+        "1",
+        "30",
+        "8",
+        "8"
+      ],
+      "exit": 0,
+      "output": ".scratch\\small-llt-paired\\before_solver-n8-m8-p1.jsonl",
+      "binarySha256": "ac2255f7922f52be6608ab6503721fb46e35cf876ea8c219e83dd3e1abc5189c"
+    },
+    {
+      "command": [
+        "build\\small-llt\\Release\\before_solver.exe",
+        "2",
+        "30",
+        "8",
+        "8"
+      ],
+      "exit": 0,
+      "output": ".scratch\\small-llt-paired\\before_solver-n8-m8-p2.jsonl",
+      "binarySha256": "ac2255f7922f52be6608ab6503721fb46e35cf876ea8c219e83dd3e1abc5189c"
+    },
+    {
+      "command": [
+        "build\\small-llt\\Release\\actual_solver.exe",
+        "2",
+        "30",
+        "8",
+        "8"
+      ],
+      "exit": 0,
+      "output": ".scratch\\small-llt-paired\\actual_solver-n8-m8-p2.jsonl",
+      "binarySha256": "0b46f7cc4f98164d660f83d4c0c23c3a61a25b3e17af4a208e7da5653d99654e"
+    },
+    {
+      "command": [
+        "build\\small-llt\\Release\\actual_solver.exe",
+        "3",
+        "30",
+        "8",
+        "8"
+      ],
+      "exit": 0,
+      "output": ".scratch\\small-llt-paired\\actual_solver-n8-m8-p3.jsonl",
+      "binarySha256": "0b46f7cc4f98164d660f83d4c0c23c3a61a25b3e17af4a208e7da5653d99654e"
+    },
+    {
+      "command": [
+        "build\\small-llt\\Release\\before_solver.exe",
+        "3",
+        "30",
+        "8",
+        "8"
+      ],
+      "exit": 0,
+      "output": ".scratch\\small-llt-paired\\before_solver-n8-m8-p3.jsonl",
+      "binarySha256": "ac2255f7922f52be6608ab6503721fb46e35cf876ea8c219e83dd3e1abc5189c"
+    },
+    {
+      "command": [
+        "build\\small-llt\\Release\\before_solver.exe",
+        "4",
+        "30",
+        "8",
+        "8"
+      ],
+      "exit": 0,
+      "output": ".scratch\\small-llt-paired\\before_solver-n8-m8-p4.jsonl",
+      "binarySha256": "ac2255f7922f52be6608ab6503721fb46e35cf876ea8c219e83dd3e1abc5189c"
+    },
+    {
+      "command": [
+        "build\\small-llt\\Release\\actual_solver.exe",
+        "4",
+        "30",
+        "8",
+        "8"
+      ],
+      "exit": 0,
+      "output": ".scratch\\small-llt-paired\\actual_solver-n8-m8-p4.jsonl",
+      "binarySha256": "0b46f7cc4f98164d660f83d4c0c23c3a61a25b3e17af4a208e7da5653d99654e"
+    },
+    {
+      "command": [
+        "build\\small-llt\\Release\\before_solver.exe",
+        "0",
+        "30",
+        "8",
+        "32"
+      ],
+      "exit": 0,
+      "output": ".scratch\\small-llt-paired\\before_solver-n8-m32-p0.jsonl",
+      "binarySha256": "ac2255f7922f52be6608ab6503721fb46e35cf876ea8c219e83dd3e1abc5189c"
+    },
+    {
+      "command": [
+        "build\\small-llt\\Release\\actual_solver.exe",
+        "0",
+        "30",
+        "8",
+        "32"
+      ],
+      "exit": 0,
+      "output": ".scratch\\small-llt-paired\\actual_solver-n8-m32-p0.jsonl",
+      "binarySha256": "0b46f7cc4f98164d660f83d4c0c23c3a61a25b3e17af4a208e7da5653d99654e"
+    },
+    {
+      "command": [
+        "build\\small-llt\\Release\\actual_solver.exe",
+        "1",
+        "30",
+        "8",
+        "32"
+      ],
+      "exit": 0,
+      "output": ".scratch\\small-llt-paired\\actual_solver-n8-m32-p1.jsonl",
+      "binarySha256": "0b46f7cc4f98164d660f83d4c0c23c3a61a25b3e17af4a208e7da5653d99654e"
+    },
+    {
+      "command": [
+        "build\\small-llt\\Release\\before_solver.exe",
+        "1",
+        "30",
+        "8",
+        "32"
+      ],
+      "exit": 0,
+      "output": ".scratch\\small-llt-paired\\before_solver-n8-m32-p1.jsonl",
+      "binarySha256": "ac2255f7922f52be6608ab6503721fb46e35cf876ea8c219e83dd3e1abc5189c"
+    },
+    {
+      "command": [
+        "build\\small-llt\\Release\\before_solver.exe",
+        "2",
+        "30",
+        "8",
+        "32"
+      ],
+      "exit": 0,
+      "output": ".scratch\\small-llt-paired\\before_solver-n8-m32-p2.jsonl",
+      "binarySha256": "ac2255f7922f52be6608ab6503721fb46e35cf876ea8c219e83dd3e1abc5189c"
+    },
+    {
+      "command": [
+        "build\\small-llt\\Release\\actual_solver.exe",
+        "2",
+        "30",
+        "8",
+        "32"
+      ],
+      "exit": 0,
+      "output": ".scratch\\small-llt-paired\\actual_solver-n8-m32-p2.jsonl",
+      "binarySha256": "0b46f7cc4f98164d660f83d4c0c23c3a61a25b3e17af4a208e7da5653d99654e"
+    },
+    {
+      "command": [
+        "build\\small-llt\\Release\\actual_solver.exe",
+        "3",
+        "30",
+        "8",
+        "32"
+      ],
+      "exit": 0,
+      "output": ".scratch\\small-llt-paired\\actual_solver-n8-m32-p3.jsonl",
+      "binarySha256": "0b46f7cc4f98164d660f83d4c0c23c3a61a25b3e17af4a208e7da5653d99654e"
+    },
+    {
+      "command": [
+        "build\\small-llt\\Release\\before_solver.exe",
+        "3",
+        "30",
+        "8",
+        "32"
+      ],
+      "exit": 0,
+      "output": ".scratch\\small-llt-paired\\before_solver-n8-m32-p3.jsonl",
+      "binarySha256": "ac2255f7922f52be6608ab6503721fb46e35cf876ea8c219e83dd3e1abc5189c"
+    },
+    {
+      "command": [
+        "build\\small-llt\\Release\\before_solver.exe",
+        "4",
+        "30",
+        "8",
+        "32"
+      ],
+      "exit": 0,
+      "output": ".scratch\\small-llt-paired\\before_solver-n8-m32-p4.jsonl",
+      "binarySha256": "ac2255f7922f52be6608ab6503721fb46e35cf876ea8c219e83dd3e1abc5189c"
+    },
+    {
+      "command": [
+        "build\\small-llt\\Release\\actual_solver.exe",
+        "4",
+        "30",
+        "8",
+        "32"
+      ],
+      "exit": 0,
+      "output": ".scratch\\small-llt-paired\\actual_solver-n8-m32-p4.jsonl",
+      "binarySha256": "0b46f7cc4f98164d660f83d4c0c23c3a61a25b3e17af4a208e7da5653d99654e"
+    },
+    {
+      "command": [
+        "build\\small-llt\\Release\\before_solver.exe",
+        "0",
+        "30",
+        "64",
+        "64"
+      ],
+      "exit": 1,
+      "output": ".scratch\\small-llt-paired\\before_solver-n64-m64-p0.jsonl",
+      "binarySha256": "ac2255f7922f52be6608ab6503721fb46e35cf876ea8c219e83dd3e1abc5189c"
+    },
+    {
+      "command": [
+        "build\\small-llt\\Release\\actual_solver.exe",
+        "0",
+        "30",
+        "64",
+        "64"
+      ],
+      "exit": 0,
+      "output": ".scratch\\small-llt-paired\\actual_solver-n64-m64-p0.jsonl",
+      "binarySha256": "0b46f7cc4f98164d660f83d4c0c23c3a61a25b3e17af4a208e7da5653d99654e"
+    },
+    {
+      "command": [
+        "build\\small-llt\\Release\\actual_solver.exe",
+        "1",
+        "30",
+        "64",
+        "64"
+      ],
+      "exit": 0,
+      "output": ".scratch\\small-llt-paired\\actual_solver-n64-m64-p1.jsonl",
+      "binarySha256": "0b46f7cc4f98164d660f83d4c0c23c3a61a25b3e17af4a208e7da5653d99654e"
+    },
+    {
+      "command": [
+        "build\\small-llt\\Release\\before_solver.exe",
+        "1",
+        "30",
+        "64",
+        "64"
+      ],
+      "exit": 1,
+      "output": ".scratch\\small-llt-paired\\before_solver-n64-m64-p1.jsonl",
+      "binarySha256": "ac2255f7922f52be6608ab6503721fb46e35cf876ea8c219e83dd3e1abc5189c"
+    },
+    {
+      "command": [
+        "build\\small-llt\\Release\\before_solver.exe",
+        "2",
+        "30",
+        "64",
+        "64"
+      ],
+      "exit": 1,
+      "output": ".scratch\\small-llt-paired\\before_solver-n64-m64-p2.jsonl",
+      "binarySha256": "ac2255f7922f52be6608ab6503721fb46e35cf876ea8c219e83dd3e1abc5189c"
+    },
+    {
+      "command": [
+        "build\\small-llt\\Release\\actual_solver.exe",
+        "2",
+        "30",
+        "64",
+        "64"
+      ],
+      "exit": 0,
+      "output": ".scratch\\small-llt-paired\\actual_solver-n64-m64-p2.jsonl",
+      "binarySha256": "0b46f7cc4f98164d660f83d4c0c23c3a61a25b3e17af4a208e7da5653d99654e"
+    },
+    {
+      "command": [
+        "build\\small-llt\\Release\\actual_solver.exe",
+        "3",
+        "30",
+        "64",
+        "64"
+      ],
+      "exit": 0,
+      "output": ".scratch\\small-llt-paired\\actual_solver-n64-m64-p3.jsonl",
+      "binarySha256": "0b46f7cc4f98164d660f83d4c0c23c3a61a25b3e17af4a208e7da5653d99654e"
+    },
+    {
+      "command": [
+        "build\\small-llt\\Release\\before_solver.exe",
+        "3",
+        "30",
+        "64",
+        "64"
+      ],
+      "exit": 1,
+      "output": ".scratch\\small-llt-paired\\before_solver-n64-m64-p3.jsonl",
+      "binarySha256": "ac2255f7922f52be6608ab6503721fb46e35cf876ea8c219e83dd3e1abc5189c"
+    },
+    {
+      "command": [
+        "build\\small-llt\\Release\\before_solver.exe",
+        "4",
+        "30",
+        "64",
+        "64"
+      ],
+      "exit": 1,
+      "output": ".scratch\\small-llt-paired\\before_solver-n64-m64-p4.jsonl",
+      "binarySha256": "ac2255f7922f52be6608ab6503721fb46e35cf876ea8c219e83dd3e1abc5189c"
+    },
+    {
+      "command": [
+        "build\\small-llt\\Release\\actual_solver.exe",
+        "4",
+        "30",
+        "64",
+        "64"
+      ],
+      "exit": 0,
+      "output": ".scratch\\small-llt-paired\\actual_solver-n64-m64-p4.jsonl",
+      "binarySha256": "0b46f7cc4f98164d660f83d4c0c23c3a61a25b3e17af4a208e7da5653d99654e"
+    },
+    {
+      "command": [
+        "build\\small-llt\\Release\\before_solver.exe",
+        "0",
+        "30",
+        "64",
+        "256"
+      ],
+      "exit": 1,
+      "output": ".scratch\\small-llt-paired\\before_solver-n64-m256-p0.jsonl",
+      "binarySha256": "ac2255f7922f52be6608ab6503721fb46e35cf876ea8c219e83dd3e1abc5189c"
+    },
+    {
+      "command": [
+        "build\\small-llt\\Release\\actual_solver.exe",
+        "0",
+        "30",
+        "64",
+        "256"
+      ],
+      "exit": 0,
+      "output": ".scratch\\small-llt-paired\\actual_solver-n64-m256-p0.jsonl",
+      "binarySha256": "0b46f7cc4f98164d660f83d4c0c23c3a61a25b3e17af4a208e7da5653d99654e"
+    },
+    {
+      "command": [
+        "build\\small-llt\\Release\\actual_solver.exe",
+        "1",
+        "30",
+        "64",
+        "256"
+      ],
+      "exit": 0,
+      "output": ".scratch\\small-llt-paired\\actual_solver-n64-m256-p1.jsonl",
+      "binarySha256": "0b46f7cc4f98164d660f83d4c0c23c3a61a25b3e17af4a208e7da5653d99654e"
+    },
+    {
+      "command": [
+        "build\\small-llt\\Release\\before_solver.exe",
+        "1",
+        "30",
+        "64",
+        "256"
+      ],
+      "exit": 1,
+      "output": ".scratch\\small-llt-paired\\before_solver-n64-m256-p1.jsonl",
+      "binarySha256": "ac2255f7922f52be6608ab6503721fb46e35cf876ea8c219e83dd3e1abc5189c"
+    },
+    {
+      "command": [
+        "build\\small-llt\\Release\\before_solver.exe",
+        "2",
+        "30",
+        "64",
+        "256"
+      ],
+      "exit": 1,
+      "output": ".scratch\\small-llt-paired\\before_solver-n64-m256-p2.jsonl",
+      "binarySha256": "ac2255f7922f52be6608ab6503721fb46e35cf876ea8c219e83dd3e1abc5189c"
+    },
+    {
+      "command": [
+        "build\\small-llt\\Release\\actual_solver.exe",
+        "2",
+        "30",
+        "64",
+        "256"
+      ],
+      "exit": 0,
+      "output": ".scratch\\small-llt-paired\\actual_solver-n64-m256-p2.jsonl",
+      "binarySha256": "0b46f7cc4f98164d660f83d4c0c23c3a61a25b3e17af4a208e7da5653d99654e"
+    },
+    {
+      "command": [
+        "build\\small-llt\\Release\\actual_solver.exe",
+        "3",
+        "30",
+        "64",
+        "256"
+      ],
+      "exit": 0,
+      "output": ".scratch\\small-llt-paired\\actual_solver-n64-m256-p3.jsonl",
+      "binarySha256": "0b46f7cc4f98164d660f83d4c0c23c3a61a25b3e17af4a208e7da5653d99654e"
+    },
+    {
+      "command": [
+        "build\\small-llt\\Release\\before_solver.exe",
+        "3",
+        "30",
+        "64",
+        "256"
+      ],
+      "exit": 1,
+      "output": ".scratch\\small-llt-paired\\before_solver-n64-m256-p3.jsonl",
+      "binarySha256": "ac2255f7922f52be6608ab6503721fb46e35cf876ea8c219e83dd3e1abc5189c"
+    },
+    {
+      "command": [
+        "build\\small-llt\\Release\\before_solver.exe",
+        "4",
+        "30",
+        "64",
+        "256"
+      ],
+      "exit": 1,
+      "output": ".scratch\\small-llt-paired\\before_solver-n64-m256-p4.jsonl",
+      "binarySha256": "ac2255f7922f52be6608ab6503721fb46e35cf876ea8c219e83dd3e1abc5189c"
+    },
+    {
+      "command": [
+        "build\\small-llt\\Release\\actual_solver.exe",
+        "4",
+        "30",
+        "64",
+        "256"
+      ],
+      "exit": 0,
+      "output": ".scratch\\small-llt-paired\\actual_solver-n64-m256-p4.jsonl",
+      "binarySha256": "0b46f7cc4f98164d660f83d4c0c23c3a61a25b3e17af4a208e7da5653d99654e"
+    }
+  ],
+  "processes": 5,
+  "samples": 30
+}

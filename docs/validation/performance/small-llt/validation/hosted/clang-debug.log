@@ -1,0 +1,387 @@
+Start testing: Oct 07 09:47 UTC
+----------------------------------------------------------
+1/14 Testing: lm_reference
+1/14 Test: lm_reference
+Command: "/work/build/linux-clang/Debug/kibo_lm_reference"
+Directory: /work/build/linux-clang/Debug
+"lm_reference" start time: Oct 07 09:47 UTC
+Output:
+----------------------------------------------------------
+{"problem":"line","solver":"normal-LLT","parameters":[1.9699999506965444,0.090000177384169724],"cost":0.01550000000001431,"iterations":2,"passed":true}
+{"problem":"line","solver":"augmented-QR","parameters":[1.9699999506975117,0.090000177379744015],"cost":0.015500000000014379,"iterations":2,"passed":true}
+{"problem":"exponential","solver":"normal-LLT","parameters":[1.0015921354888877,0.9996180037210145],"cost":0.00026208793135892617,"iterations":2,"passed":true}
+{"problem":"exponential","solver":"augmented-QR","parameters":[1.0015921354888877,0.9996180037210145],"cost":0.00026208793135892617,"iterations":2,"passed":true}
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"lm_reference" end time: Oct 07 09:47 UTC
+"lm_reference" time elapsed: 00:00:00
+----------------------------------------------------------
+
+2/14 Testing: numerical
+2/14 Test: numerical
+Command: "/work/build/linux-clang/Debug/kibo_numerical_tests" "--small"
+Directory: /work/build/linux-clang/Debug
+"numerical" start time: Oct 07 09:47 UTC
+Output:
+----------------------------------------------------------
+m,n,condition,inconsistent,qr_forward,optimality,normal_llt_forward,normal_llt_status
+oracle n=2 amax=2.5e-151
+expected 0.5  -1
+QR  0.493356 -0.993356
+Eigen -1.17157e+06  1.17157e+06
+line 66: (x-expected).norm()/expected.norm()<=1e-4
+oracle n=2 scale=2.5e-151 core_error=0.00840344 Eigen_raw_error=1.48194e+06
+line 80: (reference-expected).norm()/expected.norm()<=1e-4
+oracle n=2 amax=0.25
+expected 0.5  -1
+QR  0.497513 -0.997513
+Eigen 0.505363 -1.00536
+line 66: (x-expected).norm()/expected.norm()<=1e-4
+oracle n=2 scale=0.25 core_error=0.00314639 Eigen_raw_error=0.00678375
+line 80: (reference-expected).norm()/expected.norm()<=1e-4
+oracle n=2 amax=2.5e+149
+expected 0.5  -1
+QR  0.490671 -0.990671
+Eigen  0.497096 -0.997096
+line 66: (x-expected).norm()/expected.norm()<=1e-4
+oracle n=2 scale=2.5e+149 core_error=0.0118001 Eigen_raw_error=0.0036738
+line 80: (reference-expected).norm()/expected.norm()<=1e-4
+oracle n=8 amax=6.73469e-152
+expected 0.125 -0.25 0.375  -0.5 0.625 -0.75 0.875    -1
+QR  0.122622 -0.247654  0.377378 -0.502346  0.627378 -0.752346  0.872622 -0.997654
+Eigen -834.757 -936.621 -1475.84 -133.025  839.915  931.259  1472.69  135.888
+line 66: (x-expected).norm()/expected.norm()<=1e-4
+oracle n=8 scale=6.73469e-152 core_error=0.00374205 Eigen_raw_error=1536.85
+line 80: (reference-expected).norm()/expected.norm()<=1e-4
+oracle n=8 amax=0.0673469
+expected 0.125 -0.25 0.375  -0.5 0.625 -0.75 0.875    -1
+QR  0.136399 -0.261401  0.363601 -0.488599  0.613601 -0.738599  0.886399   -1.0114
+Eigen  0.129417 -0.254411  0.370583 -0.495589  0.620583 -0.745589  0.879417  -1.00441
+line 66: (x-expected).norm()/expected.norm()<=1e-4
+oracle n=8 scale=0.0673469 core_error=0.0180599 Eigen_raw_error=0.00699299
+line 80: (reference-expected).norm()/expected.norm()<=1e-4
+oracle n=8 amax=6.73469e+148
+expected 0.125 -0.25 0.375  -0.5 0.625 -0.75 0.875    -1
+QR  0.127906 -0.252904  0.372094 -0.497096  0.622094 -0.747096  0.877906   -1.0029
+Eigen  0.128267 -0.253274  0.371733 -0.496726  0.621733 -0.746726  0.878267  -1.00327
+line 66: (x-expected).norm()/expected.norm()<=1e-4
+oracle n=8 scale=6.73469e+148 core_error=0.00460292 Eigen_raw_error=0.00518176
+line 80: (reference-expected).norm()/expected.norm()<=1e-4
+2,2,2,0,9.9301366129890917e-17,4.1594554064131396e-17,4.9650683064945459e-17,0
+2,2,10000,0,4.9671273898627239e-13,8.0020346606936439e-17,3.5108333983600324e-09,0
+2,2,100000000,0,4.9650684034880093e-09,5.3346898945386977e-17,0.15811388300841889,0
+8,2,2,0,2.8086667748613609e-16,6.7069203158113232e-17,4.9650683064945459e-17,0
+8,2,2,1,2.8086667748613609e-16,6.7066415798958241e-17,4.9650683064945459e-17,0
+8,2,10000,0,2.7507380450346532e-13,2.6673448987542309e-17,5.2662504837317291e-09,0
+8,2,10000,1,2.5648815204799432e-11,4.0006329391932243e-17,3.5108333983600324e-09,0
+8,2,100000000,0,5.3719220772692319e-10,1.0669379746764716e-16,0.15811388300841897,0
+line 107: forward<=(condition<=1e4 ? 1e-8 : 1e-4)
+line 113: (reference-fixture.truth).norm()/fixture.truth.norm()<=(condition<=1e4 ? 1e-8 : 1e-4)
+8,2,100000000,1,0.0011124165848901194,5.3280303128353177e-17,0.15811388300841889,0
+8,8,2,0,5.829836963294795e-16,3.7268851738327423e-17,3.6895698945698122e-16,0
+8,8,10000,0,3.4953687309763909e-13,4.4921273969273038e-18,9.4552309608651176e-10,0
+8,8,100000000,0,1.4851707715509914e-09,4.8968651499664782e-17,0.062447940932261692,0
+32,8,2,0,3.8522044387811071e-16,2.9102690205775227e-17,2.73719657989498e-16,0
+32,8,2,1,2.6656234908219155e-16,1.9521865157241732e-17,2.3111135221866393e-16,0
+32,8,10000,0,7.9153511106337467e-14,3.2790759483220023e-17,3.619025985457791e-09,0
+32,8,10000,1,2.0206930420649457e-12,2.5026583566829698e-17,2.9316874522185073e-09,0
+32,8,100000000,0,1.2519683428181336e-09,7.8390801707142066e-17,0.041041810168939548,0
+line 107: forward<=(condition<=1e4 ? 1e-8 : 1e-4)
+line 113: (reference-fixture.truth).norm()/fixture.truth.norm()<=(condition<=1e4 ? 1e-8 : 1e-4)
+32,8,100000000,1,0.002805961059129699,8.3179457500588159e-17,0.048857003614527224,0
+32,32,2,0,7.0851595051083651e-16,1.6472178611683663e-17,4.1381312214170953e-16,0
+32,32,10000,0,4.4026124896162358e-13,3.729243322349052e-17,8.2664031827264632e-10,0
+32,32,100000000,0,3.0848966686841556e-09,9.0387250020330427e-17,0.018139194292066976,0
+128,32,2,0,8.1509349964432003e-16,1.8180084881913418e-17,4.7166778335572923e-16,0
+128,32,2,1,8.6063882585540007e-16,1.618062188811853e-17,4.3892660388148032e-16,0
+128,32,10000,0,2.0493161281501224e-13,7.3723709297598771e-17,1.4393491509380581e-09,0
+128,32,10000,1,1.7907351763206259e-12,2.5660395570995254e-17,7.4004475033705338e-10,0
+128,32,100000000,0,3.4612873981007819e-09,1.1552959427518454e-16,0.08463994838538362,0
+line 107: forward<=(condition<=1e4 ? 1e-8 : 1e-4)
+128,32,100000000,1,0.00028195026267107575,1.7180717943926844e-16,0.077008330913204762,0
+numerical acceptance failures=17
+<end of output>
+Test time =   0.13 sec
+----------------------------------------------------------
+Test Failed.
+"numerical" end time: Oct 07 09:47 UTC
+"numerical" time elapsed: 00:00:00
+----------------------------------------------------------
+
+3/14 Testing: numerical_column
+3/14 Test: numerical_column
+Command: "/work/build/linux-clang/Debug/kibo_numerical_tests" "--column-factor" "--small"
+Directory: /work/build/linux-clang/Debug
+"numerical_column" start time: Oct 07 09:47 UTC
+Output:
+----------------------------------------------------------
+m,n,condition,inconsistent,qr_forward,optimality,normal_llt_forward,normal_llt_status
+oracle n=2 amax=2.5e-151
+expected 0.5  -1
+QR  0.493356 -0.993356
+Eigen -1.17157e+06  1.17157e+06
+line 66: (x-expected).norm()/expected.norm()<=1e-4
+oracle n=2 scale=2.5e-151 core_error=0.00840344 Eigen_raw_error=1.48194e+06
+line 80: (reference-expected).norm()/expected.norm()<=1e-4
+oracle n=2 amax=0.25
+expected 0.5  -1
+QR  0.497513 -0.997513
+Eigen 0.505363 -1.00536
+line 66: (x-expected).norm()/expected.norm()<=1e-4
+oracle n=2 scale=0.25 core_error=0.00314639 Eigen_raw_error=0.00678375
+line 80: (reference-expected).norm()/expected.norm()<=1e-4
+oracle n=2 amax=2.5e+149
+expected 0.5  -1
+QR  0.497096 -0.997096
+Eigen  0.497096 -0.997096
+line 66: (x-expected).norm()/expected.norm()<=1e-4
+oracle n=2 scale=2.5e+149 core_error=0.0036738 Eigen_raw_error=0.0036738
+line 80: (reference-expected).norm()/expected.norm()<=1e-4
+oracle n=8 amax=6.73469e-152
+expected 0.125 -0.25 0.375  -0.5 0.625 -0.75 0.875    -1
+QR  0.124418 -0.249422  0.375583 -0.500578  0.625582 -0.750578  0.874417 -0.999422
+Eigen -834.757 -936.621 -1475.84 -133.025  839.915  931.259  1472.69  135.888
+line 66: (x-expected).norm()/expected.norm()<=1e-4
+oracle n=8 scale=6.73469e-152 core_error=0.000919054 Eigen_raw_error=1536.85
+line 80: (reference-expected).norm()/expected.norm()<=1e-4
+oracle n=8 amax=0.0673469
+expected 0.125 -0.25 0.375  -0.5 0.625 -0.75 0.875    -1
+QR  0.128537 -0.253502  0.371463 -0.496497  0.621463 -0.746498  0.878537   -1.0035
+Eigen  0.129417 -0.254411  0.370583 -0.495589  0.620583 -0.745589  0.879417  -1.00441
+line 66: (x-expected).norm()/expected.norm()<=1e-4
+oracle n=8 scale=0.0673469 core_error=0.00557607 Eigen_raw_error=0.00699299
+line 80: (reference-expected).norm()/expected.norm()<=1e-4
+oracle n=8 amax=6.73469e+148
+expected 0.125 -0.25 0.375  -0.5 0.625 -0.75 0.875    -1
+QR   0.12731 -0.252314  0.372691 -0.497686   0.62269 -0.747686  0.877309  -1.00231
+Eigen  0.128267 -0.253274  0.371733 -0.496726  0.621733 -0.746726  0.878267  -1.00327
+line 66: (x-expected).norm()/expected.norm()<=1e-4
+oracle n=8 scale=6.73469e+148 core_error=0.00366202 Eigen_raw_error=0.00518176
+line 80: (reference-expected).norm()/expected.norm()<=1e-4
+2,2,2,0,9.9301366129890917e-17,4.1594554064131396e-17,4.9650683064945459e-17,0
+2,2,10000,0,4.9671273898627239e-13,8.0020346606936439e-17,3.5108333983600324e-09,0
+2,2,100000000,0,4.9650684034880093e-09,5.3346898945386977e-17,0.15811388300841889,0
+8,2,2,0,2.8086667748613609e-16,6.7069203158113232e-17,4.9650683064945459e-17,0
+8,2,2,1,2.8086667748613609e-16,6.7066415798958241e-17,4.9650683064945459e-17,0
+8,2,10000,0,1.511062724875412e-13,0,5.2662504837317291e-09,0
+8,2,10000,1,2.5644883071314639e-11,4.0006329391932354e-17,3.5108333983600324e-09,0
+8,2,100000000,0,5.3719192686024563e-10,1.0669379746764718e-16,0.15811388300841897,0
+line 107: forward<=(condition<=1e4 ? 1e-8 : 1e-4)
+line 113: (reference-fixture.truth).norm()/fixture.truth.norm()<=(condition<=1e4 ? 1e-8 : 1e-4)
+8,2,100000000,1,0.0011124166236797033,1.066648729977105e-16,0.15811388300841889,0
+8,8,2,0,6.1839033597265299e-16,4.9925535061116963e-17,3.6895698945698122e-16,0
+8,8,10000,0,2.0698638303714501e-13,1.657224783225466e-17,9.4552309608651176e-10,0
+8,8,100000000,0,1.1491943010069935e-09,3.9164056139298343e-17,0.062447940932261692,0
+32,8,2,0,2.8294569152917031e-16,2.6683436442669397e-17,2.73719657989498e-16,0
+32,8,2,1,4.5010301578265396e-16,4.7318156537496071e-17,2.3111135221866393e-16,0
+32,8,10000,0,2.1309115326275214e-13,6.5443854996285333e-17,3.619025985457791e-09,0
+32,8,10000,1,3.5162237619165476e-12,4.7928984455359875e-17,2.9316874522185073e-09,0
+32,8,100000000,0,3.6626239447461195e-10,4.8928339172064797e-17,0.041041810168939548,0
+line 107: forward<=(condition<=1e4 ? 1e-8 : 1e-4)
+line 113: (reference-fixture.truth).norm()/fixture.truth.norm()<=(condition<=1e4 ? 1e-8 : 1e-4)
+32,8,100000000,1,0.00088131403187280747,7.8239664860026359e-17,0.048857003614527224,0
+32,32,2,0,6.1751908409001452e-16,1.3161151513793688e-17,4.1381312214170953e-16,0
+32,32,10000,0,1.9555840075474181e-13,3.3894321423422219e-17,8.2664031827264632e-10,0
+32,32,100000000,0,9.1792533372878176e-10,6.0684467803738767e-17,0.018139194292066976,0
+128,32,2,0,5.634684457840274e-16,1.5529592583044666e-17,4.7166778335572923e-16,0
+128,32,2,1,5.8580346463786437e-16,1.3223783590317733e-17,4.3892660388148032e-16,0
+128,32,10000,0,2.4145979295937366e-13,1.3636852723850108e-17,1.4393491509380581e-09,0
+128,32,10000,1,1.1379429318498515e-12,3.7163283392973458e-17,7.4004475033705338e-10,0
+128,32,100000000,0,1.8125506966194581e-09,1.9554292572728657e-17,0.08463994838538362,0
+line 107: forward<=(condition<=1e4 ? 1e-8 : 1e-4)
+128,32,100000000,1,0.00015263143874373505,3.9086652935894692e-17,0.077008330913204762,0
+numerical acceptance failures=17
+<end of output>
+Test time =   0.13 sec
+----------------------------------------------------------
+Test Failed.
+"numerical_column" end time: Oct 07 09:47 UTC
+"numerical_column" time elapsed: 00:00:00
+----------------------------------------------------------
+
+4/14 Testing: common_2x2
+4/14 Test: common_2x2
+Command: "/work/build/linux-clang/Debug/kibo_common_2x2"
+Directory: /work/build/linux-clang/Debug
+"common_2x2" start time: Oct 07 09:47 UTC
+Output:
+----------------------------------------------------------
+{"status":0,"correct":true,"numeric_bytes":128,"matvec":[6,7],"solve":[0.090909090909090912,0.63636363636363635]}
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"common_2x2" end time: Oct 07 09:47 UTC
+"common_2x2" time elapsed: 00:00:00
+----------------------------------------------------------
+
+5/14 Testing: migration
+5/14 Test: migration
+Command: "/work/build/linux-clang/Debug/kibo_migration"
+Directory: /work/build/linux-clang/Debug
+"migration" start time: Oct 07 09:47 UTC
+Output:
+----------------------------------------------------------
+ownership, external Map, Gram product, LLT and QR migration passed
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"migration" end time: Oct 07 09:47 UTC
+"migration" time elapsed: 00:00:00
+----------------------------------------------------------
+
+6/14 Testing: core
+6/14 Test: core
+Command: "/work/build/linux-clang/Debug/kibo_core_tests"
+Directory: /work/build/linux-clang/Debug
+"core" start time: Oct 07 09:47 UTC
+Output:
+----------------------------------------------------------
+2x2 public matvec passed
+stride/transpose/rectangular arithmetic and rejection contracts passed
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"core" end time: Oct 07 09:47 UTC
+"core" time elapsed: 00:00:00
+----------------------------------------------------------
+
+7/14 Testing: dynamic
+7/14 Test: dynamic
+Command: "/work/build/linux-clang/Debug/kibo_dynamic_tests"
+Directory: /work/build/linux-clang/Debug
+"dynamic" start time: Oct 07 09:47 UTC
+Output:
+----------------------------------------------------------
+explicit ownership, injected allocation failure, resize and clone passed
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"dynamic" end time: Oct 07 09:47 UTC
+"dynamic" time elapsed: 00:00:00
+----------------------------------------------------------
+
+8/14 Testing: llt
+8/14 Test: llt
+Command: "/work/build/linux-clang/Debug/kibo_llt_tests"
+Directory: /work/build/linux-clang/Debug
+"llt" start time: Oct 07 09:47 UTC
+Output:
+----------------------------------------------------------
+public LLT 2x2 factor and transactional solve passed
+<end of output>
+Test time =   0.02 sec
+----------------------------------------------------------
+Test Passed.
+"llt" end time: Oct 07 09:47 UTC
+"llt" time elapsed: 00:00:00
+----------------------------------------------------------
+
+9/14 Testing: qr
+9/14 Test: qr
+Command: "/work/build/linux-clang/Debug/kibo_qr_tests"
+Directory: /work/build/linux-clang/Debug
+"qr" start time: Oct 07 09:47 UTC
+Output:
+----------------------------------------------------------
+public pivoted QR least-squares solve passed
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"qr" end time: Oct 07 09:47 UTC
+"qr" time elapsed: 00:00:00
+----------------------------------------------------------
+
+10/14 Testing: llt_scalar
+10/14 Test: llt_scalar
+Command: "/work/build/linux-clang/Debug/kibo_llt_scalar_tests"
+Directory: /work/build/linux-clang/Debug
+"llt_scalar" start time: Oct 07 09:47 UTC
+Output:
+----------------------------------------------------------
+public LLT 2x2 factor and transactional solve passed
+<end of output>
+Test time =   0.02 sec
+----------------------------------------------------------
+Test Passed.
+"llt_scalar" end time: Oct 07 09:47 UTC
+"llt_scalar" time elapsed: 00:00:00
+----------------------------------------------------------
+
+11/14 Testing: qr_scalar
+11/14 Test: qr_scalar
+Command: "/work/build/linux-clang/Debug/kibo_qr_scalar_tests"
+Directory: /work/build/linux-clang/Debug
+"qr_scalar" start time: Oct 07 09:47 UTC
+Output:
+----------------------------------------------------------
+public pivoted QR least-squares solve passed
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"qr_scalar" end time: Oct 07 09:47 UTC
+"qr_scalar" time elapsed: 00:00:00
+----------------------------------------------------------
+
+12/14 Testing: no_runtime
+12/14 Test: no_runtime
+Command: "/work/build/linux-clang/Debug/kibo_no_runtime_tests"
+Directory: /work/build/linux-clang/Debug
+"no_runtime" start time: Oct 07 09:47 UTC
+Output:
+----------------------------------------------------------
+C++20 concepts/span; exceptions and RTTI disabled; Ab=[6,7]
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"no_runtime" end time: Oct 07 09:47 UTC
+"no_runtime" time elapsed: 00:00:00
+----------------------------------------------------------
+
+13/14 Testing: dynamic_no_runtime
+13/14 Test: dynamic_no_runtime
+Command: "/work/build/linux-clang/Debug/kibo_dynamic_no_runtime_tests"
+Directory: /work/build/linux-clang/Debug
+"dynamic_no_runtime" start time: Oct 07 09:47 UTC
+Output:
+----------------------------------------------------------
+explicit ownership, injected allocation failure, resize and clone passed
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"dynamic_no_runtime" end time: Oct 07 09:47 UTC
+"dynamic_no_runtime" time elapsed: 00:00:00
+----------------------------------------------------------
+
+14/14 Testing: allocation
+14/14 Test: allocation
+Command: "/work/build/linux-clang/Debug/kibo_allocation_tests"
+Directory: /work/build/linux-clang/Debug
+"allocation" start time: Oct 07 09:47 UTC
+Output:
+----------------------------------------------------------
+prepared m=2 n=2 LLT/QR allocator calls=0
+prepared m=8 n=2 LLT/QR allocator calls=0
+prepared m=8 n=8 LLT/QR allocator calls=0
+prepared m=32 n=8 LLT/QR allocator calls=0
+prepared m=32 n=32 LLT/QR allocator calls=0
+prepared m=128 n=32 LLT/QR allocator calls=0
+prepared basic operations, LLT and QR factor/solve: observed allocator calls=0
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"allocation" end time: Oct 07 09:47 UTC
+"allocation" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: Oct 07 09:47 UTC

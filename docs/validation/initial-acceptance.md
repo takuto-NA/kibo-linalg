@@ -2,14 +2,14 @@
 
 2026-10-07。実装を利用・レビューできる段階にあり、初期保証全体の受入は未完了。
 
-最新の公開実装は`3c7d2c8`。32変数LLTの入力走査・panel切替・有限値判定を追加改善した。
-[アセンブリ比較と公開API再測定](../research/eigen-assembly-gap.md)ではn32/m128が5.330→2.775 µs、Eigen比0.973。
-その他の形状やQRを含む全体同等の受入は未完了。
+最新の公開実装は`8fe28e5`。LLTの9〜64変数の列更新、入力走査・対称性検査とbackward solveを追加改善した。
+[実COFF命令比較と公開API再測定](../research/small-llt-assembly.md)ではn31/m124が4.247→1.776 µs、Eigen比0.844。
+factor+solveはn2〜64の測定形状で改善したが、n128/512、2変数のsetup phase、QRを含む全体同等の受入は未完了。
 
 前段の公開実装`5127214`では、LLTの列方向panelと入力走査、QRのrow/column kernelとcopyを改善した。
 [同条件での旧版・修正版・Eigen比較](2026-10-07-solver-locality.md)を参照。
 以下のdispatch性能報告は旧版`83c7a14`の全phase・容量baselineであり、最新factor+solveの時間は新報告に分けている。
-[最新CI](https://github.com/takuto-NA/kibo-linalg/actions/runs/37581895862)は通常test・無確保・package・
+[最新CI](https://github.com/takuto-NA/kibo-linalg/actions/runs/37602800569)は通常test・無確保・package・
 WASM・ESP cross compileを通過し、PC4 jobsは数値gate未達で失敗。
 Releaseはrow19件・column18件、Debugの小規模suiteは各17件の数値未達が残る。
 親仕様は[PCのLM計算を起点とするポータブルC++20線形代数コアの初期仕様](https://github.com/takuto-NA/kibo-linalg/issues/9)、
@@ -26,11 +26,12 @@ Releaseはrow19件・column18件、Debugの小規模suiteは各17件の数値未
 | 悪条件・尺度・rank | 一貫系の精度/backward error、normality、rank境界等を検証。condition1e8・大残差の解誤差gateは未達 | [連続行カーネル更新後の失敗を含む数値結果](portability/hosted/dispatch/numerical/windows-release.txt)、[精度調査](../research/least-squares-accuracy.md)。保証範囲の判断待ち |
 | WASM | NodeとChromium/Firefox/WebKitの数値・容量・寿命・growth・disposeが通過。prepared compute確保0、2×2数値領域168 bytes | [連続行カーネル更新後のhosted結果とhash](portability/hosted/dispatch/evidence.json)、[利用方法](../wasm.md) |
 | ESP32-S3/C3 cross compile | C++20・例外/RTTI offで両targetのELF/bin/map/configを生成。数値領域128 bytesと校正付きheap/stack probeを準備 | [連続行カーネル更新後のhosted実commandとhash](portability/hosted/dispatch/evidence.json)、[実機手順](../esp32.md) |
-| ESP32-S3/C3各実機 | 未検証 | board型番・接続環境・chip revision、各実機のserial数値/heap/stack証拠が必要 |
+| ESP32-S3/C3各実機 | 未検証。利用者は現在実機を持っていない | 入手・接続後にboard型番・chip revision、各実機のserial数値/heap/stack証拠を取得する。現時点で追加情報を求めない |
 
 現在のprecision gateを変更・skipした結果を合格にしない。
-condition1e8に大きな消せない残差がある問題については、doubleの保証を
-小残差の精度gateと大残差の診断評価へ分けるか、高精度計算を追加するかの判断を待つ。
+condition1e8に大きな消せない残差がある問題については、丸め済みA/bの100桁oracleと
+実装誤差を切り分ける[精度原因調査](https://github.com/takuto-NA/kibo-linalg/issues/27)を先に行う。
+保証条件を変更する判断はまだ行わず、現行gateを維持した修正可能性と費用を調べる。
 cross compileとPC代替では、実機のallocation count0・stack最小空き2 KiBの受入を完了できない。
 
 残る受入は[悪条件・特異・尺度変化を既知解と独立oracleで検証する](https://github.com/takuto-NA/kibo-linalg/issues/15)、

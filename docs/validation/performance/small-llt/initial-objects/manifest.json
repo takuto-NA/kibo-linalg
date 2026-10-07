@@ -1,0 +1,267 @@
+{
+  "baseline": {
+    "command": [
+      "C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/VC/Tools/MSVC/14.44.35207/bin/Hostx64/x64/dumpbin.exe",
+      "/disasm",
+      "build\\small-llt\\baseline.dir\\Release\\phases.obj"
+    ],
+    "objectSha256": "2090ae5b8acfd47b0f52de0c618a51a33239b8414301512b3825c198a7cbfe62",
+    "binarySha256": "0323c6811410505911a5e21933a767f051cd5371c58578f04b33ee75a5a429f3",
+    "listingSha256": "f147c3d17a269c593d1ab695956f4e30251a5f06ac5eec25dd53f5df19354a96",
+    "fullDumpSha256": "d4be82e90e35a1d64409ba34f30780a065ce6743548a75dc7c6c02dae2b63d12",
+    "selected": [
+      {
+        "stem": "baseline-run-6",
+        "symbol": "?run@?$general_matrix_vector_product@_JNV?$const_blas_data_mapper@N_J$00@internal@Eigen@@$00$0A@NV?$const_blas_data_mapper@N_J$0A@@23@$0A@$0A@@internal@Eigen@@SAX_J0AEBV?$const_blas_data_mapper@N_J$00@23@AEBV?$const_blas_data_mapper@N_J$0A@@23@PEAN0N@Z"
+      },
+      {
+        "stem": "baseline-run-7",
+        "symbol": "?run@?$general_matrix_vector_product@_JNV?$const_blas_data_mapper@N_J$0A@@internal@Eigen@@$0A@$0A@NV123@$0A@$0A@@internal@Eigen@@SAX_J0AEBV?$const_blas_data_mapper@N_J$0A@@23@1PEAN0N@Z"
+      },
+      {
+        "stem": "baseline-run-21",
+        "symbol": "?run@?$general_matrix_vector_product@_JNV?$const_blas_data_mapper@N_J$0A@@internal@Eigen@@$0A@$0A@NV?$const_blas_data_mapper@N_J$00@23@$0A@$0A@@internal@Eigen@@SAX_J0AEBV?$const_blas_data_mapper@N_J$0A@@23@AEBV?$const_blas_data_mapper@N_J$00@23@PEAN0N@Z"
+      },
+      {
+        "stem": "baseline-_unblocked-87",
+        "symbol": "??$unblocked@V?$Block@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@$0?0$0?0$0A@@Eigen@@@?$llt_inplace@N$00@internal@Eigen@@SA_JAEAV?$Block@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@$0?0$0?0$0A@@2@@Z"
+      },
+      {
+        "stem": "baseline-_unblocked-88",
+        "symbol": "??$unblocked@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@@?$llt_inplace@N$00@internal@Eigen@@SA_JAEAV?$Matrix@N$0?0$0?0$0A@$0?0$0?0@2@@Z"
+      },
+      {
+        "stem": "baseline-_unblocked-90",
+        "symbol": "??$unblocked@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@V?$Transpositions@$0?0$0?0H@2@V?$Matrix@N$0?0$00$0A@$0?0$00@2@@?$ldlt_inplace@$00@internal@Eigen@@SA_NAEAV?$Matrix@N$0?0$0?0$0A@$0?0$0?0@2@AEAV?$Transpositions@$0?0$0?0H@2@AEAV?$Matrix@N$0?0$00$0A@$0?0$00@2@AEAW4SignMatrix@12@@Z"
+      },
+      {
+        "stem": "baseline-solve_into-146",
+        "symbol": "?solve_into@linalg@kibo@@YA?AUStatus@12@VLltFactorView@12@V?$span@$$CBN$0?0@std@@V?$span@N$0?0@6@V?$span@W4byte@std@@$0?0@6@@Z"
+      },
+      {
+        "stem": "baseline-factorize_llt-149",
+        "symbol": "?factorize_llt@linalg@kibo@@YA?AV?$Result@VLltFactorView@linalg@kibo@@@12@V?$MatrixView@$$CBN@12@V?$MatrixView@N@12@ULltOptions@12@@Z"
+      },
+      {
+        "stem": "baseline-factorize_column_llt-151",
+        "symbol": "?factorize_column_llt@detail@linalg@kibo@@YA?AV?$Result@VLltFactorView@linalg@kibo@@@23@V?$MatrixView@$$CBN@23@V?$MatrixView@N@23@@Z"
+      },
+      {
+        "stem": "baseline-row_update_panel-152",
+        "symbol": "?row_update_panel@detail@linalg@kibo@@YAXPEANPEBN_K122@Z"
+      }
+    ]
+  },
+  "actual": {
+    "command": [
+      "C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/VC/Tools/MSVC/14.44.35207/bin/Hostx64/x64/dumpbin.exe",
+      "/disasm",
+      "build\\small-llt\\actual.dir\\Release\\phases.obj"
+    ],
+    "objectSha256": "ab606d520d6a5f8c2a2a643f18c6a5dc7bb266dd9422d92f3285de7c6c658531",
+    "binarySha256": "9004fbff190a88935425dae4659471c7ab6a425ed9f82b7f3753bfc16ff4d5ed",
+    "listingSha256": "d206106daa75b69224529b13d44f316f5c1d1b7667f21014d605c82de12d84f9",
+    "fullDumpSha256": "5614e70b9be248b2f4b9d0e587e0a116c745fe04592d323ffbe71824d71204de",
+    "selected": [
+      {
+        "stem": "actual-run-6",
+        "symbol": "?run@?$general_matrix_vector_product@_JNV?$const_blas_data_mapper@N_J$00@internal@Eigen@@$00$0A@NV?$const_blas_data_mapper@N_J$0A@@23@$0A@$0A@@internal@Eigen@@SAX_J0AEBV?$const_blas_data_mapper@N_J$00@23@AEBV?$const_blas_data_mapper@N_J$0A@@23@PEAN0N@Z"
+      },
+      {
+        "stem": "actual-run-7",
+        "symbol": "?run@?$general_matrix_vector_product@_JNV?$const_blas_data_mapper@N_J$0A@@internal@Eigen@@$0A@$0A@NV123@$0A@$0A@@internal@Eigen@@SAX_J0AEBV?$const_blas_data_mapper@N_J$0A@@23@1PEAN0N@Z"
+      },
+      {
+        "stem": "actual-run-21",
+        "symbol": "?run@?$general_matrix_vector_product@_JNV?$const_blas_data_mapper@N_J$0A@@internal@Eigen@@$0A@$0A@NV?$const_blas_data_mapper@N_J$00@23@$0A@$0A@@internal@Eigen@@SAX_J0AEBV?$const_blas_data_mapper@N_J$0A@@23@AEBV?$const_blas_data_mapper@N_J$00@23@PEAN0N@Z"
+      },
+      {
+        "stem": "actual-_unblocked-87",
+        "symbol": "??$unblocked@V?$Block@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@$0?0$0?0$0A@@Eigen@@@?$llt_inplace@N$00@internal@Eigen@@SA_JAEAV?$Block@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@$0?0$0?0$0A@@2@@Z"
+      },
+      {
+        "stem": "actual-_unblocked-88",
+        "symbol": "??$unblocked@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@@?$llt_inplace@N$00@internal@Eigen@@SA_JAEAV?$Matrix@N$0?0$0?0$0A@$0?0$0?0@2@@Z"
+      },
+      {
+        "stem": "actual-_unblocked-90",
+        "symbol": "??$unblocked@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@V?$Transpositions@$0?0$0?0H@2@V?$Matrix@N$0?0$00$0A@$0?0$00@2@@?$ldlt_inplace@$00@internal@Eigen@@SA_NAEAV?$Matrix@N$0?0$0?0$0A@$0?0$0?0@2@AEAV?$Transpositions@$0?0$0?0H@2@AEAV?$Matrix@N$0?0$00$0A@$0?0$00@2@AEAW4SignMatrix@12@@Z"
+      },
+      {
+        "stem": "actual-solve_into-146",
+        "symbol": "?solve_into@linalg@kibo@@YA?AUStatus@12@VLltFactorView@12@V?$span@$$CBN$0?0@std@@V?$span@N$0?0@6@V?$span@W4byte@std@@$0?0@6@@Z"
+      },
+      {
+        "stem": "actual-factorize_llt-148",
+        "symbol": "?factorize_llt@linalg@kibo@@YA?AV?$Result@VLltFactorView@linalg@kibo@@@12@V?$MatrixView@$$CBN@12@V?$MatrixView@N@12@ULltOptions@12@@Z"
+      },
+      {
+        "stem": "actual-factorize_column_llt-150",
+        "symbol": "?factorize_column_llt@detail@linalg@kibo@@YA?AV?$Result@VLltFactorView@linalg@kibo@@@23@V?$MatrixView@$$CBN@23@V?$MatrixView@N@23@@Z"
+      },
+      {
+        "stem": "actual-row_update_panel-151",
+        "symbol": "?row_update_panel@detail@linalg@kibo@@YAXPEANPEBN_K122@Z"
+      }
+    ]
+  },
+  "c_flat_scan2": {
+    "command": [
+      "C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/VC/Tools/MSVC/14.44.35207/bin/Hostx64/x64/dumpbin.exe",
+      "/disasm",
+      "build\\small-llt\\c_flat_scan2.dir\\Release\\phases.obj"
+    ],
+    "objectSha256": "7d59cec4aa06b11cddf1ec1a78aa94167ebcd54e9442419c4fa0800e0db4bc99",
+    "binarySha256": "9102e2a2d8a5ca6dab628f7456a070d6e3a17ba44b522d360a82c552edad2538",
+    "listingSha256": "6200c342fd558d0a9137c2c94a3b9ca14c25bcab632599c33fc4ce7fac5afcd4",
+    "fullDumpSha256": "c951014ac7c654c85e5d9bda5ca3ff2cc97168da4ba4e232e720b04c5d1f674e",
+    "selected": [
+      {
+        "stem": "c_flat_scan2-run-6",
+        "symbol": "?run@?$general_matrix_vector_product@_JNV?$const_blas_data_mapper@N_J$00@internal@Eigen@@$00$0A@NV?$const_blas_data_mapper@N_J$0A@@23@$0A@$0A@@internal@Eigen@@SAX_J0AEBV?$const_blas_data_mapper@N_J$00@23@AEBV?$const_blas_data_mapper@N_J$0A@@23@PEAN0N@Z"
+      },
+      {
+        "stem": "c_flat_scan2-run-7",
+        "symbol": "?run@?$general_matrix_vector_product@_JNV?$const_blas_data_mapper@N_J$0A@@internal@Eigen@@$0A@$0A@NV123@$0A@$0A@@internal@Eigen@@SAX_J0AEBV?$const_blas_data_mapper@N_J$0A@@23@1PEAN0N@Z"
+      },
+      {
+        "stem": "c_flat_scan2-run-21",
+        "symbol": "?run@?$general_matrix_vector_product@_JNV?$const_blas_data_mapper@N_J$0A@@internal@Eigen@@$0A@$0A@NV?$const_blas_data_mapper@N_J$00@23@$0A@$0A@@internal@Eigen@@SAX_J0AEBV?$const_blas_data_mapper@N_J$0A@@23@AEBV?$const_blas_data_mapper@N_J$00@23@PEAN0N@Z"
+      },
+      {
+        "stem": "c_flat_scan2-_unblocked-87",
+        "symbol": "??$unblocked@V?$Block@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@$0?0$0?0$0A@@Eigen@@@?$llt_inplace@N$00@internal@Eigen@@SA_JAEAV?$Block@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@$0?0$0?0$0A@@2@@Z"
+      },
+      {
+        "stem": "c_flat_scan2-_unblocked-88",
+        "symbol": "??$unblocked@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@@?$llt_inplace@N$00@internal@Eigen@@SA_JAEAV?$Matrix@N$0?0$0?0$0A@$0?0$0?0@2@@Z"
+      },
+      {
+        "stem": "c_flat_scan2-_unblocked-90",
+        "symbol": "??$unblocked@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@V?$Transpositions@$0?0$0?0H@2@V?$Matrix@N$0?0$00$0A@$0?0$00@2@@?$ldlt_inplace@$00@internal@Eigen@@SA_NAEAV?$Matrix@N$0?0$0?0$0A@$0?0$0?0@2@AEAV?$Transpositions@$0?0$0?0H@2@AEAV?$Matrix@N$0?0$00$0A@$0?0$00@2@AEAW4SignMatrix@12@@Z"
+      },
+      {
+        "stem": "c_flat_scan2-solve_into-146",
+        "symbol": "?solve_into@linalg@kibo@@YA?AUStatus@12@VLltFactorView@12@V?$span@$$CBN$0?0@std@@V?$span@N$0?0@6@V?$span@W4byte@std@@$0?0@6@@Z"
+      },
+      {
+        "stem": "c_flat_scan2-factorize_llt-148",
+        "symbol": "?factorize_llt@linalg@kibo@@YA?AV?$Result@VLltFactorView@linalg@kibo@@@12@V?$MatrixView@$$CBN@12@V?$MatrixView@N@12@ULltOptions@12@@Z"
+      },
+      {
+        "stem": "c_flat_scan2-factorize_column_llt-150",
+        "symbol": "?factorize_column_llt@detail@linalg@kibo@@YA?AV?$Result@VLltFactorView@linalg@kibo@@@23@V?$MatrixView@$$CBN@23@V?$MatrixView@N@23@@Z"
+      },
+      {
+        "stem": "c_flat_scan2-row_update_panel-151",
+        "symbol": "?row_update_panel@detail@linalg@kibo@@YAXPEANPEBN_K122@Z"
+      }
+    ]
+  },
+  "c_flat_scan4": {
+    "command": [
+      "C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/VC/Tools/MSVC/14.44.35207/bin/Hostx64/x64/dumpbin.exe",
+      "/disasm",
+      "build\\small-llt\\c_flat_scan4.dir\\Release\\phases.obj"
+    ],
+    "objectSha256": "e7a0d83b81627482a66c702b336b3f3bb29056e4435b5e699d1af6a96df4eb26",
+    "binarySha256": "0c0946d675b22e6648cc2aa6042be1891fd85434f84bcc7834d26b1952793942",
+    "listingSha256": "9308b86bf345d7e442238be56ca9398bbad8fa41bd3dbfda199b09fd33524452",
+    "fullDumpSha256": "7b1c9ff79724e99028f06b80bc379c09a5915f904a33656384e509e387f5752b",
+    "selected": [
+      {
+        "stem": "c_flat_scan4-run-6",
+        "symbol": "?run@?$general_matrix_vector_product@_JNV?$const_blas_data_mapper@N_J$00@internal@Eigen@@$00$0A@NV?$const_blas_data_mapper@N_J$0A@@23@$0A@$0A@@internal@Eigen@@SAX_J0AEBV?$const_blas_data_mapper@N_J$00@23@AEBV?$const_blas_data_mapper@N_J$0A@@23@PEAN0N@Z"
+      },
+      {
+        "stem": "c_flat_scan4-run-7",
+        "symbol": "?run@?$general_matrix_vector_product@_JNV?$const_blas_data_mapper@N_J$0A@@internal@Eigen@@$0A@$0A@NV123@$0A@$0A@@internal@Eigen@@SAX_J0AEBV?$const_blas_data_mapper@N_J$0A@@23@1PEAN0N@Z"
+      },
+      {
+        "stem": "c_flat_scan4-run-21",
+        "symbol": "?run@?$general_matrix_vector_product@_JNV?$const_blas_data_mapper@N_J$0A@@internal@Eigen@@$0A@$0A@NV?$const_blas_data_mapper@N_J$00@23@$0A@$0A@@internal@Eigen@@SAX_J0AEBV?$const_blas_data_mapper@N_J$0A@@23@AEBV?$const_blas_data_mapper@N_J$00@23@PEAN0N@Z"
+      },
+      {
+        "stem": "c_flat_scan4-_unblocked-87",
+        "symbol": "??$unblocked@V?$Block@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@$0?0$0?0$0A@@Eigen@@@?$llt_inplace@N$00@internal@Eigen@@SA_JAEAV?$Block@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@$0?0$0?0$0A@@2@@Z"
+      },
+      {
+        "stem": "c_flat_scan4-_unblocked-88",
+        "symbol": "??$unblocked@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@@?$llt_inplace@N$00@internal@Eigen@@SA_JAEAV?$Matrix@N$0?0$0?0$0A@$0?0$0?0@2@@Z"
+      },
+      {
+        "stem": "c_flat_scan4-_unblocked-90",
+        "symbol": "??$unblocked@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@V?$Transpositions@$0?0$0?0H@2@V?$Matrix@N$0?0$00$0A@$0?0$00@2@@?$ldlt_inplace@$00@internal@Eigen@@SA_NAEAV?$Matrix@N$0?0$0?0$0A@$0?0$0?0@2@AEAV?$Transpositions@$0?0$0?0H@2@AEAV?$Matrix@N$0?0$00$0A@$0?0$00@2@AEAW4SignMatrix@12@@Z"
+      },
+      {
+        "stem": "c_flat_scan4-solve_into-146",
+        "symbol": "?solve_into@linalg@kibo@@YA?AUStatus@12@VLltFactorView@12@V?$span@$$CBN$0?0@std@@V?$span@N$0?0@6@V?$span@W4byte@std@@$0?0@6@@Z"
+      },
+      {
+        "stem": "c_flat_scan4-factorize_llt-148",
+        "symbol": "?factorize_llt@linalg@kibo@@YA?AV?$Result@VLltFactorView@linalg@kibo@@@12@V?$MatrixView@$$CBN@12@V?$MatrixView@N@12@ULltOptions@12@@Z"
+      },
+      {
+        "stem": "c_flat_scan4-factorize_column_llt-150",
+        "symbol": "?factorize_column_llt@detail@linalg@kibo@@YA?AV?$Result@VLltFactorView@linalg@kibo@@@23@V?$MatrixView@$$CBN@23@V?$MatrixView@N@23@@Z"
+      },
+      {
+        "stem": "c_flat_scan4-row_update_panel-151",
+        "symbol": "?row_update_panel@detail@linalg@kibo@@YAXPEANPEBN_K122@Z"
+      }
+    ]
+  },
+  "c_toltile": {
+    "command": [
+      "C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/VC/Tools/MSVC/14.44.35207/bin/Hostx64/x64/dumpbin.exe",
+      "/disasm",
+      "build\\small-llt\\c_toltile.dir\\Release\\phases.obj"
+    ],
+    "objectSha256": "2b684c25bc0da4ac86d582ee9fa07c0b9be9317b024bbbf14a2116acb19e20bc",
+    "binarySha256": "11c390374ae7dbd94336261d9add2d5822d1b1e63731a03df837bc0ca882ad01",
+    "listingSha256": "3296b10ba75d30c5c9f2c5c5ad56348b40d9a2e0835a43a28bdcf31b4f9d5e52",
+    "fullDumpSha256": "3c5e7e57e3cab9c5c5496ddce249c6d4a05099faa402d7236b5969f7bc268322",
+    "selected": [
+      {
+        "stem": "c_toltile-run-6",
+        "symbol": "?run@?$general_matrix_vector_product@_JNV?$const_blas_data_mapper@N_J$00@internal@Eigen@@$00$0A@NV?$const_blas_data_mapper@N_J$0A@@23@$0A@$0A@@internal@Eigen@@SAX_J0AEBV?$const_blas_data_mapper@N_J$00@23@AEBV?$const_blas_data_mapper@N_J$0A@@23@PEAN0N@Z"
+      },
+      {
+        "stem": "c_toltile-run-7",
+        "symbol": "?run@?$general_matrix_vector_product@_JNV?$const_blas_data_mapper@N_J$0A@@internal@Eigen@@$0A@$0A@NV123@$0A@$0A@@internal@Eigen@@SAX_J0AEBV?$const_blas_data_mapper@N_J$0A@@23@1PEAN0N@Z"
+      },
+      {
+        "stem": "c_toltile-run-21",
+        "symbol": "?run@?$general_matrix_vector_product@_JNV?$const_blas_data_mapper@N_J$0A@@internal@Eigen@@$0A@$0A@NV?$const_blas_data_mapper@N_J$00@23@$0A@$0A@@internal@Eigen@@SAX_J0AEBV?$const_blas_data_mapper@N_J$0A@@23@AEBV?$const_blas_data_mapper@N_J$00@23@PEAN0N@Z"
+      },
+      {
+        "stem": "c_toltile-_unblocked-87",
+        "symbol": "??$unblocked@V?$Block@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@$0?0$0?0$0A@@Eigen@@@?$llt_inplace@N$00@internal@Eigen@@SA_JAEAV?$Block@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@$0?0$0?0$0A@@2@@Z"
+      },
+      {
+        "stem": "c_toltile-_unblocked-88",
+        "symbol": "??$unblocked@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@@?$llt_inplace@N$00@internal@Eigen@@SA_JAEAV?$Matrix@N$0?0$0?0$0A@$0?0$0?0@2@@Z"
+      },
+      {
+        "stem": "c_toltile-_unblocked-90",
+        "symbol": "??$unblocked@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@V?$Transpositions@$0?0$0?0H@2@V?$Matrix@N$0?0$00$0A@$0?0$00@2@@?$ldlt_inplace@$00@internal@Eigen@@SA_NAEAV?$Matrix@N$0?0$0?0$0A@$0?0$0?0@2@AEAV?$Transpositions@$0?0$0?0H@2@AEAV?$Matrix@N$0?0$00$0A@$0?0$00@2@AEAW4SignMatrix@12@@Z"
+      },
+      {
+        "stem": "c_toltile-solve_into-146",
+        "symbol": "?solve_into@linalg@kibo@@YA?AUStatus@12@VLltFactorView@12@V?$span@$$CBN$0?0@std@@V?$span@N$0?0@6@V?$span@W4byte@std@@$0?0@6@@Z"
+      },
+      {
+        "stem": "c_toltile-factorize_llt-148",
+        "symbol": "?factorize_llt@linalg@kibo@@YA?AV?$Result@VLltFactorView@linalg@kibo@@@12@V?$MatrixView@$$CBN@12@V?$MatrixView@N@12@ULltOptions@12@@Z"
+      },
+      {
+        "stem": "c_toltile-factorize_column_llt-150",
+        "symbol": "?factorize_column_llt@detail@linalg@kibo@@YA?AV?$Result@VLltFactorView@linalg@kibo@@@23@V?$MatrixView@$$CBN@23@V?$MatrixView@N@23@@Z"
+      },
+      {
+        "stem": "c_toltile-row_update_panel-151",
+        "symbol": "?row_update_panel@detail@linalg@kibo@@YAXPEANPEBN_K122@Z"
+      }
+    ]
+  }
+}

@@ -1,0 +1,33 @@
+Internal ctest changing into directory: C:/Users/owner/Documents/git/kibo-linalg/build/locality-public
+Test project C:/Users/owner/Documents/git/kibo-linalg/build/locality-public
+      Start  1: lm_reference
+ 1/12 Test  #1: lm_reference .....................   Passed    0.03 sec
+      Start  2: common_2x2
+ 2/12 Test  #2: common_2x2 .......................   Passed    0.02 sec
+      Start  3: migration
+ 3/12 Test  #3: migration ........................   Passed    0.02 sec
+      Start  4: core
+ 4/12 Test  #4: core .............................   Passed    0.01 sec
+      Start  5: dynamic
+ 5/12 Test  #5: dynamic ..........................   Passed    0.01 sec
+      Start  6: llt
+ 6/12 Test  #6: llt ..............................   Passed    0.02 sec
+      Start  7: qr
+ 7/12 Test  #7: qr ...............................   Passed    0.03 sec
+      Start  8: llt_scalar
+ 8/12 Test  #8: llt_scalar .......................   Passed    0.03 sec
+      Start  9: qr_scalar
+ 9/12 Test  #9: qr_scalar ........................   Passed    0.02 sec
+      Start 10: no_runtime
+10/12 Test #10: no_runtime .......................   Passed    0.03 sec
+      Start 11: dynamic_no_runtime
+11/12 Test #11: dynamic_no_runtime ...............   Passed    0.01 sec
+      Start 12: allocation
+12/12 Test #12: allocation .......................***Skipped   0.03 sec
+
+100% tests passed, 0 tests failed out of 12
+
+Total Test time (real) =   0.26 sec
+
+The following tests did not run:
+	 12 - allocation (Skipped)

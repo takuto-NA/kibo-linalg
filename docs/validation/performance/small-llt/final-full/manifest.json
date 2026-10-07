@@ -1,0 +1,2158 @@
+{
+  "sourceCommit": "8fe28e552bfc485c4744a193cc9e677b3e2ce309",
+  "sourceBaseline": "3c7d2c8b54701e1e5f826bfb171d5a442e14d10a",
+  "sourceHashes": {
+    "include\\kibo\\dynamic_matrix.hpp": "535afd0c96607a65e13711bb0ea94a94d3791eb170fa54db5d1e220e12b103e6",
+    "include\\kibo\\linalg.hpp": "52bf606a0f6ac2e21a83878e7b029b4c65935e25f5fc90387b1cf2ef74572634",
+    "include\\kibo\\llt.hpp": "75047b2655f5cf907caf10177e3fc5913db39021aa9d3baf177b25552e980d11",
+    "include\\kibo\\qr.hpp": "04b1efdb4e2869ddc75ad6075874a8ab15d29051e79a24a19765fad1b50193ae",
+    "include\\kibo\\workspace.hpp": "e74b13bb57d83bb0ad7b1c8f271c40db825a2d1b380f0224639a9d94ee8c48d0",
+    "include\\kibo\\detail\\row_kernels.hpp": "19be54ecabe636b6f1bfb7b57eedad516462f5ac15664442e40ea21c44a5edad",
+    "tests\\allocation_tests.cpp": "5e6f70369e8caf3cbec8a4fe9dc7110760fb6723017b37f2f72f02a7888df2d1",
+    "tests\\controlled_fixture.hpp": "eabb9c60f1659b981c52e704c3e9a53cdaef50349baccda2ec6fcc5774f6c142",
+    "tests\\core_tests.cpp": "d421340dee457e1630b7c08d92b0085b1de902cd578ed9d682361af418bc4567",
+    "tests\\dynamic_tests.cpp": "9cada0e439488a56e6024786cf67f2eb365dfa82ade10d97d2b1cae7bc14c633",
+    "tests\\llt_tests.cpp": "77b8276a464916a24ab636e8bb032ef2fd9c527e461de6d1cd773d7c9585daf0",
+    "tests\\no_runtime_tests.cpp": "00688119ad16325e4c0c3b27d7b9230ac04222f0edb8e0f3362f597efe4b1697",
+    "tests\\numerical_tests.cpp": "9104403a952679feba40d496e6e14d47d4837b056cfca21af0242a40c42df044",
+    "tests\\qr_tests.cpp": "a01f2b6349f4ee8b829fb98629e033eba360704bc006dfa46870597c9df86830",
+    "tests\\test_check.hpp": "8e2fa1cdda7bd43126d6d96729ec5770bbacc59a3e1316c399a617f6c71543ea",
+    "tests\\fixtures\\oracles.hpp": "2a5ebc209fc5ab0d0a9330f3499e34ec6421ea792a4909f4aef3862a36838d1d",
+    "tests\\fixtures\\oracles.json": "e605d0b03688cfad396539d34f4974f35758949fdcb8873bf10810d89c065c88",
+    "tests\\fixtures\\oracles.sha256": "68d4b2d0e6b7e73dc3b63f11e07c058000987a209f1b3aa74de3cec6fa078afa",
+    "tests\\installed_consumer\\CMakeLists.txt": "e5d2cf092cd1c8162f6652961ce6587601b9fd26907d33800127b3ec2186b372",
+    "tests\\installed_consumer\\main.cpp": "70fdc25a0ddadec4ef252d2418cacdd9820b91b034ac824006c0413d4aeb36c4",
+    "tools\\diagnostics\\small-llt\\CMakeLists.txt": "c9dbb394a1b8d59c43ff81c9caa0a624b975cbf9c52171365928065e1b742302",
+    "tools\\diagnostics\\small-llt\\current-probes.py": "ff0fa6d3f284fd0e7d78c0890cd3ab2b47e5b49e0a8ecdaa75fbb794ea9d057f",
+    "tools\\diagnostics\\small-llt\\disassemble.py": "cb8c1307ff14dcc4b375cf3c650de23a36a6e97fd4d9101109e1a787290bc711",
+    "tools\\diagnostics\\small-llt\\full.cpp": "74ce9737a6de2034d41a9960797d11b6a4e3739bf9f010dac02b5a228f7d8e66",
+    "tools\\diagnostics\\small-llt\\paired.py": "799199a6484988ca141569c0c3aedb37c5d9a508455ba3f39f8f59d7e08fd74b",
+    "tools\\diagnostics\\small-llt\\prepare-full.py": "b2d908cdadaa825bf90cbc11083fa1242546ffb08b49094c7378d250ecd9e895",
+    "tools\\diagnostics\\small-llt\\prepare.py": "89d83d8c457aa51d6ba70cdfe2bde12c8bc28b2b710ce973fbd92287de97d1e1",
+    "tools\\diagnostics\\small-llt\\README.md": "ecdaf9c3d92982382a283987f421402e82e07fb122ef59cdf487e5bf9b2bf089",
+    "tools\\diagnostics\\small-llt\\run-full.py": "5057fbc027f62579a2b9c1f5f917063e1a1f7caa0c2a29234bcd62fb0c5e4b05",
+    "tools\\diagnostics\\small-llt\\run.py": "b4a869adfee94d65c37ac56ff32e8bf6bfcb9bfcaa842c6e3f725fa409e616a2",
+    "tools\\diagnostics\\small-llt\\summarize.py": "6dd2bdf4fde8e63236601e18020374352d95a3b4fef9c7dd8e4fe1a5a34199b2",
+    "tools\\diagnostics\\assembly-gap\\CMakeLists.txt": "1e3a56b0afd4d700b225cd2a7afbe5a9ed72d4d87adf833457f5b23db6c6cc25",
+    "tools\\diagnostics\\assembly-gap\\collect.py": "0e666cd349ed3bc25d20b7954f042b0397ede353360774f7e37be64a171f7cb0",
+    "tools\\diagnostics\\assembly-gap\\kernels.cpp": "88fb416af5f0df8ec321d86ca5f316dfec457dbbc3eadc17a511497dfe8e9996",
+    "tools\\diagnostics\\assembly-gap\\micro.cpp": "b4571c8b3d7d38ffcb9a10177f6dc06204af29cb0d0c4573ff7ac644118949c0",
+    "tools\\diagnostics\\assembly-gap\\phases.cpp": "b433bf5cb61ab041b5971f062cc197eab40f41ce3c57fbe6856bc729d77e9315",
+    "tools\\diagnostics\\assembly-gap\\prepare.py": "b684c3f56df45aeacd07890d6e8f7dce618d58c42cf50611c37f20b1169e1d7b",
+    "tools\\diagnostics\\assembly-gap\\public_assembly.cpp": "ec9e27289766ca52d75472bb017b6b5d5af465a9a25ab2d8e2a397746fc67e7b",
+    "tools\\diagnostics\\assembly-gap\\public_compare.py": "3c083db23840766296ec58c5cc13ebfe4b8f4345f34201535a133b7281705c52",
+    "tools\\diagnostics\\assembly-gap\\README.md": "7bba31f39208d4e02bd4c9cdf40138340fde238879df08808fa5c5155935dd96",
+    "tools\\diagnostics\\assembly-gap\\summarize.py": "961d0ec0a928cfbffaa976abb409f833342093bfc8f674fd1e9bd81fd7105552",
+    "tools\\diagnostics\\solver-locality\\affinity.hpp": "ec5ad8f5e25b80348925b40e6fa9586fe94e2d98f86aafe1f291875ff6c3e0d5",
+    "tools\\diagnostics\\solver-locality\\CMakeLists.txt": "0d76f249af7df8a17bb7b19360e502d8819e438845010da707cb51bf4b7ba7d2",
+    "tools\\diagnostics\\solver-locality\\collect.py": "c0cbbcd42dfb604c2851d323f183723955f249f644b1ef438ce05e73dea9088a",
+    "tools\\diagnostics\\solver-locality\\probe.cpp": "b781c8c312da18a20fa8afc7f483960ad2ebd322b79403eb90770f9fb7599368",
+    "tools\\diagnostics\\solver-locality\\README.md": "2506c431298f727922600029e6ad570adb0a3957b543517905a10f5fddeedc49",
+    "tools\\diagnostics\\solver-locality\\retry.py": "2391ac1cd275da88bb236780fe5655d26c0246e763f07d1956f0572d58c8dc35",
+    "tools\\diagnostics\\solver-locality\\summarize.py": "00ee6815902f8c339ff00fcd3b9b3eb0b5a68d832fdb79c2d77b37c98b52a8cb"
+  },
+  "commands": [
+    {
+      "command": [
+        "build\\small-llt\\Release\\before_full.exe",
+        "31",
+        "30",
+        "31",
+        "0"
+      ],
+      "binarySha256": "c98275f075d02d794d72988970f79c04bb378bc14df3b68b9ffa2a6eb18c44dd",
+      "output": ".scratch\\small-llt-final-full\\before_full-n31-m31-p0.jsonl"
+    },
+    {
+      "command": [
+        "build\\small-llt\\Release\\after_full.exe",
+        "31",
+        "30",
+        "31",
+        "0"
+      ],
+      "binarySha256": "6928b86bc1076445841a281a3b7d603ce77a1404ddd124ffba7767d864213fcf",
+      "output": ".scratch\\small-llt-final-full\\after_full-n31-m31-p0.jsonl"
+    },
+    {
+      "command": [
+        "build\\small-llt\\Release\\after_full.exe",
+        "31",
+        "30",
+        "31",
+        "1"
+      ],
+      "binarySha256": "6928b86bc1076445841a281a3b7d603ce77a1404ddd124ffba7767d864213fcf",
+      "output": ".scratch\\small-llt-final-full\\after_full-n31-m31-p1.jsonl"
+    },
+    {
+      "command": [
+        "build\\small-llt\\Release\\before_full.exe",
+        "31",
+        "30",
+        "31",
+        "1"
+      ],
+      "binarySha256": "c98275f075d02d794d72988970f79c04bb378bc14df3b68b9ffa2a6eb18c44dd",
+      "output": ".scratch\\small-llt-final-full\\before_full-n31-m31-p1.jsonl"
+    },
+    {
+      "command": [
+        "build\\small-llt\\Release\\before_full.exe",
+        "31",
+        "30",
+        "31",
+        "2"
+      ],
+      "binarySha256": "c98275f075d02d794d72988970f79c04bb378bc14df3b68b9ffa2a6eb18c44dd",
+      "output": ".scratch\\small-llt-final-full\\before_full-n31-m31-p2.jsonl"
+    },
+    {
+      "command": [
+        "build\\small-llt\\Release\\after_full.exe",
+        "31",
+        "30",
+        "31",
+        "2"
+      ],
+      "binarySha256": "6928b86bc1076445841a281a3b7d603ce77a1404ddd124ffba7767d864213fcf",
+      "output": ".scratch\\small-llt-final-full\\after_full-n31-m31-p2.jsonl"
+    },
+    {
+      "command": [
+        "build\\small-llt\\Release\\after_full.exe",
+        "31",
+        "30",
+        "31",
+        "3"
+      ],
+      "binarySha256": "6928b86bc1076445841a281a3b7d603ce77a1404ddd124ffba7767d864213fcf",
+      "output": ".scratch\\small-llt-final-full\\after_full-n31-m31-p3.jsonl"
+    },
+    {
+      "command": [
+        "build\\small-llt\\Release\\before_full.exe",
+        "31",
+        "30",
+        "31",
+        "3"
+      ],
+      "binarySha256": "c98275f075d02d794d72988970f79c04bb378bc14df3b68b9ffa2a6eb18c44dd",
+      "output": ".scratch\\small-llt-final-full\\before_full-n31-m31-p3.jsonl"
+    },
+    {
+      "command": [
+        "build\\small-llt\\Release\\before_full.exe",
+        "31",
+        "30",
+        "31",
+        "4"
+      ],
+      "binarySha256": "c98275f075d02d794d72988970f79c04bb378bc14df3b68b9ffa2a6eb18c44dd",
+      "output": ".scratch\\small-llt-final-full\\before_full-n31-m31-p4.jsonl"
+    },
+    {
+      "command": [
+        "build\\small-llt\\Release\\after_full.exe",
+        "31",
+        "30",
+        "31",
+        "4"
+      ],
+      "binarySha256": "6928b86bc1076445841a281a3b7d603ce77a1404ddd124ffba7767d864213fcf",
+      "output": ".scratch\\small-llt-final-full\\after_full-n31-m31-p4.jsonl"
+    },
+    {
+      "command": [
+        "build\\small-llt\\Release\\before_full.exe",
+        "31",
+        "30",
+        "124",
+        "0"
+      ],
+      "binarySha256": "c98275f075d02d794d72988970f79c04bb378bc14df3b68b9ffa2a6eb18c44dd",
+      "output": ".scratch\\small-llt-final-full\\before_full-n31-m124-p0.jsonl"
+    },
+    {
+      "command": [
+        "build\\small-llt\\Release\\after_full.exe",
+        "31",
+        "30",
+        "124",
+        "0"
+      ],
+      "binarySha256": "6928b86bc1076445841a281a3b7d603ce77a1404ddd124ffba7767d864213fcf",
+      "output": ".scratch\\small-llt-final-full\\after_full-n31-m124-p0.jsonl"
+    },
+    {
+      "command": [
+        "build\\small-llt\\Release\\after_full.exe",
+        "31",
+        "30",
+        "124",
+        "1"
+      ],
+      "binarySha256": "6928b86bc1076445841a281a3b7d603ce77a1404ddd124ffba7767d864213fcf",
+      "output": ".scratch\\small-llt-final-full\\after_full-n31-m124-p1.jsonl"
+    },
+    {
+      "command": [
+        "build\\small-llt\\Release\\before_full.exe",
+        "31",
+        "30",
+        "124",
+        "1"
+      ],
+      "binarySha256": "c98275f075d02d794d72988970f79c04bb378bc14df3b68b9ffa2a6eb18c44dd",
+      "output": ".scratch\\small-llt-final-full\\before_full-n31-m124-p1.jsonl"
+    },
+    {
+      "command": [
+        "build\\small-llt\\Release\\before_full.exe",
+        "31",
+        "30",
+        "124",
+        "2"
+      ],
+      "binarySha256": "c98275f075d02d794d72988970f79c04bb378bc14df3b68b9ffa2a6eb18c44dd",
+      "output": ".scratch\\small-llt-final-full\\before_full-n31-m124-p2.jsonl"
+    },
+    {
+      "command": [
+        "build\\small-llt\\Release\\after_full.exe",
+        "31",
+        "30",
+        "124",
+        "2"
+      ],
+      "binarySha256": "6928b86bc1076445841a281a3b7d603ce77a1404ddd124ffba7767d864213fcf",
+      "output": ".scratch\\small-llt-final-full\\after_full-n31-m124-p2.jsonl"
+    },
+    {
+      "command": [
+        "build\\small-llt\\Release\\after_full.exe",
+        "31",
+        "30",
+        "124",
+        "3"
+      ],
+      "binarySha256": "6928b86bc1076445841a281a3b7d603ce77a1404ddd124ffba7767d864213fcf",
+      "output": ".scratch\\small-llt-final-full\\after_full-n31-m124-p3.jsonl"
+    },
+    {
+      "command": [
+        "build\\small-llt\\Release\\before_full.exe",
+        "31",
+        "30",
+        "124",
+        "3"
+      ],
+      "binarySha256": "c98275f075d02d794d72988970f79c04bb378bc14df3b68b9ffa2a6eb18c44dd",
+      "output": ".scratch\\small-llt-final-full\\before_full-n31-m124-p3.jsonl"
+    },
+    {
+      "command": [
+        "build\\small-llt\\Release\\before_full.exe",
+        "31",
+        "30",
+        "124",
+        "4"
+      ],
+      "binarySha256": "c98275f075d02d794d72988970f79c04bb378bc14df3b68b9ffa2a6eb18c44dd",
+      "output": ".scratch\\small-llt-final-full\\before_full-n31-m124-p4.jsonl"
+    },
+    {
+      "command": [
+        "build\\small-llt\\Release\\after_full.exe",
+        "31",
+        "30",
+        "124",
+        "4"
+      ],
+      "binarySha256": "6928b86bc1076445841a281a3b7d603ce77a1404ddd124ffba7767d864213fcf",
+      "output": ".scratch\\small-llt-final-full\\after_full-n31-m124-p4.jsonl"
+    },
+    {
+      "command": [
+        "build\\small-llt\\Release\\before_full.exe",
+        "16",
+        "30",
+        "16",
+        "0"
+      ],
+      "binarySha256": "c98275f075d02d794d72988970f79c04bb378bc14df3b68b9ffa2a6eb18c44dd",
+      "output": ".scratch\\small-llt-final-full\\before_full-n16-m16-p0.jsonl"
+    },
+    {
+      "command": [
+        "build\\small-llt\\Release\\after_full.exe",
+        "16",
+        "30",
+        "16",
+        "0"
+      ],
+      "binarySha256": "6928b86bc1076445841a281a3b7d603ce77a1404ddd124ffba7767d864213fcf",
+      "output": ".scratch\\small-llt-final-full\\after_full-n16-m16-p0.jsonl"
+    },
+    {
+      "command": [
+        "build\\small-llt\\Release\\after_full.exe",
+        "16",
+        "30",
+        "16",
+        "1"
+      ],
+      "binarySha256": "6928b86bc1076445841a281a3b7d603ce77a1404ddd124ffba7767d864213fcf",
+      "output": ".scratch\\small-llt-final-full\\after_full-n16-m16-p1.jsonl"
+    },
+    {
+      "command": [
+        "build\\small-llt\\Release\\before_full.exe",
+        "16",
+        "30",
+        "16",
+        "1"
+      ],
+      "binarySha256": "c98275f075d02d794d72988970f79c04bb378bc14df3b68b9ffa2a6eb18c44dd",
+      "output": ".scratch\\small-llt-final-full\\before_full-n16-m16-p1.jsonl"
+    },
+    {
+      "command": [
+        "build\\small-llt\\Release\\before_full.exe",
+        "16",
+        "30",
+        "16",
+        "2"
+      ],
+      "binarySha256": "c98275f075d02d794d72988970f79c04bb378bc14df3b68b9ffa2a6eb18c44dd",
+      "output": ".scratch\\small-llt-final-full\\before_full-n16-m16-p2.jsonl"
+    },
+    {
+      "command": [
+        "build\\small-llt\\Release\\after_full.exe",
+        "16",
+        "30",
+        "16",
+        "2"
+      ],
+      "binarySha256": "6928b86bc1076445841a281a3b7d603ce77a1404ddd124ffba7767d864213fcf",
+      "output": ".scratch\\small-llt-final-full\\after_full-n16-m16-p2.jsonl"
+    },
+    {
+      "command": [
+        "build\\small-llt\\Release\\after_full.exe",
+        "16",
+        "30",
+        "16",
+        "3"
+      ],
+      "binarySha256": "6928b86bc1076445841a281a3b7d603ce77a1404ddd124ffba7767d864213fcf",
+      "output": ".scratch\\small-llt-final-full\\after_full-n16-m16-p3.jsonl"
+    },
+    {
+      "command": [
+        "build\\small-llt\\Release\\before_full.exe",
+        "16",
+        "30",
+        "16",
+        "3"
+      ],
+      "binarySha256": "c98275f075d02d794d72988970f79c04bb378bc14df3b68b9ffa2a6eb18c44dd",
+      "output": ".scratch\\small-llt-final-full\\before_full-n16-m16-p3.jsonl"
+    },
+    {
+      "command": [
+        "build\\small-llt\\Release\\before_full.exe",
+        "16",
+        "30",
+        "16",
+        "4"
+      ],
+      "binarySha256": "c98275f075d02d794d72988970f79c04bb378bc14df3b68b9ffa2a6eb18c44dd",
+      "output": ".scratch\\small-llt-final-full\\before_full-n16-m16-p4.jsonl"
+    },
+    {
+      "command": [
+        "build\\small-llt\\Release\\after_full.exe",
+        "16",
+        "30",
+        "16",
+        "4"
+      ],
+      "binarySha256": "6928b86bc1076445841a281a3b7d603ce77a1404ddd124ffba7767d864213fcf",
+      "output": ".scratch\\small-llt-final-full\\after_full-n16-m16-p4.jsonl"
+    },
+    {
+      "command": [
+        "build\\small-llt\\Release\\before_full.exe",
+        "16",
+        "30",
+        "64",
+        "0"
+      ],
+      "binarySha256": "c98275f075d02d794d72988970f79c04bb378bc14df3b68b9ffa2a6eb18c44dd",
+      "output": ".scratch\\small-llt-final-full\\before_full-n16-m64-p0.jsonl"
+    },
+    {
+      "command": [
+        "build\\small-llt\\Release\\after_full.exe",
+        "16",
+        "30",
+        "64",
+        "0"
+      ],
+      "binarySha256": "6928b86bc1076445841a281a3b7d603ce77a1404ddd124ffba7767d864213fcf",
+      "output": ".scratch\\small-llt-final-full\\after_full-n16-m64-p0.jsonl"
+    },
+    {
+      "command": [
+        "build\\small-llt\\Release\\after_full.exe",
+        "16",
+        "30",
+        "64",
+        "1"
+      ],
+      "binarySha256": "6928b86bc1076445841a281a3b7d603ce77a1404ddd124ffba7767d864213fcf",
+      "output": ".scratch\\small-llt-final-full\\after_full-n16-m64-p1.jsonl"
+    },
+    {
+      "command": [
+        "build\\small-llt\\Release\\before_full.exe",
+        "16",
+        "30",
+        "64",
+        "1"
+      ],
+      "binarySha256": "c98275f075d02d794d72988970f79c04bb378bc14df3b68b9ffa2a6eb18c44dd",
+      "output": ".scratch\\small-llt-final-full\\before_full-n16-m64-p1.jsonl"
+    },
+    {
+      "command": [
+        "build\\small-llt\\Release\\before_full.exe",
+        "16",
+        "30",
+        "64",
+        "2"
+      ],
+      "binarySha256": "c98275f075d02d794d72988970f79c04bb378bc14df3b68b9ffa2a6eb18c44dd",
+      "output": ".scratch\\small-llt-final-full\\before_full-n16-m64-p2.jsonl"
+    },
+    {
+      "command": [
+        "build\\small-llt\\Release\\after_full.exe",
+        "16",
+        "30",
+        "64",
+        "2"
+      ],
+      "binarySha256": "6928b86bc1076445841a281a3b7d603ce77a1404ddd124ffba7767d864213fcf",
+      "output": ".scratch\\small-llt-final-full\\after_full-n16-m64-p2.jsonl"
+    },
+    {
+      "command": [
+        "build\\small-llt\\Release\\after_full.exe",
+        "16",
+        "30",
+        "64",
+        "3"
+      ],
+      "binarySha256": "6928b86bc1076445841a281a3b7d603ce77a1404ddd124ffba7767d864213fcf",
+      "output": ".scratch\\small-llt-final-full\\after_full-n16-m64-p3.jsonl"
+    },
+    {
+      "command": [
+        "build\\small-llt\\Release\\before_full.exe",
+        "16",
+        "30",
+        "64",
+        "3"
+      ],
+      "binarySha256": "c98275f075d02d794d72988970f79c04bb378bc14df3b68b9ffa2a6eb18c44dd",
+      "output": ".scratch\\small-llt-final-full\\before_full-n16-m64-p3.jsonl"
+    },
+    {
+      "command": [
+        "build\\small-llt\\Release\\before_full.exe",
+        "16",
+        "30",
+        "64",
+        "4"
+      ],
+      "binarySha256": "c98275f075d02d794d72988970f79c04bb378bc14df3b68b9ffa2a6eb18c44dd",
+      "output": ".scratch\\small-llt-final-full\\before_full-n16-m64-p4.jsonl"
+    },
+    {
+      "command": [
+        "build\\small-llt\\Release\\after_full.exe",
+        "16",
+        "30",
+        "64",
+        "4"
+      ],
+      "binarySha256": "6928b86bc1076445841a281a3b7d603ce77a1404ddd124ffba7767d864213fcf",
+      "output": ".scratch\\small-llt-final-full\\after_full-n16-m64-p4.jsonl"
+    },
+    {
+      "command": [
+        "build\\small-llt\\Release\\before_full.exe",
+        "32",
+        "30",
+        "32",
+        "0"
+      ],
+      "binarySha256": "c98275f075d02d794d72988970f79c04bb378bc14df3b68b9ffa2a6eb18c44dd",
+      "output": ".scratch\\small-llt-final-full\\before_full-n32-m32-p0.jsonl"
+    },
+    {
+      "command": [
+        "build\\small-llt\\Release\\after_full.exe",
+        "32",
+        "30",
+        "32",
+        "0"
+      ],
+      "binarySha256": "6928b86bc1076445841a281a3b7d603ce77a1404ddd124ffba7767d864213fcf",
+      "output": ".scratch\\small-llt-final-full\\after_full-n32-m32-p0.jsonl"
+    },
+    {
+      "command": [
+        "build\\small-llt\\Release\\after_full.exe",
+        "32",
+        "30",
+        "32",
+        "1"
+      ],
+      "binarySha256": "6928b86bc1076445841a281a3b7d603ce77a1404ddd124ffba7767d864213fcf",
+      "output": ".scratch\\small-llt-final-full\\after_full-n32-m32-p1.jsonl"
+    },
+    {
+      "command": [
+        "build\\small-llt\\Release\\before_full.exe",
+        "32",
+        "30",
+        "32",
+        "1"
+      ],
+      "binarySha256": "c98275f075d02d794d72988970f79c04bb378bc14df3b68b9ffa2a6eb18c44dd",
+      "output": ".scratch\\small-llt-final-full\\before_full-n32-m32-p1.jsonl"
+    },
+    {
+      "command": [
+        "build\\small-llt\\Release\\before_full.exe",
+        "32",
+        "30",
+        "32",
+        "2"
+      ],
+      "binarySha256": "c98275f075d02d794d72988970f79c04bb378bc14df3b68b9ffa2a6eb18c44dd",
+      "output": ".scratch\\small-llt-final-full\\before_full-n32-m32-p2.jsonl"
+    },
+    {
+      "command": [
+        "build\\small-llt\\Release\\after_full.exe",
+        "32",
+        "30",
+        "32",
+        "2"
+      ],
+      "binarySha256": "6928b86bc1076445841a281a3b7d603ce77a1404ddd124ffba7767d864213fcf",
+      "output": ".scratch\\small-llt-final-full\\after_full-n32-m32-p2.jsonl"
+    },
+    {
+      "command": [
+        "build\\small-llt\\Release\\after_full.exe",
+        "32",
+        "30",
+        "32",
+        "3"
+      ],
+      "binarySha256": "6928b86bc1076445841a281a3b7d603ce77a1404ddd124ffba7767d864213fcf",
+      "output": ".scratch\\small-llt-final-full\\after_full-n32-m32-p3.jsonl"
+    },
+    {
+      "command": [
+        "build\\small-llt\\Release\\before_full.exe",
+        "32",
+        "30",
+        "32",
+        "3"
+      ],
+      "binarySha256": "c98275f075d02d794d72988970f79c04bb378bc14df3b68b9ffa2a6eb18c44dd",
+      "output": ".scratch\\small-llt-final-full\\before_full-n32-m32-p3.jsonl"
+    },
+    {
+      "command": [
+        "build\\small-llt\\Release\\before_full.exe",
+        "32",
+        "30",
+        "32",
+        "4"
+      ],
+      "binarySha256": "c98275f075d02d794d72988970f79c04bb378bc14df3b68b9ffa2a6eb18c44dd",
+      "output": ".scratch\\small-llt-final-full\\before_full-n32-m32-p4.jsonl"
+    },
+    {
+      "command": [
+        "build\\small-llt\\Release\\after_full.exe",
+        "32",
+        "30",
+        "32",
+        "4"
+      ],
+      "binarySha256": "6928b86bc1076445841a281a3b7d603ce77a1404ddd124ffba7767d864213fcf",
+      "output": ".scratch\\small-llt-final-full\\after_full-n32-m32-p4.jsonl"
+    },
+    {
+      "command": [
+        "build\\small-llt\\Release\\before_full.exe",
+        "32",
+        "30",
+        "128",
+        "0"
+      ],
+      "binarySha256": "c98275f075d02d794d72988970f79c04bb378bc14df3b68b9ffa2a6eb18c44dd",
+      "output": ".scratch\\small-llt-final-full\\before_full-n32-m128-p0.jsonl"
+    },
+    {
+      "command": [
+        "build\\small-llt\\Release\\after_full.exe",
+        "32",
+        "30",
+        "128",
+        "0"
+      ],
+      "binarySha256": "6928b86bc1076445841a281a3b7d603ce77a1404ddd124ffba7767d864213fcf",
+      "output": ".scratch\\small-llt-final-full\\after_full-n32-m128-p0.jsonl"
+    },
+    {
+      "command": [
+        "build\\small-llt\\Release\\after_full.exe",
+        "32",
+        "30",
+        "128",
+        "1"
+      ],
+      "binarySha256": "6928b86bc1076445841a281a3b7d603ce77a1404ddd124ffba7767d864213fcf",
+      "output": ".scratch\\small-llt-final-full\\after_full-n32-m128-p1.jsonl"
+    },
+    {
+      "command": [
+        "build\\small-llt\\Release\\before_full.exe",
+        "32",
+        "30",
+        "128",
+        "1"
+      ],
+      "binarySha256": "c98275f075d02d794d72988970f79c04bb378bc14df3b68b9ffa2a6eb18c44dd",
+      "output": ".scratch\\small-llt-final-full\\before_full-n32-m128-p1.jsonl"
+    },
+    {
+      "command": [
+        "build\\small-llt\\Release\\before_full.exe",
+        "32",
+        "30",
+        "128",
+        "2"
+      ],
+      "binarySha256": "c98275f075d02d794d72988970f79c04bb378bc14df3b68b9ffa2a6eb18c44dd",
+      "output": ".scratch\\small-llt-final-full\\before_full-n32-m128-p2.jsonl"
+    },
+    {
+      "command": [
+        "build\\small-llt\\Release\\after_full.exe",
+        "32",
+        "30",
+        "128",
+        "2"
+      ],
+      "binarySha256": "6928b86bc1076445841a281a3b7d603ce77a1404ddd124ffba7767d864213fcf",
+      "output": ".scratch\\small-llt-final-full\\after_full-n32-m128-p2.jsonl"
+    },
+    {
+      "command": [
+        "build\\small-llt\\Release\\after_full.exe",
+        "32",
+        "30",
+        "128",
+        "3"
+      ],
+      "binarySha256": "6928b86bc1076445841a281a3b7d603ce77a1404ddd124ffba7767d864213fcf",
+      "output": ".scratch\\small-llt-final-full\\after_full-n32-m128-p3.jsonl"
+    },
+    {
+      "command": [
+        "build\\small-llt\\Release\\before_full.exe",
+        "32",
+        "30",
+        "128",
+        "3"
+      ],
+      "binarySha256": "c98275f075d02d794d72988970f79c04bb378bc14df3b68b9ffa2a6eb18c44dd",
+      "output": ".scratch\\small-llt-final-full\\before_full-n32-m128-p3.jsonl"
+    },
+    {
+      "command": [
+        "build\\small-llt\\Release\\before_full.exe",
+        "32",
+        "30",
+        "128",
+        "4"
+      ],
+      "binarySha256": "c98275f075d02d794d72988970f79c04bb378bc14df3b68b9ffa2a6eb18c44dd",
+      "output": ".scratch\\small-llt-final-full\\before_full-n32-m128-p4.jsonl"
+    },
+    {
+      "command": [
+        "build\\small-llt\\Release\\after_full.exe",
+        "32",
+        "30",
+        "128",
+        "4"
+      ],
+      "binarySha256": "6928b86bc1076445841a281a3b7d603ce77a1404ddd124ffba7767d864213fcf",
+      "output": ".scratch\\small-llt-final-full\\after_full-n32-m128-p4.jsonl"
+    },
+    {
+      "command": [
+        "build\\small-llt\\Release\\before_full.exe",
+        "33",
+        "30",
+        "33",
+        "0"
+      ],
+      "binarySha256": "c98275f075d02d794d72988970f79c04bb378bc14df3b68b9ffa2a6eb18c44dd",
+      "output": ".scratch\\small-llt-final-full\\before_full-n33-m33-p0.jsonl"
+    },
+    {
+      "command": [
+        "build\\small-llt\\Release\\after_full.exe",
+        "33",
+        "30",
+        "33",
+        "0"
+      ],
+      "binarySha256": "6928b86bc1076445841a281a3b7d603ce77a1404ddd124ffba7767d864213fcf",
+      "output": ".scratch\\small-llt-final-full\\after_full-n33-m33-p0.jsonl"
+    },
+    {
+      "command": [
+        "build\\small-llt\\Release\\after_full.exe",
+        "33",
+        "30",
+        "33",
+        "1"
+      ],
+      "binarySha256": "6928b86bc1076445841a281a3b7d603ce77a1404ddd124ffba7767d864213fcf",
+      "output": ".scratch\\small-llt-final-full\\after_full-n33-m33-p1.jsonl"
+    },
+    {
+      "command": [
+        "build\\small-llt\\Release\\before_full.exe",
+        "33",
+        "30",
+        "33",
+        "1"
+      ],
+      "binarySha256": "c98275f075d02d794d72988970f79c04bb378bc14df3b68b9ffa2a6eb18c44dd",
+      "output": ".scratch\\small-llt-final-full\\before_full-n33-m33-p1.jsonl"
+    },
+    {
+      "command": [
+        "build\\small-llt\\Release\\before_full.exe",
+        "33",
+        "30",
+        "33",
+        "2"
+      ],
+      "binarySha256": "c98275f075d02d794d72988970f79c04bb378bc14df3b68b9ffa2a6eb18c44dd",
+      "output": ".scratch\\small-llt-final-full\\before_full-n33-m33-p2.jsonl"
+    },
+    {
+      "command": [
+        "build\\small-llt\\Release\\after_full.exe",
+        "33",
+        "30",
+        "33",
+        "2"
+      ],
+      "binarySha256": "6928b86bc1076445841a281a3b7d603ce77a1404ddd124ffba7767d864213fcf",
+      "output": ".scratch\\small-llt-final-full\\after_full-n33-m33-p2.jsonl"
+    },
+    {
+      "command": [
+        "build\\small-llt\\Release\\after_full.exe",
+        "33",
+        "30",
+        "33",
+        "3"
+      ],
+      "binarySha256": "6928b86bc1076445841a281a3b7d603ce77a1404ddd124ffba7767d864213fcf",
+      "output": ".scratch\\small-llt-final-full\\after_full-n33-m33-p3.jsonl"
+    },
+    {
+      "command": [
+        "build\\small-llt\\Release\\before_full.exe",
+        "33",
+        "30",
+        "33",
+        "3"
+      ],
+      "binarySha256": "c98275f075d02d794d72988970f79c04bb378bc14df3b68b9ffa2a6eb18c44dd",
+      "output": ".scratch\\small-llt-final-full\\before_full-n33-m33-p3.jsonl"
+    },
+    {
+      "command": [
+        "build\\small-llt\\Release\\before_full.exe",
+        "33",
+        "30",
+        "33",
+        "4"
+      ],
+      "binarySha256": "c98275f075d02d794d72988970f79c04bb378bc14df3b68b9ffa2a6eb18c44dd",
+      "output": ".scratch\\small-llt-final-full\\before_full-n33-m33-p4.jsonl"
+    },
+    {
+      "command": [
+        "build\\small-llt\\Release\\after_full.exe",
+        "33",
+        "30",
+        "33",
+        "4"
+      ],
+      "binarySha256": "6928b86bc1076445841a281a3b7d603ce77a1404ddd124ffba7767d864213fcf",
+      "output": ".scratch\\small-llt-final-full\\after_full-n33-m33-p4.jsonl"
+    },
+    {
+      "command": [
+        "build\\small-llt\\Release\\before_full.exe",
+        "33",
+        "30",
+        "132",
+        "0"
+      ],
+      "binarySha256": "c98275f075d02d794d72988970f79c04bb378bc14df3b68b9ffa2a6eb18c44dd",
+      "output": ".scratch\\small-llt-final-full\\before_full-n33-m132-p0.jsonl"
+    },
+    {
+      "command": [
+        "build\\small-llt\\Release\\after_full.exe",
+        "33",
+        "30",
+        "132",
+        "0"
+      ],
+      "binarySha256": "6928b86bc1076445841a281a3b7d603ce77a1404ddd124ffba7767d864213fcf",
+      "output": ".scratch\\small-llt-final-full\\after_full-n33-m132-p0.jsonl"
+    },
+    {
+      "command": [
+        "build\\small-llt\\Release\\after_full.exe",
+        "33",
+        "30",
+        "132",
+        "1"
+      ],
+      "binarySha256": "6928b86bc1076445841a281a3b7d603ce77a1404ddd124ffba7767d864213fcf",
+      "output": ".scratch\\small-llt-final-full\\after_full-n33-m132-p1.jsonl"
+    },
+    {
+      "command": [
+        "build\\small-llt\\Release\\before_full.exe",
+        "33",
+        "30",
+        "132",
+        "1"
+      ],
+      "binarySha256": "c98275f075d02d794d72988970f79c04bb378bc14df3b68b9ffa2a6eb18c44dd",
+      "output": ".scratch\\small-llt-final-full\\before_full-n33-m132-p1.jsonl"
+    },
+    {
+      "command": [
+        "build\\small-llt\\Release\\before_full.exe",
+        "33",
+        "30",
+        "132",
+        "2"
+      ],
+      "binarySha256": "c98275f075d02d794d72988970f79c04bb378bc14df3b68b9ffa2a6eb18c44dd",
+      "output": ".scratch\\small-llt-final-full\\before_full-n33-m132-p2.jsonl"
+    },
+    {
+      "command": [
+        "build\\small-llt\\Release\\after_full.exe",
+        "33",
+        "30",
+        "132",
+        "2"
+      ],
+      "binarySha256": "6928b86bc1076445841a281a3b7d603ce77a1404ddd124ffba7767d864213fcf",
+      "output": ".scratch\\small-llt-final-full\\after_full-n33-m132-p2.jsonl"
+    },
+    {
+      "command": [
+        "build\\small-llt\\Release\\after_full.exe",
+        "33",
+        "30",
+        "132",
+        "3"
+      ],
+      "binarySha256": "6928b86bc1076445841a281a3b7d603ce77a1404ddd124ffba7767d864213fcf",
+      "output": ".scratch\\small-llt-final-full\\after_full-n33-m132-p3.jsonl"
+    },
+    {
+      "command": [
+        "build\\small-llt\\Release\\before_full.exe",
+        "33",
+        "30",
+        "132",
+        "3"
+      ],
+      "binarySha256": "c98275f075d02d794d72988970f79c04bb378bc14df3b68b9ffa2a6eb18c44dd",
+      "output": ".scratch\\small-llt-final-full\\before_full-n33-m132-p3.jsonl"
+    },
+    {
+      "command": [
+        "build\\small-llt\\Release\\before_full.exe",
+        "33",
+        "30",
+        "132",
+        "4"
+      ],
+      "binarySha256": "c98275f075d02d794d72988970f79c04bb378bc14df3b68b9ffa2a6eb18c44dd",
+      "output": ".scratch\\small-llt-final-full\\before_full-n33-m132-p4.jsonl"
+    },
+    {
+      "command": [
+        "build\\small-llt\\Release\\after_full.exe",
+        "33",
+        "30",
+        "132",
+        "4"
+      ],
+      "binarySha256": "6928b86bc1076445841a281a3b7d603ce77a1404ddd124ffba7767d864213fcf",
+      "output": ".scratch\\small-llt-final-full\\after_full-n33-m132-p4.jsonl"
+    },
+    {
+      "command": [
+        "build\\small-llt\\Release\\before_full.exe",
+        "2",
+        "30",
+        "2",
+        "0"
+      ],
+      "binarySha256": "c98275f075d02d794d72988970f79c04bb378bc14df3b68b9ffa2a6eb18c44dd",
+      "output": ".scratch\\small-llt-final-full\\before_full-n2-m2-p0.jsonl"
+    },
+    {
+      "command": [
+        "build\\small-llt\\Release\\after_full.exe",
+        "2",
+        "30",
+        "2",
+        "0"
+      ],
+      "binarySha256": "6928b86bc1076445841a281a3b7d603ce77a1404ddd124ffba7767d864213fcf",
+      "output": ".scratch\\small-llt-final-full\\after_full-n2-m2-p0.jsonl"
+    },
+    {
+      "command": [
+        "build\\small-llt\\Release\\after_full.exe",
+        "2",
+        "30",
+        "2",
+        "1"
+      ],
+      "binarySha256": "6928b86bc1076445841a281a3b7d603ce77a1404ddd124ffba7767d864213fcf",
+      "output": ".scratch\\small-llt-final-full\\after_full-n2-m2-p1.jsonl"
+    },
+    {
+      "command": [
+        "build\\small-llt\\Release\\before_full.exe",
+        "2",
+        "30",
+        "2",
+        "1"
+      ],
+      "binarySha256": "c98275f075d02d794d72988970f79c04bb378bc14df3b68b9ffa2a6eb18c44dd",
+      "output": ".scratch\\small-llt-final-full\\before_full-n2-m2-p1.jsonl"
+    },
+    {
+      "command": [
+        "build\\small-llt\\Release\\before_full.exe",
+        "2",
+        "30",
+        "2",
+        "2"
+      ],
+      "binarySha256": "c98275f075d02d794d72988970f79c04bb378bc14df3b68b9ffa2a6eb18c44dd",
+      "output": ".scratch\\small-llt-final-full\\before_full-n2-m2-p2.jsonl"
+    },
+    {
+      "command": [
+        "build\\small-llt\\Release\\after_full.exe",
+        "2",
+        "30",
+        "2",
+        "2"
+      ],
+      "binarySha256": "6928b86bc1076445841a281a3b7d603ce77a1404ddd124ffba7767d864213fcf",
+      "output": ".scratch\\small-llt-final-full\\after_full-n2-m2-p2.jsonl"
+    },
+    {
+      "command": [
+        "build\\small-llt\\Release\\after_full.exe",
+        "2",
+        "30",
+        "2",
+        "3"
+      ],
+      "binarySha256": "6928b86bc1076445841a281a3b7d603ce77a1404ddd124ffba7767d864213fcf",
+      "output": ".scratch\\small-llt-final-full\\after_full-n2-m2-p3.jsonl"
+    },
+    {
+      "command": [
+        "build\\small-llt\\Release\\before_full.exe",
+        "2",
+        "30",
+        "2",
+        "3"
+      ],
+      "binarySha256": "c98275f075d02d794d72988970f79c04bb378bc14df3b68b9ffa2a6eb18c44dd",
+      "output": ".scratch\\small-llt-final-full\\before_full-n2-m2-p3.jsonl"
+    },
+    {
+      "command": [
+        "build\\small-llt\\Release\\before_full.exe",
+        "2",
+        "30",
+        "2",
+        "4"
+      ],
+      "binarySha256": "c98275f075d02d794d72988970f79c04bb378bc14df3b68b9ffa2a6eb18c44dd",
+      "output": ".scratch\\small-llt-final-full\\before_full-n2-m2-p4.jsonl"
+    },
+    {
+      "command": [
+        "build\\small-llt\\Release\\after_full.exe",
+        "2",
+        "30",
+        "2",
+        "4"
+      ],
+      "binarySha256": "6928b86bc1076445841a281a3b7d603ce77a1404ddd124ffba7767d864213fcf",
+      "output": ".scratch\\small-llt-final-full\\after_full-n2-m2-p4.jsonl"
+    },
+    {
+      "command": [
+        "build\\small-llt\\Release\\before_full.exe",
+        "2",
+        "30",
+        "8",
+        "0"
+      ],
+      "binarySha256": "c98275f075d02d794d72988970f79c04bb378bc14df3b68b9ffa2a6eb18c44dd",
+      "output": ".scratch\\small-llt-final-full\\before_full-n2-m8-p0.jsonl"
+    },
+    {
+      "command": [
+        "build\\small-llt\\Release\\after_full.exe",
+        "2",
+        "30",
+        "8",
+        "0"
+      ],
+      "binarySha256": "6928b86bc1076445841a281a3b7d603ce77a1404ddd124ffba7767d864213fcf",
+      "output": ".scratch\\small-llt-final-full\\after_full-n2-m8-p0.jsonl"
+    },
+    {
+      "command": [
+        "build\\small-llt\\Release\\after_full.exe",
+        "2",
+        "30",
+        "8",
+        "1"
+      ],
+      "binarySha256": "6928b86bc1076445841a281a3b7d603ce77a1404ddd124ffba7767d864213fcf",
+      "output": ".scratch\\small-llt-final-full\\after_full-n2-m8-p1.jsonl"
+    },
+    {
+      "command": [
+        "build\\small-llt\\Release\\before_full.exe",
+        "2",
+        "30",
+        "8",
+        "1"
+      ],
+      "binarySha256": "c98275f075d02d794d72988970f79c04bb378bc14df3b68b9ffa2a6eb18c44dd",
+      "output": ".scratch\\small-llt-final-full\\before_full-n2-m8-p1.jsonl"
+    },
+    {
+      "command": [
+        "build\\small-llt\\Release\\before_full.exe",
+        "2",
+        "30",
+        "8",
+        "2"
+      ],
+      "binarySha256": "c98275f075d02d794d72988970f79c04bb378bc14df3b68b9ffa2a6eb18c44dd",
+      "output": ".scratch\\small-llt-final-full\\before_full-n2-m8-p2.jsonl"
+    },
+    {
+      "command": [
+        "build\\small-llt\\Release\\after_full.exe",
+        "2",
+        "30",
+        "8",
+        "2"
+      ],
+      "binarySha256": "6928b86bc1076445841a281a3b7d603ce77a1404ddd124ffba7767d864213fcf",
+      "output": ".scratch\\small-llt-final-full\\after_full-n2-m8-p2.jsonl"
+    },
+    {
+      "command": [
+        "build\\small-llt\\Release\\after_full.exe",
+        "2",
+        "30",
+        "8",
+        "3"
+      ],
+      "binarySha256": "6928b86bc1076445841a281a3b7d603ce77a1404ddd124ffba7767d864213fcf",
+      "output": ".scratch\\small-llt-final-full\\after_full-n2-m8-p3.jsonl"
+    },
+    {
+      "command": [
+        "build\\small-llt\\Release\\before_full.exe",
+        "2",
+        "30",
+        "8",
+        "3"
+      ],
+      "binarySha256": "c98275f075d02d794d72988970f79c04bb378bc14df3b68b9ffa2a6eb18c44dd",
+      "output": ".scratch\\small-llt-final-full\\before_full-n2-m8-p3.jsonl"
+    },
+    {
+      "command": [
+        "build\\small-llt\\Release\\before_full.exe",
+        "2",
+        "30",
+        "8",
+        "4"
+      ],
+      "binarySha256": "c98275f075d02d794d72988970f79c04bb378bc14df3b68b9ffa2a6eb18c44dd",
+      "output": ".scratch\\small-llt-final-full\\before_full-n2-m8-p4.jsonl"
+    },
+    {
+      "command": [
+        "build\\small-llt\\Release\\after_full.exe",
+        "2",
+        "30",
+        "8",
+        "4"
+      ],
+      "binarySha256": "6928b86bc1076445841a281a3b7d603ce77a1404ddd124ffba7767d864213fcf",
+      "output": ".scratch\\small-llt-final-full\\after_full-n2-m8-p4.jsonl"
+    },
+    {
+      "command": [
+        "build\\small-llt\\Release\\before_full.exe",
+        "8",
+        "30",
+        "8",
+        "0"
+      ],
+      "binarySha256": "c98275f075d02d794d72988970f79c04bb378bc14df3b68b9ffa2a6eb18c44dd",
+      "output": ".scratch\\small-llt-final-full\\before_full-n8-m8-p0.jsonl"
+    },
+    {
+      "command": [
+        "build\\small-llt\\Release\\after_full.exe",
+        "8",
+        "30",
+        "8",
+        "0"
+      ],
+      "binarySha256": "6928b86bc1076445841a281a3b7d603ce77a1404ddd124ffba7767d864213fcf",
+      "output": ".scratch\\small-llt-final-full\\after_full-n8-m8-p0.jsonl"
+    },
+    {
+      "command": [
+        "build\\small-llt\\Release\\after_full.exe",
+        "8",
+        "30",
+        "8",
+        "1"
+      ],
+      "binarySha256": "6928b86bc1076445841a281a3b7d603ce77a1404ddd124ffba7767d864213fcf",
+      "output": ".scratch\\small-llt-final-full\\after_full-n8-m8-p1.jsonl"
+    },
+    {
+      "command": [
+        "build\\small-llt\\Release\\before_full.exe",
+        "8",
+        "30",
+        "8",
+        "1"
+      ],
+      "binarySha256": "c98275f075d02d794d72988970f79c04bb378bc14df3b68b9ffa2a6eb18c44dd",
+      "output": ".scratch\\small-llt-final-full\\before_full-n8-m8-p1.jsonl"
+    },
+    {
+      "command": [
+        "build\\small-llt\\Release\\before_full.exe",
+        "8",
+        "30",
+        "8",
+        "2"
+      ],
+      "binarySha256": "c98275f075d02d794d72988970f79c04bb378bc14df3b68b9ffa2a6eb18c44dd",
+      "output": ".scratch\\small-llt-final-full\\before_full-n8-m8-p2.jsonl"
+    },
+    {
+      "command": [
+        "build\\small-llt\\Release\\after_full.exe",
+        "8",
+        "30",
+        "8",
+        "2"
+      ],
+      "binarySha256": "6928b86bc1076445841a281a3b7d603ce77a1404ddd124ffba7767d864213fcf",
+      "output": ".scratch\\small-llt-final-full\\after_full-n8-m8-p2.jsonl"
+    },
+    {
+      "command": [
+        "build\\small-llt\\Release\\after_full.exe",
+        "8",
+        "30",
+        "8",
+        "3"
+      ],
+      "binarySha256": "6928b86bc1076445841a281a3b7d603ce77a1404ddd124ffba7767d864213fcf",
+      "output": ".scratch\\small-llt-final-full\\after_full-n8-m8-p3.jsonl"
+    },
+    {
+      "command": [
+        "build\\small-llt\\Release\\before_full.exe",
+        "8",
+        "30",
+        "8",
+        "3"
+      ],
+      "binarySha256": "c98275f075d02d794d72988970f79c04bb378bc14df3b68b9ffa2a6eb18c44dd",
+      "output": ".scratch\\small-llt-final-full\\before_full-n8-m8-p3.jsonl"
+    },
+    {
+      "command": [
+        "build\\small-llt\\Release\\before_full.exe",
+        "8",
+        "30",
+        "8",
+        "4"
+      ],
+      "binarySha256": "c98275f075d02d794d72988970f79c04bb378bc14df3b68b9ffa2a6eb18c44dd",
+      "output": ".scratch\\small-llt-final-full\\before_full-n8-m8-p4.jsonl"
+    },
+    {
+      "command": [
+        "build\\small-llt\\Release\\after_full.exe",
+        "8",
+        "30",
+        "8",
+        "4"
+      ],
+      "binarySha256": "6928b86bc1076445841a281a3b7d603ce77a1404ddd124ffba7767d864213fcf",
+      "output": ".scratch\\small-llt-final-full\\after_full-n8-m8-p4.jsonl"
+    },
+    {
+      "command": [
+        "build\\small-llt\\Release\\before_full.exe",
+        "8",
+        "30",
+        "32",
+        "0"
+      ],
+      "binarySha256": "c98275f075d02d794d72988970f79c04bb378bc14df3b68b9ffa2a6eb18c44dd",
+      "output": ".scratch\\small-llt-final-full\\before_full-n8-m32-p0.jsonl"
+    },
+    {
+      "command": [
+        "build\\small-llt\\Release\\after_full.exe",
+        "8",
+        "30",
+        "32",
+        "0"
+      ],
+      "binarySha256": "6928b86bc1076445841a281a3b7d603ce77a1404ddd124ffba7767d864213fcf",
+      "output": ".scratch\\small-llt-final-full\\after_full-n8-m32-p0.jsonl"
+    },
+    {
+      "command": [
+        "build\\small-llt\\Release\\after_full.exe",
+        "8",
+        "30",
+        "32",
+        "1"
+      ],
+      "binarySha256": "6928b86bc1076445841a281a3b7d603ce77a1404ddd124ffba7767d864213fcf",
+      "output": ".scratch\\small-llt-final-full\\after_full-n8-m32-p1.jsonl"
+    },
+    {
+      "command": [
+        "build\\small-llt\\Release\\before_full.exe",
+        "8",
+        "30",
+        "32",
+        "1"
+      ],
+      "binarySha256": "c98275f075d02d794d72988970f79c04bb378bc14df3b68b9ffa2a6eb18c44dd",
+      "output": ".scratch\\small-llt-final-full\\before_full-n8-m32-p1.jsonl"
+    },
+    {
+      "command": [
+        "build\\small-llt\\Release\\before_full.exe",
+        "8",
+        "30",
+        "32",
+        "2"
+      ],
+      "binarySha256": "c98275f075d02d794d72988970f79c04bb378bc14df3b68b9ffa2a6eb18c44dd",
+      "output": ".scratch\\small-llt-final-full\\before_full-n8-m32-p2.jsonl"
+    },
+    {
+      "command": [
+        "build\\small-llt\\Release\\after_full.exe",
+        "8",
+        "30",
+        "32",
+        "2"
+      ],
+      "binarySha256": "6928b86bc1076445841a281a3b7d603ce77a1404ddd124ffba7767d864213fcf",
+      "output": ".scratch\\small-llt-final-full\\after_full-n8-m32-p2.jsonl"
+    },
+    {
+      "command": [
+        "build\\small-llt\\Release\\after_full.exe",
+        "8",
+        "30",
+        "32",
+        "3"
+      ],
+      "binarySha256": "6928b86bc1076445841a281a3b7d603ce77a1404ddd124ffba7767d864213fcf",
+      "output": ".scratch\\small-llt-final-full\\after_full-n8-m32-p3.jsonl"
+    },
+    {
+      "command": [
+        "build\\small-llt\\Release\\before_full.exe",
+        "8",
+        "30",
+        "32",
+        "3"
+      ],
+      "binarySha256": "c98275f075d02d794d72988970f79c04bb378bc14df3b68b9ffa2a6eb18c44dd",
+      "output": ".scratch\\small-llt-final-full\\before_full-n8-m32-p3.jsonl"
+    },
+    {
+      "command": [
+        "build\\small-llt\\Release\\before_full.exe",
+        "8",
+        "30",
+        "32",
+        "4"
+      ],
+      "binarySha256": "c98275f075d02d794d72988970f79c04bb378bc14df3b68b9ffa2a6eb18c44dd",
+      "output": ".scratch\\small-llt-final-full\\before_full-n8-m32-p4.jsonl"
+    },
+    {
+      "command": [
+        "build\\small-llt\\Release\\after_full.exe",
+        "8",
+        "30",
+        "32",
+        "4"
+      ],
+      "binarySha256": "6928b86bc1076445841a281a3b7d603ce77a1404ddd124ffba7767d864213fcf",
+      "output": ".scratch\\small-llt-final-full\\after_full-n8-m32-p4.jsonl"
+    },
+    {
+      "command": [
+        "build\\small-llt\\Release\\before_full.exe",
+        "64",
+        "30",
+        "64",
+        "0"
+      ],
+      "binarySha256": "c98275f075d02d794d72988970f79c04bb378bc14df3b68b9ffa2a6eb18c44dd",
+      "output": ".scratch\\small-llt-final-full\\before_full-n64-m64-p0.jsonl"
+    },
+    {
+      "command": [
+        "build\\small-llt\\Release\\after_full.exe",
+        "64",
+        "30",
+        "64",
+        "0"
+      ],
+      "binarySha256": "6928b86bc1076445841a281a3b7d603ce77a1404ddd124ffba7767d864213fcf",
+      "output": ".scratch\\small-llt-final-full\\after_full-n64-m64-p0.jsonl"
+    },
+    {
+      "command": [
+        "build\\small-llt\\Release\\after_full.exe",
+        "64",
+        "30",
+        "64",
+        "1"
+      ],
+      "binarySha256": "6928b86bc1076445841a281a3b7d603ce77a1404ddd124ffba7767d864213fcf",
+      "output": ".scratch\\small-llt-final-full\\after_full-n64-m64-p1.jsonl"
+    },
+    {
+      "command": [
+        "build\\small-llt\\Release\\before_full.exe",
+        "64",
+        "30",
+        "64",
+        "1"
+      ],
+      "binarySha256": "c98275f075d02d794d72988970f79c04bb378bc14df3b68b9ffa2a6eb18c44dd",
+      "output": ".scratch\\small-llt-final-full\\before_full-n64-m64-p1.jsonl"
+    },
+    {
+      "command": [
+        "build\\small-llt\\Release\\before_full.exe",
+        "64",
+        "30",
+        "64",
+        "2"
+      ],
+      "binarySha256": "c98275f075d02d794d72988970f79c04bb378bc14df3b68b9ffa2a6eb18c44dd",
+      "output": ".scratch\\small-llt-final-full\\before_full-n64-m64-p2.jsonl"
+    },
+    {
+      "command": [
+        "build\\small-llt\\Release\\after_full.exe",
+        "64",
+        "30",
+        "64",
+        "2"
+      ],
+      "binarySha256": "6928b86bc1076445841a281a3b7d603ce77a1404ddd124ffba7767d864213fcf",
+      "output": ".scratch\\small-llt-final-full\\after_full-n64-m64-p2.jsonl"
+    },
+    {
+      "command": [
+        "build\\small-llt\\Release\\after_full.exe",
+        "64",
+        "30",
+        "64",
+        "3"
+      ],
+      "binarySha256": "6928b86bc1076445841a281a3b7d603ce77a1404ddd124ffba7767d864213fcf",
+      "output": ".scratch\\small-llt-final-full\\after_full-n64-m64-p3.jsonl"
+    },
+    {
+      "command": [
+        "build\\small-llt\\Release\\before_full.exe",
+        "64",
+        "30",
+        "64",
+        "3"
+      ],
+      "binarySha256": "c98275f075d02d794d72988970f79c04bb378bc14df3b68b9ffa2a6eb18c44dd",
+      "output": ".scratch\\small-llt-final-full\\before_full-n64-m64-p3.jsonl"
+    },
+    {
+      "command": [
+        "build\\small-llt\\Release\\before_full.exe",
+        "64",
+        "30",
+        "64",
+        "4"
+      ],
+      "binarySha256": "c98275f075d02d794d72988970f79c04bb378bc14df3b68b9ffa2a6eb18c44dd",
+      "output": ".scratch\\small-llt-final-full\\before_full-n64-m64-p4.jsonl"
+    },
+    {
+      "command": [
+        "build\\small-llt\\Release\\after_full.exe",
+        "64",
+        "30",
+        "64",
+        "4"
+      ],
+      "binarySha256": "6928b86bc1076445841a281a3b7d603ce77a1404ddd124ffba7767d864213fcf",
+      "output": ".scratch\\small-llt-final-full\\after_full-n64-m64-p4.jsonl"
+    },
+    {
+      "command": [
+        "build\\small-llt\\Release\\before_full.exe",
+        "64",
+        "30",
+        "256",
+        "0"
+      ],
+      "binarySha256": "c98275f075d02d794d72988970f79c04bb378bc14df3b68b9ffa2a6eb18c44dd",
+      "output": ".scratch\\small-llt-final-full\\before_full-n64-m256-p0.jsonl"
+    },
+    {
+      "command": [
+        "build\\small-llt\\Release\\after_full.exe",
+        "64",
+        "30",
+        "256",
+        "0"
+      ],
+      "binarySha256": "6928b86bc1076445841a281a3b7d603ce77a1404ddd124ffba7767d864213fcf",
+      "output": ".scratch\\small-llt-final-full\\after_full-n64-m256-p0.jsonl"
+    },
+    {
+      "command": [
+        "build\\small-llt\\Release\\after_full.exe",
+        "64",
+        "30",
+        "256",
+        "1"
+      ],
+      "binarySha256": "6928b86bc1076445841a281a3b7d603ce77a1404ddd124ffba7767d864213fcf",
+      "output": ".scratch\\small-llt-final-full\\after_full-n64-m256-p1.jsonl"
+    },
+    {
+      "command": [
+        "build\\small-llt\\Release\\before_full.exe",
+        "64",
+        "30",
+        "256",
+        "1"
+      ],
+      "binarySha256": "c98275f075d02d794d72988970f79c04bb378bc14df3b68b9ffa2a6eb18c44dd",
+      "output": ".scratch\\small-llt-final-full\\before_full-n64-m256-p1.jsonl"
+    },
+    {
+      "command": [
+        "build\\small-llt\\Release\\before_full.exe",
+        "64",
+        "30",
+        "256",
+        "2"
+      ],
+      "binarySha256": "c98275f075d02d794d72988970f79c04bb378bc14df3b68b9ffa2a6eb18c44dd",
+      "output": ".scratch\\small-llt-final-full\\before_full-n64-m256-p2.jsonl"
+    },
+    {
+      "command": [
+        "build\\small-llt\\Release\\after_full.exe",
+        "64",
+        "30",
+        "256",
+        "2"
+      ],
+      "binarySha256": "6928b86bc1076445841a281a3b7d603ce77a1404ddd124ffba7767d864213fcf",
+      "output": ".scratch\\small-llt-final-full\\after_full-n64-m256-p2.jsonl"
+    },
+    {
+      "command": [
+        "build\\small-llt\\Release\\after_full.exe",
+        "64",
+        "30",
+        "256",
+        "3"
+      ],
+      "binarySha256": "6928b86bc1076445841a281a3b7d603ce77a1404ddd124ffba7767d864213fcf",
+      "output": ".scratch\\small-llt-final-full\\after_full-n64-m256-p3.jsonl"
+    },
+    {
+      "command": [
+        "build\\small-llt\\Release\\before_full.exe",
+        "64",
+        "30",
+        "256",
+        "3"
+      ],
+      "binarySha256": "c98275f075d02d794d72988970f79c04bb378bc14df3b68b9ffa2a6eb18c44dd",
+      "output": ".scratch\\small-llt-final-full\\before_full-n64-m256-p3.jsonl"
+    },
+    {
+      "command": [
+        "build\\small-llt\\Release\\before_full.exe",
+        "64",
+        "30",
+        "256",
+        "4"
+      ],
+      "binarySha256": "c98275f075d02d794d72988970f79c04bb378bc14df3b68b9ffa2a6eb18c44dd",
+      "output": ".scratch\\small-llt-final-full\\before_full-n64-m256-p4.jsonl"
+    },
+    {
+      "command": [
+        "build\\small-llt\\Release\\after_full.exe",
+        "64",
+        "30",
+        "256",
+        "4"
+      ],
+      "binarySha256": "6928b86bc1076445841a281a3b7d603ce77a1404ddd124ffba7767d864213fcf",
+      "output": ".scratch\\small-llt-final-full\\after_full-n64-m256-p4.jsonl"
+    }
+  ],
+  "summaries": [
+    {
+      "n": 31,
+      "m": 31,
+      "phase": 0,
+      "afterEigenRatio": 0.9337269246770078,
+      "interval": [
+        0.927263253724944,
+        0.941642567345685
+      ]
+    },
+    {
+      "n": 31,
+      "m": 31,
+      "phase": 1,
+      "afterEigenRatio": 0.5535031794781874,
+      "interval": [
+        0.39308523339164675,
+        0.5618121494158358
+      ]
+    },
+    {
+      "n": 31,
+      "m": 31,
+      "phase": 2,
+      "afterEigenRatio": 0.8477495547795535,
+      "interval": [
+        0.7604804036665862,
+        0.8529017855536468
+      ]
+    },
+    {
+      "n": 31,
+      "m": 31,
+      "phase": 3,
+      "afterEigenRatio": 0.8307248320984875,
+      "interval": [
+        0.8230873273849778,
+        0.838833252066064
+      ]
+    },
+    {
+      "n": 31,
+      "m": 124,
+      "phase": 0,
+      "afterEigenRatio": 0.9236543349829714,
+      "interval": [
+        0.8596556863111882,
+        0.936638778331483
+      ]
+    },
+    {
+      "n": 31,
+      "m": 124,
+      "phase": 1,
+      "afterEigenRatio": 0.5546299774476334,
+      "interval": [
+        0.5074047881457779,
+        0.5646658328228283
+      ]
+    },
+    {
+      "n": 31,
+      "m": 124,
+      "phase": 2,
+      "afterEigenRatio": 0.840297631952365,
+      "interval": [
+        0.7736619791301085,
+        0.8452883939897626
+      ]
+    },
+    {
+      "n": 31,
+      "m": 124,
+      "phase": 3,
+      "afterEigenRatio": 0.8398429689101727,
+      "interval": [
+        0.7911469168616403,
+        0.8486473434811916
+      ]
+    },
+    {
+      "n": 16,
+      "m": 16,
+      "phase": 0,
+      "afterEigenRatio": 0.6799646141529934,
+      "interval": [
+        0.6750820516947657,
+        0.6889443065855
+      ]
+    },
+    {
+      "n": 16,
+      "m": 16,
+      "phase": 1,
+      "afterEigenRatio": 0.5557716653413387,
+      "interval": [
+        0.4966413692230211,
+        0.5601446792309157
+      ]
+    },
+    {
+      "n": 16,
+      "m": 16,
+      "phase": 2,
+      "afterEigenRatio": 0.6640149625472679,
+      "interval": [
+        0.644755542026093,
+        0.6727334071120545
+      ]
+    },
+    {
+      "n": 16,
+      "m": 16,
+      "phase": 3,
+      "afterEigenRatio": 0.7323418024344948,
+      "interval": [
+        0.7101557177767639,
+        0.7369574697793536
+      ]
+    },
+    {
+      "n": 16,
+      "m": 64,
+      "phase": 0,
+      "afterEigenRatio": 0.6849360732433889,
+      "interval": [
+        0.607309709142813,
+        0.6898589322125587
+      ]
+    },
+    {
+      "n": 16,
+      "m": 64,
+      "phase": 1,
+      "afterEigenRatio": 0.5618644498196298,
+      "interval": [
+        0.4966843368070766,
+        0.5626073276051525
+      ]
+    },
+    {
+      "n": 16,
+      "m": 64,
+      "phase": 2,
+      "afterEigenRatio": 0.6722401847575058,
+      "interval": [
+        0.5968807873078698,
+        0.6757777853263432
+      ]
+    },
+    {
+      "n": 16,
+      "m": 64,
+      "phase": 3,
+      "afterEigenRatio": 0.735301180383726,
+      "interval": [
+        0.6832846454430699,
+        0.74262678443387
+      ]
+    },
+    {
+      "n": 32,
+      "m": 32,
+      "phase": 0,
+      "afterEigenRatio": 0.6930033871474632,
+      "interval": [
+        0.6912045636077256,
+        0.696227536320977
+      ]
+    },
+    {
+      "n": 32,
+      "m": 32,
+      "phase": 1,
+      "afterEigenRatio": 0.5659220712595814,
+      "interval": [
+        0.515030022064778,
+        0.5745084251515493
+      ]
+    },
+    {
+      "n": 32,
+      "m": 32,
+      "phase": 2,
+      "afterEigenRatio": 0.659216596464082,
+      "interval": [
+        0.639610298598732,
+        0.6621996119557152
+      ]
+    },
+    {
+      "n": 32,
+      "m": 32,
+      "phase": 3,
+      "afterEigenRatio": 0.6677089233861331,
+      "interval": [
+        0.6605721238445988,
+        0.6771318241058069
+      ]
+    },
+    {
+      "n": 32,
+      "m": 128,
+      "phase": 0,
+      "afterEigenRatio": 0.696685972671958,
+      "interval": [
+        0.6672107381059572,
+        0.6994730065122613
+      ]
+    },
+    {
+      "n": 32,
+      "m": 128,
+      "phase": 1,
+      "afterEigenRatio": 0.571209443780014,
+      "interval": [
+        0.5058034506479216,
+        0.5767165265731176
+      ]
+    },
+    {
+      "n": 32,
+      "m": 128,
+      "phase": 2,
+      "afterEigenRatio": 0.6572967467357316,
+      "interval": [
+        0.6399056714325269,
+        0.6617111055259862
+      ]
+    },
+    {
+      "n": 32,
+      "m": 128,
+      "phase": 3,
+      "afterEigenRatio": 0.6598707708474235,
+      "interval": [
+        0.6297303057482084,
+        0.6728815935114966
+      ]
+    },
+    {
+      "n": 33,
+      "m": 33,
+      "phase": 0,
+      "afterEigenRatio": 0.6266772458174241,
+      "interval": [
+        0.6241040132645292,
+        0.6296003264439289
+      ]
+    },
+    {
+      "n": 33,
+      "m": 33,
+      "phase": 1,
+      "afterEigenRatio": 0.5516714871524488,
+      "interval": [
+        0.5024856314299604,
+        0.5611771800840458
+      ]
+    },
+    {
+      "n": 33,
+      "m": 33,
+      "phase": 2,
+      "afterEigenRatio": 0.6102360231847261,
+      "interval": [
+        0.5985041081087965,
+        0.6124166539066523
+      ]
+    },
+    {
+      "n": 33,
+      "m": 33,
+      "phase": 3,
+      "afterEigenRatio": 0.6265824378566308,
+      "interval": [
+        0.624212490137727,
+        0.628468695661702
+      ]
+    },
+    {
+      "n": 33,
+      "m": 132,
+      "phase": 0,
+      "afterEigenRatio": 0.6264186128245547,
+      "interval": [
+        0.5986544422243741,
+        0.6402144015716125
+      ]
+    },
+    {
+      "n": 33,
+      "m": 132,
+      "phase": 1,
+      "afterEigenRatio": 0.5048833359174162,
+      "interval": [
+        0.5030583850532058,
+        0.5844940074927495
+      ]
+    },
+    {
+      "n": 33,
+      "m": 132,
+      "phase": 2,
+      "afterEigenRatio": 0.597016946564608,
+      "interval": [
+        0.5780347783844737,
+        0.6184005468469924
+      ]
+    },
+    {
+      "n": 33,
+      "m": 132,
+      "phase": 3,
+      "afterEigenRatio": 0.6283518146642915,
+      "interval": [
+        0.6126244708744447,
+        0.6354209766991774
+      ]
+    },
+    {
+      "n": 2,
+      "m": 2,
+      "phase": 0,
+      "afterEigenRatio": 0.5427347694091964,
+      "interval": [
+        0.5273004146818779,
+        0.5449050111263821
+      ]
+    },
+    {
+      "n": 2,
+      "m": 2,
+      "phase": 1,
+      "afterEigenRatio": 0.719881724553827,
+      "interval": [
+        0.710603069242986,
+        0.7216361578808843
+      ]
+    },
+    {
+      "n": 2,
+      "m": 2,
+      "phase": 2,
+      "afterEigenRatio": 0.8512310931207202,
+      "interval": [
+        0.8385420147680333,
+        0.8547641379591586
+      ]
+    },
+    {
+      "n": 2,
+      "m": 2,
+      "phase": 3,
+      "afterEigenRatio": 1.3764782468986576,
+      "interval": [
+        1.334725769138009,
+        1.3814467093298763
+      ]
+    },
+    {
+      "n": 2,
+      "m": 8,
+      "phase": 0,
+      "afterEigenRatio": 0.5434697452827733,
+      "interval": [
+        0.5315616178277864,
+        0.5497738770726727
+      ]
+    },
+    {
+      "n": 2,
+      "m": 8,
+      "phase": 1,
+      "afterEigenRatio": 0.7106079977067508,
+      "interval": [
+        0.6383791893713608,
+        0.7219550267412921
+      ]
+    },
+    {
+      "n": 2,
+      "m": 8,
+      "phase": 2,
+      "afterEigenRatio": 0.8416859938355361,
+      "interval": [
+        0.8311995589518981,
+        0.8561878034154241
+      ]
+    },
+    {
+      "n": 2,
+      "m": 8,
+      "phase": 3,
+      "afterEigenRatio": 1.3738525169834772,
+      "interval": [
+        1.3312837876478918,
+        1.3932655807854235
+      ]
+    },
+    {
+      "n": 8,
+      "m": 8,
+      "phase": 0,
+      "afterEigenRatio": 0.5662901628452156,
+      "interval": [
+        0.5632603629099384,
+        0.5706356654602918
+      ]
+    },
+    {
+      "n": 8,
+      "m": 8,
+      "phase": 1,
+      "afterEigenRatio": 0.5725466165510872,
+      "interval": [
+        0.49683668047711743,
+        0.5849310525565112
+      ]
+    },
+    {
+      "n": 8,
+      "m": 8,
+      "phase": 2,
+      "afterEigenRatio": 0.6474244568896549,
+      "interval": [
+        0.6183481712376382,
+        0.6549751813022118
+      ]
+    },
+    {
+      "n": 8,
+      "m": 8,
+      "phase": 3,
+      "afterEigenRatio": 0.8183262906485393,
+      "interval": [
+        0.7832878124468629,
+        0.8297066954302895
+      ]
+    },
+    {
+      "n": 8,
+      "m": 32,
+      "phase": 0,
+      "afterEigenRatio": 0.5683782720943668,
+      "interval": [
+        0.5629680217878991,
+        0.5723357576082873
+      ]
+    },
+    {
+      "n": 8,
+      "m": 32,
+      "phase": 1,
+      "afterEigenRatio": 0.5739344735101454,
+      "interval": [
+        0.497222255579506,
+        0.5861425122506753
+      ]
+    },
+    {
+      "n": 8,
+      "m": 32,
+      "phase": 2,
+      "afterEigenRatio": 0.6498076071952728,
+      "interval": [
+        0.6219981363617545,
+        0.656401721101062
+      ]
+    },
+    {
+      "n": 8,
+      "m": 32,
+      "phase": 3,
+      "afterEigenRatio": 0.821496316170325,
+      "interval": [
+        0.7853606273765928,
+        0.846201156674855
+      ]
+    },
+    {
+      "n": 64,
+      "m": 64,
+      "phase": 0,
+      "afterEigenRatio": 0.8957730042496043,
+      "interval": [
+        0.8752852342579032,
+        0.9603075199559519
+      ]
+    },
+    {
+      "n": 64,
+      "m": 64,
+      "phase": 1,
+      "afterEigenRatio": 0.63104674136308,
+      "interval": [
+        0.6288972386182909,
+        0.6968063128459976
+      ]
+    },
+    {
+      "n": 64,
+      "m": 64,
+      "phase": 2,
+      "afterEigenRatio": 0.8624874812955827,
+      "interval": [
+        0.8414528110561016,
+        0.9233800194703219
+      ]
+    },
+    {
+      "n": 64,
+      "m": 64,
+      "phase": 3,
+      "afterEigenRatio": 0.8498565815558318,
+      "interval": [
+        0.8442096750741456,
+        0.8561444220935023
+      ]
+    },
+    {
+      "n": 64,
+      "m": 256,
+      "phase": 0,
+      "afterEigenRatio": 0.951598541557179,
+      "interval": [
+        0.9366839580559525,
+        0.9601863674460861
+      ]
+    },
+    {
+      "n": 64,
+      "m": 256,
+      "phase": 1,
+      "afterEigenRatio": 0.6909360397630882,
+      "interval": [
+        0.6377107949715578,
+        0.6957428868458748
+      ]
+    },
+    {
+      "n": 64,
+      "m": 256,
+      "phase": 2,
+      "afterEigenRatio": 0.9069134076551998,
+      "interval": [
+        0.8950861562251057,
+        0.9163314532710337
+      ]
+    },
+    {
+      "n": 64,
+      "m": 256,
+      "phase": 3,
+      "afterEigenRatio": 0.8520581866323316,
+      "interval": [
+        0.8480583256047048,
+        0.8564373683971338
+      ]
+    }
+  ]
+}

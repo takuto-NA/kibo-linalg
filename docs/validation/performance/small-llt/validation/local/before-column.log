@@ -1,0 +1,49 @@
+oracle n=2 amax=2.5e-151
+expected 0.5  -1
+QR  0.493356 -0.993356
+Eigen -1.17157e+06  1.17157e+06
+line 66: (x-expected).norm()/expected.norm()<=1e-4
+oracle n=2 scale=2.5e-151 core_error=0.00840344 Eigen_raw_error=1.48194e+06
+line 80: (reference-expected).norm()/expected.norm()<=1e-4
+oracle n=2 amax=0.25
+expected 0.5  -1
+QR  0.497513 -0.997513
+Eigen 0.505363 -1.00536
+line 66: (x-expected).norm()/expected.norm()<=1e-4
+oracle n=2 scale=0.25 core_error=0.00314639 Eigen_raw_error=0.00678375
+line 80: (reference-expected).norm()/expected.norm()<=1e-4
+oracle n=2 amax=2.5e+149
+expected 0.5  -1
+QR  0.497096 -0.997096
+Eigen  0.497096 -0.997096
+line 66: (x-expected).norm()/expected.norm()<=1e-4
+oracle n=2 scale=2.5e+149 core_error=0.0036738 Eigen_raw_error=0.0036738
+line 80: (reference-expected).norm()/expected.norm()<=1e-4
+oracle n=8 amax=6.73469e-152
+expected 0.125 -0.25 0.375  -0.5 0.625 -0.75 0.875    -1
+QR  0.124418 -0.249422  0.375583 -0.500578  0.625582 -0.750578  0.874417 -0.999422
+Eigen -834.757 -936.621 -1475.84 -133.025  839.915  931.259  1472.69  135.888
+line 66: (x-expected).norm()/expected.norm()<=1e-4
+oracle n=8 scale=6.73469e-152 core_error=0.000919054 Eigen_raw_error=1536.85
+line 80: (reference-expected).norm()/expected.norm()<=1e-4
+oracle n=8 amax=0.0673469
+expected 0.125 -0.25 0.375  -0.5 0.625 -0.75 0.875    -1
+QR  0.128537 -0.253502  0.371463 -0.496497  0.621463 -0.746498  0.878537   -1.0035
+Eigen  0.129417 -0.254411  0.370583 -0.495589  0.620583 -0.745589  0.879417  -1.00441
+line 66: (x-expected).norm()/expected.norm()<=1e-4
+oracle n=8 scale=0.0673469 core_error=0.00557607 Eigen_raw_error=0.00699299
+line 80: (reference-expected).norm()/expected.norm()<=1e-4
+oracle n=8 amax=6.73469e+148
+expected 0.125 -0.25 0.375  -0.5 0.625 -0.75 0.875    -1
+QR   0.12731 -0.252314  0.372691 -0.497686   0.62269 -0.747686  0.877309  -1.00231
+Eigen  0.128267 -0.253274  0.371733 -0.496726  0.621733 -0.746726  0.878267  -1.00327
+line 66: (x-expected).norm()/expected.norm()<=1e-4
+oracle n=8 scale=6.73469e+148 core_error=0.00366202 Eigen_raw_error=0.00518176
+line 80: (reference-expected).norm()/expected.norm()<=1e-4
+line 107: forward<=(condition<=1e4 ? 1e-8 : 1e-4)
+line 113: (reference-fixture.truth).norm()/fixture.truth.norm()<=(condition<=1e4 ? 1e-8 : 1e-4)
+line 107: forward<=(condition<=1e4 ? 1e-8 : 1e-4)
+line 113: (reference-fixture.truth).norm()/fixture.truth.norm()<=(condition<=1e4 ? 1e-8 : 1e-4)
+line 107: forward<=(condition<=1e4 ? 1e-8 : 1e-4)
+line 107: forward<=(condition<=1e4 ? 1e-8 : 1e-4)
+numerical acceptance failures=18
