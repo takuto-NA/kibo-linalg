@@ -1,6 +1,7 @@
 #include <kibo/linalg.hpp>
 #include <kibo/llt.hpp>
 #include <kibo/qr.hpp>
+#include <kibo/qr_refined.hpp>
 #include <array>
 #include <cstdio>
 #include <cstdlib>
@@ -63,7 +64,7 @@ bool prepared_dense_shapes() {
 #if !defined(NDEBUG)
         if(n>32) continue; // the Release Linux probe covers the complete scale range
 #endif
-        std::vector<double> input(m*n),packed(m*n),rhs(m),solution(n),tau(n),work(m+n);
+        std::vector<double> input(m*n),packed(m*n),rhs(m),solution(n),tau(n),work(2*m+3*n);
         std::vector<std::size_t> permutation(n);
         for(std::size_t i=0;i<n;++i) {input[i*n+i]=2;rhs[i]=1;}
         auto a=MatrixView<const double>::checked(input,m,n,n).value();
@@ -87,6 +88,9 @@ bool prepared_dense_shapes() {
         const bool column_ok=column_qr && solve_into(column_qr.value(),rhs_span,output_span,workspace);
         correct=column_ok && correct;
         if(column_ok) for(auto value:solution) correct=std::abs(value-0.5)<=1e-14 && correct;
+        const bool refined_ok=column_qr && solve_refined_into(column_qr.value(),a,rhs_span,output_span,workspace);
+        correct=refined_ok && correct;
+        if(refined_ok) for(auto value:solution) correct=std::abs(value-0.5)<=1e-14 && correct;
         measuring=false;
         std::printf("prepared m=%zu n=%zu LLT/QR allocator calls=%zu\n",m,n,allocations);
         if(!correct || allocations!=0) return false;

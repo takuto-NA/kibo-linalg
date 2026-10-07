@@ -1,5 +1,6 @@
 #include <kibo/llt.hpp>
 #include <kibo/qr.hpp>
+#include <kibo/qr_refined.hpp>
 #include <emscripten/heap.h>
 #include <array>
 #include <cstdint>
@@ -108,7 +109,7 @@ std::uint32_t kibo_llt(std::uint32_t a,std::uint32_t a_bytes,std::uint32_t n,std
     const auto status=solve_into(handle.value(),span_at<const double>(b,b_bytes).first(n),span_at<double>(x,x_bytes).first(n),span_at<std::byte>(work,work_bytes));
     diagnostic(diag,status); return code(status);
 }
-std::uint32_t kibo_qr(std::uint32_t a,std::uint32_t a_bytes,std::uint32_t m,std::uint32_t n,std::uint32_t rs,std::uint32_t cs,
+static std::uint32_t qr_impl(bool refined,std::uint32_t a,std::uint32_t a_bytes,std::uint32_t m,std::uint32_t n,std::uint32_t rs,std::uint32_t cs,
     std::uint32_t b,std::uint32_t b_bytes,std::uint32_t x,std::uint32_t x_bytes,
     std::uint32_t factor,std::uint32_t factor_bytes,std::uint32_t tau,std::uint32_t tau_bytes,
     std::uint32_t permutation,std::uint32_t permutation_bytes,std::uint32_t work,std::uint32_t work_bytes,
@@ -122,7 +123,7 @@ std::uint32_t kibo_qr(std::uint32_t a,std::uint32_t a_bytes,std::uint32_t m,std:
     if (!input) return code(input.status());
     if (!storage) return code(storage.status());
     auto factor_required=qr_factor_requirement(m,n);
-    auto solve_required=qr_solve_requirement(m,n);
+    auto solve_required=refined ? qr_refined_solve_requirement(m,n) : qr_solve_requirement(m,n);
     if (!factor_required) return code(factor_required.status());
     if (!solve_required) return code(solve_required.status());
     if (static_cast<std::uint64_t>(m)*8>b_bytes || static_cast<std::uint64_t>(n)*8>x_bytes || diag_bytes<16 ||
@@ -136,7 +137,25 @@ std::uint32_t kibo_qr(std::uint32_t a,std::uint32_t a_bytes,std::uint32_t m,std:
         if (numerical_failure(handle.status())) diagnostic(diag,handle.status(),observed.tolerance);
         return code(handle.status());
     }
-    const auto status=solve_into(handle.value(),span_at<const double>(b,b_bytes).first(m),span_at<double>(x,x_bytes).first(n),span_at<std::byte>(work,work_bytes));
+    const auto status=refined
+        ? solve_refined_into(handle.value(),input.value(),span_at<const double>(b,b_bytes).first(m),span_at<double>(x,x_bytes).first(n),span_at<std::byte>(work,work_bytes))
+        : solve_into(handle.value(),span_at<const double>(b,b_bytes).first(m),span_at<double>(x,x_bytes).first(n),span_at<std::byte>(work,work_bytes));
     diagnostic(diag,Status{status.code,status.index,observed.rank},observed.tolerance); return code(status);
+}
+std::uint32_t kibo_qr(std::uint32_t a,std::uint32_t a_bytes,std::uint32_t m,std::uint32_t n,std::uint32_t rs,std::uint32_t cs,
+    std::uint32_t b,std::uint32_t b_bytes,std::uint32_t x,std::uint32_t x_bytes,
+    std::uint32_t factor,std::uint32_t factor_bytes,std::uint32_t tau,std::uint32_t tau_bytes,
+    std::uint32_t permutation,std::uint32_t permutation_bytes,std::uint32_t work,std::uint32_t work_bytes,
+    std::uint32_t diag,std::uint32_t diag_bytes) noexcept {
+    return qr_impl(false,a,a_bytes,m,n,rs,cs,b,b_bytes,x,x_bytes,factor,factor_bytes,tau,tau_bytes,
+                   permutation,permutation_bytes,work,work_bytes,diag,diag_bytes);
+}
+std::uint32_t kibo_qr_refined(std::uint32_t a,std::uint32_t a_bytes,std::uint32_t m,std::uint32_t n,std::uint32_t rs,std::uint32_t cs,
+    std::uint32_t b,std::uint32_t b_bytes,std::uint32_t x,std::uint32_t x_bytes,
+    std::uint32_t factor,std::uint32_t factor_bytes,std::uint32_t tau,std::uint32_t tau_bytes,
+    std::uint32_t permutation,std::uint32_t permutation_bytes,std::uint32_t work,std::uint32_t work_bytes,
+    std::uint32_t diag,std::uint32_t diag_bytes) noexcept {
+    return qr_impl(true,a,a_bytes,m,n,rs,cs,b,b_bytes,x,x_bytes,factor,factor_bytes,tau,tau_bytes,
+                   permutation,permutation_bytes,work,work_bytes,diag,diag_bytes);
 }
 }

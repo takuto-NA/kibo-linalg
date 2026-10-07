@@ -1,4 +1,5 @@
 #include <kibo/qr.hpp>
+#include <kibo/qr_refined.hpp>
 #include <kibo/llt.hpp>
 #include "controlled_fixture.hpp"
 #include "fixtures/oracles.hpp"
@@ -45,13 +46,13 @@ int main(int argc,char** argv) {
         auto eigen=a.colPivHouseholderQr(); eigen.setThreshold(oracle.tolerance);
         CHECK(eigen.rank()==static_cast<Eigen::Index>(oracle.rank));
     }
-    std::cout<<"m,n,condition,inconsistent,qr_forward,optimality,normal_llt_forward,normal_llt_status\n"<<std::setprecision(17);
+    std::cout<<"m,n,condition,inconsistent,qr_forward,optimality,normal_llt_forward,normal_llt_status,qr_fast_forward,qr_fast_optimality\n"<<std::setprecision(17);
     for (const auto& oracle:kibo::tests::oracles) {
         RowMatrix a=Eigen::Map<const RowMatrix>(oracle.matrix,oracle.m,oracle.n);
         Eigen::VectorXd b=Eigen::Map<const Eigen::VectorXd>(oracle.rhs,oracle.m);
         Eigen::VectorXd expected=Eigen::Map<const Eigen::VectorXd>(oracle.solution,oracle.n);
         RowMatrix packed(oracle.m,oracle.n);
-        std::vector<double> tau(oracle.n),result(oracle.n),work(oracle.m+oracle.n);
+        std::vector<double> tau(oracle.n),result(oracle.n),work(2*oracle.m+3*oracle.n);
         std::vector<std::size_t> permutation(oracle.n);
         auto workspace=std::as_writable_bytes(std::span<double>{work});
         auto factor=factorize_qr(view(a),factor_view(packed),tau,permutation,workspace);
@@ -59,17 +60,21 @@ int main(int argc,char** argv) {
         CHECK(solved);
         if(!solved) continue;
         Eigen::Map<const Eigen::VectorXd> x(result.data(),oracle.n);
+        const double fast_error=(x-expected).norm()/expected.norm();
+        const auto refined=solve_refined_into(factor.value(),view(a),{b.data(),oracle.m},result,workspace);
+        CHECK(refined);
+        if(!refined) continue;
         if (!((x-expected).norm()/expected.norm()<=1e-4)) {
             std::cerr<<"oracle n="<<oracle.n<<" amax="<<a.cwiseAbs().maxCoeff()<<"\nexpected "<<expected.transpose()
                 <<"\nQR "<<x.transpose()<<"\nEigen "<<a.colPivHouseholderQr().solve(b).transpose()<<'\n';
         }
         CHECK((x-expected).norm()/expected.norm()<=1e-4);
-        // Record raw Eigen accuracy; its squared column norms underflow on the tiny stress case.
+        // Eigen is measured on both the original and normalized input.
         auto raw_eigen=a.colPivHouseholderQr();
         Eigen::VectorXd raw_reference=raw_eigen.solve(b);
         const double core_error=(x-expected).norm()/expected.norm();
         const double raw_error=(raw_reference-expected).norm()/expected.norm();
-        std::cerr<<"oracle n="<<oracle.n<<" scale="<<a.cwiseAbs().maxCoeff()<<" core_error="<<core_error
+        std::cerr<<"oracle n="<<oracle.n<<" scale="<<a.cwiseAbs().maxCoeff()<<" core_error="<<core_error<<" core_fast_error="<<fast_error
                  <<" Eigen_raw_error="<<raw_error<<'\n';
         const double normalization=a.cwiseAbs().maxCoeff();
         RowMatrix normalized=a/normalization;
@@ -92,7 +97,7 @@ int main(int argc,char** argv) {
                 CHECK(std::abs((singular[0]/singular[n-1])/condition-1)<=0.01);
             }
             RowMatrix packed(m,n);
-            std::vector<double> tau(n),result(n),work(m+n);
+            std::vector<double> tau(n),result(n),work(2*m+3*n);
             std::vector<std::size_t> permutation(n);
             auto workspace=std::as_writable_bytes(std::span<double>{work});
             auto factor=factorize_qr(view(a),factor_view(packed),tau,permutation,workspace);
@@ -100,6 +105,14 @@ int main(int argc,char** argv) {
             CHECK(solved);
             if(!solved) continue;
             Eigen::Map<const Eigen::VectorXd> x(result.data(),n);
+            const double fast_forward=(x-fixture.truth).norm()/fixture.truth.norm();
+            const Eigen::VectorXd fast_residual=a*x-fixture.rhs;
+            const double fast_optimality=(a.transpose()*fast_residual).norm()/(a.norm()*(a.norm()*x.norm()+fixture.rhs.norm()));
+            if(condition<=1e4) CHECK(fast_forward<=1e-8);
+            CHECK(fast_optimality<=100*std::numeric_limits<double>::epsilon()*static_cast<double>(m));
+            const auto refined=solve_refined_into(factor.value(),view(a),{fixture.rhs.data(),static_cast<std::size_t>(m)},result,workspace);
+            CHECK(refined);
+            if(!refined) continue;
             const double forward=(x-fixture.truth).norm()/fixture.truth.norm();
             const Eigen::VectorXd residual=a*x-fixture.rhs;
             const double backward=residual.norm()/(a.norm()*x.norm()+fixture.rhs.norm());
@@ -116,7 +129,7 @@ int main(int argc,char** argv) {
             auto llt=factorize_llt(view(normal),view(lower));
             Status status=llt ? solve_into(llt.value(),{rhs.data(),static_cast<std::size_t>(n)},result,workspace) : llt.status();
             const double llt_error=status ? (Eigen::Map<const Eigen::VectorXd>(result.data(),n)-fixture.truth).norm()/fixture.truth.norm() : std::numeric_limits<double>::quiet_NaN();
-            std::cout<<m<<','<<n<<','<<condition<<','<<inconsistent<<','<<forward<<','<<optimality<<','<<llt_error<<','<<static_cast<int>(status.code)<<'\n';
+            std::cout<<m<<','<<n<<','<<condition<<','<<inconsistent<<','<<forward<<','<<optimality<<','<<llt_error<<','<<static_cast<int>(status.code)<<','<<fast_forward<<','<<fast_optimality<<'\n';
             if(condition<=1e4) CHECK(status && llt_error<=1e-8);
         }
         auto deficient=kibo::tests::controlled_fixture(m,n,2,false,true);

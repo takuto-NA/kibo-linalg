@@ -8,7 +8,7 @@ libraryはC++ object layout、例外、RTTIを境界に出さない。
 `kibo_abi_version()` は1。C exportsは `wasm/adapter.cpp` に署名を示す。
 offset/byte容量/shape/stride/statusはuint32、数値はdouble。
 offsetはWASM memoryの先頭からのbyte位置、strideはdouble要素単位。
-`kibo_matvec`、`kibo_llt`、`kibo_qr` は入力/出力/factor/workspaceを明示する一括call。
+`kibo_matvec`、`kibo_llt`、`kibo_qr`、`kibo_qr_refined` は入力/出力/factor/workspaceを明示する一括call。
 LLTはn×n、QRはm>=n>0。factor/tau/permutationの領域は別に渡す。
 diagは16 bytes: little-endian uint32 index、uint32 rank、float64 tolerance。
 permutationはwasm32のuint32配列。statusはC++ StatusCodeのABI v1での固定値（0が成功）。
@@ -36,6 +36,14 @@ core.dispose();
 copyOutputと戻り値outputはgrowth/resize/dispose後も生存する。
 resize成功後はviewを再取得する。resize失敗は元instanceを保持する。
 disposeはidempotentで、解放後のcallは拒否する。
+
+元A/bを使うQR補正は `new LinearAlgebra(module,m,n,{refinement:true})` で作業領域を準備し、
+`leastSquaresRefined(matrix,rhs)` またはview書込み後の `computeQrRefined()` を呼ぶ。
+補正workspaceは `2m+3n` doubles。通常のconstructorと `leastSquares` の容量・計算経路は従来どおり。
+`resize` は補正設定を引き継ぐ。補正領域を準備していないinstanceの補正callは拒否する。
+追加export `kibo_qr_refined` は `kibo_qr` と同じ引数を受け、factorizeと2回の補正を一括実行する。
+元入力とfactorは別領域に置き、解は全補正成功後に書き込む。極端な混合scaleで正規化残差がoverflowする場合は
+`arithmetic_failure` を返す。精度保証の範囲と追加費用は [C++ API](api.md) を参照する。
 
 将来のnumopt-js連携ではJavaScriptで残差/Jacobian/反復を維持し、
 J/r/dampingから線形stepを一括callする。現在は最適化全体のWASM移植や連携済みを意味しない。

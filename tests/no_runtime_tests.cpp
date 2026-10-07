@@ -1,6 +1,7 @@
 #include <kibo/linalg.hpp>
 #include <kibo/llt.hpp>
 #include <kibo/qr.hpp>
+#include <kibo/qr_refined.hpp>
 #include <array>
 #include <cstdio>
 
@@ -33,5 +34,8 @@ int main() {
     auto qr=kibo::linalg::factorize_qr(a.const_view(),factor_storage.view(),tau,permutation,qr_workspace);
     if (!qr || !kibo::linalg::solve_into(qr.value(),std::span<const double>{b},std::span<double>{output},qr_workspace)) return 4;
     if (std::abs(output[0]-1.0/11)>1e-14 || std::abs(output[1]-7.0/11)>1e-14) return 5;
+    alignas(double) std::array<std::byte,80> refined_workspace{};
+    if (!kibo::linalg::solve_refined_into(qr.value(),a.const_view(),b,output,refined_workspace)) return 6;
+    if (std::abs(output[0]-1.0/11)>1e-14 || std::abs(output[1]-7.0/11)>1e-14) return 7;
     std::puts("C++20 concepts/span; exceptions and RTTI disabled; Ab=[6,7]");
 }

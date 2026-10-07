@@ -17,10 +17,11 @@ void report(const char* phase,kibo::linalg::Status status,bool accepted,
             std::size_t calibration_allocations,std::size_t allocations,unsigned free_stack) {
     std::printf("{\"phase\":\"%s\",\"target\":\"%s\",\"idf\":\"%s\",\"status\":%u,\"accepted\":%s,"
         "\"numeric_bytes\":%zu,\"calibration_allocations\":%zu,\"allocations\":%zu,\"stack_budget_bytes\":8192,\"stack_free_min_bytes\":%u,"
-        "\"heap_free_bytes\":%zu,\"heap_largest_bytes\":%zu,\"matvec\":[%.17g,%.17g],\"solve\":[%.17g,%.17g]}\n",
+        "\"heap_free_bytes\":%zu,\"heap_largest_bytes\":%zu,\"matvec\":[%.17g,%.17g],\"solve\":[%.17g,%.17g],\"refined_solve\":[%.17g,%.17g]}\n",
         phase,CONFIG_IDF_TARGET,esp_get_idf_version(),static_cast<unsigned>(status.code),accepted?"true":"false",
         sizeof(problem),calibration_allocations,allocations,free_stack,heap_caps_get_free_size(MALLOC_CAP_INTERNAL|MALLOC_CAP_8BIT),
-        heap_caps_get_largest_free_block(MALLOC_CAP_INTERNAL|MALLOC_CAP_8BIT),problem.product[0],problem.product[1],problem.solution[0],problem.solution[1]);
+        heap_caps_get_largest_free_block(MALLOC_CAP_INTERNAL|MALLOC_CAP_8BIT),problem.product[0],problem.product[1],problem.solution[0],problem.solution[1],
+        problem.refined_solution[0],problem.refined_solution[1]);
 }
 void worker(void*) {
     std::puts("kibo: measuring prepared 2x2 computation");

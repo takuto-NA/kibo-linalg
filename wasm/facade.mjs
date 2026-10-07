@@ -1,6 +1,7 @@
 export class LinearAlgebra {
     #regions = {};
-    constructor(module, rows, cols) {
+    #refinement = false;
+    constructor(module, rows, cols, {refinement=false}={}) {
         if (module._kibo_abi_version() !== 1) throw new Error('unsupported kibo ABI');
         if (![rows, cols].every(x => Number.isSafeInteger(x) && x > 0) || rows * cols * 8 > 0xffffffff)
             throw new RangeError('matrix size overflow');
@@ -9,8 +10,10 @@ export class LinearAlgebra {
         this.disposed = false;
         this.#regions = {};
         this.outputLength = 0;
+        this.#refinement = refinement;
         const sizes = {matrix: rows*cols*8, rhs: Math.max(rows,cols)*8, output: Math.max(rows,cols)*8,
-            factor: rows*cols*8, tau: cols*8, permutation: cols*4, workspace: Math.max(2*cols,rows+cols)*8, diagnostics:16};
+            factor: rows*cols*8, tau: cols*8, permutation: cols*4,
+            workspace: (refinement ? 2*rows+3*cols : Math.max(2*cols,rows+cols))*8, diagnostics:16};
         try {
             for (const [name, bytes] of Object.entries(sizes)) {
                 if (bytes > 0xffffffff) throw new RangeError('buffer size overflow');
@@ -40,6 +43,7 @@ export class LinearAlgebra {
     matvec(matrix, rhs) { this.#copy(matrix,rhs,this.cols); return this.computeMatvec(); }
     solveLlt(matrix, rhs) { this.#copy(matrix,rhs,this.rows); return this.computeLlt(); }
     leastSquares(matrix, rhs) { this.#copy(matrix,rhs,this.rows); return this.computeQr(); }
+    leastSquaresRefined(matrix, rhs) { this.#copy(matrix,rhs,this.rows); return this.computeQrRefined(); }
     computeMatvec() {
         this.#alive(); const r=this.#regions;
         const status=this.module._kibo_matvec(r.matrix.offset,r.matrix.bytes,this.rows,this.cols,this.cols,1,
@@ -57,7 +61,8 @@ export class LinearAlgebra {
                 r.rhs.offset,r.rhs.bytes,r.output.offset,r.output.bytes,r.factor.offset,r.factor.bytes,
                 r.workspace.offset,r.workspace.bytes,r.diagnostics.offset,r.diagnostics.bytes);
         } else {
-            status=this.module._kibo_qr(r.matrix.offset,r.matrix.bytes,this.rows,this.cols,this.cols,1,
+            const solve=kind==='qr_refined' ? this.module._kibo_qr_refined : this.module._kibo_qr;
+            status=solve(r.matrix.offset,r.matrix.bytes,this.rows,this.cols,this.cols,1,
                 r.rhs.offset,r.rhs.bytes,r.output.offset,r.output.bytes,r.factor.offset,r.factor.bytes,
                 r.tau.offset,r.tau.bytes,r.permutation.offset,r.permutation.bytes,r.workspace.offset,r.workspace.bytes,
                 r.diagnostics.offset,r.diagnostics.bytes);
@@ -69,9 +74,14 @@ export class LinearAlgebra {
     }
     computeLlt() { return this.#solve('llt'); }
     computeQr() { return this.#solve('qr'); }
+    computeQrRefined() {
+        this.#alive();
+        if (!this.#refinement) throw new Error('create with {refinement:true} to prepare refinement workspace');
+        return this.#solve('qr_refined');
+    }
     resize(rows,cols) {
         this.#alive();
-        const replacement=new LinearAlgebra(this.module,rows,cols);
+        const replacement=new LinearAlgebra(this.module,rows,cols,{refinement:this.#refinement});
         this.dispose();
         this.rows=replacement.rows; this.cols=replacement.cols; this.#regions=replacement.#regions;
         this.outputLength=0; this.disposed=false;

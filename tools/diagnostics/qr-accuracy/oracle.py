@@ -81,7 +81,9 @@ for line in args.input.read_text().splitlines():
         'solutions': {},
     })
     result = records[-1]
-    for name in ['core', 'eigenRaw', 'eigenNormalized', 'refinedPlain', 'refinedDD']:
+    solution_names=['core', 'eigenRaw', 'eigenNormalized', 'refinedPlain', 'refinedDD']
+    if 'publicRefined' in row:solution_names.append('publicRefined')
+    for name in solution_names:
         candidate = mp.matrix(row[name])
         residual = apply(candidate)-scaled_b
         denominator = norm_a*(norm_a*mp.norm(candidate)+norm_b)

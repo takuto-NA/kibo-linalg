@@ -1,4 +1,5 @@
 #include <kibo/qr.hpp>
+#include <kibo/qr_refined.hpp>
 #include "controlled_fixture.hpp"
 #include "fixtures/oracles.hpp"
 #include <Eigen/QR>
@@ -28,7 +29,7 @@ void audit(const RowMatrix& a,const Eigen::VectorXd& b,const Eigen::VectorXd& tr
     Eigen::VectorXd reference=normalized.colPivHouseholderQr().solve(normalized_b);
     for(bool column:{false,true}) {
         RowMatrix packed(m,n);
-        std::vector<double> tau(n),work(m+n),x(n),r(n*n);
+        std::vector<double> tau(n),work(2*m+3*n),x(n),r(n*n),public_refined(n);
         std::vector<std::size_t> permutation(n);
         QrDiagnostics diagnostics;
         auto input=MatrixView<const double>::checked({a.data(),m*n},m,n,n).value();
@@ -45,11 +46,14 @@ void audit(const RowMatrix& a,const Eigen::VectorXd& b,const Eigen::VectorXd& tr
         for(std::size_t i=0;i<n;++i) for(std::size_t j=0;j<n;++j) r[i*n+j]=j<i?0:storage(i,j);
         auto plain=diagnostic_refine(a,b,r,permutation,x,false);
         auto dd=diagnostic_refine(a,b,r,permutation,x,true);
+        const auto public_status=solve_refined_into(factor.value(),input,{b.data(),m},public_refined,workspace);
         std::printf("{\"id\":\"%s\",\"m\":%zu,\"n\":%zu,\"column\":%d,\"status\":0,\"rank\":%zu,\"condition\":%.17g,\"scale\":%.17g,\"inconsistent\":%d,\"inputHash\":\"%016llx\",\"coreSIMD\":%d,\"coreForward\":%.17g,\"coreOptimality\":%.17g,\"eigenRawForward\":%.17g,\"eigenNormalizedForward\":%.17g",
             id,m,n,column,diagnostics.rank,condition,scale,inconsistent,static_cast<unsigned long long>(hash),detail::row_simd_available,forward,optimality,(raw-truth).norm()/truth.norm(),(reference-truth).norm()/truth.norm());
         std::printf(",\"plainRefinedForward\":%.17g,\"ddRefinedForward\":%.17g",
                     (Eigen::Map<const Eigen::VectorXd>(plain.data(),n)-truth).norm()/truth.norm(),
                     (Eigen::Map<const Eigen::VectorXd>(dd.data(),n)-truth).norm()/truth.norm());
+        std::printf(",\"publicRefinedStatus\":%d",int(public_status.code));
+        vector_json("publicRefined",public_refined.data(),n);
         if(n<=8) {
             vector_json("matrix",a.data(),m*n);vector_json("rhs",b.data(),m);
             vector_json("truth",truth.data(),n);vector_json("core",x.data(),n);

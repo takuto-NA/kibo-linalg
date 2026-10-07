@@ -1,7 +1,9 @@
 # Rounded-input QR accuracy diagnosis
 
-This is an opt-in diagnostic. Its double-double refinement prototype is not
-a public solver and has no accepted range/status/workspace contract yet.
+This is an opt-in diagnostic. The frozen original prototype has no public
+range/status/workspace contract. The audit now also calls the separately
+approved public API in `<kibo/qr_refined.hpp>` and emits `publicRefinedStatus`
+and `publicRefined`; the oracle checks that output against the same actual A/b.
 It retains the actual original A/b and current double QR R/permutation.
 Eigen and mpmath are diagnostic dependencies only.
 
@@ -11,6 +13,7 @@ cmake --build build/qr-accuracy --config Release
 build/qr-accuracy/Release/audit.exe > build/qr-accuracy/rounded.jsonl
 python tools/diagnostics/qr-accuracy/oracle.py build/qr-accuracy/rounded.jsonl
 build/qr-accuracy/Release/cost.exe > build/qr-accuracy/cost.jsonl
+build/qr-accuracy/Release/public-cost.exe > build/qr-accuracy/public-cost.jsonl
 ```
 
 Clear inherited compiler flags and normalize Windows environment key case.
@@ -37,5 +40,9 @@ uses five samples with >=20ms batch durations. It measures prepared column
 QR factor+solve and the additional two-step prototype refinement separately.
 Prototype allocations ARE included; these costs are not final public API
 benchmarks. Do not run while building or running other test/benchmark work.
-The candidate's explicit workspace estimate is 2m+3n doubles and still needs
-range, alias, overflow, output-preservation and portability validation.
+The public API uses 2m+3n doubles. `public-cost` excludes setup, runs the
+allocation-free public API, and distinguishes ordinary solve (phase 0),
+refined solve including its initial ordinary solve (1), factor+ordinary solve
+(2), and factor+refined solve (3). It retains the original matrix during each
+call. These five-sample single-process costs are diagnostics; they do not
+replace the formal repeated-process Eigen performance comparison.

@@ -101,6 +101,33 @@ EigenのColPivHouseholderQR::info()が通常Successを返す契約とは異な�
 数学的rank、SVD、最小ノルム解、m<nへの解は保証しない。
 `qr_solve_requirement(m,n)` のworkspaceはm+n個double。
 
+`<kibo/qr_refined.hpp>` を追加すると、元入力から残差・勾配を高精度に求める
+`solve_refined_into(factor, original_A, rhs, output, byte_workspace)` を使える。
+`original_A` はfactorizeへ渡した同じ行列の値で、呼出し中に生存する読取り専用view。
+factor handle自体は元入力を保持しない。既存factor/通常solveのlifetimeは同じである。
+`qr_refined_solve_requirement(m,n)` のworkspaceは2m+3n個doubleで、サイズoverflowも検証する。
+候補解を通常solveで作り、double-doubleの残差・勾配と同じdouble Rによる補正を2回行う。
+power-of-two scalingの極端なexponentでは、reciprocal倍率自体のoverflowを避ける。
+外部の高精度libraryを必要とせず、標準C++の `std::fma` を使用する。
+
+補正も無確保で、事前失敗・途中算術失敗のどちらでも解出力を保持する。
+元入力・factor・workspace・出力は独立領域とし、rhs/outputのみ完全に同じspanを許す。
+非有限の元入力/RHSを拒否し、非有限な補正中間値はarithmetic_failureを返す。
+Status.indexは非有限になった残差の行、または勾配・三角解・更新の変数位置を示す。
+finiteな入力でも正規化した残差が表現範囲を超える場合は成功を返さない。
+condition1e8・大残差の強い解精度保証は補正経路で受け入れる方針で、
+通常solveの同じ入力の精度結果も診断に残す。
+現在は実装検証中であり、全基準環境での保証受入はまだ完了していない。
+[判断と根拠](adr/0009-original-input-qr-refinement.md)・[実装課題](https://github.com/takuto-NA/kibo-linalg/issues/28)。
+
+```cpp
+// original_Aはfactorize_qrへ渡した入力で、ここまで保持しておく。
+auto required = kibo::linalg::qr_refined_solve_requirement(m, n);
+if (!required) return required.status();
+// caller_workspaceはrequiredのbyte数・alignmentを満たす準備済み領域。
+return kibo::linalg::solve_refined_into(factor, original_A, rhs, output, caller_workspace);
+```
+
 LLT/QRとも `solve_into(factor, rhs, output, byte_workspace)` を使う。
 workspaceはqueryのalignmentを満たす生存領域を渡す。容量不足・misalignmentは出力変更前に失敗する。
 候補解をworkspaceで計算し、有限の成功解だけ出力にcommitするため、solveの途中失敗でも解出力は保持する。
@@ -119,9 +146,9 @@ ESP32・WASM等では通常のC++処理を使う。`KIBO_DISABLE_SIMD=1`を定�
 明示SIMDを無効化できる。この定義は同じプログラムの全translation unitで揃える。
 コンパイラ自身の自動vectorizationは別のcompile flagで制御する。
 
-LLTはSSE2を使う連続行storageで32列以上のとき、storageを一時的に転置ビューとして扱い、
-8列panelを連続方向で分解する。未使用の上三角を係数の一時領域に使う。
-小さい行列やSIMD無効・非x86の構成では従来のscalar処理を使う。
+LLTはSSE2を使う連続行storageで9列以上のとき、storageを一時的に転置ビューとして扱う。
+9〜64列は先行列を新しい列へ適用し、それより大きい行列は8列panelで更新する。
+未使用の上三角を係数の一時領域に使う。小さい行列やSIMD無効・非x86の構成ではscalar処理を使う。
 成功時はcaller指定のlower layoutへ戻し、上三角を0にする。計算中のfactor storageは読み出さず、
 数値失敗後は領域全体を無効とする既存契約を守る。factor workspaceは0のまま。
 QRの有限値検査・列pivot/rank診断とfactor workspace=2n doublesも維持する。

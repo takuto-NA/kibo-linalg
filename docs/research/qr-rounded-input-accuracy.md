@@ -3,7 +3,7 @@
 2026-10-07。公開数値実装 `8fe28e552bfc485c4744a193cc9e677b3e2ce309`、
 Eigen 5.0.1 `bc3b39870ecb690a623a3f49149a358b95c5781d`。
 [精度原因調査](https://github.com/takuto-NA/kibo-linalg/issues/27) の診断結果。
-公開API、既存test、閾値、seed、入力は変更していない。
+以下の診断は公開API、既存test、閾値、seed、入力を変更する前の結果である。
 
 ## 結論と適用範囲
 
@@ -93,7 +93,7 @@ prototype内のvector確保・解copyも補正時間へ含めている。
 両phaseの合計は将来の公開APIの正式測定ではなく、このprototypeの費用見積りである。
 通常性能のEigen比較と難しい入力の精度費用を混ぜない。
 
-## 判断待ちの具体案
+## 診断から得た案と2026-10-07の判断
 
 現行の `QrFactorView` は元Aへの参照を持たず、factorize後に元Aを破棄できる。
 packed QRから元の丸め済みAを正確に復元できないため、元入力を必要とする補正を
@@ -105,7 +105,7 @@ packed QRから元の丸め済みAを正確に復元できないため、元入�
 既存factor/通常solveの性能・容量・lifetime契約を保つ。
 condition 1e8・大残差でforward<=1e-4という強い保証を追加の補正経路で受け入れる。
 通常solveも同じstress入力で測定・診断を残すが、この強い保証の適用経路が変わる点は
-ユーザーの判断を必要とする。閾値を緩める案とは区別する。
+2026-10-07、ユーザーがこの適用経路を承認した。閾値は維持する。
 
 候補workspaceは2m+3n doubles（残差高低2m、勾配n、解候補n、補正n）。
 初回通常solveのm+nを再利用できる設計とする。成功時だけoutputへcommitし、失敗時は保持する。
@@ -123,7 +123,13 @@ rank不足は引き続き診断し、prepared allocation count0・例外/RTTI不
 
 全面的にQRの中間演算・factor storageを高精度化する代案は、容量・通常性能への
 影響が大きく、今回prototypeの費用からその効果を推定しない。
-補正経路の追加もEigen比較の合否変更も、承認前に親仕様・ADR・testsへ反映しない。
+補正経路の追加は [ADR0009](../adr/0009-original-input-qr-refinement.md) と
+[実装課題](https://github.com/takuto-NA/kibo-linalg/issues/28) へ反映した。
+Eigen比較の合否変更は別の判断待ちで、既存のEigen精度CHECKを維持する。
+
+公開実装は `<kibo/qr_refined.hpp>` の `solve_refined_into` を使う。
+以下のprototypeの生データと費用はそのまま保存し、公開APIの検証証拠と混同しない。
+公開APIのworkspace・失敗契約・利用方法は [API](../api.md) を参照する。
 
 ## 保存証拠と再現
 
