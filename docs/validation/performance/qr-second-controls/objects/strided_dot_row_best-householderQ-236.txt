@@ -1,0 +1,14 @@
+?householderQ@?$ColPivHouseholderQR@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@H@Eigen@@QEBA?AV?$HouseholderSequence@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@V?$Matrix@N$0?0$00$0A@$0?0$00@2@$00@2@XZ (public: class Eigen::HouseholderSequence<class Eigen::Matrix<double,-1,-1,0,-1,-1>,class Eigen::Matrix<double,-1,1,0,-1,1>,1> __cdecl Eigen::ColPivHouseholderQR<class Eigen::Matrix<double,-1,-1,0,-1,-1>,int>::householderQ(void)const ):
+  0000000000000000: 48 8D 41 18        lea         rax,[rcx+18h]
+  0000000000000004: 48 89 0A           mov         qword ptr [rdx],rcx
+  0000000000000007: 48 89 42 08        mov         qword ptr [rdx+8],rax
+  000000000000000B: 48 8B 41 08        mov         rax,qword ptr [rcx+8]
+  000000000000000F: 48 39 41 10        cmp         qword ptr [rcx+10h],rax
+  0000000000000013: C6 42 10 00        mov         byte ptr [rdx+10h],0
+  0000000000000017: 48 0F 4C 41 10     cmovl       rax,qword ptr [rcx+10h]
+  000000000000001C: 48 89 42 18        mov         qword ptr [rdx+18h],rax
+  0000000000000020: 48 8B C2           mov         rax,rdx
+  0000000000000023: 48 C7 42 20 00 00  mov         qword ptr [rdx+20h],0
+                    00 00
+  000000000000002B: C3                 ret
+
