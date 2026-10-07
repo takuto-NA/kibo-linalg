@@ -1,0 +1,190 @@
+?run@?$triangular_solve_vector@NN_J$00$05$0A@$00@internal@Eigen@@SAX_JPEBN0PEAN@Z (public: static void __cdecl Eigen::internal::triangular_solve_vector<double,double,__int64,1,6,0,1>::run(__int64,double const *,__int64,double *)):
+  0000000000000000: 48 8B C4           mov         rax,rsp
+  0000000000000003: 4C 89 48 20        mov         qword ptr [rax+20h],r9
+  0000000000000007: 4C 89 40 18        mov         qword ptr [rax+18h],r8
+  000000000000000B: 48 89 50 10        mov         qword ptr [rax+10h],rdx
+  000000000000000F: 55                 push        rbp
+  0000000000000010: 53                 push        rbx
+  0000000000000011: 41 54              push        r12
+  0000000000000013: 41 57              push        r15
+  0000000000000015: 48 8D A8 48 FE FF  lea         rbp,[rax-1B8h]
+                    FF
+  000000000000001C: 48 81 EC 98 02 00  sub         rsp,298h
+                    00
+  0000000000000023: 48 89 54 24 50     mov         qword ptr [rsp+50h],rdx
+  0000000000000028: 49 8B D8           mov         rbx,r8
+  000000000000002B: 48 89 4C 24 58     mov         qword ptr [rsp+58h],rcx
+  0000000000000030: 4C 8B C2           mov         r8,rdx
+  0000000000000033: 48 89 4C 24 60     mov         qword ptr [rsp+60h],rcx
+  0000000000000038: 4C 8B F9           mov         r15,rcx
+  000000000000003B: 48 89 4C 24 40     mov         qword ptr [rsp+40h],rcx
+  0000000000000040: 4C 8B E1           mov         r12,rcx
+  0000000000000043: 48 85 C9           test        rcx,rcx
+  0000000000000046: 0F 8E 73 02 00 00  jle         00000000000002BF
+  000000000000004C: 48 89 70 D8        mov         qword ptr [rax-28h],rsi
+  0000000000000050: 45 33 D2           xor         r10d,r10d
+  0000000000000053: 48 89 78 D0        mov         qword ptr [rax-30h],rdi
+  0000000000000057: 4C 89 68 C8        mov         qword ptr [rax-38h],r13
+  000000000000005B: 4C 89 70 C0        mov         qword ptr [rax-40h],r14
+  000000000000005F: 0F 29 70 A8        movaps      xmmword ptr [rax-58h],xmm6
+  0000000000000063: F2 0F 10 74 24 60  movsd       xmm6,mmword ptr [rsp+60h]
+  0000000000000069: 0F 29 78 98        movaps      xmmword ptr [rax-68h],xmm7
+  000000000000006D: 0F 10 7C 24 50     movups      xmm7,xmmword ptr [rsp+50h]
+  0000000000000072: 44 0F 29 40 88     movaps      xmmword ptr [rax-78h],xmm8
+  0000000000000077: B8 08 00 00 00     mov         eax,8
+  000000000000007C: F2 44 0F 10 05 00  movsd       xmm8,mmword ptr [__real@bff0000000000000]
+                    00 00 00
+  0000000000000085: 66 66 66 0F 1F 84  nop         word ptr [rax+rax]
+                    00 00 00 00 00
+  0000000000000090: 49 83 FC 08        cmp         r12,8
+  0000000000000094: 4A 8D 3C E5 00 00  lea         rdi,[r12*8]
+                    00 00
+  000000000000009C: 4D 8B EC           mov         r13,r12
+  000000000000009F: 49 8B D7           mov         rdx,r15
+  00000000000000A2: 4C 0F 47 E8        cmova       r13,rax
+  00000000000000A6: 49 2B D4           sub         rdx,r12
+  00000000000000A9: 48 85 D2           test        rdx,rdx
+  00000000000000AC: 7E 66              jle         0000000000000114
+  00000000000000AE: 4A 8D 04 0F        lea         rax,[rdi+r9]
+  00000000000000B2: F2 44 0F 11 44 24  movsd       mmword ptr [rsp+30h],xmm8
+                    30
+  00000000000000B9: 48 89 45 88        mov         qword ptr [rbp-78h],rax
+  00000000000000BD: 49 8B CC           mov         rcx,r12
+  00000000000000C0: 49 2B CD           sub         rcx,r13
+  00000000000000C3: 48 C7 44 24 28 01  mov         qword ptr [rsp+28h],1
+                    00 00 00
+  00000000000000CC: 48 8B C1           mov         rax,rcx
+  00000000000000CF: 48 C7 45 90 01 00  mov         qword ptr [rbp-70h],1
+                    00 00
+  00000000000000D7: 48 0F AF C3        imul        rax,rbx
+  00000000000000DB: 48 89 5D A0        mov         qword ptr [rbp-60h],rbx
+  00000000000000DF: 49 03 C4           add         rax,r12
+  00000000000000E2: 49 8D 04 C0        lea         rax,[r8+rax*8]
+  00000000000000E6: 48 89 45 98        mov         qword ptr [rbp-68h],rax
+  00000000000000EA: 4C 8D 45 98        lea         r8,[rbp-68h]
+  00000000000000EE: 49 8D 04 C9        lea         rax,[r9+rcx*8]
+  00000000000000F2: 49 8B CD           mov         rcx,r13
+  00000000000000F5: 4C 8D 4D 88        lea         r9,[rbp-78h]
+  00000000000000F9: 48 89 44 24 20     mov         qword ptr [rsp+20h],rax
+  00000000000000FE: E8 00 00 00 00     call        ?run@?$general_matrix_vector_product@_JNV?$const_blas_data_mapper@N_J$00@internal@Eigen@@$00$0A@NV?$const_blas_data_mapper@N_J$0A@@23@$0A@$0A@@internal@Eigen@@SAX_J0AEBV?$const_blas_data_mapper@N_J$00@23@AEBV?$const_blas_data_mapper@N_J$0A@@23@PEAN0N@Z
+  0000000000000103: 4C 8B 85 C8 01 00  mov         r8,qword ptr [rbp+1C8h]
+                    00
+  000000000000010A: 45 33 D2           xor         r10d,r10d
+  000000000000010D: 4C 8B 8D D8 01 00  mov         r9,qword ptr [rbp+1D8h]
+                    00
+  0000000000000114: 49 8B F2           mov         rsi,r10
+  0000000000000117: 4D 85 ED           test        r13,r13
+  000000000000011A: 0F 84 4F 01 00 00  je          000000000000026F
+  0000000000000120: 4E 8D 34 0F        lea         r14,[rdi+r9]
+  0000000000000124: 49 8B D4           mov         rdx,r12
+  0000000000000127: 4C 8B A5 D0 01 00  mov         r12,qword ptr [rbp+1D0h]
+                    00
+  000000000000012E: 48 83 C7 F8        add         rdi,0FFFFFFFFFFFFFFF8h
+  0000000000000132: 49 0F AF FC        imul        rdi,r12
+  0000000000000136: 49 8B C4           mov         rax,r12
+  0000000000000139: 48 F7 D8           neg         rax
+  000000000000013C: 48 C1 E0 03        shl         rax,3
+  0000000000000140: 49 03 F8           add         rdi,r8
+  0000000000000143: 48 89 44 24 48     mov         qword ptr [rsp+48h],rax
+  0000000000000148: 0F 1F 84 00 00 00  nop         dword ptr [rax+rax]
+                    00 00
+  0000000000000150: 48 85 F6           test        rsi,rsi
+  0000000000000153: 0F 84 F4 00 00 00  je          000000000000024D
+  0000000000000159: 4C 89 7D 70        mov         qword ptr [rbp+70h],r15
+  000000000000015D: 4D 85 C0           test        r8,r8
+  0000000000000160: 74 14              je          0000000000000176
+  0000000000000162: 48 89 7D 60        mov         qword ptr [rbp+60h],rdi
+  0000000000000166: 48 85 FF           test        rdi,rdi
+  0000000000000169: 74 0F              je          000000000000017A
+  000000000000016B: 48 8B CF           mov         rcx,rdi
+  000000000000016E: 49 2B C9           sub         rcx,r9
+  0000000000000171: 49 03 CE           add         rcx,r14
+  0000000000000174: EB 07              jmp         000000000000017D
+  0000000000000176: 4C 89 55 60        mov         qword ptr [rbp+60h],r10
+  000000000000017A: 49 8B CA           mov         rcx,r10
+  000000000000017D: 48 89 8D B8 00 00  mov         qword ptr [rbp+0B8h],rcx
+                    00
+  0000000000000184: 48 8D 5A FF        lea         rbx,[rdx-1]
+  0000000000000188: 0F 10 85 B8 00 00  movups      xmm0,xmmword ptr [rbp+0B8h]
+                    00
+  000000000000018F: 4C 89 74 24 50     mov         qword ptr [rsp+50h],r14
+  0000000000000194: 4C 8D 45 A8        lea         r8,[rbp-58h]
+  0000000000000198: 48 89 74 24 58     mov         qword ptr [rsp+58h],rsi
+  000000000000019D: 0F 11 45 B0        movups      xmmword ptr [rbp-50h],xmm0
+  00000000000001A1: 48 89 55 28        mov         qword ptr [rbp+28h],rdx
+  00000000000001A5: 48 8D 95 C0 01 00  lea         rdx,[rbp+1C0h]
+                    00
+  00000000000001AC: 0F 10 45 60        movups      xmm0,xmmword ptr [rbp+60h]
+  00000000000001B0: 4C 89 74 24 70     mov         qword ptr [rsp+70h],r14
+  00000000000001B5: 49 83 C6 F8        add         r14,0FFFFFFFFFFFFFFF8h
+  00000000000001B9: 48 89 B5 C8 00 00  mov         qword ptr [rbp+0C8h],rsi
+                    00
+  00000000000001C0: F2 0F 10 8D C8 00  movsd       xmm1,mmword ptr [rbp+0C8h]
+                    00 00
+  00000000000001C8: F2 0F 11 4D C0     movsd       mmword ptr [rbp-40h],xmm1
+  00000000000001CD: F2 0F 10 4D 70     movsd       xmm1,mmword ptr [rbp+70h]
+  00000000000001D2: 0F 11 45 C8        movups      xmmword ptr [rbp-38h],xmm0
+  00000000000001D6: 4C 89 65 F8        mov         qword ptr [rbp-8],r12
+  00000000000001DA: 0F 10 44 24 50     movups      xmm0,xmmword ptr [rsp+50h]
+  00000000000001DF: 48 89 4C 24 58     mov         qword ptr [rsp+58h],rcx
+  00000000000001E4: 48 8D 4C 24 50     lea         rcx,[rsp+50h]
+  00000000000001E9: F2 0F 11 4D D8     movsd       mmword ptr [rbp-28h],xmm1
+  00000000000001EE: F2 0F 10 4C 24 60  movsd       xmm1,mmword ptr [rsp+60h]
+  00000000000001F4: 0F 11 45 38        movups      xmmword ptr [rbp+38h],xmm0
+  00000000000001F8: 48 89 5D 08        mov         qword ptr [rbp+8],rbx
+  00000000000001FC: 0F 11 7D E0        movups      xmmword ptr [rbp-20h],xmm7
+  0000000000000200: 4C 89 55 10        mov         qword ptr [rbp+10h],r10
+  0000000000000204: F2 0F 11 75 F0     movsd       mmword ptr [rbp-10h],xmm6
+  0000000000000209: 4C 89 65 18        mov         qword ptr [rbp+18h],r12
+  000000000000020D: 4C 89 65 30        mov         qword ptr [rbp+30h],r12
+  0000000000000211: F2 0F 11 4D 48     movsd       mmword ptr [rbp+48h],xmm1
+  0000000000000216: 4C 89 64 24 68     mov         qword ptr [rsp+68h],r12
+  000000000000021B: 48 89 75 80        mov         qword ptr [rbp-80h],rsi
+  000000000000021F: E8 00 00 00 00     call        0000000000000224
+  0000000000000224: F2 41 0F 10 0E     movsd       xmm1,mmword ptr [r14]
+  0000000000000229: 48 8B D3           mov         rdx,rbx
+  000000000000022C: 48 8B 44 24 48     mov         rax,qword ptr [rsp+48h]
+  0000000000000231: F2 0F 5C C8        subsd       xmm1,xmm0
+  0000000000000235: 4C 8B 85 C8 01 00  mov         r8,qword ptr [rbp+1C8h]
+                    00
+  000000000000023C: 45 33 D2           xor         r10d,r10d
+  000000000000023F: 4C 8B 8D D8 01 00  mov         r9,qword ptr [rbp+1D8h]
+                    00
+  0000000000000246: F2 41 0F 11 0E     movsd       mmword ptr [r14],xmm1
+  000000000000024B: EB 07              jmp         0000000000000254
+  000000000000024D: 49 83 C6 F8        add         r14,0FFFFFFFFFFFFFFF8h
+  0000000000000251: 48 FF CA           dec         rdx
+  0000000000000254: 48 FF C6           inc         rsi
+  0000000000000257: 48 03 F8           add         rdi,rax
+  000000000000025A: 49 3B F5           cmp         rsi,r13
+  000000000000025D: 0F 8C ED FE FF FF  jl          0000000000000150
+  0000000000000263: 4C 8B 64 24 40     mov         r12,qword ptr [rsp+40h]
+  0000000000000268: 48 8B 9D D0 01 00  mov         rbx,qword ptr [rbp+1D0h]
+                    00
+  000000000000026F: 49 83 EC 08        sub         r12,8
+  0000000000000273: B8 08 00 00 00     mov         eax,8
+  0000000000000278: 4C 89 64 24 40     mov         qword ptr [rsp+40h],r12
+  000000000000027D: 4D 85 E4           test        r12,r12
+  0000000000000280: 0F 8F 0A FE FF FF  jg          0000000000000090
+  0000000000000286: 44 0F 28 84 24 40  movaps      xmm8,xmmword ptr [rsp+240h]
+                    02 00 00
+  000000000000028F: 0F 28 BC 24 50 02  movaps      xmm7,xmmword ptr [rsp+250h]
+                    00 00
+  0000000000000297: 0F 28 B4 24 60 02  movaps      xmm6,xmmword ptr [rsp+260h]
+                    00 00
+  000000000000029F: 4C 8B B4 24 78 02  mov         r14,qword ptr [rsp+278h]
+                    00 00
+  00000000000002A7: 4C 8B AC 24 80 02  mov         r13,qword ptr [rsp+280h]
+                    00 00
+  00000000000002AF: 48 8B BC 24 88 02  mov         rdi,qword ptr [rsp+288h]
+                    00 00
+  00000000000002B7: 48 8B B4 24 90 02  mov         rsi,qword ptr [rsp+290h]
+                    00 00
+  00000000000002BF: 48 81 C4 98 02 00  add         rsp,298h
+                    00
+  00000000000002C6: 41 5F              pop         r15
+  00000000000002C8: 41 5C              pop         r12
+  00000000000002CA: 5B                 pop         rbx
+  00000000000002CB: 5D                 pop         rbp
+  00000000000002CC: C3                 ret
+
