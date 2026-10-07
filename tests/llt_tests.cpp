@@ -93,5 +93,32 @@ int main() {
     };
     CHECK(check_dense.template operator()<64>()==0);
     CHECK(check_dense.template operator()<65>()==0);
+    // Validation covers both triangles before the blocked path writes output.
+    // Exercise the vector scan tail, exact symmetry, and the original
+    // normalized tolerance boundary (not an approximate shortcut).
+    {
+        constexpr std::size_t n=65;
+        std::array<double,n*n> input{},target{};
+        for (std::size_t i=0;i<n;++i) input[i*n+i]=1;
+        auto source=MatrixView<const double>::checked(input,n,n,n).value();
+        auto output=MatrixView<double>::checked(target,n,n,n).value();
+        constexpr double tolerance=32*std::numeric_limits<double>::epsilon();
+        input[1]=tolerance;
+        CHECK(factorize_llt(source,output));
+        target.fill(123);
+        input[1]=std::nextafter(tolerance,std::numeric_limits<double>::infinity());
+        auto rejected=factorize_llt(source,output);
+        CHECK(!rejected && rejected.status().code==StatusCode::invalid_argument && rejected.status().index==1);
+        for (double value:target) CHECK(value==123);
+        for (std::size_t position:{std::size_t{0},std::size_t{2},std::size_t{64},n*n-1}) {
+            const double saved=input[position];
+            input[position]=std::numeric_limits<double>::quiet_NaN();
+            CHECK(factorize_llt(source,output).status().code==StatusCode::non_finite_input);
+            for (double value:target) CHECK(value==123);
+            input[position]=saved;
+        }
+        input[1]=std::numeric_limits<double>::infinity();
+        CHECK(factorize_llt(source,output,LltOptions{tolerance,false}).status().code==StatusCode::non_finite_input);
+    }
     std::puts("public LLT 2x2 factor and transactional solve passed");
 }

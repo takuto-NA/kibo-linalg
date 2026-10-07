@@ -82,6 +82,11 @@ bool prepared_dense_shapes() {
         const bool qr_ok=qr && solve_into(qr.value(),rhs_span,output_span,workspace);
         correct=qr_ok && correct;
         if(qr_ok) for(auto value:solution) correct=std::abs(value-0.5)<=1e-14 && correct;
+        auto column_storage=MatrixView<double>::checked(packed,m,n,1,m).value();
+        auto column_qr=factorize_qr(a,column_storage,tau,permutation,workspace);
+        const bool column_ok=column_qr && solve_into(column_qr.value(),rhs_span,output_span,workspace);
+        correct=column_ok && correct;
+        if(column_ok) for(auto value:solution) correct=std::abs(value-0.5)<=1e-14 && correct;
         measuring=false;
         std::printf("prepared m=%zu n=%zu LLT/QR allocator calls=%zu\n",m,n,allocations);
         if(!correct || allocations!=0) return false;

@@ -5,6 +5,22 @@
 #include "test_check.hpp"
 int main() {
     using namespace kibo::linalg;
+    // A finite full-rank factor can overflow only in transformed residual rows.
+    // Checked contiguous updates must reject it and preserve the output.
+    for (const auto stride:std::array<std::array<std::size_t,2>,2>{{{1,3},{2,1}}}) {
+        std::array<double,2> input{1,-1};
+        std::array<double,6> packed{};
+        std::array<double,1> tau{},answer{123};
+        std::array<std::size_t,1> order{};
+        std::array<double,3> work{};
+        const std::array<double,2> rhs{.9*std::numeric_limits<double>::max(),.9*std::numeric_limits<double>::max()};
+        auto a=MatrixView<const double>::checked(input,2,1,1).value();
+        auto p=MatrixView<double>::checked(packed,2,1,stride[0],stride[1]).value();
+        auto factor=factorize_qr(a,p,tau,order,std::as_writable_bytes(std::span<double>{work}));
+        CHECK(factor);
+        auto status=solve_into(factor.value(),rhs,answer,std::as_writable_bytes(std::span<double>{work}));
+        CHECK(status.code==StatusCode::arithmetic_failure && status.index==0 && answer[0]==123);
+    }
     // A dense multi-column solve exercises unfinished tau slots and strided
     // factor storage. Padding must remain outside the logical writes.
     {

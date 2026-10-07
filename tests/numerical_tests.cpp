@@ -11,6 +11,7 @@
 
 using namespace kibo::linalg;
 using kibo::tests::RowMatrix;
+bool column_factor=false;
 #define CHECK(condition) do { if (!(condition)) { std::cerr<<"line "<<__LINE__<<": "<<#condition<<'\n'; ++failures; } } while(false)
 MatrixView<const double> view(const RowMatrix& matrix) {
     return MatrixView<const double>::checked({matrix.data(),static_cast<std::size_t>(matrix.size())},
@@ -20,15 +21,24 @@ MatrixView<double> view(RowMatrix& matrix) {
     return MatrixView<double>::checked({matrix.data(),static_cast<std::size_t>(matrix.size())},
         matrix.rows(),matrix.cols(),matrix.cols()).value();
 }
+MatrixView<double> factor_view(RowMatrix& matrix) {
+    if (!column_factor) return view(matrix);
+    return MatrixView<double>::checked({matrix.data(),static_cast<std::size_t>(matrix.size())},
+        matrix.rows(),matrix.cols(),1,matrix.rows()).value();
+}
 int main(int argc,char** argv) {
     int failures=0;
-    const Eigen::Index maximum_n=argc>1 && std::string_view{argv[1]}=="--small" ? 32 : 512;
+    Eigen::Index maximum_n=512;
+    for (int i=1;i<argc;++i) {
+        if (std::string_view{argv[i]}=="--small") maximum_n=32;
+        if (std::string_view{argv[i]}=="--column-factor") column_factor=true;
+    }
     for(const auto& oracle:kibo::tests::rank_oracles) {
         RowMatrix a=Eigen::Map<const RowMatrix>(oracle.matrix,oracle.m,oracle.n),packed(oracle.m,oracle.n);
         std::vector<double> tau(oracle.n),work(oracle.m+oracle.n);
         std::vector<std::size_t> permutation(oracle.n);
         QrDiagnostics diagnostics;
-        auto factor=factorize_qr(view(a),view(packed),tau,permutation,std::as_writable_bytes(std::span<double>{work}),
+        auto factor=factorize_qr(view(a),factor_view(packed),tau,permutation,std::as_writable_bytes(std::span<double>{work}),
             QrOptions{oracle.tolerance},&diagnostics);
         CHECK(diagnostics.rank==oracle.rank);
         CHECK(oracle.rank==oracle.n ? static_cast<bool>(factor) : !factor && factor.status().code==StatusCode::rank_deficient);
@@ -44,7 +54,7 @@ int main(int argc,char** argv) {
         std::vector<double> tau(oracle.n),result(oracle.n),work(oracle.m+oracle.n);
         std::vector<std::size_t> permutation(oracle.n);
         auto workspace=std::as_writable_bytes(std::span<double>{work});
-        auto factor=factorize_qr(view(a),view(packed),tau,permutation,workspace);
+        auto factor=factorize_qr(view(a),factor_view(packed),tau,permutation,workspace);
         const bool solved=factor && solve_into(factor.value(),{b.data(),oracle.m},result,workspace);
         CHECK(solved);
         if(!solved) continue;
@@ -85,7 +95,7 @@ int main(int argc,char** argv) {
             std::vector<double> tau(n),result(n),work(m+n);
             std::vector<std::size_t> permutation(n);
             auto workspace=std::as_writable_bytes(std::span<double>{work});
-            auto factor=factorize_qr(view(a),view(packed),tau,permutation,workspace);
+            auto factor=factorize_qr(view(a),factor_view(packed),tau,permutation,workspace);
             const bool solved=factor && solve_into(factor.value(),{fixture.rhs.data(),static_cast<std::size_t>(m)},result,workspace);
             CHECK(solved);
             if(!solved) continue;
@@ -114,7 +124,7 @@ int main(int argc,char** argv) {
         std::vector<double> tau(n),work(m+n);
         std::vector<std::size_t> permutation(n);
         QrDiagnostics diagnostics;
-        auto failed=factorize_qr(view(deficient.matrix),view(storage),tau,permutation,std::as_writable_bytes(std::span<double>{work}),{},&diagnostics);
+        auto failed=factorize_qr(view(deficient.matrix),factor_view(storage),tau,permutation,std::as_writable_bytes(std::span<double>{work}),{},&diagnostics);
         CHECK(!failed && failed.status().code==StatusCode::rank_deficient && diagnostics.rank==static_cast<std::size_t>(n-1));
     }
     std::cerr<<"numerical acceptance failures="<<failures<<'\n';

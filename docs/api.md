@@ -113,17 +113,25 @@ rhsとoutputのみ完全に同じspanを許す（workspaceに候補を作るた�
 
 ## 内部最適化の構成
 
-x86のコンパイル対象にSSE2が含まれる場合、連続行の内部計算にSSE2を使う。
+x86のコンパイル対象にSSE2が含まれる場合、連続方向の内部計算にSSE2を使う。
 自然なdouble alignmentだけで動き、AVX・外部BLAS・追加workspaceは要求しない。
 ESP32・WASM等では通常のC++処理を使う。`KIBO_DISABLE_SIMD=1`を定義すると、
 明示SIMDを無効化できる。この定義は同じプログラムの全translation unitで揃える。
 コンパイラ自身の自動vectorizationは別のcompile flagで制御する。
 
-LLTはSSE2を使う連続行storageで64列以上のとき、未使用の上三角を分解中の一時領域に使う。
+LLTはSSE2を使う連続行storageで64列以上のとき、storageを一時的に転置ビューとして扱い、
+8列panelを連続方向で分解する。未使用の上三角を係数の一時領域に使う。
 小さい行列やSIMD無効・非x86の構成では従来のscalar処理を使う。
-成功時は上三角を0に戻す。計算中のfactor storageは読み出さず、
+成功時はcaller指定のlower layoutへ戻し、上三角を0にする。計算中のfactor storageは読み出さず、
 数値失敗後は領域全体を無効とする既存契約を守る。factor workspaceは0のまま。
 QRの有限値検査・列pivot/rank診断とfactor workspace=2n doublesも維持する。
+
+QRはcallerが渡したfactor storageの配置を維持する。大きいQRでは
+`MatrixView<double>::checked(buffer, m, n, 1, m)`による列方向格納を選べる。
+この場合、4列でHouseholder vectorの読み込みを共有し、projectionと更新をSIMDで計算する。
+行方向格納では4行のprojectionをまとめる。両方とも更新直後の有限値検査を行い、
+solveでは残差部分も含めたoverflow検出と出力保持を維持する。
+入力のrow/column変換はfactorizeの内部copyに含まれ、追加heap・追加workspaceは使わない。
 
 ## Windowsでの確認
 
