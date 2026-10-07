@@ -1,0 +1,468 @@
+{
+  "publicCodeCommit": "19e210aeb990e32b25ba5d7639c5d5969a519402",
+  "samples": 5,
+  "processes": 1,
+  "formalAcceptance": false,
+  "commands": [
+    {
+      "command": [
+        "build\\qr-next\\Release\\triangular_stream_column.exe",
+        "8",
+        "5",
+        "32",
+        "0"
+      ],
+      "file": "triangular_stream_column-n8-m32-process0.jsonl",
+      "binarySha256": "6a50017ef98c8deeae8944f7ff541c3f722f1b128e7c397666b7d908c9520d35",
+      "medianPhaseUs": [
+        0.999169921875,
+        0.1868946075439453,
+        1.1880706787109374,
+        1.3922393798828125
+      ],
+      "medianPhaseRatio": [
+        0.7913452056383781,
+        0.8313728351654318,
+        0.7949736751463858,
+        0.8091199488899536
+      ]
+    },
+    {
+      "command": [
+        "build\\qr-next\\Release\\column_work_fast_column.exe",
+        "8",
+        "5",
+        "32",
+        "0"
+      ],
+      "file": "column_work_fast_column-n8-m32-process0.jsonl",
+      "binarySha256": "9be102740baadf7035021f9789be98b2e144c2402550e4d9d3d39ef1a8df4115",
+      "medianPhaseUs": [
+        0.9330841064453125,
+        0.18883209228515627,
+        1.1212158203125,
+        1.3424835205078125
+      ],
+      "medianPhaseRatio": [
+        0.714396707404141,
+        0.8341532829814958,
+        0.7322736558871892,
+        0.7649871365890449
+      ]
+    },
+    {
+      "command": [
+        "build\\qr-next\\Release\\column_work_fast_row_best.exe",
+        "8",
+        "5",
+        "32",
+        "0"
+      ],
+      "file": "column_work_fast_row_best-n8-m32-process0.jsonl",
+      "binarySha256": "bca159c3fbe7f890e70e1a7c7668374f2184ca5ab1a468666db42acecca7a6ba",
+      "medianPhaseUs": [
+        1.233868408203125,
+        0.21737251281738282,
+        1.4640441894531249,
+        1.6968139648437501
+      ],
+      "medianPhaseRatio": [
+        0.9691549106800582,
+        0.9681382134003474,
+        0.9717508838019144,
+        0.9854150786899567
+      ]
+    },
+    {
+      "command": [
+        "build\\qr-next\\Release\\column_work_restore_row_best.exe",
+        "8",
+        "5",
+        "32",
+        "0"
+      ],
+      "file": "column_work_restore_row_best-n8-m32-process0.jsonl",
+      "binarySha256": "b8ae5754a344792b29f53e6f579556b3569793f96a0f867a1a7b6b68319d984b",
+      "medianPhaseUs": [
+        1.2647369384765623,
+        0.21929626464843752,
+        1.468707275390625,
+        1.5810028076171876
+      ],
+      "medianPhaseRatio": [
+        1.0029112398542201,
+        0.9646327718036982,
+        0.991933122450747,
+        0.9323680543302522
+      ]
+    },
+    {
+      "command": [
+        "build\\qr-next\\Release\\column_work_final_row_best.exe",
+        "8",
+        "5",
+        "32",
+        "0"
+      ],
+      "file": "column_work_final_row_best-n8-m32-process0.jsonl",
+      "binarySha256": "4c0ff069144144a0a126875e055a0373990cd442b5008a97c5969e3ca20312fb",
+      "medianPhaseUs": [
+        1.1294128417968752,
+        0.21801223754882815,
+        1.358782958984375,
+        1.5928375244140625
+      ],
+      "medianPhaseRatio": [
+        0.9039120526980391,
+        0.9684926596136889,
+        0.9112195362665696,
+        0.9387167451383983
+      ]
+    },
+    {
+      "command": [
+        "build\\qr-next\\Release\\triangular_stream_column.exe",
+        "32",
+        "5",
+        "128",
+        "0"
+      ],
+      "file": "triangular_stream_column-n32-m128-process0.jsonl",
+      "binarySha256": "6a50017ef98c8deeae8944f7ff541c3f722f1b128e7c397666b7d908c9520d35",
+      "medianPhaseUs": [
+        26.094873046874998,
+        1.628582763671875,
+        27.83740234375,
+        29.40673828125
+      ],
+      "medianPhaseRatio": [
+        0.9035871166602168,
+        0.927397551086291,
+        0.9145530095401901,
+        0.9501976058193482
+      ]
+    },
+    {
+      "command": [
+        "build\\qr-next\\Release\\column_work_fast_column.exe",
+        "32",
+        "5",
+        "128",
+        "0"
+      ],
+      "file": "column_work_fast_column-n32-m128-process0.jsonl",
+      "binarySha256": "9be102740baadf7035021f9789be98b2e144c2402550e4d9d3d39ef1a8df4115",
+      "medianPhaseUs": [
+        24.592626953125,
+        1.6147491455078125,
+        26.443798828125,
+        28.5919921875
+      ],
+      "medianPhaseRatio": [
+        0.8694523627031356,
+        0.9105694834517318,
+        0.8624592641988211,
+        0.9162651141685008
+      ]
+    },
+    {
+      "command": [
+        "build\\qr-next\\Release\\column_work_fast_row_best.exe",
+        "32",
+        "5",
+        "128",
+        "0"
+      ],
+      "file": "column_work_fast_row_best-n32-m128-process0.jsonl",
+      "binarySha256": "bca159c3fbe7f890e70e1a7c7668374f2184ca5ab1a468666db42acecca7a6ba",
+      "medianPhaseUs": [
+        27.416845703125,
+        2.22445068359375,
+        29.8982421875,
+        32.0888671875
+      ],
+      "medianPhaseRatio": [
+        0.9721174704983164,
+        1.2726526721222462,
+        0.9770050727390556,
+        1.0191554957290936
+      ]
+    },
+    {
+      "command": [
+        "build\\qr-next\\Release\\column_work_restore_row_best.exe",
+        "32",
+        "5",
+        "128",
+        "0"
+      ],
+      "file": "column_work_restore_row_best-n32-m128-process0.jsonl",
+      "binarySha256": "b8ae5754a344792b29f53e6f579556b3569793f96a0f867a1a7b6b68319d984b",
+      "medianPhaseUs": [
+        26.485400390625,
+        2.2451080322265624,
+        29.23779296875,
+        31.215527343749997
+      ],
+      "medianPhaseRatio": [
+        0.916226645520774,
+        1.2649746037261493,
+        0.9566208947181032,
+        0.9831601675678668
+      ]
+    },
+    {
+      "command": [
+        "build\\qr-next\\Release\\column_work_final_row_best.exe",
+        "32",
+        "5",
+        "128",
+        "0"
+      ],
+      "file": "column_work_final_row_best-n32-m128-process0.jsonl",
+      "binarySha256": "4c0ff069144144a0a126875e055a0373990cd442b5008a97c5969e3ca20312fb",
+      "medianPhaseUs": [
+        25.835107421875,
+        2.2124969482421872,
+        28.293505859375,
+        29.882910156250002
+      ],
+      "medianPhaseRatio": [
+        0.927878098097431,
+        1.2574304781351149,
+        0.9435424740756259,
+        0.9683253375336122
+      ]
+    },
+    {
+      "command": [
+        "build\\qr-next\\Release\\triangular_stream_column.exe",
+        "128",
+        "5",
+        "512",
+        "0"
+      ],
+      "file": "triangular_stream_column-n128-m512-process0.jsonl",
+      "binarySha256": "6a50017ef98c8deeae8944f7ff541c3f722f1b128e7c397666b7d908c9520d35",
+      "medianPhaseUs": [
+        1215.453125,
+        24.11435546875,
+        1235.3687499999999,
+        1514.221875
+      ],
+      "medianPhaseRatio": [
+        0.9502290061306209,
+        0.9557170364493125,
+        0.9761622358722964,
+        1.013857414067713
+      ]
+    },
+    {
+      "command": [
+        "build\\qr-next\\Release\\column_work_fast_column.exe",
+        "128",
+        "5",
+        "512",
+        "0"
+      ],
+      "file": "column_work_fast_column-n128-m512-process0.jsonl",
+      "binarySha256": "9be102740baadf7035021f9789be98b2e144c2402550e4d9d3d39ef1a8df4115",
+      "medianPhaseUs": [
+        1213.084375,
+        24.2453125,
+        1238.421875,
+        1544.2625
+      ],
+      "medianPhaseRatio": [
+        0.9538518241837617,
+        0.959293991275352,
+        0.9833577062782886,
+        1.03798981934748
+      ]
+    },
+    {
+      "command": [
+        "build\\qr-next\\Release\\column_work_fast_row_best.exe",
+        "128",
+        "5",
+        "512",
+        "0"
+      ],
+      "file": "column_work_fast_row_best-n128-m512-process0.jsonl",
+      "binarySha256": "bca159c3fbe7f890e70e1a7c7668374f2184ca5ab1a468666db42acecca7a6ba",
+      "medianPhaseUs": [
+        1261.228125,
+        61.78818359375,
+        1334.496875,
+        1626.640625
+      ],
+      "medianPhaseRatio": [
+        0.9943873792411875,
+        2.412980028077745,
+        1.0492840042669707,
+        1.030357898926674
+      ]
+    },
+    {
+      "command": [
+        "build\\qr-next\\Release\\column_work_restore_row_best.exe",
+        "128",
+        "5",
+        "512",
+        "0"
+      ],
+      "file": "column_work_restore_row_best-n128-m512-process0.jsonl",
+      "binarySha256": "b8ae5754a344792b29f53e6f579556b3569793f96a0f867a1a7b6b68319d984b",
+      "medianPhaseUs": [
+        1237.665625,
+        61.358837890625,
+        1303.490625,
+        1619.484375
+      ],
+      "medianPhaseRatio": [
+        0.9742272507829618,
+        2.520735775960801,
+        1.0369113300738126,
+        1.086057106923017
+      ]
+    },
+    {
+      "command": [
+        "build\\qr-next\\Release\\column_work_final_row_best.exe",
+        "128",
+        "5",
+        "512",
+        "0"
+      ],
+      "file": "column_work_final_row_best-n128-m512-process0.jsonl",
+      "binarySha256": "4c0ff069144144a0a126875e055a0373990cd442b5008a97c5969e3ca20312fb",
+      "medianPhaseUs": [
+        1201.365625,
+        61.234228515625006,
+        1264.084375,
+        1565.715625
+      ],
+      "medianPhaseRatio": [
+        0.959915637987718,
+        2.4066510838860236,
+        0.9982523558927916,
+        1.0478653182590243
+      ]
+    },
+    {
+      "command": [
+        "build\\qr-next\\Release\\column_work_fast_column.exe",
+        "512",
+        "5",
+        "2048",
+        "0"
+      ],
+      "file": "column_work_fast_column-n512-m2048-process0.jsonl",
+      "binarySha256": "9be102740baadf7035021f9789be98b2e144c2402550e4d9d3d39ef1a8df4115",
+      "medianPhaseUs": [
+        91875.6,
+        430.68359375,
+        92737.1,
+        96420.40000000001
+      ],
+      "medianPhaseRatio": [
+        0.9758539395475329,
+        1.0221339735912247,
+        0.9817723926412423,
+        0.955531718404516
+      ]
+    },
+    {
+      "command": [
+        "build\\qr-next\\Release\\column_work_checked8_column.exe",
+        "512",
+        "5",
+        "2048",
+        "0"
+      ],
+      "file": "column_work_checked8_column-n512-m2048-process0.jsonl",
+      "binarySha256": "e6b778d098cc323bc0c356fc7200df1ff7124d4d41f7d441e094b98ec5e56cfd",
+      "medianPhaseUs": [
+        91206.6,
+        369.5890625,
+        91298.5,
+        95650.20000000001
+      ],
+      "medianPhaseRatio": [
+        0.9753739935871555,
+        0.8550822992071699,
+        0.9673234261399878,
+        0.9447502516200976
+      ]
+    },
+    {
+      "command": [
+        "build\\qr-next\\Release\\column_work_fast_row_best.exe",
+        "512",
+        "5",
+        "2048",
+        "0"
+      ],
+      "file": "column_work_fast_row_best-n512-m2048-process0.jsonl",
+      "binarySha256": "bca159c3fbe7f890e70e1a7c7668374f2184ca5ab1a468666db42acecca7a6ba",
+      "medianPhaseUs": [
+        93320.29999999999,
+        1507.6703125000001,
+        94612.1,
+        99508.1
+      ],
+      "medianPhaseRatio": [
+        0.980274816409151,
+        3.573426223585107,
+        1.011844748573476,
+        0.9821073617512659
+      ]
+    },
+    {
+      "command": [
+        "build\\qr-next\\Release\\column_work_restore_row_best.exe",
+        "512",
+        "5",
+        "2048",
+        "0"
+      ],
+      "file": "column_work_restore_row_best-n512-m2048-process0.jsonl",
+      "binarySha256": "b8ae5754a344792b29f53e6f579556b3569793f96a0f867a1a7b6b68319d984b",
+      "medianPhaseUs": [
+        94045.8,
+        1509.94140625,
+        94650.7,
+        98662.0
+      ],
+      "medianPhaseRatio": [
+        0.979941907575701,
+        3.56932855468046,
+        1.0131649115592936,
+        0.9654181772745808
+      ]
+    },
+    {
+      "command": [
+        "build\\qr-next\\Release\\column_work_final_row_best.exe",
+        "512",
+        "5",
+        "2048",
+        "0"
+      ],
+      "file": "column_work_final_row_best-n512-m2048-process0.jsonl",
+      "binarySha256": "4c0ff069144144a0a126875e055a0373990cd442b5008a97c5969e3ca20312fb",
+      "medianPhaseUs": [
+        92362.5,
+        1501.24140625,
+        94074.09999999999,
+        97851.2
+      ],
+      "medianPhaseRatio": [
+        0.9895326129970234,
+        3.5365974410318324,
+        0.9891721236517651,
+        0.9603866232592285
+      ]
+    }
+  ]
+}

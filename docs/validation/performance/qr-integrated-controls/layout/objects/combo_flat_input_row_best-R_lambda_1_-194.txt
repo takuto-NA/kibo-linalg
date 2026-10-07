@@ -1,0 +1,90 @@
+??R<lambda_1>@?1??main@@YAHHPEAPEAD@Z@QEBA@XZ (public: __cdecl `int __cdecl main(int,char * *)'::`2'::<lambda_1>::operator()(void)const ):
+  0000000000000000: 40 53              push        rbx
+  0000000000000002: 48 81 EC 70 01 00  sub         rsp,170h
+                    00
+  0000000000000009: 48 8B 51 20        mov         rdx,qword ptr [rcx+20h]
+  000000000000000D: 48 8B D9           mov         rbx,rcx
+  0000000000000010: 4C 8B 49 18        mov         r9,qword ptr [rcx+18h]
+  0000000000000014: 48 8B 41 28        mov         rax,qword ptr [rcx+28h]
+  0000000000000018: C6 44 24 48 00     mov         byte ptr [rsp+48h],0
+  000000000000001D: 4C 8B 02           mov         r8,qword ptr [rdx]
+  0000000000000020: 0F 28 44 24 40     movaps      xmm0,xmmword ptr [rsp+40h]
+  0000000000000025: 0F 10 08           movups      xmm1,xmmword ptr [rax]
+  0000000000000028: 4D 8B 11           mov         r10,qword ptr [r9]
+  000000000000002B: 48 8B 42 08        mov         rax,qword ptr [rdx+8]
+  000000000000002F: 48 8D 94 24 B0 00  lea         rdx,[rsp+0B0h]
+                    00 00
+  0000000000000037: 49 2B C0           sub         rax,r8
+  000000000000003A: 66 0F 7F 44 24 60  movdqa      xmmword ptr [rsp+60h],xmm0
+  0000000000000040: 48 C1 F8 03        sar         rax,3
+  0000000000000044: 48 89 44 24 58     mov         qword ptr [rsp+58h],rax
+  0000000000000049: 49 8B 41 08        mov         rax,qword ptr [r9+8]
+  000000000000004D: 4C 8D 4C 24 40     lea         r9,[rsp+40h]
+  0000000000000052: 49 2B C2           sub         rax,r10
+  0000000000000055: 0F 29 4C 24 70     movaps      xmmword ptr [rsp+70h],xmm1
+  000000000000005A: 48 C1 F8 03        sar         rax,3
+  000000000000005E: 48 89 44 24 48     mov         qword ptr [rsp+48h],rax
+  0000000000000063: 48 8B 41 10        mov         rax,qword ptr [rcx+10h]
+  0000000000000067: 48 C7 44 24 38 00  mov         qword ptr [rsp+38h],0
+                    00 00 00
+  0000000000000070: 4C 89 44 24 50     mov         qword ptr [rsp+50h],r8
+  0000000000000075: 4C 8D 84 24 80 00  lea         r8,[rsp+80h]
+                    00 00
+  000000000000007D: 4C 89 54 24 40     mov         qword ptr [rsp+40h],r10
+  0000000000000082: 0F 10 00           movups      xmm0,xmmword ptr [rax]
+  0000000000000085: 0F 10 48 10        movups      xmm1,xmmword ptr [rax+10h]
+  0000000000000089: 0F 29 84 24 80 00  movaps      xmmword ptr [rsp+80h],xmm0
+                    00 00
+  0000000000000091: 0F 10 40 20        movups      xmm0,xmmword ptr [rax+20h]
+  0000000000000095: 48 8B 41 08        mov         rax,qword ptr [rcx+8]
+  0000000000000099: 48 8D 8C 24 E0 00  lea         rcx,[rsp+0E0h]
+                    00 00
+  00000000000000A1: 0F 29 8C 24 90 00  movaps      xmmword ptr [rsp+90h],xmm1
+                    00 00
+  00000000000000A9: 0F 29 84 24 A0 00  movaps      xmmword ptr [rsp+0A0h],xmm0
+                    00 00
+  00000000000000B1: 0F 10 08           movups      xmm1,xmmword ptr [rax]
+  00000000000000B4: 0F 10 40 10        movups      xmm0,xmmword ptr [rax+10h]
+  00000000000000B8: 0F 29 8C 24 B0 00  movaps      xmmword ptr [rsp+0B0h],xmm1
+                    00 00
+  00000000000000C0: 0F 10 48 20        movups      xmm1,xmmword ptr [rax+20h]
+  00000000000000C4: 48 8D 44 24 60     lea         rax,[rsp+60h]
+  00000000000000C9: 0F 29 84 24 C0 00  movaps      xmmword ptr [rsp+0C0h],xmm0
+                    00 00
+  00000000000000D1: 48 89 44 24 30     mov         qword ptr [rsp+30h],rax
+  00000000000000D6: 48 8D 44 24 70     lea         rax,[rsp+70h]
+  00000000000000DB: 48 89 44 24 28     mov         qword ptr [rsp+28h],rax
+  00000000000000E0: 48 8D 44 24 50     lea         rax,[rsp+50h]
+  00000000000000E5: 48 89 44 24 20     mov         qword ptr [rsp+20h],rax
+  00000000000000EA: 0F 29 8C 24 D0 00  movaps      xmmword ptr [rsp+0D0h],xmm1
+                    00 00
+  00000000000000F2: E8 00 00 00 00     call        ?factorize_qr@linalg@kibo@@YA?AV?$Result@VQrFactorView@linalg@kibo@@@12@V?$MatrixView@$$CBN@12@V?$MatrixView@N@12@V?$span@N$0?0@std@@V?$span@_K$0?0@7@V?$span@W4byte@std@@$0?0@7@UQrOptions@12@PEAUQrDiagnostics@12@@Z
+  00000000000000F7: 48 8B 0B           mov         rcx,qword ptr [rbx]
+  00000000000000FA: 0F 10 00           movups      xmm0,xmmword ptr [rax]
+  00000000000000FD: 0F 11 01           movups      xmmword ptr [rcx],xmm0
+  0000000000000100: 0F 10 48 10        movups      xmm1,xmmword ptr [rax+10h]
+  0000000000000104: 0F 11 49 10        movups      xmmword ptr [rcx+10h],xmm1
+  0000000000000108: 0F 10 40 20        movups      xmm0,xmmword ptr [rax+20h]
+  000000000000010C: 0F 11 41 20        movups      xmmword ptr [rcx+20h],xmm0
+  0000000000000110: 0F 10 48 30        movups      xmm1,xmmword ptr [rax+30h]
+  0000000000000114: 0F 11 49 30        movups      xmmword ptr [rcx+30h],xmm1
+  0000000000000118: 0F 10 40 40        movups      xmm0,xmmword ptr [rax+40h]
+  000000000000011C: 0F 11 41 40        movups      xmmword ptr [rcx+40h],xmm0
+  0000000000000120: 0F 10 48 50        movups      xmm1,xmmword ptr [rax+50h]
+  0000000000000124: 0F 11 49 50        movups      xmmword ptr [rcx+50h],xmm1
+  0000000000000128: 0F 10 40 60        movups      xmm0,xmmword ptr [rax+60h]
+  000000000000012C: 0F 11 41 60        movups      xmmword ptr [rcx+60h],xmm0
+  0000000000000130: 0F 10 48 70        movups      xmm1,xmmword ptr [rax+70h]
+  0000000000000134: 0F 11 49 70        movups      xmmword ptr [rcx+70h],xmm1
+  0000000000000138: 0F 10 80 80 00 00  movups      xmm0,xmmword ptr [rax+80h]
+                    00
+  000000000000013F: 0F 11 81 80 00 00  movups      xmmword ptr [rcx+80h],xmm0
+                    00
+  0000000000000146: 48 8B 03           mov         rax,qword ptr [rbx]
+  0000000000000149: 83 38 00           cmp         dword ptr [rax],0
+  000000000000014C: 0F 94 C0           sete        al
+  000000000000014F: 48 81 C4 70 01 00  add         rsp,170h
+                    00
+  0000000000000156: 5B                 pop         rbx
+  0000000000000157: C3                 ret
+

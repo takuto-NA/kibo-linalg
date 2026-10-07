@@ -1,0 +1,16 @@
+??R<lambda_3>@?1??main@@YAHHPEAPEAD@Z@QEBA@XZ (public: __cdecl `int __cdecl main(int,char * *)'::`2'::<lambda_3>::operator()(void)const ):
+  0000000000000000: 40 53              push        rbx
+  0000000000000002: 48 83 EC 20        sub         rsp,20h
+  0000000000000006: 48 8B 51 08        mov         rdx,qword ptr [rcx+8]
+  000000000000000A: 48 8B D9           mov         rbx,rcx
+  000000000000000D: 48 8B 09           mov         rcx,qword ptr [rcx]
+  0000000000000010: E8 00 00 00 00     call        ??$compute@V?$Matrix@N$0?0$0?0$00$0?0$0?0@Eigen@@@?$ColPivHouseholderQR@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@H@Eigen@@QEAAAEAV01@AEBU?$EigenBase@V?$Matrix@N$0?0$0?0$00$0?0$0?0@Eigen@@@1@@Z
+  0000000000000015: 48 8B 0B           mov         rcx,qword ptr [rbx]
+  0000000000000018: E8 00 00 00 00     call        ?rank@?$ColPivHouseholderQR@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@H@Eigen@@QEBA_JXZ
+  000000000000001D: 48 8B 4B 10        mov         rcx,qword ptr [rbx+10h]
+  0000000000000021: 48 3B 01           cmp         rax,qword ptr [rcx]
+  0000000000000024: 0F 94 C0           sete        al
+  0000000000000027: 48 83 C4 20        add         rsp,20h
+  000000000000002B: 5B                 pop         rbx
+  000000000000002C: C3                 ret
+

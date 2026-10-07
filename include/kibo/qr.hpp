@@ -1,7 +1,7 @@
 #pragma once
 #include <kibo/workspace.hpp>
 #include <algorithm>
-#include <kibo/detail/row_kernels.hpp>
+#include <kibo/detail/qr_kernels.hpp>
 
 namespace kibo::linalg {
 struct QrOptions { std::optional<double> relative_rank_tolerance; };
@@ -38,11 +38,6 @@ struct QrAccess {
         return QrFactorView(packed,tau,permutation,diagnostics);
     }
 };
-inline double column_norm(MatrixView<const double> matrix, std::size_t first, std::size_t column) noexcept {
-    ScaledSquares<double> sum;
-    for (std::size_t i=first;i<matrix.rows();++i) sum.add(matrix(i,column));
-    return sum.norm();
-}
 
 }
 
@@ -77,10 +72,17 @@ inline Result<QrFactorView> factorize_qr(MatrixView<const double> input, MatrixV
     if (reinterpret_cast<std::uintptr_t>(tau.data())%alignof(double)!=0 ||
         reinterpret_cast<std::uintptr_t>(permutation.data())%alignof(std::size_t)!=0) return StatusCode::invalid_layout;
     const double tolerance=options.relative_rank_tolerance.value_or(static_cast<double>(m)*std::numeric_limits<double>::epsilon());
-    if (!std::isfinite(tolerance) || tolerance<0 || tolerance>=1) return StatusCode::invalid_argument;
+    if (!detail::qr_is_finite(tolerance) || tolerance<0 || tolerance>=1) return StatusCode::invalid_argument;
     auto prepared=detail::workspace_doubles(workspace,required.value().workspace);
     if (!prepared) return prepared.status();
-    if (!detail::finite(input)) return StatusCode::non_finite_input;
+    if(n>=8 && packed.col_stride()==1 && packed.row_stride()==n && m%n==0 && m/n<=64) {
+        auto working=MatrixView<double>::checked(std::span<double>{&packed(0,0),m*n},m,n,1,m).value();
+        auto result=factorize_qr(input,working,tau,permutation,workspace,options,diagnostics);
+        if(!result)return result.status();
+        detail::qr_restore_row_blocks(&packed(0,0),m,n,prepared.value());
+        return detail::QrAccess::create(packed,tau.first(n),permutation.first(n),result.value().diagnostics());
+    }
+    if (!detail::qr_input_finite(input)) return StatusCode::non_finite_input;
     // Validation is complete. Later numerical failures invalidate all factor storage.
     if (packed.row_stride()==1 && input.col_stride()==1) {
         // Small tiles keep both sides local when copying rows into columns.
@@ -103,7 +105,7 @@ inline Result<QrFactorView> factorize_qr(MatrixView<const double> input, MatrixV
     for (std::size_t j=0;j<n;++j) {
         permutation[j]=j;
         initial_norms[j]=detail::column_norm(packed,0,j);
-        if (!std::isfinite(initial_norms[j])) return Status{StatusCode::arithmetic_failure,j};
+        if (!detail::qr_is_finite(initial_norms[j])) return Status{StatusCode::arithmetic_failure,j};
         norms[j]=initial_norms[j];
     }
     for (std::size_t k=0;k<n;++k) {
@@ -118,13 +120,23 @@ inline Result<QrFactorView> factorize_qr(MatrixView<const double> input, MatrixV
             std::swap(initial_norms[k],initial_norms[pivot]);
         }
         const double norm=detail::column_norm(packed,k,k);
-        if (!std::isfinite(norm)) return Status{StatusCode::arithmetic_failure,k};
+        if (!detail::qr_is_finite(norm)) return Status{StatusCode::arithmetic_failure,k};
         if (norm==0) { tau[k]=0; continue; }
         const double alpha=packed(k,k), beta=-std::copysign(norm,alpha);
         const double ratio=alpha/beta;
         tau[k]=1-ratio;
         // Ratios avoid overflow in alpha-beta for large finite columns.
-        for (std::size_t i=k+1;i<m;++i) packed(i,k)=(packed(i,k)/beta)/(ratio-1);
+        if (std::abs(alpha)<=std::numeric_limits<double>::max()-std::abs(beta)) {
+            const double denominator=alpha-beta;
+            if (std::abs(denominator)>=std::numeric_limits<double>::min() && std::abs(denominator)<=1/std::numeric_limits<double>::min()) {
+                const double inverse=1/denominator;
+                for (std::size_t i=k+1;i<m;++i) packed(i,k)=packed(i,k)*inverse;
+            } else {
+                for (std::size_t i=k+1;i<m;++i) packed(i,k)=(packed(i,k)/beta)/(ratio-1);
+            }
+        } else {
+            for (std::size_t i=k+1;i<m;++i) packed(i,k)=(packed(i,k)/beta)/(ratio-1);
+        }
         packed(k,k)=beta;
         if (packed.col_stride()<=packed.row_stride()) {
             // Future Householder coefficients are not assigned yet. Reuse
@@ -134,7 +146,7 @@ inline Result<QrFactorView> factorize_qr(MatrixView<const double> input, MatrixV
             const auto last=first+count;
             for (std::size_t j=first;j<last;++j) tau[j]=packed(k,j);
             std::size_t projection_row=k+1;
-            if (packed.col_stride()==1 && count>=16) {
+            if (packed.col_stride()==1 && count>=4) {
                 for (;m-projection_row>=4;projection_row+=4)
                     detail::row_project_four_rows(tau.data()+first,&packed(projection_row,first),packed.row_stride(),&packed(projection_row,k),count);
             }
@@ -145,18 +157,24 @@ inline Result<QrFactorView> factorize_qr(MatrixView<const double> input, MatrixV
             }
             for (std::size_t j=first;j<last;++j) {
                 tau[j]*=tau[k];
-                if (!std::isfinite(tau[j])) return Status{StatusCode::arithmetic_failure,k};
+                if (!detail::qr_is_finite(tau[j])) return Status{StatusCode::arithmetic_failure,k};
                 packed(k,j)-=tau[j];
-                if (!std::isfinite(packed(k,j))) return Status{StatusCode::arithmetic_failure,k};
+                if (!detail::qr_is_finite(packed(k,j))) return Status{StatusCode::arithmetic_failure,k};
             }
-            for (std::size_t i=k+1;i<m;++i) {
+            std::size_t update_row=k+1;
+            if (packed.col_stride()==1 && count>=4) {
+                for (;m-update_row>=4;update_row+=4)
+                    if (!detail::row_update_four_checked(&packed(update_row,first),packed.row_stride(),tau.data()+first,&packed(update_row,k),count))
+                        return Status{StatusCode::arithmetic_failure,k};
+            }
+            for (std::size_t i=update_row;i<m;++i) {
                 const double value=packed(i,k);
                 if (packed.col_stride()==1 && count!=0) {
                     if (!detail::row_update_checked(&packed(i,first),tau.data()+first,count,value))
                         return Status{StatusCode::arithmetic_failure,k};
                 } else for (std::size_t j=first;j<last;++j) {
                     packed(i,j)-=value*tau[j];
-                    if (!std::isfinite(packed(i,j))) return Status{StatusCode::arithmetic_failure,k};
+                    if (!detail::qr_is_finite(packed(i,j))) return Status{StatusCode::arithmetic_failure,k};
                 }
             }
         } else {
@@ -168,9 +186,9 @@ inline Result<QrFactorView> factorize_qr(MatrixView<const double> input, MatrixV
                     for(std::size_t a=0;a<4;++a) {
                         const double multiplier=tau[k]*tau[j+a];
                         tau[j+a]=multiplier;
-                        if(!std::isfinite(multiplier)) return Status{StatusCode::arithmetic_failure,k};
+                        if(!detail::qr_is_finite(multiplier)) return Status{StatusCode::arithmetic_failure,k};
                         packed(k,j+a)-=multiplier;
-                        if(!std::isfinite(packed(k,j+a))) return Status{StatusCode::arithmetic_failure,k};
+                        if(!detail::qr_is_finite(packed(k,j+a))) return Status{StatusCode::arithmetic_failure,k};
                     }
                     if (!detail::column_update_four_checked(&packed(k+1,j),packed.col_stride(),&packed(k+1,k),m-k-1,tau.data()+j))
                         return Status{StatusCode::arithmetic_failure,k};
@@ -183,16 +201,16 @@ inline Result<QrFactorView> factorize_qr(MatrixView<const double> input, MatrixV
                 else
                 for (std::size_t i=k+1;i<m;++i) dot+=packed(i,k)*packed(i,j);
                 const double multiplier=tau[k]*dot;
-                if (!std::isfinite(multiplier)) return Status{StatusCode::arithmetic_failure,k};
+                if (!detail::qr_is_finite(multiplier)) return Status{StatusCode::arithmetic_failure,k};
                 packed(k,j)-=multiplier;
-                if (!std::isfinite(packed(k,j))) return Status{StatusCode::arithmetic_failure,k};
+                if (!detail::qr_is_finite(packed(k,j))) return Status{StatusCode::arithmetic_failure,k};
                 if(packed.row_stride()==1 && m-k>1) {
                     if(!detail::row_update_checked(&packed(k+1,j),&packed(k+1,k),m-k-1,multiplier))
                         return Status{StatusCode::arithmetic_failure,k};
                 } else
                 for (std::size_t i=k+1;i<m;++i) {
                     packed(i,j)-=packed(i,k)*multiplier;
-                    if (!std::isfinite(packed(i,j))) return Status{StatusCode::arithmetic_failure,k};
+                    if (!detail::qr_is_finite(packed(i,j))) return Status{StatusCode::arithmetic_failure,k};
                 }
             }
         }
@@ -230,36 +248,63 @@ inline Status solve_into(QrFactorView factor, std::span<const double> rhs, std::
     if (!requirement) return requirement.status();
     auto prepared=detail::workspace_doubles(workspace,requirement.value());
     if (!prepared) return prepared.status();
-    for (auto value:rhs) if (!std::isfinite(value)) return {StatusCode::non_finite_input};
+    for (auto value:rhs) if (!detail::qr_is_finite(value)) return {StatusCode::non_finite_input};
     auto transformed=prepared.value().first(m);
     auto candidate=prepared.value().subspan(m,n);
     for (std::size_t i=0;i<m;++i) transformed[i]=rhs[i];
-    for (std::size_t k=0;k<n;++k) {
+    bool panels_done=false;
+    if(packed.col_stride()==1 && packed.row_stride()!=1 && n>=256) {
+        panels_done=detail::qr_apply_packet_panels(packed,factor.tau(),transformed,candidate);
+        if(!panels_done)for(std::size_t i=0;i<m;++i)transformed[i]=rhs[i];
+    }
+    bool reflectors_done=true;
+    for (std::size_t k=0;!panels_done && k<n;++k) {
         if (factor.tau()[k]==0) continue;
         double dot=transformed[k];
         if(packed.row_stride()==1 && m-k>1)
             dot=detail::contiguous_dot(&packed(k+1,k),transformed.data()+k+1,m-k-1,dot);
-        else
-        for (std::size_t i=k+1;i<m;++i) dot+=packed(i,k)*transformed[i];
+        else if (m-k>1)
+            dot=detail::qr_strided_dot(&packed(k+1,k),packed.row_stride(),transformed.data()+k+1,m-k-1,dot);
         const double multiplier=factor.tau()[k]*dot;
-        if (!std::isfinite(multiplier)) return {StatusCode::arithmetic_failure,k};
+        if (!detail::qr_is_finite(multiplier)){reflectors_done=false;break;}
         transformed[k]-=multiplier;
-        if (!std::isfinite(transformed[k])) return {StatusCode::arithmetic_failure,k};
+        if (!detail::qr_is_finite(transformed[k])){reflectors_done=false;break;}
         if(packed.row_stride()==1 && m-k>1) {
             if(!detail::row_update_checked(transformed.data()+k+1,&packed(k+1,k),m-k-1,multiplier))
-                return {StatusCode::arithmetic_failure,k};
-        } else
-        for (std::size_t i=k+1;i<m;++i) {
-            transformed[i]-=packed(i,k)*multiplier;
-            if (!std::isfinite(transformed[i])) return {StatusCode::arithmetic_failure,k};
+                {reflectors_done=false;break;}
+        } else if (m-k>1) {
+            if (!detail::qr_strided_update_checked(transformed.data()+k+1,&packed(k+1,k),packed.row_stride(),m-k-1,multiplier))
+                {reflectors_done=false;break;}
         }
     }
-    for (std::size_t i=n;i-->0;) {
-        double value=transformed[i];
-        for (std::size_t j=i+1;j<n;++j) value-=packed(i,j)*candidate[j];
-        value/=packed(i,i);
-        if (!std::isfinite(value)) return {StatusCode::arithmetic_failure,i};
-        candidate[i]=value;
+    if(!reflectors_done) {
+        for(std::size_t i=0;i<m;++i)transformed[i]=rhs[i];
+        const auto status=detail::qr_apply_reflectors_original(packed,factor.tau(),transformed);
+        if(!status)return status;
+    }
+    bool upper_done=true;
+    if(packed.row_stride()==1) {
+        for(std::size_t i=0;i<n;++i)candidate[i]=transformed[i];
+        for(std::size_t i=n;i-->0;) {
+            const double value=candidate[i]/packed(i,i);
+            if(!detail::qr_is_finite(value)){upper_done=false;break;}
+            candidate[i]=value;
+            if(i!=0)detail::row_update(candidate.data(),&packed(0,i),i,value);
+        }
+    } else {
+        for (std::size_t i=n;i-->0;) {
+            double value=transformed[i];
+            if(packed.col_stride()==1 && n-i>1)
+                value-=detail::contiguous_dot(&packed(i,i+1),candidate.data()+i+1,n-i-1,0);
+            else for (std::size_t j=i+1;j<n;++j)value-=packed(i,j)*candidate[j];
+            value/=packed(i,i);
+            if (!detail::qr_is_finite(value)){upper_done=false;break;}
+            candidate[i]=value;
+        }
+    }
+    if(!upper_done) {
+        const auto status=detail::qr_solve_upper_original(packed,transformed,candidate);
+        if(!status)return status;
     }
     for (std::size_t i=0;i<n;++i) output[factor.permutation()[i]]=candidate[i];
     return {};

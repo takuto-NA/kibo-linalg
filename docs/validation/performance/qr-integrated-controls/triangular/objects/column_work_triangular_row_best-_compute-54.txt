@@ -1,0 +1,91 @@
+??$compute@V?$Matrix@N$0?0$0?0$00$0?0$0?0@Eigen@@@?$ColPivHouseholderQR@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@H@Eigen@@QEAAAEAV01@AEBU?$EigenBase@V?$Matrix@N$0?0$0?0$00$0?0$0?0@Eigen@@@1@@Z (public: class Eigen::ColPivHouseholderQR<class Eigen::Matrix<double,-1,-1,0,-1,-1>,int> & __cdecl Eigen::ColPivHouseholderQR<class Eigen::Matrix<double,-1,-1,0,-1,-1>,int>::compute<class Eigen::Matrix<double,-1,-1,1,-1,-1> >(struct Eigen::EigenBase<class Eigen::Matrix<double,-1,-1,1,-1,-1> > const &)):
+  0000000000000000: 48 89 4C 24 08     mov         qword ptr [rsp+8],rcx
+  0000000000000005: 53                 push        rbx
+  0000000000000006: 55                 push        rbp
+  0000000000000007: 56                 push        rsi
+  0000000000000008: 57                 push        rdi
+  0000000000000009: 41 55              push        r13
+  000000000000000B: 48 83 EC 30        sub         rsp,30h
+  000000000000000F: 48 8B 41 08        mov         rax,qword ptr [rcx+8]
+  0000000000000013: 48 8D 59 08        lea         rbx,[rcx+8]
+  0000000000000017: 4C 8B 42 10        mov         r8,qword ptr [rdx+10h]
+  000000000000001B: 48 8D 71 10        lea         rsi,[rcx+10h]
+  000000000000001F: 48 8B 3A           mov         rdi,qword ptr [rdx]
+  0000000000000022: 4C 8B E9           mov         r13,rcx
+  0000000000000025: 4C 89 64 24 70     mov         qword ptr [rsp+70h],r12
+  000000000000002A: 4C 8B 62 08        mov         r12,qword ptr [rdx+8]
+  000000000000002E: 4C 89 44 24 68     mov         qword ptr [rsp+68h],r8
+  0000000000000033: 49 3B C4           cmp         rax,r12
+  0000000000000036: 75 0E              jne         0000000000000046
+  0000000000000038: 48 8B 0E           mov         rcx,qword ptr [rsi]
+  000000000000003B: 49 3B C8           cmp         rcx,r8
+  000000000000003E: 74 63              je          00000000000000A3
+  0000000000000040: 49 8D 6D 08        lea         rbp,[r13+8]
+  0000000000000044: EB 03              jmp         0000000000000049
+  0000000000000046: 48 8B EB           mov         rbp,rbx
+  0000000000000049: 48 0F AF 06        imul        rax,qword ptr [rsi]
+  000000000000004D: 4C 89 74 24 28     mov         qword ptr [rsp+28h],r14
+  0000000000000052: 4C 8B F6           mov         r14,rsi
+  0000000000000055: 4C 89 7C 24 20     mov         qword ptr [rsp+20h],r15
+  000000000000005A: 4D 8B F8           mov         r15,r8
+  000000000000005D: 4D 0F AF FC        imul        r15,r12
+  0000000000000061: 49 3B C7           cmp         rax,r15
+  0000000000000064: 74 27              je          000000000000008D
+  0000000000000066: 49 8B 4D 00        mov         rcx,qword ptr [r13]
+  000000000000006A: 48 85 C9           test        rcx,rcx
+  000000000000006D: 74 09              je          0000000000000078
+  000000000000006F: FF 15 00 00 00 00  call        qword ptr [__imp_free]
+  0000000000000075: 48 8B DD           mov         rbx,rbp
+  0000000000000078: 49 8B CF           mov         rcx,r15
+  000000000000007B: E8 00 00 00 00     call        ??$conditional_aligned_new_auto@N$00@internal@Eigen@@YAPEAN_K@Z
+  0000000000000080: 4C 8B 44 24 68     mov         r8,qword ptr [rsp+68h]
+  0000000000000085: 49 8D 75 10        lea         rsi,[r13+10h]
+  0000000000000089: 49 89 45 00        mov         qword ptr [r13],rax
+  000000000000008D: 4C 8B 7C 24 20     mov         r15,qword ptr [rsp+20h]
+  0000000000000092: 49 8B C8           mov         rcx,r8
+  0000000000000095: 4D 89 06           mov         qword ptr [r14],r8
+  0000000000000098: 49 8B C4           mov         rax,r12
+  000000000000009B: 4C 8B 74 24 28     mov         r14,qword ptr [rsp+28h]
+  00000000000000A0: 4C 89 23           mov         qword ptr [rbx],r12
+  00000000000000A3: 4D 8B 5D 00        mov         r11,qword ptr [r13]
+  00000000000000A7: 45 33 D2           xor         r10d,r10d
+  00000000000000AA: 4C 8B 64 24 70     mov         r12,qword ptr [rsp+70h]
+  00000000000000AF: 48 85 C9           test        rcx,rcx
+  00000000000000B2: 7E 58              jle         000000000000010C
+  00000000000000B4: 4C 8B 6C 24 68     mov         r13,qword ptr [rsp+68h]
+  00000000000000B9: 48 8D 2C C5 00 00  lea         rbp,[rax*8]
+                    00 00
+  00000000000000C1: 45 33 C0           xor         r8d,r8d
+  00000000000000C4: 48 85 C0           test        rax,rax
+  00000000000000C7: 7E 2F              jle         00000000000000F8
+  00000000000000C9: 4E 8D 0C ED 00 00  lea         r9,[r13*8]
+                    00 00
+  00000000000000D1: 49 8B CB           mov         rcx,r11
+  00000000000000D4: 48 8B D7           mov         rdx,rdi
+  00000000000000D7: 66 0F 1F 84 00 00  nop         word ptr [rax+rax]
+                    00 00 00
+  00000000000000E0: 48 8B 02           mov         rax,qword ptr [rdx]
+  00000000000000E3: 49 FF C0           inc         r8
+  00000000000000E6: 48 89 01           mov         qword ptr [rcx],rax
+  00000000000000E9: 48 8D 49 08        lea         rcx,[rcx+8]
+  00000000000000ED: 48 8B 03           mov         rax,qword ptr [rbx]
+  00000000000000F0: 49 03 D1           add         rdx,r9
+  00000000000000F3: 4C 3B C0           cmp         r8,rax
+  00000000000000F6: 7C E8              jl          00000000000000E0
+  00000000000000F8: 49 FF C2           inc         r10
+  00000000000000FB: 4C 03 DD           add         r11,rbp
+  00000000000000FE: 48 83 C7 08        add         rdi,8
+  0000000000000102: 4C 3B 16           cmp         r10,qword ptr [rsi]
+  0000000000000105: 7C BA              jl          00000000000000C1
+  0000000000000107: 4C 8B 6C 24 60     mov         r13,qword ptr [rsp+60h]
+  000000000000010C: 49 8B CD           mov         rcx,r13
+  000000000000010F: E8 00 00 00 00     call        ?computeInPlace@?$ColPivHouseholderQR@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@H@Eigen@@IEAAXXZ
+  0000000000000114: 49 8B C5           mov         rax,r13
+  0000000000000117: 48 83 C4 30        add         rsp,30h
+  000000000000011B: 41 5D              pop         r13
+  000000000000011D: 5F                 pop         rdi
+  000000000000011E: 5E                 pop         rsi
+  000000000000011F: 5D                 pop         rbp
+  0000000000000120: 5B                 pop         rbx
+  0000000000000121: C3                 ret
+

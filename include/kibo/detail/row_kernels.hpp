@@ -184,29 +184,68 @@ inline void row_update_panel(double* row, const double* panel, std::size_t strid
 #endif
     for (;j<count;++j) for (std::size_t k=0;k<width;++k) row[j]-=coefficients[k]*panel[k*stride+j];
 }
+inline bool row_update_four_checked(double* rows,std::size_t stride,const double* projection,
+                                     const double* coefficients,std::size_t count) noexcept {
+    std::size_t j=0;
+#if !defined(KIBO_DISABLE_SIMD) && !defined(__wasm__) && (defined(_M_X64) || defined(__SSE2__))
+    const auto a=_mm_set1_pd(coefficients[0]),b=_mm_set1_pd(coefficients[stride]);
+    const auto c=_mm_set1_pd(coefficients[2*stride]),d=_mm_set1_pd(coefficients[3*stride]);
+    const auto sign=_mm_set1_pd(-0.0),limit=_mm_set1_pd(std::numeric_limits<double>::max());
+    auto va=_mm_cmpeq_pd(_mm_setzero_pd(),_mm_setzero_pd()),vb=va,vc=va,vd=va;
+    for (;count-j>=2;j+=2) {
+        const auto p=_mm_loadu_pd(projection+j);
+        const auto x0=_mm_sub_pd(_mm_loadu_pd(rows+j),_mm_mul_pd(a,p));
+        const auto x1=_mm_sub_pd(_mm_loadu_pd(rows+stride+j),_mm_mul_pd(b,p));
+        const auto x2=_mm_sub_pd(_mm_loadu_pd(rows+2*stride+j),_mm_mul_pd(c,p));
+        const auto x3=_mm_sub_pd(_mm_loadu_pd(rows+3*stride+j),_mm_mul_pd(d,p));
+        _mm_storeu_pd(rows+j,x0);_mm_storeu_pd(rows+stride+j,x1);
+        _mm_storeu_pd(rows+2*stride+j,x2);_mm_storeu_pd(rows+3*stride+j,x3);
+        va=_mm_and_pd(va,_mm_cmple_pd(_mm_andnot_pd(sign,x0),limit));
+        vb=_mm_and_pd(vb,_mm_cmple_pd(_mm_andnot_pd(sign,x1),limit));
+        vc=_mm_and_pd(vc,_mm_cmple_pd(_mm_andnot_pd(sign,x2),limit));
+        vd=_mm_and_pd(vd,_mm_cmple_pd(_mm_andnot_pd(sign,x3),limit));
+    }
+    if (_mm_movemask_pd(_mm_and_pd(_mm_and_pd(va,vb),_mm_and_pd(vc,vd)))!=3) return false;
+#endif
+    for (;j<count;++j) for (std::size_t r=0;r<4;++r) {
+        rows[r*stride+j]-=coefficients[r*stride]*projection[j];
+        if (!std::isfinite(rows[r*stride+j])) return false;
+    }
+    return true;
+}
+
 inline bool row_update_checked(double* row, const double* projection, std::size_t count, double value) noexcept {
     bool finite=true;
     std::size_t j=0;
 #if defined(KIBO_DETAIL_ROW_SSE2)
     const auto multiplier=_mm_set1_pd(value);
-    const auto sign=_mm_set1_pd(-0.0);
-    const auto maximum=_mm_set1_pd(std::numeric_limits<double>::max());
-    auto valid=_mm_cmpeq_pd(_mm_setzero_pd(),_mm_setzero_pd());
+    const auto exponent=_mm_castsi128_pd(_mm_set1_epi64x(0x7ff0000000000000LL));
+    auto valid=_mm_setzero_pd();
     auto second_valid=valid;
+    auto third_valid=valid,fourth_valid=valid;
+    for(;count-j>=8;j+=8) {
+        const auto a=_mm_sub_pd(_mm_loadu_pd(row+j),_mm_mul_pd(multiplier,_mm_loadu_pd(projection+j)));
+        const auto b=_mm_sub_pd(_mm_loadu_pd(row+j+2),_mm_mul_pd(multiplier,_mm_loadu_pd(projection+j+2)));
+        const auto c=_mm_sub_pd(_mm_loadu_pd(row+j+4),_mm_mul_pd(multiplier,_mm_loadu_pd(projection+j+4)));
+        const auto d=_mm_sub_pd(_mm_loadu_pd(row+j+6),_mm_mul_pd(multiplier,_mm_loadu_pd(projection+j+6)));
+        _mm_storeu_pd(row+j,a);_mm_storeu_pd(row+j+2,b);_mm_storeu_pd(row+j+4,c);_mm_storeu_pd(row+j+6,d);
+        valid=_mm_max_pd(valid,_mm_and_pd(exponent,a));second_valid=_mm_max_pd(second_valid,_mm_and_pd(exponent,b));
+        third_valid=_mm_max_pd(third_valid,_mm_and_pd(exponent,c));fourth_valid=_mm_max_pd(fourth_valid,_mm_and_pd(exponent,d));
+    }
     for (;count-j>=4;j+=4) {
         const auto first=_mm_sub_pd(_mm_loadu_pd(row+j),_mm_mul_pd(multiplier,_mm_loadu_pd(projection+j)));
         const auto second=_mm_sub_pd(_mm_loadu_pd(row+j+2),_mm_mul_pd(multiplier,_mm_loadu_pd(projection+j+2)));
         _mm_storeu_pd(row+j,first);
         _mm_storeu_pd(row+j+2,second);
-        valid=_mm_and_pd(valid,_mm_cmple_pd(_mm_andnot_pd(sign,first),maximum));
-        second_valid=_mm_and_pd(second_valid,_mm_cmple_pd(_mm_andnot_pd(sign,second),maximum));
+        valid=_mm_max_pd(valid,_mm_and_pd(exponent,first));
+        second_valid=_mm_max_pd(second_valid,_mm_and_pd(exponent,second));
     }
     for (;count-j>=2;j+=2) {
         const auto updated=_mm_sub_pd(_mm_loadu_pd(row+j),_mm_mul_pd(multiplier,_mm_loadu_pd(projection+j)));
         _mm_storeu_pd(row+j,updated);
-        valid=_mm_and_pd(valid,_mm_cmple_pd(_mm_andnot_pd(sign,updated),maximum));
+        valid=_mm_max_pd(valid,_mm_and_pd(exponent,updated));
     }
-    finite=_mm_movemask_pd(_mm_and_pd(valid,second_valid))==3;
+    finite=_mm_movemask_pd(_mm_cmplt_pd(_mm_max_pd(_mm_max_pd(valid,second_valid),_mm_max_pd(third_valid,fourth_valid)),exponent))==3;
 #endif
     for (;j<count;++j) {
         row[j]-=value*projection[j];
@@ -310,8 +349,8 @@ inline bool column_update_four_checked(double* columns, std::size_t stride, cons
 #if defined(KIBO_DETAIL_ROW_SSE2)
     const auto a=_mm_set1_pd(coefficients[0]),b=_mm_set1_pd(coefficients[1]);
     const auto c=_mm_set1_pd(coefficients[2]),d=_mm_set1_pd(coefficients[3]);
-    const auto sign=_mm_set1_pd(-0.0),maximum=_mm_set1_pd(std::numeric_limits<double>::max());
-    auto va=_mm_cmpeq_pd(_mm_setzero_pd(),_mm_setzero_pd()),vb=va,vc=va,vd=va;
+    const auto exponent=_mm_castsi128_pd(_mm_set1_epi64x(0x7ff0000000000000LL));
+    auto va=_mm_setzero_pd(),vb=va,vc=va,vd=va;
     for (;count-i>=2;i+=2) {
         const auto v=_mm_loadu_pd(values+i);
         const auto x0=_mm_sub_pd(_mm_loadu_pd(columns+i),_mm_mul_pd(a,v));
@@ -320,12 +359,12 @@ inline bool column_update_four_checked(double* columns, std::size_t stride, cons
         const auto x3=_mm_sub_pd(_mm_loadu_pd(columns+3*stride+i),_mm_mul_pd(d,v));
         _mm_storeu_pd(columns+i,x0);_mm_storeu_pd(columns+stride+i,x1);
         _mm_storeu_pd(columns+2*stride+i,x2);_mm_storeu_pd(columns+3*stride+i,x3);
-        va=_mm_and_pd(va,_mm_cmple_pd(_mm_andnot_pd(sign,x0),maximum));
-        vb=_mm_and_pd(vb,_mm_cmple_pd(_mm_andnot_pd(sign,x1),maximum));
-        vc=_mm_and_pd(vc,_mm_cmple_pd(_mm_andnot_pd(sign,x2),maximum));
-        vd=_mm_and_pd(vd,_mm_cmple_pd(_mm_andnot_pd(sign,x3),maximum));
+        va=_mm_max_pd(va,_mm_and_pd(exponent,x0));
+        vb=_mm_max_pd(vb,_mm_and_pd(exponent,x1));
+        vc=_mm_max_pd(vc,_mm_and_pd(exponent,x2));
+        vd=_mm_max_pd(vd,_mm_and_pd(exponent,x3));
     }
-    if (_mm_movemask_pd(_mm_and_pd(_mm_and_pd(va,vb),_mm_and_pd(vc,vd)))!=3) return false;
+    if (_mm_movemask_pd(_mm_cmplt_pd(_mm_max_pd(_mm_max_pd(va,vb),_mm_max_pd(vc,vd)),exponent))!=3) return false;
 #endif
     for (;i<count;++i) for (std::size_t j=0;j<4;++j) {
         columns[j*stride+i]-=coefficients[j]*values[i];
