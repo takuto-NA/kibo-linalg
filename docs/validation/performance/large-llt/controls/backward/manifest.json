@@ -1,0 +1,238 @@
+{
+  "sourceCommit": "8fe28e552bfc485c4744a193cc9e677b3e2ce309",
+  "diagnosisOnly": true,
+  "commands": [
+    {
+      "command": [
+        "build\\large-llt-next\\Release\\pair8_divide_inline_forward4rows.exe",
+        "128",
+        "3",
+        "512",
+        "0"
+      ],
+      "output": ".scratch\\large-llt-backward\\pair8_divide_inline_forward4rows-n128.jsonl",
+      "binarySha256": "5fdd2043ae04163ad0ab0ef9d33eacd13d2f77294651f928ddac59f9304c61ea",
+      "summary": {
+        "0": {
+          "core": 4.6743359375e-05,
+          "eigen": 4.43103515625e-05
+        },
+        "1": {
+          "core": 2.222760009765625e-06,
+          "eigen": 3.190106201171875e-06
+        },
+        "2": {
+          "core": 4.889033203125e-05,
+          "eigen": 4.70126953125e-05
+        },
+        "3": {
+          "core": 6.25423828125e-05,
+          "eigen": 6.63548828125e-05
+        }
+      }
+    },
+    {
+      "command": [
+        "build\\large-llt-next\\Release\\shared_back2.exe",
+        "128",
+        "3",
+        "512",
+        "0"
+      ],
+      "output": ".scratch\\large-llt-backward\\shared_back2-n128.jsonl",
+      "binarySha256": "0d3cea3d93fc3a16efa5a122e42abab0f51a78f2dc0fa643d5bea266056dbbd5",
+      "summary": {
+        "0": {
+          "core": 4.693388671875e-05,
+          "eigen": 4.3815234375e-05
+        },
+        "1": {
+          "core": 1.999847412109375e-06,
+          "eigen": 3.208819580078125e-06
+        },
+        "2": {
+          "core": 4.915830078125e-05,
+          "eigen": 4.7183984375e-05
+        },
+        "3": {
+          "core": 6.23724609375e-05,
+          "eigen": 6.62740234375e-05
+        }
+      }
+    },
+    {
+      "command": [
+        "build\\large-llt-next\\Release\\shared_back2_width16.exe",
+        "128",
+        "3",
+        "512",
+        "0"
+      ],
+      "output": ".scratch\\large-llt-backward\\shared_back2_width16-n128.jsonl",
+      "binarySha256": "46ec91eabbeda1ec6bd2fa1ec21398193a5a1d290776f5ac7e110c4c1c9c5c2a",
+      "summary": {
+        "0": {
+          "core": 5.066845703125e-05,
+          "eigen": 4.363427734375e-05
+        },
+        "1": {
+          "core": 2.02047119140625e-06,
+          "eigen": 3.202398681640625e-06
+        },
+        "2": {
+          "core": 5.154873046875e-05,
+          "eigen": 4.696953125e-05
+        },
+        "3": {
+          "core": 6.45201171875e-05,
+          "eigen": 6.60541015625e-05
+        }
+      }
+    },
+    {
+      "command": [
+        "build\\large-llt-next\\Release\\shared_back2_width16_small.exe",
+        "128",
+        "3",
+        "512",
+        "0"
+      ],
+      "output": ".scratch\\large-llt-backward\\shared_back2_width16_small-n128.jsonl",
+      "binarySha256": "eac4ffc65d562ca519462325164681c0f74adb2f6c1372a00aab294463fe8382",
+      "summary": {
+        "0": {
+          "core": 5.151494140625e-05,
+          "eigen": 4.395771484375e-05
+        },
+        "1": {
+          "core": 1.997198486328125e-06,
+          "eigen": 3.449676513671875e-06
+        },
+        "2": {
+          "core": 5.27595703125e-05,
+          "eigen": 4.72625e-05
+        },
+        "3": {
+          "core": 6.618046875e-05,
+          "eigen": 6.66521484375e-05
+        }
+      }
+    },
+    {
+      "command": [
+        "build\\large-llt-next\\Release\\pair8_divide_inline_forward4rows.exe",
+        "512",
+        "3",
+        "2048",
+        "0"
+      ],
+      "output": ".scratch\\large-llt-backward\\pair8_divide_inline_forward4rows-n512.jsonl",
+      "binarySha256": "5fdd2043ae04163ad0ab0ef9d33eacd13d2f77294651f928ddac59f9304c61ea",
+      "summary": {
+        "0": {
+          "core": 0.002069925,
+          "eigen": 0.00224949375
+        },
+        "1": {
+          "core": 2.796220703125e-05,
+          "eigen": 2.860654296875e-05
+        },
+        "2": {
+          "core": 0.002100975,
+          "eigen": 0.00229415625
+        },
+        "3": {
+          "core": 0.00289341875,
+          "eigen": 0.0030265375
+        }
+      }
+    },
+    {
+      "command": [
+        "build\\large-llt-next\\Release\\shared_back2.exe",
+        "512",
+        "3",
+        "2048",
+        "0"
+      ],
+      "output": ".scratch\\large-llt-backward\\shared_back2-n512.jsonl",
+      "binarySha256": "0d3cea3d93fc3a16efa5a122e42abab0f51a78f2dc0fa643d5bea266056dbbd5",
+      "summary": {
+        "0": {
+          "core": 0.00208265,
+          "eigen": 0.00212735
+        },
+        "1": {
+          "core": 2.39111328125e-05,
+          "eigen": 2.977900390625e-05
+        },
+        "2": {
+          "core": 0.0021007375,
+          "eigen": 0.00212001875
+        },
+        "3": {
+          "core": 0.00285909375,
+          "eigen": 0.00302669375
+        }
+      }
+    },
+    {
+      "command": [
+        "build\\large-llt-next\\Release\\shared_back2_width16.exe",
+        "512",
+        "3",
+        "2048",
+        "0"
+      ],
+      "output": ".scratch\\large-llt-backward\\shared_back2_width16-n512.jsonl",
+      "binarySha256": "46ec91eabbeda1ec6bd2fa1ec21398193a5a1d290776f5ac7e110c4c1c9c5c2a",
+      "summary": {
+        "0": {
+          "core": 0.00237233125,
+          "eigen": 0.00210845625
+        },
+        "1": {
+          "core": 2.38671875e-05,
+          "eigen": 2.8661328125e-05
+        },
+        "2": {
+          "core": 0.0023725,
+          "eigen": 0.0021166
+        },
+        "3": {
+          "core": 0.00315728125,
+          "eigen": 0.00300840625
+        }
+      }
+    },
+    {
+      "command": [
+        "build\\large-llt-next\\Release\\shared_back2_width16_small.exe",
+        "512",
+        "3",
+        "2048",
+        "0"
+      ],
+      "output": ".scratch\\large-llt-backward\\shared_back2_width16_small-n512.jsonl",
+      "binarySha256": "eac4ffc65d562ca519462325164681c0f74adb2f6c1372a00aab294463fe8382",
+      "summary": {
+        "0": {
+          "core": 0.0020610125,
+          "eigen": 0.00224295625
+        },
+        "1": {
+          "core": 2.3407568359375e-05,
+          "eigen": 2.9260888671875e-05
+        },
+        "2": {
+          "core": 0.002083,
+          "eigen": 0.00228256875
+        },
+        "3": {
+          "core": 0.0028968375,
+          "eigen": 0.00302359375
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,72 @@
+[
+  {
+    "command": [
+      "cmake",
+      "--build",
+      "build/native",
+      "--config",
+      "Debug",
+      "--target",
+      "kibo_llt_tests",
+      "kibo_llt_scalar_tests",
+      "kibo_llt_large_tests",
+      "kibo_llt_large_scalar_tests",
+      "kibo_no_runtime_tests",
+      "kibo_allocation_tests",
+      "kibo_common_2x2",
+      "kibo_numerical_tests",
+      "--parallel",
+      "4"
+    ],
+    "exitCode": 0
+  },
+  {
+    "command": [
+      "ctest",
+      "--test-dir",
+      "build/native",
+      "-C",
+      "Debug",
+      "--output-on-failure",
+      "--no-tests=error",
+      "-R",
+      "^(llt|llt_scalar|llt_large|llt_large_scalar|no_runtime|allocation|common_2x2|numerical|numerical_column)$"
+    ],
+    "exitCode": 8
+  },
+  {
+    "command": [
+      "cmake",
+      "--build",
+      "build/native",
+      "--config",
+      "Release",
+      "--target",
+      "kibo_llt_tests",
+      "kibo_llt_scalar_tests",
+      "kibo_llt_large_tests",
+      "kibo_llt_large_scalar_tests",
+      "kibo_no_runtime_tests",
+      "kibo_allocation_tests",
+      "kibo_common_2x2",
+      "kibo_numerical_tests",
+      "--parallel",
+      "4"
+    ],
+    "exitCode": 0
+  },
+  {
+    "command": [
+      "ctest",
+      "--test-dir",
+      "build/native",
+      "-C",
+      "Release",
+      "--output-on-failure",
+      "--no-tests=error",
+      "-R",
+      "^(llt|llt_scalar|llt_large|llt_large_scalar|no_runtime|allocation|common_2x2|numerical|numerical_column)$"
+    ],
+    "exitCode": 8
+  }
+]

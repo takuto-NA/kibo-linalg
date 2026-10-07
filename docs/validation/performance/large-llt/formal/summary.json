@@ -1,0 +1,4763 @@
+{
+  "publicCodeCommit": "48439196aa80f5c2678e8b7a15c1bf4cfcb438b5",
+  "baselineCodeCommit": "8fe28e552bfc485c4744a193cc9e677b3e2ce309",
+  "processes": 5,
+  "samples": 30,
+  "commands": [
+    {
+      "command": [
+        "build\\large-llt-next\\Release\\actual.exe",
+        "2",
+        "30",
+        "2",
+        "0"
+      ],
+      "file": "actual-n2-m2-process0.jsonl",
+      "binarySha256": "d83f1e3347cd623b136cecff5c2677c4a31e4ed06ec514903a8acab3d9d3c32e",
+      "medianPhaseRatio": [
+        0.5483111101167278,
+        0.7176324068760744,
+        0.857724309312957,
+        1.3742302024031188
+      ]
+    },
+    {
+      "command": [
+        "build\\large-llt-next\\Release\\public_large.exe",
+        "2",
+        "30",
+        "2",
+        "0"
+      ],
+      "file": "public_large-n2-m2-process0.jsonl",
+      "binarySha256": "a4a637f01a4be2bb21a49cfeb64370247eee9b1b103701dc857017f5f57ba2d6",
+      "medianPhaseRatio": [
+        0.5443935957668469,
+        0.7916676215187981,
+        0.8669975737648568,
+        1.372703438054329
+      ]
+    },
+    {
+      "command": [
+        "build\\large-llt-next\\Release\\actual.exe",
+        "2",
+        "30",
+        "8",
+        "0"
+      ],
+      "file": "actual-n2-m8-process0.jsonl",
+      "binarySha256": "d83f1e3347cd623b136cecff5c2677c4a31e4ed06ec514903a8acab3d9d3c32e",
+      "medianPhaseRatio": [
+        0.5514066118455346,
+        0.6352836687445473,
+        0.8152314664777264,
+        1.3724669473346256
+      ]
+    },
+    {
+      "command": [
+        "build\\large-llt-next\\Release\\public_large.exe",
+        "2",
+        "30",
+        "8",
+        "0"
+      ],
+      "file": "public_large-n2-m8-process0.jsonl",
+      "binarySha256": "a4a637f01a4be2bb21a49cfeb64370247eee9b1b103701dc857017f5f57ba2d6",
+      "medianPhaseRatio": [
+        0.5420606115812099,
+        0.7863684271625557,
+        0.861189336448212,
+        1.38190911997128
+      ]
+    },
+    {
+      "command": [
+        "build\\large-llt-next\\Release\\actual.exe",
+        "32",
+        "30",
+        "128",
+        "0"
+      ],
+      "file": "actual-n32-m128-process0.jsonl",
+      "binarySha256": "d83f1e3347cd623b136cecff5c2677c4a31e4ed06ec514903a8acab3d9d3c32e",
+      "medianPhaseRatio": [
+        0.6185491597612343,
+        0.5641782922486709,
+        0.5955589759046738,
+        0.6173841958538638
+      ]
+    },
+    {
+      "command": [
+        "build\\large-llt-next\\Release\\public_large.exe",
+        "32",
+        "30",
+        "128",
+        "0"
+      ],
+      "file": "public_large-n32-m128-process0.jsonl",
+      "binarySha256": "a4a637f01a4be2bb21a49cfeb64370247eee9b1b103701dc857017f5f57ba2d6",
+      "medianPhaseRatio": [
+        0.6942845947048811,
+        0.5664681362895517,
+        0.6609554570567484,
+        0.6501976340653997
+      ]
+    },
+    {
+      "command": [
+        "build\\large-llt-next\\Release\\actual.exe",
+        "64",
+        "30",
+        "256",
+        "0"
+      ],
+      "file": "actual-n64-m256-process0.jsonl",
+      "binarySha256": "d83f1e3347cd623b136cecff5c2677c4a31e4ed06ec514903a8acab3d9d3c32e",
+      "medianPhaseRatio": [
+        0.8837557765354696,
+        0.6328479906617662,
+        0.8398416771906991,
+        0.8308586670748045
+      ]
+    },
+    {
+      "command": [
+        "build\\large-llt-next\\Release\\public_large.exe",
+        "64",
+        "30",
+        "256",
+        "0"
+      ],
+      "file": "public_large-n64-m256-process0.jsonl",
+      "binarySha256": "a4a637f01a4be2bb21a49cfeb64370247eee9b1b103701dc857017f5f57ba2d6",
+      "medianPhaseRatio": [
+        0.9526335441312598,
+        0.6921468635602104,
+        0.9144936790221534,
+        0.8553768130845543
+      ]
+    },
+    {
+      "command": [
+        "build\\large-llt-next\\Release\\actual.exe",
+        "128",
+        "30",
+        "128",
+        "0"
+      ],
+      "file": "actual-n128-m128-process0.jsonl",
+      "binarySha256": "d83f1e3347cd623b136cecff5c2677c4a31e4ed06ec514903a8acab3d9d3c32e",
+      "medianPhaseRatio": [
+        1.2081729939935366,
+        0.9949786005713643,
+        1.1945801012504462,
+        1.0722038152787974
+      ]
+    },
+    {
+      "command": [
+        "build\\large-llt-next\\Release\\public_large.exe",
+        "128",
+        "30",
+        "128",
+        "0"
+      ],
+      "file": "public_large-n128-m128-process0.jsonl",
+      "binarySha256": "a4a637f01a4be2bb21a49cfeb64370247eee9b1b103701dc857017f5f57ba2d6",
+      "medianPhaseRatio": [
+        1.0607821582030523,
+        0.6290328995634551,
+        1.0339471771071453,
+        0.9329696084679249
+      ]
+    },
+    {
+      "command": [
+        "build\\large-llt-next\\Release\\actual.exe",
+        "128",
+        "30",
+        "512",
+        "0"
+      ],
+      "file": "actual-n128-m512-process0.jsonl",
+      "binarySha256": "d83f1e3347cd623b136cecff5c2677c4a31e4ed06ec514903a8acab3d9d3c32e",
+      "medianPhaseRatio": [
+        1.2115727346205731,
+        1.0005905119432252,
+        1.1972318959287378,
+        1.0535059495423706
+      ]
+    },
+    {
+      "command": [
+        "build\\large-llt-next\\Release\\public_large.exe",
+        "128",
+        "30",
+        "512",
+        "0"
+      ],
+      "file": "public_large-n128-m512-process0.jsonl",
+      "binarySha256": "a4a637f01a4be2bb21a49cfeb64370247eee9b1b103701dc857017f5f57ba2d6",
+      "medianPhaseRatio": [
+        1.0618672517502115,
+        0.5823135792169704,
+        1.0330007005152182,
+        0.9332397957473546
+      ]
+    },
+    {
+      "command": [
+        "build\\large-llt-next\\Release\\actual.exe",
+        "512",
+        "30",
+        "512",
+        "0"
+      ],
+      "file": "actual-n512-m512-process0.jsonl",
+      "binarySha256": "d83f1e3347cd623b136cecff5c2677c4a31e4ed06ec514903a8acab3d9d3c32e",
+      "medianPhaseRatio": [
+        1.0007670605502677,
+        2.027518070218237,
+        1.0919657889329928,
+        1.0578422988930531
+      ]
+    },
+    {
+      "command": [
+        "build\\large-llt-next\\Release\\public_large.exe",
+        "512",
+        "30",
+        "512",
+        "0"
+      ],
+      "file": "public_large-n512-m512-process0.jsonl",
+      "binarySha256": "a4a637f01a4be2bb21a49cfeb64370247eee9b1b103701dc857017f5f57ba2d6",
+      "medianPhaseRatio": [
+        1.018671045387229,
+        0.8054384124625101,
+        1.0267090486162422,
+        0.9598238579693497
+      ]
+    },
+    {
+      "command": [
+        "build\\large-llt-next\\Release\\actual.exe",
+        "512",
+        "30",
+        "2048",
+        "0"
+      ],
+      "file": "actual-n512-m2048-process0.jsonl",
+      "binarySha256": "d83f1e3347cd623b136cecff5c2677c4a31e4ed06ec514903a8acab3d9d3c32e",
+      "medianPhaseRatio": [
+        1.021735877190875,
+        1.9685468250605473,
+        1.0881517825468094,
+        1.0634730117457867
+      ]
+    },
+    {
+      "command": [
+        "build\\large-llt-next\\Release\\public_large.exe",
+        "512",
+        "30",
+        "2048",
+        "0"
+      ],
+      "file": "public_large-n512-m2048-process0.jsonl",
+      "binarySha256": "a4a637f01a4be2bb21a49cfeb64370247eee9b1b103701dc857017f5f57ba2d6",
+      "medianPhaseRatio": [
+        1.021390194046531,
+        0.8046773869705497,
+        1.030393999980403,
+        0.961087251893221
+      ]
+    },
+    {
+      "command": [
+        "build\\large-llt-next\\Release\\public_large.exe",
+        "2",
+        "30",
+        "2",
+        "1"
+      ],
+      "file": "public_large-n2-m2-process1.jsonl",
+      "binarySha256": "a4a637f01a4be2bb21a49cfeb64370247eee9b1b103701dc857017f5f57ba2d6",
+      "medianPhaseRatio": [
+        0.5405752588471184,
+        0.7651095431613097,
+        0.8515901007038742,
+        1.359248452161519
+      ]
+    },
+    {
+      "command": [
+        "build\\large-llt-next\\Release\\actual.exe",
+        "2",
+        "30",
+        "2",
+        "1"
+      ],
+      "file": "actual-n2-m2-process1.jsonl",
+      "binarySha256": "d83f1e3347cd623b136cecff5c2677c4a31e4ed06ec514903a8acab3d9d3c32e",
+      "medianPhaseRatio": [
+        0.5483698528630903,
+        0.6414082736565452,
+        0.8330693884402044,
+        1.3722777797783436
+      ]
+    },
+    {
+      "command": [
+        "build\\large-llt-next\\Release\\public_large.exe",
+        "2",
+        "30",
+        "8",
+        "1"
+      ],
+      "file": "public_large-n2-m8-process1.jsonl",
+      "binarySha256": "a4a637f01a4be2bb21a49cfeb64370247eee9b1b103701dc857017f5f57ba2d6",
+      "medianPhaseRatio": [
+        0.5463498555369686,
+        0.658685019888948,
+        0.8382991750704253,
+        1.3729432549020961
+      ]
+    },
+    {
+      "command": [
+        "build\\large-llt-next\\Release\\actual.exe",
+        "2",
+        "30",
+        "8",
+        "1"
+      ],
+      "file": "actual-n2-m8-process1.jsonl",
+      "binarySha256": "d83f1e3347cd623b136cecff5c2677c4a31e4ed06ec514903a8acab3d9d3c32e",
+      "medianPhaseRatio": [
+        0.5434111077122227,
+        0.7154341140628075,
+        0.831833603820524,
+        1.3618172987873582
+      ]
+    },
+    {
+      "command": [
+        "build\\large-llt-next\\Release\\public_large.exe",
+        "32",
+        "30",
+        "128",
+        "1"
+      ],
+      "file": "public_large-n32-m128-process1.jsonl",
+      "binarySha256": "a4a637f01a4be2bb21a49cfeb64370247eee9b1b103701dc857017f5f57ba2d6",
+      "medianPhaseRatio": [
+        0.6934804287765103,
+        0.5669151918768537,
+        0.6600821131579584,
+        0.6789041362573729
+      ]
+    },
+    {
+      "command": [
+        "build\\large-llt-next\\Release\\actual.exe",
+        "32",
+        "30",
+        "128",
+        "1"
+      ],
+      "file": "actual-n32-m128-process1.jsonl",
+      "binarySha256": "d83f1e3347cd623b136cecff5c2677c4a31e4ed06ec514903a8acab3d9d3c32e",
+      "medianPhaseRatio": [
+        0.6977670080317502,
+        0.5124319507632681,
+        0.6430529112493024,
+        0.6746762668351298
+      ]
+    },
+    {
+      "command": [
+        "build\\large-llt-next\\Release\\public_large.exe",
+        "64",
+        "30",
+        "256",
+        "1"
+      ],
+      "file": "public_large-n64-m256-process1.jsonl",
+      "binarySha256": "a4a637f01a4be2bb21a49cfeb64370247eee9b1b103701dc857017f5f57ba2d6",
+      "medianPhaseRatio": [
+        0.9507625935130701,
+        0.6907155178045015,
+        0.9188762249752871,
+        0.8504680476065485
+      ]
+    },
+    {
+      "command": [
+        "build\\large-llt-next\\Release\\actual.exe",
+        "64",
+        "30",
+        "256",
+        "1"
+      ],
+      "file": "actual-n64-m256-process1.jsonl",
+      "binarySha256": "d83f1e3347cd623b136cecff5c2677c4a31e4ed06ec514903a8acab3d9d3c32e",
+      "medianPhaseRatio": [
+        0.9649110976119875,
+        0.6340841095573748,
+        0.9034665604644578,
+        0.8636501968112582
+      ]
+    },
+    {
+      "command": [
+        "build\\large-llt-next\\Release\\public_large.exe",
+        "128",
+        "30",
+        "128",
+        "1"
+      ],
+      "file": "public_large-n128-m128-process1.jsonl",
+      "binarySha256": "a4a637f01a4be2bb21a49cfeb64370247eee9b1b103701dc857017f5f57ba2d6",
+      "medianPhaseRatio": [
+        1.0608090717436671,
+        0.624645746777489,
+        1.033589092803644,
+        0.9321880834433216
+      ]
+    },
+    {
+      "command": [
+        "build\\large-llt-next\\Release\\actual.exe",
+        "128",
+        "30",
+        "128",
+        "1"
+      ],
+      "file": "actual-n128-m128-process1.jsonl",
+      "binarySha256": "d83f1e3347cd623b136cecff5c2677c4a31e4ed06ec514903a8acab3d9d3c32e",
+      "medianPhaseRatio": [
+        1.2036797338462717,
+        1.0105462193722867,
+        1.1905551290576917,
+        1.0690209136990343
+      ]
+    },
+    {
+      "command": [
+        "build\\large-llt-next\\Release\\public_large.exe",
+        "128",
+        "30",
+        "512",
+        "1"
+      ],
+      "file": "public_large-n128-m512-process1.jsonl",
+      "binarySha256": "a4a637f01a4be2bb21a49cfeb64370247eee9b1b103701dc857017f5f57ba2d6",
+      "medianPhaseRatio": [
+        1.0685088692217555,
+        0.5802953186568691,
+        1.0298659977071756,
+        0.9331145317866356
+      ]
+    },
+    {
+      "command": [
+        "build\\large-llt-next\\Release\\actual.exe",
+        "128",
+        "30",
+        "512",
+        "1"
+      ],
+      "file": "actual-n128-m512-process1.jsonl",
+      "binarySha256": "d83f1e3347cd623b136cecff5c2677c4a31e4ed06ec514903a8acab3d9d3c32e",
+      "medianPhaseRatio": [
+        1.2300849895294181,
+        0.9313789228002511,
+        1.2074175243807128,
+        1.0695112968645668
+      ]
+    },
+    {
+      "command": [
+        "build\\large-llt-next\\Release\\public_large.exe",
+        "512",
+        "30",
+        "512",
+        "1"
+      ],
+      "file": "public_large-n512-m512-process1.jsonl",
+      "binarySha256": "a4a637f01a4be2bb21a49cfeb64370247eee9b1b103701dc857017f5f57ba2d6",
+      "medianPhaseRatio": [
+        0.9711272782618079,
+        0.8403961836442677,
+        0.9677443264997645,
+        0.9759162573483999
+      ]
+    },
+    {
+      "command": [
+        "build\\large-llt-next\\Release\\actual.exe",
+        "512",
+        "30",
+        "512",
+        "1"
+      ],
+      "file": "actual-n512-m512-process1.jsonl",
+      "binarySha256": "d83f1e3347cd623b136cecff5c2677c4a31e4ed06ec514903a8acab3d9d3c32e",
+      "medianPhaseRatio": [
+        1.0838343460542461,
+        2.033276441080108,
+        1.0982127237632928,
+        1.044094336279839
+      ]
+    },
+    {
+      "command": [
+        "build\\large-llt-next\\Release\\public_large.exe",
+        "512",
+        "30",
+        "2048",
+        "1"
+      ],
+      "file": "public_large-n512-m2048-process1.jsonl",
+      "binarySha256": "a4a637f01a4be2bb21a49cfeb64370247eee9b1b103701dc857017f5f57ba2d6",
+      "medianPhaseRatio": [
+        0.9216308479834345,
+        0.8019763087529069,
+        0.9883316153052999,
+        0.9787147867735493
+      ]
+    },
+    {
+      "command": [
+        "build\\large-llt-next\\Release\\actual.exe",
+        "512",
+        "30",
+        "2048",
+        "1"
+      ],
+      "file": "actual-n512-m2048-process1.jsonl",
+      "binarySha256": "d83f1e3347cd623b136cecff5c2677c4a31e4ed06ec514903a8acab3d9d3c32e",
+      "medianPhaseRatio": [
+        1.0298869485683007,
+        2.0493388193911657,
+        1.084937616091832,
+        1.071132803688302
+      ]
+    },
+    {
+      "command": [
+        "build\\large-llt-next\\Release\\actual.exe",
+        "2",
+        "30",
+        "2",
+        "2"
+      ],
+      "file": "actual-n2-m2-process2.jsonl",
+      "binarySha256": "d83f1e3347cd623b136cecff5c2677c4a31e4ed06ec514903a8acab3d9d3c32e",
+      "medianPhaseRatio": [
+        0.548964294868912,
+        0.6416101479228191,
+        0.8322651748831701,
+        1.37339525789373
+      ]
+    },
+    {
+      "command": [
+        "build\\large-llt-next\\Release\\public_large.exe",
+        "2",
+        "30",
+        "2",
+        "2"
+      ],
+      "file": "public_large-n2-m2-process2.jsonl",
+      "binarySha256": "a4a637f01a4be2bb21a49cfeb64370247eee9b1b103701dc857017f5f57ba2d6",
+      "medianPhaseRatio": [
+        0.5468023420457115,
+        0.7890260418112789,
+        0.8664498173047079,
+        1.3786581829097286
+      ]
+    },
+    {
+      "command": [
+        "build\\large-llt-next\\Release\\actual.exe",
+        "2",
+        "30",
+        "8",
+        "2"
+      ],
+      "file": "actual-n2-m8-process2.jsonl",
+      "binarySha256": "d83f1e3347cd623b136cecff5c2677c4a31e4ed06ec514903a8acab3d9d3c32e",
+      "medianPhaseRatio": [
+        0.54509742858511,
+        0.7229323403349737,
+        0.8597581115095108,
+        1.380913199738309
+      ]
+    },
+    {
+      "command": [
+        "build\\large-llt-next\\Release\\public_large.exe",
+        "2",
+        "30",
+        "8",
+        "2"
+      ],
+      "file": "public_large-n2-m8-process2.jsonl",
+      "binarySha256": "a4a637f01a4be2bb21a49cfeb64370247eee9b1b103701dc857017f5f57ba2d6",
+      "medianPhaseRatio": [
+        0.544430947696534,
+        0.5330604713245495,
+        0.7549214431064635,
+        1.3671572098692901
+      ]
+    },
+    {
+      "command": [
+        "build\\large-llt-next\\Release\\actual.exe",
+        "32",
+        "30",
+        "128",
+        "2"
+      ],
+      "file": "actual-n32-m128-process2.jsonl",
+      "binarySha256": "d83f1e3347cd623b136cecff5c2677c4a31e4ed06ec514903a8acab3d9d3c32e",
+      "medianPhaseRatio": [
+        0.6934373856505344,
+        0.5689339259240916,
+        0.6545050049882144,
+        0.6767012594834811
+      ]
+    },
+    {
+      "command": [
+        "build\\large-llt-next\\Release\\public_large.exe",
+        "32",
+        "30",
+        "128",
+        "2"
+      ],
+      "file": "public_large-n32-m128-process2.jsonl",
+      "binarySha256": "a4a637f01a4be2bb21a49cfeb64370247eee9b1b103701dc857017f5f57ba2d6",
+      "medianPhaseRatio": [
+        0.69887182869114,
+        0.5690558480804497,
+        0.6654419586113337,
+        0.6784749448758566
+      ]
+    },
+    {
+      "command": [
+        "build\\large-llt-next\\Release\\actual.exe",
+        "64",
+        "30",
+        "256",
+        "2"
+      ],
+      "file": "actual-n64-m256-process2.jsonl",
+      "binarySha256": "d83f1e3347cd623b136cecff5c2677c4a31e4ed06ec514903a8acab3d9d3c32e",
+      "medianPhaseRatio": [
+        0.919629951040319,
+        0.6964405159232656,
+        0.882479950724038,
+        0.8557411212066575
+      ]
+    },
+    {
+      "command": [
+        "build\\large-llt-next\\Release\\public_large.exe",
+        "64",
+        "30",
+        "256",
+        "2"
+      ],
+      "file": "public_large-n64-m256-process2.jsonl",
+      "binarySha256": "a4a637f01a4be2bb21a49cfeb64370247eee9b1b103701dc857017f5f57ba2d6",
+      "medianPhaseRatio": [
+        0.9274453997983343,
+        0.6270461163524044,
+        0.8864259550200155,
+        0.8387624767490462
+      ]
+    },
+    {
+      "command": [
+        "build\\large-llt-next\\Release\\actual.exe",
+        "128",
+        "30",
+        "128",
+        "2"
+      ],
+      "file": "actual-n128-m128-process2.jsonl",
+      "binarySha256": "d83f1e3347cd623b136cecff5c2677c4a31e4ed06ec514903a8acab3d9d3c32e",
+      "medianPhaseRatio": [
+        1.2038510856212212,
+        1.0011747703958742,
+        1.1909385246226911,
+        1.0717216501849527
+      ]
+    },
+    {
+      "command": [
+        "build\\large-llt-next\\Release\\public_large.exe",
+        "128",
+        "30",
+        "128",
+        "2"
+      ],
+      "file": "public_large-n128-m128-process2.jsonl",
+      "binarySha256": "a4a637f01a4be2bb21a49cfeb64370247eee9b1b103701dc857017f5f57ba2d6",
+      "medianPhaseRatio": [
+        1.0565481205700455,
+        0.6328746894304094,
+        1.0285949030931665,
+        0.932034731338425
+      ]
+    },
+    {
+      "command": [
+        "build\\large-llt-next\\Release\\actual.exe",
+        "128",
+        "30",
+        "512",
+        "2"
+      ],
+      "file": "actual-n128-m512-process2.jsonl",
+      "binarySha256": "d83f1e3347cd623b136cecff5c2677c4a31e4ed06ec514903a8acab3d9d3c32e",
+      "medianPhaseRatio": [
+        1.230413040499979,
+        1.0040975226411053,
+        1.2133616512908567,
+        1.0719901662202198
+      ]
+    },
+    {
+      "command": [
+        "build\\large-llt-next\\Release\\public_large.exe",
+        "128",
+        "30",
+        "512",
+        "2"
+      ],
+      "file": "public_large-n128-m512-process2.jsonl",
+      "binarySha256": "a4a637f01a4be2bb21a49cfeb64370247eee9b1b103701dc857017f5f57ba2d6",
+      "medianPhaseRatio": [
+        1.0629177396629281,
+        0.6300102223509771,
+        1.0387128389290092,
+        0.9324922706974332
+      ]
+    },
+    {
+      "command": [
+        "build\\large-llt-next\\Release\\actual.exe",
+        "512",
+        "30",
+        "512",
+        "2"
+      ],
+      "file": "actual-n512-m512-process2.jsonl",
+      "binarySha256": "d83f1e3347cd623b136cecff5c2677c4a31e4ed06ec514903a8acab3d9d3c32e",
+      "medianPhaseRatio": [
+        1.100883153554224,
+        2.032047006321986,
+        1.1370820425908819,
+        1.0246465514510352
+      ]
+    },
+    {
+      "command": [
+        "build\\large-llt-next\\Release\\public_large.exe",
+        "512",
+        "30",
+        "512",
+        "2"
+      ],
+      "file": "public_large-n512-m512-process2.jsonl",
+      "binarySha256": "a4a637f01a4be2bb21a49cfeb64370247eee9b1b103701dc857017f5f57ba2d6",
+      "medianPhaseRatio": [
+        0.9802679853305578,
+        0.8352904545338466,
+        0.9808880873257878,
+        0.9874775821014469
+      ]
+    },
+    {
+      "command": [
+        "build\\large-llt-next\\Release\\actual.exe",
+        "512",
+        "30",
+        "2048",
+        "2"
+      ],
+      "file": "actual-n512-m2048-process2.jsonl",
+      "binarySha256": "d83f1e3347cd623b136cecff5c2677c4a31e4ed06ec514903a8acab3d9d3c32e",
+      "medianPhaseRatio": [
+        1.0062150789148478,
+        1.9712254919496783,
+        1.0815611675237728,
+        1.0784841055919092
+      ]
+    },
+    {
+      "command": [
+        "build\\large-llt-next\\Release\\public_large.exe",
+        "512",
+        "30",
+        "2048",
+        "2"
+      ],
+      "file": "public_large-n512-m2048-process2.jsonl",
+      "binarySha256": "a4a637f01a4be2bb21a49cfeb64370247eee9b1b103701dc857017f5f57ba2d6",
+      "medianPhaseRatio": [
+        0.9139924917248129,
+        0.828533056998972,
+        0.9773986853148722,
+        0.9807237503559658
+      ]
+    },
+    {
+      "command": [
+        "build\\large-llt-next\\Release\\public_large.exe",
+        "2",
+        "30",
+        "2",
+        "3"
+      ],
+      "file": "public_large-n2-m2-process3.jsonl",
+      "binarySha256": "a4a637f01a4be2bb21a49cfeb64370247eee9b1b103701dc857017f5f57ba2d6",
+      "medianPhaseRatio": [
+        0.5402940685463014,
+        0.7628541287290889,
+        0.856355852750145,
+        1.3618414543251876
+      ]
+    },
+    {
+      "command": [
+        "build\\large-llt-next\\Release\\actual.exe",
+        "2",
+        "30",
+        "2",
+        "3"
+      ],
+      "file": "actual-n2-m2-process3.jsonl",
+      "binarySha256": "d83f1e3347cd623b136cecff5c2677c4a31e4ed06ec514903a8acab3d9d3c32e",
+      "medianPhaseRatio": [
+        0.53150792978194,
+        0.709407976651199,
+        0.8420224627648989,
+        1.3311585205791565
+      ]
+    },
+    {
+      "command": [
+        "build\\large-llt-next\\Release\\public_large.exe",
+        "2",
+        "30",
+        "8",
+        "3"
+      ],
+      "file": "public_large-n2-m8-process3.jsonl",
+      "binarySha256": "a4a637f01a4be2bb21a49cfeb64370247eee9b1b103701dc857017f5f57ba2d6",
+      "medianPhaseRatio": [
+        0.5473101111956226,
+        0.6702098772684315,
+        0.8378705273993292,
+        1.3756486822650875
+      ]
+    },
+    {
+      "command": [
+        "build\\large-llt-next\\Release\\actual.exe",
+        "2",
+        "30",
+        "8",
+        "3"
+      ],
+      "file": "actual-n2-m8-process3.jsonl",
+      "binarySha256": "d83f1e3347cd623b136cecff5c2677c4a31e4ed06ec514903a8acab3d9d3c32e",
+      "medianPhaseRatio": [
+        0.5410204144225144,
+        0.7169016326463118,
+        0.8477522486755291,
+        1.3619272154613409
+      ]
+    },
+    {
+      "command": [
+        "build\\large-llt-next\\Release\\public_large.exe",
+        "32",
+        "30",
+        "128",
+        "3"
+      ],
+      "file": "public_large-n32-m128-process3.jsonl",
+      "binarySha256": "a4a637f01a4be2bb21a49cfeb64370247eee9b1b103701dc857017f5f57ba2d6",
+      "medianPhaseRatio": [
+        0.6991925043488706,
+        0.5680290528006445,
+        0.6653575004331783,
+        0.6817200169059583
+      ]
+    },
+    {
+      "command": [
+        "build\\large-llt-next\\Release\\actual.exe",
+        "32",
+        "30",
+        "128",
+        "3"
+      ],
+      "file": "actual-n32-m128-process3.jsonl",
+      "binarySha256": "d83f1e3347cd623b136cecff5c2677c4a31e4ed06ec514903a8acab3d9d3c32e",
+      "medianPhaseRatio": [
+        0.7007571976742026,
+        0.5651075928001976,
+        0.6574968019004819,
+        0.676047394397358
+      ]
+    },
+    {
+      "command": [
+        "build\\large-llt-next\\Release\\public_large.exe",
+        "64",
+        "30",
+        "256",
+        "3"
+      ],
+      "file": "public_large-n64-m256-process3.jsonl",
+      "binarySha256": "a4a637f01a4be2bb21a49cfeb64370247eee9b1b103701dc857017f5f57ba2d6",
+      "medianPhaseRatio": [
+        0.959285369254554,
+        0.6882672239873862,
+        0.9201568749827881,
+        0.8420127346902344
+      ]
+    },
+    {
+      "command": [
+        "build\\large-llt-next\\Release\\actual.exe",
+        "64",
+        "30",
+        "256",
+        "3"
+      ],
+      "file": "actual-n64-m256-process3.jsonl",
+      "binarySha256": "d83f1e3347cd623b136cecff5c2677c4a31e4ed06ec514903a8acab3d9d3c32e",
+      "medianPhaseRatio": [
+        0.9567324387790762,
+        0.6946161868721583,
+        0.9184258413520336,
+        0.8552574536471114
+      ]
+    },
+    {
+      "command": [
+        "build\\large-llt-next\\Release\\public_large.exe",
+        "128",
+        "30",
+        "128",
+        "3"
+      ],
+      "file": "public_large-n128-m128-process3.jsonl",
+      "binarySha256": "a4a637f01a4be2bb21a49cfeb64370247eee9b1b103701dc857017f5f57ba2d6",
+      "medianPhaseRatio": [
+        1.0598649467829682,
+        0.6246652735977156,
+        1.0322239866389566,
+        0.9362120074659022
+      ]
+    },
+    {
+      "command": [
+        "build\\large-llt-next\\Release\\actual.exe",
+        "128",
+        "30",
+        "128",
+        "3"
+      ],
+      "file": "actual-n128-m128-process3.jsonl",
+      "binarySha256": "d83f1e3347cd623b136cecff5c2677c4a31e4ed06ec514903a8acab3d9d3c32e",
+      "medianPhaseRatio": [
+        1.2159527233077478,
+        1.0108622749254665,
+        1.2056892357419258,
+        1.0740206153583758
+      ]
+    },
+    {
+      "command": [
+        "build\\large-llt-next\\Release\\public_large.exe",
+        "128",
+        "30",
+        "512",
+        "3"
+      ],
+      "file": "public_large-n128-m512-process3.jsonl",
+      "binarySha256": "a4a637f01a4be2bb21a49cfeb64370247eee9b1b103701dc857017f5f57ba2d6",
+      "medianPhaseRatio": [
+        1.065155124339811,
+        0.6265283406167769,
+        1.0374403427547576,
+        0.9340120226682611
+      ]
+    },
+    {
+      "command": [
+        "build\\large-llt-next\\Release\\actual.exe",
+        "128",
+        "30",
+        "512",
+        "3"
+      ],
+      "file": "actual-n128-m512-process3.jsonl",
+      "binarySha256": "d83f1e3347cd623b136cecff5c2677c4a31e4ed06ec514903a8acab3d9d3c32e",
+      "medianPhaseRatio": [
+        1.2158823171774094,
+        1.0045452904136538,
+        1.2010428311952326,
+        1.0614508664900824
+      ]
+    },
+    {
+      "command": [
+        "build\\large-llt-next\\Release\\public_large.exe",
+        "512",
+        "30",
+        "512",
+        "3"
+      ],
+      "file": "public_large-n512-m512-process3.jsonl",
+      "binarySha256": "a4a637f01a4be2bb21a49cfeb64370247eee9b1b103701dc857017f5f57ba2d6",
+      "medianPhaseRatio": [
+        0.9165550520089301,
+        0.8421719740060655,
+        0.9740377242138399,
+        0.9927828778936436
+      ]
+    },
+    {
+      "command": [
+        "build\\large-llt-next\\Release\\actual.exe",
+        "512",
+        "30",
+        "512",
+        "3"
+      ],
+      "file": "actual-n512-m512-process3.jsonl",
+      "binarySha256": "d83f1e3347cd623b136cecff5c2677c4a31e4ed06ec514903a8acab3d9d3c32e",
+      "medianPhaseRatio": [
+        1.0030267665563277,
+        2.033751474521475,
+        1.0832345694242294,
+        1.038505228964559
+      ]
+    },
+    {
+      "command": [
+        "build\\large-llt-next\\Release\\public_large.exe",
+        "512",
+        "30",
+        "2048",
+        "3"
+      ],
+      "file": "public_large-n512-m2048-process3.jsonl",
+      "binarySha256": "a4a637f01a4be2bb21a49cfeb64370247eee9b1b103701dc857017f5f57ba2d6",
+      "medianPhaseRatio": [
+        0.9354656958512179,
+        0.8310315029589067,
+        0.9781252936360323,
+        0.9713112274905926
+      ]
+    },
+    {
+      "command": [
+        "build\\large-llt-next\\Release\\actual.exe",
+        "512",
+        "30",
+        "2048",
+        "3"
+      ],
+      "file": "actual-n512-m2048-process3.jsonl",
+      "binarySha256": "d83f1e3347cd623b136cecff5c2677c4a31e4ed06ec514903a8acab3d9d3c32e",
+      "medianPhaseRatio": [
+        1.1140607266174056,
+        1.9633195259575826,
+        1.1352587957003237,
+        1.0493036209609286
+      ]
+    },
+    {
+      "command": [
+        "build\\large-llt-next\\Release\\actual.exe",
+        "2",
+        "30",
+        "2",
+        "4"
+      ],
+      "file": "actual-n2-m2-process4.jsonl",
+      "binarySha256": "d83f1e3347cd623b136cecff5c2677c4a31e4ed06ec514903a8acab3d9d3c32e",
+      "medianPhaseRatio": [
+        0.5327450161028333,
+        0.7107181074525849,
+        0.8436606125237158,
+        1.3420789356802896
+      ]
+    },
+    {
+      "command": [
+        "build\\large-llt-next\\Release\\public_large.exe",
+        "2",
+        "30",
+        "2",
+        "4"
+      ],
+      "file": "public_large-n2-m2-process4.jsonl",
+      "binarySha256": "a4a637f01a4be2bb21a49cfeb64370247eee9b1b103701dc857017f5f57ba2d6",
+      "medianPhaseRatio": [
+        0.5476532633481508,
+        0.6654187988407014,
+        0.8408490611695386,
+        1.3717334519018487
+      ]
+    },
+    {
+      "command": [
+        "build\\large-llt-next\\Release\\actual.exe",
+        "2",
+        "30",
+        "8",
+        "4"
+      ],
+      "file": "actual-n2-m8-process4.jsonl",
+      "binarySha256": "d83f1e3347cd623b136cecff5c2677c4a31e4ed06ec514903a8acab3d9d3c32e",
+      "medianPhaseRatio": [
+        0.5485898273958641,
+        0.6418612648503197,
+        0.8329650542810784,
+        1.3750487832102571
+      ]
+    },
+    {
+      "command": [
+        "build\\large-llt-next\\Release\\public_large.exe",
+        "2",
+        "30",
+        "8",
+        "4"
+      ],
+      "file": "public_large-n2-m8-process4.jsonl",
+      "binarySha256": "a4a637f01a4be2bb21a49cfeb64370247eee9b1b103701dc857017f5f57ba2d6",
+      "medianPhaseRatio": [
+        0.54593671046077,
+        0.633850386627991,
+        0.8404805181714199,
+        1.3729682402400605
+      ]
+    },
+    {
+      "command": [
+        "build\\large-llt-next\\Release\\actual.exe",
+        "32",
+        "30",
+        "128",
+        "4"
+      ],
+      "file": "actual-n32-m128-process4.jsonl",
+      "binarySha256": "d83f1e3347cd623b136cecff5c2677c4a31e4ed06ec514903a8acab3d9d3c32e",
+      "medianPhaseRatio": [
+        0.6978749602727792,
+        0.5107611172101769,
+        0.6421207190557372,
+        0.6739429484892969
+      ]
+    },
+    {
+      "command": [
+        "build\\large-llt-next\\Release\\public_large.exe",
+        "32",
+        "30",
+        "128",
+        "4"
+      ],
+      "file": "public_large-n32-m128-process4.jsonl",
+      "binarySha256": "a4a637f01a4be2bb21a49cfeb64370247eee9b1b103701dc857017f5f57ba2d6",
+      "medianPhaseRatio": [
+        0.6960564049986508,
+        0.5107627311904094,
+        0.6478240955207317,
+        0.6797882920382645
+      ]
+    },
+    {
+      "command": [
+        "build\\large-llt-next\\Release\\actual.exe",
+        "64",
+        "30",
+        "256",
+        "4"
+      ],
+      "file": "actual-n64-m256-process4.jsonl",
+      "binarySha256": "d83f1e3347cd623b136cecff5c2677c4a31e4ed06ec514903a8acab3d9d3c32e",
+      "medianPhaseRatio": [
+        0.9598748087797914,
+        0.6943999210847958,
+        0.9121340075167035,
+        0.8551766882679207
+      ]
+    },
+    {
+      "command": [
+        "build\\large-llt-next\\Release\\public_large.exe",
+        "64",
+        "30",
+        "256",
+        "4"
+      ],
+      "file": "public_large-n64-m256-process4.jsonl",
+      "binarySha256": "a4a637f01a4be2bb21a49cfeb64370247eee9b1b103701dc857017f5f57ba2d6",
+      "medianPhaseRatio": [
+        0.9189781298773004,
+        0.6881931019139664,
+        0.8876304764625085,
+        0.8376721232139546
+      ]
+    },
+    {
+      "command": [
+        "build\\large-llt-next\\Release\\actual.exe",
+        "128",
+        "30",
+        "128",
+        "4"
+      ],
+      "file": "actual-n128-m128-process4.jsonl",
+      "binarySha256": "d83f1e3347cd623b136cecff5c2677c4a31e4ed06ec514903a8acab3d9d3c32e",
+      "medianPhaseRatio": [
+        1.20766268442491,
+        1.0012576792794692,
+        1.1941462302415755,
+        1.0780542147130263
+      ]
+    },
+    {
+      "command": [
+        "build\\large-llt-next\\Release\\public_large.exe",
+        "128",
+        "30",
+        "128",
+        "4"
+      ],
+      "file": "public_large-n128-m128-process4.jsonl",
+      "binarySha256": "a4a637f01a4be2bb21a49cfeb64370247eee9b1b103701dc857017f5f57ba2d6",
+      "medianPhaseRatio": [
+        1.059815158628207,
+        0.5658010995872921,
+        1.021002755004817,
+        0.9404149016979056
+      ]
+    },
+    {
+      "command": [
+        "build\\large-llt-next\\Release\\actual.exe",
+        "128",
+        "30",
+        "512",
+        "4"
+      ],
+      "file": "actual-n128-m512-process4.jsonl",
+      "binarySha256": "d83f1e3347cd623b136cecff5c2677c4a31e4ed06ec514903a8acab3d9d3c32e",
+      "medianPhaseRatio": [
+        1.2207964489020529,
+        1.0045994688351905,
+        1.207126865992456,
+        1.0677895094872656
+      ]
+    },
+    {
+      "command": [
+        "build\\large-llt-next\\Release\\public_large.exe",
+        "128",
+        "30",
+        "512",
+        "4"
+      ],
+      "file": "public_large-n128-m512-process4.jsonl",
+      "binarySha256": "a4a637f01a4be2bb21a49cfeb64370247eee9b1b103701dc857017f5f57ba2d6",
+      "medianPhaseRatio": [
+        1.0647385069938302,
+        0.6282910531859978,
+        1.040341677693451,
+        0.9287321282919472
+      ]
+    },
+    {
+      "command": [
+        "build\\large-llt-next\\Release\\actual.exe",
+        "512",
+        "30",
+        "512",
+        "4"
+      ],
+      "file": "actual-n512-m512-process4.jsonl",
+      "binarySha256": "d83f1e3347cd623b136cecff5c2677c4a31e4ed06ec514903a8acab3d9d3c32e",
+      "medianPhaseRatio": [
+        1.0023402895447782,
+        2.0112138422742505,
+        1.0827407745646007,
+        1.071359397209964
+      ]
+    },
+    {
+      "command": [
+        "build\\large-llt-next\\Release\\public_large.exe",
+        "512",
+        "30",
+        "512",
+        "4"
+      ],
+      "file": "public_large-n512-m512-process4.jsonl",
+      "binarySha256": "a4a637f01a4be2bb21a49cfeb64370247eee9b1b103701dc857017f5f57ba2d6",
+      "medianPhaseRatio": [
+        0.9169839430264795,
+        0.8332080199783605,
+        0.9798985190793357,
+        0.9851449533886627
+      ]
+    },
+    {
+      "command": [
+        "build\\large-llt-next\\Release\\actual.exe",
+        "512",
+        "30",
+        "2048",
+        "4"
+      ],
+      "file": "actual-n512-m2048-process4.jsonl",
+      "binarySha256": "d83f1e3347cd623b136cecff5c2677c4a31e4ed06ec514903a8acab3d9d3c32e",
+      "medianPhaseRatio": [
+        1.1143526682928893,
+        2.0381742272207557,
+        1.1386024516565574,
+        1.0473577091520427
+      ]
+    },
+    {
+      "command": [
+        "build\\large-llt-next\\Release\\public_large.exe",
+        "512",
+        "30",
+        "2048",
+        "4"
+      ],
+      "file": "public_large-n512-m2048-process4.jsonl",
+      "binarySha256": "a4a637f01a4be2bb21a49cfeb64370247eee9b1b103701dc857017f5f57ba2d6",
+      "medianPhaseRatio": [
+        0.9887634953810513,
+        0.8303776065455365,
+        1.0038880131770798,
+        1.0012415270573154
+      ]
+    }
+  ],
+  "summaries": [
+    {
+      "n": 2,
+      "m": 2,
+      "phase": 0,
+      "actual": {
+        "medianUs": 0.01796102523803711,
+        "eigenMedianUs": 0.03294053077697754,
+        "p95Us": 0.018167686462402344,
+        "eigenP95Us": 0.03390436172485352,
+        "pairedEigenRatio": 0.5483111101167278,
+        "ratio95": [
+          0.53150792978194,
+          0.548964294868912
+        ],
+        "processes": [
+          {
+            "core": 1.804356575012207e-08,
+            "eigen": 3.294053077697754e-08,
+            "coreP95": 1.8331336975097657e-08,
+            "eigenP95": 3.407702445983887e-08,
+            "pairedRatio": 0.5483111101167278
+          },
+          {
+            "core": 1.796102523803711e-08,
+            "eigen": 3.274400234222412e-08,
+            "coreP95": 1.8144369125366212e-08,
+            "eigenP95": 3.316116333007812e-08,
+            "pairedRatio": 0.5483698528630903
+          },
+          {
+            "core": 1.7966008186340333e-08,
+            "eigen": 3.2733392715454107e-08,
+            "coreP95": 1.8167686462402344e-08,
+            "eigenP95": 3.296732902526856e-08,
+            "pairedRatio": 0.548964294868912
+          },
+          {
+            "core": 1.775062084197998e-08,
+            "eigen": 3.336541652679443e-08,
+            "coreP95": 1.9013261795043944e-08,
+            "eigenP95": 3.400702476501465e-08,
+            "pairedRatio": 0.53150792978194
+          },
+          {
+            "core": 1.7796325683593748e-08,
+            "eigen": 3.341271877288818e-08,
+            "coreP95": 1.8088531494140625e-08,
+            "eigenP95": 3.3904361724853517e-08,
+            "pairedRatio": 0.5327450161028333
+          }
+        ]
+      },
+      "public_large": {
+        "medianUs": 0.017914009094238282,
+        "eigenMedianUs": 0.03286190032958985,
+        "p95Us": 0.018059635162353514,
+        "eigenP95Us": 0.03321418762207031,
+        "pairedEigenRatio": 0.5443935957668469,
+        "ratio95": [
+          0.5402940685463014,
+          0.5476532633481508
+        ],
+        "processes": [
+          {
+            "core": 1.7914009094238282e-08,
+            "eigen": 3.289439678192139e-08,
+            "coreP95": 1.8085956573486327e-08,
+            "eigenP95": 3.316588401794434e-08,
+            "pairedRatio": 0.5443935957668469
+          },
+          {
+            "core": 1.775360107421875e-08,
+            "eigen": 3.2861900329589845e-08,
+            "coreP95": 1.8015241622924805e-08,
+            "eigenP95": 3.3613777160644534e-08,
+            "pairedRatio": 0.5405752588471184
+          },
+          {
+            "core": 1.797957420349121e-08,
+            "eigen": 3.290393352508545e-08,
+            "coreP95": 1.8163585662841798e-08,
+            "eigenP95": 3.343968391418457e-08,
+            "pairedRatio": 0.5468023420457115
+          },
+          {
+            "core": 1.7711138725280762e-08,
+            "eigen": 3.278653621673584e-08,
+            "coreP95": 1.7882776260375976e-08,
+            "eigenP95": 3.321418762207031e-08,
+            "pairedRatio": 0.5402940685463014
+          },
+          {
+            "core": 1.7934870719909667e-08,
+            "eigen": 3.276939392089843e-08,
+            "coreP95": 1.8059635162353515e-08,
+            "eigenP95": 3.319549560546875e-08,
+            "pairedRatio": 0.5476532633481508
+          }
+        ]
+      },
+      "afterBeforeRatio": 0.9977757331954359,
+      "afterBefore95": [
+        0.9884514296333662,
+        1.0077850360113179
+      ]
+    },
+    {
+      "n": 2,
+      "m": 2,
+      "phase": 1,
+      "actual": {
+        "medianUs": 0.014920711517333984,
+        "eigenMedianUs": 0.020783066749572754,
+        "p95Us": 0.01517448425292969,
+        "eigenP95Us": 0.021092987060546877,
+        "pairedEigenRatio": 0.709407976651199,
+        "ratio95": [
+          0.6414082736565452,
+          0.7176324068760744
+        ],
+        "processes": [
+          {
+            "core": 1.4920711517333984e-08,
+            "eigen": 2.0783066749572753e-08,
+            "coreP95": 1.517448425292969e-08,
+            "eigenP95": 2.0955944061279298e-08,
+            "pairedRatio": 0.7176324068760744
+          },
+          {
+            "core": 1.499741077423096e-08,
+            "eigen": 2.339789867401123e-08,
+            "coreP95": 1.5111637115478516e-08,
+            "eigenP95": 2.3575115203857422e-08,
+            "pairedRatio": 0.6414082736565452
+          },
+          {
+            "core": 1.501641273498535e-08,
+            "eigen": 2.3409581184387206e-08,
+            "coreP95": 1.5316820144653322e-08,
+            "eigenP95": 2.4057769775390625e-08,
+            "pairedRatio": 0.6416101479228191
+          },
+          {
+            "core": 1.4748907089233398e-08,
+            "eigen": 2.0753765106201173e-08,
+            "coreP95": 1.5410184860229492e-08,
+            "eigenP95": 2.1092987060546876e-08,
+            "pairedRatio": 0.709407976651199
+          },
+          {
+            "core": 1.4715886116027831e-08,
+            "eigen": 2.0715045928955077e-08,
+            "coreP95": 1.4878082275390625e-08,
+            "eigenP95": 2.1034908294677733e-08,
+            "pairedRatio": 0.7107181074525849
+          }
+        ]
+      },
+      "public_large": {
+        "medianUs": 0.015751671791076657,
+        "eigenMedianUs": 0.020664906501770018,
+        "p95Us": 0.016100406646728516,
+        "eigenP95Us": 0.021209716796875,
+        "pairedEigenRatio": 0.7651095431613097,
+        "ratio95": [
+          0.6654187988407014,
+          0.7916676215187981
+        ],
+        "processes": [
+          {
+            "core": 1.6399312019348145e-08,
+            "eigen": 2.0726799964904785e-08,
+            "coreP95": 1.6605472564697265e-08,
+            "eigenP95": 2.1095418930053712e-08,
+            "pairedRatio": 0.7916676215187981
+          },
+          {
+            "core": 1.575167179107666e-08,
+            "eigen": 2.057175636291504e-08,
+            "coreP95": 1.6100406646728517e-08,
+            "eigenP95": 2.099146842956543e-08,
+            "pairedRatio": 0.7651095431613097
+          },
+          {
+            "core": 1.629929542541504e-08,
+            "eigen": 2.066490650177002e-08,
+            "coreP95": 1.6379356384277343e-08,
+            "eigenP95": 2.1300363540649413e-08,
+            "pairedRatio": 0.7890260418112789
+          },
+          {
+            "core": 1.5689492225646974e-08,
+            "eigen": 2.0575451850891115e-08,
+            "coreP95": 1.598248481750488e-08,
+            "eigenP95": 2.1209716796875e-08,
+            "pairedRatio": 0.7628541287290889
+          },
+          {
+            "core": 1.5598082542419436e-08,
+            "eigen": 2.3460006713867187e-08,
+            "coreP95": 1.578207015991211e-08,
+            "eigenP95": 2.37485408782959e-08,
+            "pairedRatio": 0.6654187988407014
+          }
+        ]
+      },
+      "afterBeforeRatio": 1.0637732091417267,
+      "afterBefore95": [
+        1.0502927490751734,
+        1.0990971844939441
+      ]
+    },
+    {
+      "n": 2,
+      "m": 2,
+      "phase": 2,
+      "actual": {
+        "medianUs": 0.04621548652648926,
+        "eigenMedianUs": 0.054851627349853514,
+        "p95Us": 0.046912860870361325,
+        "eigenP95Us": 0.05589370727539063,
+        "pairedEigenRatio": 0.8420224627648989,
+        "ratio95": [
+          0.8322651748831701,
+          0.857724309312957
+        ],
+        "processes": [
+          {
+            "core": 4.631962776184082e-08,
+            "eigen": 5.395002365112305e-08,
+            "coreP95": 4.6721458435058594e-08,
+            "eigenP95": 5.460987091064453e-08,
+            "pairedRatio": 0.857724309312957
+          },
+          {
+            "core": 4.618449211120605e-08,
+            "eigen": 5.543742179870605e-08,
+            "coreP95": 4.6656131744384766e-08,
+            "eigenP95": 5.644130706787109e-08,
+            "pairedRatio": 0.8330693884402044
+          },
+          {
+            "core": 4.622178077697754e-08,
+            "eigen": 5.549912452697754e-08,
+            "coreP95": 4.746246337890625e-08,
+            "eigenP95": 5.603790283203125e-08,
+            "pairedRatio": 0.8322651748831701
+          },
+          {
+            "core": 4.617886543273925e-08,
+            "eigen": 5.4851627349853516e-08,
+            "coreP95": 4.6912860870361326e-08,
+            "eigenP95": 5.5513668060302734e-08,
+            "pairedRatio": 0.8420224627648989
+          },
+          {
+            "core": 4.621548652648926e-08,
+            "eigen": 5.471906661987305e-08,
+            "coreP95": 4.7680950164794924e-08,
+            "eigenP95": 5.589370727539063e-08,
+            "pairedRatio": 0.8436606125237158
+          }
+        ]
+      },
+      "public_large": {
+        "medianUs": 0.04649295806884766,
+        "eigenMedianUs": 0.054124879837036136,
+        "p95Us": 0.04805908203125,
+        "eigenP95Us": 0.055586719512939455,
+        "pairedEigenRatio": 0.856355852750145,
+        "ratio95": [
+          0.8408490611695386,
+          0.8669975737648568
+        ],
+        "processes": [
+          {
+            "core": 4.660615921020508e-08,
+            "eigen": 5.3728151321411133e-08,
+            "coreP95": 6.057176589965821e-08,
+            "eigenP95": 5.5196762084960936e-08,
+            "pairedRatio": 0.8669975737648568
+          },
+          {
+            "core": 4.6190929412841794e-08,
+            "eigen": 5.421915054321289e-08,
+            "coreP95": 4.682731628417969e-08,
+            "eigenP95": 5.5586719512939456e-08,
+            "pairedRatio": 0.8515901007038742
+          },
+          {
+            "core": 4.6666479110717774e-08,
+            "eigen": 5.384345054626465e-08,
+            "coreP95": 4.737329483032227e-08,
+            "eigenP95": 5.433435440063477e-08,
+            "pairedRatio": 0.8664498173047079
+          },
+          {
+            "core": 4.644675254821777e-08,
+            "eigen": 5.412487983703613e-08,
+            "coreP95": 4.805908203125e-08,
+            "eigenP95": 5.583829879760742e-08,
+            "pairedRatio": 0.856355852750145
+          },
+          {
+            "core": 4.6492958068847657e-08,
+            "eigen": 5.535163879394532e-08,
+            "coreP95": 4.833154678344726e-08,
+            "eigenP95": 5.566730499267578e-08,
+            "pairedRatio": 0.8408490611695386
+          }
+        ]
+      },
+      "afterBeforeRatio": 1.006003865007444,
+      "afterBefore95": [
+        1.0001393823195077,
+        1.0096209692976983
+      ]
+    },
+    {
+      "n": 2,
+      "m": 2,
+      "phase": 3,
+      "actual": {
+        "medianUs": 0.1514610290527344,
+        "eigenMedianUs": 0.11108169555664063,
+        "p95Us": 0.15380592346191407,
+        "eigenP95Us": 0.11238784790039062,
+        "pairedEigenRatio": 1.3722777797783436,
+        "ratio95": [
+          1.3311585205791565,
+          1.3742302024031188
+        ],
+        "processes": [
+          {
+            "core": 1.5280103683471681e-07,
+            "eigen": 1.1108169555664063e-07,
+            "coreP95": 1.5531082153320313e-07,
+            "eigenP95": 1.1183586120605468e-07,
+            "pairedRatio": 1.3742302024031188
+          },
+          {
+            "core": 1.5134992599487305e-07,
+            "eigen": 1.1026744842529297e-07,
+            "coreP95": 1.5278739929199218e-07,
+            "eigenP95": 1.1238784790039062e-07,
+            "pairedRatio": 1.3722777797783436
+          },
+          {
+            "core": 1.514610290527344e-07,
+            "eigen": 1.103358268737793e-07,
+            "coreP95": 1.5380592346191407e-07,
+            "eigenP95": 1.1159706115722656e-07,
+            "pairedRatio": 1.37339525789373
+          },
+          {
+            "core": 1.5093355178833008e-07,
+            "eigen": 1.130819320678711e-07,
+            "coreP95": 1.5701580047607423e-07,
+            "eigenP95": 1.1424617767333984e-07,
+            "pairedRatio": 1.3311585205791565
+          },
+          {
+            "core": 1.519113540649414e-07,
+            "eigen": 1.1317014694213867e-07,
+            "coreP95": 1.5333385467529296e-07,
+            "eigenP95": 1.148294448852539e-07,
+            "pairedRatio": 1.3420789356802896
+          }
+        ]
+      },
+      "public_large": {
+        "medianUs": 0.15157690048217773,
+        "eigenMedianUs": 0.11025934219360352,
+        "p95Us": 0.15477008819580076,
+        "eigenP95Us": 0.11213207244873047,
+        "pairedEigenRatio": 1.3717334519018487,
+        "ratio95": [
+          1.359248452161519,
+          1.3786581829097286
+        ],
+        "processes": [
+          {
+            "core": 1.5157690048217773e-07,
+            "eigen": 1.1054973602294922e-07,
+            "coreP95": 1.5511608123779296e-07,
+            "eigenP95": 1.1213207244873047e-07,
+            "pairedRatio": 1.372703438054329
+          },
+          {
+            "core": 1.4990005493164063e-07,
+            "eigen": 1.1025934219360352e-07,
+            "coreP95": 1.5219955444335938e-07,
+            "eigenP95": 1.1083469390869141e-07,
+            "pairedRatio": 1.359248452161519
+          },
+          {
+            "core": 1.5159492492675782e-07,
+            "eigen": 1.0995750427246094e-07,
+            "coreP95": 1.552886962890625e-07,
+            "eigenP95": 1.1324081420898438e-07,
+            "pairedRatio": 1.3786581829097286
+          },
+          {
+            "core": 1.498382568359375e-07,
+            "eigen": 1.1003704071044921e-07,
+            "coreP95": 1.5144271850585938e-07,
+            "eigenP95": 1.1179313659667968e-07,
+            "pairedRatio": 1.3618414543251876
+          },
+          {
+            "core": 1.519662857055664e-07,
+            "eigen": 1.1062793731689453e-07,
+            "coreP95": 1.5477008819580078e-07,
+            "eigenP95": 1.1229114532470703e-07,
+            "pairedRatio": 1.3717334519018487
+          }
+        ]
+      },
+      "afterBeforeRatio": 0.9927431976560877,
+      "afterBefore95": [
+        0.9904204045446211,
+        1.000884028550848
+      ]
+    },
+    {
+      "n": 2,
+      "m": 8,
+      "phase": 0,
+      "actual": {
+        "medianUs": 0.01796298027038574,
+        "eigenMedianUs": 0.03276612758636475,
+        "p95Us": 0.01815037727355957,
+        "eigenP95Us": 0.03305530548095703,
+        "pairedEigenRatio": 0.54509742858511,
+        "ratio95": [
+          0.5410204144225144,
+          0.5514066118455346
+        ],
+        "processes": [
+          {
+            "core": 1.804776191711426e-08,
+            "eigen": 3.273739814758301e-08,
+            "coreP95": 1.830129623413086e-08,
+            "eigenP95": 3.3147239685058595e-08,
+            "pairedRatio": 0.5514066118455346
+          },
+          {
+            "core": 1.7778897285461426e-08,
+            "eigen": 3.270590305328369e-08,
+            "coreP95": 1.7903709411621093e-08,
+            "eigenP95": 3.289303779602051e-08,
+            "pairedRatio": 0.5434111077122227
+          },
+          {
+            "core": 1.7962980270385742e-08,
+            "eigen": 3.291957378387451e-08,
+            "coreP95": 1.815037727355957e-08,
+            "eigenP95": 3.319544792175293e-08,
+            "pairedRatio": 0.54509742858511
+          },
+          {
+            "core": 1.775321960449219e-08,
+            "eigen": 3.2766127586364746e-08,
+            "coreP95": 1.799631118774414e-08,
+            "eigenP95": 3.295960426330566e-08,
+            "pairedRatio": 0.5410204144225144
+          },
+          {
+            "core": 1.797912120819092e-08,
+            "eigen": 3.2811665534973144e-08,
+            "coreP95": 1.824970245361328e-08,
+            "eigenP95": 3.305530548095703e-08,
+            "pairedRatio": 0.5485898273958641
+          }
+        ]
+      },
+      "public_large": {
+        "medianUs": 0.017906308174133297,
+        "eigenMedianUs": 0.03292129039764404,
+        "p95Us": 0.018062448501586916,
+        "eigenP95Us": 0.03322649002075195,
+        "pairedEigenRatio": 0.54593671046077,
+        "ratio95": [
+          0.5420606115812099,
+          0.5473101111956226
+        ],
+        "processes": [
+          {
+            "core": 1.79063081741333e-08,
+            "eigen": 3.30394983291626e-08,
+            "coreP95": 1.8062448501586915e-08,
+            "eigenP95": 3.3226490020751956e-08,
+            "pairedRatio": 0.5420606115812099
+          },
+          {
+            "core": 1.7905616760253904e-08,
+            "eigen": 3.273563385009766e-08,
+            "coreP95": 1.8050479888916017e-08,
+            "eigenP95": 3.2936859130859374e-08,
+            "pairedRatio": 0.5463498555369686
+          },
+          {
+            "core": 1.7922878265380857e-08,
+            "eigen": 3.2970261573791504e-08,
+            "coreP95": 1.95188045501709e-08,
+            "eigenP95": 3.327832221984863e-08,
+            "pairedRatio": 0.544430947696534
+          },
+          {
+            "core": 1.7901062965393066e-08,
+            "eigen": 3.265647888183594e-08,
+            "coreP95": 1.7992591857910157e-08,
+            "eigenP95": 3.2912302017211915e-08,
+            "pairedRatio": 0.5473101111956226
+          },
+          {
+            "core": 1.792440414428711e-08,
+            "eigen": 3.2921290397644045e-08,
+            "coreP95": 1.8790531158447266e-08,
+            "eigenP95": 3.358173370361328e-08,
+            "pairedRatio": 0.54593671046077
+          }
+        ]
+      },
+      "afterBeforeRatio": 0.9977675193981592,
+      "afterBefore95": [
+        0.9921622557062422,
+        1.0083276929027265
+      ]
+    },
+    {
+      "n": 2,
+      "m": 8,
+      "phase": 1,
+      "actual": {
+        "medianUs": 0.014856505393981933,
+        "eigenMedianUs": 0.02076563835144043,
+        "p95Us": 0.015135955810546874,
+        "eigenP95Us": 0.021378374099731444,
+        "pairedEigenRatio": 0.7154341140628075,
+        "ratio95": [
+          0.6352836687445473,
+          0.7229323403349737
+        ],
+        "processes": [
+          {
+            "core": 1.4856505393981933e-08,
+            "eigen": 2.3389220237731936e-08,
+            "coreP95": 1.5135955810546874e-08,
+            "eigenP95": 2.3985719680786132e-08,
+            "pairedRatio": 0.6352836687445473
+          },
+          {
+            "core": 1.4669895172119141e-08,
+            "eigen": 2.0514750480651855e-08,
+            "coreP95": 1.5220022201538087e-08,
+            "eigenP95": 2.0777082443237304e-08,
+            "pairedRatio": 0.7154341140628075
+          },
+          {
+            "core": 1.500263214111328e-08,
+            "eigen": 2.0765638351440428e-08,
+            "coreP95": 1.5131235122680663e-08,
+            "eigenP95": 2.1378374099731444e-08,
+            "pairedRatio": 0.7229323403349737
+          },
+          {
+            "core": 1.473071575164795e-08,
+            "eigen": 2.0549774169921876e-08,
+            "coreP95": 1.5064430236816406e-08,
+            "eigenP95": 2.100358009338379e-08,
+            "pairedRatio": 0.7169016326463118
+          },
+          {
+            "core": 1.5007781982421877e-08,
+            "eigen": 2.3443174362182616e-08,
+            "coreP95": 1.5312528610229493e-08,
+            "eigenP95": 2.386331558227539e-08,
+            "pairedRatio": 0.6418612648503197
+          }
+        ]
+      },
+      "public_large": {
+        "medianUs": 0.015612220764160155,
+        "eigenMedianUs": 0.023398542404174803,
+        "p95Us": 0.015838146209716797,
+        "eigenP95Us": 0.02414994239807129,
+        "pairedEigenRatio": 0.658685019888948,
+        "ratio95": [
+          0.5330604713245495,
+          0.7863684271625557
+        ],
+        "processes": [
+          {
+            "core": 1.6337919235229494e-08,
+            "eigen": 2.0790576934814454e-08,
+            "coreP95": 1.6876840591430665e-08,
+            "eigenP95": 2.096877098083496e-08,
+            "pairedRatio": 0.7863684271625557
+          },
+          {
+            "core": 1.5453505516052247e-08,
+            "eigen": 2.3398542404174803e-08,
+            "coreP95": 1.5629673004150392e-08,
+            "eigenP95": 2.414994239807129e-08,
+            "pairedRatio": 0.658685019888948
+          },
+          {
+            "core": 1.5666031837463377e-08,
+            "eigen": 2.9367828369140625e-08,
+            "coreP95": 1.5838146209716798e-08,
+            "eigenP95": 2.9646539688110352e-08,
+            "pairedRatio": 0.5330604713245495
+          },
+          {
+            "core": 1.5612220764160155e-08,
+            "eigen": 2.3291683197021484e-08,
+            "coreP95": 1.5757083892822265e-08,
+            "eigenP95": 2.3830223083496095e-08,
+            "pairedRatio": 0.6702098772684315
+          },
+          {
+            "core": 1.5375828742980958e-08,
+            "eigen": 2.43039608001709e-08,
+            "coreP95": 1.6200590133666993e-08,
+            "eigenP95": 2.4831104278564452e-08,
+            "pairedRatio": 0.633850386627991
+          }
+        ]
+      },
+      "afterBeforeRatio": 1.053416219730213,
+      "afterBefore95": [
+        1.024523727822683,
+        1.099714825388725
+      ]
+    },
+    {
+      "n": 2,
+      "m": 8,
+      "phase": 2,
+      "actual": {
+        "medianUs": 0.04613666534423828,
+        "eigenMedianUs": 0.05532994270324707,
+        "p95Us": 0.0466313362121582,
+        "eigenP95Us": 0.05599212646484375,
+        "pairedEigenRatio": 0.8329650542810784,
+        "ratio95": [
+          0.8152314664777264,
+          0.8597581115095108
+        ],
+        "processes": [
+          {
+            "core": 4.6159458160400396e-08,
+            "eigen": 5.66378116607666e-08,
+            "coreP95": 4.669380187988281e-08,
+            "eigenP95": 5.765390396118164e-08,
+            "pairedRatio": 0.8152314664777264
+          },
+          {
+            "core": 4.5984601974487305e-08,
+            "eigen": 5.5329942703247074e-08,
+            "coreP95": 4.6584320068359375e-08,
+            "eigenP95": 5.661029815673828e-08,
+            "pairedRatio": 0.831833603820524
+          },
+          {
+            "core": 4.627141952514648e-08,
+            "eigen": 5.380325317382813e-08,
+            "coreP95": 4.6631336212158205e-08,
+            "eigenP95": 5.441513061523438e-08,
+            "pairedRatio": 0.8597581115095108
+          },
+          {
+            "core": 4.595389366149902e-08,
+            "eigen": 5.4188585281372076e-08,
+            "coreP95": 4.6338367462158205e-08,
+            "eigenP95": 5.4715251922607425e-08,
+            "pairedRatio": 0.8477522486755291
+          },
+          {
+            "core": 4.613666534423828e-08,
+            "eigen": 5.537824630737305e-08,
+            "coreP95": 4.66883659362793e-08,
+            "eigenP95": 5.599212646484375e-08,
+            "pairedRatio": 0.8329650542810784
+          }
+        ]
+      },
+      "public_large": {
+        "medianUs": 0.04652256965637207,
+        "eigenMedianUs": 0.05549979209899903,
+        "p95Us": 0.04736690521240234,
+        "eigenP95Us": 0.056904029846191403,
+        "pairedEigenRatio": 0.8382991750704253,
+        "ratio95": [
+          0.7549214431064635,
+          0.861189336448212
+        ],
+        "processes": [
+          {
+            "core": 4.648876190185547e-08,
+            "eigen": 5.399360656738281e-08,
+            "coreP95": 4.741449356079101e-08,
+            "eigenP95": 5.479087829589844e-08,
+            "pairedRatio": 0.861189336448212
+          },
+          {
+            "core": 4.6711301803588866e-08,
+            "eigen": 5.5568838119506834e-08,
+            "coreP95": 4.711027145385742e-08,
+            "eigenP95": 5.7151031494140625e-08,
+            "pairedRatio": 0.8382991750704253
+          },
+          {
+            "core": 4.650282859802246e-08,
+            "eigen": 6.15847110748291e-08,
+            "coreP95": 4.7843456268310544e-08,
+            "eigenP95": 6.250219345092773e-08,
+            "pairedRatio": 0.7549214431064635
+          },
+          {
+            "core": 4.652256965637207e-08,
+            "eigen": 5.549979209899903e-08,
+            "coreP95": 4.7049999237060544e-08,
+            "eigenP95": 5.66187858581543e-08,
+            "pairedRatio": 0.8378705273993292
+          },
+          {
+            "core": 4.658718109130859e-08,
+            "eigen": 5.5459785461425786e-08,
+            "coreP95": 4.736690521240234e-08,
+            "eigenP95": 5.6904029846191404e-08,
+            "pairedRatio": 0.8404805181714199
+          }
+        ]
+      },
+      "afterBeforeRatio": 1.0097648094787277,
+      "afterBefore95": [
+        1.0050011232689808,
+        1.0158031123006075
+      ]
+    },
+    {
+      "n": 2,
+      "m": 8,
+      "phase": 3,
+      "actual": {
+        "medianUs": 0.15144748687744142,
+        "eigenMedianUs": 0.11017971038818358,
+        "p95Us": 0.15339450836181642,
+        "eigenP95Us": 0.11129112243652343,
+        "pairedEigenRatio": 1.3724669473346256,
+        "ratio95": [
+          1.3618172987873582,
+          1.380913199738309
+        ],
+        "processes": [
+          {
+            "core": 1.5198163986206056e-07,
+            "eigen": 1.1064033508300781e-07,
+            "coreP95": 1.5339450836181642e-07,
+            "eigenP95": 1.1285820007324219e-07,
+            "pairedRatio": 1.3724669473346256
+          },
+          {
+            "core": 1.5110139846801758e-07,
+            "eigen": 1.1099634170532226e-07,
+            "coreP95": 1.5304718017578125e-07,
+            "eigenP95": 1.1226234436035157e-07,
+            "pairedRatio": 1.3618172987873582
+          },
+          {
+            "core": 1.514537811279297e-07,
+            "eigen": 1.0971755981445311e-07,
+            "coreP95": 1.551828384399414e-07,
+            "eigenP95": 1.1129112243652344e-07,
+            "pairedRatio": 1.380913199738309
+          },
+          {
+            "core": 1.4991683959960936e-07,
+            "eigen": 1.1007280349731445e-07,
+            "coreP95": 1.509828567504883e-07,
+            "eigenP95": 1.1084880828857422e-07,
+            "pairedRatio": 1.3619272154613409
+          },
+          {
+            "core": 1.514474868774414e-07,
+            "eigen": 1.1017971038818358e-07,
+            "coreP95": 1.583080291748047e-07,
+            "eigenP95": 1.1095123291015624e-07,
+            "pairedRatio": 1.3750487832102571
+          }
+        ]
+      },
+      "public_large": {
+        "medianUs": 0.15176553726196287,
+        "eigenMedianUs": 0.11047897338867187,
+        "p95Us": 0.15471134185791016,
+        "eigenP95Us": 0.11226577758789062,
+        "pairedEigenRatio": 1.3729682402400605,
+        "ratio95": [
+          1.3671572098692901,
+          1.38190911997128
+        ],
+        "processes": [
+          {
+            "core": 1.521097183227539e-07,
+            "eigen": 1.1023550033569337e-07,
+            "coreP95": 1.5337371826171874e-07,
+            "eigenP95": 1.1070098876953125e-07,
+            "pairedRatio": 1.38190911997128
+          },
+          {
+            "core": 1.5176553726196288e-07,
+            "eigen": 1.1050434112548829e-07,
+            "coreP95": 1.5302391052246093e-07,
+            "eigenP95": 1.1222248077392578e-07,
+            "pairedRatio": 1.3729432549020961
+          },
+          {
+            "core": 1.5330324172973633e-07,
+            "eigen": 1.122138023376465e-07,
+            "coreP95": 1.5471134185791015e-07,
+            "eigenP95": 1.1285800933837891e-07,
+            "pairedRatio": 1.3671572098692901
+          },
+          {
+            "core": 1.5136995315551758e-07,
+            "eigen": 1.1012172698974608e-07,
+            "coreP95": 1.55133056640625e-07,
+            "eigenP95": 1.1226577758789062e-07,
+            "pairedRatio": 1.3756486822650875
+          },
+          {
+            "core": 1.51580810546875e-07,
+            "eigen": 1.1047897338867187e-07,
+            "coreP95": 1.5717182159423828e-07,
+            "eigenP95": 1.132425308227539e-07,
+            "pairedRatio": 1.3729682402400605
+          }
+        ]
+      },
+      "afterBeforeRatio": 1.004395318644823,
+      "afterBefore95": [
+        1.0008427232447918,
+        1.0122113861273918
+      ]
+    },
+    {
+      "n": 32,
+      "m": 128,
+      "phase": 0,
+      "actual": {
+        "medianUs": 1.5439407348632812,
+        "eigenMedianUs": 2.2121612548828127,
+        "p95Us": 1.571783447265625,
+        "eigenP95Us": 2.2381500244140624,
+        "pairedEigenRatio": 0.6977670080317502,
+        "ratio95": [
+          0.6185491597612343,
+          0.7007571976742026
+        ],
+        "processes": [
+          {
+            "core": 1.5445037841796874e-06,
+            "eigen": 2.4987701416015625e-06,
+            "coreP95": 1.5527130126953126e-06,
+            "eigenP95": 2.518218994140625e-06,
+            "pairedRatio": 0.6185491597612343
+          },
+          {
+            "core": 1.5403610229492187e-06,
+            "eigen": 2.2121612548828125e-06,
+            "coreP95": 1.571783447265625e-06,
+            "eigenP95": 2.2288238525390626e-06,
+            "pairedRatio": 0.6977670080317502
+          },
+          {
+            "core": 1.5375366210937499e-06,
+            "eigen": 2.219581604003906e-06,
+            "coreP95": 1.5549041748046875e-06,
+            "eigenP95": 2.2393402099609377e-06,
+            "pairedRatio": 0.6934373856505344
+          },
+          {
+            "core": 1.5472442626953124e-06,
+            "eigen": 2.20650634765625e-06,
+            "coreP95": 1.603204345703125e-06,
+            "eigenP95": 2.2381500244140623e-06,
+            "pairedRatio": 0.7007571976742026
+          },
+          {
+            "core": 1.5439407348632813e-06,
+            "eigen": 2.2119583129882813e-06,
+            "coreP95": 1.5723175048828124e-06,
+            "eigenP95": 2.227362060546875e-06,
+            "pairedRatio": 0.6978749602727792
+          }
+        ]
+      },
+      "public_large": {
+        "medianUs": 1.5413513183593748,
+        "eigenMedianUs": 2.2133636474609375,
+        "p95Us": 1.561590576171875,
+        "eigenP95Us": 2.23284912109375,
+        "pairedEigenRatio": 0.6960564049986508,
+        "ratio95": [
+          0.6934804287765103,
+          0.6991925043488706
+        ],
+        "processes": [
+          {
+            "core": 1.5412857055664064e-06,
+            "eigen": 2.21673583984375e-06,
+            "coreP95": 1.5662811279296875e-06,
+            "eigenP95": 2.232818603515625e-06,
+            "pairedRatio": 0.6942845947048811
+          },
+          {
+            "core": 1.5413513183593749e-06,
+            "eigen": 2.2236694335937497e-06,
+            "coreP95": 1.561590576171875e-06,
+            "eigenP95": 2.2531585693359373e-06,
+            "pairedRatio": 0.6934804287765103
+          },
+          {
+            "core": 1.5431961059570312e-06,
+            "eigen": 2.2118331909179686e-06,
+            "coreP95": 1.55596923828125e-06,
+            "eigenP95": 2.2471954345703124e-06,
+            "pairedRatio": 0.69887182869114
+          },
+          {
+            "core": 1.5452438354492188e-06,
+            "eigen": 2.2133636474609373e-06,
+            "coreP95": 1.5885040283203124e-06,
+            "eigenP95": 2.23284912109375e-06,
+            "pairedRatio": 0.6991925043488706
+          },
+          {
+            "core": 1.5352264404296874e-06,
+            "eigen": 2.2070739746093752e-06,
+            "coreP95": 1.5576934814453124e-06,
+            "eigenP95": 2.225738525390625e-06,
+            "pairedRatio": 0.6960564049986508
+          }
+        ]
+      },
+      "afterBeforeRatio": 0.9987071031418084,
+      "afterBefore95": [
+        0.994355810273789,
+        1.003680878091382
+      ]
+    },
+    {
+      "n": 32,
+      "m": 128,
+      "phase": 1,
+      "actual": {
+        "medianUs": 0.31589508056640625,
+        "eigenMedianUs": 0.5598777770996094,
+        "p95Us": 0.32060546875,
+        "eigenP95Us": 0.5716697692871093,
+        "pairedEigenRatio": 0.5641782922486709,
+        "ratio95": [
+          0.5107611172101769,
+          0.5689339259240916
+        ],
+        "processes": [
+          {
+            "core": 3.153453826904297e-07,
+            "eigen": 5.598777770996094e-07,
+            "coreP95": 3.2245101928710936e-07,
+            "eigenP95": 5.643753051757813e-07,
+            "pairedRatio": 0.5641782922486709
+          },
+          {
+            "core": 3.162818908691406e-07,
+            "eigen": 6.167823791503906e-07,
+            "coreP95": 3.2060546875e-07,
+            "eigenP95": 6.236953735351563e-07,
+            "pairedRatio": 0.5124319507632681
+          },
+          {
+            "core": 3.1589508056640623e-07,
+            "eigen": 5.562118530273437e-07,
+            "coreP95": 3.218360900878906e-07,
+            "eigenP95": 5.659042358398437e-07,
+            "pairedRatio": 0.5689339259240916
+          },
+          {
+            "core": 3.165206909179687e-07,
+            "eigen": 5.595344543457031e-07,
+            "coreP95": 3.2012939453125e-07,
+            "eigenP95": 5.716697692871093e-07,
+            "pairedRatio": 0.5651075928001976
+          },
+          {
+            "core": 3.153999328613281e-07,
+            "eigen": 6.161098480224609e-07,
+            "coreP95": 3.193962097167969e-07,
+            "eigenP95": 6.300323486328125e-07,
+            "pairedRatio": 0.5107611172101769
+          }
+        ]
+      },
+      "public_large": {
+        "medianUs": 0.3161708831787109,
+        "eigenMedianUs": 0.5577018737792969,
+        "p95Us": 0.3207145690917969,
+        "eigenP95Us": 0.564947509765625,
+        "pairedEigenRatio": 0.5669151918768537,
+        "ratio95": [
+          0.5107627311904094,
+          0.5690558480804497
+        ],
+        "processes": [
+          {
+            "core": 3.170822143554688e-07,
+            "eigen": 5.608425140380859e-07,
+            "coreP95": 3.20233154296875e-07,
+            "eigenP95": 5.648406982421875e-07,
+            "pairedRatio": 0.5664681362895517
+          },
+          {
+            "core": 3.161708831787109e-07,
+            "eigen": 5.577018737792969e-07,
+            "coreP95": 3.2218704223632814e-07,
+            "eigenP95": 5.658607482910156e-07,
+            "pairedRatio": 0.5669151918768537
+          },
+          {
+            "core": 3.1730079650878907e-07,
+            "eigen": 5.575035095214844e-07,
+            "coreP95": 3.207145690917969e-07,
+            "eigenP95": 5.62164306640625e-07,
+            "pairedRatio": 0.5690558480804497
+          },
+          {
+            "core": 3.155860900878906e-07,
+            "eigen": 5.555164337158204e-07,
+            "coreP95": 3.236961364746094e-07,
+            "eigenP95": 5.64947509765625e-07,
+            "pairedRatio": 0.5680290528006445
+          },
+          {
+            "core": 3.153095245361328e-07,
+            "eigen": 6.169254302978516e-07,
+            "coreP95": 3.206146240234375e-07,
+            "eigenP95": 6.290458679199219e-07,
+            "pairedRatio": 0.5107627311904094
+          }
+        ]
+      },
+      "afterBeforeRatio": 0.9997133533784388,
+      "afterBefore95": [
+        0.9970472678188349,
+        1.0055077123699132
+      ]
+    },
+    {
+      "n": 32,
+      "m": 128,
+      "phase": 2,
+      "actual": {
+        "medianUs": 1.8781829833984374,
+        "eigenMedianUs": 2.9184478759765624,
+        "p95Us": 1.89979248046875,
+        "eigenP95Us": 2.950250244140625,
+        "pairedEigenRatio": 0.6430529112493024,
+        "ratio95": [
+          0.5955589759046738,
+          0.6574968019004819
+        ],
+        "processes": [
+          {
+            "core": 1.8814849853515625e-06,
+            "eigen": 3.1554718017578126e-06,
+            "coreP95": 1.931610107421875e-06,
+            "eigenP95": 3.1739990234375e-06,
+            "pairedRatio": 0.5955589759046738
+          },
+          {
+            "core": 1.87860107421875e-06,
+            "eigen": 2.9184478759765625e-06,
+            "coreP95": 1.89979248046875e-06,
+            "eigenP95": 3.001129150390625e-06,
+            "pairedRatio": 0.6430529112493024
+          },
+          {
+            "core": 1.870806884765625e-06,
+            "eigen": 2.8570098876953123e-06,
+            "coreP95": 1.8942626953125e-06,
+            "eigenP95": 2.889556884765625e-06,
+            "pairedRatio": 0.6545050049882144
+          },
+          {
+            "core": 1.8781829833984374e-06,
+            "eigen": 2.8571166992187503e-06,
+            "coreP95": 1.9025390625e-06,
+            "eigenP95": 2.90107421875e-06,
+            "pairedRatio": 0.6574968019004819
+          },
+          {
+            "core": 1.8713104248046875e-06,
+            "eigen": 2.918716430664062e-06,
+            "coreP95": 1.89761962890625e-06,
+            "eigenP95": 2.950250244140625e-06,
+            "pairedRatio": 0.6421207190557372
+          }
+        ]
+      },
+      "public_large": {
+        "medianUs": 1.8768524169921874,
+        "eigenMedianUs": 2.8417510986328125,
+        "p95Us": 1.90335693359375,
+        "eigenP95Us": 2.872589111328125,
+        "pairedEigenRatio": 0.6609554570567484,
+        "ratio95": [
+          0.6478240955207317,
+          0.6654419586113337
+        ],
+        "processes": [
+          {
+            "core": 1.8787658691406251e-06,
+            "eigen": 2.8417510986328123e-06,
+            "coreP95": 1.89473876953125e-06,
+            "eigenP95": 2.872589111328125e-06,
+            "pairedRatio": 0.6609554570567484
+          },
+          {
+            "core": 1.8768524169921875e-06,
+            "eigen": 2.84871826171875e-06,
+            "coreP95": 1.905670166015625e-06,
+            "eigenP95": 3.0176513671875e-06,
+            "pairedRatio": 0.6600821131579584
+          },
+          {
+            "core": 1.8815582275390625e-06,
+            "eigen": 2.82828369140625e-06,
+            "coreP95": 1.926031494140625e-06,
+            "eigenP95": 2.860211181640625e-06,
+            "pairedRatio": 0.6654419586113337
+          },
+          {
+            "core": 1.8766937255859375e-06,
+            "eigen": 2.819696044921875e-06,
+            "coreP95": 1.899481201171875e-06,
+            "eigenP95": 2.845037841796875e-06,
+            "pairedRatio": 0.6653575004331783
+          },
+          {
+            "core": 1.8688079833984376e-06,
+            "eigen": 2.8829437255859377e-06,
+            "coreP95": 1.90335693359375e-06,
+            "eigenP95": 2.9251953125e-06,
+            "pairedRatio": 0.6478240955207317
+          }
+        ]
+      },
+      "afterBeforeRatio": 0.999069170538354,
+      "afterBefore95": [
+        0.998554803130449,
+        1.0057469014364806
+      ]
+    },
+    {
+      "n": 32,
+      "m": 128,
+      "phase": 3,
+      "actual": {
+        "medianUs": 2.1413787841796874,
+        "eigenMedianUs": 3.171334838867187,
+        "p95Us": 2.186065673828125,
+        "eigenP95Us": 3.231927490234375,
+        "pairedEigenRatio": 0.6746762668351298,
+        "ratio95": [
+          0.6173841958538638,
+          0.6767012594834811
+        ],
+        "processes": [
+          {
+            "core": 2.1413787841796875e-06,
+            "eigen": 3.469439697265625e-06,
+            "coreP95": 2.186065673828125e-06,
+            "eigenP95": 3.502313232421875e-06,
+            "pairedRatio": 0.6173841958538638
+          },
+          {
+            "core": 2.14410400390625e-06,
+            "eigen": 3.17593994140625e-06,
+            "coreP95": 2.177349853515625e-06,
+            "eigenP95": 3.208233642578125e-06,
+            "pairedRatio": 0.6746762668351298
+          },
+          {
+            "core": 2.14273681640625e-06,
+            "eigen": 3.1691497802734375e-06,
+            "coreP95": 2.19403076171875e-06,
+            "eigenP95": 3.2237548828125e-06,
+            "pairedRatio": 0.6767012594834811
+          },
+          {
+            "core": 2.139617919921875e-06,
+            "eigen": 3.1601318359375e-06,
+            "coreP95": 2.17562255859375e-06,
+            "eigenP95": 3.231927490234375e-06,
+            "pairedRatio": 0.676047394397358
+          },
+          {
+            "core": 2.1386993408203125e-06,
+            "eigen": 3.1713348388671872e-06,
+            "coreP95": 2.198150634765625e-06,
+            "eigenP95": 3.30653076171875e-06,
+            "pairedRatio": 0.6739429484892969
+          }
+        ]
+      },
+      "public_large": {
+        "medianUs": 2.148574829101563,
+        "eigenMedianUs": 3.1616729736328124,
+        "p95Us": 2.176617431640625,
+        "eigenP95Us": 3.20419921875,
+        "pairedEigenRatio": 0.6789041362573729,
+        "ratio95": [
+          0.6501976340653997,
+          0.6817200169059583
+        ],
+        "processes": [
+          {
+            "core": 2.13787841796875e-06,
+            "eigen": 3.2885345458984375e-06,
+            "coreP95": 2.169903564453125e-06,
+            "eigenP95": 3.327099609375e-06,
+            "pairedRatio": 0.6501976340653997
+          },
+          {
+            "core": 2.1485748291015628e-06,
+            "eigen": 3.1613800048828123e-06,
+            "coreP95": 2.169952392578125e-06,
+            "eigenP95": 3.20419921875e-06,
+            "pairedRatio": 0.6789041362573729
+          },
+          {
+            "core": 2.1459442138671875e-06,
+            "eigen": 3.155413818359375e-06,
+            "coreP95": 2.262237548828125e-06,
+            "eigenP95": 3.205511474609375e-06,
+            "pairedRatio": 0.6784749448758566
+          },
+          {
+            "core": 2.1604949951171875e-06,
+            "eigen": 3.1684234619140624e-06,
+            "coreP95": 2.247943115234375e-06,
+            "eigenP95": 3.19326171875e-06,
+            "pairedRatio": 0.6817200169059583
+          },
+          {
+            "core": 2.1488800048828122e-06,
+            "eigen": 3.1616729736328122e-06,
+            "coreP95": 2.176617431640625e-06,
+            "eigenP95": 3.194732666015625e-06,
+            "pairedRatio": 0.6797882920382645
+          }
+        ]
+      },
+      "afterBeforeRatio": 1.002085171795383,
+      "afterBefore95": [
+        0.9983653680344656,
+        1.0097573847185177
+      ]
+    },
+    {
+      "n": 64,
+      "m": 256,
+      "phase": 0,
+      "actual": {
+        "medianUs": 8.51368408203125,
+        "eigenMedianUs": 8.9326904296875,
+        "p95Us": 8.615380859375001,
+        "eigenP95Us": 9.0667724609375,
+        "pairedEigenRatio": 0.9567324387790762,
+        "ratio95": [
+          0.8837557765354696,
+          0.9649110976119875
+        ],
+        "processes": [
+          {
+            "core": 8.1724609375e-06,
+            "eigen": 9.2571533203125e-06,
+            "coreP95": 8.615380859375e-06,
+            "eigenP95": 9.3505859375e-06,
+            "pairedRatio": 0.8837557765354696
+          },
+          {
+            "core": 8.61900634765625e-06,
+            "eigen": 8.932690429687501e-06,
+            "coreP95": 8.683349609375e-06,
+            "eigenP95": 9.0667724609375e-06,
+            "pairedRatio": 0.9649110976119875
+          },
+          {
+            "core": 8.26015625e-06,
+            "eigen": 8.976220703124999e-06,
+            "coreP95": 8.495458984375e-06,
+            "eigenP95": 9.0458740234375e-06,
+            "pairedRatio": 0.919629951040319
+          },
+          {
+            "core": 8.51368408203125e-06,
+            "eigen": 8.896923828124999e-06,
+            "coreP95": 8.5703857421875e-06,
+            "eigenP95": 8.955224609375e-06,
+            "pairedRatio": 0.9567324387790762
+          },
+          {
+            "core": 8.577490234374999e-06,
+            "eigen": 8.932690429687501e-06,
+            "coreP95": 8.6924072265625e-06,
+            "eigenP95": 9.0966064453125e-06,
+            "pairedRatio": 0.9598748087797914
+          }
+        ]
+      },
+      "public_large": {
+        "medianUs": 8.45882568359375,
+        "eigenMedianUs": 8.937744140625,
+        "p95Us": 8.539453125,
+        "eigenP95Us": 9.1567626953125,
+        "pairedEigenRatio": 0.9507625935130701,
+        "ratio95": [
+          0.9189781298773004,
+          0.959285369254554
+        ],
+        "processes": [
+          {
+            "core": 8.49263916015625e-06,
+            "eigen": 8.908544921875001e-06,
+            "coreP95": 8.6779052734375e-06,
+            "eigenP95": 9.0382080078125e-06,
+            "pairedRatio": 0.9526335441312598
+          },
+          {
+            "core": 8.446044921875e-06,
+            "eigen": 8.8925048828125e-06,
+            "coreP95": 8.5161865234375e-06,
+            "eigenP95": 8.9514892578125e-06,
+            "pairedRatio": 0.9507625935130701
+          },
+          {
+            "core": 8.45882568359375e-06,
+            "eigen": 9.124743652343751e-06,
+            "coreP95": 8.539453125e-06,
+            "eigenP95": 9.181591796875e-06,
+            "pairedRatio": 0.9274453997983343
+          },
+          {
+            "core": 8.574316406249999e-06,
+            "eigen": 8.937744140625e-06,
+            "coreP95": 8.779736328125e-06,
+            "eigenP95": 9.1572998046875e-06,
+            "pairedRatio": 0.959285369254554
+          },
+          {
+            "core": 8.313562011718749e-06,
+            "eigen": 9.049951171875e-06,
+            "coreP95": 8.479443359375e-06,
+            "eigenP95": 9.1567626953125e-06,
+            "pairedRatio": 0.9189781298773004
+          }
+        ]
+      },
+      "afterBeforeRatio": 1.007121749366613,
+      "afterBefore95": [
+        0.9692301342881702,
+        1.0391776999737112
+      ]
+    },
+    {
+      "n": 64,
+      "m": 256,
+      "phase": 1,
+      "actual": {
+        "medianUs": 0.8780647277832031,
+        "eigenMedianUs": 1.2638153076171874,
+        "p95Us": 0.8962387084960938,
+        "eigenP95Us": 1.2925079345703125,
+        "pairedEigenRatio": 0.6943999210847958,
+        "ratio95": [
+          0.6328479906617662,
+          0.6964405159232656
+        ],
+        "processes": [
+          {
+            "core": 8.780647277832031e-07,
+            "eigen": 1.3869796752929689e-06,
+            "coreP95": 8.962387084960938e-07,
+            "eigenP95": 1.3948440551757812e-06,
+            "pairedRatio": 0.6328479906617662
+          },
+          {
+            "core": 8.789779663085938e-07,
+            "eigen": 1.3868392944335937e-06,
+            "coreP95": 8.973159790039062e-07,
+            "eigenP95": 1.4005050659179688e-06,
+            "pairedRatio": 0.6340841095573748
+          },
+          {
+            "core": 8.791114807128906e-07,
+            "eigen": 1.2624946594238282e-06,
+            "coreP95": 8.962615966796875e-07,
+            "eigenP95": 1.2925079345703125e-06,
+            "pairedRatio": 0.6964405159232656
+          },
+          {
+            "core": 8.777854919433593e-07,
+            "eigen": 1.2638153076171874e-06,
+            "coreP95": 8.836624145507813e-07,
+            "eigenP95": 1.2883743286132811e-06,
+            "pairedRatio": 0.6946161868721583
+          },
+          {
+            "core": 8.767906188964844e-07,
+            "eigen": 1.2633918762207031e-06,
+            "coreP95": 8.961151123046874e-07,
+            "eigenP95": 1.2697494506835938e-06,
+            "pairedRatio": 0.6943999210847958
+          }
+        ]
+      },
+      "public_large": {
+        "medianUs": 0.8704399108886719,
+        "eigenMedianUs": 1.2638534545898439,
+        "p95Us": 0.88427734375,
+        "eigenP95Us": 1.2937088012695312,
+        "pairedEigenRatio": 0.6882672239873862,
+        "ratio95": [
+          0.6270461163524044,
+          0.6921468635602104
+        ],
+        "processes": [
+          {
+            "core": 8.722702026367187e-07,
+            "eigen": 1.260021209716797e-06,
+            "coreP95": 8.8427734375e-07,
+            "eigenP95": 1.2937088012695312e-06,
+            "pairedRatio": 0.6921468635602104
+          },
+          {
+            "core": 8.719085693359375e-07,
+            "eigen": 1.2649574279785158e-06,
+            "coreP95": 8.90106201171875e-07,
+            "eigenP95": 1.3031814575195313e-06,
+            "pairedRatio": 0.6907155178045015
+          },
+          {
+            "core": 8.662979125976562e-07,
+            "eigen": 1.379661560058594e-06,
+            "coreP95": 8.767059326171875e-07,
+            "eigenP95": 1.440838623046875e-06,
+            "pairedRatio": 0.6270461163524044
+          },
+          {
+            "core": 8.704399108886719e-07,
+            "eigen": 1.263853454589844e-06,
+            "coreP95": 8.795791625976562e-07,
+            "eigenP95": 1.2789520263671875e-06,
+            "pairedRatio": 0.6882672239873862
+          },
+          {
+            "core": 8.696510314941406e-07,
+            "eigen": 1.2619705200195313e-06,
+            "coreP95": 8.8514404296875e-07,
+            "eigenP95": 1.274853515625e-06,
+            "pairedRatio": 0.6881931019139664
+          }
+        ]
+      },
+      "afterBeforeRatio": 0.9918571352744062,
+      "afterBefore95": [
+        0.9854244104458247,
+        0.9934007995502637
+      ]
+    },
+    {
+      "n": 64,
+      "m": 256,
+      "phase": 2,
+      "actual": {
+        "medianUs": 9.3996826171875,
+        "eigenMedianUs": 10.31695556640625,
+        "p95Us": 9.4794921875,
+        "eigenP95Us": 10.5125244140625,
+        "pairedEigenRatio": 0.9034665604644578,
+        "ratio95": [
+          0.8398416771906991,
+          0.9184258413520336
+        ],
+        "processes": [
+          {
+            "core": 9.01192626953125e-06,
+            "eigen": 1.07357421875e-05,
+            "coreP95": 9.1350830078125e-06,
+            "eigenP95": 1.08918701171875e-05,
+            "pairedRatio": 0.8398416771906991
+          },
+          {
+            "core": 9.399682617187499e-06,
+            "eigen": 1.038734130859375e-05,
+            "coreP95": 9.5326416015625e-06,
+            "eigenP95": 1.05576904296875e-05,
+            "pairedRatio": 0.9034665604644578
+          },
+          {
+            "core": 9.09625244140625e-06,
+            "eigen": 1.031695556640625e-05,
+            "coreP95": 9.145263671875e-06,
+            "eigenP95": 1.0424658203125e-05,
+            "pairedRatio": 0.882479950724038
+          },
+          {
+            "core": 9.432507324218751e-06,
+            "eigen": 1.02455322265625e-05,
+            "coreP95": 9.597509765625e-06,
+            "eigenP95": 1.05125244140625e-05,
+            "pairedRatio": 0.9184258413520336
+          },
+          {
+            "core": 9.4000244140625e-06,
+            "eigen": 1.0300280761718751e-05,
+            "coreP95": 9.4794921875e-06,
+            "eigenP95": 1.04871826171875e-05,
+            "pairedRatio": 0.9121340075167035
+          }
+        ]
+      },
+      "public_large": {
+        "medianUs": 9.336669921875,
+        "eigenMedianUs": 10.23651123046875,
+        "p95Us": 9.5365478515625,
+        "eigenP95Us": 10.5174072265625,
+        "pairedEigenRatio": 0.9144936790221534,
+        "ratio95": [
+          0.8864259550200155,
+          0.9201568749827881
+        ],
+        "processes": [
+          {
+            "core": 9.321142578125e-06,
+            "eigen": 1.0182629394531249e-05,
+            "coreP95": 9.6358154296875e-06,
+            "eigenP95": 1.08799560546875e-05,
+            "pairedRatio": 0.9144936790221534
+          },
+          {
+            "core": 9.3973388671875e-06,
+            "eigen": 1.020611572265625e-05,
+            "coreP95": 9.5365478515625e-06,
+            "eigenP95": 1.03228515625e-05,
+            "pairedRatio": 0.9188762249752871
+          },
+          {
+            "core": 9.336669921875e-06,
+            "eigen": 1.050433349609375e-05,
+            "coreP95": 9.921240234375e-06,
+            "eigenP95": 1.06796875e-05,
+            "pairedRatio": 0.8864259550200155
+          },
+          {
+            "core": 9.41510009765625e-06,
+            "eigen": 1.023651123046875e-05,
+            "coreP95": 9.4891357421875e-06,
+            "eigenP95": 1.0302880859375e-05,
+            "pairedRatio": 0.9201568749827881
+          },
+          {
+            "core": 9.222534179687501e-06,
+            "eigen": 1.038385009765625e-05,
+            "coreP95": 9.2794189453125e-06,
+            "eigenP95": 1.05174072265625e-05,
+            "pairedRatio": 0.8876304764625085
+          }
+        ]
+      },
+      "afterBeforeRatio": 0.9997506564747501,
+      "afterBefore95": [
+        0.9811181092136875,
+        1.0343118995146678
+      ]
+    },
+    {
+      "n": 64,
+      "m": 256,
+      "phase": 3,
+      "actual": {
+        "medianUs": 10.3412353515625,
+        "eigenMedianUs": 12.08739013671875,
+        "p95Us": 10.5063232421875,
+        "eigenP95Us": 12.318701171875,
+        "pairedEigenRatio": 0.8552574536471114,
+        "ratio95": [
+          0.8308586670748045,
+          0.8636501968112582
+        ],
+        "processes": [
+          {
+            "core": 1.033592529296875e-05,
+            "eigen": 1.243240966796875e-05,
+            "coreP95": 1.03983642578125e-05,
+            "eigenP95": 1.26977294921875e-05,
+            "pairedRatio": 0.8308586670748045
+          },
+          {
+            "core": 1.043291015625e-05,
+            "eigen": 1.208739013671875e-05,
+            "coreP95": 1.06010009765625e-05,
+            "eigenP95": 1.25220947265625e-05,
+            "pairedRatio": 0.8636501968112582
+          },
+          {
+            "core": 1.039456787109375e-05,
+            "eigen": 1.212984619140625e-05,
+            "coreP95": 1.05063232421875e-05,
+            "eigenP95": 1.2318701171875e-05,
+            "pairedRatio": 0.8557411212066575
+          },
+          {
+            "core": 1.03412353515625e-05,
+            "eigen": 1.2070556640625e-05,
+            "coreP95": 1.06759033203125e-05,
+            "eigenP95": 1.2224755859375e-05,
+            "pairedRatio": 0.8552574536471114
+          },
+          {
+            "core": 1.0287133789062499e-05,
+            "eigen": 1.2039379882812501e-05,
+            "coreP95": 1.04839111328125e-05,
+            "eigenP95": 1.218994140625e-05,
+            "pairedRatio": 0.8551766882679207
+          }
+        ]
+      },
+      "public_large": {
+        "medianUs": 10.27691650390625,
+        "eigenMedianUs": 12.18392333984375,
+        "p95Us": 10.5451171875,
+        "eigenP95Us": 12.439208984375,
+        "pairedEigenRatio": 0.8420127346902344,
+        "ratio95": [
+          0.8376721232139546,
+          0.8553768130845543
+        ],
+        "processes": [
+          {
+            "core": 1.030213623046875e-05,
+            "eigen": 1.2036474609374999e-05,
+            "coreP95": 1.06433349609375e-05,
+            "eigenP95": 1.22741455078125e-05,
+            "pairedRatio": 0.8553768130845543
+          },
+          {
+            "core": 1.02699951171875e-05,
+            "eigen": 1.20664794921875e-05,
+            "coreP95": 1.03505859375e-05,
+            "eigenP95": 1.2189599609375e-05,
+            "pairedRatio": 0.8504680476065485
+          },
+          {
+            "core": 1.0288818359375e-05,
+            "eigen": 1.22602783203125e-05,
+            "coreP95": 1.0742529296875e-05,
+            "eigenP95": 1.2439208984375e-05,
+            "pairedRatio": 0.8387624767490462
+          },
+          {
+            "core": 1.027691650390625e-05,
+            "eigen": 1.218392333984375e-05,
+            "coreP95": 1.05451171875e-05,
+            "eigenP95": 1.24751708984375e-05,
+            "pairedRatio": 0.8420127346902344
+          },
+          {
+            "core": 1.024619140625e-05,
+            "eigen": 1.224412841796875e-05,
+            "coreP95": 1.0451513671875e-05,
+            "eigenP95": 1.24986328125e-05,
+            "pairedRatio": 0.8376721232139546
+          }
+        ]
+      },
+      "afterBeforeRatio": 0.99378035162438,
+      "afterBefore95": [
+        0.9843845066599273,
+        0.9967309107271717
+      ]
+    },
+    {
+      "n": 128,
+      "m": 128,
+      "phase": 0,
+      "actual": {
+        "medianUs": 52.894628906250006,
+        "eigenMedianUs": 43.883056640625,
+        "p95Us": 54.58427734375,
+        "eigenP95Us": 44.373925781249994,
+        "pairedEigenRatio": 1.20766268442491,
+        "ratio95": [
+          1.2036797338462717,
+          1.2159527233077478
+        ],
+        "processes": [
+          {
+            "core": 5.3187451171875e-05,
+            "eigen": 4.3949462890624996e-05,
+            "coreP95": 5.4771484375e-05,
+            "eigenP95": 4.46501953125e-05,
+            "pairedRatio": 1.2081729939935366
+          },
+          {
+            "core": 5.2785888671875e-05,
+            "eigen": 4.3883056640625e-05,
+            "coreP95": 5.458427734375e-05,
+            "eigenP95": 4.435498046875e-05,
+            "pairedRatio": 1.2036797338462717
+          },
+          {
+            "core": 5.2777343749999995e-05,
+            "eigen": 4.38333984375e-05,
+            "coreP95": 5.495869140625e-05,
+            "eigenP95": 4.460166015625e-05,
+            "pairedRatio": 1.2038510856212212
+          },
+          {
+            "core": 5.34923828125e-05,
+            "eigen": 4.3941064453125e-05,
+            "coreP95": 5.44322265625e-05,
+            "eigenP95": 4.42419921875e-05,
+            "pairedRatio": 1.2159527233077478
+          },
+          {
+            "core": 5.2894628906250007e-05,
+            "eigen": 4.3878173828125e-05,
+            "coreP95": 5.395126953125e-05,
+            "eigenP95": 4.437392578125e-05,
+            "pairedRatio": 1.20766268442491
+          }
+        ]
+      },
+      "public_large": {
+        "medianUs": 46.3892578125,
+        "eigenMedianUs": 43.865771484375,
+        "p95Us": 47.04931640625,
+        "eigenP95Us": 44.334765625,
+        "pairedEigenRatio": 1.0598649467829682,
+        "ratio95": [
+          1.0565481205700455,
+          1.0608090717436671
+        ],
+        "processes": [
+          {
+            "core": 4.63892578125e-05,
+            "eigen": 4.3721875e-05,
+            "coreP95": 4.712626953125e-05,
+            "eigenP95": 4.44392578125e-05,
+            "pairedRatio": 1.0607821582030523
+          },
+          {
+            "core": 4.6376513671875005e-05,
+            "eigen": 4.37677734375e-05,
+            "coreP95": 4.704931640625e-05,
+            "eigenP95": 4.41935546875e-05,
+            "pairedRatio": 1.0608090717436671
+          },
+          {
+            "core": 4.6355517578125e-05,
+            "eigen": 4.3902294921875e-05,
+            "coreP95": 4.68015625e-05,
+            "eigenP95": 4.42072265625e-05,
+            "pairedRatio": 1.0565481205700455
+          },
+          {
+            "core": 4.649716796875e-05,
+            "eigen": 4.3865771484375e-05,
+            "coreP95": 4.762001953125e-05,
+            "eigenP95": 4.4334765625e-05,
+            "pairedRatio": 1.0598649467829682
+          },
+          {
+            "core": 4.64888671875e-05,
+            "eigen": 4.3924951171875e-05,
+            "coreP95": 4.69998046875e-05,
+            "eigenP95": 4.454365234375e-05,
+            "pairedRatio": 1.059815158628207
+          }
+        ]
+      },
+      "afterBeforeRatio": 0.8783222929464881,
+      "afterBefore95": [
+        0.8692297019508473,
+        0.8788957999855992
+      ]
+    },
+    {
+      "n": 128,
+      "m": 128,
+      "phase": 1,
+      "actual": {
+        "medianUs": 3.1999633789062503,
+        "eigenMedianUs": 3.1863586425781247,
+        "p95Us": 3.263763427734375,
+        "eigenP95Us": 3.248297119140625,
+        "pairedEigenRatio": 1.0012576792794692,
+        "ratio95": [
+          0.9949786005713643,
+          1.0108622749254665
+        ],
+        "processes": [
+          {
+            "core": 3.1961303710937504e-06,
+            "eigen": 3.207464599609375e-06,
+            "coreP95": 3.25135498046875e-06,
+            "eigenP95": 3.262701416015625e-06,
+            "pairedRatio": 0.9949786005713643
+          },
+          {
+            "core": 3.19996337890625e-06,
+            "eigen": 3.167938232421875e-06,
+            "coreP95": 3.945208740234375e-06,
+            "eigenP95": 3.23250732421875e-06,
+            "pairedRatio": 1.0105462193722867
+          },
+          {
+            "core": 3.1964141845703126e-06,
+            "eigen": 3.1863586425781248e-06,
+            "coreP95": 3.263763427734375e-06,
+            "eigenP95": 3.248297119140625e-06,
+            "pairedRatio": 1.0011747703958742
+          },
+          {
+            "core": 3.200698852539062e-06,
+            "eigen": 3.1658782958984375e-06,
+            "coreP95": 3.24879150390625e-06,
+            "eigenP95": 3.204986572265625e-06,
+            "pairedRatio": 1.0108622749254665
+          },
+          {
+            "core": 3.2021972656250004e-06,
+            "eigen": 3.1931823730468753e-06,
+            "coreP95": 3.263909912109375e-06,
+            "eigenP95": 3.326806640625e-06,
+            "pairedRatio": 1.0012576792794692
+          }
+        ]
+      },
+      "public_large": {
+        "medianUs": 1.9965942382812498,
+        "eigenMedianUs": 3.179534912109375,
+        "p95Us": 2.069232177734375,
+        "eigenP95Us": 3.261553955078125,
+        "pairedEigenRatio": 0.6246652735977156,
+        "ratio95": [
+          0.5658010995872921,
+          0.6328746894304094
+        ],
+        "processes": [
+          {
+            "core": 2.003021240234375e-06,
+            "eigen": 3.179534912109375e-06,
+            "coreP95": 2.069232177734375e-06,
+            "eigenP95": 3.239013671875e-06,
+            "pairedRatio": 0.6290328995634551
+          },
+          {
+            "core": 1.985589599609375e-06,
+            "eigen": 3.1750762939453122e-06,
+            "coreP95": 2.016851806640625e-06,
+            "eigenP95": 3.261553955078125e-06,
+            "pairedRatio": 0.624645746777489
+          },
+          {
+            "core": 2.00447998046875e-06,
+            "eigen": 3.16744384765625e-06,
+            "coreP95": 2.064373779296875e-06,
+            "eigenP95": 3.2130859375e-06,
+            "pairedRatio": 0.6328746894304094
+          },
+          {
+            "core": 1.99373779296875e-06,
+            "eigen": 3.1865570068359375e-06,
+            "coreP95": 2.081768798828125e-06,
+            "eigenP95": 3.352923583984375e-06,
+            "pairedRatio": 0.6246652735977156
+          },
+          {
+            "core": 1.99659423828125e-06,
+            "eigen": 3.5323760986328126e-06,
+            "coreP95": 2.109320068359375e-06,
+            "eigenP95": 3.569744873046875e-06,
+            "pairedRatio": 0.5658010995872921
+          }
+        ]
+      },
+      "afterBeforeRatio": 0.6235075707903203,
+      "afterBefore95": [
+        0.6205038509809606,
+        0.6271027046947635
+      ]
+    },
+    {
+      "n": 128,
+      "m": 128,
+      "phase": 2,
+      "actual": {
+        "medianUs": 56.1171875,
+        "eigenMedianUs": 47.06875,
+        "p95Us": 56.8701171875,
+        "eigenP95Us": 47.6630859375,
+        "pairedEigenRatio": 1.1941462302415755,
+        "ratio95": [
+          1.1905551290576917,
+          1.2056892357419258
+        ],
+        "processes": [
+          {
+            "core": 5.64041015625e-05,
+            "eigen": 4.718369140625e-05,
+            "coreP95": 5.693037109375e-05,
+            "eigenP95": 4.76083984375e-05,
+            "pairedRatio": 1.1945801012504462
+          },
+          {
+            "core": 5.6048291015625e-05,
+            "eigen": 4.7077978515625e-05,
+            "coreP95": 5.66345703125e-05,
+            "eigenP95": 4.815439453125e-05,
+            "pairedRatio": 1.1905551290576917
+          },
+          {
+            "core": 5.60671875e-05,
+            "eigen": 4.706875e-05,
+            "coreP95": 5.68701171875e-05,
+            "eigenP95": 4.76630859375e-05,
+            "pairedRatio": 1.1909385246226911
+          },
+          {
+            "core": 5.6652587890625e-05,
+            "eigen": 4.7052197265625e-05,
+            "coreP95": 5.796826171875e-05,
+            "eigenP95": 4.74298828125e-05,
+            "pairedRatio": 1.2056892357419258
+          },
+          {
+            "core": 5.61171875e-05,
+            "eigen": 4.698818359375e-05,
+            "coreP95": 5.6726953125e-05,
+            "eigenP95": 4.82181640625e-05,
+            "pairedRatio": 1.1941462302415755
+          }
+        ]
+      },
+      "public_large": {
+        "medianUs": 48.551806640624996,
+        "eigenMedianUs": 47.12216796875,
+        "p95Us": 48.977734375000004,
+        "eigenP95Us": 48.01357421875,
+        "pairedEigenRatio": 1.0322239866389566,
+        "ratio95": [
+          1.021002755004817,
+          1.0339471771071453
+        ],
+        "processes": [
+          {
+            "core": 4.8681689453125e-05,
+            "eigen": 4.7134033203124996e-05,
+            "coreP95": 4.98123046875e-05,
+            "eigenP95": 4.873134765625e-05,
+            "pairedRatio": 1.0339471771071453
+          },
+          {
+            "core": 4.8551806640625e-05,
+            "eigen": 4.70111328125e-05,
+            "coreP95": 4.933779296875e-05,
+            "eigenP95": 4.788740234375e-05,
+            "pairedRatio": 1.033589092803644
+          },
+          {
+            "core": 4.8498291015625e-05,
+            "eigen": 4.712216796875e-05,
+            "coreP95": 4.8977734375e-05,
+            "eigenP95": 4.801357421875e-05,
+            "pairedRatio": 1.0285949030931665
+          },
+          {
+            "core": 4.859267578125e-05,
+            "eigen": 4.700205078125e-05,
+            "coreP95": 4.88400390625e-05,
+            "eigenP95": 4.79197265625e-05,
+            "pairedRatio": 1.0322239866389566
+          },
+          {
+            "core": 4.8470263671875e-05,
+            "eigen": 4.7359423828125e-05,
+            "coreP95": 4.891435546875e-05,
+            "eigenP95": 4.8838671875e-05,
+            "pairedRatio": 1.021002755004817
+          }
+        ]
+      },
+      "afterBeforeRatio": 0.8637329458443547,
+      "afterBefore95": [
+        0.8577309102818801,
+        0.866249545897659
+      ]
+    },
+    {
+      "n": 128,
+      "m": 128,
+      "phase": 3,
+      "actual": {
+        "medianUs": 60.54111328125,
+        "eigenMedianUs": 56.458203125000004,
+        "p95Us": 72.9775390625,
+        "eigenP95Us": 66.16542968750001,
+        "pairedEigenRatio": 1.0722038152787974,
+        "ratio95": [
+          1.0690209136990343,
+          1.0780542147130263
+        ],
+        "processes": [
+          {
+            "core": 6.055439453125e-05,
+            "eigen": 5.6458203125e-05,
+            "coreP95": 7.0611328125e-05,
+            "eigenP95": 6.61654296875e-05,
+            "pairedRatio": 1.0722038152787974
+          },
+          {
+            "core": 6.0405859375e-05,
+            "eigen": 5.65712890625e-05,
+            "coreP95": 9.783046875e-05,
+            "eigenP95": 8.5679296875e-05,
+            "pairedRatio": 1.0690209136990343
+          },
+          {
+            "core": 6.05849609375e-05,
+            "eigen": 5.656435546875e-05,
+            "coreP95": 9.6268359375e-05,
+            "eigenP95": 9.4905078125e-05,
+            "pairedRatio": 1.0717216501849527
+          },
+          {
+            "core": 6.03283203125e-05,
+            "eigen": 5.6160156250000003e-05,
+            "coreP95": 7.29775390625e-05,
+            "eigenP95": 6.5628515625e-05,
+            "pairedRatio": 1.0740206153583758
+          },
+          {
+            "core": 6.0541113281249997e-05,
+            "eigen": 5.624716796875e-05,
+            "coreP95": 7.04068359375e-05,
+            "eigenP95": 6.59375e-05,
+            "pairedRatio": 1.0780542147130263
+          }
+        ]
+      },
+      "public_large": {
+        "medianUs": 52.74287109375,
+        "eigenMedianUs": 56.34462890625,
+        "p95Us": 63.488671875,
+        "eigenP95Us": 65.8900390625,
+        "pairedEigenRatio": 0.9329696084679249,
+        "ratio95": [
+          0.932034731338425,
+          0.9404149016979056
+        ],
+        "processes": [
+          {
+            "core": 5.250625e-05,
+            "eigen": 5.622666015625e-05,
+            "coreP95": 6.29072265625e-05,
+            "eigenP95": 6.58900390625e-05,
+            "pairedRatio": 0.9329696084679249
+          },
+          {
+            "core": 5.2502929687500005e-05,
+            "eigen": 5.634462890625e-05,
+            "coreP95": 6.3488671875e-05,
+            "eigenP95": 6.5119921875e-05,
+            "pairedRatio": 0.9321880834433216
+          },
+          {
+            "core": 5.274287109375e-05,
+            "eigen": 5.6471386718749995e-05,
+            "coreP95": 6.2583203125e-05,
+            "eigenP95": 6.6084375e-05,
+            "pairedRatio": 0.932034731338425
+          },
+          {
+            "core": 5.281328125e-05,
+            "eigen": 5.6556542968750004e-05,
+            "coreP95": 6.3783203125e-05,
+            "eigenP95": 6.520078125e-05,
+            "pairedRatio": 0.9362120074659022
+          },
+          {
+            "core": 5.28232421875e-05,
+            "eigen": 5.616279296875e-05,
+            "coreP95": 7.30892578125e-05,
+            "eigenP95": 7.3521484375e-05,
+            "pairedRatio": 0.9404149016979056
+          }
+        ]
+      },
+      "afterBeforeRatio": 0.8705604539080256,
+      "afterBefore95": [
+        0.867092312728903,
+        0.875430991223157
+      ]
+    },
+    {
+      "n": 128,
+      "m": 512,
+      "phase": 0,
+      "actual": {
+        "medianUs": 53.66357421875,
+        "eigenMedianUs": 43.7705078125,
+        "p95Us": 54.1984375,
+        "eigenP95Us": 44.6810546875,
+        "pairedEigenRatio": 1.2207964489020529,
+        "ratio95": [
+          1.2115727346205731,
+          1.230413040499979
+        ],
+        "processes": [
+          {
+            "core": 5.366357421875e-05,
+            "eigen": 4.4304248046875006e-05,
+            "coreP95": 5.41984375e-05,
+            "eigenP95": 4.57787109375e-05,
+            "pairedRatio": 1.2115727346205731
+          },
+          {
+            "core": 5.3940771484375e-05,
+            "eigen": 4.3858837890625005e-05,
+            "coreP95": 5.48369140625e-05,
+            "eigenP95": 4.4551953125e-05,
+            "pairedRatio": 1.2300849895294181
+          },
+          {
+            "core": 5.3777294921875e-05,
+            "eigen": 4.3722705078125e-05,
+            "coreP95": 5.42248046875e-05,
+            "eigenP95": 4.533466796875e-05,
+            "pairedRatio": 1.230413040499979
+          },
+          {
+            "core": 5.3139990234375e-05,
+            "eigen": 4.3747216796875e-05,
+            "coreP95": 5.35064453125e-05,
+            "eigenP95": 4.46810546875e-05,
+            "pairedRatio": 1.2158823171774094
+          },
+          {
+            "core": 5.3374999999999996e-05,
+            "eigen": 4.37705078125e-05,
+            "coreP95": 5.373984375e-05,
+            "eigenP95": 4.4378125e-05,
+            "pairedRatio": 1.2207964489020529
+          }
+        ]
+      },
+      "public_large": {
+        "medianUs": 46.789404296875,
+        "eigenMedianUs": 43.890576171875,
+        "p95Us": 47.57373046875,
+        "eigenP95Us": 44.908984375,
+        "pairedEigenRatio": 1.0647385069938302,
+        "ratio95": [
+          1.0618672517502115,
+          1.0685088692217555
+        ],
+        "processes": [
+          {
+            "core": 4.6613427734375e-05,
+            "eigen": 4.388408203125e-05,
+            "coreP95": 4.737998046875e-05,
+            "eigenP95": 4.4908984375e-05,
+            "pairedRatio": 1.0618672517502115
+          },
+          {
+            "core": 4.679267578125e-05,
+            "eigen": 4.388212890625e-05,
+            "coreP95": 4.7349609375e-05,
+            "eigenP95": 4.426748046875e-05,
+            "pairedRatio": 1.0685088692217555
+          },
+          {
+            "core": 4.6789404296875e-05,
+            "eigen": 4.39845703125e-05,
+            "coreP95": 4.757373046875e-05,
+            "eigenP95": 4.59935546875e-05,
+            "pairedRatio": 1.0629177396629281
+          },
+          {
+            "core": 4.67228515625e-05,
+            "eigen": 4.3890576171874996e-05,
+            "coreP95": 4.79634765625e-05,
+            "eigenP95": 4.51681640625e-05,
+            "pairedRatio": 1.065155124339811
+          },
+          {
+            "core": 4.697685546875e-05,
+            "eigen": 4.40783203125e-05,
+            "coreP95": 4.788212890625e-05,
+            "eigenP95": 4.45248046875e-05,
+            "pairedRatio": 1.0647385069938302
+          }
+        ]
+      },
+      "afterBeforeRatio": 0.8700587183652198,
+      "afterBefore95": [
+        0.8674825089367587,
+        0.8801284396955504
+      ]
+    },
+    {
+      "n": 128,
+      "m": 512,
+      "phase": 1,
+      "actual": {
+        "medianUs": 3.20040283203125,
+        "eigenMedianUs": 3.1846679687500004,
+        "p95Us": 3.241827392578125,
+        "eigenP95Us": 3.24549560546875,
+        "pairedEigenRatio": 1.0040975226411053,
+        "ratio95": [
+          0.9313789228002511,
+          1.0045994688351905
+        ],
+        "processes": [
+          {
+            "core": 3.2049407958984376e-06,
+            "eigen": 3.202081298828125e-06,
+            "coreP95": 3.264837646484375e-06,
+            "eigenP95": 3.25693359375e-06,
+            "pairedRatio": 1.0005905119432252
+          },
+          {
+            "core": 3.1929748535156253e-06,
+            "eigen": 3.4265747070312498e-06,
+            "coreP95": 3.264678955078125e-06,
+            "eigenP95": 3.4823486328125e-06,
+            "pairedRatio": 0.9313789228002511
+          },
+          {
+            "core": 3.20040283203125e-06,
+            "eigen": 3.1846679687500003e-06,
+            "coreP95": 3.241827392578125e-06,
+            "eigenP95": 3.218280029296875e-06,
+            "pairedRatio": 1.0040975226411053
+          },
+          {
+            "core": 3.2018951416015626e-06,
+            "eigen": 3.1821380615234374e-06,
+            "coreP95": 3.23712158203125e-06,
+            "eigenP95": 3.2138671875e-06,
+            "pairedRatio": 1.0045452904136538
+          },
+          {
+            "core": 3.1905700683593747e-06,
+            "eigen": 3.1748687744140626e-06,
+            "coreP95": 3.23546142578125e-06,
+            "eigenP95": 3.24549560546875e-06,
+            "pairedRatio": 1.0045994688351905
+          }
+        ]
+      },
+      "public_large": {
+        "medianUs": 2.0020355224609374,
+        "eigenMedianUs": 3.210845947265625,
+        "p95Us": 2.07342529296875,
+        "eigenP95Us": 3.2792175292968753,
+        "pairedEigenRatio": 0.6265283406167769,
+        "ratio95": [
+          0.5802953186568691,
+          0.6300102223509771
+        ],
+        "processes": [
+          {
+            "core": 2.0020355224609375e-06,
+            "eigen": 3.4423980712890624e-06,
+            "coreP95": 2.07342529296875e-06,
+            "eigenP95": 3.48433837890625e-06,
+            "pairedRatio": 0.5823135792169704
+          },
+          {
+            "core": 1.997283935546875e-06,
+            "eigen": 3.4403961181640625e-06,
+            "coreP95": 2.08040771484375e-06,
+            "eigenP95": 3.487506103515625e-06,
+            "pairedRatio": 0.5802953186568691
+          },
+          {
+            "core": 2.008688354492188e-06,
+            "eigen": 3.186614990234375e-06,
+            "coreP95": 2.043304443359375e-06,
+            "eigenP95": 3.21627197265625e-06,
+            "pairedRatio": 0.6300102223509771
+          },
+          {
+            "core": 2.0107604980468747e-06,
+            "eigen": 3.210845947265625e-06,
+            "coreP95": 2.09171142578125e-06,
+            "eigenP95": 3.279217529296875e-06,
+            "pairedRatio": 0.6265283406167769
+          },
+          {
+            "core": 1.9948486328125e-06,
+            "eigen": 3.1729583740234373e-06,
+            "coreP95": 2.050390625e-06,
+            "eigenP95": 3.249359130859375e-06,
+            "pairedRatio": 0.6282910531859978
+          }
+        ]
+      },
+      "afterBeforeRatio": 0.6255244802030826,
+      "afterBefore95": [
+        0.6246716086060208,
+        0.6279907395846537
+      ]
+    },
+    {
+      "n": 128,
+      "m": 512,
+      "phase": 2,
+      "actual": {
+        "medianUs": 56.800634765625006,
+        "eigenMedianUs": 47.07109375,
+        "p95Us": 58.069921875,
+        "eigenP95Us": 47.76240234375,
+        "pairedEigenRatio": 1.207126865992456,
+        "ratio95": [
+          1.1972318959287378,
+          1.2133616512908567
+        ],
+        "processes": [
+          {
+            "core": 5.6800634765625e-05,
+            "eigen": 4.755546875e-05,
+            "coreP95": 5.8069921875e-05,
+            "eigenP95": 4.833720703125e-05,
+            "pairedRatio": 1.1972318959287378
+          },
+          {
+            "core": 5.70880859375e-05,
+            "eigen": 4.7226025390625e-05,
+            "coreP95": 5.805712890625e-05,
+            "eigenP95": 4.776240234375e-05,
+            "pairedRatio": 1.2074175243807128
+          },
+          {
+            "core": 5.6985107421874995e-05,
+            "eigen": 4.70255859375e-05,
+            "coreP95": 5.83927734375e-05,
+            "eigenP95": 4.761806640625e-05,
+            "pairedRatio": 1.2133616512908567
+          },
+          {
+            "core": 5.646044921875e-05,
+            "eigen": 4.696494140625e-05,
+            "coreP95": 5.7233203125e-05,
+            "eigenP95": 4.814619140625e-05,
+            "pairedRatio": 1.2010428311952326
+          },
+          {
+            "core": 5.6780029296875e-05,
+            "eigen": 4.707109375e-05,
+            "coreP95": 5.815751953125e-05,
+            "eigenP95": 4.753330078125e-05,
+            "pairedRatio": 1.207126865992456
+          }
+        ]
+      },
+      "public_large": {
+        "medianUs": 48.882568359375,
+        "eigenMedianUs": 47.096044921875,
+        "p95Us": 50.20146484375,
+        "eigenP95Us": 47.7603515625,
+        "pairedEigenRatio": 1.0374403427547576,
+        "ratio95": [
+          1.0298659977071756,
+          1.040341677693451
+        ],
+        "processes": [
+          {
+            "core": 4.8767382812500004e-05,
+            "eigen": 4.723212890625e-05,
+            "coreP95": 4.98068359375e-05,
+            "eigenP95": 4.766884765625e-05,
+            "pairedRatio": 1.0330007005152182
+          },
+          {
+            "core": 4.8765527343750005e-05,
+            "eigen": 4.7336083984375005e-05,
+            "coreP95": 4.940615234375e-05,
+            "eigenP95": 4.77810546875e-05,
+            "pairedRatio": 1.0298659977071756
+          },
+          {
+            "core": 4.8882568359375e-05,
+            "eigen": 4.70859375e-05,
+            "coreP95": 5.020146484375e-05,
+            "eigenP95": 4.841455078125e-05,
+            "pairedRatio": 1.0387128389290092
+          },
+          {
+            "core": 4.8931884765625005e-05,
+            "eigen": 4.7096044921875e-05,
+            "coreP95": 5.03275390625e-05,
+            "eigenP95": 4.77603515625e-05,
+            "pairedRatio": 1.0374403427547576
+          },
+          {
+            "core": 4.8925732421875004e-05,
+            "eigen": 4.699853515625e-05,
+            "coreP95": 5.022060546875e-05,
+            "eigenP95": 4.765712890625e-05,
+            "pairedRatio": 1.040341677693451
+          }
+        ]
+      },
+      "afterBeforeRatio": 0.8585710883994097,
+      "afterBefore95": [
+        0.8542154907267073,
+        0.8666577301934604
+      ]
+    },
+    {
+      "n": 128,
+      "m": 512,
+      "phase": 3,
+      "actual": {
+        "medianUs": 60.28623046875,
+        "eigenMedianUs": 56.49921875,
+        "p95Us": 70.7076171875,
+        "eigenP95Us": 65.58359374999999,
+        "pairedEigenRatio": 1.0677895094872656,
+        "ratio95": [
+          1.0535059495423706,
+          1.0719901662202198
+        ],
+        "processes": [
+          {
+            "core": 6.010439453125e-05,
+            "eigen": 5.69083984375e-05,
+            "coreP95": 6.9541015625e-05,
+            "eigenP95": 6.73623046875e-05,
+            "pairedRatio": 1.0535059495423706
+          },
+          {
+            "core": 6.03708984375e-05,
+            "eigen": 5.647880859375e-05,
+            "coreP95": 7.07076171875e-05,
+            "eigenP95": 6.4679296875e-05,
+            "pairedRatio": 1.0695112968645668
+          },
+          {
+            "core": 6.028623046875e-05,
+            "eigen": 5.633828125e-05,
+            "coreP95": 7.05609375e-05,
+            "eigenP95": 6.55001953125e-05,
+            "pairedRatio": 1.0719901662202198
+          },
+          {
+            "core": 5.9849218749999996e-05,
+            "eigen": 5.6499218749999996e-05,
+            "coreP95": 7.07548828125e-05,
+            "eigenP95": 6.558359375e-05,
+            "pairedRatio": 1.0614508664900824
+          },
+          {
+            "core": 6.05e-05,
+            "eigen": 5.660361328125e-05,
+            "coreP95": 9.5695703125e-05,
+            "eigenP95": 9.4083984375e-05,
+            "pairedRatio": 1.0677895094872656
+          }
+        ]
+      },
+      "public_large": {
+        "medianUs": 52.561230468750004,
+        "eigenMedianUs": 56.37978515625,
+        "p95Us": 63.483984375,
+        "eigenP95Us": 66.169921875,
+        "pairedEigenRatio": 0.9331145317866356,
+        "ratio95": [
+          0.9287321282919472,
+          0.9340120226682611
+        ],
+        "processes": [
+          {
+            "core": 5.2619140625e-05,
+            "eigen": 5.63126953125e-05,
+            "coreP95": 6.3483984375e-05,
+            "eigenP95": 6.70701171875e-05,
+            "pairedRatio": 0.9332397957473546
+          },
+          {
+            "core": 5.256123046875e-05,
+            "eigen": 5.6379785156250004e-05,
+            "coreP95": 9.403046875e-05,
+            "eigenP95": 8.645e-05,
+            "pairedRatio": 0.9331145317866356
+          },
+          {
+            "core": 5.2391796875e-05,
+            "eigen": 5.6299414062499996e-05,
+            "coreP95": 6.20078125e-05,
+            "eigenP95": 6.6169921875e-05,
+            "pairedRatio": 0.9324922706974332
+          },
+          {
+            "core": 5.256806640625e-05,
+            "eigen": 5.638720703125e-05,
+            "coreP95": 6.35373046875e-05,
+            "eigenP95": 6.51888671875e-05,
+            "pairedRatio": 0.9340120226682611
+          },
+          {
+            "core": 5.251328125e-05,
+            "eigen": 5.6559960937499994e-05,
+            "coreP95": 6.2466796875e-05,
+            "eigenP95": 6.6113671875e-05,
+            "pairedRatio": 0.9287321282919472
+          }
+        ]
+      },
+      "afterBeforeRatio": 0.8706385332854523,
+      "afterBefore95": [
+        0.8679881198347107,
+        0.8783417311733915
+      ]
+    },
+    {
+      "n": 512,
+      "m": 512,
+      "phase": 0,
+      "actual": {
+        "medianUs": 2264.65625,
+        "eigenMedianUs": 2261.19375,
+        "p95Us": 2306.9375,
+        "eigenP95Us": 2281.04375,
+        "pairedEigenRatio": 1.0030267665563277,
+        "ratio95": [
+          1.0007670605502677,
+          1.100883153554224
+        ],
+        "processes": [
+          {
+            "core": 0.002266484375,
+            "eigen": 0.0022683218749999998,
+            "coreP95": 0.00229244375,
+            "eigenP95": 0.00231148125,
+            "pairedRatio": 1.0007670605502677
+          },
+          {
+            "core": 0.002282328125,
+            "eigen": 0.0021074781250000002,
+            "coreP95": 0.00231634375,
+            "eigenP95": 0.0021604625,
+            "pairedRatio": 1.0838343460542461
+          },
+          {
+            "core": 0.002260334375,
+            "eigen": 0.002039875,
+            "coreP95": 0.0023069375,
+            "eigenP95": 0.002260575,
+            "pairedRatio": 1.100883153554224
+          },
+          {
+            "core": 0.00226465625,
+            "eigen": 0.002261875,
+            "coreP95": 0.00233265,
+            "eigenP95": 0.00228104375,
+            "pairedRatio": 1.0030267665563277
+          },
+          {
+            "core": 0.002260765625,
+            "eigen": 0.00226119375,
+            "coreP95": 0.00228849375,
+            "eigenP95": 0.002301425,
+            "pairedRatio": 1.0023402895447782
+          }
+        ]
+      },
+      "public_large": {
+        "medianUs": 2067.753125,
+        "eigenMedianUs": 2127.859375,
+        "p95Us": 2106.93125,
+        "eigenP95Us": 2263.84375,
+        "pairedEigenRatio": 0.9711272782618079,
+        "ratio95": [
+          0.9165550520089301,
+          1.018671045387229
+        ],
+        "processes": [
+          {
+            "core": 0.002064415625,
+            "eigen": 0.002025746875,
+            "coreP95": 0.00208858125,
+            "eigenP95": 0.0022216,
+            "pairedRatio": 1.018671045387229
+          },
+          {
+            "core": 0.002065990625,
+            "eigen": 0.002117103125,
+            "coreP95": 0.00210444375,
+            "eigenP95": 0.00226384375,
+            "pairedRatio": 0.9711272782618079
+          },
+          {
+            "core": 0.002077278125,
+            "eigen": 0.002127859375,
+            "coreP95": 0.00213179375,
+            "eigenP95": 0.002157,
+            "pairedRatio": 0.9802679853305578
+          },
+          {
+            "core": 0.0020691531249999997,
+            "eigen": 0.0022582375,
+            "coreP95": 0.00210693125,
+            "eigenP95": 0.00230013125,
+            "pairedRatio": 0.9165550520089301
+          },
+          {
+            "core": 0.0020677531250000002,
+            "eigen": 0.002260621875,
+            "coreP95": 0.00211258125,
+            "eigenP95": 0.0023248875,
+            "pairedRatio": 0.9169839430264795
+          }
+        ]
+      },
+      "afterBeforeRatio": 0.9136720528777821,
+      "afterBefore95": [
+        0.9052119203937864,
+        0.9190136415104514
+      ]
+    },
+    {
+      "n": 512,
+      "m": 512,
+      "phase": 1,
+      "actual": {
+        "medianUs": 58.196459960937496,
+        "eigenMedianUs": 28.6378173828125,
+        "p95Us": 58.91015625,
+        "eigenP95Us": 29.013330078125,
+        "pairedEigenRatio": 2.032047006321986,
+        "ratio95": [
+          2.0112138422742505,
+          2.033751474521475
+        ],
+        "processes": [
+          {
+            "core": 5.81964599609375e-05,
+            "eigen": 2.86378173828125e-05,
+            "coreP95": 5.9309619140625e-05,
+            "eigenP95": 2.9013330078125e-05,
+            "pairedRatio": 2.027518070218237
+          },
+          {
+            "core": 5.79737060546875e-05,
+            "eigen": 2.853095703125e-05,
+            "coreP95": 5.88900390625e-05,
+            "eigenP95": 2.871875e-05,
+            "pairedRatio": 2.033276441080108
+          },
+          {
+            "core": 5.8365673828125e-05,
+            "eigen": 2.870068359375e-05,
+            "coreP95": 5.9817724609375e-05,
+            "eigenP95": 2.957919921875e-05,
+            "pairedRatio": 2.032047006321986
+          },
+          {
+            "core": 5.8002392578125e-05,
+            "eigen": 2.8426831054687498e-05,
+            "coreP95": 5.861416015625e-05,
+            "eigenP95": 2.89763671875e-05,
+            "pairedRatio": 2.033751474521475
+          },
+          {
+            "core": 5.8394482421875e-05,
+            "eigen": 2.8979052734375e-05,
+            "coreP95": 5.891015625e-05,
+            "eigenP95": 2.943984375e-05,
+            "pairedRatio": 2.0112138422742505
+          }
+        ]
+      },
+      "public_large": {
+        "medianUs": 23.98193359375,
+        "eigenMedianUs": 28.745751953125,
+        "p95Us": 24.428076171875002,
+        "eigenP95Us": 29.075585937499998,
+        "pairedEigenRatio": 0.8352904545338466,
+        "ratio95": [
+          0.8054384124625101,
+          0.8421719740060655
+        ],
+        "processes": [
+          {
+            "core": 2.3910131835937498e-05,
+            "eigen": 2.9638452148437502e-05,
+            "coreP95": 2.4259521484375e-05,
+            "eigenP95": 3.0092333984375e-05,
+            "pairedRatio": 0.8054384124625101
+          },
+          {
+            "core": 2.4175903320312497e-05,
+            "eigen": 2.8722973632812503e-05,
+            "coreP95": 2.455673828125e-05,
+            "eigenP95": 2.90755859375e-05,
+            "pairedRatio": 0.8403961836442677
+          },
+          {
+            "core": 2.398193359375e-05,
+            "eigen": 2.8745751953125e-05,
+            "coreP95": 2.42998046875e-05,
+            "eigenP95": 2.9053857421875e-05,
+            "pairedRatio": 0.8352904545338466
+          },
+          {
+            "core": 2.3957666015625e-05,
+            "eigen": 2.84811767578125e-05,
+            "coreP95": 2.50447265625e-05,
+            "eigenP95": 2.9426953125e-05,
+            "pairedRatio": 0.8421719740060655
+          },
+          {
+            "core": 2.40098876953125e-05,
+            "eigen": 2.881953125e-05,
+            "coreP95": 2.4428076171875e-05,
+            "eigenP95": 2.9032275390625e-05,
+            "pairedRatio": 0.8332080199783605
+          }
+        ]
+      },
+      "afterBeforeRatio": 0.4111670606454116,
+      "afterBefore95": [
+        0.4108519977329618,
+        0.4170149705024376
+      ]
+    },
+    {
+      "n": 512,
+      "m": 512,
+      "phase": 2,
+      "actual": {
+        "medianUs": 2328.6187499999996,
+        "eigenMedianUs": 2154.371875,
+        "p95Us": 2379.63125,
+        "eigenP95Us": 2175.20625,
+        "pairedEigenRatio": 1.0919657889329928,
+        "ratio95": [
+          1.0827407745646007,
+          1.1370820425908819
+        ],
+        "processes": [
+          {
+            "core": 0.0023355843749999997,
+            "eigen": 0.002141215625,
+            "coreP95": 0.0023554375,
+            "eigenP95": 0.00216913125,
+            "pairedRatio": 1.0919657889329928
+          },
+          {
+            "core": 0.002374675,
+            "eigen": 0.002159109375,
+            "coreP95": 0.00239660625,
+            "eigenP95": 0.0021799,
+            "pairedRatio": 1.0982127237632928
+          },
+          {
+            "core": 0.00232756875,
+            "eigen": 0.002045496875,
+            "coreP95": 0.00237963125,
+            "eigenP95": 0.0020910375,
+            "pairedRatio": 1.1370820425908819
+          },
+          {
+            "core": 0.002325125,
+            "eigen": 0.002154371875,
+            "coreP95": 0.00240683125,
+            "eigenP95": 0.0022400875,
+            "pairedRatio": 1.0832345694242294
+          },
+          {
+            "core": 0.00232861875,
+            "eigen": 0.0021585625,
+            "coreP95": 0.0023559625,
+            "eigenP95": 0.00217520625,
+            "pairedRatio": 1.0827407745646007
+          }
+        ]
+      },
+      "public_large": {
+        "medianUs": 2093.5874999999996,
+        "eigenMedianUs": 2145.2843749999997,
+        "p95Us": 2140.2000000000003,
+        "eigenP95Us": 2208.71875,
+        "pairedEigenRatio": 0.9798985190793357,
+        "ratio95": [
+          0.9677443264997645,
+          1.0267090486162422
+        ],
+        "processes": [
+          {
+            "core": 0.0020953843750000003,
+            "eigen": 0.0020438875,
+            "coreP95": 0.0021402,
+            "eigenP95": 0.0020819375,
+            "pairedRatio": 1.0267090486162422
+          },
+          {
+            "core": 0.002090128125,
+            "eigen": 0.002159740625,
+            "coreP95": 0.00212173125,
+            "eigenP95": 0.00220871875,
+            "pairedRatio": 0.9677443264997645
+          },
+          {
+            "core": 0.0020920749999999997,
+            "eigen": 0.002139171875,
+            "coreP95": 0.00216726875,
+            "eigenP95": 0.00225019375,
+            "pairedRatio": 0.9808880873257878
+          },
+          {
+            "core": 0.002119790625,
+            "eigen": 0.00218008125,
+            "coreP95": 0.00216723125,
+            "eigenP95": 0.00222995625,
+            "pairedRatio": 0.9740377242138399
+          },
+          {
+            "core": 0.0020935875,
+            "eigen": 0.0021452843749999997,
+            "coreP95": 0.00213543125,
+            "eigenP95": 0.00220175,
+            "pairedRatio": 0.9798985190793357
+          }
+        ]
+      },
+      "afterBeforeRatio": 0.8988241485885217,
+      "afterBefore95": [
+        0.8801743922852601,
+        0.91168888769421
+      ]
+    },
+    {
+      "n": 512,
+      "m": 512,
+      "phase": 3,
+      "actual": {
+        "medianUs": 3191.2625,
+        "eigenMedianUs": 3045.015625,
+        "p95Us": 3288.4625,
+        "eigenP95Us": 3153.95625,
+        "pairedEigenRatio": 1.044094336279839,
+        "ratio95": [
+          1.0246465514510352,
+          1.071359397209964
+        ],
+        "processes": [
+          {
+            "core": 0.00317905,
+            "eigen": 0.0029913,
+            "coreP95": 0.003215175,
+            "eigenP95": 0.00305219375,
+            "pairedRatio": 1.0578422988930531
+          },
+          {
+            "core": 0.0032302375,
+            "eigen": 0.00306669375,
+            "coreP95": 0.0032884625,
+            "eigenP95": 0.00315395625,
+            "pairedRatio": 1.044094336279839
+          },
+          {
+            "core": 0.00323024375,
+            "eigen": 0.003159240625,
+            "coreP95": 0.0033806625,
+            "eigenP95": 0.00404154375,
+            "pairedRatio": 1.0246465514510352
+          },
+          {
+            "core": 0.0031912625,
+            "eigen": 0.003045015625,
+            "coreP95": 0.00330891875,
+            "eigenP95": 0.00316015625,
+            "pairedRatio": 1.038505228964559
+          },
+          {
+            "core": 0.003185496875,
+            "eigen": 0.00297031875,
+            "coreP95": 0.0032419,
+            "eigenP95": 0.0030299375,
+            "pairedRatio": 1.071359397209964
+          }
+        ]
+      },
+      "public_large": {
+        "medianUs": 2926.8156249999997,
+        "eigenMedianUs": 2996.046875,
+        "p95Us": 2988.2375,
+        "eigenP95Us": 3055.08125,
+        "pairedEigenRatio": 0.9851449533886627,
+        "ratio95": [
+          0.9598238579693497,
+          0.9927828778936436
+        ],
+        "processes": [
+          {
+            "core": 0.002926815625,
+            "eigen": 0.00304059375,
+            "coreP95": 0.00299551875,
+            "eigenP95": 0.0031059125,
+            "pairedRatio": 0.9598238579693497
+          },
+          {
+            "core": 0.002926609375,
+            "eigen": 0.002996046875,
+            "coreP95": 0.0029882375,
+            "eigenP95": 0.003034475,
+            "pairedRatio": 0.9759162573483999
+          },
+          {
+            "core": 0.00292016875,
+            "eigen": 0.002948946875,
+            "coreP95": 0.00297245,
+            "eigenP95": 0.00303915,
+            "pairedRatio": 0.9874775821014469
+          },
+          {
+            "core": 0.00295364375,
+            "eigen": 0.0030030125,
+            "coreP95": 0.00305508125,
+            "eigenP95": 0.00314353125,
+            "pairedRatio": 0.9927828778936436
+          },
+          {
+            "core": 0.002933428125,
+            "eigen": 0.002955628125,
+            "coreP95": 0.0029772875,
+            "eigenP95": 0.00305508125,
+            "pairedRatio": 0.9851449533886627
+          }
+        ]
+      },
+      "afterBeforeRatio": 0.9206573111464116,
+      "afterBefore95": [
+        0.9040087919061836,
+        0.9255408321941552
+      ]
+    },
+    {
+      "n": 512,
+      "m": 2048,
+      "phase": 0,
+      "actual": {
+        "medianUs": 2261.621875,
+        "eigenMedianUs": 2197.2156250000003,
+        "p95Us": 2295.29375,
+        "eigenP95Us": 2266.51875,
+        "pairedEigenRatio": 1.0298869485683007,
+        "ratio95": [
+          1.0062150789148478,
+          1.1143526682928893
+        ],
+        "processes": [
+          {
+            "core": 0.0022688937499999997,
+            "eigen": 0.0022297125,
+            "coreP95": 0.00231705625,
+            "eigenP95": 0.00226651875,
+            "pairedRatio": 1.021735877190875
+          },
+          {
+            "core": 0.002261165625,
+            "eigen": 0.0021972156250000003,
+            "coreP95": 0.00229154375,
+            "eigenP95": 0.00226964375,
+            "pairedRatio": 1.0298869485683007
+          },
+          {
+            "core": 0.0022593375,
+            "eigen": 0.0022619249999999997,
+            "coreP95": 0.00234560625,
+            "eigenP95": 0.00230019375,
+            "pairedRatio": 1.0062150789148478
+          },
+          {
+            "core": 0.0022616218749999997,
+            "eigen": 0.002033059375,
+            "coreP95": 0.002285625,
+            "eigenP95": 0.00226488125,
+            "pairedRatio": 1.1140607266174056
+          },
+          {
+            "core": 0.002263459375,
+            "eigen": 0.0020279687500000003,
+            "coreP95": 0.00229529375,
+            "eigenP95": 0.00213808125,
+            "pairedRatio": 1.1143526682928893
+          }
+        ]
+      },
+      "public_large": {
+        "medianUs": 2069.1625,
+        "eigenMedianUs": 2227.3312499999997,
+        "p95Us": 2106.14375,
+        "eigenP95Us": 2284.15625,
+        "pairedEigenRatio": 0.9354656958512179,
+        "ratio95": [
+          0.9139924917248129,
+          1.021390194046531
+        ],
+        "processes": [
+          {
+            "core": 0.0020691625,
+            "eigen": 0.002018565625,
+            "coreP95": 0.00212595625,
+            "eigenP95": 0.00227140625,
+            "pairedRatio": 1.021390194046531
+          },
+          {
+            "core": 0.002066153125,
+            "eigen": 0.0022457249999999996,
+            "coreP95": 0.00208619375,
+            "eigenP95": 0.00230586875,
+            "pairedRatio": 0.9216308479834345
+          },
+          {
+            "core": 0.0020657156249999998,
+            "eigen": 0.002260865625,
+            "coreP95": 0.00210614375,
+            "eigenP95": 0.0023049375,
+            "pairedRatio": 0.9139924917248129
+          },
+          {
+            "core": 0.002070978125,
+            "eigen": 0.00222733125,
+            "coreP95": 0.002101125,
+            "eigenP95": 0.00228415625,
+            "pairedRatio": 0.9354656958512179
+          },
+          {
+            "core": 0.00210140625,
+            "eigen": 0.0021324843750000003,
+            "coreP95": 0.00212645,
+            "eigenP95": 0.00228355,
+            "pairedRatio": 0.9887634953810513
+          }
+        ]
+      },
+      "afterBeforeRatio": 0.9143014821822768,
+      "afterBefore95": [
+        0.9119697650011157,
+        0.9284046681862801
+      ]
+    },
+    {
+      "n": 512,
+      "m": 2048,
+      "phase": 1,
+      "actual": {
+        "medianUs": 58.162255859375,
+        "eigenMedianUs": 29.536865234375,
+        "p95Us": 58.894921875,
+        "eigenP95Us": 29.9341796875,
+        "pairedEigenRatio": 1.9712254919496783,
+        "ratio95": [
+          1.9633195259575826,
+          2.0493388193911657
+        ],
+        "processes": [
+          {
+            "core": 5.8278125e-05,
+            "eigen": 2.958486328125e-05,
+            "coreP95": 5.872568359375e-05,
+            "eigenP95": 2.99341796875e-05,
+            "pairedRatio": 1.9685468250605473
+          },
+          {
+            "core": 5.80406005859375e-05,
+            "eigen": 2.8351708984375e-05,
+            "coreP95": 5.8894921875e-05,
+            "eigenP95": 2.87451171875e-05,
+            "pairedRatio": 2.0493388193911657
+          },
+          {
+            "core": 5.8262451171875e-05,
+            "eigen": 2.9536865234375002e-05,
+            "coreP95": 5.87359375e-05,
+            "eigenP95": 2.9941796875e-05,
+            "pairedRatio": 1.9712254919496783
+          },
+          {
+            "core": 5.8162255859375004e-05,
+            "eigen": 2.9647900390625e-05,
+            "coreP95": 5.978525390625e-05,
+            "eigenP95": 3.06298828125e-05,
+            "pairedRatio": 1.9633195259575826
+          },
+          {
+            "core": 5.7968066406250004e-05,
+            "eigen": 2.8470800781250002e-05,
+            "coreP95": 6.141591796875e-05,
+            "eigenP95": 2.886806640625e-05,
+            "pairedRatio": 2.0381742272207557
+          }
+        ]
+      },
+      "public_large": {
+        "medianUs": 23.843701171874997,
+        "eigenMedianUs": 28.7378662109375,
+        "p95Us": 24.307568359374997,
+        "eigenP95Us": 29.729394531249998,
+        "pairedEigenRatio": 0.828533056998972,
+        "ratio95": [
+          0.8019763087529069,
+          0.8310315029589067
+        ],
+        "processes": [
+          {
+            "core": 2.3894482421875002e-05,
+            "eigen": 2.9673193359375e-05,
+            "coreP95": 2.428046875e-05,
+            "eigenP95": 3.01451171875e-05,
+            "pairedRatio": 0.8046773869705497
+          },
+          {
+            "core": 2.3783544921875e-05,
+            "eigen": 2.96498046875e-05,
+            "coreP95": 2.436171875e-05,
+            "eigenP95": 3.0057177734375e-05,
+            "pairedRatio": 0.8019763087529069
+          },
+          {
+            "core": 2.3870849609375e-05,
+            "eigen": 2.87369873046875e-05,
+            "coreP95": 2.4307568359375e-05,
+            "eigenP95": 2.91884765625e-05,
+            "pairedRatio": 0.828533056998972
+          },
+          {
+            "core": 2.37984130859375e-05,
+            "eigen": 2.86208740234375e-05,
+            "coreP95": 2.4125830078125e-05,
+            "eigenP95": 2.90353515625e-05,
+            "pairedRatio": 0.8310315029589067
+          },
+          {
+            "core": 2.3843701171875e-05,
+            "eigen": 2.87378662109375e-05,
+            "coreP95": 2.5173583984375e-05,
+            "eigenP95": 2.972939453125e-05,
+            "pairedRatio": 0.8303776065455365
+          }
+        ]
+      },
+      "afterBeforeRatio": 0.4097742732117326,
+      "afterBefore95": [
+        0.4091728000282077,
+        0.4113247629267865
+      ]
+    },
+    {
+      "n": 512,
+      "m": 2048,
+      "phase": 2,
+      "actual": {
+        "medianUs": 2323.93125,
+        "eigenMedianUs": 2145.55,
+        "p95Us": 2371.475,
+        "eigenP95Us": 2180.1124999999997,
+        "pairedEigenRatio": 1.0881517825468094,
+        "ratio95": [
+          1.0815611675237728,
+          1.1386024516565574
+        ],
+        "processes": [
+          {
+            "core": 0.0023597031250000003,
+            "eigen": 0.00216444375,
+            "coreP95": 0.0024302875,
+            "eigenP95": 0.00221428125,
+            "pairedRatio": 1.0881517825468094
+          },
+          {
+            "core": 0.002321671875,
+            "eigen": 0.00214555,
+            "coreP95": 0.00234813125,
+            "eigenP95": 0.00219353125,
+            "pairedRatio": 1.084937616091832
+          },
+          {
+            "core": 0.0023239312500000003,
+            "eigen": 0.00214898125,
+            "coreP95": 0.002371475,
+            "eigenP95": 0.0021801125,
+            "pairedRatio": 1.0815611675237728
+          },
+          {
+            "core": 0.00232389375,
+            "eigen": 0.00204195,
+            "coreP95": 0.00235938125,
+            "eigenP95": 0.00206760625,
+            "pairedRatio": 1.1352587957003237
+          },
+          {
+            "core": 0.00232750625,
+            "eigen": 0.00204341875,
+            "coreP95": 0.00238745625,
+            "eigenP95": 0.002082825,
+            "pairedRatio": 1.1386024516565574
+          }
+        ]
+      },
+      "public_large": {
+        "medianUs": 2102.5812499999997,
+        "eigenMedianUs": 2145.3749999999995,
+        "p95Us": 2138.88125,
+        "eigenP95Us": 2202.75,
+        "pairedEigenRatio": 0.9883316153052999,
+        "ratio95": [
+          0.9773986853148722,
+          1.030393999980403
+        ],
+        "processes": [
+          {
+            "core": 0.0021005218749999997,
+            "eigen": 0.00204125625,
+            "coreP95": 0.00213888125,
+            "eigenP95": 0.00206350625,
+            "pairedRatio": 1.030393999980403
+          },
+          {
+            "core": 0.0021076625,
+            "eigen": 0.0021453749999999997,
+            "coreP95": 0.00219470625,
+            "eigenP95": 0.00222565,
+            "pairedRatio": 0.9883316153052999
+          },
+          {
+            "core": 0.002097121875,
+            "eigen": 0.002149440625,
+            "coreP95": 0.002119125,
+            "eigenP95": 0.00218995,
+            "pairedRatio": 0.9773986853148722
+          },
+          {
+            "core": 0.00210258125,
+            "eigen": 0.0021557812499999997,
+            "coreP95": 0.0021379375,
+            "eigenP95": 0.00220275,
+            "pairedRatio": 0.9781252936360323
+          },
+          {
+            "core": 0.0021360437500000003,
+            "eigen": 0.002127165625,
+            "coreP95": 0.00217065,
+            "eigenP95": 0.00220384375,
+            "pairedRatio": 1.0038880131770798
+          }
+        ]
+      },
+      "afterBeforeRatio": 0.9047665152505359,
+      "afterBefore95": [
+        0.890163619629058,
+        0.9177392112266081
+      ]
+    },
+    {
+      "n": 512,
+      "m": 2048,
+      "phase": 3,
+      "actual": {
+        "medianUs": 3185.740625,
+        "eigenMedianUs": 3007.16875,
+        "p95Us": 3230.43125,
+        "eigenP95Us": 3100.80625,
+        "pairedEigenRatio": 1.0634730117457867,
+        "ratio95": [
+          1.0473577091520427,
+          1.0784841055919092
+        ],
+        "processes": [
+          {
+            "core": 0.003185740625,
+            "eigen": 0.0030071687499999998,
+            "coreP95": 0.0032642875,
+            "eigenP95": 0.003117575,
+            "pairedRatio": 1.0634730117457867
+          },
+          {
+            "core": 0.0031510343750000003,
+            "eigen": 0.00294336875,
+            "coreP95": 0.00323043125,
+            "eigenP95": 0.00298283125,
+            "pairedRatio": 1.071132803688302
+          },
+          {
+            "core": 0.00320101875,
+            "eigen": 0.002967215625,
+            "coreP95": 0.00326608125,
+            "eigenP95": 0.00303071875,
+            "pairedRatio": 1.0784841055919092
+          },
+          {
+            "core": 0.003193921875,
+            "eigen": 0.003033678125,
+            "coreP95": 0.00322690625,
+            "eigenP95": 0.003138975,
+            "pairedRatio": 1.0493036209609286
+          },
+          {
+            "core": 0.003179125,
+            "eigen": 0.003045046875,
+            "coreP95": 0.0032242875,
+            "eigenP95": 0.00310080625,
+            "pairedRatio": 1.0473577091520427
+          }
+        ]
+      },
+      "public_large": {
+        "medianUs": 2945.11875,
+        "eigenMedianUs": 3006.1437499999997,
+        "p95Us": 3001.30625,
+        "eigenP95Us": 3070.1499999999996,
+        "pairedEigenRatio": 0.9787147867735493,
+        "ratio95": [
+          0.961087251893221,
+          1.0012415270573154
+        ],
+        "processes": [
+          {
+            "core": 0.00294511875,
+            "eigen": 0.00307745625,
+            "coreP95": 0.00303561875,
+            "eigenP95": 0.0031548625,
+            "pairedRatio": 0.961087251893221
+          },
+          {
+            "core": 0.002912190625,
+            "eigen": 0.0029747406249999997,
+            "coreP95": 0.00294745,
+            "eigenP95": 0.0030562625,
+            "pairedRatio": 0.9787147867735493
+          },
+          {
+            "core": 0.0029465999999999997,
+            "eigen": 0.00301340625,
+            "coreP95": 0.00300130625,
+            "eigenP95": 0.00327848125,
+            "pairedRatio": 0.9807237503559658
+          },
+          {
+            "core": 0.0029283625,
+            "eigen": 0.00300614375,
+            "coreP95": 0.0029777375,
+            "eigenP95": 0.0030616,
+            "pairedRatio": 0.9713112274905926
+          },
+          {
+            "core": 0.0029782875,
+            "eigen": 0.00298214375,
+            "coreP95": 0.003140125,
+            "eigenP95": 0.00307015,
+            "pairedRatio": 1.0012415270573154
+          }
+        ]
+      },
+      "afterBeforeRatio": 0.9242014774910222,
+      "afterBefore95": [
+        0.9168547680897798,
+        0.9368261707230764
+      ]
+    }
+  ],
+  "statistics": "median of 5 process medians; median process nearest-rank p95; paired sample ratio then process median; exact 5^5 process bootstrap 95%"
+}

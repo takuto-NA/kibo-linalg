@@ -1,0 +1,218 @@
+{
+  "actual": {
+    "command": [
+      "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\dumpbin.exe",
+      "/disasm",
+      "C:\\Users\\owner\\Documents\\git\\kibo-linalg\\build\\large-llt-next\\actual.dir\\Release\\full-adaptive.obj"
+    ],
+    "files": {
+      "build\\large-llt-next\\actual.dir\\Release\\full-adaptive.obj": "4432fa0954fb0d3bf49086b4e90add1d434069639abdb93e9b4a28aee384c41b",
+      "build\\large-llt-next\\Release\\actual.exe": "d83f1e3347cd623b136cecff5c2677c4a31e4ed06ec514903a8acab3d9d3c32e",
+      "build\\large-llt-next\\actual.asm": "2f0b81d6fd6f380f0be7ccea3e969e329b4149d2be60de77ed40b19197da9b3e",
+      ".scratch\\large-llt-next\\variants\\actual\\kibo\\llt.hpp": "75047b2655f5cf907caf10177e3fc5913db39021aa9d3baf177b25552e980d11"
+    },
+    "dumpSha256": "4823e53a96d64559e38e882c5a2f2c19c877646602107748dcb3f8f2096cd445",
+    "selected": [
+      {
+        "symbol": "??$blocked@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@@?$llt_inplace@N$00@internal@Eigen@@SA_JAEAV?$Matrix@N$0?0$0?0$0A@$0?0$0?0@2@@Z",
+        "stem": "actual-_blocked-22"
+      },
+      {
+        "symbol": "??$unblocked@V?$Block@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@$0?0$0?0$0A@@Eigen@@@?$llt_inplace@N$00@internal@Eigen@@SA_JAEAV?$Block@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@$0?0$0?0$0A@@2@@Z",
+        "stem": "actual-_unblocked-83"
+      },
+      {
+        "symbol": "??$unblocked@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@@?$llt_inplace@N$00@internal@Eigen@@SA_JAEAV?$Matrix@N$0?0$0?0$0A@$0?0$0?0@2@@Z",
+        "stem": "actual-_unblocked-84"
+      },
+      {
+        "symbol": "??$unblocked@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@V?$Transpositions@$0?0$0?0H@2@V?$Matrix@N$0?0$00$0A@$0?0$00@2@@?$ldlt_inplace@$00@internal@Eigen@@SA_NAEAV?$Matrix@N$0?0$0?0$0A@$0?0$0?0@2@AEAV?$Transpositions@$0?0$0?0H@2@AEAV?$Matrix@N$0?0$00$0A@$0?0$00@2@AEAW4SignMatrix@12@@Z",
+        "stem": "actual-_unblocked-85"
+      },
+      {
+        "symbol": "??R?$gebp_kernel@NN_JV?$blas_data_mapper@N_J$0A@$0A@$00@internal@Eigen@@$03$03$0A@$0A@@internal@Eigen@@QEAAXAEBV?$blas_data_mapper@N_J$0A@$0A@$00@12@PEBN1_J22N2222@Z",
+        "stem": "actual-R__gebp_kernel-129"
+      },
+      {
+        "symbol": "?factorize_column_llt@detail@linalg@kibo@@YA?AV?$Result@VLltFactorView@linalg@kibo@@@23@V?$MatrixView@$$CBN@23@V?$MatrixView@N@23@@Z",
+        "stem": "actual-factorize_column_llt-143"
+      },
+      {
+        "symbol": "?run@?$triangular_solve_matrix@N_J$01$01$0A@$00$0A@$00@internal@Eigen@@SAX_J0PEBN0PEAN00AEAV?$level3_blocking@NN@23@@Z",
+        "stem": "actual-run-169"
+      },
+      {
+        "symbol": "?dtor$0@?0??run@?$triangular_solve_matrix@N_J$01$01$0A@$00$0A@$00@internal@Eigen@@SAX_J0PEBN0PEAN00AEAV?$level3_blocking@NN@23@@Z@4HA",
+        "stem": "actual-dtor_0-170"
+      },
+      {
+        "symbol": "?run@?$triangular_solve_vector@NN_J$00$00$0A@$0A@@internal@Eigen@@SAX_JPEBN0PEAN@Z",
+        "stem": "actual-run-171"
+      },
+      {
+        "symbol": "?run@?$triangular_solve_vector@NN_J$00$01$0A@$00@internal@Eigen@@SAX_JPEBN0PEAN@Z",
+        "stem": "actual-run-172"
+      },
+      {
+        "symbol": "?run@?$triangular_solve_vector@NN_J$00$04$0A@$0A@@internal@Eigen@@SAX_JPEBN0PEAN@Z",
+        "stem": "actual-run-173"
+      },
+      {
+        "symbol": "?run@?$triangular_solve_vector@NN_J$00$05$0A@$00@internal@Eigen@@SAX_JPEBN0PEAN@Z",
+        "stem": "actual-run-174"
+      },
+      {
+        "symbol": "?solve_into@linalg@kibo@@YA?AUStatus@12@VLltFactorView@12@V?$span@$$CBN$0?0@std@@V?$span@N$0?0@6@V?$span@W4byte@std@@$0?0@6@@Z",
+        "stem": "actual-solve_into-175"
+      }
+    ]
+  },
+  "pair8_divide_inline_forward4rows": {
+    "command": [
+      "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\dumpbin.exe",
+      "/disasm",
+      "C:\\Users\\owner\\Documents\\git\\kibo-linalg\\build\\large-llt-next\\pair8_divide_inline_forward4rows.dir\\Release\\full-adaptive.obj"
+    ],
+    "files": {
+      "build\\large-llt-next\\pair8_divide_inline_forward4rows.dir\\Release\\full-adaptive.obj": "4767b86b76634d7c0c98a272d39d1de0e006be712e4587b05a46f97bde426961",
+      "build\\large-llt-next\\Release\\pair8_divide_inline_forward4rows.exe": "5fdd2043ae04163ad0ab0ef9d33eacd13d2f77294651f928ddac59f9304c61ea",
+      "build\\large-llt-next\\pair8_divide_inline_forward4rows.asm": "451912cc8bade8b0f69125b0e1e7afba0577e998df755d9767bfca5a483d55ec",
+      ".scratch\\large-llt-next\\variants\\pair8_divide_inline_forward4rows\\kibo\\llt.hpp": "76027c04e0a75d4facaddd510739e1ecdade7dd5f726133d392c1bdbd23757f7"
+    },
+    "dumpSha256": "1d041c8fdc3e18d69f1a814d0c71f2f58876e1766561aecf7a62a4cbc0b79a1d",
+    "selected": [
+      {
+        "symbol": "??$blocked@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@@?$llt_inplace@N$00@internal@Eigen@@SA_JAEAV?$Matrix@N$0?0$0?0$0A@$0?0$0?0@2@@Z",
+        "stem": "pair8_divide_inline_forward4rows-_blocked-22"
+      },
+      {
+        "symbol": "??$unblocked@V?$Block@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@$0?0$0?0$0A@@Eigen@@@?$llt_inplace@N$00@internal@Eigen@@SA_JAEAV?$Block@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@$0?0$0?0$0A@@2@@Z",
+        "stem": "pair8_divide_inline_forward4rows-_unblocked-83"
+      },
+      {
+        "symbol": "??$unblocked@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@@?$llt_inplace@N$00@internal@Eigen@@SA_JAEAV?$Matrix@N$0?0$0?0$0A@$0?0$0?0@2@@Z",
+        "stem": "pair8_divide_inline_forward4rows-_unblocked-84"
+      },
+      {
+        "symbol": "??$unblocked@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@V?$Transpositions@$0?0$0?0H@2@V?$Matrix@N$0?0$00$0A@$0?0$00@2@@?$ldlt_inplace@$00@internal@Eigen@@SA_NAEAV?$Matrix@N$0?0$0?0$0A@$0?0$0?0@2@AEAV?$Transpositions@$0?0$0?0H@2@AEAV?$Matrix@N$0?0$00$0A@$0?0$00@2@AEAW4SignMatrix@12@@Z",
+        "stem": "pair8_divide_inline_forward4rows-_unblocked-85"
+      },
+      {
+        "symbol": "??R?$gebp_kernel@NN_JV?$blas_data_mapper@N_J$0A@$0A@$00@internal@Eigen@@$03$03$0A@$0A@@internal@Eigen@@QEAAXAEBV?$blas_data_mapper@N_J$0A@$0A@$00@12@PEBN1_J22N2222@Z",
+        "stem": "pair8_divide_inline_forward4rows-R__gebp_kernel-129"
+      },
+      {
+        "symbol": "?factorize_column_llt@detail@linalg@kibo@@YA?AV?$Result@VLltFactorView@linalg@kibo@@@23@V?$MatrixView@$$CBN@23@V?$MatrixView@N@23@@Z",
+        "stem": "pair8_divide_inline_forward4rows-factorize_column_llt-143"
+      },
+      {
+        "symbol": "?llt_forward_shared@detail@linalg@kibo@@YA?AUStatus@23@V?$MatrixView@$$CBN@23@V?$span@$$CBN$0?0@std@@V?$span@N$0?0@7@@Z",
+        "stem": "pair8_divide_inline_forward4rows-llt_forward_shared-147"
+      },
+      {
+        "symbol": "?run@?$triangular_solve_matrix@N_J$01$01$0A@$00$0A@$00@internal@Eigen@@SAX_J0PEBN0PEAN00AEAV?$level3_blocking@NN@23@@Z",
+        "stem": "pair8_divide_inline_forward4rows-run-170"
+      },
+      {
+        "symbol": "?dtor$0@?0??run@?$triangular_solve_matrix@N_J$01$01$0A@$00$0A@$00@internal@Eigen@@SAX_J0PEBN0PEAN00AEAV?$level3_blocking@NN@23@@Z@4HA",
+        "stem": "pair8_divide_inline_forward4rows-dtor_0-171"
+      },
+      {
+        "symbol": "?run@?$triangular_solve_vector@NN_J$00$00$0A@$0A@@internal@Eigen@@SAX_JPEBN0PEAN@Z",
+        "stem": "pair8_divide_inline_forward4rows-run-172"
+      },
+      {
+        "symbol": "?run@?$triangular_solve_vector@NN_J$00$01$0A@$00@internal@Eigen@@SAX_JPEBN0PEAN@Z",
+        "stem": "pair8_divide_inline_forward4rows-run-173"
+      },
+      {
+        "symbol": "?run@?$triangular_solve_vector@NN_J$00$04$0A@$0A@@internal@Eigen@@SAX_JPEBN0PEAN@Z",
+        "stem": "pair8_divide_inline_forward4rows-run-174"
+      },
+      {
+        "symbol": "?run@?$triangular_solve_vector@NN_J$00$05$0A@$00@internal@Eigen@@SAX_JPEBN0PEAN@Z",
+        "stem": "pair8_divide_inline_forward4rows-run-175"
+      },
+      {
+        "symbol": "?solve_into@linalg@kibo@@YA?AUStatus@12@VLltFactorView@12@V?$span@$$CBN$0?0@std@@V?$span@N$0?0@6@V?$span@W4byte@std@@$0?0@6@@Z",
+        "stem": "pair8_divide_inline_forward4rows-solve_into-176"
+      }
+    ]
+  },
+  "shared_back2": {
+    "command": [
+      "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\dumpbin.exe",
+      "/disasm",
+      "C:\\Users\\owner\\Documents\\git\\kibo-linalg\\build\\large-llt-next\\shared_back2.dir\\Release\\full-adaptive.obj"
+    ],
+    "files": {
+      "build\\large-llt-next\\shared_back2.dir\\Release\\full-adaptive.obj": "cc03df33406e619126a1a32784f81b27de9cc591116a4c8c1344d7b305739af6",
+      "build\\large-llt-next\\Release\\shared_back2.exe": "0d3cea3d93fc3a16efa5a122e42abab0f51a78f2dc0fa643d5bea266056dbbd5",
+      "build\\large-llt-next\\shared_back2.asm": "53dc982250ea70f9248a81b51c74b2b1cfd7b9517d4cc1a1415aff2ce3eea590",
+      ".scratch\\large-llt-next\\variants\\shared_back2\\kibo\\llt.hpp": "8ba10c479431cf11113b29d46f25b499203f036f6abaa805ec0788b103bd51da"
+    },
+    "dumpSha256": "d28d171b8b963d2f064be43529838c5ecdf6eba27d72cd8c0047af5244d15abe",
+    "selected": [
+      {
+        "symbol": "??$blocked@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@@?$llt_inplace@N$00@internal@Eigen@@SA_JAEAV?$Matrix@N$0?0$0?0$0A@$0?0$0?0@2@@Z",
+        "stem": "shared_back2-_blocked-22"
+      },
+      {
+        "symbol": "??$unblocked@V?$Block@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@$0?0$0?0$0A@@Eigen@@@?$llt_inplace@N$00@internal@Eigen@@SA_JAEAV?$Block@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@$0?0$0?0$0A@@2@@Z",
+        "stem": "shared_back2-_unblocked-83"
+      },
+      {
+        "symbol": "??$unblocked@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@@?$llt_inplace@N$00@internal@Eigen@@SA_JAEAV?$Matrix@N$0?0$0?0$0A@$0?0$0?0@2@@Z",
+        "stem": "shared_back2-_unblocked-84"
+      },
+      {
+        "symbol": "??$unblocked@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@V?$Transpositions@$0?0$0?0H@2@V?$Matrix@N$0?0$00$0A@$0?0$00@2@@?$ldlt_inplace@$00@internal@Eigen@@SA_NAEAV?$Matrix@N$0?0$0?0$0A@$0?0$0?0@2@AEAV?$Transpositions@$0?0$0?0H@2@AEAV?$Matrix@N$0?0$00$0A@$0?0$00@2@AEAW4SignMatrix@12@@Z",
+        "stem": "shared_back2-_unblocked-85"
+      },
+      {
+        "symbol": "??R?$gebp_kernel@NN_JV?$blas_data_mapper@N_J$0A@$0A@$00@internal@Eigen@@$03$03$0A@$0A@@internal@Eigen@@QEAAXAEBV?$blas_data_mapper@N_J$0A@$0A@$00@12@PEBN1_J22N2222@Z",
+        "stem": "shared_back2-R__gebp_kernel-129"
+      },
+      {
+        "symbol": "?factorize_column_llt@detail@linalg@kibo@@YA?AV?$Result@VLltFactorView@linalg@kibo@@@23@V?$MatrixView@$$CBN@23@V?$MatrixView@N@23@@Z",
+        "stem": "shared_back2-factorize_column_llt-143"
+      },
+      {
+        "symbol": "?llt_forward_shared@detail@linalg@kibo@@YA?AUStatus@23@V?$MatrixView@$$CBN@23@V?$span@$$CBN$0?0@std@@V?$span@N$0?0@7@@Z",
+        "stem": "shared_back2-llt_forward_shared-147"
+      },
+      {
+        "symbol": "?row_update_two_ordered@detail@linalg@kibo@@YAXPEANPEBN1_KNN@Z",
+        "stem": "shared_back2-row_update_two_ordered-161"
+      },
+      {
+        "symbol": "?run@?$triangular_solve_matrix@N_J$01$01$0A@$00$0A@$00@internal@Eigen@@SAX_J0PEBN0PEAN00AEAV?$level3_blocking@NN@23@@Z",
+        "stem": "shared_back2-run-171"
+      },
+      {
+        "symbol": "?dtor$0@?0??run@?$triangular_solve_matrix@N_J$01$01$0A@$00$0A@$00@internal@Eigen@@SAX_J0PEBN0PEAN00AEAV?$level3_blocking@NN@23@@Z@4HA",
+        "stem": "shared_back2-dtor_0-172"
+      },
+      {
+        "symbol": "?run@?$triangular_solve_vector@NN_J$00$00$0A@$0A@@internal@Eigen@@SAX_JPEBN0PEAN@Z",
+        "stem": "shared_back2-run-173"
+      },
+      {
+        "symbol": "?run@?$triangular_solve_vector@NN_J$00$01$0A@$00@internal@Eigen@@SAX_JPEBN0PEAN@Z",
+        "stem": "shared_back2-run-174"
+      },
+      {
+        "symbol": "?run@?$triangular_solve_vector@NN_J$00$04$0A@$0A@@internal@Eigen@@SAX_JPEBN0PEAN@Z",
+        "stem": "shared_back2-run-175"
+      },
+      {
+        "symbol": "?run@?$triangular_solve_vector@NN_J$00$05$0A@$00@internal@Eigen@@SAX_JPEBN0PEAN@Z",
+        "stem": "shared_back2-run-176"
+      },
+      {
+        "symbol": "?solve_into@linalg@kibo@@YA?AUStatus@12@VLltFactorView@12@V?$span@$$CBN$0?0@std@@V?$span@N$0?0@6@V?$span@W4byte@std@@$0?0@6@@Z",
+        "stem": "shared_back2-solve_into-177"
+      }
+    ]
+  }
+}

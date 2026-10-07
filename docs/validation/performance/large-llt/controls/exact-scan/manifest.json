@@ -1,0 +1,1043 @@
+{
+  "publicCodeCommit": "48439196aa80f5c2678e8b7a15c1bf4cfcb438b5",
+  "samples": 5,
+  "processes": 3,
+  "formalAcceptance": false,
+  "commands": [
+    {
+      "command": [
+        "build\\large-llt-next\\Release\\public_large.exe",
+        "128",
+        "5",
+        "512",
+        "0"
+      ],
+      "output": "public_large-n128-m512-process0.jsonl",
+      "binarySha256": "a4a637f01a4be2bb21a49cfeb64370247eee9b1b103701dc857017f5f57ba2d6",
+      "medianPhaseUs": [
+        47.298632812499996,
+        2.0081787109375,
+        49.632421875,
+        73.21015625
+      ],
+      "medianPhaseRatio": [
+        1.0806445486617706,
+        0.633103326188103,
+        1.0517362958197765,
+        0.9873128833538234
+      ]
+    },
+    {
+      "command": [
+        "build\\large-llt-next\\Release\\validation_fused.exe",
+        "128",
+        "5",
+        "512",
+        "0"
+      ],
+      "output": "validation_fused-n128-m512-process0.jsonl",
+      "binarySha256": "1c97fe61bf1b371d184e9f4f1e655aa6a701472b910f28bb35d1fa8308c40b59",
+      "medianPhaseUs": [
+        45.96533203125,
+        1.9889038085937503,
+        47.832324218749996,
+        57.2044921875
+      ],
+      "medianPhaseRatio": [
+        1.0496661567212442,
+        0.6183822187062618,
+        1.0177306956816674,
+        0.927292085650065
+      ]
+    },
+    {
+      "command": [
+        "build\\large-llt-next\\Release\\validation_exact_fused.exe",
+        "128",
+        "5",
+        "512",
+        "0"
+      ],
+      "output": "validation_exact_fused-n128-m512-process0.jsonl",
+      "binarySha256": "e6d7f7aecd0396229ce03de3ba96c9039883178ee64707e5200ded0ec6418681",
+      "medianPhaseUs": [
+        44.8962890625,
+        1.9784667968749998,
+        46.6607421875,
+        56.4421875
+      ],
+      "medianPhaseRatio": [
+        1.0200186879467172,
+        0.5781700011606002,
+        0.9846513372378176,
+        0.9140471295055528
+      ]
+    },
+    {
+      "command": [
+        "build\\large-llt-next\\Release\\public_large.exe",
+        "512",
+        "5",
+        "2048",
+        "0"
+      ],
+      "output": "public_large-n512-m2048-process0.jsonl",
+      "binarySha256": "a4a637f01a4be2bb21a49cfeb64370247eee9b1b103701dc857017f5f57ba2d6",
+      "medianPhaseUs": [
+        2062.21875,
+        23.8728515625,
+        2088.9874999999997,
+        2913.2437499999996
+      ],
+      "medianPhaseRatio": [
+        0.9775749280051195,
+        0.8054521962116505,
+        0.9755204571308256,
+        0.9497828774160406
+      ]
+    },
+    {
+      "command": [
+        "build\\large-llt-next\\Release\\validation_fused.exe",
+        "512",
+        "5",
+        "2048",
+        "0"
+      ],
+      "output": "validation_fused-n512-m2048-process0.jsonl",
+      "binarySha256": "1c97fe61bf1b371d184e9f4f1e655aa6a701472b910f28bb35d1fa8308c40b59",
+      "medianPhaseUs": [
+        2068.35625,
+        23.483349609375,
+        2124.95,
+        2869.9375
+      ],
+      "medianPhaseRatio": [
+        0.90205522392128,
+        0.8219100125096557,
+        0.9117977391252574,
+        0.9118417984049879
+      ]
+    },
+    {
+      "command": [
+        "build\\large-llt-next\\Release\\validation_exact_fused.exe",
+        "512",
+        "5",
+        "2048",
+        "0"
+      ],
+      "output": "validation_exact_fused-n512-m2048-process0.jsonl",
+      "binarySha256": "e6d7f7aecd0396229ce03de3ba96c9039883178ee64707e5200ded0ec6418681",
+      "medianPhaseUs": [
+        2060.6375,
+        23.788183593750002,
+        2076.73125,
+        2795.90625
+      ],
+      "medianPhaseRatio": [
+        0.8922054149356898,
+        0.8017680502152551,
+        0.9065803697267417,
+        0.9135593948155677
+      ]
+    },
+    {
+      "command": [
+        "build\\large-llt-next\\Release\\public_large.exe",
+        "2",
+        "5",
+        "8",
+        "0"
+      ],
+      "output": "public_large-n2-m8-process0.jsonl",
+      "binarySha256": "a4a637f01a4be2bb21a49cfeb64370247eee9b1b103701dc857017f5f57ba2d6",
+      "medianPhaseUs": [
+        0.017760753631591797,
+        0.01570439338684082,
+        0.04614887237548828,
+        0.1498563766479492
+      ],
+      "medianPhaseRatio": [
+        0.5419022373271957,
+        0.7646376473334112,
+        0.8390952266348546,
+        1.368118521201441
+      ]
+    },
+    {
+      "command": [
+        "build\\large-llt-next\\Release\\packed_setup.exe",
+        "2",
+        "5",
+        "8",
+        "0"
+      ],
+      "output": "packed_setup-n2-m8-process0.jsonl",
+      "binarySha256": "e5a5c5fa76787ce06de1453c319c2fdd197cc0d2a171e342919a588870b2c021",
+      "medianPhaseUs": [
+        0.017843294143676757,
+        0.015421152114868164,
+        0.046357154846191406,
+        0.12898292541503906
+      ],
+      "medianPhaseRatio": [
+        0.5281906113285665,
+        0.7412141658714833,
+        0.8451411235673926,
+        1.1473085223339712
+      ]
+    },
+    {
+      "command": [
+        "build\\large-llt-next\\Release\\uninitialized_setup.exe",
+        "2",
+        "5",
+        "8",
+        "0"
+      ],
+      "output": "uninitialized_setup-n2-m8-process0.jsonl",
+      "binarySha256": "a36dbd967d90f23744977a8cf349574e7747468abc1c0f215fec7cec0c4e67b6",
+      "medianPhaseUs": [
+        0.01783766746520996,
+        0.01581263542175293,
+        0.04637575149536133,
+        0.1263969421386719
+      ],
+      "medianPhaseRatio": [
+        0.5343020050447486,
+        0.7651327307073974,
+        0.846996967903769,
+        1.1206195939833097
+      ]
+    },
+    {
+      "command": [
+        "build\\large-llt-next\\Release\\public_large.exe",
+        "8",
+        "5",
+        "32",
+        "0"
+      ],
+      "output": "public_large-n8-m32-process0.jsonl",
+      "binarySha256": "a4a637f01a4be2bb21a49cfeb64370247eee9b1b103701dc857017f5f57ba2d6",
+      "medianPhaseUs": [
+        0.12811393737792967,
+        0.06392116546630859,
+        0.21904754638671875,
+        0.34680862426757814
+      ],
+      "medianPhaseRatio": [
+        0.5667968433559257,
+        0.5896539936282388,
+        0.6549632095045059,
+        0.8379331911710939
+      ]
+    },
+    {
+      "command": [
+        "build\\large-llt-next\\Release\\packed_setup.exe",
+        "8",
+        "5",
+        "32",
+        "0"
+      ],
+      "output": "packed_setup-n8-m32-process0.jsonl",
+      "binarySha256": "e5a5c5fa76787ce06de1453c319c2fdd197cc0d2a171e342919a588870b2c021",
+      "medianPhaseUs": [
+        0.12919654846191406,
+        0.064453125,
+        0.22001075744628906,
+        0.31992263793945314
+      ],
+      "medianPhaseRatio": [
+        0.567045555382547,
+        0.593167969471287,
+        0.6541309830815881,
+        0.7423407697999909
+      ]
+    },
+    {
+      "command": [
+        "build\\large-llt-next\\Release\\uninitialized_setup.exe",
+        "8",
+        "5",
+        "32",
+        "0"
+      ],
+      "output": "uninitialized_setup-n8-m32-process0.jsonl",
+      "binarySha256": "a36dbd967d90f23744977a8cf349574e7747468abc1c0f215fec7cec0c4e67b6",
+      "medianPhaseUs": [
+        0.1307147979736328,
+        0.06457557678222657,
+        0.231842041015625,
+        0.3069358825683594
+      ],
+      "medianPhaseRatio": [
+        0.5753860172799056,
+        0.5871197658139239,
+        0.6925503208868145,
+        0.7401992962317148
+      ]
+    },
+    {
+      "command": [
+        "build\\large-llt-next\\Release\\public_large.exe",
+        "32",
+        "5",
+        "128",
+        "0"
+      ],
+      "output": "public_large-n32-m128-process0.jsonl",
+      "binarySha256": "a4a637f01a4be2bb21a49cfeb64370247eee9b1b103701dc857017f5f57ba2d6",
+      "medianPhaseUs": [
+        1.5448333740234377,
+        0.3160224914550781,
+        1.872406005859375,
+        2.14229736328125
+      ],
+      "medianPhaseRatio": [
+        0.6964067421422435,
+        0.562909856722127,
+        0.6628716262205675,
+        0.6753235259032366
+      ]
+    },
+    {
+      "command": [
+        "build\\large-llt-next\\Release\\packed_setup.exe",
+        "32",
+        "5",
+        "128",
+        "0"
+      ],
+      "output": "packed_setup-n32-m128-process0.jsonl",
+      "binarySha256": "e5a5c5fa76787ce06de1453c319c2fdd197cc0d2a171e342919a588870b2c021",
+      "medianPhaseUs": [
+        1.54354248046875,
+        0.3163780212402344,
+        1.87786865234375,
+        2.109771728515625
+      ],
+      "medianPhaseRatio": [
+        0.7013822047038786,
+        0.564489296935836,
+        0.664717904843386,
+        0.6587161231925397
+      ]
+    },
+    {
+      "command": [
+        "build\\large-llt-next\\Release\\uninitialized_setup.exe",
+        "32",
+        "5",
+        "128",
+        "0"
+      ],
+      "output": "uninitialized_setup-n32-m128-process0.jsonl",
+      "binarySha256": "a36dbd967d90f23744977a8cf349574e7747468abc1c0f215fec7cec0c4e67b6",
+      "medianPhaseUs": [
+        1.5385284423828125,
+        0.3159843444824219,
+        1.8745849609375,
+        2.117242431640625
+      ],
+      "medianPhaseRatio": [
+        0.7065435990004723,
+        0.5689396301735116,
+        0.6705180352780125,
+        0.671532267123208
+      ]
+    },
+    {
+      "command": [
+        "build\\large-llt-next\\Release\\validation_exact_fused.exe",
+        "128",
+        "5",
+        "512",
+        "1"
+      ],
+      "output": "validation_exact_fused-n128-m512-process1.jsonl",
+      "binarySha256": "e6d7f7aecd0396229ce03de3ba96c9039883178ee64707e5200ded0ec6418681",
+      "medianPhaseUs": [
+        44.65517578125,
+        1.9879089355468749,
+        46.58330078125,
+        55.85859375
+      ],
+      "medianPhaseRatio": [
+        1.0251058647389415,
+        0.5752844851512628,
+        0.9857337477734901,
+        0.9108860573274177
+      ]
+    },
+    {
+      "command": [
+        "build\\large-llt-next\\Release\\validation_fused.exe",
+        "128",
+        "5",
+        "512",
+        "1"
+      ],
+      "output": "validation_fused-n128-m512-process1.jsonl",
+      "binarySha256": "1c97fe61bf1b371d184e9f4f1e655aa6a701472b910f28bb35d1fa8308c40b59",
+      "medianPhaseUs": [
+        45.79453125,
+        1.9867858886718748,
+        47.51455078125,
+        57.0724609375
+      ],
+      "medianPhaseRatio": [
+        1.0436524363374151,
+        0.5829911645204978,
+        1.0051595745780832,
+        0.9355482131765821
+      ]
+    },
+    {
+      "command": [
+        "build\\large-llt-next\\Release\\public_large.exe",
+        "128",
+        "5",
+        "512",
+        "1"
+      ],
+      "output": "public_large-n128-m512-process1.jsonl",
+      "binarySha256": "a4a637f01a4be2bb21a49cfeb64370247eee9b1b103701dc857017f5f57ba2d6",
+      "medianPhaseUs": [
+        46.70859375,
+        2.008270263671875,
+        49.15625,
+        57.12578125
+      ],
+      "medianPhaseRatio": [
+        1.0615780628984501,
+        0.6329835959571077,
+        1.0445820728129023,
+        0.9336871161001865
+      ]
+    },
+    {
+      "command": [
+        "build\\large-llt-next\\Release\\validation_exact_fused.exe",
+        "512",
+        "5",
+        "2048",
+        "1"
+      ],
+      "output": "validation_exact_fused-n512-m2048-process1.jsonl",
+      "binarySha256": "e6d7f7aecd0396229ce03de3ba96c9039883178ee64707e5200ded0ec6418681",
+      "medianPhaseUs": [
+        2028.93125,
+        23.68525390625,
+        2075.0,
+        2837.63125
+      ],
+      "medianPhaseRatio": [
+        0.9056016827189195,
+        0.819580025972881,
+        0.9121455476582312,
+        0.9319827734852902
+      ]
+    },
+    {
+      "command": [
+        "build\\large-llt-next\\Release\\validation_fused.exe",
+        "512",
+        "5",
+        "2048",
+        "1"
+      ],
+      "output": "validation_fused-n512-m2048-process1.jsonl",
+      "binarySha256": "1c97fe61bf1b371d184e9f4f1e655aa6a701472b910f28bb35d1fa8308c40b59",
+      "medianPhaseUs": [
+        2048.16875,
+        23.365576171875,
+        2089.65625,
+        2855.2875
+      ],
+      "medianPhaseRatio": [
+        0.9083970306711288,
+        0.8163501233055015,
+        0.920298290486184,
+        0.9296416263931865
+      ]
+    },
+    {
+      "command": [
+        "build\\large-llt-next\\Release\\public_large.exe",
+        "512",
+        "5",
+        "2048",
+        "1"
+      ],
+      "output": "public_large-n512-m2048-process1.jsonl",
+      "binarySha256": "a4a637f01a4be2bb21a49cfeb64370247eee9b1b103701dc857017f5f57ba2d6",
+      "medianPhaseUs": [
+        2065.71875,
+        23.6943359375,
+        2101.48125,
+        2861.60625
+      ],
+      "medianPhaseRatio": [
+        0.9200960808541998,
+        0.8342048521661639,
+        0.9195747776525802,
+        0.9565737975881762
+      ]
+    },
+    {
+      "command": [
+        "build\\large-llt-next\\Release\\uninitialized_setup.exe",
+        "2",
+        "5",
+        "8",
+        "1"
+      ],
+      "output": "uninitialized_setup-n2-m8-process1.jsonl",
+      "binarySha256": "a36dbd967d90f23744977a8cf349574e7747468abc1c0f215fec7cec0c4e67b6",
+      "medianPhaseUs": [
+        0.01804823875427246,
+        0.015598583221435548,
+        0.046620750427246095,
+        0.12802867889404296
+      ],
+      "medianPhaseRatio": [
+        0.5459403082959075,
+        0.7570498265349639,
+        0.8625542671965932,
+        1.1684918939714404
+      ]
+    },
+    {
+      "command": [
+        "build\\large-llt-next\\Release\\packed_setup.exe",
+        "2",
+        "5",
+        "8",
+        "1"
+      ],
+      "output": "packed_setup-n2-m8-process1.jsonl",
+      "binarySha256": "e5a5c5fa76787ce06de1453c319c2fdd197cc0d2a171e342919a588870b2c021",
+      "medianPhaseUs": [
+        0.017858028411865234,
+        0.015638780593872068,
+        0.046413326263427736,
+        0.12947311401367187
+      ],
+      "medianPhaseRatio": [
+        0.5281617640837025,
+        0.752971995059302,
+        0.8410437639555631,
+        1.1455380504276058
+      ]
+    },
+    {
+      "command": [
+        "build\\large-llt-next\\Release\\public_large.exe",
+        "2",
+        "5",
+        "8",
+        "1"
+      ],
+      "output": "public_large-n2-m8-process1.jsonl",
+      "binarySha256": "a4a637f01a4be2bb21a49cfeb64370247eee9b1b103701dc857017f5f57ba2d6",
+      "medianPhaseUs": [
+        0.01771368980407715,
+        0.015635156631469728,
+        0.04632349014282226,
+        0.15008506774902344
+      ],
+      "medianPhaseRatio": [
+        0.5391695972806612,
+        0.7630313638387083,
+        0.8550950891620759,
+        1.367383022420884
+      ]
+    },
+    {
+      "command": [
+        "build\\large-llt-next\\Release\\uninitialized_setup.exe",
+        "8",
+        "5",
+        "32",
+        "1"
+      ],
+      "output": "uninitialized_setup-n8-m32-process1.jsonl",
+      "binarySha256": "a36dbd967d90f23744977a8cf349574e7747468abc1c0f215fec7cec0c4e67b6",
+      "medianPhaseUs": [
+        0.1306774139404297,
+        0.06497631072998047,
+        0.2325714111328125,
+        0.3069923400878906
+      ],
+      "medianPhaseRatio": [
+        0.5723565975828924,
+        0.511266074250971,
+        0.6570704327358319,
+        0.7424179324085575
+      ]
+    },
+    {
+      "command": [
+        "build\\large-llt-next\\Release\\packed_setup.exe",
+        "8",
+        "5",
+        "32",
+        "1"
+      ],
+      "output": "packed_setup-n8-m32-process1.jsonl",
+      "binarySha256": "e5a5c5fa76787ce06de1453c319c2fdd197cc0d2a171e342919a588870b2c021",
+      "medianPhaseUs": [
+        0.1286304473876953,
+        0.06447868347167969,
+        0.22063179016113282,
+        0.3171577453613281
+      ],
+      "medianPhaseRatio": [
+        0.5653513022309108,
+        0.5133962938940783,
+        0.6258478263460919,
+        0.7650504823913815
+      ]
+    },
+    {
+      "command": [
+        "build\\large-llt-next\\Release\\public_large.exe",
+        "8",
+        "5",
+        "32",
+        "1"
+      ],
+      "output": "public_large-n8-m32-process1.jsonl",
+      "binarySha256": "a4a637f01a4be2bb21a49cfeb64370247eee9b1b103701dc857017f5f57ba2d6",
+      "medianPhaseUs": [
+        0.12810363769531252,
+        0.06450519561767577,
+        0.21978492736816407,
+        0.3406768798828125
+      ],
+      "medianPhaseRatio": [
+        0.553184477218423,
+        0.5953911820495351,
+        0.646340396316838,
+        0.7781830180532787
+      ]
+    },
+    {
+      "command": [
+        "build\\large-llt-next\\Release\\uninitialized_setup.exe",
+        "32",
+        "5",
+        "128",
+        "1"
+      ],
+      "output": "uninitialized_setup-n32-m128-process1.jsonl",
+      "binarySha256": "a36dbd967d90f23744977a8cf349574e7747468abc1c0f215fec7cec0c4e67b6",
+      "medianPhaseUs": [
+        1.5432037353515624,
+        0.31491394042968746,
+        1.879180908203125,
+        2.1201354980468747
+      ],
+      "medianPhaseRatio": [
+        0.7124803660596141,
+        0.5691312437935655,
+        0.6723421091748494,
+        0.6592404073530025
+      ]
+    },
+    {
+      "command": [
+        "build\\large-llt-next\\Release\\packed_setup.exe",
+        "32",
+        "5",
+        "128",
+        "1"
+      ],
+      "output": "packed_setup-n32-m128-process1.jsonl",
+      "binarySha256": "e5a5c5fa76787ce06de1453c319c2fdd197cc0d2a171e342919a588870b2c021",
+      "medianPhaseUs": [
+        1.5401885986328123,
+        0.31839981079101565,
+        1.8836669921875,
+        2.120489501953125
+      ],
+      "medianPhaseRatio": [
+        0.6705774939652233,
+        0.5744946209915547,
+        0.6461310005826268,
+        0.6445658627087197
+      ]
+    },
+    {
+      "command": [
+        "build\\large-llt-next\\Release\\public_large.exe",
+        "32",
+        "5",
+        "128",
+        "1"
+      ],
+      "output": "public_large-n32-m128-process1.jsonl",
+      "binarySha256": "a4a637f01a4be2bb21a49cfeb64370247eee9b1b103701dc857017f5f57ba2d6",
+      "medianPhaseUs": [
+        1.5473297119140625,
+        0.3152198791503906,
+        1.8787109375,
+        2.150079345703125
+      ],
+      "medianPhaseRatio": [
+        0.6929808058072835,
+        0.5616558510435761,
+        0.6593099087668032,
+        0.6651893870013236
+      ]
+    },
+    {
+      "command": [
+        "build\\large-llt-next\\Release\\public_large.exe",
+        "128",
+        "5",
+        "512",
+        "2"
+      ],
+      "output": "public_large-n128-m512-process2.jsonl",
+      "binarySha256": "a4a637f01a4be2bb21a49cfeb64370247eee9b1b103701dc857017f5f57ba2d6",
+      "medianPhaseUs": [
+        46.64072265625,
+        2.0170654296875004,
+        48.787109375,
+        58.975195312500006
+      ],
+      "medianPhaseRatio": [
+        1.0642563479772265,
+        0.5903725701470833,
+        1.0344543448796901,
+        0.9497049491445007
+      ]
+    },
+    {
+      "command": [
+        "build\\large-llt-next\\Release\\validation_fused.exe",
+        "128",
+        "5",
+        "512",
+        "2"
+      ],
+      "output": "validation_fused-n128-m512-process2.jsonl",
+      "binarySha256": "1c97fe61bf1b371d184e9f4f1e655aa6a701472b910f28bb35d1fa8308c40b59",
+      "medianPhaseUs": [
+        45.914355468749996,
+        1.9887023925781249,
+        47.46884765625,
+        56.7318359375
+      ],
+      "medianPhaseRatio": [
+        1.0485848362902255,
+        0.6230690975289802,
+        1.0144282951780925,
+        0.9271224354888212
+      ]
+    },
+    {
+      "command": [
+        "build\\large-llt-next\\Release\\validation_exact_fused.exe",
+        "128",
+        "5",
+        "512",
+        "2"
+      ],
+      "output": "validation_exact_fused-n128-m512-process2.jsonl",
+      "binarySha256": "e6d7f7aecd0396229ce03de3ba96c9039883178ee64707e5200ded0ec6418681",
+      "medianPhaseUs": [
+        44.66064453125,
+        1.986761474609375,
+        46.63212890625,
+        55.5947265625
+      ],
+      "medianPhaseRatio": [
+        1.0179086937070285,
+        0.6241546393927018,
+        0.9917479902161299,
+        0.9101906050099526
+      ]
+    },
+    {
+      "command": [
+        "build\\large-llt-next\\Release\\public_large.exe",
+        "512",
+        "5",
+        "2048",
+        "2"
+      ],
+      "output": "public_large-n512-m2048-process2.jsonl",
+      "binarySha256": "a4a637f01a4be2bb21a49cfeb64370247eee9b1b103701dc857017f5f57ba2d6",
+      "medianPhaseUs": [
+        2082.5187499999997,
+        23.7962890625,
+        2095.03125,
+        2853.9500000000003
+      ],
+      "medianPhaseRatio": [
+        0.9262807452314226,
+        0.821542419139227,
+        0.9261008614127606,
+        0.9402355983749847
+      ]
+    },
+    {
+      "command": [
+        "build\\large-llt-next\\Release\\validation_fused.exe",
+        "512",
+        "5",
+        "2048",
+        "2"
+      ],
+      "output": "validation_fused-n512-m2048-process2.jsonl",
+      "binarySha256": "1c97fe61bf1b371d184e9f4f1e655aa6a701472b910f28bb35d1fa8308c40b59",
+      "medianPhaseUs": [
+        2046.5937499999998,
+        23.358203125,
+        2072.5375,
+        2818.2625
+      ],
+      "medianPhaseRatio": [
+        0.9128312160215345,
+        0.8227859857931581,
+        0.9088905760496865,
+        0.9346031354661078
+      ]
+    },
+    {
+      "command": [
+        "build\\large-llt-next\\Release\\validation_exact_fused.exe",
+        "512",
+        "5",
+        "2048",
+        "2"
+      ],
+      "output": "validation_exact_fused-n512-m2048-process2.jsonl",
+      "binarySha256": "e6d7f7aecd0396229ce03de3ba96c9039883178ee64707e5200ded0ec6418681",
+      "medianPhaseUs": [
+        2034.45625,
+        23.8505859375,
+        2077.3375,
+        2860.3
+      ],
+      "medianPhaseRatio": [
+        0.9035201181329661,
+        0.8301495581237254,
+        0.9047474091327901,
+        0.9228725530593294
+      ]
+    },
+    {
+      "command": [
+        "build\\large-llt-next\\Release\\public_large.exe",
+        "2",
+        "5",
+        "8",
+        "2"
+      ],
+      "output": "public_large-n2-m8-process2.jsonl",
+      "binarySha256": "a4a637f01a4be2bb21a49cfeb64370247eee9b1b103701dc857017f5f57ba2d6",
+      "medianPhaseUs": [
+        0.017897367477416992,
+        0.01637563705444336,
+        0.04641685485839844,
+        0.1517923355102539
+      ],
+      "medianPhaseRatio": [
+        0.5450106086099158,
+        0.7863287394588555,
+        0.8434936213334814,
+        1.3785744971279301
+      ]
+    },
+    {
+      "command": [
+        "build\\large-llt-next\\Release\\packed_setup.exe",
+        "2",
+        "5",
+        "8",
+        "2"
+      ],
+      "output": "packed_setup-n2-m8-process2.jsonl",
+      "binarySha256": "e5a5c5fa76787ce06de1453c319c2fdd197cc0d2a171e342919a588870b2c021",
+      "medianPhaseUs": [
+        0.018067169189453128,
+        0.015665340423583987,
+        0.04648799896240235,
+        0.13069648742675782
+      ],
+      "medianPhaseRatio": [
+        0.5507985216256337,
+        0.7478043461399835,
+        0.8617274784330364,
+        1.1870433579415671
+      ]
+    },
+    {
+      "command": [
+        "build\\large-llt-next\\Release\\uninitialized_setup.exe",
+        "2",
+        "5",
+        "8",
+        "2"
+      ],
+      "output": "uninitialized_setup-n2-m8-process2.jsonl",
+      "binarySha256": "a36dbd967d90f23744977a8cf349574e7747468abc1c0f215fec7cec0c4e67b6",
+      "medianPhaseUs": [
+        0.017813730239868163,
+        0.015726852416992187,
+        0.04613761901855469,
+        0.12721805572509767
+      ],
+      "medianPhaseRatio": [
+        0.5324344946772922,
+        0.7639935140143618,
+        0.8403698361522843,
+        1.1259669553874072
+      ]
+    },
+    {
+      "command": [
+        "build\\large-llt-next\\Release\\public_large.exe",
+        "8",
+        "5",
+        "32",
+        "2"
+      ],
+      "output": "public_large-n8-m32-process2.jsonl",
+      "binarySha256": "a4a637f01a4be2bb21a49cfeb64370247eee9b1b103701dc857017f5f57ba2d6",
+      "medianPhaseUs": [
+        0.12880706787109375,
+        0.06524276733398438,
+        0.2202159881591797,
+        0.33991012573242185
+      ],
+      "medianPhaseRatio": [
+        0.5729955929942693,
+        0.593463636474859,
+        0.6559312740318026,
+        0.8300332738403526
+      ]
+    },
+    {
+      "command": [
+        "build\\large-llt-next\\Release\\packed_setup.exe",
+        "8",
+        "5",
+        "32",
+        "2"
+      ],
+      "output": "packed_setup-n8-m32-process2.jsonl",
+      "binarySha256": "e5a5c5fa76787ce06de1453c319c2fdd197cc0d2a171e342919a588870b2c021",
+      "medianPhaseUs": [
+        0.129315185546875,
+        0.06434955596923829,
+        0.22074928283691406,
+        0.31449356079101565
+      ],
+      "medianPhaseRatio": [
+        0.566233323701015,
+        0.5936283703745487,
+        0.6581589596493344,
+        0.7283728211308377
+      ]
+    },
+    {
+      "command": [
+        "build\\large-llt-next\\Release\\uninitialized_setup.exe",
+        "8",
+        "5",
+        "32",
+        "2"
+      ],
+      "output": "uninitialized_setup-n8-m32-process2.jsonl",
+      "binarySha256": "a36dbd967d90f23744977a8cf349574e7747468abc1c0f215fec7cec0c4e67b6",
+      "medianPhaseUs": [
+        0.1302928924560547,
+        0.06420917510986329,
+        0.230096435546875,
+        0.305853271484375
+      ],
+      "medianPhaseRatio": [
+        0.5768399328507686,
+        0.5936509673002407,
+        0.6881865652029845,
+        0.7431998230848281
+      ]
+    },
+    {
+      "command": [
+        "build\\large-llt-next\\Release\\public_large.exe",
+        "32",
+        "5",
+        "128",
+        "2"
+      ],
+      "output": "public_large-n32-m128-process2.jsonl",
+      "binarySha256": "a4a637f01a4be2bb21a49cfeb64370247eee9b1b103701dc857017f5f57ba2d6",
+      "medianPhaseUs": [
+        1.5292327880859375,
+        0.3160270690917969,
+        1.8685058593750001,
+        2.1460388183593753
+      ],
+      "medianPhaseRatio": [
+        0.6921696682385897,
+        0.5703771495686798,
+        0.65869082872165,
+        0.6653552567682408
+      ]
+    },
+    {
+      "command": [
+        "build\\large-llt-next\\Release\\packed_setup.exe",
+        "32",
+        "5",
+        "128",
+        "2"
+      ],
+      "output": "packed_setup-n32-m128-process2.jsonl",
+      "binarySha256": "e5a5c5fa76787ce06de1453c319c2fdd197cc0d2a171e342919a588870b2c021",
+      "medianPhaseUs": [
+        1.54127197265625,
+        0.3165542602539062,
+        1.8746276855468749,
+        2.109759521484375
+      ],
+      "medianPhaseRatio": [
+        0.7012999997222816,
+        0.5717150459736554,
+        0.6679257229566717,
+        0.6699518559866035
+      ]
+    },
+    {
+      "command": [
+        "build\\large-llt-next\\Release\\uninitialized_setup.exe",
+        "32",
+        "5",
+        "128",
+        "2"
+      ],
+      "output": "uninitialized_setup-n32-m128-process2.jsonl",
+      "binarySha256": "a36dbd967d90f23744977a8cf349574e7747468abc1c0f215fec7cec0c4e67b6",
+      "medianPhaseUs": [
+        1.559698486328125,
+        0.3163337707519531,
+        1.8844055175781251,
+        2.11961669921875
+      ],
+      "medianPhaseRatio": [
+        0.7144612554327389,
+        0.5702709275342008,
+        0.6709196206907047,
+        0.6585272709654988
+      ]
+    }
+  ]
+}

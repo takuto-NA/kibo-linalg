@@ -1,0 +1,254 @@
+{
+  "actual": {
+    "command": [
+      "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\dumpbin.exe",
+      "/disasm",
+      "C:\\Users\\owner\\Documents\\git\\kibo-linalg\\build\\large-llt-next\\actual.dir\\Release\\full-adaptive.obj"
+    ],
+    "objectSha256": "4432fa0954fb0d3bf49086b4e90add1d434069639abdb93e9b4a28aee384c41b",
+    "binarySha256": "d83f1e3347cd623b136cecff5c2677c4a31e4ed06ec514903a8acab3d9d3c32e",
+    "listingSha256": "2f0b81d6fd6f380f0be7ccea3e969e329b4149d2be60de77ed40b19197da9b3e",
+    "fullDumpSha256": "4823e53a96d64559e38e882c5a2f2c19c877646602107748dcb3f8f2096cd445",
+    "selected": [
+      {
+        "symbol": "??$blocked@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@@?$llt_inplace@N$00@internal@Eigen@@SA_JAEAV?$Matrix@N$0?0$0?0$0A@$0?0$0?0@2@@Z",
+        "stem": "actual-_blocked-22"
+      },
+      {
+        "symbol": "??$unblocked@V?$Block@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@$0?0$0?0$0A@@Eigen@@@?$llt_inplace@N$00@internal@Eigen@@SA_JAEAV?$Block@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@$0?0$0?0$0A@@2@@Z",
+        "stem": "actual-_unblocked-83"
+      },
+      {
+        "symbol": "??$unblocked@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@@?$llt_inplace@N$00@internal@Eigen@@SA_JAEAV?$Matrix@N$0?0$0?0$0A@$0?0$0?0@2@@Z",
+        "stem": "actual-_unblocked-84"
+      },
+      {
+        "symbol": "??$unblocked@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@V?$Transpositions@$0?0$0?0H@2@V?$Matrix@N$0?0$00$0A@$0?0$00@2@@?$ldlt_inplace@$00@internal@Eigen@@SA_NAEAV?$Matrix@N$0?0$0?0$0A@$0?0$0?0@2@AEAV?$Transpositions@$0?0$0?0H@2@AEAV?$Matrix@N$0?0$00$0A@$0?0$00@2@AEAW4SignMatrix@12@@Z",
+        "stem": "actual-_unblocked-85"
+      },
+      {
+        "symbol": "??R?$gebp_kernel@NN_JV?$blas_data_mapper@N_J$0A@$0A@$00@internal@Eigen@@$03$03$0A@$0A@@internal@Eigen@@QEAAXAEBV?$blas_data_mapper@N_J$0A@$0A@$00@12@PEBN1_J22N2222@Z",
+        "stem": "actual-R__gebp_kernel-129"
+      },
+      {
+        "symbol": "??R?$gemm_functor@N_JU?$general_matrix_matrix_product@_JN$0A@$0A@N$00$0A@$0A@$00@internal@Eigen@@V?$Transpose@$$CBV?$Matrix@N$0?0$0?0$00$0?0$0?0@Eigen@@@3@V?$Matrix@N$0?0$0?0$00$0?0$0?0@3@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@3@V?$gemm_blocking_space@$0A@NN$0?0$0?0$0?0$00$0A@@23@@internal@Eigen@@QEBAX_J000PEAU?$GemmParallelInfo@_J@12@@Z",
+        "stem": "actual-R__gemm_functor-130"
+      },
+      {
+        "symbol": "?factorize_column_llt@detail@linalg@kibo@@YA?AV?$Result@VLltFactorView@linalg@kibo@@@23@V?$MatrixView@$$CBN@23@V?$MatrixView@N@23@@Z",
+        "stem": "actual-factorize_column_llt-143"
+      },
+      {
+        "symbol": "?factorize_llt@linalg@kibo@@YA?AV?$Result@VLltFactorView@linalg@kibo@@@12@V?$MatrixView@$$CBN@12@V?$MatrixView@N@12@ULltOptions@12@@Z",
+        "stem": "actual-factorize_llt-144"
+      },
+      {
+        "symbol": "?row_update_panel@detail@linalg@kibo@@YAXPEANPEBN_K122@Z",
+        "stem": "actual-row_update_panel-159"
+      },
+      {
+        "symbol": "?run@?$general_matrix_matrix_product@_JN$0A@$0A@N$00$0A@$0A@$00@internal@Eigen@@SAX_J00PEBN010PEAN00NAEAV?$level3_blocking@NN@23@PEAU?$GemmParallelInfo@_J@23@@Z",
+        "stem": "actual-run-161"
+      },
+      {
+        "symbol": "?dtor$0@?0??run@?$general_matrix_matrix_product@_JN$0A@$0A@N$00$0A@$0A@$00@internal@Eigen@@SAX_J00PEBN010PEAN00NAEAV?$level3_blocking@NN@23@PEAU?$GemmParallelInfo@_J@23@@Z@4HA",
+        "stem": "actual-dtor_0-162"
+      },
+      {
+        "symbol": "?solve_into@linalg@kibo@@YA?AUStatus@12@VLltFactorView@12@V?$span@$$CBN$0?0@std@@V?$span@N$0?0@6@V?$span@W4byte@std@@$0?0@6@@Z",
+        "stem": "actual-solve_into-175"
+      }
+    ]
+  },
+  "pair8_divide": {
+    "command": [
+      "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\dumpbin.exe",
+      "/disasm",
+      "C:\\Users\\owner\\Documents\\git\\kibo-linalg\\build\\large-llt-next\\pair8_divide.dir\\Release\\full-adaptive.obj"
+    ],
+    "objectSha256": "411ea9ae8a59ad2b482a53a3568ebe1ad2d2fea6ac40733c94cb9f2d3af66a60",
+    "binarySha256": "c519eff636eea1fea698eaebaf6abe44f8ed2c66b6b41712209466ceabf47c8b",
+    "listingSha256": "890cd6eb30048803929fb3538d78d7e000c8eb98e3c3e719a754cc9c9df82dac",
+    "fullDumpSha256": "2dab8071d83be8fc11d1d57b855feb4fd04afd6ff44f2e250dd0f521838500ff",
+    "selected": [
+      {
+        "symbol": "??$blocked@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@@?$llt_inplace@N$00@internal@Eigen@@SA_JAEAV?$Matrix@N$0?0$0?0$0A@$0?0$0?0@2@@Z",
+        "stem": "pair8_divide-_blocked-22"
+      },
+      {
+        "symbol": "??$unblocked@V?$Block@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@$0?0$0?0$0A@@Eigen@@@?$llt_inplace@N$00@internal@Eigen@@SA_JAEAV?$Block@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@$0?0$0?0$0A@@2@@Z",
+        "stem": "pair8_divide-_unblocked-83"
+      },
+      {
+        "symbol": "??$unblocked@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@@?$llt_inplace@N$00@internal@Eigen@@SA_JAEAV?$Matrix@N$0?0$0?0$0A@$0?0$0?0@2@@Z",
+        "stem": "pair8_divide-_unblocked-84"
+      },
+      {
+        "symbol": "??$unblocked@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@V?$Transpositions@$0?0$0?0H@2@V?$Matrix@N$0?0$00$0A@$0?0$00@2@@?$ldlt_inplace@$00@internal@Eigen@@SA_NAEAV?$Matrix@N$0?0$0?0$0A@$0?0$0?0@2@AEAV?$Transpositions@$0?0$0?0H@2@AEAV?$Matrix@N$0?0$00$0A@$0?0$00@2@AEAW4SignMatrix@12@@Z",
+        "stem": "pair8_divide-_unblocked-85"
+      },
+      {
+        "symbol": "??R?$gebp_kernel@NN_JV?$blas_data_mapper@N_J$0A@$0A@$00@internal@Eigen@@$03$03$0A@$0A@@internal@Eigen@@QEAAXAEBV?$blas_data_mapper@N_J$0A@$0A@$00@12@PEBN1_J22N2222@Z",
+        "stem": "pair8_divide-R__gebp_kernel-129"
+      },
+      {
+        "symbol": "??R?$gemm_functor@N_JU?$general_matrix_matrix_product@_JN$0A@$0A@N$00$0A@$0A@$00@internal@Eigen@@V?$Transpose@$$CBV?$Matrix@N$0?0$0?0$00$0?0$0?0@Eigen@@@3@V?$Matrix@N$0?0$0?0$00$0?0$0?0@3@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@3@V?$gemm_blocking_space@$0A@NN$0?0$0?0$0?0$00$0A@@23@@internal@Eigen@@QEBAX_J000PEAU?$GemmParallelInfo@_J@12@@Z",
+        "stem": "pair8_divide-R__gemm_functor-130"
+      },
+      {
+        "symbol": "?factorize_column_llt@detail@linalg@kibo@@YA?AV?$Result@VLltFactorView@linalg@kibo@@@23@V?$MatrixView@$$CBN@23@V?$MatrixView@N@23@@Z",
+        "stem": "pair8_divide-factorize_column_llt-143"
+      },
+      {
+        "symbol": "?factorize_llt@linalg@kibo@@YA?AV?$Result@VLltFactorView@linalg@kibo@@@12@V?$MatrixView@$$CBN@12@V?$MatrixView@N@12@ULltOptions@12@@Z",
+        "stem": "pair8_divide-factorize_llt-144"
+      },
+      {
+        "symbol": "?row_update_panel@detail@linalg@kibo@@YAXPEANPEBN_K122@Z",
+        "stem": "pair8_divide-row_update_panel-159"
+      },
+      {
+        "symbol": "?run@?$general_matrix_matrix_product@_JN$0A@$0A@N$00$0A@$0A@$00@internal@Eigen@@SAX_J00PEBN010PEAN00NAEAV?$level3_blocking@NN@23@PEAU?$GemmParallelInfo@_J@23@@Z",
+        "stem": "pair8_divide-run-161"
+      },
+      {
+        "symbol": "?dtor$0@?0??run@?$general_matrix_matrix_product@_JN$0A@$0A@N$00$0A@$0A@$00@internal@Eigen@@SAX_J00PEBN010PEAN00NAEAV?$level3_blocking@NN@23@PEAU?$GemmParallelInfo@_J@23@@Z@4HA",
+        "stem": "pair8_divide-dtor_0-162"
+      },
+      {
+        "symbol": "?solve_into@linalg@kibo@@YA?AUStatus@12@VLltFactorView@12@V?$span@$$CBN$0?0@std@@V?$span@N$0?0@6@V?$span@W4byte@std@@$0?0@6@@Z",
+        "stem": "pair8_divide-solve_into-175"
+      },
+      {
+        "symbol": "?update_column_pair@detail@linalg@kibo@@YAXPEAN0PEBN_K122@Z",
+        "stem": "pair8_divide-update_column_pair-178"
+      }
+    ]
+  },
+  "quad8_divide": {
+    "command": [
+      "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\dumpbin.exe",
+      "/disasm",
+      "C:\\Users\\owner\\Documents\\git\\kibo-linalg\\build\\large-llt-next\\quad8_divide.dir\\Release\\full-adaptive.obj"
+    ],
+    "objectSha256": "7b799146e12b3a324053a3c3d7ef296c8fa0422ae6d478b1e778908fd28377d9",
+    "binarySha256": "15e60e8a5627af570dda1f924fbae9c36083ab0da0c541770d3cf375c26c5990",
+    "listingSha256": "85a66f4604c19f12304ace77d9ac1d3a17cdacaecc38cffd55838582d1607986",
+    "fullDumpSha256": "f9443a84f3acf37d0bc0095a0a3facb3ab98b7a3c86888e37d5395ce77ea06ad",
+    "selected": [
+      {
+        "symbol": "??$blocked@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@@?$llt_inplace@N$00@internal@Eigen@@SA_JAEAV?$Matrix@N$0?0$0?0$0A@$0?0$0?0@2@@Z",
+        "stem": "quad8_divide-_blocked-22"
+      },
+      {
+        "symbol": "??$unblocked@V?$Block@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@$0?0$0?0$0A@@Eigen@@@?$llt_inplace@N$00@internal@Eigen@@SA_JAEAV?$Block@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@$0?0$0?0$0A@@2@@Z",
+        "stem": "quad8_divide-_unblocked-83"
+      },
+      {
+        "symbol": "??$unblocked@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@@?$llt_inplace@N$00@internal@Eigen@@SA_JAEAV?$Matrix@N$0?0$0?0$0A@$0?0$0?0@2@@Z",
+        "stem": "quad8_divide-_unblocked-84"
+      },
+      {
+        "symbol": "??$unblocked@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@V?$Transpositions@$0?0$0?0H@2@V?$Matrix@N$0?0$00$0A@$0?0$00@2@@?$ldlt_inplace@$00@internal@Eigen@@SA_NAEAV?$Matrix@N$0?0$0?0$0A@$0?0$0?0@2@AEAV?$Transpositions@$0?0$0?0H@2@AEAV?$Matrix@N$0?0$00$0A@$0?0$00@2@AEAW4SignMatrix@12@@Z",
+        "stem": "quad8_divide-_unblocked-85"
+      },
+      {
+        "symbol": "??R?$gebp_kernel@NN_JV?$blas_data_mapper@N_J$0A@$0A@$00@internal@Eigen@@$03$03$0A@$0A@@internal@Eigen@@QEAAXAEBV?$blas_data_mapper@N_J$0A@$0A@$00@12@PEBN1_J22N2222@Z",
+        "stem": "quad8_divide-R__gebp_kernel-129"
+      },
+      {
+        "symbol": "??R?$gemm_functor@N_JU?$general_matrix_matrix_product@_JN$0A@$0A@N$00$0A@$0A@$00@internal@Eigen@@V?$Transpose@$$CBV?$Matrix@N$0?0$0?0$00$0?0$0?0@Eigen@@@3@V?$Matrix@N$0?0$0?0$00$0?0$0?0@3@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@3@V?$gemm_blocking_space@$0A@NN$0?0$0?0$0?0$00$0A@@23@@internal@Eigen@@QEBAX_J000PEAU?$GemmParallelInfo@_J@12@@Z",
+        "stem": "quad8_divide-R__gemm_functor-130"
+      },
+      {
+        "symbol": "?factorize_column_llt@detail@linalg@kibo@@YA?AV?$Result@VLltFactorView@linalg@kibo@@@23@V?$MatrixView@$$CBN@23@V?$MatrixView@N@23@@Z",
+        "stem": "quad8_divide-factorize_column_llt-143"
+      },
+      {
+        "symbol": "?factorize_llt@linalg@kibo@@YA?AV?$Result@VLltFactorView@linalg@kibo@@@12@V?$MatrixView@$$CBN@12@V?$MatrixView@N@12@ULltOptions@12@@Z",
+        "stem": "quad8_divide-factorize_llt-144"
+      },
+      {
+        "symbol": "?row_update_panel@detail@linalg@kibo@@YAXPEANPEBN_K122@Z",
+        "stem": "quad8_divide-row_update_panel-159"
+      },
+      {
+        "symbol": "?run@?$general_matrix_matrix_product@_JN$0A@$0A@N$00$0A@$0A@$00@internal@Eigen@@SAX_J00PEBN010PEAN00NAEAV?$level3_blocking@NN@23@PEAU?$GemmParallelInfo@_J@23@@Z",
+        "stem": "quad8_divide-run-161"
+      },
+      {
+        "symbol": "?dtor$0@?0??run@?$general_matrix_matrix_product@_JN$0A@$0A@N$00$0A@$0A@$00@internal@Eigen@@SAX_J00PEBN010PEAN00NAEAV?$level3_blocking@NN@23@PEAU?$GemmParallelInfo@_J@23@@Z@4HA",
+        "stem": "quad8_divide-dtor_0-162"
+      },
+      {
+        "symbol": "?solve_into@linalg@kibo@@YA?AUStatus@12@VLltFactorView@12@V?$span@$$CBN$0?0@std@@V?$span@N$0?0@6@V?$span@W4byte@std@@$0?0@6@@Z",
+        "stem": "quad8_divide-solve_into-175"
+      },
+      {
+        "symbol": "?update_column_pair@detail@linalg@kibo@@YAXPEAN0PEBN_K122@Z",
+        "stem": "quad8_divide-update_column_pair-178"
+      }
+    ]
+  },
+  "forward4": {
+    "command": [
+      "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\dumpbin.exe",
+      "/disasm",
+      "C:\\Users\\owner\\Documents\\git\\kibo-linalg\\build\\large-llt-next\\forward4.dir\\Release\\full-adaptive.obj"
+    ],
+    "objectSha256": "d79787536e08c51fc51ab97e0124325343b15552bdbef4498a2dbc1523b1085d",
+    "binarySha256": "724de5ad1610776795943807aeed98ca54226e87fd65d52f15358d7efdf14ae0",
+    "listingSha256": "52532ed36b35505c634d6e6db293b5ca41712d5f8bf9815cd5493fc6166332a2",
+    "fullDumpSha256": "bf5a5a3373cc837b6a17db5f6de87e696c421972721401165bc8776d267759ad",
+    "selected": [
+      {
+        "symbol": "??$blocked@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@@?$llt_inplace@N$00@internal@Eigen@@SA_JAEAV?$Matrix@N$0?0$0?0$0A@$0?0$0?0@2@@Z",
+        "stem": "forward4-_blocked-22"
+      },
+      {
+        "symbol": "??$unblocked@V?$Block@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@$0?0$0?0$0A@@Eigen@@@?$llt_inplace@N$00@internal@Eigen@@SA_JAEAV?$Block@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@$0?0$0?0$0A@@2@@Z",
+        "stem": "forward4-_unblocked-83"
+      },
+      {
+        "symbol": "??$unblocked@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@@?$llt_inplace@N$00@internal@Eigen@@SA_JAEAV?$Matrix@N$0?0$0?0$0A@$0?0$0?0@2@@Z",
+        "stem": "forward4-_unblocked-84"
+      },
+      {
+        "symbol": "??$unblocked@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@V?$Transpositions@$0?0$0?0H@2@V?$Matrix@N$0?0$00$0A@$0?0$00@2@@?$ldlt_inplace@$00@internal@Eigen@@SA_NAEAV?$Matrix@N$0?0$0?0$0A@$0?0$0?0@2@AEAV?$Transpositions@$0?0$0?0H@2@AEAV?$Matrix@N$0?0$00$0A@$0?0$00@2@AEAW4SignMatrix@12@@Z",
+        "stem": "forward4-_unblocked-85"
+      },
+      {
+        "symbol": "??R?$gebp_kernel@NN_JV?$blas_data_mapper@N_J$0A@$0A@$00@internal@Eigen@@$03$03$0A@$0A@@internal@Eigen@@QEAAXAEBV?$blas_data_mapper@N_J$0A@$0A@$00@12@PEBN1_J22N2222@Z",
+        "stem": "forward4-R__gebp_kernel-129"
+      },
+      {
+        "symbol": "??R?$gemm_functor@N_JU?$general_matrix_matrix_product@_JN$0A@$0A@N$00$0A@$0A@$00@internal@Eigen@@V?$Transpose@$$CBV?$Matrix@N$0?0$0?0$00$0?0$0?0@Eigen@@@3@V?$Matrix@N$0?0$0?0$00$0?0$0?0@3@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@3@V?$gemm_blocking_space@$0A@NN$0?0$0?0$0?0$00$0A@@23@@internal@Eigen@@QEBAX_J000PEAU?$GemmParallelInfo@_J@12@@Z",
+        "stem": "forward4-R__gemm_functor-130"
+      },
+      {
+        "symbol": "?factorize_column_llt@detail@linalg@kibo@@YA?AV?$Result@VLltFactorView@linalg@kibo@@@23@V?$MatrixView@$$CBN@23@V?$MatrixView@N@23@@Z",
+        "stem": "forward4-factorize_column_llt-143"
+      },
+      {
+        "symbol": "?factorize_llt@linalg@kibo@@YA?AV?$Result@VLltFactorView@linalg@kibo@@@12@V?$MatrixView@$$CBN@12@V?$MatrixView@N@12@ULltOptions@12@@Z",
+        "stem": "forward4-factorize_llt-144"
+      },
+      {
+        "symbol": "?row_update_panel@detail@linalg@kibo@@YAXPEANPEBN_K122@Z",
+        "stem": "forward4-row_update_panel-160"
+      },
+      {
+        "symbol": "?run@?$general_matrix_matrix_product@_JN$0A@$0A@N$00$0A@$0A@$00@internal@Eigen@@SAX_J00PEBN010PEAN00NAEAV?$level3_blocking@NN@23@PEAU?$GemmParallelInfo@_J@23@@Z",
+        "stem": "forward4-run-162"
+      },
+      {
+        "symbol": "?dtor$0@?0??run@?$general_matrix_matrix_product@_JN$0A@$0A@N$00$0A@$0A@$00@internal@Eigen@@SAX_J00PEBN010PEAN00NAEAV?$level3_blocking@NN@23@PEAU?$GemmParallelInfo@_J@23@@Z@4HA",
+        "stem": "forward4-dtor_0-163"
+      },
+      {
+        "symbol": "?solve_into@linalg@kibo@@YA?AUStatus@12@VLltFactorView@12@V?$span@$$CBN$0?0@std@@V?$span@N$0?0@6@V?$span@W4byte@std@@$0?0@6@@Z",
+        "stem": "forward4-solve_into-176"
+      }
+    ]
+  }
+}

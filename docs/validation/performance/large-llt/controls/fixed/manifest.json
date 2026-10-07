@@ -1,0 +1,238 @@
+{
+  "sourceCommit": "8fe28e552bfc485c4744a193cc9e677b3e2ce309",
+  "diagnosisOnly": true,
+  "commands": [
+    {
+      "command": [
+        "build\\large-llt-next\\Release\\pair8_divide.exe",
+        "128",
+        "3",
+        "512",
+        "0"
+      ],
+      "output": ".scratch\\large-llt-fixed\\pair8_divide-n128.jsonl",
+      "binarySha256": "c519eff636eea1fea698eaebaf6abe44f8ed2c66b6b41712209466ceabf47c8b",
+      "summary": {
+        "0": {
+          "core": 4.814296875e-05,
+          "eigen": 4.406796875e-05
+        },
+        "1": {
+          "core": 3.139971923828125e-06,
+          "eigen": 3.201690673828125e-06
+        },
+        "2": {
+          "core": 5.138154296875e-05,
+          "eigen": 4.739755859375e-05
+        },
+        "3": {
+          "core": 6.485234375e-05,
+          "eigen": 6.72103515625e-05
+        }
+      }
+    },
+    {
+      "command": [
+        "build\\large-llt-next\\Release\\pair8_divide_fixed.exe",
+        "128",
+        "3",
+        "512",
+        "0"
+      ],
+      "output": ".scratch\\large-llt-fixed\\pair8_divide_fixed-n128.jsonl",
+      "binarySha256": "0c4959debf0097e615cdd5460372728d2f7deff836e90da81a3dabe22a016fae",
+      "summary": {
+        "0": {
+          "core": 4.822197265625e-05,
+          "eigen": 4.40591796875e-05
+        },
+        "1": {
+          "core": 3.118634033203125e-06,
+          "eigen": 3.227557373046875e-06
+        },
+        "2": {
+          "core": 5.157783203125e-05,
+          "eigen": 4.725888671875e-05
+        },
+        "3": {
+          "core": 6.4060546875e-05,
+          "eigen": 6.56462890625e-05
+        }
+      }
+    },
+    {
+      "command": [
+        "build\\large-llt-next\\Release\\pair8_divide_inline.exe",
+        "128",
+        "3",
+        "512",
+        "0"
+      ],
+      "output": ".scratch\\large-llt-fixed\\pair8_divide_inline-n128.jsonl",
+      "binarySha256": "b16895e92f0498a50b9b8cc9861846a2d54561cadaf5050c476da4bce100e0fd",
+      "summary": {
+        "0": {
+          "core": 4.67578125e-05,
+          "eigen": 4.385615234375e-05
+        },
+        "1": {
+          "core": 3.225274658203125e-06,
+          "eigen": 3.19599609375e-06
+        },
+        "2": {
+          "core": 5.052001953125e-05,
+          "eigen": 4.72658203125e-05
+        },
+        "3": {
+          "core": 6.23875e-05,
+          "eigen": 6.770234375e-05
+        }
+      }
+    },
+    {
+      "command": [
+        "build\\large-llt-next\\Release\\pair8_divide_fixed_inline.exe",
+        "128",
+        "3",
+        "512",
+        "0"
+      ],
+      "output": ".scratch\\large-llt-fixed\\pair8_divide_fixed_inline-n128.jsonl",
+      "binarySha256": "d8ffcd1bffb673ce17359023b3ba6248fa15b0edd4d97ec7d9feb8703ce79203",
+      "summary": {
+        "0": {
+          "core": 4.827939453125e-05,
+          "eigen": 4.412646484375e-05
+        },
+        "1": {
+          "core": 3.23583984375e-06,
+          "eigen": 3.212261962890625e-06
+        },
+        "2": {
+          "core": 5.161669921875e-05,
+          "eigen": 4.724443359375e-05
+        },
+        "3": {
+          "core": 6.37603515625e-05,
+          "eigen": 6.533828125e-05
+        }
+      }
+    },
+    {
+      "command": [
+        "build\\large-llt-next\\Release\\pair8_divide.exe",
+        "512",
+        "3",
+        "2048",
+        "0"
+      ],
+      "output": ".scratch\\large-llt-fixed\\pair8_divide-n512.jsonl",
+      "binarySha256": "c519eff636eea1fea698eaebaf6abe44f8ed2c66b6b41712209466ceabf47c8b",
+      "summary": {
+        "0": {
+          "core": 0.0021050625,
+          "eigen": 0.00226123125
+        },
+        "1": {
+          "core": 5.6152685546875e-05,
+          "eigen": 2.88048828125e-05
+        },
+        "2": {
+          "core": 0.00217554375,
+          "eigen": 0.00231395625
+        },
+        "3": {
+          "core": 0.002934975,
+          "eigen": 0.00302300625
+        }
+      }
+    },
+    {
+      "command": [
+        "build\\large-llt-next\\Release\\pair8_divide_fixed.exe",
+        "512",
+        "3",
+        "2048",
+        "0"
+      ],
+      "output": ".scratch\\large-llt-fixed\\pair8_divide_fixed-n512.jsonl",
+      "binarySha256": "0c4959debf0097e615cdd5460372728d2f7deff836e90da81a3dabe22a016fae",
+      "summary": {
+        "0": {
+          "core": 0.00207728125,
+          "eigen": 0.0022414875
+        },
+        "1": {
+          "core": 5.59818359375e-05,
+          "eigen": 2.95685546875e-05
+        },
+        "2": {
+          "core": 0.00214685625,
+          "eigen": 0.0022859375
+        },
+        "3": {
+          "core": 0.0029072875,
+          "eigen": 0.0029955125
+        }
+      }
+    },
+    {
+      "command": [
+        "build\\large-llt-next\\Release\\pair8_divide_inline.exe",
+        "512",
+        "3",
+        "2048",
+        "0"
+      ],
+      "output": ".scratch\\large-llt-fixed\\pair8_divide_inline-n512.jsonl",
+      "binarySha256": "b16895e92f0498a50b9b8cc9861846a2d54561cadaf5050c476da4bce100e0fd",
+      "summary": {
+        "0": {
+          "core": 0.0020634625,
+          "eigen": 0.00224595625
+        },
+        "1": {
+          "core": 5.800263671875e-05,
+          "eigen": 2.8714453125e-05
+        },
+        "2": {
+          "core": 0.00214530625,
+          "eigen": 0.00228860625
+        },
+        "3": {
+          "core": 0.00289833125,
+          "eigen": 0.00303479375
+        }
+      }
+    },
+    {
+      "command": [
+        "build\\large-llt-next\\Release\\pair8_divide_fixed_inline.exe",
+        "512",
+        "3",
+        "2048",
+        "0"
+      ],
+      "output": ".scratch\\large-llt-fixed\\pair8_divide_fixed_inline-n512.jsonl",
+      "binarySha256": "d8ffcd1bffb673ce17359023b3ba6248fa15b0edd4d97ec7d9feb8703ce79203",
+      "summary": {
+        "0": {
+          "core": 0.002070875,
+          "eigen": 0.00227015
+        },
+        "1": {
+          "core": 5.80767578125e-05,
+          "eigen": 2.883447265625e-05
+        },
+        "2": {
+          "core": 0.0021287625,
+          "eigen": 0.00230999375
+        },
+        "3": {
+          "core": 0.002897875,
+          "eigen": 0.0029920125
+        }
+      }
+    }
+  ]
+}

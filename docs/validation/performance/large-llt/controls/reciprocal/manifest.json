@@ -1,0 +1,122 @@
+{
+  "sourceCommit": "8fe28e552bfc485c4744a193cc9e677b3e2ce309",
+  "diagnosisOnly": true,
+  "commands": [
+    {
+      "command": [
+        "build\\large-llt-next\\Release\\shared_back2.exe",
+        "128",
+        "3",
+        "512",
+        "0"
+      ],
+      "output": ".scratch\\large-llt-reciprocal\\shared_back2-n128.jsonl",
+      "binarySha256": "0d3cea3d93fc3a16efa5a122e42abab0f51a78f2dc0fa643d5bea266056dbbd5",
+      "summary": {
+        "0": {
+          "core": 4.746064453125e-05,
+          "eigen": 4.40876953125e-05
+        },
+        "1": {
+          "core": 2.073065185546875e-06,
+          "eigen": 3.409503173828125e-06
+        },
+        "2": {
+          "core": 4.953525390625e-05,
+          "eigen": 4.715927734375e-05
+        },
+        "3": {
+          "core": 6.32306640625e-05,
+          "eigen": 6.57998046875e-05
+        }
+      }
+    },
+    {
+      "command": [
+        "build\\large-llt-next\\Release\\shared_reciprocal.exe",
+        "128",
+        "3",
+        "512",
+        "0"
+      ],
+      "output": ".scratch\\large-llt-reciprocal\\shared_reciprocal-n128.jsonl",
+      "binarySha256": "8c06fa3ee6b9e1c24beb9701eea3a735b93747a99931dcc5f85e88d0e13517f6",
+      "summary": {
+        "0": {
+          "core": 4.685322265625e-05,
+          "eigen": 4.546552734375e-05
+        },
+        "1": {
+          "core": 1.9882080078125e-06,
+          "eigen": 3.1773193359375e-06
+        },
+        "2": {
+          "core": 4.89443359375e-05,
+          "eigen": 4.863310546875e-05
+        },
+        "3": {
+          "core": 6.18546875e-05,
+          "eigen": 6.71685546875e-05
+        }
+      }
+    },
+    {
+      "command": [
+        "build\\large-llt-next\\Release\\shared_back2.exe",
+        "512",
+        "3",
+        "2048",
+        "0"
+      ],
+      "output": ".scratch\\large-llt-reciprocal\\shared_back2-n512.jsonl",
+      "binarySha256": "0d3cea3d93fc3a16efa5a122e42abab0f51a78f2dc0fa643d5bea266056dbbd5",
+      "summary": {
+        "0": {
+          "core": 0.002086375,
+          "eigen": 0.00226900625
+        },
+        "1": {
+          "core": 2.4099072265625e-05,
+          "eigen": 2.8808935546875e-05
+        },
+        "2": {
+          "core": 0.00211005,
+          "eigen": 0.0022893625
+        },
+        "3": {
+          "core": 0.00287765,
+          "eigen": 0.00311726875
+        }
+      }
+    },
+    {
+      "command": [
+        "build\\large-llt-next\\Release\\shared_reciprocal.exe",
+        "512",
+        "3",
+        "2048",
+        "0"
+      ],
+      "output": ".scratch\\large-llt-reciprocal\\shared_reciprocal-n512.jsonl",
+      "binarySha256": "8c06fa3ee6b9e1c24beb9701eea3a735b93747a99931dcc5f85e88d0e13517f6",
+      "summary": {
+        "0": {
+          "core": 0.0021218,
+          "eigen": 0.00228540625
+        },
+        "1": {
+          "core": 2.3985302734375e-05,
+          "eigen": 3.0190380859375e-05
+        },
+        "2": {
+          "core": 0.0021254,
+          "eigen": 0.00232191875
+        },
+        "3": {
+          "core": 0.00297151875,
+          "eigen": 0.00316990625
+        }
+      }
+    }
+  ]
+}

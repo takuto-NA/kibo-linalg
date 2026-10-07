@@ -1,0 +1,59 @@
+??R?$gemm_functor@N_JU?$general_matrix_matrix_product@_JN$0A@$0A@N$00$0A@$0A@$00@internal@Eigen@@V?$Transpose@$$CBV?$Matrix@N$0?0$0?0$00$0?0$0?0@Eigen@@@3@V?$Matrix@N$0?0$0?0$00$0?0$0?0@3@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@3@V?$gemm_blocking_space@$0A@NN$0?0$0?0$0?0$00$0A@@23@@internal@Eigen@@QEBAX_J000PEAU?$GemmParallelInfo@_J@12@@Z (public: void __cdecl Eigen::internal::gemm_functor<double,__int64,struct Eigen::internal::general_matrix_matrix_product<__int64,double,0,0,double,1,0,0,1>,class Eigen::Transpose<class Eigen::Matrix<double,-1,-1,1,-1,-1> const >,class Eigen::Matrix<double,-1,-1,1,-1,-1>,class Eigen::Matrix<double,-1,-1,0,-1,-1>,class Eigen::internal::gemm_blocking_space<0,double,double,-1,-1,-1,1,0> >::operator()(__int64,__int64,__int64,__int64,struct Eigen::internal::GemmParallelInfo<__int64> *)const ):
+  0000000000000000: 48 89 5C 24 08     mov         qword ptr [rsp+8],rbx
+  0000000000000005: 48 89 6C 24 10     mov         qword ptr [rsp+10h],rbp
+  000000000000000A: 48 89 74 24 18     mov         qword ptr [rsp+18h],rsi
+  000000000000000F: 48 89 7C 24 20     mov         qword ptr [rsp+20h],rdi
+  0000000000000014: 41 56              push        r14
+  0000000000000016: 48 83 EC 70        sub         rsp,70h
+  000000000000001A: 48 8B BC 24 A0 00  mov         rdi,qword ptr [rsp+0A0h]
+                    00 00
+  0000000000000022: 4D 8B F0           mov         r14,r8
+  0000000000000025: 48 8B EA           mov         rbp,rdx
+  0000000000000028: 48 8B F1           mov         rsi,rcx
+  000000000000002B: 48 83 FF FF        cmp         rdi,0FFFFFFFFFFFFFFFFh
+  000000000000002F: 75 08              jne         0000000000000039
+  0000000000000031: 48 8B 41 08        mov         rax,qword ptr [rcx+8]
+  0000000000000035: 48 8B 78 10        mov         rdi,qword ptr [rax+10h]
+  0000000000000039: 48 8B 51 10        mov         rdx,qword ptr [rcx+10h]
+  000000000000003D: 48 8B 59 08        mov         rbx,qword ptr [rcx+8]
+  0000000000000041: 48 8B 01           mov         rax,qword ptr [rcx]
+  0000000000000044: F2 0F 10 46 18     movsd       xmm0,mmword ptr [rsi+18h]
+  0000000000000049: 4C 8B 5A 08        mov         r11,qword ptr [rdx+8]
+  000000000000004D: 49 8B CB           mov         rcx,r11
+  0000000000000050: 4C 8B 00           mov         r8,qword ptr [rax]
+  0000000000000053: 48 8B 02           mov         rax,qword ptr [rdx]
+  0000000000000056: 48 8B D7           mov         rdx,rdi
+  0000000000000059: 49 0F AF C9        imul        rcx,r9
+  000000000000005D: 48 03 CD           add         rcx,rbp
+  0000000000000060: 4C 8D 14 C8        lea         r10,[rax+rcx*8]
+  0000000000000064: 48 8B 03           mov         rax,qword ptr [rbx]
+  0000000000000067: 4A 8D 0C C8        lea         rcx,[rax+r9*8]
+  000000000000006B: 49 8B 00           mov         rax,qword ptr [r8]
+  000000000000006E: 4C 8D 0C E8        lea         r9,[rax+rbp*8]
+  0000000000000072: 48 8B 84 24 A8 00  mov         rax,qword ptr [rsp+0A8h]
+                    00 00
+  000000000000007A: 48 89 44 24 60     mov         qword ptr [rsp+60h],rax
+  000000000000007F: 48 8B 46 20        mov         rax,qword ptr [rsi+20h]
+  0000000000000083: 48 89 44 24 58     mov         qword ptr [rsp+58h],rax
+  0000000000000088: 48 8B 43 10        mov         rax,qword ptr [rbx+10h]
+  000000000000008C: F2 0F 11 44 24 50  movsd       mmword ptr [rsp+50h],xmm0
+  0000000000000092: 4C 89 5C 24 48     mov         qword ptr [rsp+48h],r11
+  0000000000000097: 48 C7 44 24 40 01  mov         qword ptr [rsp+40h],1
+                    00 00 00
+  00000000000000A0: 4C 89 54 24 38     mov         qword ptr [rsp+38h],r10
+  00000000000000A5: 48 89 44 24 30     mov         qword ptr [rsp+30h],rax
+  00000000000000AA: 49 8B 40 10        mov         rax,qword ptr [r8+10h]
+  00000000000000AE: 4D 8B 40 08        mov         r8,qword ptr [r8+8]
+  00000000000000B2: 48 89 4C 24 28     mov         qword ptr [rsp+28h],rcx
+  00000000000000B7: 49 8B CE           mov         rcx,r14
+  00000000000000BA: 48 89 44 24 20     mov         qword ptr [rsp+20h],rax
+  00000000000000BF: E8 00 00 00 00     call        ?run@?$general_matrix_matrix_product@_JN$0A@$0A@N$00$0A@$0A@$00@internal@Eigen@@SAX_J00PEBN010PEAN00NAEAV?$level3_blocking@NN@23@PEAU?$GemmParallelInfo@_J@23@@Z
+  00000000000000C4: 4C 8D 5C 24 70     lea         r11,[rsp+70h]
+  00000000000000C9: 49 8B 5B 10        mov         rbx,qword ptr [r11+10h]
+  00000000000000CD: 49 8B 6B 18        mov         rbp,qword ptr [r11+18h]
+  00000000000000D1: 49 8B 73 20        mov         rsi,qword ptr [r11+20h]
+  00000000000000D5: 49 8B 7B 28        mov         rdi,qword ptr [r11+28h]
+  00000000000000D9: 49 8B E3           mov         rsp,r11
+  00000000000000DC: 41 5E              pop         r14
+  00000000000000DE: C3                 ret
+

@@ -1,0 +1,385 @@
+Start testing: Oct 07 12:43 UTC
+----------------------------------------------------------
+1/18 Testing: lm_reference
+1/18 Test: lm_reference
+Command: "/work/build/linux-gcc/Debug/kibo_lm_reference"
+Directory: /work/build/linux-gcc/Debug
+"lm_reference" start time: Oct 07 12:43 UTC
+Output:
+----------------------------------------------------------
+{"problem":"line","solver":"normal-LLT","parameters":[1.9699999506965444,0.090000177384169724],"cost":0.01550000000001431,"iterations":2,"passed":true}
+{"problem":"line","solver":"augmented-QR","parameters":[1.9699999506975117,0.090000177379744015],"cost":0.015500000000014379,"iterations":2,"passed":true}
+{"problem":"exponential","solver":"normal-LLT","parameters":[1.0015921354888877,0.9996180037210145],"cost":0.00026208793135892617,"iterations":2,"passed":true}
+{"problem":"exponential","solver":"augmented-QR","parameters":[1.0015921354888877,0.9996180037210145],"cost":0.00026208793135892617,"iterations":2,"passed":true}
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"lm_reference" end time: Oct 07 12:43 UTC
+"lm_reference" time elapsed: 00:00:00
+----------------------------------------------------------
+
+2/18 Testing: numerical
+2/18 Test: numerical
+Command: "/work/build/linux-gcc/Debug/kibo_numerical_tests" "--small"
+Directory: /work/build/linux-gcc/Debug
+"numerical" start time: Oct 07 12:43 UTC
+Output:
+----------------------------------------------------------
+m,n,condition,inconsistent,qr_forward,optimality,normal_llt_forward,normal_llt_status,qr_fast_forward,qr_fast_optimality
+oracle n=2 scale=2.5e-151 core_error=1.11022e-16 core_fast_error=0.00840344 Eigen_raw_error=1.48194e+06
+line 85: (reference-expected).norm()/expected.norm()<=1e-4
+oracle n=2 scale=0.25 core_error=0 core_fast_error=0.00314639 Eigen_raw_error=0.00678375
+line 85: (reference-expected).norm()/expected.norm()<=1e-4
+oracle n=2 scale=2.5e+149 core_error=0 core_fast_error=0.0118001 Eigen_raw_error=0.0036738
+line 85: (reference-expected).norm()/expected.norm()<=1e-4
+oracle n=8 scale=6.73469e-152 core_error=6.26689e-17 core_fast_error=0.00374205 Eigen_raw_error=1536.85
+line 85: (reference-expected).norm()/expected.norm()<=1e-4
+oracle n=8 scale=0.0673469 core_error=8.79428e-17 core_fast_error=0.0180599 Eigen_raw_error=0.00699299
+line 85: (reference-expected).norm()/expected.norm()<=1e-4
+oracle n=8 scale=6.73469e+148 core_error=0 core_fast_error=0.00460292 Eigen_raw_error=0.00518176
+line 85: (reference-expected).norm()/expected.norm()<=1e-4
+2,2,2,0,0,0,4.9650683064945459e-17,0,9.9301366129890917e-17,4.1594554064131396e-17
+2,2,10000,0,0,0,3.5108333983600324e-09,0,4.9671273898627239e-13,8.0020346606936439e-17
+2,2,100000000,0,1.7554166991800162e-09,0,0.15811388300841889,0,4.9650684034880093e-09,5.3346898945386977e-17
+8,2,2,0,0,0,4.9650683064945459e-17,0,2.8086667748613609e-16,6.7069203158113232e-17
+8,2,2,1,0,0,4.9650683064945459e-17,0,2.8086667748613609e-16,6.7066415798958241e-17
+8,2,10000,0,0,0,5.2662504837317291e-09,0,2.7507380450346532e-13,2.6673448987542309e-17
+8,2,10000,1,0,1.3335443130890585e-17,3.5108333983600324e-09,0,2.5648815204799432e-11,4.0006329391932243e-17
+8,2,100000000,0,1.7554167342883506e-09,0,0.15811388300841897,0,5.3719220772692319e-10,1.0669379746764716e-16
+line 126: (reference-fixture.truth).norm()/fixture.truth.norm()<=(condition<=1e4 ? 1e-8 : 1e-4)
+8,2,100000000,1,1.7554167342883506e-09,1.3439626560829064e-17,0.15811388300841889,0,0.0011124165848901194,5.3280303128353177e-17
+8,8,2,0,1.8129866073473578e-16,8.7354285477132439e-18,3.6895698945698122e-16,0,5.829836963294795e-16,3.7268851738327423e-17
+8,8,10000,0,1.270312403256082e-13,4.1081404527709925e-17,9.4552309608651176e-10,0,3.4953687309763909e-13,4.4921273969273038e-18
+8,8,100000000,0,5.6937702318702427e-12,2.9362310379900646e-17,0.062447940932261692,0,1.4851707715509914e-09,4.8968651499664782e-17
+32,8,2,0,1.8129866073473578e-16,8.735428547713247e-18,2.73719657989498e-16,0,3.8522044387811071e-16,2.9102690205775227e-17
+32,8,2,1,1.8129866073473578e-16,8.7318577229494441e-18,2.3111135221866393e-16,0,2.6656234908219155e-16,1.9521865157241732e-17
+32,8,10000,0,1.270312403256082e-13,4.1081404527709944e-17,3.619025985457791e-09,0,7.9153511106337467e-14,3.2790759483220023e-17
+32,8,10000,1,1.270312403256082e-13,4.1080968024938841e-17,2.9316874522185073e-09,0,2.0206930420649457e-12,2.5026583566829698e-17
+32,8,100000000,0,5.6937757609077944e-12,2.9362310379900646e-17,0.041041810168939548,0,1.2519683428181336e-09,7.8390801707142066e-17
+line 126: (reference-fixture.truth).norm()/fixture.truth.norm()<=(condition<=1e4 ? 1e-8 : 1e-4)
+32,8,100000000,1,5.6937757609077944e-12,2.9176260184277663e-17,0.048857003614527224,0,0.002805961059129699,8.3179457500588159e-17
+32,32,2,0,1.6892308614683635e-16,3.3057125744160342e-18,4.1381312214170953e-16,0,7.0851595051083651e-16,1.6472178611683663e-17
+32,32,10000,0,1.6703405373430727e-13,9.1235671189994924e-18,8.2664031827264632e-10,0,4.4026124896162358e-13,3.729243322349052e-17
+32,32,100000000,0,9.3848586307843567e-10,6.4214822303801563e-18,0.018139194292066976,0,3.0848966686841556e-09,9.0387250020330427e-17
+128,32,2,0,1.6892308614683635e-16,3.3057125744160361e-18,4.7166778335572923e-16,0,8.1509349964432003e-16,1.8180084881913418e-17
+128,32,2,1,1.6892308614683635e-16,3.3001274560814432e-18,4.3892660388148032e-16,0,8.6063882585540007e-16,1.618062188811853e-17
+128,32,10000,0,1.6703405373430727e-13,9.1235671189994954e-18,1.4393491509380581e-09,0,2.0493161281501224e-13,7.3723709297598771e-17
+128,32,10000,1,1.6703405373430727e-13,9.1307633680330947e-18,7.4004475033705338e-10,0,1.7907351763206259e-12,2.5660395570995254e-17
+128,32,100000000,0,9.3848586229546642e-10,6.4214822303801586e-18,0.08463994838538362,0,3.4612873981007819e-09,1.1552959427518454e-16
+128,32,100000000,1,9.3848586287432286e-10,2.9225360757001951e-18,0.077008330913204762,0,0.00028195026267107575,1.7180717943926844e-16
+numerical acceptance failures=8
+<end of output>
+Test time =   0.14 sec
+----------------------------------------------------------
+Test Failed.
+"numerical" end time: Oct 07 12:43 UTC
+"numerical" time elapsed: 00:00:00
+----------------------------------------------------------
+
+3/18 Testing: numerical_column
+3/18 Test: numerical_column
+Command: "/work/build/linux-gcc/Debug/kibo_numerical_tests" "--column-factor" "--small"
+Directory: /work/build/linux-gcc/Debug
+"numerical_column" start time: Oct 07 12:43 UTC
+Output:
+----------------------------------------------------------
+m,n,condition,inconsistent,qr_forward,optimality,normal_llt_forward,normal_llt_status,qr_fast_forward,qr_fast_optimality
+oracle n=2 scale=2.5e-151 core_error=1.11022e-16 core_fast_error=0.00840344 Eigen_raw_error=1.48194e+06
+line 85: (reference-expected).norm()/expected.norm()<=1e-4
+oracle n=2 scale=0.25 core_error=0 core_fast_error=0.00314639 Eigen_raw_error=0.00678375
+line 85: (reference-expected).norm()/expected.norm()<=1e-4
+oracle n=2 scale=2.5e+149 core_error=0 core_fast_error=0.0036738 Eigen_raw_error=0.0036738
+line 85: (reference-expected).norm()/expected.norm()<=1e-4
+oracle n=8 scale=6.73469e-152 core_error=0 core_fast_error=0.000919054 Eigen_raw_error=1536.85
+line 85: (reference-expected).norm()/expected.norm()<=1e-4
+oracle n=8 scale=0.0673469 core_error=0 core_fast_error=0.00557607 Eigen_raw_error=0.00699299
+line 85: (reference-expected).norm()/expected.norm()<=1e-4
+oracle n=8 scale=6.73469e+148 core_error=1.55462e-17 core_fast_error=0.00366202 Eigen_raw_error=0.00518176
+line 85: (reference-expected).norm()/expected.norm()<=1e-4
+2,2,2,0,0,0,4.9650683064945459e-17,0,9.9301366129890917e-17,4.1594554064131396e-17
+2,2,10000,0,0,0,3.5108333983600324e-09,0,4.9671273898627239e-13,8.0020346606936439e-17
+2,2,100000000,0,1.7554166991800162e-09,0,0.15811388300841889,0,4.9650684034880093e-09,5.3346898945386977e-17
+8,2,2,0,0,0,4.9650683064945459e-17,0,2.8086667748613609e-16,6.7069203158113232e-17
+8,2,2,1,0,0,4.9650683064945459e-17,0,2.8086667748613609e-16,6.7066415798958241e-17
+8,2,10000,0,0,0,5.2662504837317291e-09,0,1.511062724875412e-13,0
+8,2,10000,1,0,1.3335443130890585e-17,3.5108333983600324e-09,0,2.5644883071314639e-11,4.0006329391932354e-17
+8,2,100000000,0,1.7554167342883506e-09,0,0.15811388300841897,0,5.3719192686024563e-10,1.0669379746764718e-16
+line 126: (reference-fixture.truth).norm()/fixture.truth.norm()<=(condition<=1e4 ? 1e-8 : 1e-4)
+8,2,100000000,1,1.7554167342883506e-09,1.3439626560829064e-17,0.15811388300841889,0,0.0011124166236797033,1.066648729977105e-16
+8,8,2,0,1.8129866073473578e-16,8.7354285477132439e-18,3.6895698945698122e-16,0,6.1839033597265299e-16,4.9925535061116963e-17
+8,8,10000,0,1.270312403256082e-13,4.1081404527709925e-17,9.4552309608651176e-10,0,2.0698638303714501e-13,1.657224783225466e-17
+8,8,100000000,0,5.6938117021155897e-12,1.408387582494792e-18,0.062447940932261692,0,1.1491943010069935e-09,3.9164056139298343e-17
+32,8,2,0,1.8129866073473578e-16,8.735428547713247e-18,2.73719657989498e-16,0,2.8294569152917031e-16,2.6683436442669397e-17
+32,8,2,1,1.8129866073473578e-16,8.7318577229494441e-18,2.3111135221866393e-16,0,4.5010301578265396e-16,4.7318156537496071e-17
+32,8,10000,0,1.270312403256082e-13,4.1081404527709944e-17,3.619025985457791e-09,0,2.1309115326275214e-13,6.5443854996285333e-17
+32,8,10000,1,1.270312403256082e-13,4.1080968024938841e-17,2.9316874522185073e-09,0,3.5162237619165476e-12,4.7928984455359875e-17
+32,8,100000000,0,5.6938144624922376e-12,1.408387582494792e-18,0.041041810168939548,0,3.6626239447461195e-10,4.8928339172064797e-17
+line 126: (reference-fixture.truth).norm()/fixture.truth.norm()<=(condition<=1e4 ? 1e-8 : 1e-4)
+32,8,100000000,1,5.6937702318702427e-12,2.9176260184277663e-17,0.048857003614527224,0,0.00088131403187280747,7.8239664860026359e-17
+32,32,2,0,1.6892308614683635e-16,3.3057125744160342e-18,4.1381312214170953e-16,0,6.1751908409001452e-16,1.3161151513793688e-17
+32,32,10000,0,1.6703405373430727e-13,9.1235671189994924e-18,8.2664031827264632e-10,0,1.9555840075474181e-13,3.3894321423422219e-17
+32,32,100000000,0,9.3848586273472538e-10,2.921296470039219e-18,0.018139194292066976,0,9.1792533372878176e-10,6.0684467803738767e-17
+128,32,2,0,1.6892308614683635e-16,3.3057125744160361e-18,4.7166778335572923e-16,0,5.634684457840274e-16,1.5529592583044666e-17
+128,32,2,1,1.6892308614683635e-16,3.3001274560814432e-18,4.3892660388148032e-16,0,5.8580346463786437e-16,1.3223783590317733e-17
+128,32,10000,0,1.6703405373430727e-13,9.1235671189994954e-18,1.4393491509380581e-09,0,2.4145979295937366e-13,1.3636852723850108e-17
+128,32,10000,1,1.6703405373430727e-13,9.1307633680330947e-18,7.4004475033705338e-10,0,1.1379429318498515e-12,3.7163283392973458e-17
+128,32,100000000,0,9.3848586480572838e-10,2.9212964700392202e-18,0.08463994838538362,0,1.8125506966194581e-09,1.9554292572728657e-17
+128,32,100000000,1,9.3848586307843567e-10,6.429223941965357e-18,0.077008330913204762,0,0.00015263143874373505,3.9086652935894692e-17
+numerical acceptance failures=8
+<end of output>
+Test time =   0.13 sec
+----------------------------------------------------------
+Test Failed.
+"numerical_column" end time: Oct 07 12:43 UTC
+"numerical_column" time elapsed: 00:00:00
+----------------------------------------------------------
+
+4/18 Testing: common_2x2
+4/18 Test: common_2x2
+Command: "/work/build/linux-gcc/Debug/kibo_common_2x2"
+Directory: /work/build/linux-gcc/Debug
+"common_2x2" start time: Oct 07 12:43 UTC
+Output:
+----------------------------------------------------------
+{"status":0,"correct":true,"numeric_bytes":256,"matvec":[6,7],"solve":[0.090909090909090912,0.63636363636363635],"refined_solve":[0.090909090909090912,0.63636363636363635]}
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"common_2x2" end time: Oct 07 12:43 UTC
+"common_2x2" time elapsed: 00:00:00
+----------------------------------------------------------
+
+5/18 Testing: migration
+5/18 Test: migration
+Command: "/work/build/linux-gcc/Debug/kibo_migration"
+Directory: /work/build/linux-gcc/Debug
+"migration" start time: Oct 07 12:43 UTC
+Output:
+----------------------------------------------------------
+ownership, external Map, Gram product, LLT and QR migration passed
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"migration" end time: Oct 07 12:43 UTC
+"migration" time elapsed: 00:00:00
+----------------------------------------------------------
+
+6/18 Testing: core
+6/18 Test: core
+Command: "/work/build/linux-gcc/Debug/kibo_core_tests"
+Directory: /work/build/linux-gcc/Debug
+"core" start time: Oct 07 12:43 UTC
+Output:
+----------------------------------------------------------
+2x2 public matvec passed
+stride/transpose/rectangular arithmetic and rejection contracts passed
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"core" end time: Oct 07 12:43 UTC
+"core" time elapsed: 00:00:00
+----------------------------------------------------------
+
+7/18 Testing: dynamic
+7/18 Test: dynamic
+Command: "/work/build/linux-gcc/Debug/kibo_dynamic_tests"
+Directory: /work/build/linux-gcc/Debug
+"dynamic" start time: Oct 07 12:43 UTC
+Output:
+----------------------------------------------------------
+explicit ownership, injected allocation failure, resize and clone passed
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"dynamic" end time: Oct 07 12:43 UTC
+"dynamic" time elapsed: 00:00:00
+----------------------------------------------------------
+
+8/18 Testing: llt
+8/18 Test: llt
+Command: "/work/build/linux-gcc/Debug/kibo_llt_tests"
+Directory: /work/build/linux-gcc/Debug
+"llt" start time: Oct 07 12:43 UTC
+Output:
+----------------------------------------------------------
+public LLT 2x2 factor and transactional solve passed
+<end of output>
+Test time =   0.02 sec
+----------------------------------------------------------
+Test Passed.
+"llt" end time: Oct 07 12:43 UTC
+"llt" time elapsed: 00:00:00
+----------------------------------------------------------
+
+9/18 Testing: llt_large
+9/18 Test: llt_large
+Command: "/work/build/linux-gcc/Debug/kibo_llt_large_tests" "--small"
+Directory: /work/build/linux-gcc/Debug
+"llt_large" start time: Oct 07 12:43 UTC
+Output:
+----------------------------------------------------------
+large LLT boundaries, exact factors, padded layouts and late failures passed
+<end of output>
+Test time =   0.08 sec
+----------------------------------------------------------
+Test Passed.
+"llt_large" end time: Oct 07 12:43 UTC
+"llt_large" time elapsed: 00:00:00
+----------------------------------------------------------
+
+10/18 Testing: llt_large_scalar
+10/18 Test: llt_large_scalar
+Command: "/work/build/linux-gcc/Debug/kibo_llt_large_scalar_tests" "--small"
+Directory: /work/build/linux-gcc/Debug
+"llt_large_scalar" start time: Oct 07 12:43 UTC
+Output:
+----------------------------------------------------------
+large LLT boundaries, exact factors, padded layouts and late failures passed
+<end of output>
+Test time =   0.13 sec
+----------------------------------------------------------
+Test Passed.
+"llt_large_scalar" end time: Oct 07 12:43 UTC
+"llt_large_scalar" time elapsed: 00:00:00
+----------------------------------------------------------
+
+11/18 Testing: qr
+11/18 Test: qr
+Command: "/work/build/linux-gcc/Debug/kibo_qr_tests"
+Directory: /work/build/linux-gcc/Debug
+"qr" start time: Oct 07 12:43 UTC
+Output:
+----------------------------------------------------------
+public pivoted QR least-squares solve passed
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"qr" end time: Oct 07 12:43 UTC
+"qr" time elapsed: 00:00:00
+----------------------------------------------------------
+
+12/18 Testing: qr_refined
+12/18 Test: qr_refined
+Command: "/work/build/linux-gcc/Debug/kibo_qr_refined_tests"
+Directory: /work/build/linux-gcc/Debug
+"qr_refined" start time: Oct 07 12:43 UTC
+Output:
+----------------------------------------------------------
+QR refinement oracles, layouts, scale endpoints and output preservation passed
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"qr_refined" end time: Oct 07 12:43 UTC
+"qr_refined" time elapsed: 00:00:00
+----------------------------------------------------------
+
+13/18 Testing: llt_scalar
+13/18 Test: llt_scalar
+Command: "/work/build/linux-gcc/Debug/kibo_llt_scalar_tests"
+Directory: /work/build/linux-gcc/Debug
+"llt_scalar" start time: Oct 07 12:43 UTC
+Output:
+----------------------------------------------------------
+public LLT 2x2 factor and transactional solve passed
+<end of output>
+Test time =   0.02 sec
+----------------------------------------------------------
+Test Passed.
+"llt_scalar" end time: Oct 07 12:43 UTC
+"llt_scalar" time elapsed: 00:00:00
+----------------------------------------------------------
+
+14/18 Testing: qr_scalar
+14/18 Test: qr_scalar
+Command: "/work/build/linux-gcc/Debug/kibo_qr_scalar_tests"
+Directory: /work/build/linux-gcc/Debug
+"qr_scalar" start time: Oct 07 12:43 UTC
+Output:
+----------------------------------------------------------
+public pivoted QR least-squares solve passed
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"qr_scalar" end time: Oct 07 12:43 UTC
+"qr_scalar" time elapsed: 00:00:00
+----------------------------------------------------------
+
+15/18 Testing: qr_refined_scalar
+15/18 Test: qr_refined_scalar
+Command: "/work/build/linux-gcc/Debug/kibo_qr_refined_scalar_tests"
+Directory: /work/build/linux-gcc/Debug
+"qr_refined_scalar" start time: Oct 07 12:43 UTC
+Output:
+----------------------------------------------------------
+QR refinement oracles, layouts, scale endpoints and output preservation passed
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"qr_refined_scalar" end time: Oct 07 12:43 UTC
+"qr_refined_scalar" time elapsed: 00:00:00
+----------------------------------------------------------
+
+16/18 Testing: no_runtime
+16/18 Test: no_runtime
+Command: "/work/build/linux-gcc/Debug/kibo_no_runtime_tests"
+Directory: /work/build/linux-gcc/Debug
+"no_runtime" start time: Oct 07 12:43 UTC
+Output:
+----------------------------------------------------------
+C++20 concepts/span; exceptions and RTTI disabled; Ab=[6,7]
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"no_runtime" end time: Oct 07 12:43 UTC
+"no_runtime" time elapsed: 00:00:00
+----------------------------------------------------------
+
+17/18 Testing: dynamic_no_runtime
+17/18 Test: dynamic_no_runtime
+Command: "/work/build/linux-gcc/Debug/kibo_dynamic_no_runtime_tests"
+Directory: /work/build/linux-gcc/Debug
+"dynamic_no_runtime" start time: Oct 07 12:43 UTC
+Output:
+----------------------------------------------------------
+explicit ownership, injected allocation failure, resize and clone passed
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"dynamic_no_runtime" end time: Oct 07 12:43 UTC
+"dynamic_no_runtime" time elapsed: 00:00:00
+----------------------------------------------------------
+
+18/18 Testing: allocation
+18/18 Test: allocation
+Command: "/work/build/linux-gcc/Debug/kibo_allocation_tests"
+Directory: /work/build/linux-gcc/Debug
+"allocation" start time: Oct 07 12:43 UTC
+Output:
+----------------------------------------------------------
+prepared m=2 n=2 LLT/QR allocator calls=0
+prepared m=8 n=2 LLT/QR allocator calls=0
+prepared m=8 n=8 LLT/QR allocator calls=0
+prepared m=32 n=8 LLT/QR allocator calls=0
+prepared m=32 n=32 LLT/QR allocator calls=0
+prepared m=128 n=32 LLT/QR allocator calls=0
+prepared basic operations, LLT and QR factor/solve: observed allocator calls=0
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"allocation" end time: Oct 07 12:43 UTC
+"allocation" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: Oct 07 12:43 UTC
