@@ -69,3 +69,8 @@ target_compile_features(tiny_both_uninitialized PRIVATE cxx_std_20)
 target_include_directories(tiny_both_uninitialized PRIVATE variants/tiny_both ../../tests ../../.cache/eigen)
 target_compile_definitions(tiny_both_uninitialized PRIVATE EIGEN_DONT_PARALLELIZE=1)
 target_compile_options(tiny_both_uninitialized PRIVATE /O2 /fp:precise /FAs "/Fa${CMAKE_CURRENT_BINARY_DIR}/tiny_both_uninitialized.asm")
+
+add_executable(view_wide_product_contract ../../tests/matrix_view_tests.cpp)
+target_compile_features(view_wide_product_contract PRIVATE cxx_std_20)
+target_include_directories(view_wide_product_contract PRIVATE variants/view_wide_product)
+target_compile_options(view_wide_product_contract PRIVATE /W4 /permissive-)

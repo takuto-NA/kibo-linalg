@@ -21,7 +21,7 @@ for path in subprocess.check_output(['git','ls-tree','-r','--name-only',commit,'
 variants=['view_wide_product','panel4','panel4_small','copy_tile8','tiny_factor','tiny_solve','tiny_both']
 for name in variants:shutil.copytree(root/f'.scratch/large-llt-next/variants/{name}',out/f'sources/{name}',dirs_exist_ok=True)
 for name in ['run-llt-final-controls.py','run-llt-copy-tiny-controls.py','prepare-view-wide-product-control.py','prepare-llt-panel4-control.py',
-             'prepare-llt-copy-and-tiny-controls.py','disassemble-llt-final-controls.py','disassemble-llt-copy-tiny.py','llt-tiny-native.py','llt-tiny-linux.py','llt-tiny-linux.sh','cmake-safe.py','freeze-llt-tiny.py']:
+             'prepare-llt-copy-and-tiny-controls.py','prepare-wide-product-contract.py','disassemble-llt-final-controls.py','disassemble-llt-copy-tiny.py','llt-tiny-native.py','llt-tiny-linux.py','llt-tiny-linux.sh','cmake-safe.py','freeze-llt-tiny.py']:
     put(root/'.scratch'/name,Path('sources/scripts')/name)
 for name in ['full-adaptive.cpp','uninitialized-setup.cpp']:put(root/'.scratch/large-llt-next'/name,Path('sources/scripts')/name)
 put(root/'.scratch/large-llt-next/CMakeLists.txt',Path('sources/scripts/CMakeLists-as-built.txt'))
@@ -43,7 +43,17 @@ target_include_directories({name} PRIVATE variants/{variant} ../../tests ../../.
 target_compile_definitions({name} PRIVATE EIGEN_DONT_PARALLELIZE=1)
 target_compile_options({name} PRIVATE /O2 /fp:precise /FAs "/Fa${{CMAKE_CURRENT_BINARY_DIR}}/{name}.asm")
 '''
+cm+='''
+add_executable(view_wide_product_contract ../../tests/matrix_view_tests.cpp)
+target_compile_features(view_wide_product_contract PRIVATE cxx_std_20)
+target_include_directories(view_wide_product_contract PRIVATE variants/view_wide_product)
+target_compile_options(view_wide_product_contract PRIVATE /W4 /permissive-)
+'''
 (out/'sources/scripts/CMakeLists.txt').write_text(cm)
+exe=root/'build/large-llt-next/Release/view_wide_product_contract.exe'
+result=subprocess.run([str(exe)],stdout=subprocess.PIPE,stderr=subprocess.STDOUT)
+assert result.returncode==0
+(out/'wide-product-contract.json').write_text(json.dumps({'command':[str(exe.relative_to(root))],'binarySha256':hashlib.sha256(exe.read_bytes()).hexdigest(),'exitCode':result.returncode,'output':result.stdout.decode()},indent=2)+'\n')
 audit=[]
 for p in sorted((root/'.scratch/llt-tiny-validation').rglob('*ctest.log')):
     s=p.read_text(errors='replace');failures=[x for x in s.splitlines() if x.startswith('line ')]
