@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WindowsPerformanceRecorder Version="1.0" Author="kibo-linalg investigation">
+  <Profiles>
+    <SystemCollector Id="ProbeSystemCollector" Name="kibo-linalg bounded PMU probe">
+      <BufferSize Value="64" />
+      <Buffers Value="128" />
+    </SystemCollector>
+    <SystemProvider Id="ProbeSystemProvider">
+      <Keywords>
+        <Keyword Value="ProcessThread" />
+        <Keyword Value="CSwitch" />
+      </Keywords>
+    </SystemProvider>
+    <HardwareCounter Id="ProbeCoreCounters" Strict="true">
+      <Counters>
+        <Counter Value="TotalCycles" />
+        <Counter Value="InstructionRetired" />
+      </Counters>
+      <Events><Event Value="CSwitch" /></Events>
+    </HardwareCounter>
+    <HardwareCounter Id="ProbeCacheCounters" Strict="true">
+      <Counters>
+        <Counter Value="TotalCycles" />
+        <Counter Value="InstructionRetired" />
+        <Counter Value="CacheMisses" />
+      </Counters>
+      <Events><Event Value="CSwitch" /></Events>
+    </HardwareCounter>
+    <HardwareCounter Id="ProbeLLCCounters" Strict="true">
+      <Counters>
+        <Counter Value="TotalCycles" />
+        <Counter Value="InstructionRetired" />
+        <Counter Value="LLCReference" />
+        <Counter Value="LLCMisses" />
+      </Counters>
+      <Events><Event Value="CSwitch" /></Events>
+    </HardwareCounter>
+    <!-- Select ONE profile per recording. All use system-wide CSwitch metadata;
+         process-only attribution is a subsequent analysis operation. -->
+    <Profile Id="ProbeCore.Light.File" Name="ProbeCore" Description="CSwitch counters: cycles and instructions" LoggingMode="File" DetailLevel="Light">
+      <Collectors><SystemCollectorId Value="ProbeSystemCollector"><SystemProviderId Value="ProbeSystemProvider" /><HardwareCounterId Value="ProbeCoreCounters" /></SystemCollectorId></Collectors>
+    </Profile>
+    <Profile Id="ProbeCache.Light.File" Name="ProbeCache" Description="CSwitch counters: cycles, instructions and generic cache misses" LoggingMode="File" DetailLevel="Light">
+      <Collectors><SystemCollectorId Value="ProbeSystemCollector"><SystemProviderId Value="ProbeSystemProvider" /><HardwareCounterId Value="ProbeCacheCounters" /></SystemCollectorId></Collectors>
+    </Profile>
+    <Profile Id="ProbeLLC.Light.File" Name="ProbeLLC" Description="CSwitch counters: cycles, instructions, LLC references and misses" LoggingMode="File" DetailLevel="Light">
+      <Collectors><SystemCollectorId Value="ProbeSystemCollector"><SystemProviderId Value="ProbeSystemProvider" /><HardwareCounterId Value="ProbeLLCCounters" /></SystemCollectorId></Collectors>
+    </Profile>
+  </Profiles>
+</WindowsPerformanceRecorder>

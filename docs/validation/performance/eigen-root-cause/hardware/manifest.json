@@ -1,0 +1,269 @@
+{
+  "startedUtc": "2026-10-07T04:57:57.060970+00:00",
+  "baseCommit": "a95db9d60d03eed325b2254931e805f82c6e9e64",
+  "sourceSha256": {
+    "tools/diagnostics/eigen-hardware-cause/affinity.hpp": "ec5ad8f5e25b80348925b40e6fa9586fe94e2d98f86aafe1f291875ff6c3e0d5",
+    "tools/diagnostics/eigen-hardware-cause/assembly_probe.cpp": "7c5f50533c0f72600c7ecac888fdadb73a205a8db2a40165e03ad8e3071840d5",
+    "tools/diagnostics/eigen-hardware-cause/CMakeLists.txt": "a3bfff78b6ad3744c64cddf3eae5fd9fbf2a02088d1eb109d06b692bdcfcb614",
+    "tools/diagnostics/eigen-hardware-cause/collect.py": "e6660a09aa2f11f0525913301831e3c8f0081296fd7fd19cc5f8e9cb4440837a",
+    "tools/diagnostics/eigen-hardware-cause/llt_validation_probe.cpp": "e5e7aa9f832020545c3ff13e7d7d7975e21fc9c925731880b41d9e954137d818",
+    "tools/diagnostics/eigen-hardware-cause/probe-pmu.wprp": "0d7c8ccb88e512b8800e746eb115396ebd62883ab0a568b5fdbdb30bea217fda",
+    "tools/diagnostics/eigen-hardware-cause/projection_probe.cpp": "d3b0d0dbb8ca11607b69bd2145270bed922b38b218759bb45d70cd2eb1fb65a4",
+    "tools/diagnostics/eigen-hardware-cause/read_stride_probe.cpp": "4ea9f131479b1fde76a11518a95b0a54af7167bfed63f007b87cab1bffc65453",
+    "tools/diagnostics/eigen-hardware-cause/stride_probe.cpp": "4e3ef2377bcd5cc90a05f44a1e023885626a9eeb6e37530d9c4b9c0b6db6a039",
+    "tools/diagnostics/eigen-root-cause/affinity.hpp": "ec5ad8f5e25b80348925b40e6fa9586fe94e2d98f86aafe1f291875ff6c3e0d5",
+    "tools/diagnostics/eigen-root-cause/CMakeLists.txt": "4362359df987c62b7bd64c51f4f2a26946282dff74e3b93eaa5ee0a5170df23a",
+    "tools/diagnostics/eigen-root-cause/collect.py": "43c018090c19d386758bc2f0d8c30edadec018add17d5100bc888a70e13e9958",
+    "tools/diagnostics/eigen-root-cause/llt/include/kibo/detail/row_kernels.hpp": "e8792fbb0b6e3f66365ace4509cee770714a89c8b260523dd028fabd024e760e",
+    "tools/diagnostics/eigen-root-cause/llt/include/kibo/llt.hpp": "30f6caa244bd680d00e24051681eb03d3eb8f8021541c6e2f05808cfa14f302f",
+    "tools/diagnostics/eigen-root-cause/qr/include/kibo/detail/row_kernels.hpp": "3f185bc18150133efc2eb780e357384c545f35b3bc87e701d674747c7442ed6b",
+    "tools/diagnostics/eigen-root-cause/qr/include/kibo/qr.hpp": "f41cd3eebfc25ed47aea5d6677290e8581acc0cf57f5eec54948d348cf390238",
+    "tools/diagnostics/eigen-root-cause/rank_update_probe.cpp": "5666f728ad36c345fdfefded09d2c985ec16c32477366ee46d200b8b7ed1ba79",
+    "tools/diagnostics/eigen-root-cause/solver_probe.cpp": "1af2357155e9fd35416104e8dd135e8e8af0be938ca698ce108dac653e60f9ca",
+    "tools/diagnostics/eigen-gap/include/kibo/detail/row_kernels.hpp": "e8792fbb0b6e3f66365ace4509cee770714a89c8b260523dd028fabd024e760e",
+    "tools/diagnostics/eigen-gap/include/kibo/linalg.hpp": "52bf606a0f6ac2e21a83878e7b029b4c65935e25f5fc90387b1cf2ef74572634",
+    "tools/diagnostics/eigen-gap/include/kibo/llt.hpp": "30f6caa244bd680d00e24051681eb03d3eb8f8021541c6e2f05808cfa14f302f",
+    "tools/diagnostics/eigen-gap/include/kibo/qr.hpp": "124f44bad1ef809e40ec21ad939e5d9dd1ff5dd211d18ad13267aacedd4bf902",
+    "tools/diagnostics/eigen-gap/include/kibo/workspace.hpp": "e74b13bb57d83bb0ad7b1c8f271c40db825a2d1b380f0224639a9d94ee8c48d0",
+    "tools/diagnostics/eigen-gap/tests/controlled_fixture.hpp": "eabb9c60f1659b981c52e704c3e9a53cdaef50349baccda2ec6fcc5774f6c142",
+    "tools/diagnostics/eigen-gap/tests/llt_tests.cpp": "b336fb93633e6b338ad5c3b33bab1f8807d65ebe1b3189d48fa9c08da813da4d",
+    "tools/diagnostics/eigen-gap/tests/qr_tests.cpp": "bef0f6bc5378da8c3fa7bb82d96c54e47dabef6ef9d1359a0aa7771eb497b9fb",
+    "tools/diagnostics/eigen-gap/tests/test_check.hpp": "8e2fa1cdda7bd43126d6d96729ec5770bbacc59a3e1316c399a617f6c71543ea"
+  },
+  "commands": [
+    [
+      "cmake",
+      "-S",
+      "C:\\Users\\owner\\Documents\\git\\kibo-linalg\\tools\\diagnostics\\eigen-hardware-cause",
+      "-B",
+      "C:\\Users\\owner\\Documents\\git\\kibo-linalg\\build\\eigen-hardware-cause-zmdeg_n5",
+      "-G",
+      "Visual Studio 17 2022",
+      "-A",
+      "x64",
+      "-DEIGEN_SOURCE_DIR=C:\\Users\\owner\\Documents\\git\\kibo-linalg\\.cache\\eigen",
+      "-DCMAKE_CXX_FLAGS_RELEASE=/O2 /Ob2 /DNDEBUG"
+    ],
+    [
+      "cmake",
+      "--build",
+      "C:\\Users\\owner\\Documents\\git\\kibo-linalg\\build\\eigen-hardware-cause-zmdeg_n5",
+      "--config",
+      "Release"
+    ]
+  ],
+  "buildDirectory": "C:\\Users\\owner\\Documents\\git\\kibo-linalg\\build\\eigen-hardware-cause-zmdeg_n5",
+  "records": [
+    {
+      "target": "llt_guarded_column",
+      "process": 0,
+      "raw": "llt_guarded_column-0.txt",
+      "command": [
+        "C:\\Users\\owner\\Documents\\git\\kibo-linalg\\build\\eigen-hardware-cause-zmdeg_n5\\Release\\llt_guarded_column.exe",
+        "0",
+        "30"
+      ],
+      "exitCode": 1,
+      "valid": true
+    },
+    {
+      "target": "llt_no_symmetry",
+      "process": 0,
+      "raw": "llt_no_symmetry-0.txt",
+      "command": [
+        "C:\\Users\\owner\\Documents\\git\\kibo-linalg\\build\\eigen-hardware-cause-zmdeg_n5\\Release\\llt_no_symmetry.exe",
+        "0",
+        "30"
+      ],
+      "exitCode": 1,
+      "valid": true
+    },
+    {
+      "target": "stride",
+      "process": 0,
+      "raw": "stride-0.txt",
+      "command": [
+        "C:\\Users\\owner\\Documents\\git\\kibo-linalg\\build\\eigen-hardware-cause-zmdeg_n5\\Release\\stride.exe",
+        "512",
+        "520",
+        "528",
+        "576",
+        "640",
+        "768",
+        "1024",
+        "1032"
+      ],
+      "exitCode": 0,
+      "valid": true
+    },
+    {
+      "target": "projection",
+      "process": 0,
+      "raw": "projection-0.txt",
+      "command": [
+        "C:\\Users\\owner\\Documents\\git\\kibo-linalg\\build\\eigen-hardware-cause-zmdeg_n5\\Release\\projection.exe"
+      ],
+      "exitCode": 0,
+      "valid": true
+    },
+    {
+      "target": "read_stride",
+      "process": 0,
+      "raw": "read_stride-0.txt",
+      "command": [
+        "C:\\Users\\owner\\Documents\\git\\kibo-linalg\\build\\eigen-hardware-cause-zmdeg_n5\\Release\\read_stride.exe",
+        "0"
+      ],
+      "exitCode": 0,
+      "valid": true
+    },
+    {
+      "target": "llt_guarded_column",
+      "process": 1,
+      "raw": "llt_guarded_column-1.txt",
+      "command": [
+        "C:\\Users\\owner\\Documents\\git\\kibo-linalg\\build\\eigen-hardware-cause-zmdeg_n5\\Release\\llt_guarded_column.exe",
+        "1",
+        "30"
+      ],
+      "exitCode": 1,
+      "valid": true
+    },
+    {
+      "target": "llt_no_symmetry",
+      "process": 1,
+      "raw": "llt_no_symmetry-1.txt",
+      "command": [
+        "C:\\Users\\owner\\Documents\\git\\kibo-linalg\\build\\eigen-hardware-cause-zmdeg_n5\\Release\\llt_no_symmetry.exe",
+        "1",
+        "30"
+      ],
+      "exitCode": 1,
+      "valid": true
+    },
+    {
+      "target": "read_stride",
+      "process": 1,
+      "raw": "read_stride-1.txt",
+      "command": [
+        "C:\\Users\\owner\\Documents\\git\\kibo-linalg\\build\\eigen-hardware-cause-zmdeg_n5\\Release\\read_stride.exe",
+        "1"
+      ],
+      "exitCode": 0,
+      "valid": true
+    },
+    {
+      "target": "stride",
+      "process": 1,
+      "raw": "stride-1.txt",
+      "command": [
+        "C:\\Users\\owner\\Documents\\git\\kibo-linalg\\build\\eigen-hardware-cause-zmdeg_n5\\Release\\stride.exe",
+        "1032",
+        "1024",
+        "768",
+        "640",
+        "576",
+        "528",
+        "520",
+        "512"
+      ],
+      "exitCode": 0,
+      "valid": true
+    },
+    {
+      "target": "projection",
+      "process": 1,
+      "raw": "projection-1.txt",
+      "command": [
+        "C:\\Users\\owner\\Documents\\git\\kibo-linalg\\build\\eigen-hardware-cause-zmdeg_n5\\Release\\projection.exe"
+      ],
+      "exitCode": 0,
+      "valid": true
+    },
+    {
+      "target": "read_stride",
+      "process": 2,
+      "raw": "read_stride-2.txt",
+      "command": [
+        "C:\\Users\\owner\\Documents\\git\\kibo-linalg\\build\\eigen-hardware-cause-zmdeg_n5\\Release\\read_stride.exe",
+        "2"
+      ],
+      "exitCode": 0,
+      "valid": true
+    },
+    {
+      "target": "llt_no_symmetry",
+      "process": 2,
+      "raw": "llt_no_symmetry-2.txt",
+      "command": [
+        "C:\\Users\\owner\\Documents\\git\\kibo-linalg\\build\\eigen-hardware-cause-zmdeg_n5\\Release\\llt_no_symmetry.exe",
+        "2",
+        "30"
+      ],
+      "exitCode": 1,
+      "valid": true
+    },
+    {
+      "target": "projection",
+      "process": 2,
+      "raw": "projection-2.txt",
+      "command": [
+        "C:\\Users\\owner\\Documents\\git\\kibo-linalg\\build\\eigen-hardware-cause-zmdeg_n5\\Release\\projection.exe"
+      ],
+      "exitCode": 0,
+      "valid": true
+    },
+    {
+      "target": "stride",
+      "process": 2,
+      "raw": "stride-2.txt",
+      "command": [
+        "C:\\Users\\owner\\Documents\\git\\kibo-linalg\\build\\eigen-hardware-cause-zmdeg_n5\\Release\\stride.exe",
+        "512",
+        "520",
+        "528",
+        "576",
+        "640",
+        "768",
+        "1024",
+        "1032"
+      ],
+      "exitCode": 0,
+      "valid": true
+    },
+    {
+      "target": "llt_guarded_column",
+      "process": 2,
+      "raw": "llt_guarded_column-2.txt",
+      "command": [
+        "C:\\Users\\owner\\Documents\\git\\kibo-linalg\\build\\eigen-hardware-cause-zmdeg_n5\\Release\\llt_guarded_column.exe",
+        "2",
+        "30"
+      ],
+      "exitCode": 1,
+      "valid": true
+    }
+  ],
+  "binarySha256": {
+    "stride": "165d7aaa0b2e2d593d864e558b456e457385d887a25159082ea78f8c6bac8d4b",
+    "read_stride": "22a9ba8b3a20b862e28b9c2597369d1fd64fee26f34a71fb7bf949d85c9a6216",
+    "projection": "65d5f406891754781067585350f0c144fd179e74e64be9a55f56f6833e759c7f",
+    "llt_guarded_column": "28cea9139e06a3ab43a0dbdf1bd43e862de9d94b02d8abe892deef74013f68d0",
+    "llt_no_symmetry": "50c76352fbe137711304a2e09ceb9244d39179a446a20fda8796a86080c74602"
+  },
+  "effectiveFlags": [
+    "CMAKE_CXX_FLAGS:STRING=/DWIN32 /D_WINDOWS /EHsc",
+    "CMAKE_CXX_FLAGS_DEBUG:STRING=/Ob0 /Od /RTC1",
+    "CMAKE_CXX_FLAGS_MINSIZEREL:STRING=/O1 /Ob1 /DNDEBUG",
+    "CMAKE_CXX_FLAGS_RELEASE:STRING=/O2 /Ob2 /DNDEBUG",
+    "CMAKE_CXX_FLAGS_RELWITHDEBINFO:STRING=/O2 /Ob1 /DNDEBUG",
+    "EIGEN_SOURCE_DIR:PATH=C:/Users/owner/Documents/git/kibo-linalg/.cache/eigen",
+    "CMAKE_CXX_FLAGS-ADVANCED:INTERNAL=1",
+    "CMAKE_CXX_FLAGS_DEBUG-ADVANCED:INTERNAL=1",
+    "CMAKE_CXX_FLAGS_MINSIZEREL-ADVANCED:INTERNAL=1",
+    "CMAKE_CXX_FLAGS_RELEASE-ADVANCED:INTERNAL=1",
+    "CMAKE_CXX_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1"
+  ],
+  "finishedUtc": "2026-10-07T05:01:37.051697+00:00",
+  "valid": true
+}

@@ -148,3 +148,11 @@ Eigen相当を実装目標とし、今回の遅さを受入理由にしない。
 
 現時点で「少なくとも全ケースで同等」や「Eigenより速い」とは結論しない。
 試作で差を縮められることは確認できたが、性能受入・精度受入・公開releaseは完了していない。
+
+## 一変更ずつの追加切り分け
+
+[追加の原因特定](eigen-root-cause.md)で同じSSE2のQRを一変更ずつ比較し、
+aligned stride・read-only対照・LLTのmatched rank-updateを追加した。
+大きいmatched rank-updateはEigenとほぼ同等であり、packingの構造差がLLT全体差の主因という
+仮説は支持されなかった。row panelのアドレス間隔と、入力検証の追加仕事量は別々の対照で確認した。
+この先行報告の時間を、新しいCPU固定系列の時間と合算しない。
