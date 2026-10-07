@@ -1,0 +1,422 @@
+{
+  "before_validation": {
+    "command": [
+      "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\dumpbin.exe",
+      "/disasm",
+      "C:\\Users\\owner\\Documents\\git\\kibo-linalg\\build\\large-llt-next\\before_validation.dir\\Release\\full-adaptive.obj"
+    ],
+    "files": {
+      ".scratch\\large-llt-next\\variants\\before_validation\\kibo\\linalg.hpp": "52bf606a0f6ac2e21a83878e7b029b4c65935e25f5fc90387b1cf2ef74572634",
+      "build\\large-llt-next\\before_validation.dir\\Release\\full-adaptive.obj": "65073e17e5ae793446fe717ecca35a4bba6b8f93a455ec3b41e08e49abb950ff",
+      "build\\large-llt-next\\Release\\before_validation.exe": "ddbd10c00cad18ba1cafd75af2ac16158a8a9c205f5246a28a21210f2039cc28",
+      "build\\large-llt-next\\before_validation.asm": "a2fec5c919bf5a008fbd5a8abd98d8662e45920292f8029fcee8735140a8a366",
+      ".scratch\\large-llt-next\\variants\\before_validation\\kibo\\llt.hpp": "57f40fb7f85390f3a6eaae2f6d84f6bacd90bde2759ef460568b9501a1b3a245",
+      ".scratch\\large-llt-next\\full-adaptive.cpp": "74c23229d5134544c2759546eb7f7075629fd44b22accfcda643f9742bb98c27"
+    },
+    "dumpSha256": "5621f049146f44cc9c2db04066f7318cbd90fae0c11a07c1ed4f23274e14c95a",
+    "selected": [
+      {
+        "symbol": "??$blocked@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@@?$llt_inplace@N$00@internal@Eigen@@SA_JAEAV?$Matrix@N$0?0$0?0$0A@$0?0$0?0@2@@Z",
+        "stem": "before_validation-_blocked-22"
+      },
+      {
+        "symbol": "??$unblocked@V?$Block@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@$0?0$0?0$0A@@Eigen@@@?$llt_inplace@N$00@internal@Eigen@@SA_JAEAV?$Block@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@$0?0$0?0$0A@@2@@Z",
+        "stem": "before_validation-_unblocked-83"
+      },
+      {
+        "symbol": "??$unblocked@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@@?$llt_inplace@N$00@internal@Eigen@@SA_JAEAV?$Matrix@N$0?0$0?0$0A@$0?0$0?0@2@@Z",
+        "stem": "before_validation-_unblocked-84"
+      },
+      {
+        "symbol": "??$unblocked@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@V?$Transpositions@$0?0$0?0H@2@V?$Matrix@N$0?0$00$0A@$0?0$00@2@@?$ldlt_inplace@$00@internal@Eigen@@SA_NAEAV?$Matrix@N$0?0$0?0$0A@$0?0$0?0@2@AEAV?$Transpositions@$0?0$0?0H@2@AEAV?$Matrix@N$0?0$00$0A@$0?0$00@2@AEAW4SignMatrix@12@@Z",
+        "stem": "before_validation-_unblocked-85"
+      },
+      {
+        "symbol": "??R?$gebp_kernel@NN_JV?$blas_data_mapper@N_J$0A@$0A@$00@internal@Eigen@@$03$03$0A@$0A@@internal@Eigen@@QEAAXAEBV?$blas_data_mapper@N_J$0A@$0A@$00@12@PEBN1_J22N2222@Z",
+        "stem": "before_validation-R__gebp_kernel-129"
+      },
+      {
+        "symbol": "?checked@?$MatrixView@$$CBN@linalg@kibo@@SA?AV?$Result@V?$MatrixView@$$CBN@linalg@kibo@@@23@V?$span@$$CBN$0?0@std@@_K111@Z",
+        "stem": "before_validation-checked-141"
+      },
+      {
+        "symbol": "?checked@?$MatrixView@N@linalg@kibo@@SA?AV?$Result@V?$MatrixView@N@linalg@kibo@@@23@V?$span@N$0?0@std@@_K111@Z",
+        "stem": "before_validation-checked-142"
+      },
+      {
+        "symbol": "?factorize_column_llt@detail@linalg@kibo@@YA?AV?$Result@VLltFactorView@linalg@kibo@@@23@V?$MatrixView@$$CBN@23@V?$MatrixView@N@23@@Z",
+        "stem": "before_validation-factorize_column_llt-143"
+      },
+      {
+        "symbol": "?factorize_llt@linalg@kibo@@YA?AV?$Result@VLltFactorView@linalg@kibo@@@12@V?$MatrixView@$$CBN@12@V?$MatrixView@N@12@ULltOptions@12@@Z",
+        "stem": "before_validation-factorize_llt-144"
+      },
+      {
+        "symbol": "?finite_max_abs@detail@linalg@kibo@@YA_NPEBN_KAEAN@Z",
+        "stem": "before_validation-finite_max_abs-145"
+      },
+      {
+        "symbol": "?llt_forward_shared@detail@linalg@kibo@@YA?AUStatus@23@V?$MatrixView@$$CBN@23@V?$span@$$CBN$0?0@std@@V?$span@N$0?0@7@@Z",
+        "stem": "before_validation-llt_forward_shared-147"
+      },
+      {
+        "symbol": "?row_update_panel@detail@linalg@kibo@@YAXPEANPEBN_K122@Z",
+        "stem": "before_validation-row_update_panel-160"
+      },
+      {
+        "symbol": "?row_update_two_ordered@detail@linalg@kibo@@YAXPEANPEBN1_KNN@Z",
+        "stem": "before_validation-row_update_two_ordered-161"
+      },
+      {
+        "symbol": "?run@?$triangular_solve_matrix@N_J$01$01$0A@$00$0A@$00@internal@Eigen@@SAX_J0PEBN0PEAN00AEAV?$level3_blocking@NN@23@@Z",
+        "stem": "before_validation-run-171"
+      },
+      {
+        "symbol": "?dtor$0@?0??run@?$triangular_solve_matrix@N_J$01$01$0A@$00$0A@$00@internal@Eigen@@SAX_J0PEBN0PEAN00AEAV?$level3_blocking@NN@23@@Z@4HA",
+        "stem": "before_validation-dtor_0-172"
+      },
+      {
+        "symbol": "?run@?$triangular_solve_vector@NN_J$00$00$0A@$0A@@internal@Eigen@@SAX_JPEBN0PEAN@Z",
+        "stem": "before_validation-run-173"
+      },
+      {
+        "symbol": "?run@?$triangular_solve_vector@NN_J$00$01$0A@$00@internal@Eigen@@SAX_JPEBN0PEAN@Z",
+        "stem": "before_validation-run-174"
+      },
+      {
+        "symbol": "?run@?$triangular_solve_vector@NN_J$00$04$0A@$0A@@internal@Eigen@@SAX_JPEBN0PEAN@Z",
+        "stem": "before_validation-run-175"
+      },
+      {
+        "symbol": "?run@?$triangular_solve_vector@NN_J$00$05$0A@$00@internal@Eigen@@SAX_JPEBN0PEAN@Z",
+        "stem": "before_validation-run-176"
+      },
+      {
+        "symbol": "?solve_into@linalg@kibo@@YA?AUStatus@12@VLltFactorView@12@V?$span@$$CBN$0?0@std@@V?$span@N$0?0@6@V?$span@W4byte@std@@$0?0@6@@Z",
+        "stem": "before_validation-solve_into-177"
+      },
+      {
+        "symbol": "?symmetric_rows_within_tolerance@detail@linalg@kibo@@YA_NV?$MatrixView@$$CBN@23@NN@Z",
+        "stem": "before_validation-symmetric_rows_within_tolerance-178"
+      }
+    ]
+  },
+  "public_large": {
+    "command": [
+      "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\dumpbin.exe",
+      "/disasm",
+      "C:\\Users\\owner\\Documents\\git\\kibo-linalg\\build\\large-llt-next\\public_large.dir\\Release\\full-adaptive.obj"
+    ],
+    "files": {
+      "include\\kibo\\linalg.hpp": "52bf606a0f6ac2e21a83878e7b029b4c65935e25f5fc90387b1cf2ef74572634",
+      "build\\large-llt-next\\public_large.dir\\Release\\full-adaptive.obj": "acfc55d32a8bf772924d3d3b11eda9f818cd11f2e4b2db98046188b3abf34caa",
+      "build\\large-llt-next\\Release\\public_large.exe": "7097138f9e4f059dcf37336494e38c203bfc8e219ee3fbfd00227d8f50f92a86",
+      "build\\large-llt-next\\public_large.asm": "046b3a66b94682f4b3b21f4ee64077251c970e84d097f5235d2d532eefef93d0",
+      "include\\kibo\\llt.hpp": "369e059e495cb10a9e70b9c121beeb3d2525f8c0034ca075acc07d4bf9af680f",
+      ".scratch\\large-llt-next\\full-adaptive.cpp": "74c23229d5134544c2759546eb7f7075629fd44b22accfcda643f9742bb98c27"
+    },
+    "dumpSha256": "32132e475299ad5874e371d74c37f42bc7ef87297b675579a172d5691ea4530c",
+    "selected": [
+      {
+        "symbol": "??$blocked@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@@?$llt_inplace@N$00@internal@Eigen@@SA_JAEAV?$Matrix@N$0?0$0?0$0A@$0?0$0?0@2@@Z",
+        "stem": "public_large-_blocked-22"
+      },
+      {
+        "symbol": "??$unblocked@V?$Block@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@$0?0$0?0$0A@@Eigen@@@?$llt_inplace@N$00@internal@Eigen@@SA_JAEAV?$Block@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@$0?0$0?0$0A@@2@@Z",
+        "stem": "public_large-_unblocked-83"
+      },
+      {
+        "symbol": "??$unblocked@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@@?$llt_inplace@N$00@internal@Eigen@@SA_JAEAV?$Matrix@N$0?0$0?0$0A@$0?0$0?0@2@@Z",
+        "stem": "public_large-_unblocked-84"
+      },
+      {
+        "symbol": "??$unblocked@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@V?$Transpositions@$0?0$0?0H@2@V?$Matrix@N$0?0$00$0A@$0?0$00@2@@?$ldlt_inplace@$00@internal@Eigen@@SA_NAEAV?$Matrix@N$0?0$0?0$0A@$0?0$0?0@2@AEAV?$Transpositions@$0?0$0?0H@2@AEAV?$Matrix@N$0?0$00$0A@$0?0$00@2@AEAW4SignMatrix@12@@Z",
+        "stem": "public_large-_unblocked-85"
+      },
+      {
+        "symbol": "??R?$gebp_kernel@NN_JV?$blas_data_mapper@N_J$0A@$0A@$00@internal@Eigen@@$03$03$0A@$0A@@internal@Eigen@@QEAAXAEBV?$blas_data_mapper@N_J$0A@$0A@$00@12@PEBN1_J22N2222@Z",
+        "stem": "public_large-R__gebp_kernel-129"
+      },
+      {
+        "symbol": "?checked@?$MatrixView@$$CBN@linalg@kibo@@SA?AV?$Result@V?$MatrixView@$$CBN@linalg@kibo@@@23@V?$span@$$CBN$0?0@std@@_K111@Z",
+        "stem": "public_large-checked-141"
+      },
+      {
+        "symbol": "?checked@?$MatrixView@N@linalg@kibo@@SA?AV?$Result@V?$MatrixView@N@linalg@kibo@@@23@V?$span@N$0?0@std@@_K111@Z",
+        "stem": "public_large-checked-142"
+      },
+      {
+        "symbol": "?factorize_column_llt@detail@linalg@kibo@@YA?AV?$Result@VLltFactorView@linalg@kibo@@@23@V?$MatrixView@$$CBN@23@V?$MatrixView@N@23@@Z",
+        "stem": "public_large-factorize_column_llt-143"
+      },
+      {
+        "symbol": "?factorize_llt@linalg@kibo@@YA?AV?$Result@VLltFactorView@linalg@kibo@@@12@V?$MatrixView@$$CBN@12@V?$MatrixView@N@12@ULltOptions@12@@Z",
+        "stem": "public_large-factorize_llt-144"
+      },
+      {
+        "symbol": "?finite_max_abs@detail@linalg@kibo@@YA_NPEBN_KAEAN@Z",
+        "stem": "public_large-finite_max_abs-145"
+      },
+      {
+        "symbol": "?finite_max_and_exact_symmetry@detail@linalg@kibo@@YA_NV?$MatrixView@$$CBN@23@AEANAEA_N@Z",
+        "stem": "public_large-finite_max_and_exact_symmetry-146"
+      },
+      {
+        "symbol": "?llt_forward_shared@detail@linalg@kibo@@YA?AUStatus@23@V?$MatrixView@$$CBN@23@V?$span@$$CBN$0?0@std@@V?$span@N$0?0@7@@Z",
+        "stem": "public_large-llt_forward_shared-148"
+      },
+      {
+        "symbol": "?row_update_panel@detail@linalg@kibo@@YAXPEANPEBN_K122@Z",
+        "stem": "public_large-row_update_panel-161"
+      },
+      {
+        "symbol": "?row_update_two_ordered@detail@linalg@kibo@@YAXPEANPEBN1_KNN@Z",
+        "stem": "public_large-row_update_two_ordered-162"
+      },
+      {
+        "symbol": "?run@?$triangular_solve_matrix@N_J$01$01$0A@$00$0A@$00@internal@Eigen@@SAX_J0PEBN0PEAN00AEAV?$level3_blocking@NN@23@@Z",
+        "stem": "public_large-run-172"
+      },
+      {
+        "symbol": "?dtor$0@?0??run@?$triangular_solve_matrix@N_J$01$01$0A@$00$0A@$00@internal@Eigen@@SAX_J0PEBN0PEAN00AEAV?$level3_blocking@NN@23@@Z@4HA",
+        "stem": "public_large-dtor_0-173"
+      },
+      {
+        "symbol": "?run@?$triangular_solve_vector@NN_J$00$00$0A@$0A@@internal@Eigen@@SAX_JPEBN0PEAN@Z",
+        "stem": "public_large-run-174"
+      },
+      {
+        "symbol": "?run@?$triangular_solve_vector@NN_J$00$01$0A@$00@internal@Eigen@@SAX_JPEBN0PEAN@Z",
+        "stem": "public_large-run-175"
+      },
+      {
+        "symbol": "?run@?$triangular_solve_vector@NN_J$00$04$0A@$0A@@internal@Eigen@@SAX_JPEBN0PEAN@Z",
+        "stem": "public_large-run-176"
+      },
+      {
+        "symbol": "?run@?$triangular_solve_vector@NN_J$00$05$0A@$00@internal@Eigen@@SAX_JPEBN0PEAN@Z",
+        "stem": "public_large-run-177"
+      },
+      {
+        "symbol": "?solve_into@linalg@kibo@@YA?AUStatus@12@VLltFactorView@12@V?$span@$$CBN$0?0@std@@V?$span@N$0?0@6@V?$span@W4byte@std@@$0?0@6@@Z",
+        "stem": "public_large-solve_into-178"
+      },
+      {
+        "symbol": "?symmetric_rows_within_tolerance@detail@linalg@kibo@@YA_NV?$MatrixView@$$CBN@23@NN@Z",
+        "stem": "public_large-symmetric_rows_within_tolerance-179"
+      }
+    ]
+  },
+  "exact_divide4": {
+    "command": [
+      "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\dumpbin.exe",
+      "/disasm",
+      "C:\\Users\\owner\\Documents\\git\\kibo-linalg\\build\\large-llt-next\\exact_divide4.dir\\Release\\full-adaptive.obj"
+    ],
+    "files": {
+      ".scratch\\large-llt-next\\variants\\exact_divide4\\kibo\\linalg.hpp": "52bf606a0f6ac2e21a83878e7b029b4c65935e25f5fc90387b1cf2ef74572634",
+      "build\\large-llt-next\\exact_divide4.dir\\Release\\full-adaptive.obj": "8e81578f8e4d063dea770b809bf757ed9ece3dd28197870f79004c87835af212",
+      "build\\large-llt-next\\Release\\exact_divide4.exe": "581964e0780d08eed03043373a7b16641f44b8ed5d8a4cd3ad43d8e1ab0a620e",
+      "build\\large-llt-next\\exact_divide4.asm": "2c8a94b9dc5d63eb589bc57c4b9021474a5e37134380b1ffa82898cf5666bd77",
+      ".scratch\\large-llt-next\\variants\\exact_divide4\\kibo\\llt.hpp": "33d6eb9206d8fc9234e8013f41728c92b4a7a69bc1b14e4126ff45577624e8ff",
+      ".scratch\\large-llt-next\\full-adaptive.cpp": "74c23229d5134544c2759546eb7f7075629fd44b22accfcda643f9742bb98c27"
+    },
+    "dumpSha256": "e1a57a853b3b4fd568b479df99cc235e82733334b778fc5b85e4b6ffbd54859e",
+    "selected": [
+      {
+        "symbol": "??$blocked@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@@?$llt_inplace@N$00@internal@Eigen@@SA_JAEAV?$Matrix@N$0?0$0?0$0A@$0?0$0?0@2@@Z",
+        "stem": "exact_divide4-_blocked-22"
+      },
+      {
+        "symbol": "??$unblocked@V?$Block@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@$0?0$0?0$0A@@Eigen@@@?$llt_inplace@N$00@internal@Eigen@@SA_JAEAV?$Block@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@$0?0$0?0$0A@@2@@Z",
+        "stem": "exact_divide4-_unblocked-83"
+      },
+      {
+        "symbol": "??$unblocked@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@@?$llt_inplace@N$00@internal@Eigen@@SA_JAEAV?$Matrix@N$0?0$0?0$0A@$0?0$0?0@2@@Z",
+        "stem": "exact_divide4-_unblocked-84"
+      },
+      {
+        "symbol": "??$unblocked@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@V?$Transpositions@$0?0$0?0H@2@V?$Matrix@N$0?0$00$0A@$0?0$00@2@@?$ldlt_inplace@$00@internal@Eigen@@SA_NAEAV?$Matrix@N$0?0$0?0$0A@$0?0$0?0@2@AEAV?$Transpositions@$0?0$0?0H@2@AEAV?$Matrix@N$0?0$00$0A@$0?0$00@2@AEAW4SignMatrix@12@@Z",
+        "stem": "exact_divide4-_unblocked-85"
+      },
+      {
+        "symbol": "??R?$gebp_kernel@NN_JV?$blas_data_mapper@N_J$0A@$0A@$00@internal@Eigen@@$03$03$0A@$0A@@internal@Eigen@@QEAAXAEBV?$blas_data_mapper@N_J$0A@$0A@$00@12@PEBN1_J22N2222@Z",
+        "stem": "exact_divide4-R__gebp_kernel-129"
+      },
+      {
+        "symbol": "?checked@?$MatrixView@$$CBN@linalg@kibo@@SA?AV?$Result@V?$MatrixView@$$CBN@linalg@kibo@@@23@V?$span@$$CBN$0?0@std@@_K111@Z",
+        "stem": "exact_divide4-checked-141"
+      },
+      {
+        "symbol": "?checked@?$MatrixView@N@linalg@kibo@@SA?AV?$Result@V?$MatrixView@N@linalg@kibo@@@23@V?$span@N$0?0@std@@_K111@Z",
+        "stem": "exact_divide4-checked-142"
+      },
+      {
+        "symbol": "?factorize_column_llt@detail@linalg@kibo@@YA?AV?$Result@VLltFactorView@linalg@kibo@@@23@V?$MatrixView@$$CBN@23@V?$MatrixView@N@23@@Z",
+        "stem": "exact_divide4-factorize_column_llt-143"
+      },
+      {
+        "symbol": "?factorize_llt@linalg@kibo@@YA?AV?$Result@VLltFactorView@linalg@kibo@@@12@V?$MatrixView@$$CBN@12@V?$MatrixView@N@12@ULltOptions@12@@Z",
+        "stem": "exact_divide4-factorize_llt-144"
+      },
+      {
+        "symbol": "?finite_max_abs@detail@linalg@kibo@@YA_NPEBN_KAEAN@Z",
+        "stem": "exact_divide4-finite_max_abs-145"
+      },
+      {
+        "symbol": "?finite_max_and_exact_symmetry@detail@linalg@kibo@@YA_NV?$MatrixView@$$CBN@23@AEANAEA_N@Z",
+        "stem": "exact_divide4-finite_max_and_exact_symmetry-146"
+      },
+      {
+        "symbol": "?llt_forward_shared@detail@linalg@kibo@@YA?AUStatus@23@V?$MatrixView@$$CBN@23@V?$span@$$CBN$0?0@std@@V?$span@N$0?0@7@@Z",
+        "stem": "exact_divide4-llt_forward_shared-148"
+      },
+      {
+        "symbol": "?row_update_panel@detail@linalg@kibo@@YAXPEANPEBN_K122@Z",
+        "stem": "exact_divide4-row_update_panel-161"
+      },
+      {
+        "symbol": "?row_update_two_ordered@detail@linalg@kibo@@YAXPEANPEBN1_KNN@Z",
+        "stem": "exact_divide4-row_update_two_ordered-162"
+      },
+      {
+        "symbol": "?run@?$triangular_solve_matrix@N_J$01$01$0A@$00$0A@$00@internal@Eigen@@SAX_J0PEBN0PEAN00AEAV?$level3_blocking@NN@23@@Z",
+        "stem": "exact_divide4-run-172"
+      },
+      {
+        "symbol": "?dtor$0@?0??run@?$triangular_solve_matrix@N_J$01$01$0A@$00$0A@$00@internal@Eigen@@SAX_J0PEBN0PEAN00AEAV?$level3_blocking@NN@23@@Z@4HA",
+        "stem": "exact_divide4-dtor_0-173"
+      },
+      {
+        "symbol": "?run@?$triangular_solve_vector@NN_J$00$00$0A@$0A@@internal@Eigen@@SAX_JPEBN0PEAN@Z",
+        "stem": "exact_divide4-run-174"
+      },
+      {
+        "symbol": "?run@?$triangular_solve_vector@NN_J$00$01$0A@$00@internal@Eigen@@SAX_JPEBN0PEAN@Z",
+        "stem": "exact_divide4-run-175"
+      },
+      {
+        "symbol": "?run@?$triangular_solve_vector@NN_J$00$04$0A@$0A@@internal@Eigen@@SAX_JPEBN0PEAN@Z",
+        "stem": "exact_divide4-run-176"
+      },
+      {
+        "symbol": "?run@?$triangular_solve_vector@NN_J$00$05$0A@$00@internal@Eigen@@SAX_JPEBN0PEAN@Z",
+        "stem": "exact_divide4-run-177"
+      },
+      {
+        "symbol": "?solve_into@linalg@kibo@@YA?AUStatus@12@VLltFactorView@12@V?$span@$$CBN$0?0@std@@V?$span@N$0?0@6@V?$span@W4byte@std@@$0?0@6@@Z",
+        "stem": "exact_divide4-solve_into-178"
+      },
+      {
+        "symbol": "?symmetric_rows_within_tolerance@detail@linalg@kibo@@YA_NV?$MatrixView@$$CBN@23@NN@Z",
+        "stem": "exact_divide4-symmetric_rows_within_tolerance-179"
+      }
+    ]
+  },
+  "view_fast": {
+    "command": [
+      "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\dumpbin.exe",
+      "/disasm",
+      "C:\\Users\\owner\\Documents\\git\\kibo-linalg\\build\\large-llt-next\\view_fast.dir\\Release\\full-adaptive.obj"
+    ],
+    "files": {
+      ".scratch\\large-llt-next\\variants\\view_fast\\kibo\\linalg.hpp": "bbe2ae1ce3de7af9a530fc899a7767e2e50bb061115d662abcbd32fcf4af1af3",
+      "build\\large-llt-next\\view_fast.dir\\Release\\full-adaptive.obj": "8cefd58fd4cd41df8202cb1cea3d7bdfff689d848d15a5600e55cef6fc87d1ff",
+      "build\\large-llt-next\\Release\\view_fast.exe": "bcbd15657e6461befce6503fa02a4f7c24fa1191707f4ce6c3c71541d2262d69",
+      "build\\large-llt-next\\view_fast.asm": "60e59a05e3d7e6524901685c656950930674ce1f3c456bf9b77add230926b832",
+      ".scratch\\large-llt-next\\variants\\view_fast\\kibo\\llt.hpp": "369e059e495cb10a9e70b9c121beeb3d2525f8c0034ca075acc07d4bf9af680f",
+      ".scratch\\large-llt-next\\full-adaptive.cpp": "74c23229d5134544c2759546eb7f7075629fd44b22accfcda643f9742bb98c27"
+    },
+    "dumpSha256": "7c299c0ba1b78f25003b1db5b4870a58947137d6068b8c1d7236cbe9befd1fd8",
+    "selected": [
+      {
+        "symbol": "??$blocked@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@@?$llt_inplace@N$00@internal@Eigen@@SA_JAEAV?$Matrix@N$0?0$0?0$0A@$0?0$0?0@2@@Z",
+        "stem": "view_fast-_blocked-22"
+      },
+      {
+        "symbol": "??$unblocked@V?$Block@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@$0?0$0?0$0A@@Eigen@@@?$llt_inplace@N$00@internal@Eigen@@SA_JAEAV?$Block@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@$0?0$0?0$0A@@2@@Z",
+        "stem": "view_fast-_unblocked-83"
+      },
+      {
+        "symbol": "??$unblocked@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@@?$llt_inplace@N$00@internal@Eigen@@SA_JAEAV?$Matrix@N$0?0$0?0$0A@$0?0$0?0@2@@Z",
+        "stem": "view_fast-_unblocked-84"
+      },
+      {
+        "symbol": "??$unblocked@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@V?$Transpositions@$0?0$0?0H@2@V?$Matrix@N$0?0$00$0A@$0?0$00@2@@?$ldlt_inplace@$00@internal@Eigen@@SA_NAEAV?$Matrix@N$0?0$0?0$0A@$0?0$0?0@2@AEAV?$Transpositions@$0?0$0?0H@2@AEAV?$Matrix@N$0?0$00$0A@$0?0$00@2@AEAW4SignMatrix@12@@Z",
+        "stem": "view_fast-_unblocked-85"
+      },
+      {
+        "symbol": "??R?$gebp_kernel@NN_JV?$blas_data_mapper@N_J$0A@$0A@$00@internal@Eigen@@$03$03$0A@$0A@@internal@Eigen@@QEAAXAEBV?$blas_data_mapper@N_J$0A@$0A@$00@12@PEBN1_J22N2222@Z",
+        "stem": "view_fast-R__gebp_kernel-129"
+      },
+      {
+        "symbol": "?checked@?$MatrixView@$$CBN@linalg@kibo@@SA?AV?$Result@V?$MatrixView@$$CBN@linalg@kibo@@@23@V?$span@$$CBN$0?0@std@@_K111@Z",
+        "stem": "view_fast-checked-141"
+      },
+      {
+        "symbol": "?checked@?$MatrixView@N@linalg@kibo@@SA?AV?$Result@V?$MatrixView@N@linalg@kibo@@@23@V?$span@N$0?0@std@@_K111@Z",
+        "stem": "view_fast-checked-142"
+      },
+      {
+        "symbol": "?factorize_column_llt@detail@linalg@kibo@@YA?AV?$Result@VLltFactorView@linalg@kibo@@@23@V?$MatrixView@$$CBN@23@V?$MatrixView@N@23@@Z",
+        "stem": "view_fast-factorize_column_llt-143"
+      },
+      {
+        "symbol": "?factorize_llt@linalg@kibo@@YA?AV?$Result@VLltFactorView@linalg@kibo@@@12@V?$MatrixView@$$CBN@12@V?$MatrixView@N@12@ULltOptions@12@@Z",
+        "stem": "view_fast-factorize_llt-144"
+      },
+      {
+        "symbol": "?finite_max_abs@detail@linalg@kibo@@YA_NPEBN_KAEAN@Z",
+        "stem": "view_fast-finite_max_abs-145"
+      },
+      {
+        "symbol": "?finite_max_and_exact_symmetry@detail@linalg@kibo@@YA_NV?$MatrixView@$$CBN@23@AEANAEA_N@Z",
+        "stem": "view_fast-finite_max_and_exact_symmetry-146"
+      },
+      {
+        "symbol": "?llt_forward_shared@detail@linalg@kibo@@YA?AUStatus@23@V?$MatrixView@$$CBN@23@V?$span@$$CBN$0?0@std@@V?$span@N$0?0@7@@Z",
+        "stem": "view_fast-llt_forward_shared-148"
+      },
+      {
+        "symbol": "?row_update_panel@detail@linalg@kibo@@YAXPEANPEBN_K122@Z",
+        "stem": "view_fast-row_update_panel-161"
+      },
+      {
+        "symbol": "?row_update_two_ordered@detail@linalg@kibo@@YAXPEANPEBN1_KNN@Z",
+        "stem": "view_fast-row_update_two_ordered-162"
+      },
+      {
+        "symbol": "?run@?$triangular_solve_matrix@N_J$01$01$0A@$00$0A@$00@internal@Eigen@@SAX_J0PEBN0PEAN00AEAV?$level3_blocking@NN@23@@Z",
+        "stem": "view_fast-run-172"
+      },
+      {
+        "symbol": "?dtor$0@?0??run@?$triangular_solve_matrix@N_J$01$01$0A@$00$0A@$00@internal@Eigen@@SAX_J0PEBN0PEAN00AEAV?$level3_blocking@NN@23@@Z@4HA",
+        "stem": "view_fast-dtor_0-173"
+      },
+      {
+        "symbol": "?run@?$triangular_solve_vector@NN_J$00$00$0A@$0A@@internal@Eigen@@SAX_JPEBN0PEAN@Z",
+        "stem": "view_fast-run-174"
+      },
+      {
+        "symbol": "?run@?$triangular_solve_vector@NN_J$00$01$0A@$00@internal@Eigen@@SAX_JPEBN0PEAN@Z",
+        "stem": "view_fast-run-175"
+      },
+      {
+        "symbol": "?run@?$triangular_solve_vector@NN_J$00$04$0A@$0A@@internal@Eigen@@SAX_JPEBN0PEAN@Z",
+        "stem": "view_fast-run-176"
+      },
+      {
+        "symbol": "?run@?$triangular_solve_vector@NN_J$00$05$0A@$00@internal@Eigen@@SAX_JPEBN0PEAN@Z",
+        "stem": "view_fast-run-177"
+      },
+      {
+        "symbol": "?solve_into@linalg@kibo@@YA?AUStatus@12@VLltFactorView@12@V?$span@$$CBN$0?0@std@@V?$span@N$0?0@6@V?$span@W4byte@std@@$0?0@6@@Z",
+        "stem": "view_fast-solve_into-178"
+      },
+      {
+        "symbol": "?symmetric_rows_within_tolerance@detail@linalg@kibo@@YA_NV?$MatrixView@$$CBN@23@NN@Z",
+        "stem": "view_fast-symmetric_rows_within_tolerance-179"
+      }
+    ]
+  }
+}

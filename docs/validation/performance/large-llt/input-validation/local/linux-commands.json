@@ -1,0 +1,58 @@
+[
+  {
+    "command": [
+      "docker",
+      "run",
+      "--rm",
+      "-v",
+      "C:\\Users\\owner\\Documents\\git\\kibo-linalg:/work",
+      "-w",
+      "/work",
+      "gcc:15.3@sha256:ead103e6d03b69232962d467f3520c3f70b6718c69ff71efcc08efe9011fadb6",
+      "sh",
+      ".scratch/large-llt-scan-linux.sh",
+      "gcc"
+    ],
+    "exitCode": 0
+  },
+  {
+    "command": [
+      "docker",
+      "run",
+      "--rm",
+      "-v",
+      "C:\\Users\\owner\\Documents\\git\\kibo-linalg:/work",
+      "-w",
+      "/work",
+      "-e",
+      "CXXFLAGS=-stdlib=libc++",
+      "-e",
+      "LDFLAGS=-L/work/.cache/tools/LLVM-20.1.8-Linux-X64/lib/x86_64-unknown-linux-gnu -Wl,-rpath,/work/.cache/tools/LLVM-20.1.8-Linux-X64/lib/x86_64-unknown-linux-gnu",
+      "gcc:15.3@sha256:ead103e6d03b69232962d467f3520c3f70b6718c69ff71efcc08efe9011fadb6",
+      "sh",
+      ".scratch/large-llt-scan-linux.sh",
+      "clang"
+    ],
+    "exitCode": 0
+  },
+  {
+    "command": [
+      "docker",
+      "run",
+      "--rm",
+      "-v",
+      "C:\\Users\\owner\\Documents\\git\\kibo-linalg:/work",
+      "-w",
+      "/work",
+      "-e",
+      "CXXFLAGS=-stdlib=libc++ -fsanitize=address,undefined -fno-omit-frame-pointer",
+      "-e",
+      "LDFLAGS=-L/work/.cache/tools/LLVM-20.1.8-Linux-X64/lib/x86_64-unknown-linux-gnu -Wl,-rpath,/work/.cache/tools/LLVM-20.1.8-Linux-X64/lib/x86_64-unknown-linux-gnu -fsanitize=address,undefined",
+      "gcc:15.3@sha256:ead103e6d03b69232962d467f3520c3f70b6718c69ff71efcc08efe9011fadb6",
+      "sh",
+      ".scratch/large-llt-scan-linux.sh",
+      "clang-sanitized"
+    ],
+    "exitCode": 0
+  }
+]
