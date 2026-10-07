@@ -91,14 +91,16 @@ int main() {
         CHECK(!overflow && overflow.status().code==StatusCode::arithmetic_failure && overflow.status().index==0);
         return 0;
     };
+    CHECK(check_dense.template operator()<31>()==0);
+    CHECK(check_dense.template operator()<32>()==0);
+    CHECK(check_dense.template operator()<33>()==0);
     CHECK(check_dense.template operator()<64>()==0);
     CHECK(check_dense.template operator()<65>()==0);
     // Validation covers both triangles before the blocked path writes output.
     // Exercise the vector scan tail, exact symmetry, and the original
     // normalized tolerance boundary (not an approximate shortcut).
-    {
-        constexpr std::size_t n=65;
-        std::array<double,n*n> input{},target{};
+    for (std::size_t n:{32,33,65}) {
+        std::array<double,65*65> input{},target{};
         for (std::size_t i=0;i<n;++i) input[i*n+i]=1;
         auto source=MatrixView<const double>::checked(input,n,n,n).value();
         auto output=MatrixView<double>::checked(target,n,n,n).value();
@@ -119,6 +121,25 @@ int main() {
         }
         input[1]=std::numeric_limits<double>::infinity();
         CHECK(factorize_llt(source,output,LltOptions{tolerance,false}).status().code==StatusCode::non_finite_input);
+    }
+    // Classification boundaries reach the public preflight and pivot checks.
+    {
+        double input=1,target=123;
+        auto a=MatrixView<const double>::checked(std::span<const double>(&input,1),1,1,1).value();
+        auto l=MatrixView<double>::checked(std::span<double>(&target,1),1,1,1).value();
+        for (double value:{std::numeric_limits<double>::denorm_min(),std::numeric_limits<double>::min(),1.0,std::numeric_limits<double>::max()}) {
+            input=value;auto f=factorize_llt(a,l);
+            CHECK(f && target==std::sqrt(value));
+        }
+        for (double value:{0.0,-0.0,-std::numeric_limits<double>::denorm_min(),-std::numeric_limits<double>::max()}) {
+            input=value;CHECK(factorize_llt(a,l).status().code==StatusCode::non_positive_pivot);
+        }
+        for (double value:{std::numeric_limits<double>::infinity(),-std::numeric_limits<double>::infinity(),std::numeric_limits<double>::quiet_NaN()}) {
+            input=value;target=123;
+            CHECK(factorize_llt(a,l).status().code==StatusCode::non_finite_input && target==123);
+            input=1;
+            CHECK(factorize_llt(a,l,LltOptions{value,true}).status().code==StatusCode::invalid_argument && target==123);
+        }
     }
     std::puts("public LLT 2x2 factor and transactional solve passed");
 }

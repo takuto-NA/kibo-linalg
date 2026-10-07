@@ -19,6 +19,11 @@ public:
     MatrixView<const double> lower() const noexcept { return lower_; }
 };
 namespace detail {
+// Keep scalar finite checks inline on MSVC as well as GCC/Clang.
+// Ordered comparison rejects NaN and both infinities without a CRT call.
+inline bool llt_is_finite(double value) noexcept {
+    return std::abs(value)<=std::numeric_limits<double>::max();
+}
 struct LltAccess {
     static LltFactorView create(MatrixView<const double> lower) noexcept { return LltFactorView(lower); }
 };
@@ -32,12 +37,12 @@ inline Result<LltFactorView> factorize_column_llt(MatrixView<const double> input
         const auto end=first+std::min(std::size_t{8},n-first);
         for (std::size_t k=first;k<end;++k) {
             const double diagonal=working(k,k);
-            if (!std::isfinite(diagonal)) return Status{StatusCode::arithmetic_failure,k};
+            if (!detail::llt_is_finite(diagonal)) return Status{StatusCode::arithmetic_failure,k};
             if (diagonal<=0) return Status{StatusCode::non_positive_pivot,k};
             working(k,k)=std::sqrt(diagonal);
             for (std::size_t i=k+1;i<end;++i) {
                 const double value=working(i,k)/working(k,k);
-                if (!std::isfinite(value)) return Status{StatusCode::arithmetic_failure,k};
+                if (!detail::llt_is_finite(value)) return Status{StatusCode::arithmetic_failure,k};
                 working(i,k)=value;
             }
             for (std::size_t j=k+1;j<end;++j)
@@ -46,7 +51,7 @@ inline Result<LltFactorView> factorize_column_llt(MatrixView<const double> input
         if (end<n) for (std::size_t k=first;k<end;++k) {
             for (std::size_t i=end;i<n;++i) {
                 const double value=working(i,k)/working(k,k);
-                if (!std::isfinite(value)) return Status{StatusCode::arithmetic_failure,k};
+                if (!detail::llt_is_finite(value)) return Status{StatusCode::arithmetic_failure,k};
                 working(i,k)=value;
             }
             for (std::size_t j=k+1;j<end;++j)
@@ -95,10 +100,10 @@ inline Result<LltFactorView> factorize_llt(MatrixView<const double> input, Matri
                                          LltOptions options={}) noexcept {
     const auto n=input.rows();
     if (n==0 || input.cols()!=n || !detail::same_shape(input,storage)) return StatusCode::invalid_shape;
-    if (!std::isfinite(options.symmetry_tolerance) || options.symmetry_tolerance<0 || options.symmetry_tolerance>=1)
+    if (!detail::llt_is_finite(options.symmetry_tolerance) || options.symmetry_tolerance<0 || options.symmetry_tolerance>=1)
         return StatusCode::invalid_argument;
     double scale=0;
-    if (options.check_symmetry && input.col_stride()==1 && n>=64) {
+    if (options.check_symmetry && input.col_stride()==1 && n>=32) {
         // The whole input, including the unused triangle, is still validated
         // before storage is touched. Combine the finite and scale scans.
         for (std::size_t i=0;i<n;++i)
@@ -120,20 +125,20 @@ inline Result<LltFactorView> factorize_llt(MatrixView<const double> input, Matri
         }
     }
     if constexpr (detail::row_simd_available) {
-        if (storage.col_stride()==1 && n>=64)
+        if (storage.col_stride()==1 && n>=32)
             return detail::factorize_column_llt(input,storage);
     }
     for (std::size_t i=0;i<n;++i) {
         for (std::size_t j=0;j<=i;++j) {
             double value=input(i,j);
             for (std::size_t k=0;k<j;++k) value-=storage(i,k)*storage(j,k);
-            if (!std::isfinite(value)) return Status{StatusCode::arithmetic_failure,j};
+            if (!detail::llt_is_finite(value)) return Status{StatusCode::arithmetic_failure,j};
             if (i==j) {
                 if (value<=0) return Status{StatusCode::non_positive_pivot,j};
                 storage(i,j)=std::sqrt(value);
             } else {
                 value/=storage(j,j);
-                if (!std::isfinite(value)) return Status{StatusCode::arithmetic_failure,j};
+                if (!detail::llt_is_finite(value)) return Status{StatusCode::arithmetic_failure,j};
                 storage(i,j)=value;
             }
         }
@@ -151,21 +156,21 @@ inline Status solve_into(LltFactorView factor, std::span<const double> rhs, std:
     if (!requirement) return requirement.status();
     auto prepared=detail::workspace_doubles(workspace,requirement.value());
     if (!prepared) return prepared.status();
-    for (auto value:rhs) if (!std::isfinite(value)) return {StatusCode::non_finite_input};
+    for (auto value:rhs) if (!detail::llt_is_finite(value)) return {StatusCode::non_finite_input};
     auto candidate=prepared.value();
     auto lower=factor.lower();
     for (std::size_t i=0;i<n;++i) {
         double value=rhs[i];
         for (std::size_t j=0;j<i;++j) value-=lower(i,j)*candidate[j];
         value/=lower(i,i);
-        if (!std::isfinite(value)) return {StatusCode::arithmetic_failure,i};
+        if (!detail::llt_is_finite(value)) return {StatusCode::arithmetic_failure,i};
         candidate[i]=value;
     }
     for (std::size_t i=n;i-->0;) {
         double value=candidate[i];
         for (std::size_t j=i+1;j<n;++j) value-=lower(j,i)*candidate[j];
         value/=lower(i,i);
-        if (!std::isfinite(value)) return {StatusCode::arithmetic_failure,i};
+        if (!detail::llt_is_finite(value)) return {StatusCode::arithmetic_failure,i};
         candidate[i]=value;
     }
     for (std::size_t i=0;i<n;++i) output[i]=candidate[i];
