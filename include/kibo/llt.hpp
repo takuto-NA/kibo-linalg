@@ -71,9 +71,14 @@ void update_column_pair(double* first, double* second, const double* panel,
         _mm_storeu_pd(first+i,a0);_mm_storeu_pd(second+i,b0);
     }
 #endif
-    for (;i<count;++i) for (std::size_t k=0;k<width;++k) {
-        first[i]-=coefficients[k*stride]*panel[k*stride+i];
-        second[i]-=coefficients[k*stride+1]*panel[k*stride+i];
+    for (;i<count;++i) {
+        // The caller's logical outputs are disjoint from the panel/coefficients.
+        double a=first[i],b=second[i];
+        for (std::size_t k=0;k<width;++k) {
+            a-=coefficients[k*stride]*panel[k*stride+i];
+            b-=coefficients[k*stride+1]*panel[k*stride+i];
+        }
+        first[i]=a;second[i]=b;
     }
 }
 
@@ -306,11 +311,17 @@ inline Result<LltFactorView> factorize_column_llt(MatrixView<const double> input
             if (end<n) {
                 std::size_t j=end;
                 for (;n-j>=2;j+=2) {
-                    for (std::size_t k=first;k<end;++k) working(j,j)-=working(j,k)*working(j,k);
+                    double diagonal=working(j,j);
+                    for (std::size_t k=first;k<end;++k) diagonal-=working(j,k)*working(j,k);
+                    working(j,j)=diagonal;
                     update_column_pair(&working(j+1,j),&working(j+1,j+1),&working(j+1,first),
                                        working.col_stride(),&working(j,first),end-first,n-j-1);
                 }
-                if (j<n) for (std::size_t k=first;k<end;++k) working(j,j)-=working(j,k)*working(j,k);
+                if (j<n) {
+                    double diagonal=working(j,j);
+                    for (std::size_t k=first;k<end;++k) diagonal-=working(j,k)*working(j,k);
+                    working(j,j)=diagonal;
+                }
             }
             first=end;
         }

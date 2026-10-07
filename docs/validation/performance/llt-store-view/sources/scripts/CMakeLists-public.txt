@@ -1,0 +1,23 @@
+cmake_minimum_required(VERSION 3.30)
+project(llt_store_reproduce LANGUAGES CXX)
+if(NOT MSVC)
+  message(FATAL_ERROR "The assembly comparison uses MSVC on Windows")
+endif()
+
+add_executable(before_store full-adaptive.cpp)
+target_compile_features(before_store PRIVATE cxx_std_20)
+target_include_directories(before_store PRIVATE variants/before_store ../../tests ../../.cache/eigen)
+target_compile_definitions(before_store PRIVATE EIGEN_DONT_PARALLELIZE=1)
+target_compile_options(before_store PRIVATE /O2 /fp:precise /FAs "/Fa${CMAKE_CURRENT_BINARY_DIR}/before_store.asm")
+
+add_executable(public_large full-adaptive.cpp)
+target_compile_features(public_large PRIVATE cxx_std_20)
+target_include_directories(public_large PRIVATE ../../include ../../tests ../../.cache/eigen)
+target_compile_definitions(public_large PRIVATE EIGEN_DONT_PARALLELIZE=1)
+target_compile_options(public_large PRIVATE /O2 /fp:precise /FAs "/Fa${CMAKE_CURRENT_BINARY_DIR}/public_large.asm")
+
+add_executable(uninitialized_setup uninitialized-setup.cpp)
+target_compile_features(uninitialized_setup PRIVATE cxx_std_20)
+target_include_directories(uninitialized_setup PRIVATE ../../include ../../tests ../../.cache/eigen)
+target_compile_definitions(uninitialized_setup PRIVATE EIGEN_DONT_PARALLELIZE=1)
+target_compile_options(uninitialized_setup PRIVATE /O2 /fp:precise /FAs "/Fa${CMAKE_CURRENT_BINARY_DIR}/uninitialized_setup.asm")
