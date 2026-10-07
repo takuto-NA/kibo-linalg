@@ -66,4 +66,8 @@ ESP32-S3/C3はC++20・exceptions/RTTI offで補正を呼ぶ共通サンプルの
 [全保存ファイルのSHA256](../validation/numerical/refined-public/SHA256SUMS.json) に、
 生入力・解・oracle、全CTest結果、compile flags、ソース、module/firmware/binary hashと実行コマンドを保存した。
 元prototypeの [保存証拠](../validation/numerical/rounded-input/metadata.json) は上書きしていない。
-hosted CIの新しい実行証拠は、この公開実装をpushした後に別途保存する。
+公開実装を含む137656dの [hosted CI](https://github.com/takuto-NA/kibo-linalg/actions/runs/37620734174) は完了した。
+PC4 jobsは数値CTestのEigen-only失敗でfailed、その他の契約・無確保・移設packageは通過した。
+WASMとESP両cross compile jobsはsuccessである。
+[hosted証拠](../validation/numerical/refined-public/hosted/evidence.json) に全artifact hash、
+各row/columnの失敗8件とコンパイル条件、Node/3 browser結果を保存した。
