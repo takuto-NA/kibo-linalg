@@ -1,0 +1,77 @@
+?init@?$ColPivHouseholderQR@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@H@Eigen@@AEAAX_J0@Z (private: void __cdecl Eigen::ColPivHouseholderQR<class Eigen::Matrix<double,-1,-1,0,-1,-1>,int>::init(__int64,__int64)):
+  0000000000000000: 48 89 5C 24 08     mov         qword ptr [rsp+8],rbx
+  0000000000000005: 48 89 74 24 10     mov         qword ptr [rsp+10h],rsi
+  000000000000000A: 57                 push        rdi
+  000000000000000B: 48 83 EC 20        sub         rsp,20h
+  000000000000000F: 4C 3B C2           cmp         r8,rdx
+  0000000000000012: 48 8B F2           mov         rsi,rdx
+  0000000000000015: 49 8B F8           mov         rdi,r8
+  0000000000000018: 48 8B D9           mov         rbx,rcx
+  000000000000001B: 49 0F 4C F0        cmovl       rsi,r8
+  000000000000001F: 48 39 71 20        cmp         qword ptr [rcx+20h],rsi
+  0000000000000023: 74 1B              je          0000000000000040
+  0000000000000025: 48 8B 49 18        mov         rcx,qword ptr [rcx+18h]
+  0000000000000029: 48 85 C9           test        rcx,rcx
+  000000000000002C: 74 06              je          0000000000000034
+  000000000000002E: FF 15 00 00 00 00  call        qword ptr [__imp_free]
+  0000000000000034: 48 8B CE           mov         rcx,rsi
+  0000000000000037: E8 00 00 00 00     call        ??$conditional_aligned_new_auto@N$00@internal@Eigen@@YAPEAN_K@Z
+  000000000000003C: 48 89 43 18        mov         qword ptr [rbx+18h],rax
+  0000000000000040: 48 89 73 20        mov         qword ptr [rbx+20h],rsi
+  0000000000000044: 48 39 7B 30        cmp         qword ptr [rbx+30h],rdi
+  0000000000000048: 74 1B              je          0000000000000065
+  000000000000004A: 48 8B 4B 28        mov         rcx,qword ptr [rbx+28h]
+  000000000000004E: 48 85 C9           test        rcx,rcx
+  0000000000000051: 74 06              je          0000000000000059
+  0000000000000053: FF 15 00 00 00 00  call        qword ptr [__imp_free]
+  0000000000000059: 48 8B CF           mov         rcx,rdi
+  000000000000005C: E8 00 00 00 00     call        ??$conditional_aligned_new_auto@H$00@internal@Eigen@@YAPEAH_K@Z
+  0000000000000061: 48 89 43 28        mov         qword ptr [rbx+28h],rax
+  0000000000000065: 48 89 7B 30        mov         qword ptr [rbx+30h],rdi
+  0000000000000069: 48 39 7B 40        cmp         qword ptr [rbx+40h],rdi
+  000000000000006D: 74 1B              je          000000000000008A
+  000000000000006F: 48 8B 4B 38        mov         rcx,qword ptr [rbx+38h]
+  0000000000000073: 48 85 C9           test        rcx,rcx
+  0000000000000076: 74 06              je          000000000000007E
+  0000000000000078: FF 15 00 00 00 00  call        qword ptr [__imp_free]
+  000000000000007E: 48 8B CF           mov         rcx,rdi
+  0000000000000081: E8 00 00 00 00     call        ??$conditional_aligned_new_auto@H$00@internal@Eigen@@YAPEAH_K@Z
+  0000000000000086: 48 89 43 38        mov         qword ptr [rbx+38h],rax
+  000000000000008A: 48 89 7B 40        mov         qword ptr [rbx+40h],rdi
+  000000000000008E: 48 39 7B 50        cmp         qword ptr [rbx+50h],rdi
+  0000000000000092: 74 1B              je          00000000000000AF
+  0000000000000094: 48 8B 4B 48        mov         rcx,qword ptr [rbx+48h]
+  0000000000000098: 48 85 C9           test        rcx,rcx
+  000000000000009B: 74 06              je          00000000000000A3
+  000000000000009D: FF 15 00 00 00 00  call        qword ptr [__imp_free]
+  00000000000000A3: 48 8B CF           mov         rcx,rdi
+  00000000000000A6: E8 00 00 00 00     call        ??$conditional_aligned_new_auto@N$00@internal@Eigen@@YAPEAN_K@Z
+  00000000000000AB: 48 89 43 48        mov         qword ptr [rbx+48h],rax
+  00000000000000AF: 48 89 7B 50        mov         qword ptr [rbx+50h],rdi
+  00000000000000B3: 48 39 7B 60        cmp         qword ptr [rbx+60h],rdi
+  00000000000000B7: 74 1B              je          00000000000000D4
+  00000000000000B9: 48 8B 4B 58        mov         rcx,qword ptr [rbx+58h]
+  00000000000000BD: 48 85 C9           test        rcx,rcx
+  00000000000000C0: 74 06              je          00000000000000C8
+  00000000000000C2: FF 15 00 00 00 00  call        qword ptr [__imp_free]
+  00000000000000C8: 48 8B CF           mov         rcx,rdi
+  00000000000000CB: E8 00 00 00 00     call        ??$conditional_aligned_new_auto@N$00@internal@Eigen@@YAPEAN_K@Z
+  00000000000000D0: 48 89 43 58        mov         qword ptr [rbx+58h],rax
+  00000000000000D4: 48 89 7B 60        mov         qword ptr [rbx+60h],rdi
+  00000000000000D8: 48 39 7B 70        cmp         qword ptr [rbx+70h],rdi
+  00000000000000DC: 74 1B              je          00000000000000F9
+  00000000000000DE: 48 8B 4B 68        mov         rcx,qword ptr [rbx+68h]
+  00000000000000E2: 48 85 C9           test        rcx,rcx
+  00000000000000E5: 74 06              je          00000000000000ED
+  00000000000000E7: FF 15 00 00 00 00  call        qword ptr [__imp_free]
+  00000000000000ED: 48 8B CF           mov         rcx,rdi
+  00000000000000F0: E8 00 00 00 00     call        ??$conditional_aligned_new_auto@N$00@internal@Eigen@@YAPEAN_K@Z
+  00000000000000F5: 48 89 43 68        mov         qword ptr [rbx+68h],rax
+  00000000000000F9: 48 8B 74 24 38     mov         rsi,qword ptr [rsp+38h]
+  00000000000000FE: 48 89 7B 70        mov         qword ptr [rbx+70h],rdi
+  0000000000000102: 66 C7 43 78 00 00  mov         word ptr [rbx+78h],0
+  0000000000000108: 48 8B 5C 24 30     mov         rbx,qword ptr [rsp+30h]
+  000000000000010D: 48 83 C4 20        add         rsp,20h
+  0000000000000111: 5F                 pop         rdi
+  0000000000000112: C3                 ret
+

@@ -1,0 +1,48 @@
+??0?$ColPivHouseholderQR@V?$Matrix@N$0?0$0?0$00$0?0$0?0@Eigen@@H@Eigen@@QEAA@_J0@Z (public: __cdecl Eigen::ColPivHouseholderQR<class Eigen::Matrix<double,-1,-1,1,-1,-1>,int>::ColPivHouseholderQR<class Eigen::Matrix<double,-1,-1,1,-1,-1>,int>(__int64,__int64)):
+  0000000000000000: 48 89 5C 24 18     mov         qword ptr [rsp+18h],rbx
+  0000000000000005: 48 89 4C 24 08     mov         qword ptr [rsp+8],rcx
+  000000000000000A: 55                 push        rbp
+  000000000000000B: 56                 push        rsi
+  000000000000000C: 57                 push        rdi
+  000000000000000D: 48 83 EC 20        sub         rsp,20h
+  0000000000000011: 49 8B F8           mov         rdi,r8
+  0000000000000014: 48 8B F2           mov         rsi,rdx
+  0000000000000017: 48 8B D9           mov         rbx,rcx
+  000000000000001A: 48 89 4C 24 48     mov         qword ptr [rsp+48h],rcx
+  000000000000001F: 33 ED              xor         ebp,ebp
+  0000000000000021: 48 89 29           mov         qword ptr [rcx],rbp
+  0000000000000024: 48 89 69 08        mov         qword ptr [rcx+8],rbp
+  0000000000000028: 48 89 69 10        mov         qword ptr [rcx+10h],rbp
+  000000000000002C: 48 8B CA           mov         rcx,rdx
+  000000000000002F: 49 0F AF C8        imul        rcx,r8
+  0000000000000033: 48 85 C9           test        rcx,rcx
+  0000000000000036: 74 08              je          0000000000000040
+  0000000000000038: E8 00 00 00 00     call        ??$conditional_aligned_new_auto@N$00@internal@Eigen@@YAPEAN_K@Z
+  000000000000003D: 48 89 03           mov         qword ptr [rbx],rax
+  0000000000000040: 48 89 73 08        mov         qword ptr [rbx+8],rsi
+  0000000000000044: 48 89 7B 10        mov         qword ptr [rbx+10h],rdi
+  0000000000000048: 48 89 6B 18        mov         qword ptr [rbx+18h],rbp
+  000000000000004C: 48 89 6B 20        mov         qword ptr [rbx+20h],rbp
+  0000000000000050: 48 89 6B 28        mov         qword ptr [rbx+28h],rbp
+  0000000000000054: 48 89 6B 30        mov         qword ptr [rbx+30h],rbp
+  0000000000000058: 48 89 6B 38        mov         qword ptr [rbx+38h],rbp
+  000000000000005C: 48 89 6B 40        mov         qword ptr [rbx+40h],rbp
+  0000000000000060: 48 89 6B 48        mov         qword ptr [rbx+48h],rbp
+  0000000000000064: 48 89 6B 50        mov         qword ptr [rbx+50h],rbp
+  0000000000000068: 48 89 6B 58        mov         qword ptr [rbx+58h],rbp
+  000000000000006C: 48 89 6B 60        mov         qword ptr [rbx+60h],rbp
+  0000000000000070: 48 89 6B 68        mov         qword ptr [rbx+68h],rbp
+  0000000000000074: 48 89 6B 70        mov         qword ptr [rbx+70h],rbp
+  0000000000000078: 4C 8B C7           mov         r8,rdi
+  000000000000007B: 48 8B D6           mov         rdx,rsi
+  000000000000007E: 48 8B CB           mov         rcx,rbx
+  0000000000000081: E8 00 00 00 00     call        ?init@?$ColPivHouseholderQR@V?$Matrix@N$0?0$0?0$00$0?0$0?0@Eigen@@H@Eigen@@AEAAX_J0@Z
+  0000000000000086: 90                 nop
+  0000000000000087: 48 8B C3           mov         rax,rbx
+  000000000000008A: 48 8B 5C 24 50     mov         rbx,qword ptr [rsp+50h]
+  000000000000008F: 48 83 C4 20        add         rsp,20h
+  0000000000000093: 5F                 pop         rdi
+  0000000000000094: 5E                 pop         rsi
+  0000000000000095: 5D                 pop         rbp
+  0000000000000096: C3                 ret
+

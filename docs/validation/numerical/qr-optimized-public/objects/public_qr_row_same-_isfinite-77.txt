@@ -1,0 +1,8 @@
+??$isfinite@N@numext@Eigen@@YA_NAEBN@Z (bool __cdecl Eigen::numext::isfinite<double>(double const &)):
+  0000000000000000: 48 8B 01           mov         rax,qword ptr [rcx]
+  0000000000000003: 48 C1 E8 34        shr         rax,34h
+  0000000000000007: 25 FF 07 00 00     and         eax,7FFh
+  000000000000000C: 3D FF 07 00 00     cmp         eax,7FFh
+  0000000000000011: 0F 95 C0           setne       al
+  0000000000000014: C3                 ret
+

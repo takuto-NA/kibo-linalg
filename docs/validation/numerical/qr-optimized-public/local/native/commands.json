@@ -1,0 +1,54 @@
+[
+  {
+    "command": [
+      "cmake",
+      "--build",
+      "build/native",
+      "--config",
+      "Debug",
+      "--parallel",
+      "4"
+    ],
+    "exitCode": 0
+  },
+  {
+    "command": [
+      "ctest",
+      "--test-dir",
+      "build/native",
+      "-C",
+      "Debug",
+      "--output-on-failure",
+      "--no-tests=error",
+      "--output-log",
+      ".scratch\\qr-optimized-public\\native\\Debug-ctest.log"
+    ],
+    "exitCode": 8
+  },
+  {
+    "command": [
+      "cmake",
+      "--build",
+      "build/native",
+      "--config",
+      "Release",
+      "--parallel",
+      "4"
+    ],
+    "exitCode": 0
+  },
+  {
+    "command": [
+      "ctest",
+      "--test-dir",
+      "build/native",
+      "-C",
+      "Release",
+      "--output-on-failure",
+      "--no-tests=error",
+      "--output-log",
+      ".scratch\\qr-optimized-public\\native\\Release-ctest.log"
+    ],
+    "exitCode": 8
+  }
+]

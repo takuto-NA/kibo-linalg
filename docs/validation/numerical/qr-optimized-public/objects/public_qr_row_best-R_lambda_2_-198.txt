@@ -1,0 +1,49 @@
+??R<lambda_2>@?1??main@@YAHHPEAPEAD@Z@QEBA@XZ (public: __cdecl `int __cdecl main(int,char * *)'::`2'::<lambda_2>::operator()(void)const ):
+  0000000000000000: 4C 8B DC           mov         r11,rsp
+  0000000000000003: 48 81 EC F8 00 00  sub         rsp,0F8h
+                    00
+  000000000000000A: 48 8B 51 18        mov         rdx,qword ptr [rcx+18h]
+  000000000000000E: 4C 8B C9           mov         r9,rcx
+  0000000000000011: 48 8B 41 20        mov         rax,qword ptr [rcx+20h]
+  0000000000000015: 4C 8B 02           mov         r8,qword ptr [rdx]
+  0000000000000018: 0F 10 00           movups      xmm0,xmmword ptr [rax]
+  000000000000001B: 48 8B 42 08        mov         rax,qword ptr [rdx+8]
+  000000000000001F: 49 2B C0           sub         rax,r8
+  0000000000000022: 4C 89 44 24 30     mov         qword ptr [rsp+30h],r8
+  0000000000000027: 48 C1 F8 03        sar         rax,3
+  000000000000002B: 4C 8D 44 24 40     lea         r8,[rsp+40h]
+  0000000000000030: 48 89 44 24 38     mov         qword ptr [rsp+38h],rax
+  0000000000000035: 48 8B 41 08        mov         rax,qword ptr [rcx+8]
+  0000000000000039: 0F 29 44 24 50     movaps      xmmword ptr [rsp+50h],xmm0
+  000000000000003E: 48 8B 10           mov         rdx,qword ptr [rax]
+  0000000000000041: 48 8B 41 10        mov         rax,qword ptr [rcx+10h]
+  0000000000000045: 48 89 54 24 40     mov         qword ptr [rsp+40h],rdx
+  000000000000004A: 48 8D 54 24 60     lea         rdx,[rsp+60h]
+  000000000000004F: 48 8B 08           mov         rcx,qword ptr [rax]
+  0000000000000052: 49 8B 01           mov         rax,qword ptr [r9]
+  0000000000000055: 4C 8D 4C 24 30     lea         r9,[rsp+30h]
+  000000000000005A: 48 89 4C 24 48     mov         qword ptr [rsp+48h],rcx
+  000000000000005F: 49 8D 4B D8        lea         rcx,[r11-28h]
+  0000000000000063: 0F 10 40 18        movups      xmm0,xmmword ptr [rax+18h]
+  0000000000000067: 0F 10 48 28        movups      xmm1,xmmword ptr [rax+28h]
+  000000000000006B: 0F 29 44 24 60     movaps      xmmword ptr [rsp+60h],xmm0
+  0000000000000070: 0F 10 40 38        movups      xmm0,xmmword ptr [rax+38h]
+  0000000000000074: 0F 29 4C 24 70     movaps      xmmword ptr [rsp+70h],xmm1
+  0000000000000079: 0F 10 48 48        movups      xmm1,xmmword ptr [rax+48h]
+  000000000000007D: 41 0F 29 43 88     movaps      xmmword ptr [r11-78h],xmm0
+  0000000000000082: 0F 10 40 58        movups      xmm0,xmmword ptr [rax+58h]
+  0000000000000086: 41 0F 29 4B 98     movaps      xmmword ptr [r11-68h],xmm1
+  000000000000008B: 0F 10 48 68        movups      xmm1,xmmword ptr [rax+68h]
+  000000000000008F: 41 0F 29 43 A8     movaps      xmmword ptr [r11-58h],xmm0
+  0000000000000094: 0F 10 40 78        movups      xmm0,xmmword ptr [rax+78h]
+  0000000000000098: 48 8D 44 24 50     lea         rax,[rsp+50h]
+  000000000000009D: 41 0F 29 4B B8     movaps      xmmword ptr [r11-48h],xmm1
+  00000000000000A2: 41 0F 29 43 C8     movaps      xmmword ptr [r11-38h],xmm0
+  00000000000000A7: 48 89 44 24 20     mov         qword ptr [rsp+20h],rax
+  00000000000000AC: E8 00 00 00 00     call        ?solve_into@linalg@kibo@@YA?AUStatus@12@VQrFactorView@12@V?$span@$$CBN$0?0@std@@V?$span@N$0?0@6@V?$span@W4byte@std@@$0?0@6@@Z
+  00000000000000B1: 83 38 00           cmp         dword ptr [rax],0
+  00000000000000B4: 0F 94 C0           sete        al
+  00000000000000B7: 48 81 C4 F8 00 00  add         rsp,0F8h
+                    00
+  00000000000000BE: C3                 ret
+

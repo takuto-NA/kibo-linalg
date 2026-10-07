@@ -1,0 +1,49 @@
+??$finite@$$CBN@detail@linalg@kibo@@YA_NV?$MatrixView@$$CBN@12@@Z (bool __cdecl kibo::linalg::detail::finite<double const >(class kibo::linalg::MatrixView<double const >)):
+  0000000000000000: 48 89 5C 24 08     mov         qword ptr [rsp+8],rbx
+  0000000000000005: 48 89 6C 24 10     mov         qword ptr [rsp+10h],rbp
+  000000000000000A: 48 89 74 24 18     mov         qword ptr [rsp+18h],rsi
+  000000000000000F: 48 89 7C 24 20     mov         qword ptr [rsp+20h],rdi
+  0000000000000014: 41 54              push        r12
+  0000000000000016: 41 56              push        r14
+  0000000000000018: 41 57              push        r15
+  000000000000001A: 48 83 EC 20        sub         rsp,20h
+  000000000000001E: 4C 8B 61 10        mov         r12,qword ptr [rcx+10h]
+  0000000000000022: 45 33 F6           xor         r14d,r14d
+  0000000000000025: 4C 8B F9           mov         r15,rcx
+  0000000000000028: 4D 85 E4           test        r12,r12
+  000000000000002B: 74 44              je          0000000000000071
+  000000000000002D: 48 8B 69 18        mov         rbp,qword ptr [rcx+18h]
+  0000000000000031: 33 DB              xor         ebx,ebx
+  0000000000000033: 48 85 ED           test        rbp,rbp
+  0000000000000036: 74 31              je          0000000000000069
+  0000000000000038: 49 8B 77 28        mov         rsi,qword ptr [r15+28h]
+  000000000000003C: 49 8B CE           mov         rcx,r14
+  000000000000003F: 49 8B 07           mov         rax,qword ptr [r15]
+  0000000000000042: 48 C1 E6 03        shl         rsi,3
+  0000000000000046: 49 0F AF 4F 20     imul        rcx,qword ptr [r15+20h]
+  000000000000004B: 48 8D 3C C8        lea         rdi,[rax+rcx*8]
+  000000000000004F: 90                 nop
+  0000000000000050: F2 0F 10 07        movsd       xmm0,mmword ptr [rdi]
+  0000000000000054: E8 00 00 00 00     call        _dclass
+  0000000000000059: 66 85 C0           test        ax,ax
+  000000000000005C: 7F 34              jg          0000000000000092
+  000000000000005E: 48 FF C3           inc         rbx
+  0000000000000061: 48 03 FE           add         rdi,rsi
+  0000000000000064: 48 3B DD           cmp         rbx,rbp
+  0000000000000067: 72 E7              jb          0000000000000050
+  0000000000000069: 49 FF C6           inc         r14
+  000000000000006C: 4D 3B F4           cmp         r14,r12
+  000000000000006F: 72 C0              jb          0000000000000031
+  0000000000000071: B0 01              mov         al,1
+  0000000000000073: 48 8B 5C 24 40     mov         rbx,qword ptr [rsp+40h]
+  0000000000000078: 48 8B 6C 24 48     mov         rbp,qword ptr [rsp+48h]
+  000000000000007D: 48 8B 74 24 50     mov         rsi,qword ptr [rsp+50h]
+  0000000000000082: 48 8B 7C 24 58     mov         rdi,qword ptr [rsp+58h]
+  0000000000000087: 48 83 C4 20        add         rsp,20h
+  000000000000008B: 41 5F              pop         r15
+  000000000000008D: 41 5E              pop         r14
+  000000000000008F: 41 5C              pop         r12
+  0000000000000091: C3                 ret
+  0000000000000092: 32 C0              xor         al,al
+  0000000000000094: EB DD              jmp         0000000000000073
+

@@ -1,0 +1,195 @@
+{
+  "sourceCommit": "3c50f13a0c966b105a4301a7bae147c9c8d5e01b",
+  "publicSourceHashes": {
+    "include/kibo/detail/qr_kernels.hpp": "5eca6c4cc4ced7437e0994928f7225972604a298fe395b707cd34086aae48319",
+    "include/kibo/detail/row_kernels.hpp": "48e64918988c5f2eca8197ce61c5e77b0d7ea0494ea76d564a6f706cf1e746d9",
+    "include/kibo/dynamic_matrix.hpp": "535afd0c96607a65e13711bb0ea94a94d3791eb170fa54db5d1e220e12b103e6",
+    "include/kibo/linalg.hpp": "f95f2c6fb82d430f307f07ceb4794091875b14a5838312714406cb8486ccd3cd",
+    "include/kibo/llt.hpp": "c6996df1c9ab0bb3514e588c2acb2af1f11bb1ba066950d8fd7af46defc8569a",
+    "include/kibo/qr.hpp": "1cf8b714e5541e9a95131038c55a2ed839082b92e4582f8a48293c8440f98b89",
+    "include/kibo/qr_refined.hpp": "9689fb7b71a833c1152f96f1f9f53646d94777984fe39cc277148f922e03d17e",
+    "include/kibo/workspace.hpp": "e74b13bb57d83bb0ad7b1c8f271c40db825a2d1b380f0224639a9d94ee8c48d0",
+    "tests/allocation_tests.cpp": "2c376c7feff0b53c9e9cea74b7d241a29c9257d0a84dcf07e6e7d912c5964328",
+    "tests/controlled_fixture.hpp": "eabb9c60f1659b981c52e704c3e9a53cdaef50349baccda2ec6fcc5774f6c142",
+    "tests/core_tests.cpp": "d421340dee457e1630b7c08d92b0085b1de902cd578ed9d682361af418bc4567",
+    "tests/dynamic_tests.cpp": "9cada0e439488a56e6024786cf67f2eb365dfa82ade10d97d2b1cae7bc14c633",
+    "tests/fixtures/oracles.hpp": "2a5ebc209fc5ab0d0a9330f3499e34ec6421ea792a4909f4aef3862a36838d1d",
+    "tests/installed_consumer/CMakeLists.txt": "e5d2cf092cd1c8162f6652961ce6587601b9fd26907d33800127b3ec2186b372",
+    "tests/installed_consumer/main.cpp": "f937c743b531fc4f9e625229fb06afbc02eb48a5676b8bce5eb33dc29b0ec0af",
+    "tests/llt_large_tests.cpp": "16feb907cb53c8ce696e93d976d8ffd3ea826a8df187b778a3ec465ffd2b7e5a",
+    "tests/llt_tests.cpp": "2704cdf23e63162d6d59075579e8b47ce5fe74b85c44d7829b2785a5402f6a82",
+    "tests/matrix_view_tests.cpp": "4896633c63c869287acdae6accf5ff293dceb5a9ffd8614b9df565b39d5c0f8d",
+    "tests/no_runtime_tests.cpp": "17ce150fa2ada87c2dbb43d72d96810ba50db0ac316451bd865181d138a310a8",
+    "tests/numerical_tests.cpp": "95313e903153b5887b39dfd1bf20515a72cc09f032c0bce2e57c54e881d196f6",
+    "tests/qr_refined_tests.cpp": "d7e0e7f8b0967eaf0db3069e3da24cf31fe3b07c0555488528e636e9c97e0c74",
+    "tests/qr_tests.cpp": "a04c3093395df176c1c22501ed4a3210d522a3c4986e45899b741a82d1a40a3f",
+    "tests/test_check.hpp": "8e2fa1cdda7bd43126d6d96729ec5770bbacc59a3e1316c399a617f6c71543ea",
+    "wasm/adapter.cpp": "df06d789904eb45b14663c9ca37d4dca53cc827e92ef761edc7e39628b74b7bf",
+    "wasm/browser-test.mjs": "9bb5dc5c532ee7b8004092211fb2e51fd51b96d4b0aff53deca81d6fd6b6fbe9",
+    "wasm/facade.mjs": "2d78ac20496e50dcdab67ead9fbe466a7a57fe95e2ffbfe1a189dedbc393d40a",
+    "wasm/node-test.mjs": "2197727d42f08aa298e3544d5d8f12d90d3672b90de231cb4e5f6f2f72fe75df",
+    "wasm/test-common.mjs": "19613269ca74964fef783807bde2ea515dcb6867d6591f8344c6e6fb13094826",
+    "examples/basic.cpp": "2f97549b149be1a95349edce2a1939f852237a8cb83a1b8f252316dd4dc87097",
+    "examples/common_2x2.hpp": "a64eba6fc975ebcbac53198b8e97bf271aeca6141a7353a453c7b70722ba36d5",
+    "examples/common_2x2_host.cpp": "1011a8c29a6ddf2a8bad9c180542095edd47fbf036484102af7a71ccfebaf283",
+    "examples/esp32/CMakeLists.txt": "d4e0efbe7414f636e4e1026f4b914a09e8db3df2492a495a38bb88a5aecce1a5",
+    "examples/esp32/main/CMakeLists.txt": "75c5c71ed3452dbdb81c1bff87a1d59c2a18d32640d33b4b56fcf9c91c1a805b",
+    "examples/esp32/main/main.cpp": "195b70ae2e66918d02f8a21db90bbe9205f5609ec751714013d75c5989e0687d",
+    "examples/migration.cpp": "6a2136934992091711ee2e47fc71017f108f18175c64a585a5475ede09ff1e11",
+    "CMakeLists.txt": "e179f68c9fa07365ba9709c1062f371b4359c15d45262a065c30b68191123538",
+    "tools/toolchains.lock.json": "d51b14c4691498e66fd0c67d8e4ab9f4814e2dcba21b1aeb1442bad5559480c8",
+    "tools/wasm-build.sh": "88420b763926bc94676499ee934fd5a717aee534b2c5868b0ce2d3df331a803c",
+    "tools/diagnostics/qr-accuracy/audit.cpp": "f3cb1b3c36bf47906e6f9f1e0704ee16bb3b042f6ad7d088a3099351d2b09945",
+    "tools/diagnostics/qr-accuracy/oracle.py": "0f666f487bd2edc75011419c5c54ca6c030a21199e7077419b3797386cc4c509",
+    "tools/diagnostics/qr-accuracy/CMakeLists.txt": "d79361d9455cd468cacde34c3da75c290079ebc7d50027d729567a731b74bb2a",
+    "tools/diagnostics/qr-accuracy/refine.hpp": "178ece560a42c8b1f1eb1285a904e049de7536da3d7fdbd982f28a06141758d3",
+    "tools/diagnostics/solver-locality/affinity.hpp": "ec5ad8f5e25b80348925b40e6fa9586fe94e2d98f86aafe1f291875ff6c3e0d5",
+    "benchmarks/lm_reference.cpp": "402e32bc36fa7aed6f63ceaadb934a6cd54db5290010ea370d6f8c90968a282c"
+  },
+  "publicRecords": 714,
+  "checks": [
+    {
+      "path": ".scratch\\qr-optimized-public\\windows.jsonl",
+      "records": 102,
+      "allPublicGatesPass": true,
+      "maxOracleForward": 6.854591559955283e-17,
+      "maxOptimality": 3.1800186957167324e-17
+    },
+    {
+      "path": ".scratch\\qr-optimized-public\\linux-clang\\audit-OFF.jsonl",
+      "records": 102,
+      "allPublicGatesPass": true,
+      "maxOracleForward": 6.854591559955283e-17,
+      "maxOptimality": 3.1800186957167324e-17
+    },
+    {
+      "path": ".scratch\\qr-optimized-public\\linux-clang\\audit-ON.jsonl",
+      "records": 102,
+      "allPublicGatesPass": true,
+      "maxOracleForward": 9.090815762710145e-17,
+      "maxOptimality": 2.2464366484993444e-17
+    },
+    {
+      "path": ".scratch\\qr-optimized-public\\linux-clang-sanitized\\audit-OFF.jsonl",
+      "records": 102,
+      "allPublicGatesPass": true,
+      "maxOracleForward": 6.854591559955283e-17,
+      "maxOptimality": 3.1800186957167324e-17
+    },
+    {
+      "path": ".scratch\\qr-optimized-public\\linux-clang-sanitized\\audit-ON.jsonl",
+      "records": 102,
+      "allPublicGatesPass": true,
+      "maxOracleForward": 9.090815762710145e-17,
+      "maxOptimality": 2.2464366484993444e-17
+    },
+    {
+      "path": ".scratch\\qr-optimized-public\\linux-gcc\\audit-OFF.jsonl",
+      "records": 102,
+      "allPublicGatesPass": true,
+      "maxOracleForward": 6.854591559955283e-17,
+      "maxOptimality": 3.1800186957167324e-17
+    },
+    {
+      "path": ".scratch\\qr-optimized-public\\linux-gcc\\audit-ON.jsonl",
+      "records": 102,
+      "allPublicGatesPass": true,
+      "maxOracleForward": 9.090815762710145e-17,
+      "maxOptimality": 2.2464366484993444e-17
+    }
+  ],
+  "ctestAudit": [
+    {
+      "file": "linux-clang/Debug-ctest.log",
+      "onlyUnchangedEigenChecksFail": true,
+      "failureCount": 16,
+      "nativeReleaseAllocationSkipped": false
+    },
+    {
+      "file": "linux-clang/Release-ctest.log",
+      "onlyUnchangedEigenChecksFail": true,
+      "failureCount": 16,
+      "nativeReleaseAllocationSkipped": false
+    },
+    {
+      "file": "linux-clang-sanitized/Debug-ctest.log",
+      "onlyUnchangedEigenChecksFail": true,
+      "failureCount": 16,
+      "nativeReleaseAllocationSkipped": false
+    },
+    {
+      "file": "linux-clang-sanitized/Release-ctest.log",
+      "onlyUnchangedEigenChecksFail": true,
+      "failureCount": 16,
+      "nativeReleaseAllocationSkipped": false
+    },
+    {
+      "file": "linux-gcc/Debug-ctest.log",
+      "onlyUnchangedEigenChecksFail": true,
+      "failureCount": 16,
+      "nativeReleaseAllocationSkipped": false
+    },
+    {
+      "file": "linux-gcc/Release-ctest.log",
+      "onlyUnchangedEigenChecksFail": true,
+      "failureCount": 16,
+      "nativeReleaseAllocationSkipped": false
+    },
+    {
+      "file": "native/Debug-ctest.log",
+      "onlyUnchangedEigenChecksFail": true,
+      "failureCount": 16,
+      "nativeReleaseAllocationSkipped": false
+    },
+    {
+      "file": "native/Release-ctest.log",
+      "onlyUnchangedEigenChecksFail": true,
+      "failureCount": 16,
+      "nativeReleaseAllocationSkipped": true
+    }
+  ],
+  "builds": {
+    "gcc-OFF": {
+      "binarySha256": "7b7eec02ada9767ad4064de0b4ff5162c6cfdb9baa9e72f60dcac0865d418a71"
+    },
+    "gcc-ON": {
+      "binarySha256": "71b501897bd84b79e459e2131ae6e3e170062665ca906e96a54bf2368feecb3a"
+    },
+    "clang-OFF": {
+      "binarySha256": "ce7647ee4dbcfae94472cd75b81039231d788e970d34633197bc9ab346f121e6"
+    },
+    "clang-ON": {
+      "binarySha256": "2e92fe406437517374bf973cbcbe75f337d0bc773407ca8f7a4d7114b415f853"
+    },
+    "clang-sanitized-OFF": {
+      "binarySha256": "62f0b38be188ebb2c9774913886e6f35484d759807267d3383d892b05591c37c"
+    },
+    "clang-sanitized-ON": {
+      "binarySha256": "0363f7cdf7a311a5b0dd46ced69e835c58937d80c0a8611cee413b1fda5a77d1"
+    },
+    "windows-audit": {
+      "binarySha256": "0f62fe18ffd1330bac4135ac343e464b39504b81181dcf349298bb01fede4715"
+    }
+  },
+  "allKiboPrecisionAndContractGatesPass": true,
+  "wholeCTestGreen": false,
+  "existingEigenChecksPreserved": true,
+  "pendingEigenGateDecision": true,
+  "physicalEspExecution": false,
+  "espCrossCompile": {
+    "esp32s3": {
+      "kibo_2x2.elf": "a0ce618d47379667434de187eba4c5405b1c53cfb515fd8f968dd5b19dcc3ec0",
+      "kibo_2x2.bin": "1b661037241fdee3dc3a263b54199e9e5df842378214e89107ad05e295ac998b"
+    },
+    "esp32c3": {
+      "kibo_2x2.elf": "2c98ee4a18d33bdb4fd4a49e57b46f4c9eb61e0b1398d60bde8f19d6db2ff0e7",
+      "kibo_2x2.bin": "a99e868707af3d94ff707e8df16e7d57abe03090fed27d11d88e2fe4db6d65a3"
+    }
+  },
+  "wasm": {
+    "kibo.mjs": "b6d30171badc27092c0c29a0c1675ff1958ca462b48b76ba7b9c94c72063b4ab",
+    "kibo.wasm": "e7d7c40f2591cf8e40087486a3f0498bdc2db60e7ad369166d7a759d77c57b84"
+  },
+  "formalPerformanceAcceptance": false,
+  "limitation": "Performance proof is recorded separately; ESP hardware unavailable."
+}
