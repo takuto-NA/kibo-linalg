@@ -1,0 +1,25 @@
+Microsoft (R) COFF/PE Dumper Version 14.44.35222.0
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+
+Dump of file build\assembly-gap\public_assembly.dir\Release\public_assembly.obj
+
+File Type: COFF OBJECT
+
+public_finite:
+  0000000000000000: 0F 54 05 00 00 00  andps       xmm0,xmmword ptr [__xmm@7fffffffffffffff7fffffffffffffff]
+                    00
+  0000000000000007: F2 0F 10 0D 00 00  movsd       xmm1,mmword ptr [__real@7fefffffffffffff]
+                    00 00
+  000000000000000F: 66 0F 2F C8        comisd      xmm1,xmm0
+  0000000000000013: 0F 93 C0           setae       al
+  0000000000000016: C3                 ret
+
+  Summary
+
+           4 .bss
+          38 .chks64
+          BC .debug$S
+         12F .drectve
+          18 .rdata
+          17 .text$mn

@@ -1,0 +1,1610 @@
+{
+  "startedUtc": "2026-10-07T06:31:53.370802+00:00",
+  "sourceCommit": "3c7d2c8b54701e1e5f826bfb171d5a442e14d10a",
+  "baselineCommit": "c3c10dfd60c0b666ec59dec9e8855dd0d3f0b464",
+  "sourceSha256": {
+    "include\\kibo\\dynamic_matrix.hpp": "535afd0c96607a65e13711bb0ea94a94d3791eb170fa54db5d1e220e12b103e6",
+    "include\\kibo\\linalg.hpp": "52bf606a0f6ac2e21a83878e7b029b4c65935e25f5fc90387b1cf2ef74572634",
+    "include\\kibo\\llt.hpp": "f89ac18a8ce4de7ad227a0d3a871e33898595a7885df716cf5f6d45ae7a0aa7e",
+    "include\\kibo\\qr.hpp": "04b1efdb4e2869ddc75ad6075874a8ab15d29051e79a24a19765fad1b50193ae",
+    "include\\kibo\\workspace.hpp": "e74b13bb57d83bb0ad7b1c8f271c40db825a2d1b380f0224639a9d94ee8c48d0",
+    "include\\kibo\\detail\\row_kernels.hpp": "b477534e3ef8af7a83176c29a20c2daf9bbca5d013caa55b2d6ab691471c0f4f",
+    "tests\\allocation_tests.cpp": "5e6f70369e8caf3cbec8a4fe9dc7110760fb6723017b37f2f72f02a7888df2d1",
+    "tests\\controlled_fixture.hpp": "eabb9c60f1659b981c52e704c3e9a53cdaef50349baccda2ec6fcc5774f6c142",
+    "tests\\core_tests.cpp": "d421340dee457e1630b7c08d92b0085b1de902cd578ed9d682361af418bc4567",
+    "tests\\dynamic_tests.cpp": "9cada0e439488a56e6024786cf67f2eb365dfa82ade10d97d2b1cae7bc14c633",
+    "tests\\llt_tests.cpp": "ca9082de9123c851582d9a34fb45468454e1fccefca115d3c981765aedeed286",
+    "tests\\no_runtime_tests.cpp": "00688119ad16325e4c0c3b27d7b9230ac04222f0edb8e0f3362f597efe4b1697",
+    "tests\\numerical_tests.cpp": "9104403a952679feba40d496e6e14d47d4837b056cfca21af0242a40c42df044",
+    "tests\\qr_tests.cpp": "a01f2b6349f4ee8b829fb98629e033eba360704bc006dfa46870597c9df86830",
+    "tests\\test_check.hpp": "8e2fa1cdda7bd43126d6d96729ec5770bbacc59a3e1316c399a617f6c71543ea",
+    "tests\\fixtures\\oracles.hpp": "2a5ebc209fc5ab0d0a9330f3499e34ec6421ea792a4909f4aef3862a36838d1d",
+    "tests\\fixtures\\oracles.json": "e605d0b03688cfad396539d34f4974f35758949fdcb8873bf10810d89c065c88",
+    "tests\\fixtures\\oracles.sha256": "68d4b2d0e6b7e73dc3b63f11e07c058000987a209f1b3aa74de3cec6fa078afa",
+    "tests\\installed_consumer\\CMakeLists.txt": "e5d2cf092cd1c8162f6652961ce6587601b9fd26907d33800127b3ec2186b372",
+    "tests\\installed_consumer\\main.cpp": "70fdc25a0ddadec4ef252d2418cacdd9820b91b034ac824006c0413d4aeb36c4",
+    "tools\\diagnostics\\assembly-gap\\CMakeLists.txt": "1e3a56b0afd4d700b225cd2a7afbe5a9ed72d4d87adf833457f5b23db6c6cc25",
+    "tools\\diagnostics\\assembly-gap\\collect.py": "0e666cd349ed3bc25d20b7954f042b0397ede353360774f7e37be64a171f7cb0",
+    "tools\\diagnostics\\assembly-gap\\kernels.cpp": "88fb416af5f0df8ec321d86ca5f316dfec457dbbc3eadc17a511497dfe8e9996",
+    "tools\\diagnostics\\assembly-gap\\micro.cpp": "b4571c8b3d7d38ffcb9a10177f6dc06204af29cb0d0c4573ff7ac644118949c0",
+    "tools\\diagnostics\\assembly-gap\\phases.cpp": "b433bf5cb61ab041b5971f062cc197eab40f41ce3c57fbe6856bc729d77e9315",
+    "tools\\diagnostics\\assembly-gap\\prepare.py": "b684c3f56df45aeacd07890d6e8f7dce618d58c42cf50611c37f20b1169e1d7b",
+    "tools\\diagnostics\\assembly-gap\\public_assembly.cpp": "ec9e27289766ca52d75472bb017b6b5d5af465a9a25ab2d8e2a397746fc67e7b",
+    "tools\\diagnostics\\assembly-gap\\public_compare.py": "3c083db23840766296ec58c5cc13ebfe4b8f4345f34201535a133b7281705c52",
+    "tools\\diagnostics\\solver-locality\\affinity.hpp": "ec5ad8f5e25b80348925b40e6fa9586fe94e2d98f86aafe1f291875ff6c3e0d5",
+    "tools\\diagnostics\\solver-locality\\CMakeLists.txt": "0d76f249af7df8a17bb7b19360e502d8819e438845010da707cb51bf4b7ba7d2",
+    "tools\\diagnostics\\solver-locality\\collect.py": "c0cbbcd42dfb604c2851d323f183723955f249f644b1ef438ce05e73dea9088a",
+    "tools\\diagnostics\\solver-locality\\probe.cpp": "b781c8c312da18a20fa8afc7f483960ad2ebd322b79403eb90770f9fb7599368",
+    "tools\\diagnostics\\solver-locality\\README.md": "2506c431298f727922600029e6ad570adb0a3957b543517905a10f5fddeedc49",
+    "tools\\diagnostics\\solver-locality\\retry.py": "2391ac1cd275da88bb236780fe5655d26c0246e763f07d1956f0572d58c8dc35",
+    "tools\\diagnostics\\solver-locality\\summarize.py": "00ee6815902f8c339ff00fcd3b9b3eb0b5a68d832fdb79c2d77b37c98b52a8cb"
+  },
+  "binarySha256": {
+    "before_actual": "23634ff640057488d62d769f86fedb16bc8ba64c97ad22842289f83587f937c9",
+    "public_solver": "cd8ccd2db99da9b3f4cba32671d78f7e3bb6bfa698830515c82ac5e2b9612765"
+  },
+  "records": [
+    {
+      "n": 128,
+      "process": 2,
+      "target": "before_actual",
+      "command": [
+        "C:\\Users\\owner\\Documents\\git\\kibo-linalg\\build\\assembly-gap\\Release\\before_actual.exe",
+        "2",
+        "15",
+        "128",
+        "512"
+      ],
+      "file": "before_actual-n128-p2.jsonl",
+      "valid": true,
+      "summary": {
+        "kind": "summary",
+        "process": 2,
+        "solver": "normal-LLT",
+        "m": 512,
+        "n": 128,
+        "coreSeconds": 7.0687109375e-05,
+        "eigenSeconds": 4.734453125e-05,
+        "ratio": 1.4930364185409484,
+        "accuracyPassed": true,
+        "inputHash": "7514270b0afecb8b",
+        "packetWidth": 2,
+        "coreSIMD": 1,
+        "coreType": 64
+      },
+      "exitCode": 1
+    },
+    {
+      "n": 33,
+      "process": 0,
+      "target": "before_actual",
+      "command": [
+        "C:\\Users\\owner\\Documents\\git\\kibo-linalg\\build\\assembly-gap\\Release\\before_actual.exe",
+        "0",
+        "15",
+        "33",
+        "132"
+      ],
+      "file": "before_actual-n33-p0.jsonl",
+      "valid": true,
+      "summary": {
+        "kind": "summary",
+        "process": 0,
+        "solver": "normal-LLT",
+        "m": 132,
+        "n": 33,
+        "coreSeconds": 6.16390380859375e-06,
+        "eigenSeconds": 3.25484619140625e-06,
+        "ratio": 1.8937619310148255,
+        "accuracyPassed": true,
+        "inputHash": "9325a616cc1a7a4b",
+        "packetWidth": 2,
+        "coreSIMD": 1,
+        "coreType": 64
+      },
+      "exitCode": 1
+    },
+    {
+      "n": 64,
+      "process": 0,
+      "target": "public_solver",
+      "command": [
+        "C:\\Users\\owner\\Documents\\git\\kibo-linalg\\build\\assembly-gap\\Release\\public_solver.exe",
+        "0",
+        "15",
+        "64",
+        "256"
+      ],
+      "file": "public_solver-n64-p0.jsonl",
+      "valid": true,
+      "summary": {
+        "kind": "summary",
+        "process": 0,
+        "solver": "normal-LLT",
+        "m": 256,
+        "n": 64,
+        "coreSeconds": 1.23995361328125e-05,
+        "eigenSeconds": 1.04043212890625e-05,
+        "ratio": 1.1917678999251458,
+        "accuracyPassed": true,
+        "inputHash": "8c97540904a1d4e8",
+        "packetWidth": 2,
+        "coreSIMD": 1,
+        "coreType": 64
+      },
+      "exitCode": 1
+    },
+    {
+      "n": 32,
+      "process": 1,
+      "target": "before_actual",
+      "command": [
+        "C:\\Users\\owner\\Documents\\git\\kibo-linalg\\build\\assembly-gap\\Release\\before_actual.exe",
+        "1",
+        "30",
+        "32",
+        "128"
+      ],
+      "file": "before_actual-n32-p1.jsonl",
+      "valid": true,
+      "summary": {
+        "kind": "summary",
+        "process": 1,
+        "solver": "normal-LLT",
+        "m": 128,
+        "n": 32,
+        "coreSeconds": 5.33070068359375e-06,
+        "eigenSeconds": 2.8397918701171877e-06,
+        "ratio": 1.8771448498349887,
+        "accuracyPassed": true,
+        "inputHash": "e720c56d78361989",
+        "packetWidth": 2,
+        "coreSIMD": 1,
+        "coreType": 64
+      },
+      "exitCode": 1
+    },
+    {
+      "n": 33,
+      "process": 1,
+      "target": "public_solver",
+      "command": [
+        "C:\\Users\\owner\\Documents\\git\\kibo-linalg\\build\\assembly-gap\\Release\\public_solver.exe",
+        "1",
+        "15",
+        "33",
+        "132"
+      ],
+      "file": "public_solver-n33-p1.jsonl",
+      "valid": true,
+      "summary": {
+        "kind": "summary",
+        "process": 1,
+        "solver": "normal-LLT",
+        "m": 132,
+        "n": 33,
+        "coreSeconds": 3.00562744140625e-06,
+        "eigenSeconds": 3.31898193359375e-06,
+        "ratio": 0.9055871654449761,
+        "accuracyPassed": true,
+        "inputHash": "9325a616cc1a7a4b",
+        "packetWidth": 2,
+        "coreSIMD": 1,
+        "coreType": 64
+      },
+      "exitCode": 0
+    },
+    {
+      "n": 33,
+      "process": 0,
+      "target": "public_solver",
+      "command": [
+        "C:\\Users\\owner\\Documents\\git\\kibo-linalg\\build\\assembly-gap\\Release\\public_solver.exe",
+        "0",
+        "15",
+        "33",
+        "132"
+      ],
+      "file": "public_solver-n33-p0.jsonl",
+      "valid": true,
+      "summary": {
+        "kind": "summary",
+        "process": 0,
+        "solver": "normal-LLT",
+        "m": 132,
+        "n": 33,
+        "coreSeconds": 3.030609130859375e-06,
+        "eigenSeconds": 3.275347900390625e-06,
+        "ratio": 0.9252785423184934,
+        "accuracyPassed": true,
+        "inputHash": "9325a616cc1a7a4b",
+        "packetWidth": 2,
+        "coreSIMD": 1,
+        "coreType": 64
+      },
+      "exitCode": 0
+    },
+    {
+      "n": 512,
+      "process": 0,
+      "target": "before_actual",
+      "command": [
+        "C:\\Users\\owner\\Documents\\git\\kibo-linalg\\build\\assembly-gap\\Release\\before_actual.exe",
+        "0",
+        "15",
+        "512",
+        "2048"
+      ],
+      "file": "before_actual-n512-p0.jsonl",
+      "valid": true,
+      "summary": {
+        "kind": "summary",
+        "process": 0,
+        "solver": "normal-LLT",
+        "m": 2048,
+        "n": 512,
+        "coreSeconds": 0.0024974625,
+        "eigenSeconds": 0.0023028625,
+        "ratio": 1.0845035255035853,
+        "accuracyPassed": true,
+        "inputHash": "699d299a072d5a9e",
+        "packetWidth": 2,
+        "coreSIMD": 1,
+        "coreType": 64
+      },
+      "exitCode": 0
+    },
+    {
+      "n": 512,
+      "process": 1,
+      "target": "before_actual",
+      "command": [
+        "C:\\Users\\owner\\Documents\\git\\kibo-linalg\\build\\assembly-gap\\Release\\before_actual.exe",
+        "1",
+        "15",
+        "512",
+        "2048"
+      ],
+      "file": "before_actual-n512-p1.jsonl",
+      "valid": true,
+      "summary": {
+        "kind": "summary",
+        "process": 1,
+        "solver": "normal-LLT",
+        "m": 2048,
+        "n": 512,
+        "coreSeconds": 0.0025093875,
+        "eigenSeconds": 0.0023108625,
+        "ratio": 1.0859094818493094,
+        "accuracyPassed": true,
+        "inputHash": "699d299a072d5a9e",
+        "packetWidth": 2,
+        "coreSIMD": 1,
+        "coreType": 64
+      },
+      "exitCode": 0
+    },
+    {
+      "n": 64,
+      "process": 1,
+      "target": "before_actual",
+      "command": [
+        "C:\\Users\\owner\\Documents\\git\\kibo-linalg\\build\\assembly-gap\\Release\\before_actual.exe",
+        "1",
+        "15",
+        "64",
+        "256"
+      ],
+      "file": "before_actual-n64-p1.jsonl",
+      "valid": true,
+      "summary": {
+        "kind": "summary",
+        "process": 1,
+        "solver": "normal-LLT",
+        "m": 256,
+        "n": 64,
+        "coreSeconds": 1.41822509765625e-05,
+        "eigenSeconds": 1.07670654296875e-05,
+        "ratio": 1.31718814835642,
+        "accuracyPassed": true,
+        "inputHash": "8c97540904a1d4e8",
+        "packetWidth": 2,
+        "coreSIMD": 1,
+        "coreType": 64
+      },
+      "exitCode": 1
+    },
+    {
+      "n": 8,
+      "process": 1,
+      "target": "public_solver",
+      "command": [
+        "C:\\Users\\owner\\Documents\\git\\kibo-linalg\\build\\assembly-gap\\Release\\public_solver.exe",
+        "1",
+        "15",
+        "8",
+        "32"
+      ],
+      "file": "public_solver-n8-p1.jsonl",
+      "valid": true,
+      "summary": {
+        "kind": "summary",
+        "process": 1,
+        "solver": "normal-LLT",
+        "m": 32,
+        "n": 8,
+        "coreSeconds": 3.2529754638671874e-07,
+        "eigenSeconds": 3.33697509765625e-07,
+        "ratio": 0.9748276114352606,
+        "accuracyPassed": true,
+        "inputHash": "86ca44337887813a",
+        "packetWidth": 2,
+        "coreSIMD": 1,
+        "coreType": 64
+      },
+      "exitCode": 0
+    },
+    {
+      "n": 32,
+      "process": 4,
+      "target": "public_solver",
+      "command": [
+        "C:\\Users\\owner\\Documents\\git\\kibo-linalg\\build\\assembly-gap\\Release\\public_solver.exe",
+        "4",
+        "30",
+        "32",
+        "128"
+      ],
+      "file": "public_solver-n32-p4.jsonl",
+      "valid": true,
+      "summary": {
+        "kind": "summary",
+        "process": 4,
+        "solver": "normal-LLT",
+        "m": 128,
+        "n": 32,
+        "coreSeconds": 2.7754913330078128e-06,
+        "eigenSeconds": 2.8348388671875e-06,
+        "ratio": 0.9790649356241657,
+        "accuracyPassed": true,
+        "inputHash": "e720c56d78361989",
+        "packetWidth": 2,
+        "coreSIMD": 1,
+        "coreType": 64
+      },
+      "exitCode": 0
+    },
+    {
+      "n": 32,
+      "process": 0,
+      "target": "public_solver",
+      "command": [
+        "C:\\Users\\owner\\Documents\\git\\kibo-linalg\\build\\assembly-gap\\Release\\public_solver.exe",
+        "0",
+        "30",
+        "32",
+        "128"
+      ],
+      "file": "public_solver-n32-p0.jsonl",
+      "valid": true,
+      "summary": {
+        "kind": "summary",
+        "process": 0,
+        "solver": "normal-LLT",
+        "m": 128,
+        "n": 32,
+        "coreSeconds": 2.7745391845703125e-06,
+        "eigenSeconds": 2.858349609375e-06,
+        "ratio": 0.9706787355438254,
+        "accuracyPassed": true,
+        "inputHash": "e720c56d78361989",
+        "packetWidth": 2,
+        "coreSIMD": 1,
+        "coreType": 64
+      },
+      "exitCode": 0
+    },
+    {
+      "n": 64,
+      "process": 2,
+      "target": "before_actual",
+      "command": [
+        "C:\\Users\\owner\\Documents\\git\\kibo-linalg\\build\\assembly-gap\\Release\\before_actual.exe",
+        "2",
+        "15",
+        "64",
+        "256"
+      ],
+      "file": "before_actual-n64-p2.jsonl",
+      "valid": true,
+      "summary": {
+        "kind": "summary",
+        "process": 2,
+        "solver": "normal-LLT",
+        "m": 256,
+        "n": 64,
+        "coreSeconds": 1.40201904296875e-05,
+        "eigenSeconds": 1.03486328125e-05,
+        "ratio": 1.3547867320939888,
+        "accuracyPassed": true,
+        "inputHash": "8c97540904a1d4e8",
+        "packetWidth": 2,
+        "coreSIMD": 1,
+        "coreType": 64
+      },
+      "exitCode": 1
+    },
+    {
+      "n": 128,
+      "process": 2,
+      "target": "public_solver",
+      "command": [
+        "C:\\Users\\owner\\Documents\\git\\kibo-linalg\\build\\assembly-gap\\Release\\public_solver.exe",
+        "2",
+        "15",
+        "128",
+        "512"
+      ],
+      "file": "public_solver-n128-p2.jsonl",
+      "valid": true,
+      "summary": {
+        "kind": "summary",
+        "process": 2,
+        "solver": "normal-LLT",
+        "m": 512,
+        "n": 128,
+        "coreSeconds": 6.53130859375e-05,
+        "eigenSeconds": 4.71248046875e-05,
+        "ratio": 1.3859598224462137,
+        "accuracyPassed": true,
+        "inputHash": "7514270b0afecb8b",
+        "packetWidth": 2,
+        "coreSIMD": 1,
+        "coreType": 64
+      },
+      "exitCode": 1
+    },
+    {
+      "n": 2,
+      "process": 2,
+      "target": "public_solver",
+      "command": [
+        "C:\\Users\\owner\\Documents\\git\\kibo-linalg\\build\\assembly-gap\\Release\\public_solver.exe",
+        "2",
+        "15",
+        "2",
+        "8"
+      ],
+      "file": "public_solver-n2-p2.jsonl",
+      "valid": true,
+      "summary": {
+        "kind": "summary",
+        "process": 2,
+        "solver": "normal-LLT",
+        "m": 8,
+        "n": 2,
+        "coreSeconds": 4.433908462524414e-08,
+        "eigenSeconds": 4.975986480712891e-08,
+        "ratio": 0.8910611955459301,
+        "accuracyPassed": true,
+        "inputHash": "367db8ea405867e0",
+        "packetWidth": 2,
+        "coreSIMD": 1,
+        "coreType": 64
+      },
+      "exitCode": 0
+    },
+    {
+      "n": 8,
+      "process": 2,
+      "target": "before_actual",
+      "command": [
+        "C:\\Users\\owner\\Documents\\git\\kibo-linalg\\build\\assembly-gap\\Release\\before_actual.exe",
+        "2",
+        "15",
+        "8",
+        "32"
+      ],
+      "file": "before_actual-n8-p2.jsonl",
+      "valid": true,
+      "summary": {
+        "kind": "summary",
+        "process": 2,
+        "solver": "normal-LLT",
+        "m": 32,
+        "n": 8,
+        "coreSeconds": 3.9322738647460937e-07,
+        "eigenSeconds": 3.273330688476563e-07,
+        "ratio": 1.2013066319847474,
+        "accuracyPassed": true,
+        "inputHash": "86ca44337887813a",
+        "packetWidth": 2,
+        "coreSIMD": 1,
+        "coreType": 64
+      },
+      "exitCode": 1
+    },
+    {
+      "n": 2,
+      "process": 0,
+      "target": "before_actual",
+      "command": [
+        "C:\\Users\\owner\\Documents\\git\\kibo-linalg\\build\\assembly-gap\\Release\\before_actual.exe",
+        "0",
+        "15",
+        "2",
+        "8"
+      ],
+      "file": "before_actual-n2-p0.jsonl",
+      "valid": true,
+      "summary": {
+        "kind": "summary",
+        "process": 0,
+        "solver": "normal-LLT",
+        "m": 8,
+        "n": 2,
+        "coreSeconds": 4.6965503692626956e-08,
+        "eigenSeconds": 4.9798583984375e-08,
+        "ratio": 0.9431092198798873,
+        "accuracyPassed": true,
+        "inputHash": "367db8ea405867e0",
+        "packetWidth": 2,
+        "coreSIMD": 1,
+        "coreType": 64
+      },
+      "exitCode": 0
+    },
+    {
+      "n": 33,
+      "process": 2,
+      "target": "before_actual",
+      "command": [
+        "C:\\Users\\owner\\Documents\\git\\kibo-linalg\\build\\assembly-gap\\Release\\before_actual.exe",
+        "2",
+        "15",
+        "33",
+        "132"
+      ],
+      "file": "before_actual-n33-p2.jsonl",
+      "valid": true,
+      "summary": {
+        "kind": "summary",
+        "process": 2,
+        "solver": "normal-LLT",
+        "m": 132,
+        "n": 33,
+        "coreSeconds": 5.63955078125e-06,
+        "eigenSeconds": 3.3229736328125e-06,
+        "ratio": 1.69713979237229,
+        "accuracyPassed": true,
+        "inputHash": "9325a616cc1a7a4b",
+        "packetWidth": 2,
+        "coreSIMD": 1,
+        "coreType": 64
+      },
+      "exitCode": 1
+    },
+    {
+      "n": 31,
+      "process": 0,
+      "target": "before_actual",
+      "command": [
+        "C:\\Users\\owner\\Documents\\git\\kibo-linalg\\build\\assembly-gap\\Release\\before_actual.exe",
+        "0",
+        "15",
+        "31",
+        "124"
+      ],
+      "file": "before_actual-n31-p0.jsonl",
+      "valid": true,
+      "summary": {
+        "kind": "summary",
+        "process": 0,
+        "solver": "normal-LLT",
+        "m": 124,
+        "n": 31,
+        "coreSeconds": 5.068597412109375e-06,
+        "eigenSeconds": 2.111077880859375e-06,
+        "ratio": 2.4009523561707997,
+        "accuracyPassed": true,
+        "inputHash": "45bc8b325ed6c116",
+        "packetWidth": 2,
+        "coreSIMD": 1,
+        "coreType": 64
+      },
+      "exitCode": 1
+    },
+    {
+      "n": 31,
+      "process": 0,
+      "target": "public_solver",
+      "command": [
+        "C:\\Users\\owner\\Documents\\git\\kibo-linalg\\build\\assembly-gap\\Release\\public_solver.exe",
+        "0",
+        "15",
+        "31",
+        "124"
+      ],
+      "file": "public_solver-n31-p0.jsonl",
+      "valid": true,
+      "summary": {
+        "kind": "summary",
+        "process": 0,
+        "solver": "normal-LLT",
+        "m": 124,
+        "n": 31,
+        "coreSeconds": 4.2427978515625e-06,
+        "eigenSeconds": 2.17333984375e-06,
+        "ratio": 1.9522017524151878,
+        "accuracyPassed": true,
+        "inputHash": "45bc8b325ed6c116",
+        "packetWidth": 2,
+        "coreSIMD": 1,
+        "coreType": 64
+      },
+      "exitCode": 1
+    },
+    {
+      "n": 512,
+      "process": 2,
+      "target": "before_actual",
+      "command": [
+        "C:\\Users\\owner\\Documents\\git\\kibo-linalg\\build\\assembly-gap\\Release\\before_actual.exe",
+        "2",
+        "15",
+        "512",
+        "2048"
+      ],
+      "file": "before_actual-n512-p2.jsonl",
+      "valid": true,
+      "summary": {
+        "kind": "summary",
+        "process": 2,
+        "solver": "normal-LLT",
+        "m": 2048,
+        "n": 512,
+        "coreSeconds": 0.0025138875,
+        "eigenSeconds": 0.00222725625,
+        "ratio": 1.1286925336947646,
+        "accuracyPassed": true,
+        "inputHash": "699d299a072d5a9e",
+        "packetWidth": 2,
+        "coreSIMD": 1,
+        "coreType": 64
+      },
+      "exitCode": 1
+    },
+    {
+      "n": 8,
+      "process": 0,
+      "target": "public_solver",
+      "command": [
+        "C:\\Users\\owner\\Documents\\git\\kibo-linalg\\build\\assembly-gap\\Release\\public_solver.exe",
+        "0",
+        "15",
+        "8",
+        "32"
+      ],
+      "file": "public_solver-n8-p0.jsonl",
+      "valid": true,
+      "summary": {
+        "kind": "summary",
+        "process": 0,
+        "solver": "normal-LLT",
+        "m": 32,
+        "n": 8,
+        "coreSeconds": 3.235862731933594e-07,
+        "eigenSeconds": 3.4967498779296876e-07,
+        "ratio": 0.9253915335372639,
+        "accuracyPassed": true,
+        "inputHash": "86ca44337887813a",
+        "packetWidth": 2,
+        "coreSIMD": 1,
+        "coreType": 64
+      },
+      "exitCode": 0
+    },
+    {
+      "n": 32,
+      "process": 0,
+      "target": "before_actual",
+      "command": [
+        "C:\\Users\\owner\\Documents\\git\\kibo-linalg\\build\\assembly-gap\\Release\\before_actual.exe",
+        "0",
+        "30",
+        "32",
+        "128"
+      ],
+      "file": "before_actual-n32-p0.jsonl",
+      "valid": true,
+      "summary": {
+        "kind": "summary",
+        "process": 0,
+        "solver": "normal-LLT",
+        "m": 128,
+        "n": 32,
+        "coreSeconds": 5.3028442382812506e-06,
+        "eigenSeconds": 2.81365966796875e-06,
+        "ratio": 1.884678626434413,
+        "accuracyPassed": true,
+        "inputHash": "e720c56d78361989",
+        "packetWidth": 2,
+        "coreSIMD": 1,
+        "coreType": 64
+      },
+      "exitCode": 1
+    },
+    {
+      "n": 31,
+      "process": 2,
+      "target": "public_solver",
+      "command": [
+        "C:\\Users\\owner\\Documents\\git\\kibo-linalg\\build\\assembly-gap\\Release\\public_solver.exe",
+        "2",
+        "15",
+        "31",
+        "124"
+      ],
+      "file": "public_solver-n31-p2.jsonl",
+      "valid": true,
+      "summary": {
+        "kind": "summary",
+        "process": 2,
+        "solver": "normal-LLT",
+        "m": 124,
+        "n": 31,
+        "coreSeconds": 4.22052001953125e-06,
+        "eigenSeconds": 2.09459228515625e-06,
+        "ratio": 2.014960166444236,
+        "accuracyPassed": true,
+        "inputHash": "45bc8b325ed6c116",
+        "packetWidth": 2,
+        "coreSIMD": 1,
+        "coreType": 64
+      },
+      "exitCode": 1
+    },
+    {
+      "n": 32,
+      "process": 2,
+      "target": "before_actual",
+      "command": [
+        "C:\\Users\\owner\\Documents\\git\\kibo-linalg\\build\\assembly-gap\\Release\\before_actual.exe",
+        "2",
+        "30",
+        "32",
+        "128"
+      ],
+      "file": "before_actual-n32-p2.jsonl",
+      "valid": true,
+      "summary": {
+        "kind": "summary",
+        "process": 2,
+        "solver": "normal-LLT",
+        "m": 128,
+        "n": 32,
+        "coreSeconds": 5.277117919921874e-06,
+        "eigenSeconds": 2.8306610107421877e-06,
+        "ratio": 1.8642705360675582,
+        "accuracyPassed": true,
+        "inputHash": "e720c56d78361989",
+        "packetWidth": 2,
+        "coreSIMD": 1,
+        "coreType": 64
+      },
+      "exitCode": 1
+    },
+    {
+      "n": 128,
+      "process": 0,
+      "target": "before_actual",
+      "command": [
+        "C:\\Users\\owner\\Documents\\git\\kibo-linalg\\build\\assembly-gap\\Release\\before_actual.exe",
+        "0",
+        "15",
+        "128",
+        "512"
+      ],
+      "file": "before_actual-n128-p0.jsonl",
+      "valid": true,
+      "summary": {
+        "kind": "summary",
+        "process": 0,
+        "solver": "normal-LLT",
+        "m": 512,
+        "n": 128,
+        "coreSeconds": 7.01046875e-05,
+        "eigenSeconds": 4.7156640625e-05,
+        "ratio": 1.4866344712187605,
+        "accuracyPassed": true,
+        "inputHash": "7514270b0afecb8b",
+        "packetWidth": 2,
+        "coreSIMD": 1,
+        "coreType": 64
+      },
+      "exitCode": 1
+    },
+    {
+      "n": 64,
+      "process": 1,
+      "target": "public_solver",
+      "command": [
+        "C:\\Users\\owner\\Documents\\git\\kibo-linalg\\build\\assembly-gap\\Release\\public_solver.exe",
+        "1",
+        "15",
+        "64",
+        "256"
+      ],
+      "file": "public_solver-n64-p1.jsonl",
+      "valid": true,
+      "summary": {
+        "kind": "summary",
+        "process": 1,
+        "solver": "normal-LLT",
+        "m": 256,
+        "n": 64,
+        "coreSeconds": 1.24044677734375e-05,
+        "eigenSeconds": 1.036083984375e-05,
+        "ratio": 1.1972453932796079,
+        "accuracyPassed": true,
+        "inputHash": "8c97540904a1d4e8",
+        "packetWidth": 2,
+        "coreSIMD": 1,
+        "coreType": 64
+      },
+      "exitCode": 1
+    },
+    {
+      "n": 31,
+      "process": 1,
+      "target": "public_solver",
+      "command": [
+        "C:\\Users\\owner\\Documents\\git\\kibo-linalg\\build\\assembly-gap\\Release\\public_solver.exe",
+        "1",
+        "15",
+        "31",
+        "124"
+      ],
+      "file": "public_solver-n31-p1.jsonl",
+      "valid": true,
+      "summary": {
+        "kind": "summary",
+        "process": 1,
+        "solver": "normal-LLT",
+        "m": 124,
+        "n": 31,
+        "coreSeconds": 4.287933349609375e-06,
+        "eigenSeconds": 2.18656005859375e-06,
+        "ratio": 1.9610407373704102,
+        "accuracyPassed": true,
+        "inputHash": "45bc8b325ed6c116",
+        "packetWidth": 2,
+        "coreSIMD": 1,
+        "coreType": 64
+      },
+      "exitCode": 1
+    },
+    {
+      "n": 32,
+      "process": 3,
+      "target": "public_solver",
+      "command": [
+        "C:\\Users\\owner\\Documents\\git\\kibo-linalg\\build\\assembly-gap\\Release\\public_solver.exe",
+        "3",
+        "30",
+        "32",
+        "128"
+      ],
+      "file": "public_solver-n32-p3.jsonl",
+      "valid": true,
+      "summary": {
+        "kind": "summary",
+        "process": 3,
+        "solver": "normal-LLT",
+        "m": 128,
+        "n": 32,
+        "coreSeconds": 2.7685943603515626e-06,
+        "eigenSeconds": 2.9232757568359374e-06,
+        "ratio": 0.947086279451174,
+        "accuracyPassed": true,
+        "inputHash": "e720c56d78361989",
+        "packetWidth": 2,
+        "coreSIMD": 1,
+        "coreType": 64
+      },
+      "exitCode": 0
+    },
+    {
+      "n": 33,
+      "process": 1,
+      "target": "before_actual",
+      "command": [
+        "C:\\Users\\owner\\Documents\\git\\kibo-linalg\\build\\assembly-gap\\Release\\before_actual.exe",
+        "1",
+        "15",
+        "33",
+        "132"
+      ],
+      "file": "before_actual-n33-p1.jsonl",
+      "valid": true,
+      "summary": {
+        "kind": "summary",
+        "process": 1,
+        "solver": "normal-LLT",
+        "m": 132,
+        "n": 33,
+        "coreSeconds": 5.60560302734375e-06,
+        "eigenSeconds": 3.28580322265625e-06,
+        "ratio": 1.7060069174842944,
+        "accuracyPassed": true,
+        "inputHash": "9325a616cc1a7a4b",
+        "packetWidth": 2,
+        "coreSIMD": 1,
+        "coreType": 64
+      },
+      "exitCode": 1
+    },
+    {
+      "n": 8,
+      "process": 1,
+      "target": "before_actual",
+      "command": [
+        "C:\\Users\\owner\\Documents\\git\\kibo-linalg\\build\\assembly-gap\\Release\\before_actual.exe",
+        "1",
+        "15",
+        "8",
+        "32"
+      ],
+      "file": "before_actual-n8-p1.jsonl",
+      "valid": true,
+      "summary": {
+        "kind": "summary",
+        "process": 1,
+        "solver": "normal-LLT",
+        "m": 32,
+        "n": 8,
+        "coreSeconds": 3.906669616699219e-07,
+        "eigenSeconds": 3.269371032714844e-07,
+        "ratio": 1.1949300270930614,
+        "accuracyPassed": true,
+        "inputHash": "86ca44337887813a",
+        "packetWidth": 2,
+        "coreSIMD": 1,
+        "coreType": 64
+      },
+      "exitCode": 1
+    },
+    {
+      "n": 64,
+      "process": 2,
+      "target": "public_solver",
+      "command": [
+        "C:\\Users\\owner\\Documents\\git\\kibo-linalg\\build\\assembly-gap\\Release\\public_solver.exe",
+        "2",
+        "15",
+        "64",
+        "256"
+      ],
+      "file": "public_solver-n64-p2.jsonl",
+      "valid": true,
+      "summary": {
+        "kind": "summary",
+        "process": 2,
+        "solver": "normal-LLT",
+        "m": 256,
+        "n": 64,
+        "coreSeconds": 1.229453125e-05,
+        "eigenSeconds": 1.028994140625e-05,
+        "ratio": 1.1948106179236777,
+        "accuracyPassed": true,
+        "inputHash": "8c97540904a1d4e8",
+        "packetWidth": 2,
+        "coreSIMD": 1,
+        "coreType": 64
+      },
+      "exitCode": 1
+    },
+    {
+      "n": 32,
+      "process": 3,
+      "target": "before_actual",
+      "command": [
+        "C:\\Users\\owner\\Documents\\git\\kibo-linalg\\build\\assembly-gap\\Release\\before_actual.exe",
+        "3",
+        "30",
+        "32",
+        "128"
+      ],
+      "file": "before_actual-n32-p3.jsonl",
+      "valid": true,
+      "summary": {
+        "kind": "summary",
+        "process": 3,
+        "solver": "normal-LLT",
+        "m": 128,
+        "n": 32,
+        "coreSeconds": 5.329632568359375e-06,
+        "eigenSeconds": 2.907720947265625e-06,
+        "ratio": 1.8329243641386144,
+        "accuracyPassed": true,
+        "inputHash": "e720c56d78361989",
+        "packetWidth": 2,
+        "coreSIMD": 1,
+        "coreType": 64
+      },
+      "exitCode": 1
+    },
+    {
+      "n": 512,
+      "process": 2,
+      "target": "public_solver",
+      "command": [
+        "C:\\Users\\owner\\Documents\\git\\kibo-linalg\\build\\assembly-gap\\Release\\public_solver.exe",
+        "2",
+        "15",
+        "512",
+        "2048"
+      ],
+      "file": "public_solver-n512-p2.jsonl",
+      "valid": true,
+      "summary": {
+        "kind": "summary",
+        "process": 2,
+        "solver": "normal-LLT",
+        "m": 2048,
+        "n": 512,
+        "coreSeconds": 0.00248398125,
+        "eigenSeconds": 0.00232033125,
+        "ratio": 1.0705287230002183,
+        "accuracyPassed": true,
+        "inputHash": "699d299a072d5a9e",
+        "packetWidth": 2,
+        "coreSIMD": 1,
+        "coreType": 64
+      },
+      "exitCode": 0
+    },
+    {
+      "n": 31,
+      "process": 2,
+      "target": "before_actual",
+      "command": [
+        "C:\\Users\\owner\\Documents\\git\\kibo-linalg\\build\\assembly-gap\\Release\\before_actual.exe",
+        "2",
+        "15",
+        "31",
+        "124"
+      ],
+      "file": "before_actual-n31-p2.jsonl",
+      "valid": true,
+      "summary": {
+        "kind": "summary",
+        "process": 2,
+        "solver": "normal-LLT",
+        "m": 124,
+        "n": 31,
+        "coreSeconds": 5.038922119140625e-06,
+        "eigenSeconds": 2.104705810546875e-06,
+        "ratio": 2.394121826380733,
+        "accuracyPassed": true,
+        "inputHash": "45bc8b325ed6c116",
+        "packetWidth": 2,
+        "coreSIMD": 1,
+        "coreType": 64
+      },
+      "exitCode": 1
+    },
+    {
+      "n": 2,
+      "process": 0,
+      "target": "public_solver",
+      "command": [
+        "C:\\Users\\owner\\Documents\\git\\kibo-linalg\\build\\assembly-gap\\Release\\public_solver.exe",
+        "0",
+        "15",
+        "2",
+        "8"
+      ],
+      "file": "public_solver-n2-p0.jsonl",
+      "valid": true,
+      "summary": {
+        "kind": "summary",
+        "process": 0,
+        "solver": "normal-LLT",
+        "m": 8,
+        "n": 2,
+        "coreSeconds": 4.4923973083496095e-08,
+        "eigenSeconds": 4.979257583618164e-08,
+        "ratio": 0.9022223158588275,
+        "accuracyPassed": true,
+        "inputHash": "367db8ea405867e0",
+        "packetWidth": 2,
+        "coreSIMD": 1,
+        "coreType": 64
+      },
+      "exitCode": 0
+    },
+    {
+      "n": 2,
+      "process": 1,
+      "target": "before_actual",
+      "command": [
+        "C:\\Users\\owner\\Documents\\git\\kibo-linalg\\build\\assembly-gap\\Release\\before_actual.exe",
+        "1",
+        "15",
+        "2",
+        "8"
+      ],
+      "file": "before_actual-n2-p1.jsonl",
+      "valid": true,
+      "summary": {
+        "kind": "summary",
+        "process": 1,
+        "solver": "normal-LLT",
+        "m": 8,
+        "n": 2,
+        "coreSeconds": 4.669179916381836e-08,
+        "eigenSeconds": 4.8938369750976565e-08,
+        "ratio": 0.9540938817825378,
+        "accuracyPassed": true,
+        "inputHash": "367db8ea405867e0",
+        "packetWidth": 2,
+        "coreSIMD": 1,
+        "coreType": 64
+      },
+      "exitCode": 0
+    },
+    {
+      "n": 512,
+      "process": 1,
+      "target": "public_solver",
+      "command": [
+        "C:\\Users\\owner\\Documents\\git\\kibo-linalg\\build\\assembly-gap\\Release\\public_solver.exe",
+        "1",
+        "15",
+        "512",
+        "2048"
+      ],
+      "file": "public_solver-n512-p1.jsonl",
+      "valid": true,
+      "summary": {
+        "kind": "summary",
+        "process": 1,
+        "solver": "normal-LLT",
+        "m": 2048,
+        "n": 512,
+        "coreSeconds": 0.00246766875,
+        "eigenSeconds": 0.0021462,
+        "ratio": 1.1497850852669835,
+        "accuracyPassed": true,
+        "inputHash": "699d299a072d5a9e",
+        "packetWidth": 2,
+        "coreSIMD": 1,
+        "coreType": 64
+      },
+      "exitCode": 1
+    },
+    {
+      "n": 128,
+      "process": 0,
+      "target": "public_solver",
+      "command": [
+        "C:\\Users\\owner\\Documents\\git\\kibo-linalg\\build\\assembly-gap\\Release\\public_solver.exe",
+        "0",
+        "15",
+        "128",
+        "512"
+      ],
+      "file": "public_solver-n128-p0.jsonl",
+      "valid": true,
+      "summary": {
+        "kind": "summary",
+        "process": 0,
+        "solver": "normal-LLT",
+        "m": 512,
+        "n": 128,
+        "coreSeconds": 6.598701171875e-05,
+        "eigenSeconds": 4.747265625e-05,
+        "ratio": 1.3900004114210482,
+        "accuracyPassed": true,
+        "inputHash": "7514270b0afecb8b",
+        "packetWidth": 2,
+        "coreSIMD": 1,
+        "coreType": 64
+      },
+      "exitCode": 1
+    },
+    {
+      "n": 2,
+      "process": 1,
+      "target": "public_solver",
+      "command": [
+        "C:\\Users\\owner\\Documents\\git\\kibo-linalg\\build\\assembly-gap\\Release\\public_solver.exe",
+        "1",
+        "15",
+        "2",
+        "8"
+      ],
+      "file": "public_solver-n2-p1.jsonl",
+      "valid": true,
+      "summary": {
+        "kind": "summary",
+        "process": 1,
+        "solver": "normal-LLT",
+        "m": 8,
+        "n": 2,
+        "coreSeconds": 4.396982192993164e-08,
+        "eigenSeconds": 5.0623607635498044e-08,
+        "ratio": 0.8685635809783602,
+        "accuracyPassed": true,
+        "inputHash": "367db8ea405867e0",
+        "packetWidth": 2,
+        "coreSIMD": 1,
+        "coreType": 64
+      },
+      "exitCode": 0
+    },
+    {
+      "n": 128,
+      "process": 1,
+      "target": "public_solver",
+      "command": [
+        "C:\\Users\\owner\\Documents\\git\\kibo-linalg\\build\\assembly-gap\\Release\\public_solver.exe",
+        "1",
+        "15",
+        "128",
+        "512"
+      ],
+      "file": "public_solver-n128-p1.jsonl",
+      "valid": true,
+      "summary": {
+        "kind": "summary",
+        "process": 1,
+        "solver": "normal-LLT",
+        "m": 512,
+        "n": 128,
+        "coreSeconds": 6.607578125e-05,
+        "eigenSeconds": 4.82880859375e-05,
+        "ratio": 1.3683661293910654,
+        "accuracyPassed": true,
+        "inputHash": "7514270b0afecb8b",
+        "packetWidth": 2,
+        "coreSIMD": 1,
+        "coreType": 64
+      },
+      "exitCode": 1
+    },
+    {
+      "n": 8,
+      "process": 2,
+      "target": "public_solver",
+      "command": [
+        "C:\\Users\\owner\\Documents\\git\\kibo-linalg\\build\\assembly-gap\\Release\\public_solver.exe",
+        "2",
+        "15",
+        "8",
+        "32"
+      ],
+      "file": "public_solver-n8-p2.jsonl",
+      "valid": true,
+      "summary": {
+        "kind": "summary",
+        "process": 2,
+        "solver": "normal-LLT",
+        "m": 32,
+        "n": 8,
+        "coreSeconds": 3.2915725708007814e-07,
+        "eigenSeconds": 3.303932189941406e-07,
+        "ratio": 0.9962591183989028,
+        "accuracyPassed": true,
+        "inputHash": "86ca44337887813a",
+        "packetWidth": 2,
+        "coreSIMD": 1,
+        "coreType": 64
+      },
+      "exitCode": 0
+    },
+    {
+      "n": 31,
+      "process": 1,
+      "target": "before_actual",
+      "command": [
+        "C:\\Users\\owner\\Documents\\git\\kibo-linalg\\build\\assembly-gap\\Release\\before_actual.exe",
+        "1",
+        "15",
+        "31",
+        "124"
+      ],
+      "file": "before_actual-n31-p1.jsonl",
+      "valid": true,
+      "summary": {
+        "kind": "summary",
+        "process": 1,
+        "solver": "normal-LLT",
+        "m": 124,
+        "n": 31,
+        "coreSeconds": 5.0773193359375e-06,
+        "eigenSeconds": 2.116796875e-06,
+        "ratio": 2.3985859937257796,
+        "accuracyPassed": true,
+        "inputHash": "45bc8b325ed6c116",
+        "packetWidth": 2,
+        "coreSIMD": 1,
+        "coreType": 64
+      },
+      "exitCode": 1
+    },
+    {
+      "n": 32,
+      "process": 1,
+      "target": "public_solver",
+      "command": [
+        "C:\\Users\\owner\\Documents\\git\\kibo-linalg\\build\\assembly-gap\\Release\\public_solver.exe",
+        "1",
+        "30",
+        "32",
+        "128"
+      ],
+      "file": "public_solver-n32-p1.jsonl",
+      "valid": true,
+      "summary": {
+        "kind": "summary",
+        "process": 1,
+        "solver": "normal-LLT",
+        "m": 128,
+        "n": 32,
+        "coreSeconds": 2.7694580078125e-06,
+        "eigenSeconds": 2.8253814697265625e-06,
+        "ratio": 0.9802067570297066,
+        "accuracyPassed": true,
+        "inputHash": "e720c56d78361989",
+        "packetWidth": 2,
+        "coreSIMD": 1,
+        "coreType": 64
+      },
+      "exitCode": 0
+    },
+    {
+      "n": 512,
+      "process": 0,
+      "target": "public_solver",
+      "command": [
+        "C:\\Users\\owner\\Documents\\git\\kibo-linalg\\build\\assembly-gap\\Release\\public_solver.exe",
+        "0",
+        "15",
+        "512",
+        "2048"
+      ],
+      "file": "public_solver-n512-p0.jsonl",
+      "valid": true,
+      "summary": {
+        "kind": "summary",
+        "process": 0,
+        "solver": "normal-LLT",
+        "m": 2048,
+        "n": 512,
+        "coreSeconds": 0.002523875,
+        "eigenSeconds": 0.0022907625,
+        "ratio": 1.1017619679037,
+        "accuracyPassed": true,
+        "inputHash": "699d299a072d5a9e",
+        "packetWidth": 2,
+        "coreSIMD": 1,
+        "coreType": 64
+      },
+      "exitCode": 1
+    },
+    {
+      "n": 8,
+      "process": 0,
+      "target": "before_actual",
+      "command": [
+        "C:\\Users\\owner\\Documents\\git\\kibo-linalg\\build\\assembly-gap\\Release\\before_actual.exe",
+        "0",
+        "15",
+        "8",
+        "32"
+      ],
+      "file": "before_actual-n8-p0.jsonl",
+      "valid": true,
+      "summary": {
+        "kind": "summary",
+        "process": 0,
+        "solver": "normal-LLT",
+        "m": 32,
+        "n": 8,
+        "coreSeconds": 3.946434020996094e-07,
+        "eigenSeconds": 3.3730087280273436e-07,
+        "ratio": 1.1700040940315355,
+        "accuracyPassed": true,
+        "inputHash": "86ca44337887813a",
+        "packetWidth": 2,
+        "coreSIMD": 1,
+        "coreType": 64
+      },
+      "exitCode": 1
+    },
+    {
+      "n": 33,
+      "process": 2,
+      "target": "public_solver",
+      "command": [
+        "C:\\Users\\owner\\Documents\\git\\kibo-linalg\\build\\assembly-gap\\Release\\public_solver.exe",
+        "2",
+        "15",
+        "33",
+        "132"
+      ],
+      "file": "public_solver-n33-p2.jsonl",
+      "valid": true,
+      "summary": {
+        "kind": "summary",
+        "process": 2,
+        "solver": "normal-LLT",
+        "m": 132,
+        "n": 33,
+        "coreSeconds": 3.0435791015625e-06,
+        "eigenSeconds": 3.321563720703125e-06,
+        "ratio": 0.9163091114561609,
+        "accuracyPassed": true,
+        "inputHash": "9325a616cc1a7a4b",
+        "packetWidth": 2,
+        "coreSIMD": 1,
+        "coreType": 64
+      },
+      "exitCode": 0
+    },
+    {
+      "n": 2,
+      "process": 2,
+      "target": "before_actual",
+      "command": [
+        "C:\\Users\\owner\\Documents\\git\\kibo-linalg\\build\\assembly-gap\\Release\\before_actual.exe",
+        "2",
+        "15",
+        "2",
+        "8"
+      ],
+      "file": "before_actual-n2-p2.jsonl",
+      "valid": true,
+      "summary": {
+        "kind": "summary",
+        "process": 2,
+        "solver": "normal-LLT",
+        "m": 8,
+        "n": 2,
+        "coreSeconds": 4.595375061035156e-08,
+        "eigenSeconds": 4.977598190307617e-08,
+        "ratio": 0.9232113331251353,
+        "accuracyPassed": true,
+        "inputHash": "367db8ea405867e0",
+        "packetWidth": 2,
+        "coreSIMD": 1,
+        "coreType": 64
+      },
+      "exitCode": 0
+    },
+    {
+      "n": 128,
+      "process": 1,
+      "target": "before_actual",
+      "command": [
+        "C:\\Users\\owner\\Documents\\git\\kibo-linalg\\build\\assembly-gap\\Release\\before_actual.exe",
+        "1",
+        "15",
+        "128",
+        "512"
+      ],
+      "file": "before_actual-n128-p1.jsonl",
+      "valid": true,
+      "summary": {
+        "kind": "summary",
+        "process": 1,
+        "solver": "normal-LLT",
+        "m": 512,
+        "n": 128,
+        "coreSeconds": 7.272216796875e-05,
+        "eigenSeconds": 4.74826171875e-05,
+        "ratio": 1.531553487912929,
+        "accuracyPassed": true,
+        "inputHash": "7514270b0afecb8b",
+        "packetWidth": 2,
+        "coreSIMD": 1,
+        "coreType": 64
+      },
+      "exitCode": 1
+    },
+    {
+      "n": 32,
+      "process": 2,
+      "target": "public_solver",
+      "command": [
+        "C:\\Users\\owner\\Documents\\git\\kibo-linalg\\build\\assembly-gap\\Release\\public_solver.exe",
+        "2",
+        "30",
+        "32",
+        "128"
+      ],
+      "file": "public_solver-n32-p2.jsonl",
+      "valid": true,
+      "summary": {
+        "kind": "summary",
+        "process": 2,
+        "solver": "normal-LLT",
+        "m": 128,
+        "n": 32,
+        "coreSeconds": 2.781494140625e-06,
+        "eigenSeconds": 2.8581512451171875e-06,
+        "ratio": 0.9731794793494056,
+        "accuracyPassed": true,
+        "inputHash": "e720c56d78361989",
+        "packetWidth": 2,
+        "coreSIMD": 1,
+        "coreType": 64
+      },
+      "exitCode": 0
+    },
+    {
+      "n": 64,
+      "process": 0,
+      "target": "before_actual",
+      "command": [
+        "C:\\Users\\owner\\Documents\\git\\kibo-linalg\\build\\assembly-gap\\Release\\before_actual.exe",
+        "0",
+        "15",
+        "64",
+        "256"
+      ],
+      "file": "before_actual-n64-p0.jsonl",
+      "valid": true,
+      "summary": {
+        "kind": "summary",
+        "process": 0,
+        "solver": "normal-LLT",
+        "m": 256,
+        "n": 64,
+        "coreSeconds": 1.4081689453125e-05,
+        "eigenSeconds": 1.0409814453125e-05,
+        "ratio": 1.352732031539497,
+        "accuracyPassed": true,
+        "inputHash": "8c97540904a1d4e8",
+        "packetWidth": 2,
+        "coreSIMD": 1,
+        "coreType": 64
+      },
+      "exitCode": 1
+    },
+    {
+      "n": 32,
+      "process": 4,
+      "target": "before_actual",
+      "command": [
+        "C:\\Users\\owner\\Documents\\git\\kibo-linalg\\build\\assembly-gap\\Release\\before_actual.exe",
+        "4",
+        "30",
+        "32",
+        "128"
+      ],
+      "file": "before_actual-n32-p4.jsonl",
+      "valid": true,
+      "summary": {
+        "kind": "summary",
+        "process": 4,
+        "solver": "normal-LLT",
+        "m": 128,
+        "n": 32,
+        "coreSeconds": 5.348739624023437e-06,
+        "eigenSeconds": 2.8803039550781246e-06,
+        "ratio": 1.857005270083851,
+        "accuracyPassed": true,
+        "inputHash": "e720c56d78361989",
+        "packetWidth": 2,
+        "coreSIMD": 1,
+        "coreType": 64
+      },
+      "exitCode": 1
+    }
+  ],
+  "finishedUtc": "2026-10-07T06:33:36.472251+00:00",
+  "valid": true
+}

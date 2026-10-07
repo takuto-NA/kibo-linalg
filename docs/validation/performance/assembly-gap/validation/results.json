@@ -1,0 +1,24 @@
+{
+  "sourceCommit": "3c7d2c8b54701e1e5f826bfb171d5a442e14d10a",
+  "ciRun": "https://github.com/takuto-NA/kibo-linalg/actions/runs/37581895862",
+  "sourceMatch": "include/tests/CMakeLists match after CRLF-to-LF normalization; measurement manifest preserves raw byte hashes.",
+  "pcFailuresOnly": [
+    "numerical",
+    "numerical_column"
+  ],
+  "releaseFailureCounts": [
+    19,
+    18
+  ],
+  "debugSmallFailureCounts": [
+    17,
+    17
+  ],
+  "msvcReleaseAllocation": "skipped",
+  "wasm": "Node and 3 browsers passed",
+  "esp32": "S3/C3 cross compile passed; actual boards unverified",
+  "localCommands": [
+    "ctest --test-dir build/locality-public -C Release --output-on-failure",
+    "ctest --test-dir build/locality-public -C Debug --output-on-failure -R ^(llt|llt_scalar|allocation)$"
+  ]
+}

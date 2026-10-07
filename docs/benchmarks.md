@@ -75,3 +75,7 @@ hosted CIで絶対速度をgateにせず、固定PCで20%以上の悪化が区�
 公開solverの配置改善については、[row/column格納ごとの旧版比較](validation/2026-10-07-solver-locality.md)を参照する。
 こちらは同じharnessから元の公開headerと修正版をビルドし、CPU0固定でfactor+solveを測る追加系列である。
 QR column格納も比較するが、setup/allocation込みの全phase測定の代わりにはしない。
+
+[アセンブリから特定した32変数LLTの改善](research/eigen-assembly-gap.md)では、
+入力走査・CRT分類呼出し・panel切替を単独対照で測り、公開実装へ反映した。
+32変数の5 process再測定と周辺サイズの診断を区別して報告する。

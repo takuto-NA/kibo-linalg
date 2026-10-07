@@ -1,0 +1,425 @@
+{
+  "sourceBaseCommit": "c3c10dfd60c0b666ec59dec9e8855dd0d3f0b464",
+  "startedUtc": "2026-10-07T06:25:37.845344+00:00",
+  "commands": [
+    [
+      "cmake",
+      "-S",
+      "C:\\Users\\owner\\Documents\\git\\kibo-linalg\\tools\\diagnostics\\assembly-gap",
+      "-B",
+      "C:\\Users\\owner\\Documents\\git\\kibo-linalg\\build\\assembly-gap",
+      "-G",
+      "Visual Studio 17 2022",
+      "-A",
+      "x64",
+      "-DEIGEN_SOURCE_DIR=C:\\Users\\owner\\Documents\\git\\kibo-linalg\\.cache\\eigen"
+    ],
+    [
+      "cmake",
+      "--build",
+      "C:\\Users\\owner\\Documents\\git\\kibo-linalg\\build\\assembly-gap",
+      "--config",
+      "Release",
+      "--parallel",
+      "4"
+    ]
+  ],
+  "diagnosticOnly": true,
+  "processes": 3,
+  "samplesPerPhase": 15,
+  "sourceSha256": {
+    "tools\\diagnostics\\assembly-gap\\CMakeLists.txt": "658c18a52b0eb607f1625bcf90ed855d5cad1c3e1f354d21e5f9ead9c9471620",
+    "tools\\diagnostics\\assembly-gap\\collect.py": "0e666cd349ed3bc25d20b7954f042b0397ede353360774f7e37be64a171f7cb0",
+    "tools\\diagnostics\\assembly-gap\\kernels.cpp": "88fb416af5f0df8ec321d86ca5f316dfec457dbbc3eadc17a511497dfe8e9996",
+    "tools\\diagnostics\\assembly-gap\\micro.cpp": "b4571c8b3d7d38ffcb9a10177f6dc06204af29cb0d0c4573ff7ac644118949c0",
+    "tools\\diagnostics\\assembly-gap\\phases.cpp": "b433bf5cb61ab041b5971f062cc197eab40f41ce3c57fbe6856bc729d77e9315",
+    "tools\\diagnostics\\assembly-gap\\prepare.py": "b684c3f56df45aeacd07890d6e8f7dce618d58c42cf50611c37f20b1169e1d7b",
+    "build\\assembly-gap\\variants\\baseline\\kibo\\dynamic_matrix.hpp": "535afd0c96607a65e13711bb0ea94a94d3791eb170fa54db5d1e220e12b103e6",
+    "build\\assembly-gap\\variants\\baseline\\kibo\\linalg.hpp": "52bf606a0f6ac2e21a83878e7b029b4c65935e25f5fc90387b1cf2ef74572634",
+    "build\\assembly-gap\\variants\\baseline\\kibo\\llt.hpp": "7b492eddba49a6b8bfaf03357fc4b8e1ed58497aca96f882bf7d7679959617c1",
+    "build\\assembly-gap\\variants\\baseline\\kibo\\qr.hpp": "04b1efdb4e2869ddc75ad6075874a8ab15d29051e79a24a19765fad1b50193ae",
+    "build\\assembly-gap\\variants\\baseline\\kibo\\workspace.hpp": "e74b13bb57d83bb0ad7b1c8f271c40db825a2d1b380f0224639a9d94ee8c48d0",
+    "build\\assembly-gap\\variants\\baseline\\kibo\\detail\\row_kernels.hpp": "b477534e3ef8af7a83176c29a20c2daf9bbca5d013caa55b2d6ab691471c0f4f",
+    "build\\assembly-gap\\variants\\dot\\kibo\\dynamic_matrix.hpp": "535afd0c96607a65e13711bb0ea94a94d3791eb170fa54db5d1e220e12b103e6",
+    "build\\assembly-gap\\variants\\dot\\kibo\\linalg.hpp": "52bf606a0f6ac2e21a83878e7b029b4c65935e25f5fc90387b1cf2ef74572634",
+    "build\\assembly-gap\\variants\\dot\\kibo\\llt.hpp": "a5c25b46f80d0aa687aa039147584b5f42f489844071f86fcf14868a5e91672a",
+    "build\\assembly-gap\\variants\\dot\\kibo\\qr.hpp": "04b1efdb4e2869ddc75ad6075874a8ab15d29051e79a24a19765fad1b50193ae",
+    "build\\assembly-gap\\variants\\dot\\kibo\\workspace.hpp": "e74b13bb57d83bb0ad7b1c8f271c40db825a2d1b380f0224639a9d94ee8c48d0",
+    "build\\assembly-gap\\variants\\dot\\kibo\\detail\\row_kernels.hpp": "b477534e3ef8af7a83176c29a20c2daf9bbca5d013caa55b2d6ab691471c0f4f",
+    "build\\assembly-gap\\variants\\forward\\kibo\\dynamic_matrix.hpp": "535afd0c96607a65e13711bb0ea94a94d3791eb170fa54db5d1e220e12b103e6",
+    "build\\assembly-gap\\variants\\forward\\kibo\\linalg.hpp": "52bf606a0f6ac2e21a83878e7b029b4c65935e25f5fc90387b1cf2ef74572634",
+    "build\\assembly-gap\\variants\\forward\\kibo\\llt.hpp": "be797d80424fdd2080819d406ee3b54085645c7a00f51f11398b7935aca9a9c2",
+    "build\\assembly-gap\\variants\\forward\\kibo\\qr.hpp": "04b1efdb4e2869ddc75ad6075874a8ab15d29051e79a24a19765fad1b50193ae",
+    "build\\assembly-gap\\variants\\forward\\kibo\\workspace.hpp": "e74b13bb57d83bb0ad7b1c8f271c40db825a2d1b380f0224639a9d94ee8c48d0",
+    "build\\assembly-gap\\variants\\forward\\kibo\\detail\\row_kernels.hpp": "b477534e3ef8af7a83176c29a20c2daf9bbca5d013caa55b2d6ab691471c0f4f",
+    "build\\assembly-gap\\variants\\fused32\\kibo\\dynamic_matrix.hpp": "535afd0c96607a65e13711bb0ea94a94d3791eb170fa54db5d1e220e12b103e6",
+    "build\\assembly-gap\\variants\\fused32\\kibo\\linalg.hpp": "52bf606a0f6ac2e21a83878e7b029b4c65935e25f5fc90387b1cf2ef74572634",
+    "build\\assembly-gap\\variants\\fused32\\kibo\\llt.hpp": "c6e0ffae270d4276ff9d29b2de72d71d8175d0077e67e471674dc84bf9ee7c5f",
+    "build\\assembly-gap\\variants\\fused32\\kibo\\qr.hpp": "04b1efdb4e2869ddc75ad6075874a8ab15d29051e79a24a19765fad1b50193ae",
+    "build\\assembly-gap\\variants\\fused32\\kibo\\workspace.hpp": "e74b13bb57d83bb0ad7b1c8f271c40db825a2d1b380f0224639a9d94ee8c48d0",
+    "build\\assembly-gap\\variants\\fused32\\kibo\\detail\\row_kernels.hpp": "b477534e3ef8af7a83176c29a20c2daf9bbca5d013caa55b2d6ab691471c0f4f",
+    "build\\assembly-gap\\variants\\fused_panel32\\kibo\\dynamic_matrix.hpp": "535afd0c96607a65e13711bb0ea94a94d3791eb170fa54db5d1e220e12b103e6",
+    "build\\assembly-gap\\variants\\fused_panel32\\kibo\\linalg.hpp": "52bf606a0f6ac2e21a83878e7b029b4c65935e25f5fc90387b1cf2ef74572634",
+    "build\\assembly-gap\\variants\\fused_panel32\\kibo\\llt.hpp": "433e2ad7b37bebf1e64202ec4c2672067b5b4111e48efade3e3a57ba46403591",
+    "build\\assembly-gap\\variants\\fused_panel32\\kibo\\qr.hpp": "04b1efdb4e2869ddc75ad6075874a8ab15d29051e79a24a19765fad1b50193ae",
+    "build\\assembly-gap\\variants\\fused_panel32\\kibo\\workspace.hpp": "e74b13bb57d83bb0ad7b1c8f271c40db825a2d1b380f0224639a9d94ee8c48d0",
+    "build\\assembly-gap\\variants\\fused_panel32\\kibo\\detail\\row_kernels.hpp": "b477534e3ef8af7a83176c29a20c2daf9bbca5d013caa55b2d6ab691471c0f4f",
+    "build\\assembly-gap\\variants\\fused_panel_inline\\kibo\\dynamic_matrix.hpp": "535afd0c96607a65e13711bb0ea94a94d3791eb170fa54db5d1e220e12b103e6",
+    "build\\assembly-gap\\variants\\fused_panel_inline\\kibo\\linalg.hpp": "52bf606a0f6ac2e21a83878e7b029b4c65935e25f5fc90387b1cf2ef74572634",
+    "build\\assembly-gap\\variants\\fused_panel_inline\\kibo\\llt.hpp": "e6ba12a1440b2bcd1ae83d35642fddf526c0ee42a10831c2d497658f3552c00a",
+    "build\\assembly-gap\\variants\\fused_panel_inline\\kibo\\qr.hpp": "04b1efdb4e2869ddc75ad6075874a8ab15d29051e79a24a19765fad1b50193ae",
+    "build\\assembly-gap\\variants\\fused_panel_inline\\kibo\\workspace.hpp": "e74b13bb57d83bb0ad7b1c8f271c40db825a2d1b380f0224639a9d94ee8c48d0",
+    "build\\assembly-gap\\variants\\fused_panel_inline\\kibo\\detail\\row_kernels.hpp": "b477534e3ef8af7a83176c29a20c2daf9bbca5d013caa55b2d6ab691471c0f4f",
+    "build\\assembly-gap\\variants\\inline_finite\\kibo\\dynamic_matrix.hpp": "535afd0c96607a65e13711bb0ea94a94d3791eb170fa54db5d1e220e12b103e6",
+    "build\\assembly-gap\\variants\\inline_finite\\kibo\\linalg.hpp": "52bf606a0f6ac2e21a83878e7b029b4c65935e25f5fc90387b1cf2ef74572634",
+    "build\\assembly-gap\\variants\\inline_finite\\kibo\\llt.hpp": "4671deb716be3be6349e3e8a211db9acebd531b9a415462e05a704deb4870900",
+    "build\\assembly-gap\\variants\\inline_finite\\kibo\\qr.hpp": "04b1efdb4e2869ddc75ad6075874a8ab15d29051e79a24a19765fad1b50193ae",
+    "build\\assembly-gap\\variants\\inline_finite\\kibo\\workspace.hpp": "e74b13bb57d83bb0ad7b1c8f271c40db825a2d1b380f0224639a9d94ee8c48d0",
+    "build\\assembly-gap\\variants\\inline_finite\\kibo\\detail\\row_kernels.hpp": "b477534e3ef8af7a83176c29a20c2daf9bbca5d013caa55b2d6ab691471c0f4f",
+    "build\\assembly-gap\\variants\\no_validation\\kibo\\dynamic_matrix.hpp": "535afd0c96607a65e13711bb0ea94a94d3791eb170fa54db5d1e220e12b103e6",
+    "build\\assembly-gap\\variants\\no_validation\\kibo\\linalg.hpp": "52bf606a0f6ac2e21a83878e7b029b4c65935e25f5fc90387b1cf2ef74572634",
+    "build\\assembly-gap\\variants\\no_validation\\kibo\\llt.hpp": "8619751e5cac864d6eb4d4210f13c8d7fd18e48438c412c373bf6da17f9c943e",
+    "build\\assembly-gap\\variants\\no_validation\\kibo\\qr.hpp": "04b1efdb4e2869ddc75ad6075874a8ab15d29051e79a24a19765fad1b50193ae",
+    "build\\assembly-gap\\variants\\no_validation\\kibo\\workspace.hpp": "e74b13bb57d83bb0ad7b1c8f271c40db825a2d1b380f0224639a9d94ee8c48d0",
+    "build\\assembly-gap\\variants\\no_validation\\kibo\\detail\\row_kernels.hpp": "b477534e3ef8af7a83176c29a20c2daf9bbca5d013caa55b2d6ab691471c0f4f",
+    "build\\assembly-gap\\variants\\panel32\\kibo\\dynamic_matrix.hpp": "535afd0c96607a65e13711bb0ea94a94d3791eb170fa54db5d1e220e12b103e6",
+    "build\\assembly-gap\\variants\\panel32\\kibo\\linalg.hpp": "52bf606a0f6ac2e21a83878e7b029b4c65935e25f5fc90387b1cf2ef74572634",
+    "build\\assembly-gap\\variants\\panel32\\kibo\\llt.hpp": "5306f4985e94f765b5f92109283e07fb9ea4e7748d1642711b1c3de5535627be",
+    "build\\assembly-gap\\variants\\panel32\\kibo\\qr.hpp": "04b1efdb4e2869ddc75ad6075874a8ab15d29051e79a24a19765fad1b50193ae",
+    "build\\assembly-gap\\variants\\panel32\\kibo\\workspace.hpp": "e74b13bb57d83bb0ad7b1c8f271c40db825a2d1b380f0224639a9d94ee8c48d0",
+    "build\\assembly-gap\\variants\\panel32\\kibo\\detail\\row_kernels.hpp": "b477534e3ef8af7a83176c29a20c2daf9bbca5d013caa55b2d6ab691471c0f4f",
+    "tests\\allocation_tests.cpp": "5e6f70369e8caf3cbec8a4fe9dc7110760fb6723017b37f2f72f02a7888df2d1",
+    "tests\\controlled_fixture.hpp": "eabb9c60f1659b981c52e704c3e9a53cdaef50349baccda2ec6fcc5774f6c142",
+    "tests\\core_tests.cpp": "d421340dee457e1630b7c08d92b0085b1de902cd578ed9d682361af418bc4567",
+    "tests\\dynamic_tests.cpp": "9cada0e439488a56e6024786cf67f2eb365dfa82ade10d97d2b1cae7bc14c633",
+    "tests\\llt_tests.cpp": "8d632985c4c301439c0f5ed55afee0483f51420dd9dea8cc5097d5c2f3feac61",
+    "tests\\no_runtime_tests.cpp": "00688119ad16325e4c0c3b27d7b9230ac04222f0edb8e0f3362f597efe4b1697",
+    "tests\\numerical_tests.cpp": "9104403a952679feba40d496e6e14d47d4837b056cfca21af0242a40c42df044",
+    "tests\\qr_tests.cpp": "a01f2b6349f4ee8b829fb98629e033eba360704bc006dfa46870597c9df86830",
+    "tests\\test_check.hpp": "8e2fa1cdda7bd43126d6d96729ec5770bbacc59a3e1316c399a617f6c71543ea",
+    "tests\\fixtures\\oracles.hpp": "2a5ebc209fc5ab0d0a9330f3499e34ec6421ea792a4909f4aef3862a36838d1d",
+    "tests\\fixtures\\oracles.json": "e605d0b03688cfad396539d34f4974f35758949fdcb8873bf10810d89c065c88",
+    "tests\\fixtures\\oracles.sha256": "68d4b2d0e6b7e73dc3b63f11e07c058000987a209f1b3aa74de3cec6fa078afa",
+    "tests\\installed_consumer\\CMakeLists.txt": "e5d2cf092cd1c8162f6652961ce6587601b9fd26907d33800127b3ec2186b372",
+    "tests\\installed_consumer\\main.cpp": "70fdc25a0ddadec4ef252d2418cacdd9820b91b034ac824006c0413d4aeb36c4",
+    "include\\kibo\\dynamic_matrix.hpp": "535afd0c96607a65e13711bb0ea94a94d3791eb170fa54db5d1e220e12b103e6",
+    "include\\kibo\\linalg.hpp": "52bf606a0f6ac2e21a83878e7b029b4c65935e25f5fc90387b1cf2ef74572634",
+    "include\\kibo\\llt.hpp": "7b492eddba49a6b8bfaf03357fc4b8e1ed58497aca96f882bf7d7679959617c1",
+    "include\\kibo\\qr.hpp": "04b1efdb4e2869ddc75ad6075874a8ab15d29051e79a24a19765fad1b50193ae",
+    "include\\kibo\\workspace.hpp": "e74b13bb57d83bb0ad7b1c8f271c40db825a2d1b380f0224639a9d94ee8c48d0",
+    "include\\kibo\\detail\\row_kernels.hpp": "b477534e3ef8af7a83176c29a20c2daf9bbca5d013caa55b2d6ab691471c0f4f"
+  },
+  "binarySha256": {
+    "baseline": "828038d33a9fac23702e2df180fce9fcd35d8293e8988728a48c0aca7b84bbe8",
+    "dot": "f189e8db1847ec6ceb0eae23ea77519fa15487a11f4901db0e1f2c9d7d916415",
+    "panel32": "83e85c5dd4ea55e79aedbec6fdf191adef6aaaeaa9a76075d243ce8e40e675a9",
+    "forward": "5e4e0d397cdcf6a62a53e9a73377fd9e2723edfe35f81d8b6059b0ba66015707",
+    "fused32": "1420cb50b132abd591bac54ab3b22ffa92c76840c9d3c91756e0a61addd5b3ee",
+    "fused_panel32": "57382ac58b7d6a48ac4c3ff4025e5c1bed388bff1902ffa74efa5d7068336e0a",
+    "no_validation": "7258d9a43e61ebd611711084110d4af41923a50957a9508cd387a89bd21ac2f3",
+    "inline_finite": "408c186bfee2449486bf862c18db4b7b35f86fb1e9d0920ce65d0b5f25064309",
+    "fused_panel_inline": "db014e9b198e1941efe7939d36b9e14c79d28b7d0ba9b89d4178735810a014ce",
+    "micro": "3f8bcef37265b19be08591be4cf739c2c9f5b29d26e321e0ba0373d1ffe46362"
+  },
+  "records": [
+    {
+      "variant": "panel32",
+      "process": 0,
+      "file": "panel32-p0.jsonl",
+      "command": [
+        "C:\\Users\\owner\\Documents\\git\\kibo-linalg\\build\\assembly-gap\\Release\\panel32.exe",
+        "32",
+        "15"
+      ],
+      "exitCode": 0
+    },
+    {
+      "variant": "dot",
+      "process": 0,
+      "file": "dot-p0.jsonl",
+      "command": [
+        "C:\\Users\\owner\\Documents\\git\\kibo-linalg\\build\\assembly-gap\\Release\\dot.exe",
+        "32",
+        "15"
+      ],
+      "exitCode": 0
+    },
+    {
+      "variant": "forward",
+      "process": 0,
+      "file": "forward-p0.jsonl",
+      "command": [
+        "C:\\Users\\owner\\Documents\\git\\kibo-linalg\\build\\assembly-gap\\Release\\forward.exe",
+        "32",
+        "15"
+      ],
+      "exitCode": 0
+    },
+    {
+      "variant": "fused_panel_inline",
+      "process": 0,
+      "file": "fused_panel_inline-p0.jsonl",
+      "command": [
+        "C:\\Users\\owner\\Documents\\git\\kibo-linalg\\build\\assembly-gap\\Release\\fused_panel_inline.exe",
+        "32",
+        "15"
+      ],
+      "exitCode": 0
+    },
+    {
+      "variant": "fused32",
+      "process": 0,
+      "file": "fused32-p0.jsonl",
+      "command": [
+        "C:\\Users\\owner\\Documents\\git\\kibo-linalg\\build\\assembly-gap\\Release\\fused32.exe",
+        "32",
+        "15"
+      ],
+      "exitCode": 0
+    },
+    {
+      "variant": "baseline",
+      "process": 0,
+      "file": "baseline-p0.jsonl",
+      "command": [
+        "C:\\Users\\owner\\Documents\\git\\kibo-linalg\\build\\assembly-gap\\Release\\baseline.exe",
+        "32",
+        "15"
+      ],
+      "exitCode": 0
+    },
+    {
+      "variant": "inline_finite",
+      "process": 0,
+      "file": "inline_finite-p0.jsonl",
+      "command": [
+        "C:\\Users\\owner\\Documents\\git\\kibo-linalg\\build\\assembly-gap\\Release\\inline_finite.exe",
+        "32",
+        "15"
+      ],
+      "exitCode": 0
+    },
+    {
+      "variant": "fused_panel32",
+      "process": 0,
+      "file": "fused_panel32-p0.jsonl",
+      "command": [
+        "C:\\Users\\owner\\Documents\\git\\kibo-linalg\\build\\assembly-gap\\Release\\fused_panel32.exe",
+        "32",
+        "15"
+      ],
+      "exitCode": 0
+    },
+    {
+      "variant": "no_validation",
+      "process": 0,
+      "file": "no_validation-p0.jsonl",
+      "command": [
+        "C:\\Users\\owner\\Documents\\git\\kibo-linalg\\build\\assembly-gap\\Release\\no_validation.exe",
+        "32",
+        "15"
+      ],
+      "exitCode": 0
+    },
+    {
+      "variant": "baseline",
+      "process": 1,
+      "file": "baseline-p1.jsonl",
+      "command": [
+        "C:\\Users\\owner\\Documents\\git\\kibo-linalg\\build\\assembly-gap\\Release\\baseline.exe",
+        "32",
+        "15"
+      ],
+      "exitCode": 0
+    },
+    {
+      "variant": "fused_panel32",
+      "process": 1,
+      "file": "fused_panel32-p1.jsonl",
+      "command": [
+        "C:\\Users\\owner\\Documents\\git\\kibo-linalg\\build\\assembly-gap\\Release\\fused_panel32.exe",
+        "32",
+        "15"
+      ],
+      "exitCode": 0
+    },
+    {
+      "variant": "dot",
+      "process": 1,
+      "file": "dot-p1.jsonl",
+      "command": [
+        "C:\\Users\\owner\\Documents\\git\\kibo-linalg\\build\\assembly-gap\\Release\\dot.exe",
+        "32",
+        "15"
+      ],
+      "exitCode": 0
+    },
+    {
+      "variant": "no_validation",
+      "process": 1,
+      "file": "no_validation-p1.jsonl",
+      "command": [
+        "C:\\Users\\owner\\Documents\\git\\kibo-linalg\\build\\assembly-gap\\Release\\no_validation.exe",
+        "32",
+        "15"
+      ],
+      "exitCode": 0
+    },
+    {
+      "variant": "fused32",
+      "process": 1,
+      "file": "fused32-p1.jsonl",
+      "command": [
+        "C:\\Users\\owner\\Documents\\git\\kibo-linalg\\build\\assembly-gap\\Release\\fused32.exe",
+        "32",
+        "15"
+      ],
+      "exitCode": 0
+    },
+    {
+      "variant": "fused_panel_inline",
+      "process": 1,
+      "file": "fused_panel_inline-p1.jsonl",
+      "command": [
+        "C:\\Users\\owner\\Documents\\git\\kibo-linalg\\build\\assembly-gap\\Release\\fused_panel_inline.exe",
+        "32",
+        "15"
+      ],
+      "exitCode": 0
+    },
+    {
+      "variant": "inline_finite",
+      "process": 1,
+      "file": "inline_finite-p1.jsonl",
+      "command": [
+        "C:\\Users\\owner\\Documents\\git\\kibo-linalg\\build\\assembly-gap\\Release\\inline_finite.exe",
+        "32",
+        "15"
+      ],
+      "exitCode": 0
+    },
+    {
+      "variant": "panel32",
+      "process": 1,
+      "file": "panel32-p1.jsonl",
+      "command": [
+        "C:\\Users\\owner\\Documents\\git\\kibo-linalg\\build\\assembly-gap\\Release\\panel32.exe",
+        "32",
+        "15"
+      ],
+      "exitCode": 0
+    },
+    {
+      "variant": "forward",
+      "process": 1,
+      "file": "forward-p1.jsonl",
+      "command": [
+        "C:\\Users\\owner\\Documents\\git\\kibo-linalg\\build\\assembly-gap\\Release\\forward.exe",
+        "32",
+        "15"
+      ],
+      "exitCode": 0
+    },
+    {
+      "variant": "forward",
+      "process": 2,
+      "file": "forward-p2.jsonl",
+      "command": [
+        "C:\\Users\\owner\\Documents\\git\\kibo-linalg\\build\\assembly-gap\\Release\\forward.exe",
+        "32",
+        "15"
+      ],
+      "exitCode": 0
+    },
+    {
+      "variant": "panel32",
+      "process": 2,
+      "file": "panel32-p2.jsonl",
+      "command": [
+        "C:\\Users\\owner\\Documents\\git\\kibo-linalg\\build\\assembly-gap\\Release\\panel32.exe",
+        "32",
+        "15"
+      ],
+      "exitCode": 0
+    },
+    {
+      "variant": "dot",
+      "process": 2,
+      "file": "dot-p2.jsonl",
+      "command": [
+        "C:\\Users\\owner\\Documents\\git\\kibo-linalg\\build\\assembly-gap\\Release\\dot.exe",
+        "32",
+        "15"
+      ],
+      "exitCode": 0
+    },
+    {
+      "variant": "fused32",
+      "process": 2,
+      "file": "fused32-p2.jsonl",
+      "command": [
+        "C:\\Users\\owner\\Documents\\git\\kibo-linalg\\build\\assembly-gap\\Release\\fused32.exe",
+        "32",
+        "15"
+      ],
+      "exitCode": 0
+    },
+    {
+      "variant": "fused_panel_inline",
+      "process": 2,
+      "file": "fused_panel_inline-p2.jsonl",
+      "command": [
+        "C:\\Users\\owner\\Documents\\git\\kibo-linalg\\build\\assembly-gap\\Release\\fused_panel_inline.exe",
+        "32",
+        "15"
+      ],
+      "exitCode": 0
+    },
+    {
+      "variant": "inline_finite",
+      "process": 2,
+      "file": "inline_finite-p2.jsonl",
+      "command": [
+        "C:\\Users\\owner\\Documents\\git\\kibo-linalg\\build\\assembly-gap\\Release\\inline_finite.exe",
+        "32",
+        "15"
+      ],
+      "exitCode": 0
+    },
+    {
+      "variant": "fused_panel32",
+      "process": 2,
+      "file": "fused_panel32-p2.jsonl",
+      "command": [
+        "C:\\Users\\owner\\Documents\\git\\kibo-linalg\\build\\assembly-gap\\Release\\fused_panel32.exe",
+        "32",
+        "15"
+      ],
+      "exitCode": 0
+    },
+    {
+      "variant": "baseline",
+      "process": 2,
+      "file": "baseline-p2.jsonl",
+      "command": [
+        "C:\\Users\\owner\\Documents\\git\\kibo-linalg\\build\\assembly-gap\\Release\\baseline.exe",
+        "32",
+        "15"
+      ],
+      "exitCode": 0
+    },
+    {
+      "variant": "no_validation",
+      "process": 2,
+      "file": "no_validation-p2.jsonl",
+      "command": [
+        "C:\\Users\\owner\\Documents\\git\\kibo-linalg\\build\\assembly-gap\\Release\\no_validation.exe",
+        "32",
+        "15"
+      ],
+      "exitCode": 0
+    }
+  ],
+  "finishedUtc": "2026-10-07T06:27:52.562253+00:00",
+  "valid": true
+}

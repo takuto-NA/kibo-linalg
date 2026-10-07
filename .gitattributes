@@ -18,3 +18,8 @@ docs/validation/contiguous-performance-comparison.* -text whitespace=cr-at-eol
 docs/validation/dispatch-performance-comparison.* -text whitespace=cr-at-eol
 docs/validation/performance/solver-locality/public.patch -text whitespace=cr-at-eol,-blank-at-eol
 docs/validation/performance/solver-locality/validation/windows-*.log -text whitespace=cr-at-eol,-blank-at-eol,-blank-at-eof
+
+tools/diagnostics/assembly-gap/** text eol=lf
+docs/validation/performance/assembly-gap/*.asm -text whitespace=cr-at-eol,-blank-at-eol,-blank-at-eof
+docs/validation/performance/assembly-gap/*disassembly.txt -text whitespace=cr-at-eol,-blank-at-eol,-blank-at-eof
+docs/validation/performance/assembly-gap/validation/windows-*.log -text whitespace=cr-at-eol,-blank-at-eol,-blank-at-eof

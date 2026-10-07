@@ -2,10 +2,14 @@
 
 2026-10-07。実装を利用・レビューできる段階にあり、初期保証全体の受入は未完了。
 
-最新の公開実装は`5127214`。LLTの列方向panelと入力走査、QRのrow/column kernelとcopyを改善した。
+最新の公開実装は`3c7d2c8`。32変数LLTの入力走査・panel切替・有限値判定を追加改善した。
+[アセンブリ比較と公開API再測定](../research/eigen-assembly-gap.md)ではn32/m128が5.330→2.775 µs、Eigen比0.973。
+その他の形状やQRを含む全体同等の受入は未完了。
+
+前段の公開実装`5127214`では、LLTの列方向panelと入力走査、QRのrow/column kernelとcopyを改善した。
 [同条件での旧版・修正版・Eigen比較](2026-10-07-solver-locality.md)を参照。
 以下のdispatch性能報告は旧版`83c7a14`の全phase・容量baselineであり、最新factor+solveの時間は新報告に分けている。
-[最新CI](https://github.com/takuto-NA/kibo-linalg/actions/runs/37578152963)は通常test・無確保・package・
+[最新CI](https://github.com/takuto-NA/kibo-linalg/actions/runs/37581895862)は通常test・無確保・package・
 WASM・ESP cross compileを通過し、PC4 jobsは数値gate未達で失敗。
 Releaseはrow19件・column18件、Debugの小規模suiteは各17件の数値未達が残る。
 親仕様は[PCのLM計算を起点とするポータブルC++20線形代数コアの初期仕様](https://github.com/takuto-NA/kibo-linalg/issues/9)、
