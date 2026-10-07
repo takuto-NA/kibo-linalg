@@ -51,8 +51,13 @@ pivot/arithmetic failureのindex、solve失敗時の出力保持、RHS/output完
 MSVC、GCC15.3、Clang20.1.8 libc++、Clang ASan/UBSanのDebug/Release全8構成で19 CTestを実行した。
 [失敗集合](../validation/performance/llt-tiny/validation/failure-set.json)は全構成とも既存Eigen precision CHECKの16件のみ。
 kiboの数値・scalar・失敗契約に新規失敗なし。MSVC Releaseのallocation計測は従来どおりskip、その他のallocationは通過。
-Standards・Specレビューは双方指摘0。WASM/ESP cross compileと固定sourceの正式性能は後続証拠で確認する。
+Standards・Specレビューは双方指摘0。固定sourceの正式性能は後続証拠で確認する。
 ESP実機はない。Eigen精度CHECKを診断へ変更する判断は未回答で、CHECKを維持している。
+
+source5e910adの[hosted CI](https://github.com/takuto-NA/kibo-linalg/actions/runs/37644418342)も監査した。
+[保存した証拠](../validation/performance/llt-tiny/hosted/evidence.json)のPC全8 Debug/Releaseで失敗集合は各16件のEigen precision CHECKのみ。
+kiboの精度・契約・scalarに失敗なし。WASM NodeとChromium/Firefox/WebKitの補正oracle・無確保・失敗時保持、
+ESP32-S3/C3のC++20 cross compileが通過した。CI全体はEigen CHECKによりfailureで、実機実行の証拠にはしない。
 
 ## 再現
 

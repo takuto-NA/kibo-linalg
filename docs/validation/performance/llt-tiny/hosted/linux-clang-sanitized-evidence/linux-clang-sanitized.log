@@ -1,0 +1,488 @@
+/work/.cache/downloads/cmake-3.30.5-linux-x86_64.tar.gz: OK
+clang version 20.1.8 (https://github.com/llvm/llvm-project 87f0227cb60147a26a1eeb4fb06e3b505e9c7261)
+Target: x86_64-unknown-linux-gnu
+Thread model: posix
+InstalledDir: /work/.cache/tools/LLVM-20.1.8-Linux-X64/bin
+cmake version 3.30.5
+
+CMake suite maintained and supported by Kitware (kitware.com/cmake).
+-- The CXX compiler identification is Clang 20.1.8
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /work/.cache/tools/LLVM-20.1.8-Linux-X64/bin/clang++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Configuring done (0.6s)
+-- Generating done (0.0s)
+-- Build files have been written to: /work/build/linux-clang-sanitized/Debug
+[  2%] Building CXX object CMakeFiles/kibo_basic.dir/examples/basic.cpp.o
+[  5%] Building CXX object CMakeFiles/kibo_migration.dir/examples/migration.cpp.o
+[  7%] Building CXX object CMakeFiles/kibo_common_2x2.dir/examples/common_2x2_host.cpp.o
+[ 10%] Building CXX object CMakeFiles/kibo_lm_reference.dir/benchmarks/lm_reference.cpp.o
+[ 12%] Linking CXX executable kibo_basic
+[ 15%] Linking CXX executable kibo_common_2x2
+[ 17%] Linking CXX executable kibo_migration
+[ 17%] Built target kibo_basic
+[ 20%] Building CXX object CMakeFiles/kibo_numerical_tests.dir/tests/numerical_tests.cpp.o
+[ 22%] Linking CXX executable kibo_lm_reference
+[ 22%] Built target kibo_common_2x2
+[ 25%] Building CXX object CMakeFiles/kibo_dense_benchmark.dir/benchmarks/dense.cpp.o
+[ 25%] Built target kibo_migration
+[ 27%] Building CXX object CMakeFiles/kibo_core_tests.dir/tests/core_tests.cpp.o
+[ 27%] Built target kibo_lm_reference
+[ 30%] Building CXX object CMakeFiles/kibo_matrix_view_tests.dir/tests/matrix_view_tests.cpp.o
+[ 32%] Linking CXX executable kibo_core_tests
+[ 35%] Linking CXX executable kibo_matrix_view_tests
+[ 35%] Built target kibo_core_tests
+[ 37%] Building CXX object CMakeFiles/kibo_dynamic_tests.dir/tests/dynamic_tests.cpp.o
+[ 37%] Built target kibo_matrix_view_tests
+[ 40%] Building CXX object CMakeFiles/kibo_llt_tests.dir/tests/llt_tests.cpp.o
+[ 42%] Linking CXX executable kibo_dynamic_tests
+[ 42%] Built target kibo_dynamic_tests
+[ 45%] Building CXX object CMakeFiles/kibo_llt_large_tests.dir/tests/llt_large_tests.cpp.o
+[ 47%] Linking CXX executable kibo_llt_large_tests
+[ 47%] Built target kibo_llt_large_tests
+[ 50%] Building CXX object CMakeFiles/kibo_llt_large_scalar_tests.dir/tests/llt_large_tests.cpp.o
+[ 52%] Linking CXX executable kibo_llt_large_scalar_tests
+[ 52%] Built target kibo_llt_large_scalar_tests
+[ 55%] Building CXX object CMakeFiles/kibo_qr_tests.dir/tests/qr_tests.cpp.o
+[ 57%] Linking CXX executable kibo_qr_tests
+[ 57%] Built target kibo_qr_tests
+[ 60%] Building CXX object CMakeFiles/kibo_qr_refined_tests.dir/tests/qr_refined_tests.cpp.o
+[ 62%] Linking CXX executable kibo_qr_refined_tests
+[ 62%] Built target kibo_qr_refined_tests
+[ 65%] Building CXX object CMakeFiles/kibo_llt_scalar_tests.dir/tests/llt_tests.cpp.o
+[ 67%] Linking CXX executable kibo_dense_benchmark
+[ 67%] Built target kibo_dense_benchmark
+[ 70%] Building CXX object CMakeFiles/kibo_qr_scalar_tests.dir/tests/qr_tests.cpp.o
+[ 72%] Linking CXX executable kibo_qr_scalar_tests
+[ 72%] Built target kibo_qr_scalar_tests
+[ 75%] Building CXX object CMakeFiles/kibo_qr_refined_scalar_tests.dir/tests/qr_refined_tests.cpp.o
+[ 77%] Linking CXX executable kibo_numerical_tests
+[ 77%] Built target kibo_numerical_tests
+[ 80%] Building CXX object CMakeFiles/kibo_no_runtime_tests.dir/tests/no_runtime_tests.cpp.o
+[ 82%] Linking CXX executable kibo_qr_refined_scalar_tests
+[ 82%] Built target kibo_qr_refined_scalar_tests
+[ 85%] Building CXX object CMakeFiles/kibo_dynamic_no_runtime_tests.dir/tests/dynamic_tests.cpp.o
+[ 87%] Linking CXX executable kibo_dynamic_no_runtime_tests
+[ 90%] Linking CXX executable kibo_no_runtime_tests
+[ 90%] Built target kibo_dynamic_no_runtime_tests
+[ 92%] Building CXX object CMakeFiles/kibo_allocation_tests.dir/tests/allocation_tests.cpp.o
+[ 92%] Built target kibo_no_runtime_tests
+[ 95%] Linking CXX executable kibo_allocation_tests
+[ 95%] Built target kibo_allocation_tests
+[ 97%] Linking CXX executable kibo_llt_tests
+[ 97%] Built target kibo_llt_tests
+[100%] Linking CXX executable kibo_llt_scalar_tests
+[100%] Built target kibo_llt_scalar_tests
+Internal ctest changing into directory: /work/build/linux-clang-sanitized/Debug
+Test project /work/build/linux-clang-sanitized/Debug
+      Start  1: lm_reference
+ 1/19 Test  #1: lm_reference .....................   Passed    0.01 sec
+      Start  2: numerical
+ 2/19 Test  #2: numerical ........................***Failed    0.27 sec
+m,n,condition,inconsistent,qr_forward,optimality,normal_llt_forward,normal_llt_status,qr_fast_forward,qr_fast_optimality
+oracle n=2 scale=2.5e-151 core_error=1.11022e-16 core_fast_error=0.00840344 Eigen_raw_error=1.48194e+06
+line 85: (reference-expected).norm()/expected.norm()<=1e-4
+oracle n=2 scale=0.25 core_error=0 core_fast_error=0.00314639 Eigen_raw_error=0.00678375
+line 85: (reference-expected).norm()/expected.norm()<=1e-4
+oracle n=2 scale=2.5e+149 core_error=0 core_fast_error=0.0118001 Eigen_raw_error=0.0036738
+line 85: (reference-expected).norm()/expected.norm()<=1e-4
+oracle n=8 scale=6.73469e-152 core_error=6.26689e-17 core_fast_error=0.00374205 Eigen_raw_error=1536.85
+line 85: (reference-expected).norm()/expected.norm()<=1e-4
+oracle n=8 scale=0.0673469 core_error=8.79428e-17 core_fast_error=0.0180599 Eigen_raw_error=0.00699299
+line 85: (reference-expected).norm()/expected.norm()<=1e-4
+oracle n=8 scale=6.73469e+148 core_error=0 core_fast_error=0.00460292 Eigen_raw_error=0.00518176
+line 85: (reference-expected).norm()/expected.norm()<=1e-4
+2,2,2,0,0,0,4.9650683064945459e-17,0,9.9301366129890917e-17,4.1594554064131396e-17
+2,2,10000,0,0,0,3.5108333983600324e-09,0,4.9671273898627239e-13,8.0020346606936439e-17
+2,2,100000000,0,1.7554166991800162e-09,0,0.15811388300841889,0,4.9650684034880093e-09,5.3346898945386977e-17
+8,2,2,0,0,0,4.9650683064945459e-17,0,2.8086667748613609e-16,6.7069203158113232e-17
+8,2,2,1,0,0,4.9650683064945459e-17,0,2.8086667748613609e-16,6.7066415798958241e-17
+8,2,10000,0,0,0,5.2662504837317291e-09,0,2.7507380450346532e-13,2.6673448987542309e-17
+8,2,10000,1,0,1.3335443130890585e-17,3.5108333983600324e-09,0,2.5648815204799432e-11,4.0006329391932243e-17
+8,2,100000000,0,1.7554167342883506e-09,0,0.15811388300841897,0,5.3719220772692319e-10,1.0669379746764716e-16
+line 126: (reference-fixture.truth).norm()/fixture.truth.norm()<=(condition<=1e4 ? 1e-8 : 1e-4)
+8,2,100000000,1,1.7554167342883506e-09,1.3439626560829064e-17,0.15811388300841889,0,0.0011124165848901194,5.3280303128353177e-17
+8,8,2,0,1.8129866073473578e-16,8.7354285477132439e-18,3.6895698945698122e-16,0,5.829836963294795e-16,3.7268851738327423e-17
+8,8,10000,0,1.270312403256082e-13,4.1081404527709925e-17,9.4552309608651176e-10,0,3.4953687309763909e-13,4.4921273969273038e-18
+8,8,100000000,0,5.6937702318702427e-12,2.9362310379900646e-17,0.062447940932261692,0,1.4851707715509914e-09,4.8968651499664782e-17
+32,8,2,0,1.8129866073473578e-16,8.735428547713247e-18,2.73719657989498e-16,0,3.8522044387811071e-16,2.9102690205775227e-17
+32,8,2,1,1.8129866073473578e-16,8.7318577229494441e-18,2.3111135221866393e-16,0,2.6656234908219155e-16,1.9521865157241732e-17
+32,8,10000,0,1.270312403256082e-13,4.1081404527709944e-17,3.619025985457791e-09,0,7.9153511106337467e-14,3.2790759483220023e-17
+32,8,10000,1,1.270312403256082e-13,4.1080968024938841e-17,2.9316874522185073e-09,0,2.0206930420649457e-12,2.5026583566829698e-17
+32,8,100000000,0,5.6937757609077944e-12,2.9362310379900646e-17,0.041041810168939548,0,1.2519683428181336e-09,7.8390801707142066e-17
+line 126: (reference-fixture.truth).norm()/fixture.truth.norm()<=(condition<=1e4 ? 1e-8 : 1e-4)
+32,8,100000000,1,5.6937757609077944e-12,2.9176260184277663e-17,0.048857003614527224,0,0.002805961059129699,8.3179457500588159e-17
+32,32,2,0,1.6892308614683635e-16,3.3057125744160342e-18,4.1381312214170953e-16,0,7.0851595051083651e-16,1.6472178611683663e-17
+32,32,10000,0,1.6703405373430727e-13,9.1235671189994924e-18,8.2664031827264632e-10,0,4.4026124896162358e-13,3.729243322349052e-17
+32,32,100000000,0,9.3848586307843567e-10,6.4214822303801563e-18,0.018139194292066976,0,3.0848966686841556e-09,9.0387250020330427e-17
+128,32,2,0,1.6892308614683635e-16,3.3057125744160361e-18,4.7166778335572923e-16,0,8.1509349964432003e-16,1.8180084881913418e-17
+128,32,2,1,1.6892308614683635e-16,3.3001274560814432e-18,4.3892660388148032e-16,0,8.6063882585540007e-16,1.618062188811853e-17
+128,32,10000,0,1.6703405373430727e-13,9.1235671189994954e-18,1.4393491509380581e-09,0,2.0493161281501224e-13,7.3723709297598771e-17
+128,32,10000,1,1.6703405373430727e-13,9.1307633680330947e-18,7.4004475033705338e-10,0,1.7907351763206259e-12,2.5660395570995254e-17
+128,32,100000000,0,9.3848586229546642e-10,6.4214822303801586e-18,0.08463994838538362,0,3.4612873981007819e-09,1.1552959427518454e-16
+128,32,100000000,1,9.3848586287432286e-10,2.9225360757001951e-18,0.077008330913204762,0,0.00028195026267107575,1.7180717943926844e-16
+numerical acceptance failures=8
+
+      Start  3: numerical_column
+ 3/19 Test  #3: numerical_column .................***Failed    0.28 sec
+m,n,condition,inconsistent,qr_forward,optimality,normal_llt_forward,normal_llt_status,qr_fast_forward,qr_fast_optimality
+oracle n=2 scale=2.5e-151 core_error=1.11022e-16 core_fast_error=0.00840344 Eigen_raw_error=1.48194e+06
+line 85: (reference-expected).norm()/expected.norm()<=1e-4
+oracle n=2 scale=0.25 core_error=0 core_fast_error=0.00314639 Eigen_raw_error=0.00678375
+line 85: (reference-expected).norm()/expected.norm()<=1e-4
+oracle n=2 scale=2.5e+149 core_error=0 core_fast_error=0.0036738 Eigen_raw_error=0.0036738
+line 85: (reference-expected).norm()/expected.norm()<=1e-4
+oracle n=8 scale=6.73469e-152 core_error=0 core_fast_error=0.000919054 Eigen_raw_error=1536.85
+line 85: (reference-expected).norm()/expected.norm()<=1e-4
+oracle n=8 scale=0.0673469 core_error=0 core_fast_error=0.00557607 Eigen_raw_error=0.00699299
+line 85: (reference-expected).norm()/expected.norm()<=1e-4
+oracle n=8 scale=6.73469e+148 core_error=1.55462e-17 core_fast_error=0.00366202 Eigen_raw_error=0.00518176
+line 85: (reference-expected).norm()/expected.norm()<=1e-4
+2,2,2,0,0,0,4.9650683064945459e-17,0,9.9301366129890917e-17,4.1594554064131396e-17
+2,2,10000,0,0,0,3.5108333983600324e-09,0,4.9671273898627239e-13,8.0020346606936439e-17
+2,2,100000000,0,1.7554166991800162e-09,0,0.15811388300841889,0,4.9650684034880093e-09,5.3346898945386977e-17
+8,2,2,0,0,0,4.9650683064945459e-17,0,2.8086667748613609e-16,6.7069203158113232e-17
+8,2,2,1,0,0,4.9650683064945459e-17,0,2.8086667748613609e-16,6.7066415798958241e-17
+8,2,10000,0,0,0,5.2662504837317291e-09,0,1.511062724875412e-13,0
+8,2,10000,1,0,1.3335443130890585e-17,3.5108333983600324e-09,0,2.5644883071314639e-11,4.0006329391932354e-17
+8,2,100000000,0,1.7554167342883506e-09,0,0.15811388300841897,0,5.3719192686024563e-10,1.0669379746764718e-16
+line 126: (reference-fixture.truth).norm()/fixture.truth.norm()<=(condition<=1e4 ? 1e-8 : 1e-4)
+8,2,100000000,1,1.7554167342883506e-09,1.3439626560829064e-17,0.15811388300841889,0,0.0011124166236797033,1.066648729977105e-16
+8,8,2,0,1.8129866073473578e-16,8.7354285477132439e-18,3.6895698945698122e-16,0,6.1839033597265299e-16,4.9925535061116963e-17
+8,8,10000,0,1.270312403256082e-13,4.1081404527709925e-17,9.4552309608651176e-10,0,2.0698638303714501e-13,1.657224783225466e-17
+8,8,100000000,0,5.6938117021155897e-12,1.408387582494792e-18,0.062447940932261692,0,1.1491943010069935e-09,3.9164056139298343e-17
+32,8,2,0,1.8129866073473578e-16,8.735428547713247e-18,2.73719657989498e-16,0,2.8294569152917031e-16,2.6683436442669397e-17
+32,8,2,1,1.8129866073473578e-16,8.7318577229494441e-18,2.3111135221866393e-16,0,4.5010301578265396e-16,4.7318156537496071e-17
+32,8,10000,0,1.270312403256082e-13,4.1081404527709944e-17,3.619025985457791e-09,0,2.1309115326275214e-13,6.5443854996285333e-17
+32,8,10000,1,1.270312403256082e-13,4.1080968024938841e-17,2.9316874522185073e-09,0,3.5162237619165476e-12,4.7928984455359875e-17
+32,8,100000000,0,5.6938144624922376e-12,1.408387582494792e-18,0.041041810168939548,0,3.6626239447461195e-10,4.8928339172064797e-17
+line 126: (reference-fixture.truth).norm()/fixture.truth.norm()<=(condition<=1e4 ? 1e-8 : 1e-4)
+32,8,100000000,1,5.6937702318702427e-12,2.9176260184277663e-17,0.048857003614527224,0,0.00088131403187280747,7.8239664860026359e-17
+32,32,2,0,1.6892308614683635e-16,3.3057125744160342e-18,4.1381312214170953e-16,0,6.1751908409001452e-16,1.3161151513793688e-17
+32,32,10000,0,1.6703405373430727e-13,9.1235671189994924e-18,8.2664031827264632e-10,0,1.9555840075474181e-13,3.3894321423422219e-17
+32,32,100000000,0,9.3848586273472538e-10,2.921296470039219e-18,0.018139194292066976,0,9.1792533372878176e-10,6.0684467803738767e-17
+128,32,2,0,1.6892308614683635e-16,3.3057125744160361e-18,4.7166778335572923e-16,0,5.634684457840274e-16,1.5529592583044666e-17
+128,32,2,1,1.6892308614683635e-16,3.3001274560814432e-18,4.3892660388148032e-16,0,5.8580346463786437e-16,1.3223783590317733e-17
+128,32,10000,0,1.6703405373430727e-13,9.1235671189994954e-18,1.4393491509380581e-09,0,2.4145979295937366e-13,1.3636852723850108e-17
+128,32,10000,1,1.6703405373430727e-13,9.1307633680330947e-18,7.4004475033705338e-10,0,1.1379429318498515e-12,3.7163283392973458e-17
+128,32,100000000,0,9.3848586480572838e-10,2.9212964700392202e-18,0.08463994838538362,0,1.8125506966194581e-09,1.9554292572728657e-17
+128,32,100000000,1,9.3848586307843567e-10,6.429223941965357e-18,0.077008330913204762,0,0.00015263143874373505,3.9086652935894692e-17
+numerical acceptance failures=8
+
+      Start  4: common_2x2
+ 4/19 Test  #4: common_2x2 .......................   Passed    0.01 sec
+      Start  5: migration
+ 5/19 Test  #5: migration ........................   Passed    0.01 sec
+      Start  6: core
+ 6/19 Test  #6: core .............................   Passed    0.01 sec
+      Start  7: matrix_view
+ 7/19 Test  #7: matrix_view ......................   Passed    0.06 sec
+      Start  8: dynamic
+ 8/19 Test  #8: dynamic ..........................   Passed    0.01 sec
+      Start  9: llt
+ 9/19 Test  #9: llt ..............................   Passed    0.04 sec
+      Start 10: llt_large
+10/19 Test #10: llt_large ........................   Passed    0.51 sec
+      Start 11: llt_large_scalar
+11/19 Test #11: llt_large_scalar .................   Passed    0.98 sec
+      Start 12: qr
+12/19 Test #12: qr ...............................   Passed    0.01 sec
+      Start 13: qr_refined
+13/19 Test #13: qr_refined .......................   Passed    0.02 sec
+      Start 14: llt_scalar
+14/19 Test #14: llt_scalar .......................   Passed    0.05 sec
+      Start 15: qr_scalar
+15/19 Test #15: qr_scalar ........................   Passed    0.01 sec
+      Start 16: qr_refined_scalar
+16/19 Test #16: qr_refined_scalar ................   Passed    0.02 sec
+      Start 17: no_runtime
+17/19 Test #17: no_runtime .......................   Passed    0.01 sec
+      Start 18: dynamic_no_runtime
+18/19 Test #18: dynamic_no_runtime ...............   Passed    0.01 sec
+      Start 19: allocation
+19/19 Test #19: allocation .......................   Passed    0.03 sec
+
+89% tests passed, 2 tests failed out of 19
+
+Total Test time (real) =   2.36 sec
+
+The following tests FAILED:
+	  2 - numerical (Failed)
+	  3 - numerical_column (Failed)
+-- The CXX compiler identification is Clang 20.1.8
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /work/.cache/tools/LLVM-20.1.8-Linux-X64/bin/clang++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Configuring done (0.6s)
+-- Generating done (0.0s)
+-- Build files have been written to: /work/build/linux-clang-sanitized/Release
+[  2%] Building CXX object CMakeFiles/kibo_basic.dir/examples/basic.cpp.o
+[  5%] Building CXX object CMakeFiles/kibo_common_2x2.dir/examples/common_2x2_host.cpp.o
+[  7%] Building CXX object CMakeFiles/kibo_lm_reference.dir/benchmarks/lm_reference.cpp.o
+[ 10%] Building CXX object CMakeFiles/kibo_migration.dir/examples/migration.cpp.o
+[ 12%] Linking CXX executable kibo_basic
+[ 12%] Built target kibo_basic
+[ 15%] Building CXX object CMakeFiles/kibo_numerical_tests.dir/tests/numerical_tests.cpp.o
+[ 17%] Linking CXX executable kibo_common_2x2
+[ 20%] Linking CXX executable kibo_migration
+[ 22%] Linking CXX executable kibo_lm_reference
+[ 22%] Built target kibo_migration
+[ 22%] Built target kibo_common_2x2
+[ 27%] Building CXX object CMakeFiles/kibo_dense_benchmark.dir/benchmarks/dense.cpp.o
+[ 27%] Building CXX object CMakeFiles/kibo_core_tests.dir/tests/core_tests.cpp.o
+[ 27%] Built target kibo_lm_reference
+[ 30%] Building CXX object CMakeFiles/kibo_matrix_view_tests.dir/tests/matrix_view_tests.cpp.o
+[ 32%] Linking CXX executable kibo_matrix_view_tests
+[ 32%] Built target kibo_matrix_view_tests
+[ 35%] Building CXX object CMakeFiles/kibo_dynamic_tests.dir/tests/dynamic_tests.cpp.o
+[ 37%] Linking CXX executable kibo_core_tests
+[ 37%] Built target kibo_core_tests
+[ 40%] Building CXX object CMakeFiles/kibo_llt_tests.dir/tests/llt_tests.cpp.o
+[ 42%] Linking CXX executable kibo_dynamic_tests
+[ 42%] Built target kibo_dynamic_tests
+[ 45%] Building CXX object CMakeFiles/kibo_llt_large_tests.dir/tests/llt_large_tests.cpp.o
+[ 47%] Linking CXX executable kibo_llt_large_tests
+[ 47%] Built target kibo_llt_large_tests
+[ 50%] Building CXX object CMakeFiles/kibo_llt_large_scalar_tests.dir/tests/llt_large_tests.cpp.o
+[ 52%] Linking CXX executable kibo_llt_large_scalar_tests
+[ 52%] Built target kibo_llt_large_scalar_tests
+[ 55%] Building CXX object CMakeFiles/kibo_qr_tests.dir/tests/qr_tests.cpp.o
+[ 57%] Linking CXX executable kibo_qr_tests
+[ 57%] Built target kibo_qr_tests
+[ 60%] Building CXX object CMakeFiles/kibo_qr_refined_tests.dir/tests/qr_refined_tests.cpp.o
+[ 62%] Linking CXX executable kibo_qr_refined_tests
+[ 62%] Built target kibo_qr_refined_tests
+[ 65%] Building CXX object CMakeFiles/kibo_llt_scalar_tests.dir/tests/llt_tests.cpp.o
+[ 67%] Linking CXX executable kibo_llt_tests
+[ 67%] Built target kibo_llt_tests
+[ 70%] Building CXX object CMakeFiles/kibo_qr_scalar_tests.dir/tests/qr_tests.cpp.o
+[ 72%] Linking CXX executable kibo_qr_scalar_tests
+[ 72%] Built target kibo_qr_scalar_tests
+[ 75%] Building CXX object CMakeFiles/kibo_qr_refined_scalar_tests.dir/tests/qr_refined_tests.cpp.o
+[ 77%] Linking CXX executable kibo_qr_refined_scalar_tests
+[ 77%] Built target kibo_qr_refined_scalar_tests
+[ 80%] Building CXX object CMakeFiles/kibo_no_runtime_tests.dir/tests/no_runtime_tests.cpp.o
+[ 82%] Linking CXX executable kibo_numerical_tests
+[ 82%] Built target kibo_numerical_tests
+[ 85%] Building CXX object CMakeFiles/kibo_dynamic_no_runtime_tests.dir/tests/dynamic_tests.cpp.o
+[ 87%] Linking CXX executable kibo_dynamic_no_runtime_tests
+[ 87%] Built target kibo_dynamic_no_runtime_tests
+[ 90%] Building CXX object CMakeFiles/kibo_allocation_tests.dir/tests/allocation_tests.cpp.o
+[ 92%] Linking CXX executable kibo_dense_benchmark
+[ 95%] Linking CXX executable kibo_no_runtime_tests
+[ 95%] Built target kibo_dense_benchmark
+[ 95%] Built target kibo_no_runtime_tests
+[ 97%] Linking CXX executable kibo_llt_scalar_tests
+[ 97%] Built target kibo_llt_scalar_tests
+[100%] Linking CXX executable kibo_allocation_tests
+[100%] Built target kibo_allocation_tests
+Internal ctest changing into directory: /work/build/linux-clang-sanitized/Release
+Test project /work/build/linux-clang-sanitized/Release
+      Start  1: lm_reference
+ 1/19 Test  #1: lm_reference .....................   Passed    0.01 sec
+      Start  2: numerical
+ 2/19 Test  #2: numerical ........................***Failed   39.76 sec
+m,n,condition,inconsistent,qr_forward,optimality,normal_llt_forward,normal_llt_status,qr_fast_forward,qr_fast_optimality
+oracle n=2 scale=2.5e-151 core_error=1.11022e-16 core_fast_error=0.00840344 Eigen_raw_error=1.48194e+06
+line 85: (reference-expected).norm()/expected.norm()<=1e-4
+oracle n=2 scale=0.25 core_error=0 core_fast_error=0.00314639 Eigen_raw_error=0.00678375
+line 85: (reference-expected).norm()/expected.norm()<=1e-4
+oracle n=2 scale=2.5e+149 core_error=0 core_fast_error=0.0118001 Eigen_raw_error=0.0036738
+line 85: (reference-expected).norm()/expected.norm()<=1e-4
+oracle n=8 scale=6.73469e-152 core_error=6.26689e-17 core_fast_error=0.00374205 Eigen_raw_error=1536.85
+line 85: (reference-expected).norm()/expected.norm()<=1e-4
+oracle n=8 scale=0.0673469 core_error=8.79428e-17 core_fast_error=0.0180599 Eigen_raw_error=0.00699299
+line 85: (reference-expected).norm()/expected.norm()<=1e-4
+oracle n=8 scale=6.73469e+148 core_error=0 core_fast_error=0.00460292 Eigen_raw_error=0.00518176
+line 85: (reference-expected).norm()/expected.norm()<=1e-4
+2,2,2,0,0,0,4.9650683064945459e-17,0,9.9301366129890917e-17,4.1594554064131396e-17
+2,2,10000,0,0,0,3.5108333983600324e-09,0,4.9671273898627239e-13,8.0020346606936439e-17
+2,2,100000000,0,1.7554166991800162e-09,0,0.15811388300841889,0,4.9650684034880093e-09,5.3346898945386977e-17
+8,2,2,0,0,0,4.9650683064945459e-17,0,2.8086667748613609e-16,6.7069203158113232e-17
+8,2,2,1,0,0,4.9650683064945459e-17,0,2.8086667748613609e-16,6.7066415798958241e-17
+8,2,10000,0,0,0,5.2662504837317291e-09,0,2.7507380450346532e-13,2.6673448987542309e-17
+8,2,10000,1,0,1.3335443130890585e-17,3.5108333983600324e-09,0,2.5648815204799432e-11,4.0006329391932243e-17
+8,2,100000000,0,1.7554167342883506e-09,0,0.15811388300841897,0,5.3719220772692319e-10,1.0669379746764716e-16
+line 126: (reference-fixture.truth).norm()/fixture.truth.norm()<=(condition<=1e4 ? 1e-8 : 1e-4)
+8,2,100000000,1,1.7554167342883506e-09,1.3439626560829064e-17,0.15811388300841889,0,0.0011124165848901194,5.3280303128353177e-17
+8,8,2,0,1.8129866073473578e-16,8.7354285477132439e-18,3.6895698945698122e-16,0,5.829836963294795e-16,3.7268851738327423e-17
+8,8,10000,0,1.270312403256082e-13,4.1081404527709925e-17,9.4552309608651176e-10,0,3.4953687309763909e-13,4.4921273969273038e-18
+8,8,100000000,0,5.6937702318702427e-12,2.9362310379900646e-17,0.062447940932261692,0,1.4851707715509914e-09,4.8968651499664782e-17
+32,8,2,0,1.8129866073473578e-16,8.735428547713247e-18,2.73719657989498e-16,0,3.8522044387811071e-16,2.9102690205775227e-17
+32,8,2,1,1.8129866073473578e-16,8.7318577229494441e-18,2.3111135221866393e-16,0,2.6656234908219155e-16,1.9521865157241732e-17
+32,8,10000,0,1.270312403256082e-13,4.1081404527709944e-17,3.619025985457791e-09,0,7.9153511106337467e-14,3.2790759483220023e-17
+32,8,10000,1,1.270312403256082e-13,4.1080968024938841e-17,2.9316874522185073e-09,0,2.0206930420649457e-12,2.5026583566829698e-17
+32,8,100000000,0,5.6937757609077944e-12,2.9362310379900646e-17,0.041041810168939548,0,1.2519683428181336e-09,7.8390801707142066e-17
+line 126: (reference-fixture.truth).norm()/fixture.truth.norm()<=(condition<=1e4 ? 1e-8 : 1e-4)
+32,8,100000000,1,5.6937757609077944e-12,2.9176260184277663e-17,0.048857003614527224,0,0.002805961059129699,8.3179457500588159e-17
+32,32,2,0,1.6892308614683635e-16,3.3057125744160342e-18,4.1381312214170953e-16,0,7.0851595051083651e-16,1.6472178611683663e-17
+32,32,10000,0,1.6703405373430727e-13,9.1235671189994924e-18,8.2664031827264632e-10,0,4.4026124896162358e-13,3.729243322349052e-17
+32,32,100000000,0,9.3848586307843567e-10,6.4214822303801563e-18,0.018139194292066976,0,3.0848966686841556e-09,9.0387250020330427e-17
+128,32,2,0,1.6892308614683635e-16,3.3057125744160361e-18,4.7166778335572923e-16,0,8.1509349964432003e-16,1.8180084881913418e-17
+128,32,2,1,1.6892308614683635e-16,3.3001274560814432e-18,4.3892660388148032e-16,0,8.6063882585540007e-16,1.618062188811853e-17
+128,32,10000,0,1.6703405373430727e-13,9.1235671189994954e-18,1.4393491509380581e-09,0,2.0493161281501224e-13,7.3723709297598771e-17
+128,32,10000,1,1.6703405373430727e-13,9.1307633680330947e-18,7.4004475033705338e-10,0,1.7907351763206259e-12,2.5660395570995254e-17
+128,32,100000000,0,9.3848586229546642e-10,6.4214822303801586e-18,0.08463994838538362,0,3.4612873981007819e-09,1.1552959427518454e-16
+128,32,100000000,1,9.3848586287432286e-10,2.9225360757001951e-18,0.077008330913204762,0,0.00028195026267107575,1.7180717943926844e-16
+128,128,2,0,2.8445796164173315e-16,1.7405872265881994e-18,6.0041570694915015e-16,0,1.2795525558380562e-15,7.8451647680027676e-18
+128,128,10000,0,2.8516877282516888e-13,3.7533824078686703e-18,2.7074551815887771e-09,0,8.8743056490719192e-13,4.3703754868196912e-17
+128,128,100000000,0,3.1695602261600071e-09,5.9053825495406223e-18,0.15796445533504136,0,7.2859570611645843e-09,5.0109582282631889e-17
+512,128,2,0,2.8445796164173315e-16,1.740587226588226e-18,6.8667268451599576e-16,0,1.7046727503400841e-15,1.0994823532691345e-17
+512,128,2,1,2.8445796164173315e-16,1.7404710276620679e-18,6.8264181399806782e-16,0,1.2999771651070459e-15,7.9236581047485496e-18
+512,128,10000,0,2.8516877282516888e-13,3.7533824078687312e-18,2.8802435067605445e-09,0,6.0853391945051835e-13,4.043486103996328e-17
+512,128,10000,1,2.8516877282516888e-13,3.7508563331046868e-18,3.6062056524750104e-09,0,2.3691083141129214e-12,3.6582891943439413e-17
+512,128,100000000,0,3.169560224393833e-09,5.6174578364204014e-18,nan,8,6.747307338662643e-09,5.0376029350934311e-17
+512,128,100000000,1,3.1695602270499132e-09,5.9086451984787865e-18,nan,8,0.0001085183771391757,7.7161098304687938e-17
+512,512,2,0,5.0607861289736776e-16,8.8983141520888819e-19,9.790546316591476e-16,0,2.3460126891475095e-15,3.9108102560050565e-18
+512,512,10000,0,6.0612703431291639e-13,2.0570535066677813e-18,3.6391321515689704e-09,0,1.6998155386929842e-12,1.7747766939707065e-17
+512,512,100000000,0,4.1616622016073626e-09,1.8759537964609546e-18,nan,8,1.2126649162434877e-08,4.0947819172875942e-17
+2048,512,2,0,5.0607861289736776e-16,8.8983141520907366e-19,1.0976243434839986e-15,0,3.307812373875134e-15,6.0160628791002426e-18
+2048,512,2,1,5.0649080190144836e-16,8.887371427634263e-19,1.1032003223065344e-15,0,3.2036316125319801e-15,5.7847370805393452e-18
+2048,512,10000,0,6.0612703431291639e-13,2.0570535066683706e-18,6.6390355852916895e-09,0,1.4612272899079117e-12,2.6001196702169583e-17
+2048,512,10000,1,6.063883580023204e-13,1.7881948232809747e-18,5.1724527211637471e-09,0,3.0190076425096198e-12,2.6594321391934359e-17
+2048,512,100000000,0,4.1616622023882509e-09,1.8906049268088967e-18,0.93224730148910062,0,1.4014612584268715e-08,5.7460267031114528e-17
+2048,512,100000000,1,4.1697127546531636e-09,2.953419834616613e-18,1.0533047327858895,0,0.00016221005528609074,4.9857865643502622e-17
+numerical acceptance failures=8
+
+      Start  3: numerical_column
+ 3/19 Test  #3: numerical_column .................***Failed   39.87 sec
+m,n,condition,inconsistent,qr_forward,optimality,normal_llt_forward,normal_llt_status,qr_fast_forward,qr_fast_optimality
+oracle n=2 scale=2.5e-151 core_error=1.11022e-16 core_fast_error=0.00840344 Eigen_raw_error=1.48194e+06
+line 85: (reference-expected).norm()/expected.norm()<=1e-4
+oracle n=2 scale=0.25 core_error=0 core_fast_error=0.00314639 Eigen_raw_error=0.00678375
+line 85: (reference-expected).norm()/expected.norm()<=1e-4
+oracle n=2 scale=2.5e+149 core_error=0 core_fast_error=0.0036738 Eigen_raw_error=0.0036738
+line 85: (reference-expected).norm()/expected.norm()<=1e-4
+oracle n=8 scale=6.73469e-152 core_error=0 core_fast_error=0.000919054 Eigen_raw_error=1536.85
+line 85: (reference-expected).norm()/expected.norm()<=1e-4
+oracle n=8 scale=0.0673469 core_error=0 core_fast_error=0.00557607 Eigen_raw_error=0.00699299
+line 85: (reference-expected).norm()/expected.norm()<=1e-4
+oracle n=8 scale=6.73469e+148 core_error=1.55462e-17 core_fast_error=0.00366202 Eigen_raw_error=0.00518176
+line 85: (reference-expected).norm()/expected.norm()<=1e-4
+2,2,2,0,0,0,4.9650683064945459e-17,0,9.9301366129890917e-17,4.1594554064131396e-17
+2,2,10000,0,0,0,3.5108333983600324e-09,0,4.9671273898627239e-13,8.0020346606936439e-17
+2,2,100000000,0,1.7554166991800162e-09,0,0.15811388300841889,0,4.9650684034880093e-09,5.3346898945386977e-17
+8,2,2,0,0,0,4.9650683064945459e-17,0,2.8086667748613609e-16,6.7069203158113232e-17
+8,2,2,1,0,0,4.9650683064945459e-17,0,2.8086667748613609e-16,6.7066415798958241e-17
+8,2,10000,0,0,0,5.2662504837317291e-09,0,1.511062724875412e-13,0
+8,2,10000,1,0,1.3335443130890585e-17,3.5108333983600324e-09,0,2.5644883071314639e-11,4.0006329391932354e-17
+8,2,100000000,0,1.7554167342883506e-09,0,0.15811388300841897,0,5.3719192686024563e-10,1.0669379746764718e-16
+line 126: (reference-fixture.truth).norm()/fixture.truth.norm()<=(condition<=1e4 ? 1e-8 : 1e-4)
+8,2,100000000,1,1.7554167342883506e-09,1.3439626560829064e-17,0.15811388300841889,0,0.0011124166236797033,1.066648729977105e-16
+8,8,2,0,1.8129866073473578e-16,8.7354285477132439e-18,3.6895698945698122e-16,0,6.1839033597265299e-16,4.9925535061116963e-17
+8,8,10000,0,1.270312403256082e-13,4.1081404527709925e-17,9.4552309608651176e-10,0,2.0698638303714501e-13,1.657224783225466e-17
+8,8,100000000,0,5.6938117021155897e-12,1.408387582494792e-18,0.062447940932261692,0,1.1491943010069935e-09,3.9164056139298343e-17
+32,8,2,0,1.8129866073473578e-16,8.735428547713247e-18,2.73719657989498e-16,0,2.8294569152917031e-16,2.6683436442669397e-17
+32,8,2,1,1.8129866073473578e-16,8.7318577229494441e-18,2.3111135221866393e-16,0,4.5010301578265396e-16,4.7318156537496071e-17
+32,8,10000,0,1.270312403256082e-13,4.1081404527709944e-17,3.619025985457791e-09,0,2.1309115326275214e-13,6.5443854996285333e-17
+32,8,10000,1,1.270312403256082e-13,4.1080968024938841e-17,2.9316874522185073e-09,0,3.5162237619165476e-12,4.7928984455359875e-17
+32,8,100000000,0,5.6938144624922376e-12,1.408387582494792e-18,0.041041810168939548,0,3.6626239447461195e-10,4.8928339172064797e-17
+line 126: (reference-fixture.truth).norm()/fixture.truth.norm()<=(condition<=1e4 ? 1e-8 : 1e-4)
+32,8,100000000,1,5.6937702318702427e-12,2.9176260184277663e-17,0.048857003614527224,0,0.00088131403187280747,7.8239664860026359e-17
+32,32,2,0,1.6892308614683635e-16,3.3057125744160342e-18,4.1381312214170953e-16,0,6.1751908409001452e-16,1.3161151513793688e-17
+32,32,10000,0,1.6703405373430727e-13,9.1235671189994924e-18,8.2664031827264632e-10,0,1.9555840075474181e-13,3.3894321423422219e-17
+32,32,100000000,0,9.3848586273472538e-10,2.921296470039219e-18,0.018139194292066976,0,9.1792533372878176e-10,6.0684467803738767e-17
+128,32,2,0,1.6892308614683635e-16,3.3057125744160361e-18,4.7166778335572923e-16,0,5.634684457840274e-16,1.5529592583044666e-17
+128,32,2,1,1.6892308614683635e-16,3.3001274560814432e-18,4.3892660388148032e-16,0,5.8580346463786437e-16,1.3223783590317733e-17
+128,32,10000,0,1.6703405373430727e-13,9.1235671189994954e-18,1.4393491509380581e-09,0,2.4145979295937366e-13,1.3636852723850108e-17
+128,32,10000,1,1.6703405373430727e-13,9.1307633680330947e-18,7.4004475033705338e-10,0,1.1379429318498515e-12,3.7163283392973458e-17
+128,32,100000000,0,9.3848586480572838e-10,2.9212964700392202e-18,0.08463994838538362,0,1.8125506966194581e-09,1.9554292572728657e-17
+128,32,100000000,1,9.3848586307843567e-10,6.429223941965357e-18,0.077008330913204762,0,0.00015263143874373505,3.9086652935894692e-17
+128,128,2,0,2.8445796164173315e-16,1.7405872265881994e-18,6.0041570694915015e-16,0,1.0436194703632906e-15,6.7211618722658806e-18
+128,128,10000,0,2.8516877282516888e-13,3.7533824078686703e-18,2.7074551815887771e-09,0,4.0168392658741302e-13,1.9437092266597552e-17
+128,128,100000000,0,3.1695602268785462e-09,5.9053825495406223e-18,0.15796445533504136,0,5.811139804637123e-09,3.1850125796445647e-17
+512,128,2,0,2.8445796164173315e-16,1.740587226588226e-18,6.8667268451599576e-16,0,1.162849574532386e-15,8.1812992106438917e-18
+512,128,2,1,2.8445796164173315e-16,1.7404710276620679e-18,6.8264181399806782e-16,0,1.1762116079360193e-15,7.5596381570457304e-18
+512,128,10000,0,2.8516877282516888e-13,3.7533824078687312e-18,2.8802435067605445e-09,0,3.9137848024952028e-13,1.528184336712186e-17
+512,128,10000,1,2.8516877282516888e-13,3.7508563331046868e-18,3.6062056524750104e-09,0,1.995984794978977e-12,2.671092052200091e-17
+512,128,100000000,0,3.1695602265474006e-09,6.305790731682563e-18,nan,8,3.4426335999762926e-09,3.5851000481550265e-17
+512,128,100000000,1,3.1695602270091552e-09,5.9086451984787865e-18,nan,8,0.00012302908532083284,2.8663383980305391e-17
+512,512,2,0,5.0607861289736776e-16,8.8983141520888819e-19,9.790546316591476e-16,0,1.9426745316635543e-15,3.2841936912943325e-18
+512,512,10000,0,6.0612703431291639e-13,2.0570535066677813e-18,3.6391321515689704e-09,0,8.6360339185277495e-13,1.2657981321714342e-17
+512,512,100000000,0,4.161662200717978e-09,1.8213949348553995e-18,nan,8,7.2910800092308232e-09,1.9248680018585103e-17
+2048,512,2,0,5.0607861289736776e-16,8.8983141520907366e-19,1.0976243434839986e-15,0,2.3738852932708174e-15,4.3558752034367889e-18
+2048,512,2,1,5.0649080190144836e-16,8.887371427634263e-19,1.1032003223065344e-15,0,2.4010106995011814e-15,4.4395650386962628e-18
+2048,512,10000,0,6.0612703431291639e-13,2.0570535066683706e-18,6.6390355852916895e-09,0,8.9073051189386187e-13,1.7363445111759652e-17
+2048,512,10000,1,6.063883580023204e-13,1.7881948232809747e-18,5.1724527211637471e-09,0,1.8955530454893248e-12,1.6129991589413168e-17
+2048,512,100000000,0,4.1616622026367368e-09,1.9544179007667326e-18,0.93224730148910062,0,7.3208057634054039e-09,3.2953473119887258e-17
+2048,512,100000000,1,4.1697127548715343e-09,2.9950453852424905e-18,1.0533047327858895,0,6.8986542353593276e-05,3.1899272201103647e-17
+numerical acceptance failures=8
+
+      Start  4: common_2x2
+ 4/19 Test  #4: common_2x2 .......................   Passed    0.01 sec
+      Start  5: migration
+ 5/19 Test  #5: migration ........................   Passed    0.01 sec
+      Start  6: core
+ 6/19 Test  #6: core .............................   Passed    0.01 sec
+      Start  7: matrix_view
+ 7/19 Test  #7: matrix_view ......................   Passed    0.01 sec
+      Start  8: dynamic
+ 8/19 Test  #8: dynamic ..........................   Passed    0.01 sec
+      Start  9: llt
+ 9/19 Test  #9: llt ..............................   Passed    0.01 sec
+      Start 10: llt_large
+10/19 Test #10: llt_large ........................   Passed    0.47 sec
+      Start 11: llt_large_scalar
+11/19 Test #11: llt_large_scalar .................   Passed    0.86 sec
+      Start 12: qr
+12/19 Test #12: qr ...............................   Passed    0.01 sec
+      Start 13: qr_refined
+13/19 Test #13: qr_refined .......................   Passed    0.01 sec
+      Start 14: llt_scalar
+14/19 Test #14: llt_scalar .......................   Passed    0.01 sec
+      Start 15: qr_scalar
+15/19 Test #15: qr_scalar ........................   Passed    0.01 sec
+      Start 16: qr_refined_scalar
+16/19 Test #16: qr_refined_scalar ................   Passed    0.01 sec
+      Start 17: no_runtime
+17/19 Test #17: no_runtime .......................   Passed    0.01 sec
+      Start 18: dynamic_no_runtime
+18/19 Test #18: dynamic_no_runtime ...............   Passed    0.01 sec
+      Start 19: allocation
+19/19 Test #19: allocation .......................   Passed    1.80 sec
+
+89% tests passed, 2 tests failed out of 19
+
+Total Test time (real) =  82.92 sec
+
+The following tests FAILED:
+	  2 - numerical (Failed)
+	  3 - numerical_column (Failed)
+-- Install configuration: "Release"
+-- Installing: /work/build/linux-clang-sanitized/install-original/include
+-- Installing: /work/build/linux-clang-sanitized/install-original/include/kibo
+-- Installing: /work/build/linux-clang-sanitized/install-original/include/kibo/llt.hpp
+-- Installing: /work/build/linux-clang-sanitized/install-original/include/kibo/dynamic_matrix.hpp
+-- Installing: /work/build/linux-clang-sanitized/install-original/include/kibo/qr_refined.hpp
+-- Installing: /work/build/linux-clang-sanitized/install-original/include/kibo/linalg.hpp
+-- Installing: /work/build/linux-clang-sanitized/install-original/include/kibo/detail
+-- Installing: /work/build/linux-clang-sanitized/install-original/include/kibo/detail/row_kernels.hpp
+-- Installing: /work/build/linux-clang-sanitized/install-original/include/kibo/qr.hpp
+-- Installing: /work/build/linux-clang-sanitized/install-original/include/kibo/workspace.hpp
+-- Installing: /work/build/linux-clang-sanitized/install-original/lib/cmake/kibo_linalg/kibo_linalgTargets.cmake
+-- Installing: /work/build/linux-clang-sanitized/install-original/lib/cmake/kibo_linalg/kibo_linalgConfig.cmake
+-- Installing: /work/build/linux-clang-sanitized/install-original/lib/cmake/kibo_linalg/kibo_linalgConfigVersion.cmake
+-- The CXX compiler identification is Clang 20.1.8
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /work/.cache/tools/LLVM-20.1.8-Linux-X64/bin/clang++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Configuring done (0.4s)
+-- Generating done (0.0s)
+-- Build files have been written to: /work/build/linux-clang-sanitized/consumer
+[ 50%] Building CXX object CMakeFiles/consumer.dir/main.cpp.o
+[100%] Linking CXX executable consumer
+[100%] Built target consumer
+Internal ctest changing into directory: /work/build/linux-clang-sanitized/consumer
+Test project /work/build/linux-clang-sanitized/consumer
+    Start 1: installed_consumer
+1/1 Test #1: installed_consumer ...............   Passed    0.01 sec
+
+100% tests passed, 0 tests failed out of 1
+
+Total Test time (real) =   0.01 sec

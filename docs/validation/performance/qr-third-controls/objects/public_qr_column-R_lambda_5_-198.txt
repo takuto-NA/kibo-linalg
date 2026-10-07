@@ -1,0 +1,119 @@
+??R<lambda_5>@?1??main@@YAHHPEAPEAD@Z@QEBA@XZ (public: __cdecl `int __cdecl main(int,char * *)'::`2'::<lambda_5>::operator()(void)const ):
+  0000000000000000: 48 8B C4           mov         rax,rsp
+  0000000000000003: 48 89 58 10        mov         qword ptr [rax+10h],rbx
+  0000000000000007: 48 89 70 18        mov         qword ptr [rax+18h],rsi
+  000000000000000B: 48 89 78 20        mov         qword ptr [rax+20h],rdi
+  000000000000000F: 55                 push        rbp
+  0000000000000010: 48 8D 68 A1        lea         rbp,[rax-5Fh]
+  0000000000000014: 48 81 EC 00 01 00  sub         rsp,100h
+                    00
+  000000000000001B: F2 0F 10 4D 87     movsd       xmm1,mmword ptr [rbp-79h]
+  0000000000000020: 48 8B F1           mov         rsi,rcx
+  0000000000000023: 0F 29 70 E8        movaps      xmmword ptr [rax-18h],xmm6
+  0000000000000027: 0F 57 F6           xorps       xmm6,xmm6
+  000000000000002A: 0F 29 78 D8        movaps      xmmword ptr [rax-28h],xmm7
+  000000000000002E: 44 0F 29 40 C8     movaps      xmmword ptr [rax-38h],xmm8
+  0000000000000033: 48 8B 01           mov         rax,qword ptr [rcx]
+  0000000000000036: 48 8B 5E 10        mov         rbx,qword ptr [rsi+10h]
+  000000000000003A: F2 0F 11 4D F7     movsd       mmword ptr [rbp-9],xmm1
+  000000000000003F: 48 89 5D 07        mov         qword ptr [rbp+7],rbx
+  0000000000000043: 48 8B 08           mov         rcx,qword ptr [rax]
+  0000000000000046: 48 8B 46 08        mov         rax,qword ptr [rsi+8]
+  000000000000004A: 48 8B 7B 08        mov         rdi,qword ptr [rbx+8]
+  000000000000004E: 48 89 4C 24 20     mov         qword ptr [rsp+20h],rcx
+  0000000000000053: 48 8B 10           mov         rdx,qword ptr [rax]
+  0000000000000056: 48 89 54 24 28     mov         qword ptr [rsp+28h],rdx
+  000000000000005B: 0F 10 44 24 20     movups      xmm0,xmmword ptr [rsp+20h]
+  0000000000000060: 0F 11 45 E7        movups      xmmword ptr [rbp-19h],xmm0
+  0000000000000064: 48 85 FF           test        rdi,rdi
+  0000000000000067: 75 05              jne         000000000000006E
+  0000000000000069: 0F 57 C0           xorps       xmm0,xmm0
+  000000000000006C: EB 20              jmp         000000000000008E
+  000000000000006E: 48 8B 03           mov         rax,qword ptr [rbx]
+  0000000000000071: 4C 8D 45 D7        lea         r8,[rbp-29h]
+  0000000000000075: 48 89 4D B7        mov         qword ptr [rbp-49h],rcx
+  0000000000000079: 48 8D 4D A7        lea         rcx,[rbp-59h]
+  000000000000007D: 48 89 55 C7        mov         qword ptr [rbp-39h],rdx
+  0000000000000081: 48 8D 55 67        lea         rdx,[rbp+67h]
+  0000000000000085: 48 89 45 CF        mov         qword ptr [rbp-31h],rax
+  0000000000000089: E8 00 00 00 00     call        000000000000008E
+  000000000000008E: 48 89 5C 24 28     mov         qword ptr [rsp+28h],rbx
+  0000000000000093: F2 0F 58 C6        addsd       xmm0,xmm6
+  0000000000000097: 0F 57 C9           xorps       xmm1,xmm1
+  000000000000009A: F2 0F 10 C8        movsd       xmm1,xmm0
+  000000000000009E: 66 0F 51 F9        sqrtpd      xmm7,xmm1
+  00000000000000A2: 48 85 FF           test        rdi,rdi
+  00000000000000A5: 75 05              jne         00000000000000AC
+  00000000000000A7: 0F 57 C0           xorps       xmm0,xmm0
+  00000000000000AA: EB 19              jmp         00000000000000C5
+  00000000000000AC: 48 8B 03           mov         rax,qword ptr [rbx]
+  00000000000000AF: 4C 8D 44 24 20     lea         r8,[rsp+20h]
+  00000000000000B4: 48 8D 55 67        lea         rdx,[rbp+67h]
+  00000000000000B8: 48 89 45 9F        mov         qword ptr [rbp-61h],rax
+  00000000000000BC: 48 8D 4D 97        lea         rcx,[rbp-69h]
+  00000000000000C0: E8 00 00 00 00     call        ??$run@V?$CwiseUnaryOp@U?$squared_norm_functor@N$0A@@internal@Eigen@@$$CBV?$Matrix@N$0?0$00$0A@$0?0$00@3@@Eigen@@@?$redux_impl@U?$scalar_sum_op@NN@internal@Eigen@@V?$redux_evaluator@V?$CwiseUnaryOp@U?$squared_norm_functor@N$0A@@internal@Eigen@@$$CBV?$Matrix@N$0?0$00$0A@$0?0$00@3@@Eigen@@@23@$02$0A@@internal@Eigen@@SANAEBV?$redux_evaluator@V?$CwiseUnaryOp@U?$squared_norm_functor@N$0A@@internal@Eigen@@$$CBV?$Matrix@N$0?0$00$0A@$0?0$00@3@@Eigen@@@12@AEBU?$scalar_sum_op@NN@12@AEBV?$CwiseUnaryOp@U?$squared_norm_functor@N$0A@@internal@Eigen@@$$CBV?$Matrix@N$0?0$00$0A@$0?0$00@3@@2@@Z
+  00000000000000C5: F2 44 0F 10 05 00  movsd       xmm8,mmword ptr [__real@3e45798ee2308c3a]
+                    00 00 00
+  00000000000000CE: F2 0F 58 C6        addsd       xmm0,xmm6
+  00000000000000D2: 0F 57 C9           xorps       xmm1,xmm1
+  00000000000000D5: F2 0F 10 C8        movsd       xmm1,xmm0
+  00000000000000D9: 66 0F 51 C1        sqrtpd      xmm0,xmm1
+  00000000000000DD: F2 0F 5E F8        divsd       xmm7,xmm0
+  00000000000000E1: 66 44 0F 2F C7     comisd      xmm8,xmm7
+  00000000000000E6: 0F 86 9B 00 00 00  jbe         0000000000000187
+  00000000000000EC: 48 8B 45 67        mov         rax,qword ptr [rbp+67h]
+  00000000000000F0: 48 8B 4E 18        mov         rcx,qword ptr [rsi+18h]
+  00000000000000F4: 48 89 45 AF        mov         qword ptr [rbp-51h],rax
+  00000000000000F8: 48 8B 45 8F        mov         rax,qword ptr [rbp-71h]
+  00000000000000FC: 48 89 45 C7        mov         qword ptr [rbp-39h],rax
+  0000000000000100: 48 89 4D B7        mov         qword ptr [rbp-49h],rcx
+  0000000000000104: 48 89 5D BF        mov         qword ptr [rbp-41h],rbx
+  0000000000000108: 48 85 FF           test        rdi,rdi
+  000000000000010B: 75 05              jne         0000000000000112
+  000000000000010D: 0F 57 C0           xorps       xmm0,xmm0
+  0000000000000110: EB 20              jmp         0000000000000132
+  0000000000000112: 48 8B 01           mov         rax,qword ptr [rcx]
+  0000000000000115: 4C 8D 45 A7        lea         r8,[rbp-59h]
+  0000000000000119: 48 89 45 87        mov         qword ptr [rbp-79h],rax
+  000000000000011D: 48 8D 55 67        lea         rdx,[rbp+67h]
+  0000000000000121: 48 8B 03           mov         rax,qword ptr [rbx]
+  0000000000000124: 48 8D 4C 24 20     lea         rcx,[rsp+20h]
+  0000000000000129: 48 89 45 8F        mov         qword ptr [rbp-71h],rax
+  000000000000012D: E8 00 00 00 00     call        ??$run@V?$CwiseUnaryOp@U?$squared_norm_functor@N$0A@@internal@Eigen@@$$CBV?$CwiseBinaryOp@U?$scalar_difference_op@NN@internal@Eigen@@$$CBV?$Matrix@N$0?0$00$0A@$0?0$00@3@$$CBV43@@3@@Eigen@@@?$redux_impl@U?$scalar_sum_op@NN@internal@Eigen@@V?$redux_evaluator@V?$CwiseUnaryOp@U?$squared_norm_functor@N$0A@@internal@Eigen@@$$CBV?$CwiseBinaryOp@U?$scalar_difference_op@NN@internal@Eigen@@$$CBV?$Matrix@N$0?0$00$0A@$0?0$00@3@$$CBV43@@3@@Eigen@@@23@$02$0A@@internal@Eigen@@SANAEBV?$redux_evaluator@V?$CwiseUnaryOp@U?$squared_norm_functor@N$0A@@internal@Eigen@@$$CBV?$CwiseBinaryOp@U?$scalar_difference_op@NN@internal@Eigen@@$$CBV?$Matrix@N$0?0$00$0A@$0?0$00@3@$$CBV43@@3@@Eigen@@@12@AEBU?$scalar_sum_op@NN@12@AEBV?$CwiseUnaryOp@U?$squared_norm_functor@N$0A@@internal@Eigen@@$$CBV?$CwiseBinaryOp@U?$scalar_difference_op@NN@internal@Eigen@@$$CBV?$Matrix@N$0?0$00$0A@$0?0$00@3@$$CBV43@@3@@2@@Z
+  0000000000000132: 48 89 5C 24 28     mov         qword ptr [rsp+28h],rbx
+  0000000000000137: F2 0F 58 C6        addsd       xmm0,xmm6
+  000000000000013B: 0F 57 C9           xorps       xmm1,xmm1
+  000000000000013E: F2 0F 10 C8        movsd       xmm1,xmm0
+  0000000000000142: 66 0F 51 F9        sqrtpd      xmm7,xmm1
+  0000000000000146: 48 85 FF           test        rdi,rdi
+  0000000000000149: 75 05              jne         0000000000000150
+  000000000000014B: 0F 57 C0           xorps       xmm0,xmm0
+  000000000000014E: EB 19              jmp         0000000000000169
+  0000000000000150: 48 8B 03           mov         rax,qword ptr [rbx]
+  0000000000000153: 4C 8D 44 24 20     lea         r8,[rsp+20h]
+  0000000000000158: 48 8D 55 67        lea         rdx,[rbp+67h]
+  000000000000015C: 48 89 45 9F        mov         qword ptr [rbp-61h],rax
+  0000000000000160: 48 8D 4D 97        lea         rcx,[rbp-69h]
+  0000000000000164: E8 00 00 00 00     call        ??$run@V?$CwiseUnaryOp@U?$squared_norm_functor@N$0A@@internal@Eigen@@$$CBV?$Matrix@N$0?0$00$0A@$0?0$00@3@@Eigen@@@?$redux_impl@U?$scalar_sum_op@NN@internal@Eigen@@V?$redux_evaluator@V?$CwiseUnaryOp@U?$squared_norm_functor@N$0A@@internal@Eigen@@$$CBV?$Matrix@N$0?0$00$0A@$0?0$00@3@@Eigen@@@23@$02$0A@@internal@Eigen@@SANAEBV?$redux_evaluator@V?$CwiseUnaryOp@U?$squared_norm_functor@N$0A@@internal@Eigen@@$$CBV?$Matrix@N$0?0$00$0A@$0?0$00@3@@Eigen@@@12@AEBU?$scalar_sum_op@NN@12@AEBV?$CwiseUnaryOp@U?$squared_norm_functor@N$0A@@internal@Eigen@@$$CBV?$Matrix@N$0?0$00$0A@$0?0$00@3@@2@@Z
+  0000000000000169: F2 0F 58 C6        addsd       xmm0,xmm6
+  000000000000016D: 0F 57 C9           xorps       xmm1,xmm1
+  0000000000000170: F2 0F 10 C8        movsd       xmm1,xmm0
+  0000000000000174: 66 0F 51 C1        sqrtpd      xmm0,xmm1
+  0000000000000178: F2 0F 5E F8        divsd       xmm7,xmm0
+  000000000000017C: 66 44 0F 2F C7     comisd      xmm8,xmm7
+  0000000000000181: 76 04              jbe         0000000000000187
+  0000000000000183: B0 01              mov         al,1
+  0000000000000185: EB 02              jmp         0000000000000189
+  0000000000000187: 32 C0              xor         al,al
+  0000000000000189: 4C 8D 9C 24 00 01  lea         r11,[rsp+100h]
+                    00 00
+  0000000000000191: 49 8B 5B 18        mov         rbx,qword ptr [r11+18h]
+  0000000000000195: 49 8B 73 20        mov         rsi,qword ptr [r11+20h]
+  0000000000000199: 49 8B 7B 28        mov         rdi,qword ptr [r11+28h]
+  000000000000019D: 41 0F 28 73 F0     movaps      xmm6,xmmword ptr [r11-10h]
+  00000000000001A2: 41 0F 28 7B E0     movaps      xmm7,xmmword ptr [r11-20h]
+  00000000000001A7: 45 0F 28 43 D0     movaps      xmm8,xmmword ptr [r11-30h]
+  00000000000001AC: 49 8B E3           mov         rsp,r11
+  00000000000001AF: 5D                 pop         rbp
+  00000000000001B0: C3                 ret
+
