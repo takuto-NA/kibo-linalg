@@ -401,21 +401,6 @@ inline Result<LltFactorView> factorize_llt(MatrixView<const double> input, Matri
                         return Status{StatusCode::invalid_argument,i};
         }
     }
-    // Two variables need no traversal state. Keep the scalar operation order
-    // and all pivot/finiteness checks used by the general factor path.
-    if (n==2) {
-        const auto first=input(0,0);
-        if (first<=0) return Status{StatusCode::non_positive_pivot,0};
-        storage(0,0)=std::sqrt(first);
-        const auto lower=input(1,0)/storage(0,0);
-        if (!detail::llt_is_finite(lower)) return Status{StatusCode::arithmetic_failure,0};
-        storage(1,0)=lower;
-        const auto second=input(1,1)-lower*lower;
-        if (!detail::llt_is_finite(second)) return Status{StatusCode::arithmetic_failure,1};
-        if (second<=0) return Status{StatusCode::non_positive_pivot,1};
-        storage(1,1)=std::sqrt(second);storage(0,1)=0;
-        return detail::LltAccess::create(storage);
-    }
     if constexpr (detail::row_simd_available) {
         if (storage.col_stride()==1 && n>=9)
             return detail::factorize_column_llt(input,storage);
@@ -451,19 +436,6 @@ inline Status solve_into(LltFactorView factor, std::span<const double> rhs, std:
     for (auto value:rhs) if (!detail::llt_is_finite(value)) return {StatusCode::non_finite_input};
     auto candidate=prepared.value();
     auto lower=factor.lower();
-    if (n==2) {
-        double first=rhs[0]/lower(0,0);
-        if (!detail::llt_is_finite(first)) return {StatusCode::arithmetic_failure,0};
-        double second=(rhs[1]-lower(1,0)*first)/lower(1,1);
-        if (!detail::llt_is_finite(second)) return {StatusCode::arithmetic_failure,1};
-        second/=lower(1,1);
-        if (!detail::llt_is_finite(second)) return {StatusCode::arithmetic_failure,1};
-        first=(first-lower(1,0)*second)/lower(0,0);
-        if (!detail::llt_is_finite(first)) return {StatusCode::arithmetic_failure,0};
-        // Commit after all checks so RHS/output aliasing and late failure
-        // retain the same transactional output contract.
-        output[0]=first;output[1]=second;return {};
-    }
     if(detail::row_simd_available && n>=128 && lower.col_stride()==1) {
         auto status=detail::llt_forward_shared(lower,rhs,candidate);
         if(!status)return status;
