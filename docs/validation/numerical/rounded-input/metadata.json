@@ -1,0 +1,305 @@
+{
+  "publicCodeCommit": "8fe28e552bfc485c4744a193cc9e677b3e2ce309",
+  "reportBaseCommit": "2120cd9641e6192e61c932e3a97c6acc8ebdc2cd",
+  "diagnosisOnly": true,
+  "noPublicApiOrTestChanges": true,
+  "mpmathVersion": "1.3.0",
+  "decimalDigits": 100,
+  "dependencies": {
+    "cmake": {
+      "version": "3.30.5",
+      "linux_url": "https://github.com/Kitware/CMake/releases/download/v3.30.5/cmake-3.30.5-linux-x86_64.tar.gz",
+      "linux_sha256": "f747d9b23e1a252a8beafb4ed2bc2ddf78cff7f04a8e4de19f4ff88e9b51dc9d",
+      "windows_url": "https://github.com/Kitware/CMake/releases/download/v3.30.5/cmake-3.30.5-windows-x86_64.zip",
+      "windows_sha256": "5ab6e1faf20256ee4f04886597e8b6c3b1bd1297b58a68a58511af013710004b"
+    },
+    "gcc": {
+      "version": "15.3.0",
+      "image": "gcc:15.3@sha256:ead103e6d03b69232962d467f3520c3f70b6718c69ff71efcc08efe9011fadb6"
+    },
+    "llvm": {
+      "version": "20.1.8",
+      "url": "https://github.com/llvm/llvm-project/releases/download/llvmorg-20.1.8/LLVM-20.1.8-Linux-X64.tar.xz",
+      "sha256": "1ead36b3dfcb774b57be530df42bec70ab2d239fbce9889447c7a29a4ddc1ae6"
+    },
+    "emscripten": {
+      "version": "6.0.10",
+      "image": "emscripten/emsdk:6.0.10@sha256:e077d54e2b8970575ebc4f185ac1de0b95c05f2b266134d4ba27449af7aebf65"
+    },
+    "esp_idf": {
+      "version": "6.1",
+      "image": "espressif/idf:v6.1@sha256:81893c71bb5e570088901f21def8684c25cd2a9020281bd01b843a7655edb18c",
+      "compiler_version": "esp-15.2.0_20251204",
+      "xtensa_linux_url": "https://github.com/espressif/crosstool-NG/releases/download/esp-15.2.0_20251204/xtensa-esp-elf-15.2.0_20251204-x86_64-linux-gnu.tar.xz",
+      "xtensa_linux_sha256": "3d50f5cd5f173acfd524e07c1cd69bc99585731a415ca2e5bce879997fe602b8",
+      "riscv_linux_url": "https://github.com/espressif/crosstool-NG/releases/download/esp-15.2.0_20251204/riscv32-esp-elf-15.2.0_20251204-x86_64-linux-gnu.tar.xz",
+      "riscv_linux_sha256": "ace5aae6afe98f754947be043d40173e2e22ace57754b11a394b7238eefa01cf"
+    },
+    "node": {
+      "version": "24.21.0",
+      "image": "node:24.21.0@sha256:22f6fe5f59fb7fed238b19623506d573dffaa932ce33b84ce541a9a2e0eade28"
+    },
+    "playwright": {
+      "version": "1.63.0",
+      "image": "mcr.microsoft.com/playwright:v1.63.0-noble@sha256:eff16c30e6f3f4af0a03fa4b706120d5e9b0891c344a27d64559aff5900a4a27"
+    },
+    "eigen": {
+      "version": "5.0.1",
+      "commit": "bc3b39870ecb690a623a3f49149a358b95c5781d",
+      "url": "https://gitlab.com/api/v4/projects/libeigen%2Feigen/repository/archive.tar.gz?sha=bc3b39870ecb690a623a3f49149a358b95c5781d",
+      "sha256": "355b5cef81b63c88f81af6d8e5c05b2f79e9cd917bc36b574655569da9f03137"
+    },
+    "msvc": {
+      "installation_version": "17.14.36915.13",
+      "display_version": "17.14.25",
+      "toolset": "14.44.35207",
+      "compiler_version": "19.44.35222.0",
+      "cl_sha256": "4304307e1f0d0528ac13c513183e5cbfa20a7f8de6f0c8e5bc4293661e6d23a4",
+      "url": "https://download.visualstudio.microsoft.com/download/pr/64dbe648-9527-4b8e-9b08-04d2228e1191/0f953a61f0d6f37d425e021814b0ec005035871848d9eb703208538df20476d4/vs_BuildTools.exe",
+      "sha256": "0f953a61f0d6f37d425e021814b0ec005035871848d9eb703208538df20476d4"
+    },
+    "actions": {
+      "checkout": "11d5960a326750d5838078e36cf38b85af677262",
+      "upload_artifact": "ea165f8d65b6e75b540449e92b4886f43607fa02",
+      "setup_python": "a26af69be951a213d495a4c3e4e4022e16d87065"
+    }
+  },
+  "sourceHashes": {
+    "include/kibo/detail/row_kernels.hpp": "19be54ecabe636b6f1bfb7b57eedad516462f5ac15664442e40ea21c44a5edad",
+    "include/kibo/dynamic_matrix.hpp": "535afd0c96607a65e13711bb0ea94a94d3791eb170fa54db5d1e220e12b103e6",
+    "include/kibo/linalg.hpp": "52bf606a0f6ac2e21a83878e7b029b4c65935e25f5fc90387b1cf2ef74572634",
+    "include/kibo/llt.hpp": "75047b2655f5cf907caf10177e3fc5913db39021aa9d3baf177b25552e980d11",
+    "include/kibo/qr.hpp": "04b1efdb4e2869ddc75ad6075874a8ab15d29051e79a24a19765fad1b50193ae",
+    "include/kibo/workspace.hpp": "e74b13bb57d83bb0ad7b1c8f271c40db825a2d1b380f0224639a9d94ee8c48d0",
+    "tools/diagnostics/qr-accuracy/audit.cpp": "f33fba150444c0a64679fe2d46c346050b5a11ffa791b18ae227275f346dfa7b",
+    "tools/diagnostics/qr-accuracy/CMakeLists.txt": "59562381ee4415b99828255a57f81ce1de882c4391367d846b50b9af823bf305",
+    "tools/diagnostics/qr-accuracy/cost.cpp": "53a7548c6c7939fa0064ba56ab94587e4bc6ab756e2cb162e9e4cddca249a353",
+    "tools/diagnostics/qr-accuracy/oracle.py": "71c9e7ec90bbb62e14e40d1859835d0516393f67fe17883beb74d1b711276596",
+    "tools/diagnostics/qr-accuracy/README.md": "de7dd2fe5c4fd74ced4f7917c8b2b96664b96dfd845dced9236373db86f291cc",
+    "tools/diagnostics/qr-accuracy/refine.hpp": "178ece560a42c8b1f1eb1285a904e049de7536da3d7fdbd982f28a06141758d3",
+    "tests/controlled_fixture.hpp": "eabb9c60f1659b981c52e704c3e9a53cdaef50349baccda2ec6fcc5774f6c142",
+    "tests/fixtures/oracles.hpp": "2a5ebc209fc5ab0d0a9330f3499e34ec6421ea792a4909f4aef3862a36838d1d",
+    "tests/fixtures/oracles.json": "e605d0b03688cfad396539d34f4974f35758949fdcb8873bf10810d89c065c88",
+    "tools/diagnostics/solver-locality/affinity.hpp": "ec5ad8f5e25b80348925b40e6fa9586fe94e2d98f86aafe1f291875ff6c3e0d5",
+    "tools/toolchains.lock.json": "d51b14c4691498e66fd0c67d8e4ab9f4814e2dcba21b1aeb1442bad5559480c8"
+  },
+  "sourceCanonicalLfHashes": {
+    "include/kibo/detail/row_kernels.hpp": "a77b8d57f4cdca0ea720635f555660d7f993a20bdf1b3494fdd55df594114ad7",
+    "include/kibo/dynamic_matrix.hpp": "535afd0c96607a65e13711bb0ea94a94d3791eb170fa54db5d1e220e12b103e6",
+    "include/kibo/linalg.hpp": "52bf606a0f6ac2e21a83878e7b029b4c65935e25f5fc90387b1cf2ef74572634",
+    "include/kibo/llt.hpp": "f6cac2004d0ba7bcabf76307d8d29b4363599a63e0b6a7f62f59ea98699f14a9",
+    "include/kibo/qr.hpp": "04b1efdb4e2869ddc75ad6075874a8ab15d29051e79a24a19765fad1b50193ae",
+    "include/kibo/workspace.hpp": "e74b13bb57d83bb0ad7b1c8f271c40db825a2d1b380f0224639a9d94ee8c48d0",
+    "tools/diagnostics/qr-accuracy/audit.cpp": "f33fba150444c0a64679fe2d46c346050b5a11ffa791b18ae227275f346dfa7b",
+    "tools/diagnostics/qr-accuracy/CMakeLists.txt": "59562381ee4415b99828255a57f81ce1de882c4391367d846b50b9af823bf305",
+    "tools/diagnostics/qr-accuracy/cost.cpp": "6ee74ca69f7478aef13f3a8d710d5530a9e92b0fcaf93df52c0d33ba30f38065",
+    "tools/diagnostics/qr-accuracy/oracle.py": "71c9e7ec90bbb62e14e40d1859835d0516393f67fe17883beb74d1b711276596",
+    "tools/diagnostics/qr-accuracy/README.md": "de7dd2fe5c4fd74ced4f7917c8b2b96664b96dfd845dced9236373db86f291cc",
+    "tools/diagnostics/qr-accuracy/refine.hpp": "178ece560a42c8b1f1eb1285a904e049de7536da3d7fdbd982f28a06141758d3",
+    "tests/controlled_fixture.hpp": "eabb9c60f1659b981c52e704c3e9a53cdaef50349baccda2ec6fcc5774f6c142",
+    "tests/fixtures/oracles.hpp": "b8486720db4713271b5958df50f964986079ba13adc6491861ab16491dccb3a2",
+    "tests/fixtures/oracles.json": "b313ad5bec650f7369d8a8a14b1de478036b0ca69807bd5cc19fba34fb983d9a",
+    "tools/diagnostics/solver-locality/affinity.hpp": "ec5ad8f5e25b80348925b40e6fa9586fe94e2d98f86aafe1f291875ff6c3e0d5",
+    "tools/toolchains.lock.json": "d51b14c4691498e66fd0c67d8e4ab9f4814e2dcba21b1aeb1442bad5559480c8"
+  },
+  "builds": {
+    "gcc-OFF": {
+      "binarySha256": "005559628a1558fc861d9d3cc7db6143033189f17d71ca0aa539602fdae93dfe",
+      "compileCommands": {
+        "source": "build/qr-accuracy-gcc-OFF/compile_commands.json",
+        "sha256": "486a16e4ebe89cb6fd40c9c78a0b7a2719a5c9a0784176a20f7953aaa9a492e3"
+      },
+      "compilerConfiguration": {
+        "source": "build/qr-accuracy-gcc-OFF/CMakeFiles/3.30.5/CMakeCXXCompiler.cmake",
+        "sha256": "fb931ce19ed766cb7cdfaafc895c37832ceb83fb85df61756ca7cef962b42f99"
+      }
+    },
+    "gcc-ON": {
+      "binarySha256": "afcdf6860d53d218545c47088d98ee18976d2963fa7bd528a21dd4ea6089997e",
+      "compileCommands": {
+        "source": "build/qr-accuracy-gcc-ON/compile_commands.json",
+        "sha256": "e9a1eae218da399bb40009768757075ed4fab6a9105db863c5fbad6cdc4dd845"
+      },
+      "compilerConfiguration": {
+        "source": "build/qr-accuracy-gcc-ON/CMakeFiles/3.30.5/CMakeCXXCompiler.cmake",
+        "sha256": "fb931ce19ed766cb7cdfaafc895c37832ceb83fb85df61756ca7cef962b42f99"
+      }
+    },
+    "clang-OFF": {
+      "binarySha256": "f41de5cbd21a35f0572a29f4e5f62c794f84e83b0226b977850da2a1c28d377f",
+      "compileCommands": {
+        "source": "build/qr-accuracy-clang-OFF/compile_commands.json",
+        "sha256": "1fee28820cfa2b606886ebd2583382005b83610e589e4b8f3ceec25e454c9fda"
+      },
+      "compilerConfiguration": {
+        "source": "build/qr-accuracy-clang-OFF/CMakeFiles/3.30.5/CMakeCXXCompiler.cmake",
+        "sha256": "032081ab104318f396935ddcdc75e731773b4a45096eef001297fc0d22212785"
+      }
+    },
+    "clang-ON": {
+      "binarySha256": "1795f72cbba32b66879fb827a338e591e91b2b0c1c0fc6230470d111511e3a33",
+      "compileCommands": {
+        "source": "build/qr-accuracy-clang-ON/compile_commands.json",
+        "sha256": "e312ea7aee3a74e020cd517dbae22516afaa366e0497fb13d9d5a9a267dd2f7e"
+      },
+      "compilerConfiguration": {
+        "source": "build/qr-accuracy-clang-ON/CMakeFiles/3.30.5/CMakeCXXCompiler.cmake",
+        "sha256": "032081ab104318f396935ddcdc75e731773b4a45096eef001297fc0d22212785"
+      }
+    },
+    "windows-original": {
+      "binarySha256": "763f192e941221becebbab2f57c27246ba7eebe316343b3f7340d07a76b5356e",
+      "compilerConfiguration": {
+        "source": "build/qr-accuracy-next/CMakeFiles/3.30.5/CMakeCXXCompiler.cmake",
+        "sha256": "03ef79e461d6ac6627f16a78b09054bcc6798d0f16868394a08f4b0ec6b528ca"
+      },
+      "buildProject": {
+        "source": "build/qr-accuracy-next/audit.vcxproj",
+        "sha256": "4bc2e61e4bfe40aeeb5132d1c7f3ac11afa82b8a2c06cd40eb778c45b2b6ef5e"
+      }
+    },
+    "windows-copied-tools": {
+      "binarySha256": "faec97945ef828f1c2dff572655976e1837a869f7fa1b22fb6697095288c189b",
+      "compilerConfiguration": {
+        "source": "build/qr-accuracy-public-tools/CMakeFiles/3.30.5/CMakeCXXCompiler.cmake",
+        "sha256": "03ef79e461d6ac6627f16a78b09054bcc6798d0f16868394a08f4b0ec6b528ca"
+      },
+      "buildProject": {
+        "source": "build/qr-accuracy-public-tools/audit.vcxproj",
+        "sha256": "cc7b35230c69ef27096cf2b3b5359db555120ca65f407e3b3a9e0227277da001"
+      }
+    },
+    "windows-cost": {
+      "binarySha256": "14dca688e665d9f2698ba31dd780d161ac98db12a9ba7f3a718e3a92b92aa412",
+      "buildProject": {
+        "source": "build/qr-accuracy-next/cost.vcxproj",
+        "sha256": "8a08db37b07dc441017019bb1304abed9eb3d318a1efc5167e8dfd37265df464"
+      }
+    }
+  },
+  "datasets": {
+    "full-rounded": {
+      "raw": {
+        "source": ".scratch/qr-accuracy-next/full-rounded.jsonl",
+        "sha256": "a41d455956193c67c4e6ba3a9d8da51388ab1900bcf355dd5ca0f2f03ad36387"
+      },
+      "oracle": {
+        "source": ".scratch/qr-accuracy-next/full-rounded.oracle.json",
+        "sha256": "28aadcfb9b4ea58b8211019ae8e30db32782cecf00a56aeaba6e2d28e8c139f9"
+      }
+    },
+    "gcc-OFF": {
+      "raw": {
+        "source": ".scratch/qr-accuracy-next/gcc-OFF.jsonl",
+        "sha256": "b83f6ee692773e45bddcb8d687b13f898ce7519310451cdd35ea5c6b70567165"
+      },
+      "oracle": {
+        "source": ".scratch/qr-accuracy-next/gcc-OFF.oracle.json",
+        "sha256": "ffb58f43dadd064715ca488a987b54be18fc07b48d7f936ee1ad2e2a26c4a21e"
+      }
+    },
+    "gcc-ON": {
+      "raw": {
+        "source": ".scratch/qr-accuracy-next/gcc-ON.jsonl",
+        "sha256": "11411267880a1f0ce323f65b78991d56ca2b256d1e72bf678e59a9a381828731"
+      },
+      "oracle": {
+        "source": ".scratch/qr-accuracy-next/gcc-ON.oracle.json",
+        "sha256": "de6c58a6a83f8910e961a4047f4fb6690d37a9b5e8667ce93925c28187e908c4"
+      }
+    },
+    "clang-OFF": {
+      "raw": {
+        "source": ".scratch/qr-accuracy-next/clang-OFF.jsonl",
+        "sha256": "b83f6ee692773e45bddcb8d687b13f898ce7519310451cdd35ea5c6b70567165"
+      },
+      "oracle": {
+        "source": ".scratch/qr-accuracy-next/clang-OFF.oracle.json",
+        "sha256": "ffb58f43dadd064715ca488a987b54be18fc07b48d7f936ee1ad2e2a26c4a21e"
+      }
+    },
+    "clang-ON": {
+      "raw": {
+        "source": ".scratch/qr-accuracy-next/clang-ON.jsonl",
+        "sha256": "11411267880a1f0ce323f65b78991d56ca2b256d1e72bf678e59a9a381828731"
+      },
+      "oracle": {
+        "source": ".scratch/qr-accuracy-next/clang-ON.oracle.json",
+        "sha256": "de6c58a6a83f8910e961a4047f4fb6690d37a9b5e8667ce93925c28187e908c4"
+      }
+    }
+  },
+  "checks": {
+    "full-rounded": {
+      "records": 102,
+      "actualRankFull": true,
+      "rowColumnInputHashesMatch": true,
+      "ddForwardAndOptimalityGatesPass": true,
+      "consistentBackwardGatePass": true,
+      "maxRoundedOracleTruthError": 4.233987929003712e-09,
+      "maxCoreOracleError": 0.0180599021979651,
+      "maxDDOracleError": 1.1102230246251565e-16,
+      "maxDDOptimality": 3.669255126147883e-17
+    },
+    "gcc-OFF": {
+      "records": 102,
+      "actualRankFull": true,
+      "rowColumnInputHashesMatch": true,
+      "ddForwardAndOptimalityGatesPass": true,
+      "consistentBackwardGatePass": true,
+      "maxRoundedOracleTruthError": 4.1697127542302626e-09,
+      "maxCoreOracleError": 0.0180599021979651,
+      "maxDDOracleError": 1.1102230246251565e-16,
+      "maxDDOptimality": 3.669255126147883e-17
+    },
+    "gcc-ON": {
+      "records": 102,
+      "actualRankFull": true,
+      "rowColumnInputHashesMatch": true,
+      "ddForwardAndOptimalityGatesPass": true,
+      "consistentBackwardGatePass": true,
+      "maxRoundedOracleTruthError": 6.0305145980259834e-09,
+      "maxCoreOracleError": 0.0180599021979651,
+      "maxDDOracleError": 1.1102230246251565e-16,
+      "maxDDOptimality": 3.424613606808655e-17
+    },
+    "clang-OFF": {
+      "records": 102,
+      "actualRankFull": true,
+      "rowColumnInputHashesMatch": true,
+      "ddForwardAndOptimalityGatesPass": true,
+      "consistentBackwardGatePass": true,
+      "maxRoundedOracleTruthError": 4.1697127542302626e-09,
+      "maxCoreOracleError": 0.0180599021979651,
+      "maxDDOracleError": 1.1102230246251565e-16,
+      "maxDDOptimality": 3.669255126147883e-17
+    },
+    "clang-ON": {
+      "records": 102,
+      "actualRankFull": true,
+      "rowColumnInputHashesMatch": true,
+      "ddForwardAndOptimalityGatesPass": true,
+      "consistentBackwardGatePass": true,
+      "maxRoundedOracleTruthError": 6.0305145980259834e-09,
+      "maxCoreOracleError": 0.0180599021979651,
+      "maxDDOracleError": 1.1102230246251565e-16,
+      "maxDDOptimality": 3.424613606808655e-17
+    }
+  },
+  "windowsCopiedToolsRecordsEqualOriginal": true,
+  "cost": {
+    "singleProcess": true,
+    "samples": 5,
+    "minBatchSeconds": 0.02,
+    "cpu": 0,
+    "coreType": 64,
+    "allocationsIncluded": true,
+    "notFormalPerformanceAcceptance": true
+  },
+  "limitations": [
+    "Clang diagnostic uses libstdc++15, not libc++",
+    "No prototype WASM/ESP execution or public range/workspace/status acceptance",
+    "Normalized Eigen output is compared to original rounded-input oracle; its own perturbed input is not separately solved",
+    "Large structured oracle verified every actual input entry, but is not a general dense-matrix oracle"
+  ]
+}
