@@ -4,7 +4,6 @@
 normal-LLTとaugmented-QRで同じ中央差分Jacobian、lambda、D=I、受理/停止設定を使う。
 差分stepは1e-6*(1+|parameter|)、tolGradient1e-6、最大100反復。
 lambda初期1e-3、受理時0.3倍（下限1e-15）、棄却時10倍。
-直線/指数の両solverはWindowsで2反復以内に所定のcostとparameter誤差を満たした。
 
 ```powershell
 ./tools/windows-cmake.ps1 -S . -B build/native '-DKIBO_EIGEN_INCLUDE_DIR=<fixed Eigen headers>'
@@ -24,7 +23,6 @@ python tools/plot-benchmarks.py build/benchmarks-new-primary build/benchmarks-ne
 ```
 
 plotは任意のMatplotlib依存でPNG・SVG・PDFを生成する。library consumerには不要。
-2026-10-07の正式比較は[性能報告](https://github.com/takuto-NA/kibo-linalg/blob/e772855/docs/validation/2026-10-07-performance.md)にまとめる。
 
 性能fixtureはxorshift32 seed0x6b69626fで生成する。
 Jの各要素は[-0.5,0.5)/sqrt(m)に上部対角2を加えたもの。
@@ -60,7 +58,7 @@ allocator管理領域やmodule/OS予約は数値領域と別。64 MiB以下をga
 raw CSVのnumeric_bytesは既知の明示bufferの合計で、Eigen内部packingを別に補う。
 summaryのnumeric_bytesはEigen LLTの内部補助領域に4*n*n*sizeof(double)の
 保守的上限を加えた容量、explicit_numeric_bytesはrawと同じ明示buffer容量。
-[固定Eigenの容量監査](https://github.com/takuto-NA/kibo-linalg/blob/e772855/docs/research/eigen-capacity.md)に根拠を記録する。
+容量上限の根拠と測定結果は[Eigen同等の性能を目指し、PCのLM全形状・全phaseを最終受入する](https://github.com/takuto-NA/kibo-linalg/issues/16)で管理する。
 正式な測定で未完了runや途中試行を合算しない。
 
 summaryは5 process mediansの中央値と各process p95の中央値。
@@ -72,15 +70,4 @@ hosted CIで絶対速度をgateにせず、固定PCで20%以上の悪化が区�
 悪条件・大残差の精度保証は別の数値検証チケットで扱う。
 通常fixtureの速度を、Eigen全体や未知のworkloadへの優位として一般化しない。
 
-公開solverの配置改善については、[row/column格納ごとの旧版比較](https://github.com/takuto-NA/kibo-linalg/blob/e772855/docs/validation/2026-10-07-solver-locality.md)を参照する。
-こちらは同じharnessから元の公開headerと修正版をビルドし、CPU0固定でfactor+solveを測る追加系列である。
-QR column格納も比較するが、setup/allocation込みの全phase測定の代わりにはしない。
-
-[アセンブリから特定した32変数LLTの改善](https://github.com/takuto-NA/kibo-linalg/blob/e772855/docs/research/eigen-assembly-gap.md)では、
-入力走査・CRT分類呼出し・panel切替を単独対照で測り、公開実装へ反映した。
-32変数の5 process再測定と周辺サイズの診断を区別して報告する。
-
-[小行列LLTの実COFF命令比較](https://github.com/takuto-NA/kibo-linalg/blob/e772855/docs/research/small-llt-assembly.md)では、31/32/33の分岐と
-入力検査の依存関係を単独変更で比較し、公開実装`8fe28e5`を5 processで再測定した。
-SSE2幅2を維持して改善している。n128/512と2変数の確保込みに残る差も報告し、
-この結果を全shape・全phaseのEigen同等受入として扱わない。
+測定履歴・比較結果・改善課題は[Eigen同等の性能を目指し、PCのLM全形状・全phaseを最終受入する](https://github.com/takuto-NA/kibo-linalg/issues/16)へ記録する。

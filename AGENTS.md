@@ -2,7 +2,7 @@
 
 ### Issue tracker
 
-課題、仕様、wayfinderの判断チケットはGitHub Issuesで管理する。チケットの作成・参照・更新前に `docs/agents/issue-tracker.md` を読む。
+課題、仕様、wayfinderの判断チケットはGitHub Issuesで管理する。チケットの作成・参照・更新、およびREADME・docsの作成・整理前に `docs/agents/issue-tracker.md` を読む。
 
 ### Triage labels
 

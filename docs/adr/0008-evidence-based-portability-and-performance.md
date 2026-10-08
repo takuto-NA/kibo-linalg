@@ -1,3 +1,5 @@
 # 精度と実行証拠をgateにし、性能は固定条件で報告する
 
-初期保証はpublic interfaceの正しさ、失敗契約、無確保・容量、各基準環境の実行証拠に基づくものとする。Eigenに勝つ倍率を実測前に固定せず、固定PCで計算単体とcopy/allocation込みの時間・容量を分けて報告する。DockerはLinux系の再現環境に使い、Windows nativeとESP32各実機の証拠を代替しない。2026-10-06の判断。
+初期保証はpublic interfaceの正しさ、失敗契約、無確保・容量、各基準環境の実行証拠に基づくものとする。Eigenに勝つ倍率を実測前に固定せず、固定PCで計算単体とcopy/allocation込みの時間・容量を分けて報告する。DockerはLinux系の再現環境に使い、Windows nativeとESP32各実機の証拠を代替しない。
+
+[正しさ・性能・移植性の合格基準とCIを決める](https://github.com/takuto-NA/kibo-linalg/issues/8)。
