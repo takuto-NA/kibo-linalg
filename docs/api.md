@@ -115,14 +115,13 @@ power-of-two scalingの極端なexponentでは、reciprocal倍率自体のoverfl
 非有限の元入力/RHSを拒否し、非有限な補正中間値はarithmetic_failureを返す。
 Status.indexは非有限になった残差の行、または勾配・三角解・更新の変数位置を示す。
 finiteな入力でも正規化した残差が表現範囲を超える場合は成功を返さない。
-condition1e8・大残差の強い解精度保証は補正経路で受け入れる方針で、
-通常solveの同じ入力の精度結果も診断に残す。
-PCの初期評価入力で精度gateと公開契約を検証した。
-[公開経路の検証結果](https://github.com/takuto-NA/kibo-linalg/blob/e772855/docs/research/qr-refined-public-validation.md)に保証の評価範囲・追加費用を示す。
-任意の悪条件入力や全尺度についての証明ではない。Eigen自身の解精度は
-[ADR 0010](adr/0010-reference-accuracy-diagnostics.md)に従い比較診断へ分け、kiboの精度閾値は維持する。
-全形状のEigen同等性能とESP実機は未検証・未達の範囲が残り、初期保証全体の受入は完了していない。
-[判断と根拠](adr/0009-original-input-qr-refinement.md)・[実装課題](https://github.com/takuto-NA/kibo-linalg/issues/28)。
+条件数1e8・大残差の制御fixtureに対するrelative forward error <= 1e-4の基準は
+補正経路に適用する。通常solveには同じ強い基準を適用せず、精度を診断する。
+これは任意の悪条件入力や全尺度に対する保証ではない。
+既知解・独立oracleによるkiboの精度判定と、Eigen自身の比較診断を分ける。
+補正の設計理由は[ADR 0009](adr/0009-original-input-qr-refinement.md)、
+判定方針は[ADR 0010](adr/0010-reference-accuracy-diagnostics.md)、
+検証する構成と未検証範囲は[CI文書](ci.md)を参照。
 
 ```cpp
 // original_Aはfactorize_qrへ渡した入力で、ここまで保持しておく。
@@ -150,38 +149,10 @@ ESP32・WASM等では通常のC++処理を使う。`KIBO_DISABLE_SIMD=1`を定�
 明示SIMDを無効化できる。この定義は同じプログラムの全translation unitで揃える。
 コンパイラ自身の自動vectorizationは別のcompile flagで制御する。
 
-LLTはSSE2を使う連続行storageで9列以上のとき、storageを一時的に転置ビューとして扱う。
-9〜64列は先行列を新しい列へ適用し、それより大きい行列は8列panelで更新する。
-未使用の上三角を係数の一時領域に使う。小さい行列やSIMD無効・非x86の構成ではscalar処理を使う。
-成功時はcaller指定のlower layoutへ戻し、上三角を0にする。計算中のfactor storageは読み出さず、
-数値失敗後は領域全体を無効とする既存契約を守る。factor workspaceは0のまま。
-大きいpanelでは2列が入力packetを共有し、正確な除算と有限値診断を維持する。
-128列以上の連続行factorではforward solveの4行とbackward solveの2行でロードを共有する。
-forwardの加算順は変わるため数値閾値で検証し、backwardの減算順と失敗時の解保持は維持する。
-QRの有限値検査・列pivot/rank診断とfactor workspace=2n doublesも維持する。
+LLT・QRはcallerが指定したfactor storageの配置とworkspace要求を維持する。
+QRのcolumn-major storageには `MatrixView<double>::checked(buffer, m, n, 1, m)` を使える。
+内部カーネルの選択や演算順は公開APIの保証に含めない。
 
-QRはcallerが渡したfactor storageの配置を維持する。大きいQRでは
-`MatrixView<double>::checked(buffer, m, n, 1, m)`による列方向格納を選べる。
-この場合、4列でHouseholder vectorの読み込みを共有し、projectionと更新をSIMDで計算する。
-行方向格納では4行のprojectionをまとめる。両方とも更新直後の有限値検査を行い、
-solveでは残差部分も含めたoverflow検出と出力保持を維持する。
-入力のrow/column変換はfactorizeの内部copyに含まれ、追加heap・追加workspaceは使わない。
+## 検証
 
-## Windowsでの確認
-
-PowerShell 7とCMake 3.30.5、VS 2022のMSVCで:
-
-```powershell
-./tools/windows-cmake.ps1 -S . -B build/native -G 'Visual Studio 17 2022' -A x64 -T version=14.44.35207
-./tools/windows-cmake.ps1 --build build/native --config Debug --parallel 4
-ctest --test-dir build/native -C Debug --output-on-failure
-```
-
-スクリプトはビルド子プロセスの環境変数名をWindowsの規則で正規化する。
-システム設定を変更しない。通常環境では直接 `cmake` を実行してよい。
-無例外・RTTI consumerはコンパイル時macroでも無効化を検証する。
-allocation testはMSVC DebugのCRT hook、Linuxのallocator wrappingとnew置換をmallocで校正し、
-準備済み基本演算・LLT・QRを100回実行して確保回数0を検証する。
-MSVC Releaseなど計測器のない構成では測定未実施としてskipする。
-準備済み分解・solveはDebugでn=2/8/32、Linux Releaseでn=2/8/32/128/512、
-m=n/4nの外部ビューとcaller workspaceについても確保回数と解を検証する。
+ビルド・精度・無確保計測の再現手順と対象構成は[CI文書](ci.md)を参照。

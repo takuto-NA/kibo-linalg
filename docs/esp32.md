@@ -29,9 +29,8 @@ idf.py -B /work/build/esp32-c3 -D SDKCONFIG=/work/build/esp32-c3/sdkconfig -D ID
 ボード型番、SDK/compiler版、firmware SHA256、電源/PSRAM設定、serial JSONを実機チケットへ保存する。
 PCでの共通例passと両targetのELF生成は、実機runの代わりにならない。
 
-[従来のhosted CI evidence](https://github.com/takuto-NA/kibo-linalg/blob/e772855/docs/validation/portability/hosted/dispatch/evidence.json)にC++20で通過したS3/C3の
-実compile commandとfirmware/configのSHA256を保存した。
-componentのsource optionを最終位置に置き、SDKの既定規格の後に `-std=c++20` を適用する。
-`static_assert(__cplusplus == 202002L)` により規格が変わればbuildを失敗させる。
-compiler archiveのURL/checksumは固定image内の `tools/tools.json` から取得してlock manifestへ記録した。
-CIはimage digestで取得物全体を固定する。実機へ渡すfirmwareは、この新しいC++20のhashを使用する。
+componentはSDKの既定規格の後に `-std=c++20` を適用し、
+`static_assert(__cplusplus == 202002L)` で規格を確認する。
+compiler archiveのURL/checksumはlock manifest、固定image digestはCI workflowを参照。
+実機への書込みには、そのビルドで生成したfirmwareのSHA256を記録する。
+実機動作は未検証。[ESP32-S3とC3の各実機で数値・容量・stackの受入証拠を取得する](https://github.com/takuto-NA/kibo-linalg/issues/19)で管理する。

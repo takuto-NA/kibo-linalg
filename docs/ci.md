@@ -10,18 +10,28 @@ rank/条件数を含むfixture検証は必須のまま。[判断記録](adr/0010
 Linuxは構成別の`Testing/Temporary/LastTest.log`、Windowsは`Debug-LastTest.log`と`Release-LastTest.log`に、
 成功した数値testのEigen診断も残し、CI artifactへ保存する。
 制御fixtureの実条件数は独立SVDで公称値の1%以内と確認する。
-GitLabの通常archive URLがchallengeページを返したため、固定commitを指定した公開APIを使う。
+Eigenは固定commitを指定した公開APIから取得する。
+
+## 検証範囲
+
+| 環境 | CIでの確認 |
+| --- | --- |
+| Windows x64 MSVC | Debug/Release、公開API・数値精度、無例外/RTTI、移設package |
+| Linux x64 GCC・Clang/libc++ | Debug/Release、公開API・数値精度、無例外/RTTI、移設package |
+| Linux Clang ASan/UBSan | Debug/Releaseの上記testsとsanitizer |
+| WASM wasm32 | NodeとChromium/Firefox/WebKitの数値・メモリ寿命tests |
+| ESP32-S3/C3 | ESP-IDFでのcross compile。実機動作は未検証 |
+
+通常/scalarのLLT・QR契約テストと、通常構成のrow/column数値suiteを実行する。
+全PC構成におけるscalar数値suiteの完全な組合せは未検証。
+allocation計測はWindows DebugとLinuxで行い、MSVC Releaseは計測器がないためskipする。
+必須CHECKの失敗と未実行の計測を区別する。絶対速度はCIの合格条件にしない。
+現在のrunは[GitHub Actions](https://github.com/takuto-NA/kibo-linalg/actions/workflows/ci.yml)で確認できる。
 
 ## Windows
 
-Microsoftの[固定版bootstrapper一覧](https://learn.microsoft.com/en-us/visualstudio/releases/2022/release-history)から
-17.14.25/build17.14.36915.13のBuild Toolsを取得し、SHA256とMicrosoft署名を確認した。
-既存インストールのVS版、toolset14.44.35207、cl19.44.35222.0とcl.exe hashも一致した。
-新規インストールをローカルPCで実行したという証拠ではない。
-GitHubの[hosted Windows job](https://github.com/takuto-NA/kibo-linalg/actions/runs/37482428992/job/112333743363)では
-固定bootstrapperから `C:\kibo-vs17.14.25` に新規installし、版とcl.exe hashを検証して
-Debug/Releaseおよび移動後consumerを実行した。[install metadata](https://github.com/takuto-NA/kibo-linalg/blob/e772855/docs/validation/portability/hosted/windows-toolchain.json)を保存した。
-このjobは数値stress gateで失敗しており、固定toolchain取得の成功と全tests合格を区別する。
+Windowsの基準構成はVS 2022 17.14.25、toolset14.44.35207、cl19.44.35222.0。
+固定bootstrapper、archive、compilerの版とchecksumはlock manifestで検証する。
 
 ```powershell
 python tools/fetch-dependencies.py --platform windows --eigen --msvc
@@ -36,9 +46,13 @@ python tools/fetch-dependencies.py --platform windows --eigen --msvc
 
 ## Linux
 
+数値suiteを実行するにはEigenの取得とinclude設定の両方が必要。
+以下の手順はリポジトリのルートで実行する。
+
 ```sh
 python tools/fetch-dependencies.py --eigen --llvm
 docker run --rm -v "$PWD:/work" -w /work \
+  -e KIBO_CMAKE_OPTIONS=-DKIBO_EIGEN_INCLUDE_DIR=/work/.cache/eigen \
   gcc:15.3@sha256:ead103e6d03b69232962d467f3520c3f70b6718c69ff71efcc08efe9011fadb6 \
   sh tools/linux-test.sh
 ```
@@ -55,12 +69,4 @@ sanitizerとLinux allocator wrappersはmalloc系とreplacement newを観測す�
 版の更新はURL/digest/checksumを一緒に変更し、compiler version、公開API、install consumer、
 数値精度、各対象のbuild/runを再検証する。性能baselineの更新は固定PCの5 process runsを別に取る。
 通常CIでは絶対計算時間をgateにしない。CI artifactsには版、flags、configure/test logを保存する。
-workflowを書いたこととGitHubでの成功runは別で、受入報告に実際のrun URLを記録する。
-
-[run 37484637536](https://github.com/takuto-NA/kibo-linalg/actions/runs/37484637536)では、
-Windows Debug/Releaseの個別EH解除・GR無効・STL設定の実commandと構成別CTest log、
-GCC/Clang/ASan/UBSanのcompile commands・image digest・test/relocated consumer logを保存した。
-[抽出したcommandと無確保probeの証拠](https://github.com/takuto-NA/kibo-linalg/blob/e772855/docs/validation/portability/hosted/prepared-allocation.json)を参照。
-Linux Releaseの全10構成でprepared LLT/QR確保0回を確認した。
-4つのPC jobは数値stress gateでfailureとなり、通常consumerやtoolchain取得の成功を
-全tests合格とは表示しない。WASMとESP32-S3/C3のjobは再度通過した。
+実行結果と環境ごとの未検証事項は関連Issueへ記録する。

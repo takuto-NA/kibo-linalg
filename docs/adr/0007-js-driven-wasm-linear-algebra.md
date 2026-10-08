@@ -1,3 +1,5 @@
 # 将来の第一統合はJavaScript反復とWASM線形代数に分ける
 
-numopt-jsとの最初の統合はJavaScriptの目的関数・残差・ヤコビアン・反復制御を維持し、WASMへ密な線形代数stepをまとめて渡す構成とする。最適化全体の移植とcallbackの変換を同時に要求せず、コピーと呼出し頻度を計測できる境界を先に定める。WASM領域はfacadeが所有し、コピーした出力と非所有TypedArrayビューの寿命を区別する。2026-10-06の判断。
+numopt-jsとの最初の統合はJavaScriptの目的関数・残差・ヤコビアン・反復制御を維持し、WASMへ密な線形代数stepをまとめて渡す構成とする。最適化全体の移植とcallbackの変換を同時に要求せず、コピーと呼出し頻度を計測できる境界を先に定める。WASM領域はfacadeが所有し、コピーした出力と非所有TypedArrayビューの寿命を区別する。
+
+[numopt-js WASM版との呼出し・データ境界を決める](https://github.com/takuto-NA/kibo-linalg/issues/7)。

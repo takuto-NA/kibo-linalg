@@ -2,6 +2,13 @@
 
 このリポジトリの課題と仕様はGitHub Issuesで管理する。操作には `gh` CLIを使用する。対象リポジトリは `git remote -v` から確認する。
 
+## 文書の置き場所
+
+- READMEとdocsには、現行の利用方法、API契約、対応環境・制約、再現手順を置く。
+- CONTEXT.mdは用語、docs/adr/は恒久的な設計判断と理由を扱う。
+- 進捗、実験・調査の経緯、測定結果、個別CIの合否、未完作業、作業の反省は関連Issueへ記録する。
+- 開発記録を移すときは、移管先の保存内容と元commitへのリンクを確認してから元文書と参照を整理する。
+
 ## Conventions
 
 - 作成: `gh issue create --title "..." --body-file <path>`。

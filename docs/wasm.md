@@ -49,6 +49,3 @@ disposeはidempotentで、解放後のcallは拒否する。
 J/r/dampingから線形stepを一括callする。現在は最適化全体のWASM移植や連携済みを意味しない。
 Node24.21.0とPlaywright1.63.0のChromium/Firefox/WebKitで同じHTTP例を実行する。
 再現コマンドはCI workflow。kernel時間とJS copy境界時間は別に計測できる。
-LLT処理選択修正後の[Node結果](https://github.com/takuto-NA/kibo-linalg/blob/e772855/docs/validation/portability/hosted/dispatch/node-results.json)と
-[3 browser結果](https://github.com/takuto-NA/kibo-linalg/blob/e772855/docs/validation/portability/hosted/dispatch/browser-results.json)、
-[sourceとmodule hash](https://github.com/takuto-NA/kibo-linalg/blob/e772855/docs/validation/portability/hosted/dispatch/evidence.json)を保存した。

@@ -53,5 +53,5 @@ Eigenの列pivot QRで `info()==Success` となる入力でも、kibo-linalgはr
 SVD・m<n・rank不足系の最小ノルム解は提供しません。
 
 normal-LLTを使う最小二乗では条件数が二乗され、QRより精度を失う場合があります。
-悪条件での精度範囲とstress結果は受入報告を確認してください。
+悪条件での精度範囲は[C++ API](api.md)、検証範囲は[CI文書](ci.md)を参照してください。
 WASMではC++ビューをJSへ直接渡さず、[facadeのcopyとviewの契約](wasm.md)を使います。

@@ -5,10 +5,8 @@ PCでの連続最適化を起点に、ESP32とWASMでも使うC++20の線形代�
 固定行列・外部ビューとcaller workspaceを使う計算経路は、例外・RTTI・ヒープ確保を要求しません。
 動的所有行列の確保・resize・cloneは明示的に行います。
 
-初期コアのmain導入と、性能・実機を含む最終受入を分けて進めています。
-[到達状況と残課題](docs/project-status.md)、[整理版の受入状況](docs/validation/initial-acceptance.md)、
-[過去の成果と証拠](docs/evidence-index.md)を参照してください。
-Eigen同等の全形状・全phase性能、ESP32各実機の受入は未完了で、release-readyとはしていません。
+現在は開発版です。Eigen同等の性能、ESP32実機での動作は保証していません。
+検証する環境と範囲は[CI文書](docs/ci.md)を参照してください。
 Eigenとのsource互換はありません。疎行列、SVD、最小ノルム解、最適化アルゴリズム本体は初期範囲の外です。
 n=2〜512は初期評価範囲であり、対応サイズの上限ではありません。
 
@@ -51,6 +49,6 @@ APIと失敗・寿命・aliasの契約は[API文書](docs/api.md)、
 所有・ビュー・積・LLT・QRの導入例は[Eigenからの移行](docs/eigen-migration.md)を参照してください。
 [CIの再現方法](docs/ci.md)、[WASM facade](docs/wasm.md)、[ESP32 firmware](docs/esp32.md)、
 [性能評価方法](docs/benchmarks.md)を用意しています。
-設計判断は[CONTEXT.md](CONTEXT.md)と[ADR](docs/adr/)に記録し、作業と受入は
-[GitHub Issues](https://github.com/takuto-NA/kibo-linalg/issues/9)で管理します。
-公開license・registry・tag/release配布は、初期受入後のmaintainer判断として残しています。
+用語は[CONTEXT.md](CONTEXT.md)、設計判断は[ADR](docs/adr/)を参照してください。
+開発計画・課題・検証履歴は[GitHub Issues](https://github.com/takuto-NA/kibo-linalg/issues/9)で管理します。
+ライセンスは未設定です。
