@@ -3,7 +3,7 @@
 `kibo_lm_reference` は評価harnessで、optimizer製品APIではない。
 normal-LLTとaugmented-QRで同じ中央差分Jacobian、lambda、D=I、受理/停止設定を使う。
 差分stepは1e-6*(1+|parameter|)、tolGradient1e-6、最大100反復。
-lambda初期1e-3、受理時0.3倍（下限1e-15）、棄却時10倍。
+lambdaの初期値は1e-3とする。受理時はlambdaを0.3倍する。その下限は1e-15とする。棄却時はlambdaを10倍する。
 
 ```powershell
 ./tools/windows-cmake.ps1 -S . -B build/native '-DKIBO_EIGEN_INCLUDE_DIR=<fixed Eigen headers>'
