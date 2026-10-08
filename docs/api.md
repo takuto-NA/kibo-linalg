@@ -63,7 +63,7 @@ identityは長方形でも使用でき、対角のmin(rows,cols)要素を1にす
 scaleも同じ入力ビューに上書きできる。部分重複、転置を介したalias、
 matvec/matmul/copyのaliasはprecondition違反。実行時alias検出は行わない。
 
-shape不一致、NaN、Infは出力変更前に失敗する。
+shape不一致と非有限入力は出力変更前に失敗する。非有限入力はNaNとInfである。
 計算途中の非有限結果は `arithmetic_failure` を返す。この場合は出力が部分更新され得るため
 全体を無効として扱う。空の積の内側次元が0なら出力は0。
 非有限のscale/fill/対角加算値は空行列でも拒否する。
