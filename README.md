@@ -1,7 +1,7 @@
 # kibo-linalg
 
 PCでの連続最適化を起点に、ESP32とWASMでも使うC++20の線形代数ライブラリです。
-初期実装はdoubleの密行列、基本演算、Cholesky（LLT）、列pivot付きQRを提供します。
+初期実装はdoubleの密行列、基本演算、Cholesky分解のLLT、列pivot付きQRを提供します。
 固定行列・外部ビューとcaller workspaceを使う計算経路は、例外・RTTI・ヒープ確保を要求しません。
 動的所有行列の確保・resize・cloneは明示的に行います。
 

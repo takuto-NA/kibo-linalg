@@ -63,14 +63,14 @@ identityは長方形でも使用でき、対角のmin(rows,cols)要素を1にす
 scaleも同じ入力ビューに上書きできる。部分重複、転置を介したalias、
 matvec/matmul/copyのaliasはprecondition違反。実行時alias検出は行わない。
 
-shape不一致と非有限入力（NaN/Inf）は出力変更前に失敗する。
+shape不一致と非有限入力は出力変更前に失敗する。非有限入力はNaNとInfである。
 計算途中の非有限結果は `arithmetic_failure` を返す。この場合は出力が部分更新され得るため
 全体を無効として扱う。空の積の内側次元が0なら出力は0。
 非有限のscale/fill/対角加算値は空行列でも拒否する。
 
 `Status`/`Result` はnodiscard。`if (!result)` を先に確認し、失敗時は
 `result.status().code` を使う。成功時だけ `result.value()` を呼ぶ。
-valueの失敗時アクセスはprecondition違反（Debugではassert）。
+valueの失敗時アクセスはprecondition違反である。Debugではassertする。
 StatusCodeはshape、layout、capacity、size overflow、非有限入力、算術失敗を区別する。
 
 ## 分解・solve
@@ -78,7 +78,7 @@ StatusCodeはshape、layout、capacity、size overflow、非有限入力、算�
 `<kibo/llt.hpp>` はdoubleの対称正定値系を扱う。
 `factorize_llt(input, factor_storage, options={})` は `Result<LltFactorView>`。
 n>0の正方行列と、入力から独立したn×nの書込み可storageを渡す。
-既定では `|aij/scale-aji/scale| <= 32*epsilon`（scaleは最大絶対要素）で対称性を検証する。
+scaleは最大絶対要素とする。既定では `|aij/scale-aji/scale| <= 32*epsilon` で対称性を検証する。
 `check_symmetry=false` は呼出し側が対称性を保証する場合だけ使う。
 対称性不一致はinvalid_argument、非正pivotはnon_positive_pivot、非有限中間値はarithmetic_failure。
 Status.indexは問題のpivot位置。成功factorの上三角は0。
@@ -138,7 +138,7 @@ workspaceはqueryのalignmentを満たす生存領域を渡す。容量不足・
 失敗したfactorizeではfactor領域全体を無効として扱い、古いhandleを再利用しない。
 factor storage/tau/permutationはhandleを使う間、生存し変更されていなければならない。
 input、factor、tau、permutation、workspace、outputはそれぞれ重ならない領域を使う。
-rhsとoutputのみ完全に同じspanを許す（workspaceに候補を作るため）。
+rhsとoutputのみ完全に同じspanを許す。候補解はworkspaceに作る。
 数値分解での途中失敗ではfactor領域が部分更新され得る。
 
 ## 内部最適化の構成

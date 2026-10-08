@@ -11,7 +11,7 @@ offsetはWASM memoryの先頭からのbyte位置、strideはdouble要素単位�
 `kibo_matvec`、`kibo_llt`、`kibo_qr`、`kibo_qr_refined` は入力/出力/factor/workspaceを明示する一括call。
 LLTはn×n、QRはm>=n>0。factor/tau/permutationの領域は別に渡す。
 diagは16 bytes: little-endian uint32 index、uint32 rank、float64 tolerance。
-permutationはwasm32のuint32配列。statusはC++ StatusCodeのABI v1での固定値（0が成功）。
+permutationはwasm32のuint32配列。statusはC++ StatusCodeのABI v1での固定値である。成功は0。
 byte範囲、alignment、size overflow、容量、領域間の重複を検証する。
 ABIでは領域をすべてdisjointにする。メモリの割当元・任意の外部freeを検出する保証はない。
 
