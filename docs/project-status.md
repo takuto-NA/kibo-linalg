@@ -8,14 +8,14 @@ Eigen同等の性能達成、ESP32各実機の受入、release-readyの宣言は
 
 | 対象 | 実装と確認済みの範囲 | 整理版での確認 |
 | --- | --- | --- |
-| 行列・基本演算 | C++20、固定/動的所有行列、外部stride view、明示的な確保と失敗通知 | 公開API・失敗・alias・容量testsをCIで再確認 |
-| LLT | SPD分解/solve、caller storage、無確保経路、小行列とpanel更新 | 通常/scalar、大きい境界サイズ、非SPD・非対称・overflowを再確認 |
-| 列pivot QR | full-column-rank最小二乗、rank診断、row/column factor、無確保solve | 通常/scalar、rank境界、途中失敗時の解保持を再確認 |
-| QR補正 | 元A/bを使う追加API、2m+3n doubles、失敗時の解保持 | 既存の独立100桁oracleと数値gateを再確認 |
-| PC/package | Windows MSVC、Linux GCC/Clang/libc++、ASan/UBSan、移設find_package consumer | Windowsで再build/run済み。数値以外は通過、hosted CIは未実行 |
-| LM参照問題 | 直線/指数fit、normal-LLT/augmented-QRを同じ反復設定で評価 | CTestで再実行。optimizer製品APIではない |
-| WASM | wasm32、Node、Chromium/Firefox/WebKit、容量・growth・dispose・補正API | 整理版のhosted CIは未実行 |
-| ESP32 | ESP-IDF S3/C3のC++20サンプル、heap/stack probe | cross compileを再実行。実機は未検証 |
+| 行列・基本演算 | C++20、固定/動的所有行列、外部stride view、明示的な確保と失敗通知 | 整理版の公開API・失敗・alias・容量testsはPC CIで通過 |
+| LLT | SPD分解/solve、caller storage、無確保経路、小行列とpanel更新 | 通常/scalar、大きい境界サイズ、非SPD・非対称・overflow tests通過 |
+| 列pivot QR | full-column-rank最小二乗、rank診断、row/column factor、無確保solve | 通常/scalar、rank境界、途中失敗時の解保持tests通過 |
+| QR補正 | 元A/bを使う追加API、2m+3n doubles、失敗時の解保持 | 既存の独立100桁oracle fixtureを含むkiboのCHECKは通過 |
+| PC/package | Windows MSVC、Linux GCC/Clang/libc++、ASan/UBSan、移設find_package consumer | 8構成のkibo CHECKと移設consumerは通過。Eigen-onlyでCI全体は失敗 |
+| LM参照問題 | 直線/指数fit、normal-LLT/augmented-QRを同じ反復設定で評価 | CTest通過。optimizer製品APIではない |
+| WASM | wasm32、Node、Chromium/Firefox/WebKit、容量・growth・dispose・補正API | 整理版のhosted CI成功 |
+| ESP32 | ESP-IDF S3/C3のC++20サンプル、heap/stack probe | 整理版の両cross compile成功。実機は未検証 |
 
 ## できていないこと
 
@@ -56,8 +56,10 @@ PMUでcache/TLBの寄与まで確定したとは扱わない。
 - 整理版の必須判定は新しいPRの固定commitに対するCIで確認し、
   以前のソースに対する成功runを転用しない。
 - mainとの差分b397aa9の独立レビューはStandards/Specともblocking findings 0件。
-  Windows Debug/Releaseの再実行では、numericalとnumerical_columnの各8件が
-  従来のEigen forward-error CHECKだけだった。kiboのCHECKは通過した。
+  [整理版ca7749bのCI](https://github.com/takuto-NA/kibo-linalg/actions/runs/37738081204)でも、
+  PC全8構成のnumericalとnumerical_columnの各8件が、従来のEigen forward-error CHECKだけだった。
+  kiboのCHECKは通過した。WASM・S3/C3 cross compileは成功した。
+  Eigen自身の精度を比較診断へ分けるユーザー判断が残り、CI全体はfailureである。
 - 実験ごとのソース複製、object、実行バイナリ、生ログをmainの通常ツリーへ持ち込まない。
   コード・fixture・実行スクリプトを保持し、新しいログはCI artifactに保存する。
 
