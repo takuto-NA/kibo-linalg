@@ -12,7 +12,7 @@ Eigen同等の性能達成、ESP32各実機の受入、release-readyの宣言は
 | LLT | SPD分解/solve、caller storage、無確保経路、小行列とpanel更新 | 通常/scalar、大きい境界サイズ、非SPD・非対称・overflowを再確認 |
 | 列pivot QR | full-column-rank最小二乗、rank診断、row/column factor、無確保solve | 通常/scalar、rank境界、途中失敗時の解保持を再確認 |
 | QR補正 | 元A/bを使う追加API、2m+3n doubles、失敗時の解保持 | 既存の独立100桁oracleと数値gateを再確認 |
-| PC/package | Windows MSVC、Linux GCC/Clang/libc++、ASan/UBSan、移設find_package consumer | 整理版のhosted CIは未実行 |
+| PC/package | Windows MSVC、Linux GCC/Clang/libc++、ASan/UBSan、移設find_package consumer | Windowsで再build/run済み。数値以外は通過、hosted CIは未実行 |
 | LM参照問題 | 直線/指数fit、normal-LLT/augmented-QRを同じ反復設定で評価 | CTestで再実行。optimizer製品APIではない |
 | WASM | wasm32、Node、Chromium/Firefox/WebKit、容量・growth・dispose・補正API | 整理版のhosted CIは未実行 |
 | ESP32 | ESP-IDF S3/C3のC++20サンプル、heap/stack probe | cross compileを再実行。実機は未検証 |
@@ -46,6 +46,8 @@ PMUでcache/TLBの寄与まで確定したとは扱わない。
 
 ## 証拠と履歴
 
+今回の統合は[初期コア・検証・履歴を整理し、main導入を完了する](https://github.com/takuto-NA/kibo-linalg/issues/29)で管理する。
+
 - 公開済み履歴は[旧Draft PR #21](https://github.com/takuto-NA/kibo-linalg/pull/21)に残す。
 - 整理前の先端は`6cc08d57fdb2898b33103d9b468fd97af67f1fa6`。
   全履歴を含むGit bundleをローカルに保存し、`git bundle verify`を通過した。
@@ -53,6 +55,9 @@ PMUでcache/TLBの寄与まで確定したとは扱わない。
 - 過去の主要な成果は[証拠の索引](evidence-index.md)から辿れる。
 - 整理版の必須判定は新しいPRの固定commitに対するCIで確認し、
   以前のソースに対する成功runを転用しない。
+- mainとの差分b397aa9の独立レビューはStandards/Specともblocking findings 0件。
+  Windows Debug/Releaseの再実行では、numericalとnumerical_columnの各8件が
+  従来のEigen forward-error CHECKだけだった。kiboのCHECKは通過した。
 - 実験ごとのソース複製、object、実行バイナリ、生ログをmainの通常ツリーへ持ち込まない。
   コード・fixture・実行スクリプトを保持し、新しいログはCI artifactに保存する。
 
