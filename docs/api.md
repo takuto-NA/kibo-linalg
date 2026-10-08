@@ -119,8 +119,9 @@ condition1e8・大残差の強い解精度保証は補正経路で受け入れ�
 通常solveの同じ入力の精度結果も診断に残す。
 PCの初期評価入力で精度gateと公開契約を検証した。
 [公開経路の検証結果](https://github.com/takuto-NA/kibo-linalg/blob/e772855/docs/research/qr-refined-public-validation.md)に保証の評価範囲・追加費用を示す。
-任意の悪条件入力や全尺度についての証明ではない。Eigen自身の精度CHECKによるCI失敗とESP実機未検証が残り、
-初期保証全体の受入は完了していない。
+任意の悪条件入力や全尺度についての証明ではない。Eigen自身の解精度は
+[ADR 0010](adr/0010-reference-accuracy-diagnostics.md)に従い比較診断へ分け、kiboの精度閾値は維持する。
+全形状のEigen同等性能とESP実機は未検証・未達の範囲が残り、初期保証全体の受入は完了していない。
 [判断と根拠](adr/0009-original-input-qr-refinement.md)・[実装課題](https://github.com/takuto-NA/kibo-linalg/issues/28)。
 
 ```cpp
