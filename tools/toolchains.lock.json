@@ -1,0 +1,49 @@
+{
+  "cmake": {
+    "version": "3.30.5",
+    "linux_url": "https://github.com/Kitware/CMake/releases/download/v3.30.5/cmake-3.30.5-linux-x86_64.tar.gz",
+    "linux_sha256": "f747d9b23e1a252a8beafb4ed2bc2ddf78cff7f04a8e4de19f4ff88e9b51dc9d",
+    "windows_url": "https://github.com/Kitware/CMake/releases/download/v3.30.5/cmake-3.30.5-windows-x86_64.zip",
+    "windows_sha256": "5ab6e1faf20256ee4f04886597e8b6c3b1bd1297b58a68a58511af013710004b"
+  },
+  "gcc": {
+    "version": "15.3.0",
+    "image": "gcc:15.3@sha256:ead103e6d03b69232962d467f3520c3f70b6718c69ff71efcc08efe9011fadb6"
+  },
+  "llvm": {
+    "version": "20.1.8",
+    "url": "https://github.com/llvm/llvm-project/releases/download/llvmorg-20.1.8/LLVM-20.1.8-Linux-X64.tar.xz",
+    "sha256": "1ead36b3dfcb774b57be530df42bec70ab2d239fbce9889447c7a29a4ddc1ae6"
+  },
+  "emscripten": {
+    "version": "6.0.10",
+    "image": "emscripten/emsdk:6.0.10@sha256:e077d54e2b8970575ebc4f185ac1de0b95c05f2b266134d4ba27449af7aebf65"
+  },
+  "esp_idf": {
+    "version": "6.1",
+    "image": "espressif/idf:v6.1@sha256:81893c71bb5e570088901f21def8684c25cd2a9020281bd01b843a7655edb18c",
+    "compiler_version": "esp-15.2.0_20251204",
+    "xtensa_linux_url": "https://github.com/espressif/crosstool-NG/releases/download/esp-15.2.0_20251204/xtensa-esp-elf-15.2.0_20251204-x86_64-linux-gnu.tar.xz",
+    "xtensa_linux_sha256": "3d50f5cd5f173acfd524e07c1cd69bc99585731a415ca2e5bce879997fe602b8",
+    "riscv_linux_url": "https://github.com/espressif/crosstool-NG/releases/download/esp-15.2.0_20251204/riscv32-esp-elf-15.2.0_20251204-x86_64-linux-gnu.tar.xz",
+    "riscv_linux_sha256": "ace5aae6afe98f754947be043d40173e2e22ace57754b11a394b7238eefa01cf"
+  },
+  "node": {"version":"24.21.0","image":"node:24.21.0@sha256:22f6fe5f59fb7fed238b19623506d573dffaa932ce33b84ce541a9a2e0eade28"},
+  "playwright": {"version":"1.63.0","image":"mcr.microsoft.com/playwright:v1.63.0-noble@sha256:eff16c30e6f3f4af0a03fa4b706120d5e9b0891c344a27d64559aff5900a4a27"},
+  "eigen": {
+    "version":"5.0.1","commit":"bc3b39870ecb690a623a3f49149a358b95c5781d",
+    "url":"https://gitlab.com/api/v4/projects/libeigen%2Feigen/repository/archive.tar.gz?sha=bc3b39870ecb690a623a3f49149a358b95c5781d",
+    "sha256":"355b5cef81b63c88f81af6d8e5c05b2f79e9cd917bc36b574655569da9f03137"
+  },
+  "msvc": {
+    "installation_version":"17.14.36915.13","display_version":"17.14.25","toolset":"14.44.35207","compiler_version":"19.44.35222.0",
+    "cl_sha256":"4304307e1f0d0528ac13c513183e5cbfa20a7f8de6f0c8e5bc4293661e6d23a4",
+    "url":"https://download.visualstudio.microsoft.com/download/pr/64dbe648-9527-4b8e-9b08-04d2228e1191/0f953a61f0d6f37d425e021814b0ec005035871848d9eb703208538df20476d4/vs_BuildTools.exe",
+    "sha256":"0f953a61f0d6f37d425e021814b0ec005035871848d9eb703208538df20476d4"
+  },
+  "actions": {
+    "checkout":"11d5960a326750d5838078e36cf38b85af677262",
+    "upload_artifact":"ea165f8d65b6e75b540449e92b4886f43607fa02",
+    "setup_python":"a26af69be951a213d495a4c3e4e4022e16d87065"
+  }
+}
