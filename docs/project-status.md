@@ -59,7 +59,10 @@ PMUでcache/TLBの寄与まで確定したとは扱わない。
   [整理版ca7749bのCI](https://github.com/takuto-NA/kibo-linalg/actions/runs/37738081204)でも、
   PC全8構成のnumericalとnumerical_columnの各8件が、従来のEigen forward-error CHECKだけだった。
   kiboのCHECKは通過した。WASM・S3/C3 cross compileは成功した。
-  Eigen自身の精度を比較診断へ分けるユーザー判断が残り、CI全体はfailureである。
+  この時点ではEigen自身の精度も必須条件だったため、CI全体はfailureだった。
+  その後、ユーザーが[Eigenの解精度を比較診断へ分ける判断](adr/0010-reference-accuracy-diagnostics.md)を承認し、
+  2か所のforward-error判定を診断へ変更した。kiboのCHECK・閾値・対象は維持する。
+  変更後の固定commitに対する実行結果は[整理版PRのChecks](https://github.com/takuto-NA/kibo-linalg/pull/30/checks)で確認できる。
 - 実験ごとのソース複製、object、実行バイナリ、生ログをmainの通常ツリーへ持ち込まない。
   コード・fixture・実行スクリプトを保持し、新しいログはCI artifactに保存する。
 

@@ -4,7 +4,11 @@
 `tools/fetch-dependencies.py` はchecksumが一致するarchiveだけを使用する。
 Eigenはtest/benchmark-onlyで、installしたlibraryには含めない。
 numerical suiteはReleaseでn=2/8/32/128/512の全規模、Debugでn<=32を実行する。
-100桁stress/rank oracleと精度の合格値は両構成で同じ。失敗を全件記録して最後に非zeroで終了する。
+100桁stress/rank oracleとkiboの精度の合格値は両構成で同じ。必須CHECKの失敗を全件記録して最後に非zeroで終了する。
+Eigen自身のforward errorは入力条件・誤差・閾値・合否を比較診断として保存し、製品の終了コードには加えない。
+rank/条件数を含むfixture検証は必須のまま。[判断記録](adr/0010-reference-accuracy-diagnostics.md)を参照。
+Linuxは構成別の`Testing/Temporary/LastTest.log`、Windowsは`Debug-LastTest.log`と`Release-LastTest.log`に、
+成功した数値testのEigen診断も残し、CI artifactへ保存する。
 制御fixtureの実条件数は独立SVDで公称値の1%以内と確認する。
 GitLabの通常archive URLがchallengeページを返したため、固定commitを指定した公開APIを使う。
 

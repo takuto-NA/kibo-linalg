@@ -44,6 +44,9 @@ $taskFailedConfigurations=@()
 if ($LASTEXITCODE -ne 0) { $taskFailedConfigurations+='installed consumer' }
 foreach($taskConfiguration in @('Debug','Release')) {
     & ctest --test-dir build/ci-windows -C $taskConfiguration --output-on-failure --no-tests=error --output-log "build/ci-windows/$taskConfiguration-ctest.log"
-    if ($LASTEXITCODE -ne 0) { $taskFailedConfigurations+=$taskConfiguration }
+    $taskCTestExitCode=$LASTEXITCODE
+    # LastTest.log contains passing-test diagnostics and is overwritten by the next configuration.
+    Copy-Item -LiteralPath 'build/ci-windows/Testing/Temporary/LastTest.log' -Destination "build/ci-windows/$taskConfiguration-LastTest.log"
+    if ($taskCTestExitCode -ne 0) { $taskFailedConfigurations+=$taskConfiguration }
 }
 if ($taskFailedConfigurations.Count -gt 0) { throw "CTest failed: $($taskFailedConfigurations -join ', ')" }

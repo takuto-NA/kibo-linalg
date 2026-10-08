@@ -4,7 +4,7 @@
 Eigen同等の性能・ESP実機を含む最終受入を分ける。
 機能・履歴・未達項目の一覧は[到達状況](../project-status.md)、過去の根拠は[証拠の索引](../evidence-index.md)を参照。
 
-## 今回のmerge gate
+## 今回のmerge gateと判定変更前の確認
 
 | 判定 | 必須の範囲 | 整理版の結果 |
 | --- | --- | --- |
@@ -19,7 +19,12 @@ Eigen同等の性能・ESP実機を含む最終受入を分ける。
 結果は[整理版ca7749bのCI](https://github.com/takuto-NA/kibo-linalg/actions/runs/37738081204)に対応する。
 PC4 jobの生ログを確認し、失敗は`tests/numerical_tests.cpp`のEigen forward-error判定2か所だけだった。
 旧branchの成功を合格欄へ転記していない。
-Eigen自身の精度を製品CIの必須判定から比較診断へ分ける判断は、まだ回答待ち。
+2026-10-08にユーザーは、Eigen自身のforward errorを比較診断へ分ける方針を承認した。
+[ADR 0010](../adr/0010-reference-accuracy-diagnostics.md)に従い2か所の判定を変更し、
+kiboのCHECK・精度閾値・fixture/rank検証は維持した。Eigenの誤差・閾値・合否・失敗件数は、成功時にも詳細ログへ保存する。
+
+変更後の合否は[整理版PR #30のChecks](https://github.com/takuto-NA/kibo-linalg/pull/30/checks)に記録する。
+main導入には変更後の固定commitで全7 CI jobsの成功を要求し、上表の過去の失敗runで代用しない。
 
 ## merge後も未完了として残すもの
 
