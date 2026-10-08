@@ -1,0 +1,135 @@
+name: portable-core
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  windows:
+    runs-on: windows-2022
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065
+        with:
+          python-version: '3.12.9'
+      - name: Fetch fixed toolchain and test dependencies
+        run: python tools/fetch-dependencies.py --platform windows --eigen --msvc
+      - name: Fixed MSVC Debug Release and relocated package
+        shell: pwsh
+        run: ./tools/windows-test.ps1 -AllowToolchainInstall
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        if: always()
+        with:
+          name: windows-evidence
+          path: |
+            build/windows-toolchain.json
+            build/ci-windows/CMakeCache.txt
+            build/ci-windows/CMakeFiles/CMakeConfigureLog.yaml
+            build/ci-windows/Testing/Temporary/*.log
+            build/ci-windows/*-ctest.log
+            build/ci-windows/kibo_no_runtime_tests.dir/*/*.tlog/CL.command.1.tlog
+            build/ci-windows/kibo_no_runtime_tests.vcxproj
+            build/ci-windows-consumer/Testing/Temporary/*.log
+  linux:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 45
+    strategy:
+      fail-fast: false
+      matrix:
+        compiler: [gcc, clang, clang-sanitized]
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065
+        with:
+          python-version: '3.12.9'
+      - name: Fetch fixed dependencies
+        run: |
+          if [ '${{ matrix.compiler }}' = gcc ]; then
+            python tools/fetch-dependencies.py --eigen
+          else
+            python tools/fetch-dependencies.py --eigen --llvm
+          fi
+      - name: GCC Clang libc++ and sanitizer matrix
+        shell: bash
+        run: |
+          set -eo pipefail
+          mkdir -p build
+          image='gcc:15.3@sha256:ead103e6d03b69232962d467f3520c3f70b6718c69ff71efcc08efe9011fadb6'
+          docker pull "$image"
+          docker image inspect "$image" --format '{{json .RepoDigests}}' > build/image-digest.json
+          if [ '${{ matrix.compiler }}' != gcc ]; then
+            docker run --rm -v "$PWD:/work" -w /work "$image" sh -c 'mkdir -p .cache/tools; tar -xJf .cache/downloads/LLVM-20.1.8-Linux-X64.tar.xz -C .cache/tools'
+            compiler=/work/.cache/tools/LLVM-20.1.8-Linux-X64/bin/clang++
+            flags='-stdlib=libc++'
+            linker='-L/work/.cache/tools/LLVM-20.1.8-Linux-X64/lib/x86_64-unknown-linux-gnu -Wl,-rpath,/work/.cache/tools/LLVM-20.1.8-Linux-X64/lib/x86_64-unknown-linux-gnu'
+            if [ '${{ matrix.compiler }}' = clang-sanitized ]; then
+              flags="$flags -fsanitize=address,undefined -fno-omit-frame-pointer"
+              linker="$linker -fsanitize=address,undefined"
+            fi
+            docker run --rm -v "$PWD:/work" -w /work -e "CXXFLAGS=$flags" -e "LDFLAGS=$linker" -e KIBO_CMAKE_OPTIONS=-DKIBO_EIGEN_INCLUDE_DIR=/work/.cache/eigen "$image" sh tools/linux-test.sh "$compiler" build/linux-${{ matrix.compiler }} | tee build/linux-${{ matrix.compiler }}.log
+          else
+            docker run --rm -v "$PWD:/work" -w /work -e KIBO_CMAKE_OPTIONS=-DKIBO_EIGEN_INCLUDE_DIR=/work/.cache/eigen "$image" sh tools/linux-test.sh g++ build/linux-gcc | tee build/linux-gcc.log
+          fi
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        if: always()
+        with:
+          name: linux-${{ matrix.compiler }}-evidence
+          path: |
+            build/linux-*.log
+            build/image-digest.json
+            build/linux-${{ matrix.compiler }}/Debug/CMakeCache.txt
+            build/linux-${{ matrix.compiler }}/Release/CMakeCache.txt
+            build/linux-${{ matrix.compiler }}/*/compile_commands.json
+            build/linux-${{ matrix.compiler }}/*/Testing/Temporary/*.log
+  wasm:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+      - name: Fixed wasm32 and Node
+        shell: bash
+        run: |
+          set -eo pipefail
+          mkdir -p build/wasm
+          docker run --rm -v "$PWD:/work" -w /work emscripten/emsdk:6.0.10@sha256:e077d54e2b8970575ebc4f185ac1de0b95c05f2b266134d4ba27449af7aebf65 sh tools/wasm-build.sh
+          docker run --rm -v "$PWD:/work" -w /work node:24.21.0@sha256:22f6fe5f59fb7fed238b19623506d573dffaa932ce33b84ce541a9a2e0eade28 node wasm/node-test.mjs | tee build/wasm/node-results.json
+      - name: Fixed Chromium Firefox WebKit
+        run: |
+          docker run --rm -v "$PWD:/work" -w /work/wasm mcr.microsoft.com/playwright:v1.63.0-noble@sha256:eff16c30e6f3f4af0a03fa4b706120d5e9b0891c344a27d64559aff5900a4a27 sh -c 'npm ci --ignore-scripts && node browser-test.mjs'
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        if: always()
+        with:
+          name: wasm-evidence
+          path: |
+            build/wasm/*.json
+            build/wasm/kibo.mjs
+            build/wasm/kibo.wasm
+  esp32:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    strategy:
+      fail-fast: false
+      matrix:
+        target: [esp32s3, esp32c3]
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+      - name: Cross compile only
+        run: |
+          mkdir -p build/${{ matrix.target }}
+          docker run --rm -v "$PWD:/work" -w /work/examples/esp32 espressif/idf:v6.1@sha256:81893c71bb5e570088901f21def8684c25cd2a9020281bd01b843a7655edb18c idf.py -B /work/build/${{ matrix.target }} -D SDKCONFIG=/work/build/${{ matrix.target }}/sdkconfig -D IDF_TARGET=${{ matrix.target }} build
+          sha256sum build/${{ matrix.target }}/*.bin build/${{ matrix.target }}/*.elf > build/${{ matrix.target }}/firmware.sha256
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        if: always()
+        with:
+          name: ${{ matrix.target }}-firmware
+          path: |
+            build/${{ matrix.target }}/*.bin
+            build/${{ matrix.target }}/*.elf
+            build/${{ matrix.target }}/*.map
+            build/${{ matrix.target }}/sdkconfig
+            build/${{ matrix.target }}/compile_commands.json
+            build/${{ matrix.target }}/project_description.json
+            build/${{ matrix.target }}/firmware.sha256
